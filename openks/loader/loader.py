@@ -1,11 +1,11 @@
 """
 Basic class for loading data from file or database systems
 """
-import sys
-sys.path.append('..')
 from enum import Enum, unique
 import csv
 import logging
+import sys
+sys.path.append('..')
 from abstract.mdd import MDD
 
 logging.basicConfig(level=logging.DEBUG,
@@ -21,7 +21,8 @@ class LoaderConfig(object):
 
 	def __init__(self):
 		self._source_type = SourceType.LOCAL_FILE
-		self._source_uri = ''
+		# support loading multiple files
+		self._source_uri = []
 		self._data_name = ''
 
 	@property
@@ -33,12 +34,12 @@ class LoaderConfig(object):
 		self._source_type = source_type
 
 	@property
-	def source_uri(self):
-		return self._source_uri
+	def source_uris(self):
+		return self._source_uris
 	
-	@source_uri.setter
-	def source_uri(self, source_uri: str):
-		self._source_uri = source_uri
+	@source_uris.setter
+	def source_uris(self, source_uris: str):
+		self._source_uris = source_uris
 
 	@property
 	def data_name(self):
@@ -52,14 +53,14 @@ class LoaderConfig(object):
 class Loader(object):
 	""" basic loader from multiple data sources """
 
-	def __init__(self, config: LoaderConfig):
+	def __init__(self, config: LoaderConfig) -> None:
 		self.config = config
 		self.dataset = self._read_data()
 
 	def _read_data(self) -> MDD:
 		""" read data from multiple sources and return MDD """
 		if self.config.source_type == SourceType.LOCAL_FILE:
-			return self._read_file()
+			return self._read_files()
 		elif self.config.source_type == SourceType.HDFS:
 			return self._read_hdfs()
 		else:
@@ -67,12 +68,17 @@ class Loader(object):
 			return NotImplemented
 
 
-	def _read_file(self):
+	def _read_files(self) -> MDD:
 		""" Currently support csv file format from local """
-		csv_reader = csv.reader(open(self.config.source_uri, encoding='utf-8'))
-		MDD.headers = next(csv_reader)
-		MDD.body = csv_reader
+		headers = []
+		bodies = []
+		for uri in self.config.source_uris:
+			csv_reader = csv.reader(open(uri, newline='', encoding='utf-8'))
+			headers.append(next(csv_reader))
+			bodies.append(csv_reader)
 		MDD.name = self.config.data_name
+		MDD.headers = headers
+		MDD.bodies = bodies
 		return MDD
 
 	def _read_hdfs(self):
@@ -81,9 +87,10 @@ class Loader(object):
 
 if __name__ == '__main__':
 	LoaderConfig.source_type = SourceType.LOCAL_FILE
-	LoaderConfig.source_uri = '../data/test.csv'
+	LoaderConfig.source_uris = ['../data/ent_test1.csv', '../data/ent_test2.csv', '../data/rel_test.csv']
 	LoaderConfig.data_name = 'test'
 	loader = Loader(LoaderConfig)
-	print(loader.dataset.headers)
-	for line in loader.dataset.body:
-		print(line)
+	print(MDD.headers)
+	for body in MDD.bodies:
+		for line in body:
+			print(line)

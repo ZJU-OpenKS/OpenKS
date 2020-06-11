@@ -6,7 +6,7 @@ class MDD(object):
 
 	def __init__(self):
 		self._headers = []
-		self._body = []
+		self._bodies = []
 		self._name = ''
 
 	@property
@@ -18,12 +18,12 @@ class MDD(object):
 		self._headers = headers
 
 	@property
-	def body(self):
-		return self._body
+	def bodies(self):
+		return self._bodies
 	
-	@body.setter
-	def body(self, body):
-		self._body = body
+	@bodies.setter
+	def bodies(self, bodies):
+		self._bodies = bodies
 
 	@property
 	def name(self):

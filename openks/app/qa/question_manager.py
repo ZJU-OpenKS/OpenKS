@@ -139,7 +139,7 @@ class QuestionManager(object):
 	"""
 	question text string  -->  StrucQ
 	"""
-	def __init__(self, question, kg_name=None):
+	def __init__(self, question, kg_name=None) -> None:
 		self.question = question
 		self.struc_q = StrucQ
 		self.struc_q.text = question
