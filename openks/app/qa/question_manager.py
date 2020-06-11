@@ -6,18 +6,18 @@ import paddle.fluid as fluid
 class EntityObj(object):
 
 	def __init__(self):
-		self.__name = ''
-		self.__ent_type = ''
-		self.__ent_id = ''
-		self.__embedding = fluid.data(name='entity', shape=[1, None], dtype='float32')
+		self._name = ''
+		self._ent_type = ''
+		self._ent_id = ''
+		self._embedding = fluid.data(name='entity', shape=[1, None], dtype='float32')
 
 	@property
 	def name(self):
-		return self.__name
+		return self._name
 
 	@name.setter
 	def name(self, name):
-		self.__name = name
+		self._name = name
 
 	@property
 	def ent_type(self):
@@ -25,30 +25,30 @@ class EntityObj(object):
 	
 	@ent_type.setter
 	def ent_type(self, ent_type):
-		self.__ent_type = ent_type
+		self._ent_type = ent_type
 
 	@property
 	def ent_id(self):
-		return self.__ent_id
+		return self._ent_id
 
 	@ent_id.setter
 	def ent_id(self, ent_id):
-		self.__ent_id = ent_id
+		self._ent_id = ent_id
 
 	@property
 	def embedding(self):
-		return self.__embedding
+		return self._embedding
 	
 	@embedding.setter
 	def embedding(self, embedding):
-		self.__embedding = embedding
+		self._embedding = embedding
 
 class RelationObj(object):
 
 	def __init__(self):
-		self.__rel_type = ''
-		self.__rel_id = ''
-		self.__embedding = fluid.data(name='relation', shape=[1, None], dtype='float32')
+		self._rel_type = ''
+		self._rel_id = ''
+		self._embedding = fluid.data(name='relation', shape=[1, None], dtype='float32')
 		# rel_id can be relation type id or specific relation id, depends on whether to distinguish relations among different entity pairs
 
 	@property
@@ -57,7 +57,7 @@ class RelationObj(object):
 	
 	@rel_type.setter
 	def rel_type(self, rel_type):
-		self.__rel_type = rel_type
+		self._rel_type = rel_type
 
 	@property
 	def rel_id(self):
@@ -65,7 +65,7 @@ class RelationObj(object):
 	
 	@rel_id.setter
 	def rel_id(self, rel_id):
-		self.__rel_id = rel_id
+		self._rel_id = rel_id
 
 	@property
 	def embedding(self):
@@ -73,58 +73,58 @@ class RelationObj(object):
 	
 	@embedding.setter
 	def embedding(self, embedding):
-		self.__embedding = embedding
+		self._embedding = embedding
 		
 
 class StrucQ(object):
 	
 	def __init__(self, question: str):
-		self.__text = question
-		self.__parse = None
-		self.__entities = []
-		self.__relations = []
-		self.__target_type = {}
-		self.__question_class = {}
+		self._text = question
+		self._parse = None
+		self._entities = []
+		self._relations = []
+		self._target_type = {}
+		self._question_class = {}
 
 	@property
 	def text(self):
-		return self.__text
+		return self._text
 
 	@text.setter
 	def text(self, text):
-		self.__text = text
+		self._text = text
 
 	@property
 	def parse(self):
-		return self.__parse
+		return self._parse
 
 	@parse.setter
 	def parse(self, parse):
-		self.__parse = parse
+		self._parse = parse
 
 	@property
 	def entities(self):
-		return self.__entities
+		return self._entities
 
 	@entities.setter
 	def entities(self, entities):
-		self.__entities = entities
+		self._entities = entities
 
 	@property
 	def relations(self):
-		return self.__relations
+		return self._relations
 
 	@relations.setter
 	def relations(self, relations):
-		self.__relations = relations
+		self._relations = relations
 
 	@property
 	def target_type(self):
-		return self.__target_type
+		return self._target_type
 
 	@target_type.setter
 	def target_type(self, target_type):
-		self.__target_type = target_type
+		self._target_type = target_type
 	
 	@property
 	def question_class(self):
@@ -132,7 +132,7 @@ class StrucQ(object):
 
 	@question_class.setter
 	def question_class(self, question_class):
-		self.__question_class = question_class
+		self._question_class = question_class
 
 
 class QuestionManager(object):
