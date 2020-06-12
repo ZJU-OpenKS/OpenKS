@@ -74,8 +74,7 @@ class Loader(object):
 		elif self.config.source_type == SourceType.HDFS:
 			return self._read_hdfs()
 		else:
-			logging.warn("The source type {} has not been implemented yet.".format(loader_config.source_type))
-			return NotImplemented
+			raise NotImplementedError("The source type {} has not been implemented yet.".format(loader_config.source_type))
 
 
 	def _read_files(self) -> MDD:
@@ -93,7 +92,7 @@ class Loader(object):
 
 	def _read_hdfs(self):
 		""" Access HDFS with delimiter """
-		return NotImplemented
+		raise NotImplementedError()
 
 if __name__ == '__main__':
 	loader_config.source_type = SourceType.LOCAL_FILE
