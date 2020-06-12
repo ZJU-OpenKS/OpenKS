@@ -15,8 +15,13 @@ class GraphLoader(Loader):
 	"""
 	Specific loader for generating HDG format from MDD
 	"""
-	def __init__(self, config: LoaderConfig) -> None:
+	def __init__(
+		self, 
+		config: LoaderConfig, 
+		graph_name: str = LoaderConfig.data_name
+		) -> None:
 		super(GraphLoader, self).__init__(config)
+		self.graph_name = graph_name
 		self.graph = self._load_data()
 
 	def _load_data(self) -> HDG:
@@ -59,6 +64,7 @@ class GraphLoader(Loader):
 		HDG.relation_attrs = relation_attrs
 		HDG.entities = entities
 		HDG.relations = relations
+		HDG.name = self.graph_name
 
 
 if __name__ == '__main__':
@@ -66,6 +72,7 @@ if __name__ == '__main__':
 	LoaderConfig.source_uris = ['../data/ent_test1.csv', '../data/ent_test2.csv', '../data/rel_test.csv']
 	LoaderConfig.data_name = 'test_graph'
 	graph_loader = GraphLoader(LoaderConfig)
+	print(HDG.graph_name)
 	print(HDG.entity_types)
 	print(HDG.relation_types)
 	print(HDG.entity_attrs)

@@ -9,6 +9,7 @@ class HDG(object):
 	"""
 	def __init__(
 		self, 
+		graph_name: str = '',
 		entity_types: List = [], 
 		relation_types: List = [], 
 		entity_attrs: List = [], 
@@ -16,12 +17,21 @@ class HDG(object):
 		entities: List = [], 
 		relations: List = []
 		) -> None:
+		self._graph_name = graph_name
 		self._entity_types = entity_types
 		self._relation_types = relation_types
 		self._entity_attrs = entity_attrs
 		self._relation_attrs = relation_attrs
 		self._entities = entities
 		self._relations = relations
+
+	@property
+	def graph_name(self):
+		return self._graph_name
+	
+	@graph_name.setter
+	def graph_name(self, graph_name):
+		self._graph_name = graph_name
 
 	@property
 	def entity_types(self):
