@@ -57,11 +57,13 @@ class LoaderConfig(object):
 	def data_name(self, data_name: str):
 		self._data_name = data_name
 
+loader_config = LoaderConfig()
+mdd = MDD()
 
 class Loader(object):
 	""" basic loader from multiple data sources """
 
-	def __init__(self, config: LoaderConfig) -> None:
+	def __init__(self, config: loader_config) -> None:
 		self.config = config
 		self.dataset = self._read_data()
 
@@ -72,7 +74,7 @@ class Loader(object):
 		elif self.config.source_type == SourceType.HDFS:
 			return self._read_hdfs()
 		else:
-			logging.warn("The source type " + LoaderConfig.source_type + "has not been implemented yet.")
+			logging.warn("The source type {} has not been implemented yet.".format(loader_config.source_type))
 			return NotImplemented
 
 
@@ -84,21 +86,21 @@ class Loader(object):
 			csv_reader = csv.reader(open(uri, newline='', encoding='utf-8'))
 			headers.append(next(csv_reader))
 			bodies.append(csv_reader)
-		MDD.name = self.config.data_name
-		MDD.headers = headers
-		MDD.bodies = bodies
-		return MDD
+		mdd.name = self.config.data_name
+		mdd.headers = headers
+		mdd.bodies = bodies
+		return mdd
 
 	def _read_hdfs(self):
 		""" Access HDFS with delimiter """
 		return NotImplemented
 
 if __name__ == '__main__':
-	LoaderConfig.source_type = SourceType.LOCAL_FILE
-	LoaderConfig.source_uris = ['../data/ent_test1.csv', '../data/ent_test2.csv', '../data/rel_test.csv']
-	LoaderConfig.data_name = 'test'
-	loader = Loader(LoaderConfig)
-	print(MDD.headers)
-	for body in MDD.bodies:
+	loader_config.source_type = SourceType.LOCAL_FILE
+	loader_config.source_uris = ['../data/ent_test1.csv', '../data/ent_test2.csv', '../data/rel_test.csv']
+	loader_config.data_name = 'test'
+	loader = Loader(loader_config)
+	print(mdd.headers)
+	for body in mdd.bodies:
 		for line in body:
 			print(line)

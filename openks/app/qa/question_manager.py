@@ -99,7 +99,7 @@ class StrucQ(object):
 	"""
 	def __init__(
 		self, 
-		question: str, 
+		question: str = '', 
 		parse: Dict = {}, 
 		entities: List = [], 
 		relations: List = [], 
@@ -161,6 +161,9 @@ class StrucQ(object):
 	def question_class(self, question_class):
 		self._question_class = question_class
 
+struc_q = StrucQ()
+entity_obj = EntityObj()
+relation_obj = RelationObj()
 
 class QuestionManager(object):
 	"""
@@ -168,7 +171,7 @@ class QuestionManager(object):
 	"""
 	def __init__(self, question, kg_name=None) -> None:
 		self.question = question
-		self.struc_q = StrucQ
+		self.struc_q = struc_q
 		self.struc_q.text = question
 		self.kg_name = kg_name
 
@@ -182,7 +185,7 @@ class QuestionManager(object):
 		tag: entity, [name: xxx, type: xxx]
 		"""
 		entities = []
-		entities.append(EntityObj)
+		entities.append(entity_obj)
 		""" To be implemented """
 		self.struc_q.entities = entities
 
@@ -191,7 +194,7 @@ class QuestionManager(object):
 		tag: relation, [type: xxx]
 		"""
 		relations = []
-		relations.append(RelationObj)
+		relations.append(relation_obj)
 		""" To be implemented """
 		self.struc_q.relations = relations
 

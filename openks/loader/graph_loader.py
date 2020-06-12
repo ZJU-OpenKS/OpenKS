@@ -11,17 +11,20 @@ from abstract.hdg import HDG
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
 
+loader_config = LoaderConfig()
+hdg = HDG()
+
 class GraphLoader(Loader):
 	"""
 	Specific loader for generating HDG format from MDD
 	"""
 	def __init__(
 		self, 
-		config: LoaderConfig, 
-		graph_name: str = LoaderConfig.data_name
+		config: loader_config, 
+		graph_name: str = ''
 		) -> None:
 		super(GraphLoader, self).__init__(config)
-		self.graph_name = graph_name
+		self.graph_name = loader_config.data_name
 		self.graph = self._load_data()
 
 	def _load_data(self) -> HDG:
@@ -29,8 +32,6 @@ class GraphLoader(Loader):
 		transform MDD from _read_data method to HDG. 
 		We require an entity dataset has the file name likes 'ent_<entity_type>', each line in the file has at least an 'id' column. 
 		We require a relation dataset has the file name likes 'rel_<relation_type>', each line in the file has at least two id columns for head entities and tail entities """
-		self.config
-		self.dataset
 		entity_types = []
 		relation_types = []
 		ent_index = []
@@ -45,11 +46,11 @@ class GraphLoader(Loader):
 				relation_types.append(''.join(name.split('_')[1:]))
 				rel_index.append(count)
 			else:
-				logging.warn("File name " + name + "is not allowed for graph loader, should start with 'ent_' or 'rel_'")
+				logging.warn("File name {} is not allowed for graph loader, should start with 'ent_' or 'rel_'".format(name))
 				return None
 			count += 1
-		HDG.entity_types = entity_types
-		HDG.relation_types = relation_types
+		hdg.entity_types = entity_types
+		hdg.relation_types = relation_types
 		entity_attrs = []
 		relation_attrs = []
 		entities = []
@@ -60,25 +61,28 @@ class GraphLoader(Loader):
 		for rel_type, index in zip(relation_types, rel_index):
 			relation_attrs.append({'type': rel_type, 'attrs': self.dataset.headers[index]})
 			relations.append({'type': rel_type, 'instances': self.dataset.bodies[index]})
-		HDG.entity_attrs = entity_attrs
-		HDG.relation_attrs = relation_attrs
-		HDG.entities = entities
-		HDG.relations = relations
-		HDG.name = self.graph_name
+		hdg.entity_attrs = entity_attrs
+		hdg.relation_attrs = relation_attrs
+		hdg.entities = entities
+		hdg.relations = relations
+		hdg.graph_name = self.graph_name
+		return hdg
 
 
 if __name__ == '__main__':
-	LoaderConfig.source_type = SourceType.LOCAL_FILE
-	LoaderConfig.source_uris = ['../data/ent_test1.csv', '../data/ent_test2.csv', '../data/rel_test.csv']
-	LoaderConfig.data_name = 'test_graph'
-	graph_loader = GraphLoader(LoaderConfig)
-	print(HDG.graph_name)
-	print(HDG.entity_types)
-	print(HDG.relation_types)
-	print(HDG.entity_attrs)
-	print(HDG.relation_attrs)
-	for line in HDG.entities:
+	loader_config.source_type = SourceType.LOCAL_FILE
+	loader_config.source_uris = ['../data/ent_test1.csv', '../data/ent_test2.csv', '../data/rel_test.csv']
+	loader_config.data_name = 'default-graph'
+	graph_loader = GraphLoader(loader_config)
+	graph = graph_loader.graph
+	print(graph)
+	print(graph.graph_name)
+	print(graph.entity_types)
+	print(graph.relation_types)
+	print(graph.entity_attrs)
+	print(graph.relation_attrs)
+	for line in graph.entities:
 		print(line)
-	for line in HDG.relations:
+	for line in graph.relations:
 		print(line)
 

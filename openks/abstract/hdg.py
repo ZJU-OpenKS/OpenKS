@@ -2,8 +2,9 @@
 Abstract dataset format HDG for Heterogeneous Distributed Graph
 """
 from typing import List
+from abstract.mdd import MDD
 
-class HDG(object):
+class HDG(MDD):
 	"""
 	A structure for standard graph data format processed from MDD
 	"""
@@ -17,6 +18,7 @@ class HDG(object):
 		entities: List = [], 
 		relations: List = []
 		) -> None:
+		super(HDG, self).__init__()
 		self._graph_name = graph_name
 		self._entity_types = entity_types
 		self._relation_types = relation_types
