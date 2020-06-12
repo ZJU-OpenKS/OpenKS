@@ -5,8 +5,7 @@ from collections import defaultdict
 import logging
 from typing import Dict, List
 
-logging.basicConfig(level=logging.DEBUG,
-                    format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
+logger = logging.getLogger(__name__)
 
 class Register(object):
 	"""
@@ -26,7 +25,7 @@ class Register(object):
 	_registry: Dict = defaultdict(dict)
 
 	@classmethod
-	def register(cls: Register, name: str):
+	def register(cls: object, name: str):
 		def register_module(module: object):
 			if name in cls._registry:
 				logging.error("Name conflict. {} has already been registered as {}.".format(name, registry[name].__name__))
@@ -38,7 +37,7 @@ class Register(object):
 		return register_module
 
 	@classmethod
-	def get_module(cls: Register, name: str) -> object:
+	def get_module(cls: object, name: str) -> object:
 		if name in cls._registry:
 			return cls._registry[name]
 		else:

@@ -8,8 +8,7 @@ import sys
 sys.path.append('..')
 from abstract.hdg import HDG
 
-logging.basicConfig(level=logging.DEBUG,
-                    format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
+logger = logging.getLogger(__name__)
 
 loader_config = LoaderConfig()
 hdg = HDG()

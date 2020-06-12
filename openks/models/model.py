@@ -2,15 +2,15 @@
 An abstract class for openks models to be trained with Paddle
 """
 import logging
-from model import ModelParams
+from model_params import ModelParams
 import paddle.fluid as fluid
 from paddle.fluid import Variable
 import sys
 sys.path.append('..')
 from common.register import Register
+from abstract.mdd import MDD
 
-logging.basicConfig(level=logging.DEBUG,
-                    format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
+logger = logging.getLogger(__name__)
 
 class KSModel(Register):
 	"""
@@ -28,7 +28,7 @@ class KSModel(Register):
 		self.params = params
 		self.data = data
 
-	def forward(self):
+	def forward(self) -> None:
 		self.startup_program = fluid.Program()
 		self.train_program = fluid.Program()
 		self.test_program = fluid.Program()
@@ -59,7 +59,7 @@ class KSModel(Register):
 			self.test_feed_list = ["test_input"]
 			self.test_fetch_vars = self.test_construct()
 
-	def backward(self, loss: Variable, opt="sgd"):
+	def backward(self, loss: Variable, opt="sgd") -> tuple:
 		optimizer_available = {
 			"adam": fluid.optimizer.Adam,
 			"sgd": fluid.optimizer.SGD,

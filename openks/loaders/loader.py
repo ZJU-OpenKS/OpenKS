@@ -9,8 +9,7 @@ import sys
 sys.path.append('..')
 from abstract.mdd import MDD
 
-logging.basicConfig(level=logging.DEBUG,
-                    format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
+logger = logging.getLogger(__name__)
 
 @unique
 class SourceType(Enum):
