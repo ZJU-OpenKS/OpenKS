@@ -1,15 +1,23 @@
 """
 This module implements a basic parsing procedure for recoginzing entities and relation types from questions
 """
+from typing import Dict, List
 import paddle.fluid as fluid
+from paddle.fluid import Variable
 
 class EntityObj(object):
 
-	def __init__(self):
-		self._name = ''
-		self._ent_type = ''
-		self._ent_id = ''
-		self._embedding = fluid.data(name='entity', shape=[1, None], dtype='float32')
+	def __init__(
+		self, 
+		name: str = '', 
+		ent_type: str = '', 
+		ent_id: str = '', 
+		embedding: Variable = fluid.data(name='entity', shape=[1, None], dtype='float32')
+		) -> None:
+		self._name = name
+		self._ent_type = ent_type
+		self._ent_id = ent_id
+		self._embedding = embedding
 
 	@property
 	def name(self):
@@ -45,10 +53,15 @@ class EntityObj(object):
 
 class RelationObj(object):
 
-	def __init__(self):
-		self._rel_type = ''
-		self._rel_id = ''
-		self._embedding = fluid.data(name='relation', shape=[1, None], dtype='float32')
+	def __init__(
+		self, 
+		rel_type: str = '', 
+		rel_id: str = '', 
+		embedding: Variable = fluid.data(name='relation', shape=[1, None], dtype='float32')
+		) -> None:
+		self._rel_type = rel_type
+		self._rel_id = rel_id
+		self._embedding = embedding
 		# rel_id can be relation type id or specific relation id, depends on whether to distinguish relations among different entity pairs
 
 	@property
@@ -78,13 +91,21 @@ class RelationObj(object):
 
 class StrucQ(object):
 	
-	def __init__(self, question: str):
+	def __init__(
+		self, 
+		question: str, 
+		parse: Dict = {}, 
+		entities: List = [], 
+		relations: List = [], 
+		target_type: Dict = {}, 
+		question_class: Dict = {}
+		) -> None:
 		self._text = question
-		self._parse = None
-		self._entities = []
-		self._relations = []
-		self._target_type = {}
-		self._question_class = {}
+		self._parse = parse
+		self._entities = entities
+		self._relations = relations
+		self._target_type = target_type
+		self._question_class = question_class
 
 	@property
 	def text(self):

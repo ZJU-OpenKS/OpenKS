@@ -1,16 +1,25 @@
 """
 Abstract dataset format HDG for Heterogeneous Distributed Graph
 """
+from typing import List
 
 class HDG(object):
 
-	def __init__(self):
-		self._entity_types = []
-		self._relation_types = []
-		self._entity_attrs = []
-		self._relation_attrs = []
-		self._entities = []
-		self._relations = []
+	def __init__(
+		self, 
+		entity_types: List = [], 
+		relation_types: List = [], 
+		entity_attrs: List = [], 
+		relation_attrs: List = [], 
+		entities: List = [], 
+		relations: List = []
+		) -> None:
+		self._entity_types = entity_types
+		self._relation_types = relation_types
+		self._entity_attrs = entity_attrs
+		self._relation_attrs = relation_attrs
+		self._entities = entities
+		self._relations = relations
 
 	@property
 	def entity_types(self):

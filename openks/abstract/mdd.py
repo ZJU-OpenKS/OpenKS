@@ -1,13 +1,19 @@
 """
 Abstract dataset format MDD for Multi-modal Distributed Dataset
 """
+from typing import List
 
 class MDD(object):
 
-	def __init__(self):
-		self._headers = []
-		self._bodies = []
-		self._name = ''
+	def __init__(
+		self, 
+		headers: List = [], 
+		bodies: List = [], 
+		name: str = ''
+		) -> None:
+		self._headers = headers
+		self._bodies = bodies
+		self._name = name
 
 	@property
 	def headers(self):

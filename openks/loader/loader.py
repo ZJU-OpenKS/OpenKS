@@ -1,6 +1,7 @@
 """
 Basic class for loading data from file or database systems
 """
+from typing import List
 from enum import Enum, unique
 import csv
 import logging
@@ -19,11 +20,16 @@ class SourceType(Enum):
 
 class LoaderConfig(object):
 
-	def __init__(self):
-		self._source_type = SourceType.LOCAL_FILE
+	def __init__(
+		self, 
+		source_type: SourceType = SourceType.LOCAL_FILE, 
+		source_uris: List = [], 
+		data_name: str = ''
+		) -> None:
+		self._source_type = source_type
 		# support loading multiple files
-		self._source_uri = []
-		self._data_name = ''
+		self._source_uri = source_uris
+		self._data_name = data_name
 
 	@property
 	def source_type(self):
