@@ -12,7 +12,9 @@ logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
 
 class GraphLoader(Loader):
-
+	"""
+	Specific loader for generating HDG format from MDD
+	"""
 	def __init__(self, config: LoaderConfig) -> None:
 		super(GraphLoader, self).__init__(config)
 		self.graph = self._load_data()

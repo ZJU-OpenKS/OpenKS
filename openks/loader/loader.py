@@ -19,7 +19,9 @@ class SourceType(Enum):
 
 
 class LoaderConfig(object):
-
+	"""
+	The config object to load data from various sources
+	"""
 	def __init__(
 		self, 
 		source_type: SourceType = SourceType.LOCAL_FILE, 

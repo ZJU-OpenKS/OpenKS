@@ -6,7 +6,9 @@ import paddle.fluid as fluid
 from paddle.fluid import Variable
 
 class EntityObj(object):
-
+	"""
+	For entity object standard that used in recoginzed entities from questions
+	"""
 	def __init__(
 		self, 
 		name: str = '', 
@@ -52,7 +54,9 @@ class EntityObj(object):
 		self._embedding = embedding
 
 class RelationObj(object):
-
+	"""
+	For relation object standard that used in extracted relations from questions
+	"""
 	def __init__(
 		self, 
 		rel_type: str = '', 
@@ -90,7 +94,9 @@ class RelationObj(object):
 		
 
 class StrucQ(object):
-	
+	"""
+	For structured question objects which can be utilized in various QA systems from simple to difficult.
+	"""
 	def __init__(
 		self, 
 		question: str, 

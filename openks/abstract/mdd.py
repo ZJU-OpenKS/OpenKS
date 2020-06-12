@@ -4,7 +4,9 @@ Abstract dataset format MDD for Multi-modal Distributed Dataset
 from typing import List
 
 class MDD(object):
-
+	"""
+	A structure for standard data format read from various sources
+	"""
 	def __init__(
 		self, 
 		headers: List = [], 
