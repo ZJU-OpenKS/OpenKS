@@ -3,10 +3,8 @@ Loader for generating knowledge graph data format HDG
 """
 import os
 import logging
-from loader import Loader, LoaderConfig, SourceType
-import sys
-sys.path.append('..')
-from abstract.hdg import HDG
+from .loader import Loader, LoaderConfig, SourceType
+from ..abstract.hdg import HDG
 
 logger = logging.getLogger(__name__)
 
@@ -70,7 +68,7 @@ class GraphLoader(Loader):
 
 if __name__ == '__main__':
 	loader_config.source_type = SourceType.LOCAL_FILE
-	loader_config.source_uris = ['../data/ent_test1.csv', '../data/ent_test2.csv', '../data/rel_test.csv']
+	loader_config.source_uris = ['openks/data/ent_test1.csv', 'openks/data/ent_test2.csv', 'openks/data/rel_test.csv']
 	loader_config.data_name = 'default-graph'
 	graph_loader = GraphLoader(loader_config)
 	graph = graph_loader.graph

@@ -5,9 +5,7 @@ from typing import List
 from enum import Enum, unique
 import csv
 import logging
-import sys
-sys.path.append('..')
-from abstract.mdd import MDD
+from ..abstract.mdd import MDD
 
 logger = logging.getLogger(__name__)
 
@@ -95,7 +93,7 @@ class Loader(object):
 
 if __name__ == '__main__':
 	loader_config.source_type = SourceType.LOCAL_FILE
-	loader_config.source_uris = ['../data/ent_test1.csv', '../data/ent_test2.csv', '../data/rel_test.csv']
+	loader_config.source_uris = ['openks/data/ent_test1.csv', 'openks/data/ent_test2.csv', 'openks/data/rel_test.csv']
 	loader_config.data_name = 'test'
 	loader = Loader(loader_config)
 	print(mdd.headers)

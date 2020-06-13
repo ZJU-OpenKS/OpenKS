@@ -1,3 +1,4 @@
 """
 init
 """
+from .register import *

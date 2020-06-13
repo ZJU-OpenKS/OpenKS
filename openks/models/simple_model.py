@@ -1,7 +1,7 @@
 """
 A simple test model to illustrate how to use model registration
 """
-from model import KSModel
+from .model import KSModel
 
 @KSModel.register("simple-model")
 class SimpleModel(KSModel):

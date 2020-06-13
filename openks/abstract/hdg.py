@@ -2,7 +2,7 @@
 Abstract dataset format HDG for Heterogeneous Distributed Graph
 """
 from typing import List
-from abstract.mdd import MDD
+from .mdd import MDD
 
 class HDG(MDD):
 	"""

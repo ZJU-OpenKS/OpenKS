@@ -2,13 +2,11 @@
 An abstract class for openks models to be trained with Paddle
 """
 import logging
-from model_params import ModelParams
 import paddle.fluid as fluid
 from paddle.fluid import Variable
-import sys
-sys.path.append('..')
-from common.register import Register
-from abstract.mdd import MDD
+from .model_params import ModelParams
+from ..common.register import Register
+from ..abstract.mdd import MDD
 
 logger = logging.getLogger(__name__)
 
