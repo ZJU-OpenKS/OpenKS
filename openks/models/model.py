@@ -26,7 +26,7 @@ class KSModel(Register):
 		self.params = params
 		self.data = data
 
-	def forward(self) -> None:
+	def model_program(self) -> None:
 		self.startup_program = fluid.Program()
 		self.train_program = fluid.Program()
 		self.test_program = fluid.Program()

@@ -10,12 +10,12 @@
 			]
 		},
 		"name": "default-graph",
-		"type": "HDG",
+		"type": "HDG", // MDD/HDG
 		"processor": "basic"
 	},
 	"model": {
 		"name": "basic-embedder",
-		"type": "GE",
+		"type": "GE", // KG/GE
 		"algorithm": {
 			"type": "TransE",
 			"dimension": 100,
