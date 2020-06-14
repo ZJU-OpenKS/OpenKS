@@ -1,0 +1,42 @@
+// a demo configuration for easy model traning
+{
+	"data_loader": {
+		"source": {
+			"type": "FILE",
+			"uri": [
+				"openks/data/ent_test1.csv", 
+				"openks/data/ent_test2.csv", 
+				"openks/data/rel_test.csv"
+			]
+		},
+		"name": "default-graph",
+		"type": "HDG",
+		"processor": "basic"
+	},
+	"model": {
+		"name": "basic-embedder",
+		"type": "GE",
+		"algorithm": {
+			"type": "TransE",
+			"dimension": 100,
+			"margin": 4.0,
+			"neg_mode": "DIRECT",
+			"pretrain": false
+		},
+		"output": "./model_output"
+	},
+	"trainer": {
+		"epoch_num": 10,
+		"cuda_device": 0,
+		"optimizer": {
+			"type": "Adam",
+			"lr": 0.001,
+			"batch_size": 1000
+		},
+		"distribution": {
+			"type": "PS", // PS/COL/FL
+			"server": "0.0.0.0",
+			"workers": ["0.0.0.0"]
+		}
+	}
+}
