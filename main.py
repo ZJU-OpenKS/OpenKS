@@ -28,7 +28,7 @@ for line in graph.relations:
     print(line)
 
 # test simple model
-simple_model = SimpleModel()
+#simple_model = SimpleModel()
 print(KSModel.list_modules())
 
 # test question parser
