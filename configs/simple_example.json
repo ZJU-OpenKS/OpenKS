@@ -11,13 +11,14 @@
 		},
 		"name": "default-graph",
 		"type": "HDG", // MDD/HDG
-		"processor": "basic"
+		// registered
+		"processor": "basic-processor"
 	},
 	"model": {
-		"name": "basic-embedder",
 		"type": "GE", // KG/GE
-		"algorithm": {
-			"type": "TransE",
+		// registered
+		"name": "basic-embedder",
+		"params": {
 			"dimension": 100,
 			"margin": 4.0,
 			"neg_mode": "DIRECT",
@@ -26,6 +27,9 @@
 		"output": "./model_output"
 	},
 	"trainer": {
+		"type": "dist",
+		// registered
+		"name": "basic-ps",
 		"epoch_num": 10,
 		"cuda_device": 0,
 		"optimizer": {
