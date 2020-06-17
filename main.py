@@ -38,7 +38,7 @@ print("")
 print(KSModel.list_modules())
 
 # test question parser
-parser = RuleParserCom("博思软件申请了几个专利？", graph)
+parser = RuleParserCom("奇安信申请了几个专利？", graph)
 struc_q = parser.parse()
 print("-----------------------------------------------")
 print("Question: " + struc_q.text)

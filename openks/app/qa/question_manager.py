@@ -176,75 +176,46 @@ class QuestionManager(object):
 		self.kg_name = kg_name
 
 	def sentence_parse(self) -> None:
-		parsed_res = None
 		""" To be implemented """
-		self.struc_q.parse = parsed_res
+		return NotImplemented
 
 	def entity_extract(self) -> None:
-		"""
-		tag: entity, [name: xxx, type: xxx]
-		"""
-		entities = []
-		entities.append(entity_obj)
-		""" To be implemented """
-		self.struc_q.entities = entities
+		""" tag: entity, [name: xxx, type: xxx]
+		 To be implemented """
+		return NotImplemented
 
 	def relation_extract(self) -> None:
-		"""
-		tag: relation, [type: xxx]
-		"""
-		relations = []
-		relations.append(relation_obj)
-		""" To be implemented """
-		self.struc_q.relations = relations
+		""" tag: relation, [type: xxx] 
+		 To be implemented """
+		return NotImplemented
 
 	def target_detect(self) -> None:
 		"""
 		what the question is asking? Can be a relation or an entity
 		class: relation/entity, type: xxx
-		"""
-		target_type = {}
-		""" To be implemented """
-		self.struc_q.target_type = target_type
+		 To be implemented """
+		return NotImplemented
 
 	def question_classify(self) -> None:
-		question_class = {}
 		""" To be implemented """
-		self.struc_q.question_class = question_class
+		return NotImplemented
 
 	def entity_link(self) -> None:
-		"""
-		entity linking
-		"""
-		entities = []
-		for ent in self.struc_q.entities:
-			""" use self.kg_name to link entity and get id """
-			""" replace entity with a dictionary with its id """
-			""" To be implemented """
-			entities.append(ent)
-		self.struc_q.entities = entities
+		""" entity linking
+		 use self.kg_name to link entity and get id \
+		 replace entity with a dictionary with its id \
+		 To be implemented """
+		return NotImplemented
 
 	def entity_relation_embed(self) -> None:
-		"""
-		transform entities and relations to embeding representations
-		"""
-		entities = []
-		for ent in self.struc_q.entities:
-			""" use self.kg_name and id to search embedding store and get representation """
-			""" replace entity with a dictionary with its representation """
-			""" To be implemented """
-			entities.append(ent)
-		self.struc_q.entities = entities
-		relations = []
-		for rel in self.struc_q.relations:
-			""" To be implemented """
-			relations.append(rel)
-		self.struc_q.relations = relations
+		""" transform entities and relations to embeding representations
+		 use self.kg_name and id to search embedding store and get representation
+		 replace entity with a dictionary with its representation
+		 To be implemented """
+		return NotImplemented
 
 	def parse(self) -> StrucQ:
-		"""
-		1 entity and 1 relation type
-		"""
+		""" actual question parsing function """
 		# self.sentence_parse()
 		#self.entity_extract()
 		#self.relation_extract()
