@@ -28,11 +28,11 @@ class Register(object):
 	def register(cls: object, name: str):
 		def register_module(module: object):
 			if name in cls._registry:
-				logging.error("Name conflict. {} has already been registered as {}.".format(name, registry[name].__name__))
+				logger.error("Name conflict. {} has already been registered as {}.".format(name, registry[name].__name__))
 				raise Exception
 			else:
 				cls._registry[name] = module
-				logging.info("Registration successfully. {} as been registered as {}.".format(name, module.__name__))
+				logger.info("Registration successfully. {} as been registered as {}.".format(name, module.__name__))
 				return module
 		return register_module
 
@@ -41,7 +41,7 @@ class Register(object):
 		if name in cls._registry:
 			return cls._registry[name]
 		else:
-			logging.error("Module not found. {} is not a registered name.".format(name))
+			logger.error("Module not found. {} is not a registered name.".format(name))
 
 	@classmethod
 	def list_modules(cls) -> List[str]:

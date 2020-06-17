@@ -18,11 +18,11 @@ class GraphLoader(Loader):
 	"""
 	def __init__(
 		self, 
-		config: loader_config, 
+		config: LoaderConfig, 
 		graph_name: str = ''
 		) -> None:
 		super(GraphLoader, self).__init__(config)
-		self.graph_name = loader_config.data_name
+		self.graph_name = config.data_name
 		self.graph = self._load_data()
 
 	def _load_data(self) -> HDG:
@@ -49,7 +49,7 @@ class GraphLoader(Loader):
 				relation_types.append('_'.join(name.split('_')[1:]))
 				rel_index.append(count)
 			else:
-				logging.warn("File name {} is not allowed for graph loader, should start with 'ent_' or 'rel_'".format(name))
+				logger.warn("File name {} is not allowed for graph loader, should start with 'ent_' or 'rel_'".format(name))
 				return None
 			count += 1
 		hdg.entity_types = entity_types
@@ -62,7 +62,9 @@ class GraphLoader(Loader):
 			entity_attrs.append({'type': ent_type, 'attrs': self.dataset.headers[index]})
 			entities.append({'type': ent_type, 'instances': self.dataset.bodies[index]})
 		for rel_type, index in zip(relation_types, rel_index):
-			relation_attrs.append({'type': rel_type, 'attrs': self.dataset.headers[index]})
+			tmp = {'type': rel_type, 'attrs': self.dataset.headers[index]}
+			tmp.update(self.config.ent_rel_mapping[rel_type])
+			relation_attrs.append(tmp)
 			relations.append({'type': rel_type, 'instances': self.dataset.bodies[index]})
 		hdg.entity_attrs = entity_attrs
 		hdg.relation_attrs = relation_attrs

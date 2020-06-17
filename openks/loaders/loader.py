@@ -25,12 +25,14 @@ class LoaderConfig(object):
 		self, 
 		source_type: SourceType = SourceType.LOCAL_FILE, 
 		source_uris: List = [], 
-		data_name: str = ''
+		data_name: str = '',
+		ent_rel_mapping: dict = {}
 		) -> None:
 		self._source_type = source_type
 		# support loading multiple files
 		self._source_uri = source_uris
 		self._data_name = data_name
+		self._ent_rel_mapping = ent_rel_mapping
 
 	@property
 	def source_type(self):
@@ -55,6 +57,15 @@ class LoaderConfig(object):
 	@data_name.setter
 	def data_name(self, data_name: str):
 		self._data_name = data_name
+
+	@property
+	def ent_rel_mapping(self):
+		return self._ent_rel_mapping
+	
+	@ent_rel_mapping.setter
+	def ent_rel_mapping(self, ent_rel_mapping: str):
+		self._ent_rel_mapping = ent_rel_mapping
+
 
 loader_config = LoaderConfig()
 mdd = MDD()
@@ -84,15 +95,16 @@ class Loader(object):
 			with ZipFile(self.config.source_uris) as zf:
 				for item in zf.namelist():
 					if item.endswith('.csv'):
-						#with zf.open(item, 'r') as infile:
+						# with zf.open(item, 'r') as infile:
 						csv_reader = csv.reader(TextIOWrapper(zf.open(item, 'r'), 'utf-8'))
 						headers.append(next(csv_reader))
-						bodies.append(csv_reader)
+						# need to find a more efficient way, the csv reader is a generator that can only be used once
+						bodies.append(list(csv_reader))
 		elif isinstance(self.config.source_uris, list):
 			for uri in self.config.source_uris:
 				csv_reader = csv.reader(open(uri, newline='', encoding='utf-8'))
 				headers.append(next(csv_reader))
-				bodies.append(csv_reader)
+				bodies.append(list(csv_reader))
 		mdd.name = self.config.data_name
 		mdd.headers = headers
 		mdd.bodies = bodies

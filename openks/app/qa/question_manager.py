@@ -241,15 +241,17 @@ class QuestionManager(object):
 			relations.append(rel)
 		self.struc_q.relations = relations
 
-	def simple_parser(self) -> StrucQ:
+	def parse(self) -> StrucQ:
 		"""
 		1 entity and 1 relation type
 		"""
-		self.sentence_parse()
-		self.entity_extract()
-		self.relation_extract()
-		self.entity_link()
-		self.entity_relation_embed()
+		# self.sentence_parse()
+		#self.entity_extract()
+		#self.relation_extract()
+		#self.target_detect()
+		#self.question_classify()
+		# self.entity_link()
+		# self.entity_relation_embed()
 		return self.struc_q
 
 
