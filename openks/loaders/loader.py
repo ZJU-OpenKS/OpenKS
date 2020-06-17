@@ -4,6 +4,8 @@ Basic class for loading data from file or database systems
 from typing import List
 from enum import Enum, unique
 import csv
+from zipfile import ZipFile
+from io import TextIOWrapper
 import logging
 from ..abstract.mdd import MDD
 
@@ -78,10 +80,19 @@ class Loader(object):
 		""" Currently support csv file format from local """
 		headers = []
 		bodies = []
-		for uri in self.config.source_uris:
-			csv_reader = csv.reader(open(uri, newline='', encoding='utf-8'))
-			headers.append(next(csv_reader))
-			bodies.append(csv_reader)
+		if isinstance(self.config.source_uris, str) and self.config.source_uris.endswith('.zip'):
+			with ZipFile(self.config.source_uris) as zf:
+				for item in zf.namelist():
+					if item.endswith('.csv'):
+						#with zf.open(item, 'r') as infile:
+						csv_reader = csv.reader(TextIOWrapper(zf.open(item, 'r'), 'utf-8'))
+						headers.append(next(csv_reader))
+						bodies.append(csv_reader)
+		elif isinstance(self.config.source_uris, list):
+			for uri in self.config.source_uris:
+				csv_reader = csv.reader(open(uri, newline='', encoding='utf-8'))
+				headers.append(next(csv_reader))
+				bodies.append(csv_reader)
 		mdd.name = self.config.data_name
 		mdd.headers = headers
 		mdd.bodies = bodies

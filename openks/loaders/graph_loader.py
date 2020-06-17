@@ -2,6 +2,7 @@
 Loader for generating knowledge graph data format HDG
 """
 import os
+from zipfile import ZipFile
 import logging
 from .loader import Loader, LoaderConfig, SourceType
 from ..abstract.hdg import HDG
@@ -34,13 +35,18 @@ class GraphLoader(Loader):
 		ent_index = []
 		rel_index = []
 		count = 0
-		file_names = [os.path.splitext(os.path.basename(path))[0] for path in self.config.source_uris]
+		file_names = None
+		if isinstance(self.config.source_uris, str) and self.config.source_uris.endswith('.zip'):
+			with ZipFile(self.config.source_uris) as zf:
+				file_names = [os.path.splitext(os.path.basename(item))[0] for item in zf.namelist() if item.endswith('.csv')]
+		elif isinstance(self.config.source_uris, list):
+			file_names = [os.path.splitext(os.path.basename(path))[0] for path in self.config.source_uris]
 		for name in file_names:
 			if name.startswith('ent_'):
-				entity_types.append(''.join(name.split('_')[1:]))
+				entity_types.append('_'.join(name.split('_')[1:]))
 				ent_index.append(count)
 			elif name.startswith('rel_'):
-				relation_types.append(''.join(name.split('_')[1:]))
+				relation_types.append('_'.join(name.split('_')[1:]))
 				rel_index.append(count)
 			else:
 				logging.warn("File name {} is not allowed for graph loader, should start with 'ent_' or 'rel_'".format(name))
