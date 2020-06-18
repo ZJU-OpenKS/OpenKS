@@ -13,33 +13,42 @@ class AnswerFetcher(object):
 		self.struc_q = struc_q
 		self.graph = graph
 
-	def fetch_by_one(self):
-		ent_to_fetch = None
-		rel_to_check = None
+	def struc_q_check(self) -> bool:
+		if len(self.struc_q.relations) == 0:
+			logger.warn("No relation found from the question.")
+			return False
+		elif len(self.struc_q.entities) == 0:
+			logger.warn("No entity found from the question.")
+			return False
+		else:
+			return True 
+
+	def fetch_by_one(self) -> object:
+		if not self.struc_q_check():
+			return None
+		rel_type = self.struc_q.relations[0]
+		target_type = self.struc_q.target_type['target_type']
 		fetch_type = self.struc_q.question_class['question_class']
 		ent_id = self.struc_q.entities[0]['id']
-		# get target entity list
-		for entity_list in self.graph.entities:
-			if entity_list['type'] == self.struc_q.target_type['target_type']:
-				ent_to_fetch = entity_list['instances']
-		# get relation list as a bridge
-		for relation_list in self.graph.relations:
-			if relation_list['type'] == self.struc_q.relations[0]:
-				rel_to_check = relation_list['instances']
+		ent_type = self.struc_q.entities[0]['type']
+		ent_to_fetch = self.graph.entities[target_type]
+		rel_to_check = self.graph.relations[rel_type]
 
-		# get column index for source entity and target entity in relation list 
+		# get column index for source entity and target entity ids in relation list 
 		source_index = 0
 		target_index = 0
-		for rel_attr in self.graph.relation_attrs:
-			if rel_attr['type'] == self.struc_q.relations[0]:
-				if rel_attr['from'] == self.struc_q.entities[0]['type']:
-					source_index = rel_attr['attrs'].index(rel_attr['from_attr'])
-					target_index = rel_attr['attrs'].index(rel_attr['to_attr'])
-				elif rel_attr['to'] == self.struc_q.entities[0]['type']:
-					source_index = rel_attr['attrs'].index(rel_attr['to_attr'])
-					target_index = rel_attr['attrs'].index(rel_attr['from_attr'])
-				else:
-					logger.error("Relation type not match")
+		_from = self.graph.relation_attrs[rel_type]['from']
+		_to = self.graph.relation_attrs[rel_type]['to']
+		attrs = self.graph.relation_attrs[rel_type]['attrs']
+		if self.struc_q.entities[0]['type'] in _from:
+			source_index = attrs.index(_from[ent_type])
+			target_index = attrs.index(list(_to.values())[0])
+		elif self.struc_q.entities[0]['type'] in _to:
+			source_index = attrs.index(_to[ent_type])
+			target_index = attrs.index(list(_from.values())[0])
+		else:
+			logger.error("Relation type not match")
+			return None
 
 		# get id for target entity
 		target_ids = []
@@ -48,12 +57,8 @@ class AnswerFetcher(object):
 				target_ids.append(rel[target_index])
 
 		# get target entity record by its id
-		target_cols = []
-		target_id_index = 0
-		for ent_attr in self.graph.entity_attrs:
-			if ent_attr['type'] == self.struc_q.target_type['target_type']:
-				target_cols = ent_attr['attrs']
-				target_id_index = ent_attr['attrs'].index('id')
+		target_cols = self.graph.entity_attrs[target_type]
+		target_id_index = self.graph.entity_attrs[target_type].index('id')
 		target_items = []
 		for ent in ent_to_fetch:
 			for target_id in target_ids:

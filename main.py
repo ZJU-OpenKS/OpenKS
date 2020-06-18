@@ -7,7 +7,7 @@ loader_config.source_type = SourceType.LOCAL_FILE
 #loader_config.source_uris = ['openks/data/ent_test1.csv', 'openks/data/ent_test2.csv', 'openks/data/rel_test.csv']
 loader_config.source_uris = 'openks/data/investor-company-patent.zip'
 loader_config.data_name = 'test'
-loader_config.ent_rel_mapping = {'company_investor': {'from': 'investor', 'to': 'company', 'from_attr': 'investor_id', 'to_attr':'company_id'}, 'company_patent': {'from': 'company', 'to': 'patent', 'from_attr': 'company_id', 'to_attr':'patent_id'}}
+loader_config.ent_rel_mapping = {'company_investor': {'from': {'investor': 'investor_id'}, 'to': {'company': 'company_id'}}, 'company_patent': {'from': {'company': 'company_id'}, 'to': {'patent': 'patent_id'}}}
 loader = Loader(loader_config)
 #print(mdd.headers)
 #for body in mdd.bodies:
@@ -38,7 +38,8 @@ print("")
 print(KSModel.list_modules())
 
 # test question parser
-parser = RuleParserCom("奇安信申请了几个专利？", graph)
+question = input("输入问题：")
+parser = RuleParserCom(question, graph)
 struc_q = parser.parse()
 print("-----------------------------------------------")
 print("Question: " + struc_q.text)

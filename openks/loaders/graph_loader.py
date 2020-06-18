@@ -15,6 +15,13 @@ hdg = HDG()
 class GraphLoader(Loader):
 	"""
 	Specific loader for generating HDG format from MDD
+	A knowledge graph structure should follows:
+		entity_types: list<str>
+		relation_types: list<str>
+		entity_attrs: dict<str, list<str>>
+		relation_attrs: dict<str, dict<str, dict<str, str>/list<str>>> // must have 'from', 'to', 'attrs' keys
+		entities: dict<str, list<list<T>>>
+		relations: dict<str, list<list<T>>>
 	"""
 	def __init__(
 		self, 
@@ -54,18 +61,18 @@ class GraphLoader(Loader):
 			count += 1
 		hdg.entity_types = entity_types
 		hdg.relation_types = relation_types
-		entity_attrs = []
-		relation_attrs = []
-		entities = []
-		relations = []
+		entity_attrs = {}
+		relation_attrs = {}
+		entities = {}
+		relations = {}
 		for ent_type, index in zip(entity_types, ent_index):
-			entity_attrs.append({'type': ent_type, 'attrs': self.dataset.headers[index]})
-			entities.append({'type': ent_type, 'instances': self.dataset.bodies[index]})
+			entity_attrs[ent_type] = self.dataset.headers[index]
+			entities[ent_type] = self.dataset.bodies[index]
 		for rel_type, index in zip(relation_types, rel_index):
-			tmp = {'type': rel_type, 'attrs': self.dataset.headers[index]}
-			tmp.update(self.config.ent_rel_mapping[rel_type])
-			relation_attrs.append(tmp)
-			relations.append({'type': rel_type, 'instances': self.dataset.bodies[index]})
+			tmp = self.config.ent_rel_mapping[rel_type]
+			tmp.update({'attrs': self.dataset.headers[index]})
+			relation_attrs[rel_type] = tmp
+			relations[rel_type] = self.dataset.bodies[index]
 		hdg.entity_attrs = entity_attrs
 		hdg.relation_attrs = relation_attrs
 		hdg.entities = entities
