@@ -10,7 +10,39 @@ from ..abstract.mdd import MDD
 
 logger = logging.getLogger(__name__)
 
-class KSModel(Register):
+class KSModel(object):
+	"""
+	The basic class for models in KS-Studio, defines standard model construction methods
+	"""
+
+	def __init__(self, *args) -> None:
+		pass
+
+	def model_program(self) -> None:
+		""" model network construction for the whole data processing, model designing and training process """
+		raise NotImplementedError
+
+	def data_process(self, data: MDD) -> object:
+		""" preprocessing the loaded data for directly train """
+		raise NotImplementedError
+
+	def backward(self, *args) -> object:
+		""" model training process to accept loss and return optimized parameters """
+		raise NotImplementedError
+
+	def predict(self, *args) -> object:
+		""" to predict instances using the trained model """
+		raise NotImplementedError
+
+	def save(self, output_dir: str, *args) -> None:
+		""" to serialize the model parameters into a specific directory """
+		raise NotImplementedError
+
+	def load(self, from_dir: str, *args) -> "KSModel":
+		""" to load serialized parameters as a KSModel object """
+		raise NotImplementedError
+
+class KSPaddleModel(KSModel, Register):
 	"""
 	The basic class for models to be trained using PaddlePaddle. 
 	The subclasses of it can be registered and train in standard format.

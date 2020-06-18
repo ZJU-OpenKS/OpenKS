@@ -1,10 +1,10 @@
 """
 A simple test model to illustrate how to use model registration
 """
-from .model import KSModel
+from .model import KSPaddleModel
 
-@KSModel.register("simple-model")
-class SimpleModel(KSModel):
+@KSPaddleModel.register("simple-model")
+class SimpleModel(KSPaddleModel):
 
 	def __init__(self) -> None:
 		pass
@@ -16,4 +16,4 @@ class SimpleModel(KSModel):
 if __name__ == '__main__':
 	simple_model = SimpleModel()
 
-	print(KSModel.list_modules())
+	print(KSPaddleModel.list_modules())

@@ -35,7 +35,7 @@ print("-----------------------------------------------")
 print("")
 # test simple model
 #simple_model = SimpleModel()
-print(KSModel.list_modules())
+print(KSPaddleModel.list_modules())
 
 # test question parser
 question = input("输入问题：")

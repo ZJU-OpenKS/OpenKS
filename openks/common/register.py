@@ -28,11 +28,11 @@ class Register(object):
 	def register(cls: object, name: str):
 		def register_module(module: object):
 			if name in cls._registry:
-				logger.error("Name conflict. {} has already been registered as {}.".format(name, registry[name].__name__))
+				logger.error("Name conflicts. {} has already been registered as {}.".format(registry[name].__name__, name))
 				raise Exception
 			else:
 				cls._registry[name] = module
-				logger.info("Registration successfully. {} as been registered as {}.".format(name, module.__name__))
+				logger.info("Registration succeds. {} as been registered as {}.".format(module.__name__, name))
 				return module
 		return register_module
 
