@@ -10,7 +10,7 @@
 			]
 		},
 		"name": "default-graph",
-		"type": "HDG", // MDD/HDG
+		"type": "MTG", // MMD/MTG
 		// registered
 		"processor": "basic-processor"
 	},

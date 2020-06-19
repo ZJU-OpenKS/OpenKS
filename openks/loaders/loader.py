@@ -7,7 +7,7 @@ import csv
 from zipfile import ZipFile
 from io import TextIOWrapper
 import logging
-from ..abstract.mdd import MDD
+from ..abstract.mmd import MMD
 
 logger = logging.getLogger(__name__)
 
@@ -68,7 +68,7 @@ class LoaderConfig(object):
 
 
 loader_config = LoaderConfig()
-mdd = MDD()
+mmd = MMD()
 
 class Loader(object):
 	""" basic loader from multiple data sources """
@@ -77,8 +77,8 @@ class Loader(object):
 		self.config = config
 		self.dataset = self._read_data()
 
-	def _read_data(self) -> MDD:
-		""" read data from multiple sources and return MDD """
+	def _read_data(self) -> MMD:
+		""" read data from multiple sources and return MMD """
 		if self.config.source_type == SourceType.LOCAL_FILE:
 			return self._read_files()
 		elif self.config.source_type == SourceType.HDFS:
@@ -87,8 +87,9 @@ class Loader(object):
 			raise NotImplementedError("The source type {} has not been implemented yet.".format(loader_config.source_type))
 
 
-	def _read_files(self) -> MDD:
-		""" Currently support csv file format from local """
+	def _read_files(self) -> MMD:
+		""" Currently support csv file format from local
+		    support *.csv and *labels.csv files either in a zip file or directly in a folder """
 		headers = []
 		bodies = []
 		if isinstance(self.config.source_uris, str) and self.config.source_uris.endswith('.zip'):
@@ -102,13 +103,14 @@ class Loader(object):
 						bodies.append(list(csv_reader))
 		elif isinstance(self.config.source_uris, list):
 			for uri in self.config.source_uris:
-				csv_reader = csv.reader(open(uri, newline='', encoding='utf-8'))
-				headers.append(next(csv_reader))
-				bodies.append(list(csv_reader))
-		mdd.name = self.config.data_name
-		mdd.headers = headers
-		mdd.bodies = bodies
-		return mdd
+				if uri.endswith('.csv'):
+					csv_reader = csv.reader(open(uri, newline='', encoding='utf-8'))
+					headers.append(next(csv_reader))
+					bodies.append(list(csv_reader))
+		mmd.name = self.config.data_name
+		mmd.headers = headers
+		mmd.bodies = bodies
+		return mmd
 
 	def _read_hdfs(self):
 		""" Access HDFS with delimiter """
@@ -119,7 +121,7 @@ if __name__ == '__main__':
 	loader_config.source_uris = ['openks/data/ent_test1.csv', 'openks/data/ent_test2.csv', 'openks/data/rel_test.csv']
 	loader_config.data_name = 'test'
 	loader = Loader(loader_config)
-	print(mdd.headers)
-	for body in mdd.bodies:
+	print(mmd.headers)
+	for body in mmd.bodies:
 		for line in body:
 			print(line)

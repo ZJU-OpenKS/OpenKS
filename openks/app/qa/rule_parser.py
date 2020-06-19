@@ -5,13 +5,13 @@ import ast
 import re
 import copy
 from .question_manager import QuestionManager, StrucQ
-from ...abstract import HDG
+from ...abstract.mtg import MTG
 
 class RuleParserCom(QuestionManager):
 	"""
 	Rules for the domain of investor-company-patent dataset
 	"""
-	def __init__(self, question: str, graph: HDG) -> None:
+	def __init__(self, question: str, graph: MTG) -> None:
 		super(RuleParserCom, self).__init__(question)
 		self.graph = graph
 		self.question_type = {'entity': ['哪些', '哪家', '哪个', '哪几个', '谁'], 'quantity': ['多少', '几个', '几家']}

@@ -2,11 +2,12 @@
 An abstract class for openks models to be trained with Paddle
 """
 import logging
+from typing import Tuple, Any
 import paddle.fluid as fluid
 from paddle.fluid import Variable
 from .model_params import ModelParams
 from ..common.register import Register
-from ..abstract.mdd import MDD
+from ..abstract.mmd import MMD
 
 logger = logging.getLogger(__name__)
 
@@ -22,15 +23,15 @@ class KSModel(object):
 		""" model network construction for the whole data processing, model designing and training process """
 		raise NotImplementedError
 
-	def data_process(self, data: MDD) -> object:
+	def data_process(self, data: MMD) -> Any:
 		""" preprocessing the loaded data for directly train """
 		raise NotImplementedError
 
-	def backward(self, *args) -> object:
+	def backward(self, *args) -> Any:
 		""" model training process to accept loss and return optimized parameters """
 		raise NotImplementedError
 
-	def predict(self, *args) -> object:
+	def predict(self, *args) -> Any:
 		""" to predict instances using the trained model """
 		raise NotImplementedError
 
@@ -52,7 +53,7 @@ class KSPaddleModel(KSModel, Register):
 		self, 
 		name: str = 'default-name', 
 		params: ModelParams = None, 
-		data: MDD = None
+		data: MMD = None
 		) -> None:
 		self.name = name
 		self.params = params
@@ -89,7 +90,7 @@ class KSPaddleModel(KSModel, Register):
 			self.test_feed_list = ["test_input"]
 			self.test_fetch_vars = self.test_construct()
 
-	def backward(self, loss: Variable, opt="sgd") -> tuple:
+	def backward(self, loss: Variable, opt="sgd") -> Tuple:
 		optimizer_available = {
 			"adam": fluid.optimizer.Adam,
 			"sgd": fluid.optimizer.SGD,

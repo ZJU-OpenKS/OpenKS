@@ -1,17 +1,18 @@
 """
-Support Paddle data reader for Paddle model training process, MDD/HDG as input, Numpy Array iteratble object as output
+Support Paddle data reader for Paddle model training process, MMD/MTG as input, Numpy Array iteratble object as output
 """
+from typing import Callable, Iterator
 import numpy as np
 import paddle
-from ..abstract.mdd import MDD
+from ..abstract.mmd import MMD
 
 class PaddleLoader(object):
 
-	def __init__(self, mdd: MDD) -> None:
-		self.mdd = mdd
+	def __init__(self, mmd: MMD) -> None:
+		self.mmd = mmd
 
-	def mdd_reader_creator(sample_source: MDD, label_source: MDD = None, size: int) -> function:
-		def reader():
+	def mmd_reader_creator(sample_source: MMD, label_source: MMD = None, size: int) -> Callable:
+		def reader() -> Iterator:
 			samples = np.array(sample_source.bodies[:size].insert(0, sample_source.headers)).astype('float32')
 			if label_source:
 				labels = np.array([label[0] for label in label_source.bodies[:size]].insert(0, label_source.headers)).astype('int')
@@ -23,5 +24,5 @@ class PaddleLoader(object):
 		return reader
 
 	def test_batch_reader():
-		reader = self.mdd_reader_creator(self.mdd, 1024)
+		reader = self.mmd_reader_creator(self.mmd, 1024)
 		batch_reader = paddle.batch(reader(), 128)

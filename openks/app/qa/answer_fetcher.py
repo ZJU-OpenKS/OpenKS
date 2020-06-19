@@ -2,14 +2,15 @@
 Answer fetch progam to receive structured question and get possible answers
 """
 import logging
+from typing import Any
 from .question_manager import StrucQ
-from ...abstract import HDG
+from ...abstract.mtg import MTG
 
 logger = logging.getLogger(__name__)
 
 class AnswerFetcher(object):
 
-	def __init__(self, struc_q: StrucQ, graph: HDG) -> None:
+	def __init__(self, struc_q: StrucQ, graph: MTG) -> None:
 		self.struc_q = struc_q
 		self.graph = graph
 
@@ -23,7 +24,7 @@ class AnswerFetcher(object):
 		else:
 			return True 
 
-	def fetch_by_one(self) -> object:
+	def fetch_by_one(self) -> Any:
 		if not self.struc_q_check():
 			return None
 		rel_type = self.struc_q.relations[0]

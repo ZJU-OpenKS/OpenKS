@@ -25,7 +25,7 @@ class Register(object):
 	_registry: Dict = defaultdict(dict)
 
 	@classmethod
-	def register(cls: object, name: str):
+	def register(cls: 'Register', name: str):
 		def register_module(module: object):
 			if name in cls._registry:
 				logger.error("Name conflicts. {} has already been registered as {}.".format(registry[name].__name__, name))
@@ -37,14 +37,14 @@ class Register(object):
 		return register_module
 
 	@classmethod
-	def get_module(cls: object, name: str) -> object:
+	def get_module(cls: 'Register', name: str) -> object:
 		if name in cls._registry:
 			return cls._registry[name]
 		else:
 			logger.error("Module not found. {} is not a registered name.".format(name))
 
 	@classmethod
-	def list_modules(cls) -> List[str]:
+	def list_modules(cls: 'Register') -> List[str]:
 		names = list(cls._registry.keys())
 		return names
 

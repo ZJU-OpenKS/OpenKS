@@ -1,20 +1,20 @@
 """
-Loader for generating knowledge graph data format HDG
+Loader for generating knowledge graph data format MTG
 """
 import os
 from zipfile import ZipFile
 import logging
 from .loader import Loader, LoaderConfig, SourceType
-from ..abstract.hdg import HDG
+from ..abstract.mtg import MTG
 
 logger = logging.getLogger(__name__)
 
 loader_config = LoaderConfig()
-hdg = HDG()
+mtg = MTG()
 
 class GraphLoader(Loader):
 	"""
-	Specific loader for generating HDG format from MDD
+	Specific loader for generating MTG format from MMD
 	A knowledge graph structure should follows:
 		entity_types: list<str>
 		relation_types: list<str>
@@ -32,9 +32,9 @@ class GraphLoader(Loader):
 		self.graph_name = config.data_name
 		self.graph = self._load_data()
 
-	def _load_data(self) -> HDG:
+	def _load_data(self) -> MTG:
 		""" 
-		transform MDD from _read_data method to HDG. 
+		transform MMD from _read_data method to MTG. 
 		We require an entity dataset has the file name likes 'ent_<entity_type>', each line in the file has at least an 'id' column. 
 		We require a relation dataset has the file name likes 'rel_<relation_type>', each line in the file has at least two id columns for head entities and tail entities """
 		entity_types = []
@@ -59,8 +59,8 @@ class GraphLoader(Loader):
 				logger.warn("File name {} is not allowed for graph loader, should start with 'ent_' or 'rel_'".format(name))
 				return None
 			count += 1
-		hdg.entity_types = entity_types
-		hdg.relation_types = relation_types
+		mtg.entity_types = entity_types
+		mtg.relation_types = relation_types
 		entity_attrs = {}
 		relation_attrs = {}
 		entities = {}
@@ -73,12 +73,12 @@ class GraphLoader(Loader):
 			tmp.update({'attrs': self.dataset.headers[index]})
 			relation_attrs[rel_type] = tmp
 			relations[rel_type] = self.dataset.bodies[index]
-		hdg.entity_attrs = entity_attrs
-		hdg.relation_attrs = relation_attrs
-		hdg.entities = entities
-		hdg.relations = relations
-		hdg.graph_name = self.graph_name
-		return hdg
+		mtg.entity_attrs = entity_attrs
+		mtg.relation_attrs = relation_attrs
+		mtg.entities = entities
+		mtg.relations = relations
+		mtg.graph_name = self.graph_name
+		return mtg
 
 
 if __name__ == '__main__':

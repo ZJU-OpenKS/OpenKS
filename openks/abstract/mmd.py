@@ -3,14 +3,14 @@ Abstract dataset format MDD for Multi-modal Distributed Dataset
 """
 from typing import List
 
-class MDD(object):
+class MMD(object):
 	"""
 	A structure for standard data format read from various sources
 	"""
 	def __init__(
 		self, 
 		headers: List = [], 
-		bodies: List = [], 
+		bodies: List = [],
 		name: str = ''
 		) -> None:
 		self._headers = headers
