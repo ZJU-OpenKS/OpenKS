@@ -23,11 +23,11 @@ class RuleParserCom(QuestionManager):
 	def entity_extract(self) -> None:
 		entities = []
 		entity_type = 'company'
-		attrs = self.graph.entity_attrs[entity_type]
-		index_alter_names = attrs.index('alter_names')
-		index_name = attrs.index('name')
-		index_id = attrs.index('id')
-		for item in self.graph.entities[entity_type]:
+		pointer = self.graph.entities[entity_type]['pointer']
+		index_alter_names = pointer['alter_names']
+		index_name = pointer['name']
+		index_id = pointer['id']
+		for item in self.graph.entities[entity_type]['instances']:
 			tmp = ast.literal_eval(item[index_alter_names])
 			tmp.append(item[index_name])
 			for name in tmp:
@@ -47,35 +47,35 @@ class RuleParserCom(QuestionManager):
 					return None
 
 	def target_detect(self) -> None:
-		target_type = {'target_type': ''}
+		target_type = {'type': ''}
 		prefixes = copy.deepcopy(self.question_type['entity'])
 		prefixes.extend(self.question_type['quantity'])
 		for target, pattern in self.question_target.items():
 			for p in pattern:
 				for prefix in prefixes:
 					if re.search(prefix + p, self.struc_q.text) or re.search(p + "[是|有]" + prefix, self.struc_q.text):
-						target_type['target_type'] = target
+						target_type['type'] = target
 						self.struc_q.target_type = target_type
 						return None
-		if not target_type['target_type']:
+		if not target_type['type']:
 			for target, pattern in self.question_target_single.items():
 				for p in pattern:
 					if re.search(p, self.struc_q.text):
-						target_type['target_type'] = target
+						target_type['type'] = target
 						self.struc_q.target_type = target_type
 						return None
 		self.struc_q.target_type = target_type
 		return None
 
 	def question_classify(self) -> None:
-		question_class = {'question_class': ''}
+		question_class = {'type': ''}
 		for q_class, pattern in self.question_type.items():
 			for p in pattern:
 				if re.search(p, self.struc_q.text):
-					question_class['question_class'] = q_class
+					question_class['type'] = q_class
 					self.struc_q.question_class = question_class
 					return None
-		self.struc_q.target_type = target_type
+		self.struc_q.question_class = question_class
 		return None
 
 	def parse(self) -> StrucQ:

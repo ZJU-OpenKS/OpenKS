@@ -16,6 +16,12 @@ class SourceType(Enum):
 	LOCAL_FILE = 'local_file'
 	HDFS = 'hdfs'
 
+@unique
+class FileType(Enum):
+	CSV = 'csv'
+	ZIP = 'zip'
+	JSON = 'json'
+
 
 class LoaderConfig(object):
 	"""
@@ -24,15 +30,15 @@ class LoaderConfig(object):
 	def __init__(
 		self, 
 		source_type: SourceType = SourceType.LOCAL_FILE, 
+		file_type: FileType = FileType.CSV,
 		source_uris: List = [], 
-		data_name: str = '',
-		ent_rel_mapping: dict = {}
+		data_name: str = ''
 		) -> None:
 		self._source_type = source_type
+		self._file_type = file_type
 		# support loading multiple files
 		self._source_uri = source_uris
 		self._data_name = data_name
-		self._ent_rel_mapping = ent_rel_mapping
 
 	@property
 	def source_type(self):
@@ -41,6 +47,14 @@ class LoaderConfig(object):
 	@source_type.setter
 	def source_type(self, source_type: Enum):
 		self._source_type = source_type
+
+	@property
+	def file_type(self):
+		return self._file_type
+	
+	@file_type.setter
+	def file_type(self, file_type: Enum):
+		self._file_type = file_type
 
 	@property
 	def source_uris(self):
@@ -57,14 +71,6 @@ class LoaderConfig(object):
 	@data_name.setter
 	def data_name(self, data_name: str):
 		self._data_name = data_name
-
-	@property
-	def ent_rel_mapping(self):
-		return self._ent_rel_mapping
-	
-	@ent_rel_mapping.setter
-	def ent_rel_mapping(self, ent_rel_mapping: str):
-		self._ent_rel_mapping = ent_rel_mapping
 
 
 loader_config = LoaderConfig()

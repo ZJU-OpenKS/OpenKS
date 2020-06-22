@@ -24,58 +24,41 @@ class AnswerFetcher(object):
 		else:
 			return True 
 
-	def fetch_by_one(self) -> Any:
+	def fetch_by_one_hop(self) -> Any:
 		if not self.struc_q_check():
 			return None
-		rel_type = self.struc_q.relations[0]
-		target_type = self.struc_q.target_type['target_type']
-		fetch_type = self.struc_q.question_class['question_class']
-		ent_id = self.struc_q.entities[0]['id']
-		ent_type = self.struc_q.entities[0]['type']
-		ent_to_fetch = self.graph.entities[target_type]
-		rel_to_check = self.graph.relations[rel_type]
 
-		# get column index for source entity and target entity ids in relation list 
-		source_index = 0
-		target_index = 0
-		_from = self.graph.relation_attrs[rel_type]['from']
-		_to = self.graph.relation_attrs[rel_type]['to']
-		attrs = self.graph.relation_attrs[rel_type]['attrs']
-		if self.struc_q.entities[0]['type'] in _from:
-			source_index = attrs.index(_from[ent_type])
-			target_index = attrs.index(list(_to.values())[0])
-		elif self.struc_q.entities[0]['type'] in _to:
-			source_index = attrs.index(_to[ent_type])
-			target_index = attrs.index(list(_from.values())[0])
-		else:
-			logger.error("Relation type not match")
-			return None
+		entity_info = self.struc_q.entities[0]
+		relation_type = self.struc_q.relations[0]
+		target_type = self.struc_q.target_type['type']
+		question_type = self.struc_q.question_class['type']
 
-		# get id for target entity
+		entity_id = entity_info['id']
+		entity_type = entity_info['type']
+		source_rel_col_index = self.graph.relations[relation_type]['pointer'][entity_type + '_id']
+		target_rel_col_index = self.graph.relations[relation_type]['pointer'][target_type + '_id']
+
 		target_ids = []
-		for rel in rel_to_check:
-			if rel[source_index] == self.struc_q.entities[0]['id']:
-				target_ids.append(rel[target_index])
+		for rel in self.graph.relations[relation_type]['instances']:
+			if rel[source_rel_col_index] == entity_id:
+				target_ids.append(rel[target_rel_col_index])
 
-		# get target entity record by its id
-		target_cols = self.graph.entity_attrs[target_type]
-		target_id_index = self.graph.entity_attrs[target_type].index('id')
+		target_id_index = self.graph.entities[target_type]['pointer']['id']
 		target_items = []
-		for ent in ent_to_fetch:
-			for target_id in target_ids:
-				if ent[target_id_index] == target_id:
+		for ent in self.graph.entities[target_type]['instances']:
+			for tar_id in target_ids:
+				if ent[target_id_index] == tar_id:
 					target_items.append(ent)
-
-		# compound to a complete entity as the answer
+		target_cols = self.graph.entities[target_type]['pointer'].keys()
 		res = []
 		for item in target_items:
 			tmp = {}
 			for key, value in zip(target_cols, item):
 				tmp[key] = value
 			res.append(tmp)
-		if fetch_type == 'entity':
+		if question_type == 'entity':
 			return res
-		elif fetch_type == 'quantity':
+		elif question_type == 'quantity':
 			return len(res)
 
 
