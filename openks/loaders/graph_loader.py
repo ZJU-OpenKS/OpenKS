@@ -35,14 +35,15 @@ class GraphLoader(Loader):
 		ent_index = []
 		rel_index = []
 		count = 0
-		file_names = None
+		file_names = []
 		if self.config.file_type == FileType.ZIP:
 			with ZipFile(self.config.source_uris) as zf:
 				file_names = [os.path.splitext(os.path.basename(item))[0] for item in zf.namelist() if item.endswith('.csv')]
 		elif self.config.file_type == FileType.CSV:
 			file_names = [os.path.splitext(os.path.basename(path))[0] for path in self.config.source_uris]
-		elif self.config.file_type == FileType.JSON:
-			raise NotImplementedError
+		elif self.config.file_type == FileType.OPENKG:
+			pass
+			#raise NotImplementedError
 		for name in file_names:
 			if name.startswith('ent_'):
 				schema['concepts'].append(

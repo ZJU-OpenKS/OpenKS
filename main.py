@@ -4,10 +4,11 @@ from openks.app.qa import *
 
 # test loader
 loader_config.source_type = SourceType.LOCAL_FILE
-loader_config.file_type = FileType.ZIP
+loader_config.file_type = FileType.OPENKG
 #loader_config.source_uris = ['openks/data/ent_test1.csv', 'openks/data/ent_test2.csv', 'openks/data/rel_test.csv']
-loader_config.source_uris = 'openks/data/investor-company-patent.zip'
-loader_config.data_name = 'test'
+#loader_config.source_uris = 'openks/data/investor-company-patent.zip'
+loader_config.source_uris = 'openks/data/wiki-covid-19-v0.3.json'
+loader_config.data_name = 'wiki-covid-19'
 #loader_config.ent_rel_mapping = {'company_investor': {'from': {'investor': 'investor_id'}, 'to': {'company': 'company_id'}}, 'company_patent': {'from': {'company': 'company_id'}, 'to': {'patent': 'patent_id'}}}
 loader = Loader(loader_config)
 #print(mdd.headers)
@@ -17,8 +18,15 @@ loader = Loader(loader_config)
 #		break
 
 # test graph loader
-loader_config.data_name = 'default-graph'
 graph_loader = GraphLoader(loader_config)
+
+print("-----------------------------------------------")
+print("Dataset headers:")
+print(graph_loader.dataset.headers)
+print("Dataset bodies:")
+print(graph_loader.dataset.bodies[0][:10])
+
+
 graph = graph_loader.graph
 print("-----------------------------------------------")
 print("The loaded graph infomation: ")

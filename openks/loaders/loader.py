@@ -6,6 +6,7 @@ from enum import Enum, unique
 import csv
 from zipfile import ZipFile
 from io import TextIOWrapper
+import json
 import logging
 from ..abstract.mmd import MMD
 
@@ -20,7 +21,7 @@ class SourceType(Enum):
 class FileType(Enum):
 	CSV = 'csv'
 	ZIP = 'zip'
-	JSON = 'json'
+	OPENKG = 'openkg'
 
 
 class LoaderConfig(object):
@@ -98,7 +99,7 @@ class Loader(object):
 		    support *.csv and *labels.csv files either in a zip file or directly in a folder """
 		headers = []
 		bodies = []
-		if isinstance(self.config.source_uris, str) and self.config.source_uris.endswith('.zip'):
+		if self.config.file_type == FileType.ZIP:
 			with ZipFile(self.config.source_uris) as zf:
 				for item in zf.namelist():
 					if item.endswith('.csv'):
@@ -107,12 +108,32 @@ class Loader(object):
 						headers.append(next(csv_reader))
 						# need to find a more efficient way, the csv reader is a generator that can only be used once
 						bodies.append(list(csv_reader))
-		elif isinstance(self.config.source_uris, list):
+		elif self.config.file_type == FileType.CSV:
 			for uri in self.config.source_uris:
 				if uri.endswith('.csv'):
 					csv_reader = csv.reader(open(uri, newline='', encoding='utf-8'))
 					headers.append(next(csv_reader))
 					bodies.append(list(csv_reader))
+		elif self.config.file_type == FileType.OPENKG:
+			header = ['@id', '@language', '@value']
+			body = []
+			with open(self.config.source_uris, 'r') as load_f:
+				load_dict = json.load(load_f)
+				header.extend(load_dict['@context'].keys())
+				header = [h for h in header if h not in ['label', 'range', 'domain', 'subClassOf']]
+				tmp_h = [h for h in header if h not in ['@id', '@language', '@value']]
+				for item in load_dict['@graph']:
+					if item['@id'].split('/')[-2] == 'resource':
+						tmp = [item['@id'], item['label']['@language'], item['label']['@value']]
+						for h in tmp_h:
+							if h in item:
+								tmp.append(item[h])
+							else:
+								tmp.append(None)
+						body.append(tmp)
+			headers.append(header)
+			bodies.append(body)
+
 		mmd.name = self.config.data_name
 		mmd.headers = headers
 		mmd.bodies = bodies

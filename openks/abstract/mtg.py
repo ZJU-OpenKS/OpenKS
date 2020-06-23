@@ -31,12 +31,12 @@ class MTG(MMD):
 	entities: {
 		<concept_id>: {
 			pointer: {
-				id: <index>,
+				id: <index>, // 2
 				<attr>: <index>,
 				...
 			},
 			instances: [
-				[<value_1>, <value_2>, ..., <value_n>],
+				(<value_1>, <value_1>, <id>, ..., <value_n>),
 				...
 			]
 		},
@@ -45,19 +45,25 @@ class MTG(MMD):
 	relations: {
 		<concept_id>: {
 			pointer: {
-				<from>_id: <index>,
-				<to>_id: <index>,
+				<from>_id: <index>, // 0
+				<to>_id: <index>, // 2
 				<attr>: <index>,
 				...
 			},
 			instances: [
-				[<value_1>, <value_2>, ..., <value_n>],
+				(<from_id>, <value_1>, <to_id>, ..., <value_n>),
 				...
 			]
 		},
 		...
 
 	}
+
+	structure design considerations:
+	1. Using Tuples for each instance for entity and relation structure, to achieve less space occupation and faster iteration.
+	2. Using pointer for attribute position indication so that user do not need to order them before loading data, just keep what it was.
+	3. Using schema structure to store concepts and attributes with complex information such as hierarchy for entity types and from/to for relation types.
+	4. Supporting multiple and muti-typed attributes for both entities and relations, supporting relation directions for more complex KG.
 	"""
 	def __init__(
 		self,
