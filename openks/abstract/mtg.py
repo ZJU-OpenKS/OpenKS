@@ -14,8 +14,7 @@ class MTG(MMD):
 				name: <name>,
 				type: <entity/relation>,
 				parent: <id>, // only for entities
-				from: <id>, // only for relations
-				to: <id> // only for relations
+				axiom: ((from_concept, to_concept), ...) // only for relations
 			}
 		]
 		attributes: [

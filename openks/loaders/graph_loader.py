@@ -63,8 +63,7 @@ class GraphLoader(Loader):
 							'id': 'openks/concept/' + str(count), 
 							'name': '_'.join(name.split('_')[1:]), 
 							'type': 'relation',
-							'from': name.split('_')[1],
-							'to': name.split('_')[2]
+							'axiom': ((name.split('_')[1], name.split('_')[2]),)
 						}
 					)
 					rel_index.append(count)
@@ -100,7 +99,7 @@ class GraphLoader(Loader):
 						'instances': self.dataset.bodies[index]
 					}
 
-		elif self.config.file_type == FileType.OPENKG:
+		elif self.config.file_type == FileType.CNSCHEMA:
 			pass
 			#raise NotImplementedError
 		elif self.config.file_type == FileType.OPENBASE:
@@ -146,8 +145,7 @@ class GraphLoader(Loader):
 					'id': 'http://openbase/'+ self.graph_name +'/class/' + rel_type, 
 					'name': rel_type, 
 					'type': 'relation', 
-					'from': from_type,
-					'to': to_type
+					'axiom': ((from_type, to_type),)
 				}
 				if concept not in schema['concepts']:
 					schema['concepts'].append(concept)
@@ -213,13 +211,6 @@ class GraphLoader(Loader):
 									if rel_attr['name'] not in rel_tmp[item]:
 										rel_tmp[item][rel_attr['name']] = []
 									rel_tmp[item][rel_attr['name']].append(headers.index(head))
-
-
-			print('===================')
-			print(rel_tmp)
-			print(rel_types)
-			print(schema)
-			print('===================')
 			for body in bodies:
 				for rel_type in rel_tmp.keys():
 					if rel_type not in relations:

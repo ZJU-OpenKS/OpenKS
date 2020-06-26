@@ -20,7 +20,7 @@ class SourceType(Enum):
 @unique
 class FileType(Enum):
 	CSV = 'csv'
-	OPENKG = 'openkg'
+	CNSCHEMA = 'cnschema'
 	OPENBASE = 'openbase'
 
 
@@ -132,7 +132,7 @@ class Loader(object):
 						csv_reader = csv.reader(open(uri, newline='', encoding='utf-8'))
 						headers.append(next(csv_reader))
 						bodies.append(list(csv_reader))
-		elif self.config.file_type == FileType.OPENKG:
+		elif self.config.file_type == FileType.CNSCHEMA:
 			header = ['@id', 'label_@language', 'label_@value']
 			body = []
 			with open(self.config.source_uris, 'r') as load_f:
