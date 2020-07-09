@@ -4,12 +4,14 @@ Support Paddle data reader for Paddle model training process, MMD/MTG as input, 
 from typing import Callable, Iterator
 import numpy as np
 import paddle
+import paddle.fluid as fluid
 from ..abstract.mmd import MMD
 
 class PaddleLoader(object):
 
 	def __init__(self, mmd: MMD) -> None:
 		self.mmd = mmd
+		self.pyreader=fluid.io.PyReader
 
 	def mmd_reader_creator(sample_source: MMD, label_source: MMD = None, size: int) -> Callable:
 		def reader() -> Iterator:
@@ -26,3 +28,8 @@ class PaddleLoader(object):
 	def test_batch_reader():
 		reader = self.mmd_reader_creator(self.mmd, 1024)
 		batch_reader = paddle.batch(reader(), 128)
+
+
+class DataFeeder(fluid.DataFeeder):
+    def __init__(self, feed_list, place, program=None):
+        super(DataFeeder,self).__init__(feed_list,place,program)
