@@ -100,6 +100,7 @@ class Loader(object):
 	def __init__(self, config: loader_config) -> None:
 		self.config = config
 		self.dataset = self._read_data()
+		self.dataset.name = config.data_name
 
 	def _read_data(self) -> MMD:
 		""" read data from multiple sources and return MMD """

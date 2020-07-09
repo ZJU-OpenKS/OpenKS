@@ -40,3 +40,15 @@ class MMD(object):
 	@name.setter
 	def name(self, name):
 		self._name = name
+
+	def info_display(self):
+		print("\n")
+		print("载入MMD数据集信息：")
+		print("-----------------------------------------------")
+		print("数据集名称：" + self.name)
+		print("读入文件数量：" + str(len(self.headers)))
+		print("字段名：" + str(self.headers))
+		print("数据示例：")
+		for data in self.bodies:
+			print(data[0])
+		print("-----------------------------------------------")

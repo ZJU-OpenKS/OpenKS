@@ -4,16 +4,15 @@ Rule based question parser for multiple domains
 import ast
 import re
 import copy
-from .question_manager import QuestionManager, StrucQ
+from .question_parser import QuestionParser, StrucQ
 from ...abstract.mtg import MTG
 
-class RuleParserCom(QuestionManager):
+class RuleParserCom(QuestionParser):
 	"""
 	Rules for the domain of investor-company-patent dataset
 	"""
 	def __init__(self, question: str, graph: MTG) -> None:
-		super(RuleParserCom, self).__init__(question)
-		self.graph = graph
+		super(RuleParserCom, self).__init__(question, graph)
 		self.question_type = {'entity': ['哪些', '哪家', '哪个', '哪几个', '谁'], 'quantity': ['多少', '几个', '几家']}
 		self.question_target = {'company': ['公司', '企业'], 'patent': ['专利', '知识产权'], 'investor': ['投资人', '投资机构']}
 		self.question_target_single = {'company': ['谁被.*投资', '谁申请了'], 'investor': ['谁投资了']}
@@ -83,4 +82,5 @@ class RuleParserCom(QuestionManager):
 		self.relation_extract()
 		self.target_detect()
 		self.question_classify()
+		self.struc_q_format()
 		return self.struc_q

@@ -23,8 +23,8 @@ class GraphLoader(Loader):
 		graph_name: str = ''
 		) -> None:
 		super(GraphLoader, self).__init__(config)
-		self.graph_name = graph_name if graph_name else config.data_name
 		self.graph = self._load_data()
+		self.graph.name = graph_name if graph_name else config.data_name
 
 	def _load_data(self) -> MTG:
 		""" 
@@ -231,7 +231,6 @@ class GraphLoader(Loader):
 		mtg.schema = schema
 		mtg.entities = entities
 		mtg.relations = relations
-		mtg.graph_name = self.graph_name
 		return mtg
 
 

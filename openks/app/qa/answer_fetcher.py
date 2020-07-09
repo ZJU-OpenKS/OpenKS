@@ -3,7 +3,7 @@ Answer fetch progam to receive structured question and get possible answers
 """
 import logging
 from typing import Any
-from .question_manager import StrucQ
+from .question_parser import StrucQ
 from ...abstract.mtg import MTG
 
 logger = logging.getLogger(__name__)
@@ -14,7 +14,7 @@ class AnswerFetcher(object):
 		self.struc_q = struc_q
 		self.graph = graph
 
-	def struc_q_check(self) -> bool:
+	def struc_q_rule_check(self) -> bool:
 		if len(self.struc_q.relations) == 0:
 			logger.warn("No relation found from the question.")
 			return False
@@ -22,10 +22,17 @@ class AnswerFetcher(object):
 			logger.warn("No entity found from the question.")
 			return False
 		else:
-			return True 
+			return True
 
-	def fetch_by_one_hop(self) -> Any:
-		if not self.struc_q_check():
+	def struc_q_embed_check(self) -> bool:
+		if self.struc_q.q_entity_embed.size == 0 and self.struc_q.q_relation_embed.size == 0 and self.struc_q.q_embed.size == 0:
+			logger.warn("No embedding computed from the question.")
+			return False
+		else:
+			return True
+
+	def fetch_by_matching(self) -> Any:
+		if not self.struc_q_rule_check():
 			return None
 
 		entity_info = self.struc_q.entities[0]
@@ -60,5 +67,14 @@ class AnswerFetcher(object):
 			return res
 		elif question_type == 'quantity':
 			return len(res)
+
+	def fetch_by_similarity(self) -> Any:
+		if not self.struc_q_rule_check():
+			return None
+
+		else:
+			# should calculate embedding similarities between question and graph nodes
+			pass
+
 
 

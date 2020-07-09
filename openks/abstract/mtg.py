@@ -125,3 +125,27 @@ class MTG(MMD):
 				if 'pointer' not in item or 'instances' not in item:
 					raise KeyError("'pointer' and 'instances' must be in entity and relation struct")
 		return True
+
+	def info_display(self):
+		print("\n")
+		print("载入MTG知识图谱信息：")
+		print("-----------------------------------------------")
+		print("图谱名称：" + self.name)
+		print("图谱实体类型：" + str([item['name'] for item in self.schema['concepts'] if item['type'] == 'entity']))
+		print("图谱关系类型：" + str([item['name'] for item in self.schema['concepts'] if item['type'] == 'relation']))
+		print("图谱实体属性：" + str([item['name'] for item in self.schema['attributes'] if item['type'] == 'entity']))
+		print("图谱关系属性：" + str([item['name'] for item in self.schema['attributes'] if item['type'] == 'relation']))
+		count = 0
+		for k, v in self.relations.items():
+			count += len(v['instances'])
+		print("图谱三元组数量：" + str(count))
+		print("图谱三元组示例：")
+		for k, v in self.relations.items():
+			ind = []
+			for name in v['pointer']:
+				if name.endswith('_id'):
+					ind.append(v['pointer'][name])
+			for i in range(5):
+				print(v['instances'][i][ind[0]] + ' - ' + k + ' - ' + v['instances'][i][ind[1]])
+		print("-----------------------------------------------")
+
