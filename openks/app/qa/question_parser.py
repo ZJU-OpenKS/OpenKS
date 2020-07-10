@@ -164,11 +164,3 @@ class QuestionParser(object):
 		# self.entity_link()
 		# self.question_embed()
 		return self.struc_q
-
-
-if __name__ == '__main__':
-	parser = QuestionParser("Where are you")
-	res = parser.parse()
-	print(res.text)
-	print(res.entities)
-	print(res.relations)

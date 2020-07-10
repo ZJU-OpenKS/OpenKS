@@ -51,4 +51,5 @@ class MMD(object):
 		print("数据示例：")
 		for data in self.bodies:
 			print(data[0])
+			print(data[1])
 		print("-----------------------------------------------")

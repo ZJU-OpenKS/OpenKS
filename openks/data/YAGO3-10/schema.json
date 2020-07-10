@@ -1,0 +1,308 @@
+[
+    {
+        "concept": "entity",
+        "properties": [
+            {
+                "name": "name",
+                "range": "str"
+            }
+        ],
+        "type": "entity"
+    },
+    {
+        "concept": "wasBornIn",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "worksAt",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "happenedIn",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "isLeaderOf",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "hasWonPrize",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "isAffiliatedTo",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "hasChild",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "imports",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "exports",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "isLocatedIn",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "hasCurrency",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "created",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "graduatedFrom",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "actedIn",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "hasGender",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "hasCapital",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "isInterestedIn",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "isConnectedTo",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "influences",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "owns",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "isKnownFor",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "directed",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "diedIn",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "dealsWith",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "livesIn",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "isPoliticianOf",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "hasWebsite",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "hasNeighbor",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "hasOfficialLanguage",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "isMarriedTo",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "hasAcademicAdvisor",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "isCitizenOf",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "edited",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "playsFor",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "participatedIn",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "wroteMusicFor",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    },
+    {
+        "concept": "hasMusicalRole",
+        "members": [
+            "entity",
+            "entity"
+        ],
+        "type": "relation"
+    }
+]

@@ -1,0 +1,75 @@
+[
+	{
+		"type": "entity",
+		"concept": "investor",
+		"properties": [
+			{
+				"name": "name",
+				"range": "str"
+			}
+		]
+	},
+	{
+		"type": "entity",
+		"concept": "company",
+		"properties": [
+			{
+				"name": "name",
+				"range": "str"
+			},
+			{
+				"name": "alter_names",
+				"range": "list"
+			},
+			{
+				"name": "est_date",
+				"range": "date"
+			},
+			{
+				"name": "addr",
+				"range": "str"
+			}
+		]
+	},
+	{
+		"type": "entity",
+		"concept": "patent",
+		"properties": [
+			{
+				"name": "name",
+				"range": "str"
+			},
+			{
+				"name": "type",
+				"range": "str"
+			}
+		]
+	},
+	{
+		"type": "relation",
+		"concept": "invests",
+		"properties": [
+			{
+				"name": "round",
+				"range": "str"
+			},
+			{
+				"name": "happen_date",
+				"range": "date"
+			}
+		],
+		"members": [
+			"investor", 
+			"company"
+		]
+	},
+	{
+		"type": "relation",
+		"concept": "applies",
+		"members": [
+			"company", 
+			"patent"
+		]
+	}
+
+]

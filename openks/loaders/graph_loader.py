@@ -2,6 +2,7 @@
 Loader for generating knowledge graph data format MTG
 """
 import os
+import json
 from zipfile import ZipFile
 import logging
 from .loader import Loader, LoaderConfig, SourceType, FileType
@@ -100,8 +101,8 @@ class GraphLoader(Loader):
 					}
 
 		elif self.config.file_type == FileType.CNSCHEMA:
-			pass
-			#raise NotImplementedError
+			raise NotImplementedError
+
 		elif self.config.file_type == FileType.OPENBASE:
 			# schema from OpenBase
 			headers = self.dataset.headers[0]
@@ -227,27 +228,29 @@ class GraphLoader(Loader):
 								relations[rel_type]['instances'].append(tuple(rel_item))
 								break
 
+		elif self.config.file_type == FileType.OPENKS:
+			schema = []
+			entities = []
+			relations = []
+			if os.path.exists(self.config.source_uris + '/schema.json'):
+				with open(self.config.source_uris + '/schema.json', 'r') as f:
+					schema = json.load(f)
+				for entity in self.dataset.bodies[0]:
+					if len(entity) == 2:
+						entities.append((entity[0], entity[1], tuple([])))
+					else:
+						entities.append((entity[0], entity[1], tuple(entity[2:])))
+				for relation in self.dataset.bodies[1]:
+					if len(relation) == 3:
+						relations.append(((relation[0], relation[1], relation[2]), tuple([])))
+					else:
+						relations.append(((relation[0], relation[1], relation[2]), tuple(relation[3:])))
+
+			else:
+				logger.warn("A schema JSON file must exists!")
+				raise IOError
 
 		mtg.schema = schema
 		mtg.entities = entities
-		mtg.relations = relations
+		mtg.triples = relations
 		return mtg
-
-
-if __name__ == '__main__':
-	loader_config.source_type = SourceType.LOCAL_FILE
-	loader_config.source_uris = ['openks/data/ent_test1.csv', 'openks/data/ent_test2.csv', 'openks/data/rel_test.csv']
-	loader_config.data_name = 'default-graph'
-	graph_loader = GraphLoader(loader_config)
-	graph = graph_loader.graph
-	print(graph)
-	print(graph.graph_name)
-	print(graph.entity_types)
-	print(graph.relation_types)
-	print(graph.entity_attrs)
-	print(graph.relation_attrs)
-	for line in graph.entities:
-		print(line)
-	for line in graph.relations:
-		print(line)
-

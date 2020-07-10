@@ -42,25 +42,35 @@ class AnswerFetcher(object):
 
 		entity_id = entity_info['id']
 		entity_type = entity_info['type']
-		source_rel_col_index = self.graph.relations[relation_type]['pointer'][entity_type + '_id']
-		target_rel_col_index = self.graph.relations[relation_type]['pointer'][target_type + '_id']
+		source_rel_col_index = 0
+		target_rel_col_index = 0
+		for item in self.graph.schema:
+			if item['type'] == 'relation' and item['concept'] == relation_type:
+				if item['members'].index(entity_type) == 0:
+					source_rel_col_index = 0
+					target_rel_col_index = 2
+				else:
+					source_rel_col_index = 2
+					target_rel_col_index = 0
 
 		target_ids = []
-		for rel in self.graph.relations[relation_type]['instances']:
-			if rel[source_rel_col_index] == entity_id:
-				target_ids.append(rel[target_rel_col_index])
+		for rel in self.graph.triples:
+			if rel[0][1] == relation_type:
+				if rel[0][source_rel_col_index] == entity_id:
+					target_ids.append(rel[0][target_rel_col_index])
 
-		target_id_index = self.graph.entities[target_type]['pointer']['id']
 		target_items = []
-		for ent in self.graph.entities[target_type]['instances']:
-			for tar_id in target_ids:
-				if ent[target_id_index] == tar_id:
-					target_items.append(ent)
-		target_cols = self.graph.entities[target_type]['pointer'].keys()
+		for ent in self.graph.entities:
+			if ent[1] == target_type:
+				for tar_id in target_ids:
+					if ent[0] == tar_id:
+						target_items.append(ent)
+		target_props = [item['properties'] for item in self.graph.schema if item['type'] == 'entity' and item['concept'] == target_type]
+		target_cols = [item['name'] for item in target_props[0]]
 		res = []
 		for item in target_items:
 			tmp = {}
-			for key, value in zip(target_cols, item):
+			for key, value in zip(target_cols, item[2]):
 				tmp[key] = value
 			res.append(tmp)
 		if question_type == 'entity':

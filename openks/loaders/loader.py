@@ -8,6 +8,7 @@ from zipfile import ZipFile
 from io import TextIOWrapper
 import json
 import logging
+import os
 from ..abstract.mmd import MMD
 
 logger = logging.getLogger(__name__)
@@ -22,6 +23,7 @@ class FileType(Enum):
 	CSV = 'csv'
 	CNSCHEMA = 'cnschema'
 	OPENBASE = 'openbase'
+	OPENKS = 'openks'
 
 
 def flatten_json(y):
@@ -173,6 +175,18 @@ class Loader(object):
 					item.extend([None for i in range(len(header) - len(item))])
 			headers.append(tuple(header))
 			bodies.append(tuple([tuple(item) for item in body]))
+		elif self.config.file_type == FileType.OPENKS:
+			if os.path.exists(self.config.source_uris + '/entities') and os.path.exists(self.config.source_uris + '/triples'):
+				headers = [['entities'], ['triples']]
+				for file in ['entities', 'triples']:
+					tmp = []
+					with open(self.config.source_uris + '/' + file, 'r') as load_f:
+						for line in load_f:
+							tmp.append(tuple([item.strip() for item in line.split('\t')]))
+						bodies.append(tuple(tmp))
+			else:
+				logger.warn('Only allows loading with entities and triples for now!')
+				raise IOError
 
 		mmd.name = self.config.data_name
 		mmd.headers = headers
@@ -182,14 +196,3 @@ class Loader(object):
 	def _read_hdfs(self):
 		""" Access HDFS with delimiter """
 		raise NotImplementedError()
-
-
-if __name__ == '__main__':
-	loader_config.source_type = SourceType.LOCAL_FILE
-	loader_config.source_uris = ['openks/data/ent_test1.csv', 'openks/data/ent_test2.csv', 'openks/data/rel_test.csv']
-	loader_config.data_name = 'test'
-	loader = Loader(loader_config)
-	print(mmd.headers)
-	for body in mmd.bodies:
-		for line in body:
-			print(line)

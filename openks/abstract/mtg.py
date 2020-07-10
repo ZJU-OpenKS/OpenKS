@@ -7,75 +7,58 @@ from .mmd import MMD
 class MTG(MMD):
 	"""
 	A structure for standard graph data format processed from MDD
-	schema: {
-		concepts: [
-			{
-				id: <id>,
-				name: <name>,
-				type: <entity/relation>,
-				parent: <id>, // only for entities
-				axiom: ((from_concept, to_concept), ...) // only for relations
-			}
-		]
-		attributes: [
-			{
-				id: <id>,
-				name: <name>,
-				type: <entity/relation>,
-				concept: <id>,
-				value: <str/int/float/list/date>
-			}
-		]
-	}
-	entities: {
-		<concept_id>: {
-			pointer: {
-				id: <index>, // 2
-				<attr>: <index>,
-				...
-			},
-			instances: [
-				(<value_1>, <value_1>, <id>, ..., <value_n>),
-				...
+	schema: [
+		{
+			"type": "entity",
+			"concept": <entity_type>,
+			"properties": [
+				{
+					"name": <property_name>,
+					"range": <property_value_type> // str, int, float, date, datetime, list ...
+				},
 			]
+			"parent": <parent_entity_type>
 		},
 		...
-	}
-	relations: {
-		<concept_id>: {
-			pointer: {
-				<from>_id: <index>, // 0
-				<to>_id: <index>, // 2
-				<attr>: <index>,
-				...
-			},
-			instances: [
-				(<from_id>, <value_1>, <to_id>, ..., <value_n>),
-				...
-			]
+		{
+			"type": "relation",
+			"concept": <relation_type>,
+			"properties": [
+				{
+					"name": <property_name>,
+					"range": <property_value_type>
+				}
+			],
+			"members": [<head_entity_type>, <tail_entity_type>]
 		},
 		...
-
-	}
+	]
+	entities: [
+		( <entity_id>, <entity_type>, (<entity_attr1>, <entity_attr2>, ...) ),
+		...
+	]
+	triples: [
+		( ( <head_entity_id>, <relation_type>, <tail_entity_id> ), ( <relation_attr1>, <relation_attr2>, ... ) )
+	]
 
 	structure design considerations:
 	1. Using Tuples for each instance for entity and relation structure, to achieve less space occupation and faster iteration.
-	2. Using pointer for attribute position indication so that user do not need to order them before loading data, just keep what it was.
-	3. Using schema structure to store concepts and attributes with complex information such as hierarchy for entity types and from/to for relation types.
+	2. Be able to get entity IDs or triplets conviently for graph only learning.
+	3. Using schema structure to store concepts and attributes with complex information such as hierarchy for entity types and head/tail for relation types.
 	4. Supporting multiple and muti-typed attributes for both entities and relations, supporting relation directions for more complex KG.
 	"""
 	def __init__(
 		self,
 		name: str = '', 
-		schema: Dict[str, List] = {},
-		entities: Dict[str, Dict] = {},
-		relations: Dict[str, Dict] = {},
+		schema: List = [],
+		entities: List = [],
+		triples: List = [],
 		) -> None:
 		super(MTG, self).__init__()
 		self._name = name
 		self._schema = schema
 		self._entities = entities
-		self._relations = relations
+		self._triples = triples
 
 	@property
 	def name(self):
@@ -83,7 +66,6 @@ class MTG(MMD):
 	
 	@name.setter
 	def name(self, name):
-		self.structure_check('name', name)
 		self._name = name
 
 	@property
@@ -92,7 +74,6 @@ class MTG(MMD):
 	
 	@schema.setter
 	def schema(self, schema):
-		self.structure_check('schema', schema)
 		self._schema = schema
 
 	@property
@@ -101,51 +82,60 @@ class MTG(MMD):
 	
 	@entities.setter
 	def entities(self, entities):
-		self.structure_check('entity', entities)
 		self._entities = entities
 
 	@property
-	def relations(self):
-		return self._relations
+	def triples(self):
+		return self._triples
 	
-	@relations.setter
-	def relations(self, relations):
-		self.structure_check('relation', relations)
-		self._relations = relations
+	@triples.setter
+	def triples(self, triples):
+		self._triples = triples
 
-	def structure_check(self, check_type, value):
-		if check_type == 'name':
-			if not isinstance(value, str):
-				raise TypeError("Graph name must be String type")
-		elif check_type == 'schema':
-			if 'concepts' not in value or 'attributes' not in value:
-				raise KeyError("'concepts' and 'attributes' must be in schema struct")
-		elif check_type == 'entity' or check_type == 'relation':
-			for item in list(value.values()):
-				if 'pointer' not in item or 'instances' not in item:
-					raise KeyError("'pointer' and 'instances' must be in entity and relation struct")
-		return True
+	def hierarchy_construct(self):
+		res = []
+		for item in self.schema:
+			if item['type'] == 'entity':
+				if 'parent' in item:
+					flag = 0
+					for x in res:
+						if item['parent'] in x:
+							if x.index(item[parent]) != len(x) - 1:
+								y = x[:x.index(item[parent])+1]
+								y.append(item['concept'])
+								res.append(y)
+							else:
+								x.append(item['concept'])
+							flag = 1
+							break
+					if flag == 0:
+						res.append([item['parent'], item['concept']])
+				else:
+					flag = 0
+					for x in res:
+						if item['concept'] in x:
+							flag = 1
+							break
+					if flag == 0:
+						res.append([item['concept']])
+		return res
+
 
 	def info_display(self):
 		print("\n")
 		print("载入MTG知识图谱信息：")
 		print("-----------------------------------------------")
 		print("图谱名称：" + self.name)
-		print("图谱实体类型：" + str([item['name'] for item in self.schema['concepts'] if item['type'] == 'entity']))
-		print("图谱关系类型：" + str([item['name'] for item in self.schema['concepts'] if item['type'] == 'relation']))
-		print("图谱实体属性：" + str([item['name'] for item in self.schema['attributes'] if item['type'] == 'entity']))
-		print("图谱关系属性：" + str([item['name'] for item in self.schema['attributes'] if item['type'] == 'relation']))
-		count = 0
-		for k, v in self.relations.items():
-			count += len(v['instances'])
-		print("图谱三元组数量：" + str(count))
+		print("图谱实体类型：" + str([item['concept'] for item in self.schema if item['type'] == 'entity']))
+		print("图谱关系类型：" + str([item['concept'] for item in self.schema if item['type'] == 'relation']))
+		print("图谱实体属性：" + str([item['properties'] for item in self.schema if item['type'] == 'entity' and 'properties' in item]))
+		print("图谱关系属性：" + str([item['properties'] for item in self.schema if item['type'] == 'relation' and 'properties' in item]))
+		print("图谱层级关系：" + str(self.hierarchy_construct()))
+		print("图谱三元组数量：" + str(len(self.triples)))
+		print("图谱实体示例：")
+		for i in range(5):
+			print(self.entities[i])
 		print("图谱三元组示例：")
-		for k, v in self.relations.items():
-			ind = []
-			for name in v['pointer']:
-				if name.endswith('_id'):
-					ind.append(v['pointer'][name])
-			for i in range(5):
-				print(v['instances'][i][ind[0]] + ' - ' + k + ' - ' + v['instances'][i][ind[1]])
+		for i in range(5):
+			print(self.triples[i])
 		print("-----------------------------------------------")
-

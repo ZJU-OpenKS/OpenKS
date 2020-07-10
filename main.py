@@ -4,12 +4,12 @@ from openks.app.qa import *
 
 # test loader
 loader_config.source_type = SourceType.LOCAL_FILE
-loader_config.file_type = FileType.CSV
+loader_config.file_type = FileType.OPENKS
 #loader_config.source_uris = ['openks/data/ent_test1.csv', 'openks/data/ent_test2.csv', 'openks/data/rel_test.csv']
 #loader_config.source_uris = 'openks/data/investor-company-patent.zip'
 #loader_config.source_uris = 'openks/data/wiki-covid-19-v0.3.json'
 #loader_config.source_uris = 'openks/data/openbase-wiki'
-loader_config.source_uris = 'openks/data/kg-data/FB15k-237'
+loader_config.source_uris = 'openks/data/company-dev'
 loader_config.data_name = 'test-data-set'
 loader = Loader(loader_config)
 dataset = loader.dataset
@@ -21,7 +21,7 @@ graph.info_display()
 # test simple model
 #simple_model = SimpleModel()
 print(KSPaddleModel.list_modules())
-
+print()
 # test question parser
 question = input("输入问题：")
 parser = RuleParserCom(question, graph)
