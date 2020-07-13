@@ -2,115 +2,93 @@
 An abstract class for openks models to be trained with Paddle
 """
 import logging
-from typing import Tuple, Any
+from typing import Tuple, List, Any
+import torch.nn as nn
+from torch.utils import data
 import paddle.fluid as fluid
 from paddle.fluid import Variable
-from .model_params import ModelParams
 from ..common.register import Register
-from ..abstract.mmd import MMD
+from ..abstract.mtg import MTG
 
 logger = logging.getLogger(__name__)
 
-class KSModel(object):
-	"""
-	The basic class for models in KS-Studio, defines standard model construction methods
-	"""
 
-	def __init__(self, *args) -> None:
-		pass
+class PaddleModel(Register):
+	def __init__(self, **kwargs):
+		self.forward()
 
-	def model_program(self) -> None:
-		""" model network construction for the whole data processing, model designing and training process """
-		raise NotImplementedError
+	def forward(self, *args):
+		return NotImplemented
 
-	def data_process(self, data: MMD) -> Any:
-		""" preprocessing the loaded data for directly train """
-		raise NotImplementedError
+	def train_forward(self, *args):
+		return NotImplemented
 
-	def backward(self, *args) -> Any:
-		""" model training process to accept loss and return optimized parameters """
-		raise NotImplementedError
+	def test_forward(self, *args):
+		return NotImplemented
 
-	def predict(self, *args) -> Any:
-		""" to predict instances using the trained model """
-		raise NotImplementedError
+	def backward(self, loss, opt):
+		return NotImplemented
 
-	def save(self, output_dir: str, *args) -> None:
-		""" to serialize the model parameters into a specific directory """
-		raise NotImplementedError
+	def loss(self, *args):
+		return NotImplemented
 
-	def load(self, from_dir: str, *args) -> "KSModel":
-		""" to load serialized parameters as a KSModel object """
-		raise NotImplementedError
+	@staticmethod
+	def _algorithm(*args):
+		return NotImplemented
 
-class KSPaddleModel(KSModel, Register):
-	"""
-	The basic class for models to be trained using PaddlePaddle. 
-	The subclasses of it can be registered and train in standard format.
-	"""
 
-	def __init__(
-		self, 
-		name: str = 'default-name', 
-		params: ModelParams = None, 
-		data: MMD = None
-		) -> None:
+
+class TorchModel(nn.Module, Register):
+	def __init__(self, **kwargs):
+		super(TorchModel, self).__init__()
+
+	def forward(self, *args):
+		return NotImplemented
+
+	def loss(self, *args):
+		return NotImplemented
+
+	def predict(self, *args):
+		return NotImplemented
+
+	def _algorithm(self, *args):
+		return NotImplemented
+
+
+class TorchDataset(data.Dataset):
+	def __init__(self, samples):
+		self.samples = samples
+
+	def __len__(self):
+		return len(self.samples)
+
+	def __getitem__(self, index):
+		item = self.samples[index]
+		return item
+
+
+class KGModelBase(Register):
+	def __init__(self, name: str = 'model-name', graph: MTG = None, args: List = None):
 		self.name = name
-		self.params = params
-		self.data = data
+		self.graph = graph
 
-	def model_program(self) -> None:
-		self.startup_program = fluid.Program()
-		self.train_program = fluid.Program()
-		self.test_program = fluid.Program()
+	def parse_args(self):
+		return NotImplemented
 
-		with fluid.program_guard(self.train_program, self.startup_program):
-			self.train_pos_input = fluid.layers.data(
-				"pos_input", 
-				dtype="float32", 
-				shape=[None, None, None], 
-				append_batch_size=False)
-			self.train_neg_input = fluid.layers.data(
-				"neg_input", 
-				dtype="float32", 
-				shape=[None, None, None], 
-				append_batch_size=False)
-			self.train_feed_list = ["pos_input", "neg_input"]
-			self.train_feed_vars = [self.train_pos_input, self.train_neg_input]
-			self.train_fetch_vars = self.train_construct()
-			loss = self.train_fetch_vars[0]
-			self.backward(loss, opt=self.params.optimizer['name'])
+	def triples_reader(self, *args):
+		return NotImplemented
 
-		with fluid.program_guard(self.test_program, self.startup_program):
-			self.test_input = fluid.layers.data(
-				"test_input",
-				dtype="float32",
-                shape=[None],
-                append_batch_size=False)
-			self.test_feed_list = ["test_input"]
-			self.test_fetch_vars = self.test_construct()
+	def triples_generator(self, *args):
+		return NotImplemented
 
-	def backward(self, loss: Variable, opt="sgd") -> Tuple:
-		optimizer_available = {
-			"adam": fluid.optimizer.Adam,
-			"sgd": fluid.optimizer.SGD,
-			"momentum": fluid.optimizer.Momentum
-		}
-		if opt in optimizer_available:
-			opt_func = optimizer_available[opt]
-		else:
-			opt_func = None
-		if opt_func is None:
-			raise ValueError("Unsupported optimizer. You should chose the optimizer in {}.".format(optimizer_available.keys()))
-		else:
-			optimizer = opt_func(learning_rate=self.params.optimizer['learning_rate'])
-			"""
-			Should support distributed training here according to the distributed params
-			"""
-			return optimizer.minimize(loss)
+	def evaluate(self, *args):
+		return NotImplemented
 
-	def train_construct(self):
-		raise NotImplementedError("Define a subclass to implement training program")
+	def load_model(self, *args):
+		return NotImplemented
 
-	def test_construct(self):
-		raise NotImplementedError("Define a subclass to implement testing program")
+	def save_model(self, *args):
+		return NotImplemented
+
+	def run(self, *args):
+		return NotImplemented
