@@ -237,14 +237,14 @@ class GraphLoader(Loader):
 					schema = json.load(f)
 				for entity in self.dataset.bodies[0]:
 					if len(entity) == 2:
-						entities.append((entity[0], entity[1], tuple([])))
+						entities.append((int(entity[0]), entity[1], tuple([])))
 					else:
-						entities.append((entity[0], entity[1], tuple(entity[2:])))
+						entities.append((int(entity[0]), entity[1], tuple(entity[2:])))
 				for relation in self.dataset.bodies[1]:
 					if len(relation) == 3:
-						relations.append(((relation[0], relation[1], relation[2]), tuple([])))
+						relations.append(((int(relation[0]), relation[1], int(relation[2])), tuple([])))
 					else:
-						relations.append(((relation[0], relation[1], relation[2]), tuple(relation[3:])))
+						relations.append(((int(relation[0]), relation[1], int(relation[2])), tuple(relation[3:])))
 
 			else:
 				logger.warn("A schema JSON file must exists!")

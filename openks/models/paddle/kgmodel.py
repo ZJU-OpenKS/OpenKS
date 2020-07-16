@@ -3,6 +3,7 @@ import argparse
 import os
 import paddle.fluid as fluid
 import numpy as np
+from sklearn.model_selection import train_test_split
 from ..model import KGModelBase
 
 logger = logging.getLogger(__name__)
@@ -22,7 +23,6 @@ class KGModel(KGModelBase):
 			description='Training and Testing Knowledge Graph Embedding Models',
 			usage='train.py [<args>] [-h | --help]'
 		)
-		parser.add_argument('--data_path', default='openks/data/wn18rr', type=str)
 		parser.add_argument('--margin', default=1.0, type=float)
 		parser.add_argument('--gpu', action='store_true')
 		parser.add_argument('--batch_size', default=1024, type=int)
@@ -34,14 +34,13 @@ class KGModel(KGModelBase):
 		parser.add_argument('--opt', default='sgd', type=str)
 		return parser.parse_args(args)
 
-	def triples_reader(self, file_path, entity2id, relation2id):
+	def triples_reader(self, ratio=0.01):
 		"""read from triple data files to id triples"""
-		triples = []
-		with open(file_path) as fin:
-			for line in fin:
-				h, r, t = line.strip().split('\t')
-				triples.append((entity2id[h], relation2id[r], entity2id[t]))
-		return np.array(triples)
+		rel2id = self.graph.relation_to_id()
+		train_triples, test_triples = train_test_split(self.graph.triples, test_size=ratio)
+		train_triples = [(triple[0][0], rel2id[triple[0][1]], triple[0][2]) for triple in train_triples]
+		test_triples = [(triple[0][0], rel2id[triple[0][1]], triple[0][2]) for triple in test_triples]
+		return np.array(train_triples), np.array(test_triples), np.array(test_triples)
 
 	def triples_generator(self, train_triples, batch_size):
 		train_triple_positive_batches = []
@@ -113,24 +112,11 @@ class KGModel(KGModelBase):
 	def run(self):
 		device = fluid.cuda_places() if self.args.gpu else fluid.cpu_places()
 
-		with open(os.path.join(self.args.data_path, 'entities.dict'), "r") as f:
-			entity2id = dict()
-			for line in f.readlines():
-				eid, entity = line.strip().split('\t')
-				entity2id[entity] = int(eid)
-		with open(os.path.join(self.args.data_path, 'relations.dict'), "r") as f:
-			relation2id = dict()
-			for line in f.readlines():
-				rid, relation = line.strip().split('\t')
-				relation2id[relation] = int(rid)
-
-		train_triples = self.triples_reader(os.path.join(self.args.data_path, 'train.txt'), entity2id, relation2id)
-		valid_triples = self.triples_reader(os.path.join(self.args.data_path, 'valid.txt'), entity2id, relation2id)
-		test_triples = self.triples_reader(os.path.join(self.args.data_path, 'test.txt'), entity2id, relation2id)
+		train_triples, valid_triples, test_triples = self.triples_reader(ratio=0.01)
 
 		model = self.model(
-			num_entity=len(entity2id),
-			num_relation=len(relation2id),
+			num_entity=self.graph.get_entity_num(),
+			num_relation=self.graph.get_relation_num(),
 			hidden_dim=self.args.hidden_dim,
 			margin=self.args.margin,
 			lr=self.args.lr,

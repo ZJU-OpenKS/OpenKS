@@ -120,6 +120,23 @@ class MTG(MMD):
 						res.append([item['concept']])
 		return res
 
+	def get_entity_num(self):
+		return len(self.entities)
+
+	def get_triple_num(self):
+		return len(self.triples)
+
+	def get_relation_num(self):
+		return len([item['concept'] for item in self.schema if item['type'] == 'relation'])
+
+	def relation_to_id(self):
+		res = {}
+		rel_list = [item['concept'] for item in self.schema if item['type'] == 'relation']
+		index = 0
+		for rel in rel_list:
+			res[rel] = index
+			index += 1
+		return res
 
 	def info_display(self):
 		print("\n")
