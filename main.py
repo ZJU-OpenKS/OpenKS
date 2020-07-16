@@ -5,7 +5,7 @@ from openks.app.qa import *
 # test loader
 loader_config.source_type = SourceType.LOCAL_FILE
 loader_config.file_type = FileType.OPENKS
-loader_config.source_uris = 'openks/data/company-dev'
+loader_config.source_uris = 'openks/data/FB15k-237'
 loader_config.data_name = 'test-data-set'
 loader = Loader(loader_config)
 dataset = loader.dataset
