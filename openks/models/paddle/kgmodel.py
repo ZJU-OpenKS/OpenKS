@@ -7,20 +7,15 @@ from ..model import KGModelBase
 
 logger = logging.getLogger(__name__)
 
-def model_selector(model_name):
-	if model_name == 'TransE':
-		from .TransE import TransE
-		return TransE
-	else:
-		logger.warn("No model named " + model_name + ". Please define it first!")
 
-@KGModelBase.register("paddle-kgmodel")
+@KGModelBase.register("KGLearn", "Paddle")
 class KGModel(KGModelBase):
-	def __init__(self, name='paddle-default', graph=None, model='', args=None):
+	def __init__(self, name='paddle-default', graph=None, model=None, args=None):
 		self.name = name
 		self.graph = graph
 		self.args = self.parse_args(args)
-		self.model = model_selector(model)
+		self.model = model
+
 	def parse_args(self, args):
 		""" parameter settings """
 		parser = argparse.ArgumentParser(

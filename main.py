@@ -1,6 +1,5 @@
 from openks.loaders import *
 from openks.models import *
-from openks.models.paddle import *
 from openks.app.qa import *
 
 # test loader
@@ -17,8 +16,14 @@ graph = graph_loader.graph
 graph.info_display()
 # test model
 #simple_model = SimpleModel()
-print(KGModel.list_modules())
-kgmodel = KGModel(graph=graph, model='TransE', args=None)
+OpenKSModel.list_modules()
+platform = 'Paddle'
+model_type = 'KGLearn'
+model = 'TransE'
+print("根据配置，使用 {} 框架，{} 类型的 {} 模型。".format(platform, model_type, model))
+print("-----------------------------------------------")
+model_type = OpenKSModel.get_module(platform, model_type)
+kgmodel = model_type(graph=graph, model=OpenKSModel.get_module(platform, model), args=None)
 kgmodel.run()
 print()
 # test question parser

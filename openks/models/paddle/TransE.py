@@ -6,7 +6,7 @@ from ..model import PaddleModel
 
 logger = logging.getLogger(__name__)
 
-@PaddleModel.register("paddle-transe")
+@PaddleModel.register("TransE", "Paddle")
 class TransE(PaddleModel):
 	def __init__(self, **kwargs):
 		self.num_entity = kwargs['num_entity']

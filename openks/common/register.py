@@ -25,26 +25,33 @@ class Register(object):
 	_registry: Dict = defaultdict(dict)
 
 	@classmethod
-	def register(cls: 'Register', name: str):
+	def register(cls: 'Register', name: str, platform: str):
 		def register_module(module: object):
-			if name in cls._registry:
-				logger.error("Name conflicts. {} has already been registered as {}.".format(registry[name].__name__, name))
+			if platform in cls._registry and name in cls._registry[platform]:
+				logger.error("Name conflicts. {} has already been registered as {}.".format(registry[platform][name].__name__, name))
 				raise Exception
 			else:
-				cls._registry[name] = module
+				if platform not in cls._registry:
+					cls._registry[platform] = {name: module}
+				else:
+					cls._registry[platform][name] = module
 				logger.info("Registration succeds. {} as been registered as {}.".format(module.__name__, name))
 				return module
 		return register_module
 
 	@classmethod
-	def get_module(cls: 'Register', name: str) -> object:
-		if name in cls._registry:
-			return cls._registry[name]
+	def get_module(cls: 'Register', platform: str, name: str) -> object:
+		if platform in cls._registry:
+			if name in cls._registry[platform]:
+				return cls._registry[platform][name]
 		else:
-			logger.error("Module not found. {} is not a registered name.".format(name))
+			logger.error("Module not found. {} is not a registered name in platform {}.".format(name, platform))
 
 	@classmethod
 	def list_modules(cls: 'Register') -> List[str]:
-		names = list(cls._registry.keys())
-		return names
+		print("已注册模型：")
+		for plat in cls._registry:
+			print("框架类型：" + plat)
+			print("模型名称：" + str(list(cls._registry[plat].keys())))
+		print("-----------------------------------------------")
 

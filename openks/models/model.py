@@ -67,7 +67,13 @@ class TorchDataset(data.Dataset):
 		return item
 
 
-class KGModelBase(Register):
+
+class OpenKSModel(Register):
+	def __init__(self):
+		pass
+
+
+class KGModelBase(OpenKSModel):
 	def __init__(self, name: str = 'model-name', graph: MTG = None, args: List = None):
 		self.name = name
 		self.graph = graph
