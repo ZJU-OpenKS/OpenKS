@@ -2,11 +2,12 @@
 Answer fetch progam to receive structured question and get possible answers
 """
 import logging
-from typing import Any
+from typing import TypeVar
 from .question_parser import StrucQ
 from ...abstract.mtg import MTG
 
 logger = logging.getLogger(__name__)
+T = TypeVar('T')
 
 class AnswerFetcher(object):
 
@@ -31,7 +32,8 @@ class AnswerFetcher(object):
 		else:
 			return True
 
-	def fetch_by_matching(self) -> Any:
+	def fetch_by_matching(self) -> T:
+		""" fetch the answer through matching MTG knowledge graph dataset """
 		if not self.struc_q_rule_check():
 			return None
 
@@ -78,13 +80,21 @@ class AnswerFetcher(object):
 		elif question_type == 'quantity':
 			return len(res)
 
-	def fetch_by_similarity(self) -> Any:
+	def fetch_by_db_query(self) -> T:
+		""" fetch the answer through querying outside knowledge databases """
 		if not self.struc_q_rule_check():
+			return None
+		else:
+			return NotImplemented
+
+	def fetch_by_similarity(self) -> T:
+		""" fetch the answer through calculating vector similarities """
+		if not self.struc_q_embed_check():
 			return None
 
 		else:
 			# should calculate embedding similarities between question and graph nodes
-			pass
+			return NotImplemented
 
 
 

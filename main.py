@@ -5,7 +5,7 @@ from openks.app.qa import *
 # test loader
 loader_config.source_type = SourceType.LOCAL_FILE
 loader_config.file_type = FileType.OPENKS
-loader_config.source_uris = 'openks/data/FB15k-237'
+loader_config.source_uris = 'openks/data/company-dev'
 loader_config.data_name = 'test-data-set'
 loader = Loader(loader_config)
 dataset = loader.dataset
@@ -15,7 +15,6 @@ graph_loader = GraphLoader(loader_config)
 graph = graph_loader.graph
 graph.info_display()
 # test model
-#simple_model = SimpleModel()
 OpenKSModel.list_modules()
 platform = 'Paddle'
 model_type = 'KGLearn'
