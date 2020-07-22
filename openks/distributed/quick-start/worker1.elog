@@ -1,0 +1,8 @@
+I0719 22:36:05.044950 23895 communicator.h:308] HalfAsyncCommunicator Initialized
+I0719 22:36:05.044991 23895 communicator.h:373] SyncCommunicator Initialized
+
+
+API is deprecated since 2.0.0 Please use FleetAPI instead.
+WIKI: https://github.com/PaddlePaddle/Fleet/blob/develop/markdown_doc/transpiler
+
+        
