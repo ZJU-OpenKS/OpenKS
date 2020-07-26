@@ -18,7 +18,8 @@ class StrucQ(object):
 		question_class: Dict = {},
 		q_entity_embed: np.array = np.array([]),
 		q_relation_embed: np.array = np.array([]),
-		q_embed: np.array = np.array([])
+		q_embed: np.array = np.array([]),
+		neo_sqls: List = []
 		) -> None:
 		self._text = question
 		self._entities = entities
@@ -28,6 +29,7 @@ class StrucQ(object):
 		self._q_entity_embed = q_entity_embed
 		self._q_relation_embed = q_relation_embed,
 		self._q_embed = q_embed
+		self._neo_sqls = neo_sqls
 
 	@property
 	def text(self):
@@ -93,6 +95,14 @@ class StrucQ(object):
 	def q_embed(self, q_embed):
 		self._q_embed = q_embed
 
+	@property
+	def neo_sqls(self):
+		return self._neo_sqls
+
+	@neo_sqls.setter
+	def neo_sqls(self, neo_sqls):
+		self._neo_sqls = neo_sqls
+
 struc_q = StrucQ()
 
 class QuestionParser(object):
@@ -145,6 +155,9 @@ class QuestionParser(object):
 		""" mapping question to the relation vectorized space for getting similar relations in graph """
 		return NotImplemented
 
+	def sql_generate(self) -> None:
+		return NotImplemented
+
 	def struc_q_format(self) -> None:
 		print("-----------------------------------------------")
 		print("问题原文：" + struc_q.text)
@@ -153,6 +166,7 @@ class QuestionParser(object):
 		print("涉及关系：" + str(struc_q.relations))
 		print("目标实体：" + str(struc_q.target_type))
 		print("答案类型：" + str(struc_q.question_class))
+		print("图谱请求SQL：" + str(struc_q.neo_sqls))
 		print("-----------------------------------------------")
 
 	def parse(self) -> StrucQ:

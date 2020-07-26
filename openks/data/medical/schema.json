@@ -1,0 +1,188 @@
+[
+	{
+		"type": "entity",
+		"concept": "drugs",
+		"properties": [
+			{
+				"name": "name",
+				"range": "str"
+			}
+		]
+	},
+	{
+		"type": "entity",
+		"concept": "foods",
+		"properties": [
+			{
+				"name": "name",
+				"range": "str"
+			}
+		]
+	},
+	{
+		"type": "entity",
+		"concept": "checks",
+		"properties": [
+			{
+				"name": "name",
+				"range": "str"
+			}
+		]
+	},
+	{
+		"type": "entity",
+		"concept": "departments",
+		"properties": [
+			{
+				"name": "name",
+				"range": "str"
+			}
+		]
+	},
+	{
+		"type": "entity",
+		"concept": "producers",
+		"properties": [
+			{
+				"name": "name",
+				"range": "str"
+			}
+		]
+	},
+	{
+		"type": "entity",
+		"concept": "symptoms",
+		"properties": [
+			{
+				"name": "name",
+				"range": "str"
+			}
+		]
+	},
+	{
+		"type": "entity",
+		"concept": "diseases",
+		"properties": [
+			{
+				"name": "name",
+				"range": "str"
+			},
+			{
+				"name": "desc",
+				"range": "str"
+			},
+			{
+				"name": "prevent",
+				"range": "str"
+			},
+			{
+				"name": "cause",
+				"range": "str"
+			},
+			{
+				"name": "easy_get",
+				"range": "str"
+			},
+			{
+				"name": "cure_lasttime",
+				"range": "str"
+			},
+			{
+				"name": "cured_prob",
+				"range": "str"
+			},
+			{
+				"name": "get_prob",
+				"range": "str"
+			}
+		]
+	},
+	{
+		"type": "relation",
+		"concept": "rels_check",
+		"members": [
+			"diseases",
+			"checks"
+		]
+	},
+	{
+		"type": "relation",
+		"concept": "rels_recommandeat",
+		"members": [
+			"diseases",
+			"foods"
+		]
+	},
+	{
+		"type": "relation",
+		"concept": "rels_noteat",
+		"members": [
+			"diseases",
+			"foods"
+		]
+	},
+	{
+		"type": "relation",
+		"concept": "rels_doeat",
+		"members": [
+			"diseases",
+			"foods"
+		]
+	},
+	{
+		"type": "relation",
+		"concept": "rels_department",
+		"members": [
+			"departments",
+			"departments"
+		]
+	},
+	{
+		"type": "relation",
+		"concept": "rels_commonddrug",
+		"members": [
+			"diseases",
+			"drugs"
+		]
+	},
+	{
+		"type": "relation",
+		"concept": "rels_drug_producer",
+		"members": [
+			"producers",
+			"drugs"
+		]
+	},
+	{
+		"type": "relation",
+		"concept": "rels_recommanddrug",
+		"members": [
+			"diseases",
+			"drugs"
+		]
+	},
+	{
+		"type": "relation",
+		"concept": "rels_symptom",
+		"members": [
+			"diseases",
+			"symptoms"
+		]
+	},
+	{
+		"type": "relation",
+		"concept": "rels_acompany",
+		"members": [
+			"diseases",
+			"diseases"
+		]
+	},
+	{
+		"type": "relation",
+		"concept": "rels_category",
+		"members": [
+			"diseases",
+			"departments"
+		]
+	}
+]

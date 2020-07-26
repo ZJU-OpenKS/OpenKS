@@ -5,7 +5,7 @@ from openks.app.qa import *
 # test loader
 loader_config.source_type = SourceType.LOCAL_FILE
 loader_config.file_type = FileType.OPENKS
-loader_config.source_uris = 'openks/data/company-dev'
+loader_config.source_uris = 'openks/data/medical'
 loader_config.data_name = 'test-data-set'
 loader = Loader(loader_config)
 dataset = loader.dataset
@@ -15,21 +15,22 @@ graph_loader = GraphLoader(loader_config)
 graph = graph_loader.graph
 graph.info_display()
 # test model
-OpenKSModel.list_modules()
-platform = 'Paddle'
-model_type = 'KGLearn'
-model = 'TransE'
-print("根据配置，使用 {} 框架，{} 类型的 {} 模型。".format(platform, model_type, model))
-print("-----------------------------------------------")
-model_type = OpenKSModel.get_module(platform, model_type)
-kgmodel = model_type(graph=graph, model=OpenKSModel.get_module(platform, model), args=None)
-kgmodel.run()
-print()
+# OpenKSModel.list_modules()
+# platform = 'PyTorch'
+# model_type = 'KGLearn'
+# model = 'TransE'
+# print("根据配置，使用 {} 框架，{} 类型的 {} 模型。".format(platform, model_type, model))
+# print("-----------------------------------------------")
+# model_type = OpenKSModel.get_module(platform, model_type)
+# kgmodel = model_type(graph=graph, model=OpenKSModel.get_module(platform, model), args=None)
+# kgmodel.run()
+# print()
 # test question parser
 question = input("输入问题：")
-parser = RuleParserCom(question, graph)
+# parser = RuleParserCom(question, graph)
+parser = RuleParserMedical(question, graph)
 struc_q = parser.parse()
-fetcher = AnswerFetcher(struc_q, graph)
+# fetcher = AnswerFetcher(struc_q, graph)
 print("答案：")
 print(fetcher.fetch_by_matching())
 print("-----------------------------------------------")
