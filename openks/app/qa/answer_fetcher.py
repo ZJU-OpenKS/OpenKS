@@ -80,12 +80,18 @@ class AnswerFetcher(object):
 		elif question_type == 'quantity':
 			return len(res)
 
-	def fetch_by_db_query(self) -> T:
+	def fetch_by_db_query(self, graph_db) -> T:
 		""" fetch the answer through querying outside knowledge databases """
-		if not self.struc_q_rule_check():
-			return None
-		else:
-			return NotImplemented
+		final_answers = []
+		for sql_ in self.struc_q.neo_sqls:
+			question_type = sql_['type']
+			queries = sql_['sql']
+			answers = []
+			for query in queries:
+				ress = graph_db.run(query).data()
+				answers += ress
+			final_answers.append(answers)
+		return final_answers
 
 	def fetch_by_similarity(self) -> T:
 		""" fetch the answer through calculating vector similarities """

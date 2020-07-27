@@ -5,6 +5,7 @@ import os
 import json
 from zipfile import ZipFile
 import logging
+from py2neo import Graph,Node
 from .loader import Loader, LoaderConfig, SourceType, FileType
 from ..abstract.mtg import MTG
 import pdb
@@ -254,3 +255,50 @@ class GraphLoader(Loader):
 		mtg.entities = entities
 		mtg.triples = relations
 		return mtg
+
+	def graph2neo(self, graph: MTG, graph_db, clean=True):
+		create = True
+		if len(graph_db.nodes) > 0:
+			if clean:
+				graph_db.delete_all()
+				logger.info("Cleaned all nodes and relations in graph.")
+			else:
+				create = False
+				logger.info("Graph contains nodes and edges and no new nodes will be imported.")
+		if create:
+			# create neo4j nodes
+			count = 0
+			for item in graph.entities:
+				props = [struct['properties'] for struct in graph.schema if struct['type'] == 'entity' and struct['concept'] == item[1]]
+				prop_names = [prop['name'] for prop in props[0]]
+				prop_names.append('gid')
+				prop_values = list(item[2])
+				prop_values.append(item[0])
+				prop_dict = dict(zip(prop_names, prop_values))
+				node = Node(item[1], **prop_dict)
+				graph_db.create(node)
+				count += 1
+				if count % 1000 == 0:
+					logger.info("Already imported nodes %d, total nodes %d" % (count, len(graph.entities)))
+			# create neo4j edges
+			start_node = ''
+			end_node = ''
+			count = 0
+			for item in graph.triples:
+				p = item[0][0]
+				q = item[0][2]
+				rel_type = item[0][1]
+				rel_name = item[1][0] if item[1] else rel_type
+				for struct in graph.schema:
+					if struct['concept'] == item[0][1] and struct['type'] == 'relation':
+						start_node = struct['members'][0]
+						end_node = struct['members'][1]
+				query = "match(p:%s),(q:%s) where p.gid=%d and q.gid=%d create (p)-[rel:%s{name:'%s'}]->(q)" % (start_node, end_node, p, q, rel_type, rel_name)
+				try:
+					graph_db.run(query)
+					count += 1
+					if count % 1000 == 0:
+						logger.info("Already imported edges %d, total edges %d, current relation type %s" % (count, len(graph.triples), rel_type))
+				except Exception as e:
+					print(e)
+		return None

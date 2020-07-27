@@ -99,7 +99,13 @@
 	},
 	{
 		"type": "relation",
-		"concept": "rels_check",
+		"concept": "need_check",
+		"properties": [
+			{
+				"name": "name",
+				"range": "str"
+			}
+		],
 		"members": [
 			"diseases",
 			"checks"
@@ -107,7 +113,13 @@
 	},
 	{
 		"type": "relation",
-		"concept": "rels_recommandeat",
+		"concept": "recommand_eat",
+		"properties": [
+			{
+				"name": "name",
+				"range": "str"
+			}
+		],
 		"members": [
 			"diseases",
 			"foods"
@@ -115,7 +127,13 @@
 	},
 	{
 		"type": "relation",
-		"concept": "rels_noteat",
+		"concept": "no_eat",
+		"properties": [
+			{
+				"name": "name",
+				"range": "str"
+			}
+		],
 		"members": [
 			"diseases",
 			"foods"
@@ -123,7 +141,13 @@
 	},
 	{
 		"type": "relation",
-		"concept": "rels_doeat",
+		"concept": "do_eat",
+		"properties": [
+			{
+				"name": "name",
+				"range": "str"
+			}
+		],
 		"members": [
 			"diseases",
 			"foods"
@@ -131,7 +155,13 @@
 	},
 	{
 		"type": "relation",
-		"concept": "rels_department",
+		"concept": "belongs_to",
+		"properties": [
+			{
+				"name": "name",
+				"range": "str"
+			}
+		],
 		"members": [
 			"departments",
 			"departments"
@@ -139,7 +169,13 @@
 	},
 	{
 		"type": "relation",
-		"concept": "rels_commonddrug",
+		"concept": "common_drug",
+		"properties": [
+			{
+				"name": "name",
+				"range": "str"
+			}
+		],
 		"members": [
 			"diseases",
 			"drugs"
@@ -147,7 +183,13 @@
 	},
 	{
 		"type": "relation",
-		"concept": "rels_drug_producer",
+		"concept": "drugs_of",
+		"properties": [
+			{
+				"name": "name",
+				"range": "str"
+			}
+		],
 		"members": [
 			"producers",
 			"drugs"
@@ -155,7 +197,13 @@
 	},
 	{
 		"type": "relation",
-		"concept": "rels_recommanddrug",
+		"concept": "recommand_drug",
+		"properties": [
+			{
+				"name": "name",
+				"range": "str"
+			}
+		],
 		"members": [
 			"diseases",
 			"drugs"
@@ -163,7 +211,13 @@
 	},
 	{
 		"type": "relation",
-		"concept": "rels_symptom",
+		"concept": "has_symptom",
+		"properties": [
+			{
+				"name": "name",
+				"range": "str"
+			}
+		],
 		"members": [
 			"diseases",
 			"symptoms"
@@ -171,7 +225,13 @@
 	},
 	{
 		"type": "relation",
-		"concept": "rels_acompany",
+		"concept": "acompany_with",
+		"properties": [
+			{
+				"name": "name",
+				"range": "str"
+			}
+		],
 		"members": [
 			"diseases",
 			"diseases"
@@ -179,7 +239,13 @@
 	},
 	{
 		"type": "relation",
-		"concept": "rels_category",
+		"concept": "department_of",
+		"properties": [
+			{
+				"name": "name",
+				"range": "str"
+			}
+		],
 		"members": [
 			"diseases",
 			"departments"

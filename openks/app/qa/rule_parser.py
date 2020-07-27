@@ -91,7 +91,7 @@ class RuleParserCom(QuestionParser):
 
 class RuleParserMedical(QuestionParser):
 	"""
-	imported from https://github.com/liuhuanyong/QASystemOnMedicalKG
+	copied and modified from https://github.com/liuhuanyong/QASystemOnMedicalKG
 	"""
 	def __init__(self, question: str, graph: MTG):
 		super(RuleParserMedical, self).__init__(question, graph)
@@ -106,10 +106,6 @@ class RuleParserMedical(QuestionParser):
 		self.symptom_wds= [item[2][0] for item in self.graph.entities if item[1] == 'symptoms']
 		self.region_words = set(self.department_wds + self.disease_wds + self.check_wds + self.drug_wds + self.food_wds + self.producer_wds + self.symptom_wds)
 		self.deny_words = ['否', '非', '不', '无', '弗', '勿', '毋', '未', '没', '莫', '没有', '防止', '不再', '不会', '不能', '忌', '禁止', '防止', '难以', '忘记', '忽视', '放弃', '拒绝', '杜绝', '不是', '并未', '并无', '仍未', '难以出现', '切勿', '不要', '不可', '别', '管住', '注意', '小心', '少']
-		# 构造领域actree
-		self.region_tree = self.build_actree(list(self.region_words))
-		# 构建词典
-		self.wdtype_dict = self.build_wdtype_dict()
 		# 问句疑问词
 		self.symptom_qwds = ['症状', '表征', '现象', '症候', '表现']
 		self.cause_qwds = ['原因','成因', '为什么', '怎么会', '怎样才', '咋样才', '怎样会', '如何会', '为啥', '为何', '如何才会', '怎么才会', '会导致', '会造成']
@@ -128,8 +124,32 @@ class RuleParserMedical(QuestionParser):
 		print('model init finished ......')
 
 	def entity_extract(self):
+		# 构造领域actree
+		actree = ahocorasick.Automaton()
+		for index, word in enumerate(list(self.region_words)):
+			actree.add_word(word, (index, word))
+		actree.make_automaton()
+		# 构建词典
+		wd_dict = dict()
+		for wd in self.region_words:
+			wd_dict[wd] = []
+			if wd in self.disease_wds:
+				wd_dict[wd].append('disease')
+			if wd in self.department_wds:
+				wd_dict[wd].append('department')
+			if wd in self.check_wds:
+				wd_dict[wd].append('check')
+			if wd in self.drug_wds:
+				wd_dict[wd].append('drug')
+			if wd in self.food_wds:
+				wd_dict[wd].append('food')
+			if wd in self.symptom_wds:
+				wd_dict[wd].append('symptom')
+			if wd in self.producer_wds:
+				wd_dict[wd].append('producer')
+
 		region_wds = []
-		for i in self.region_tree.iter(self.struc_q.text):
+		for i in actree.iter(self.struc_q.text):
 			wd = i[1][1]
 			region_wds.append(wd)
 		stop_wds = []
@@ -138,7 +158,7 @@ class RuleParserMedical(QuestionParser):
 				if wd1 in wd2 and wd1 != wd2:
 					stop_wds.append(wd1)
 		final_wds = [i for i in region_wds if i not in stop_wds]
-		final_dict = {i:self.wdtype_dict.get(i) for i in final_wds}
+		final_dict = {i: wd_dict.get(i) for i in final_wds}
 		self.struc_q.entities = final_dict
 		return None
 
@@ -249,6 +269,27 @@ class RuleParserMedical(QuestionParser):
 		self.struc_q.question_class = data
 		return None
 
+	def relation_extract(self):
+		relations = []
+		question_types = self.struc_q.question_class['types']
+		for question_type in question_types:
+			if question_type == 'disease_symptom' or question_type == 'symptom_disease':
+				relations.append('has_symptom')
+			elif question_type == 'disease_acompany':
+				relations.append('acompany_with')
+			elif question_type == 'disease_not_food' or question_type == 'food_not_disease':
+				relations.append('no_eat')
+			elif question_type == 'disease_do_food' or question_type == 'food_do_disease':
+				relations.append('do_eat')
+				relations.append('recommand_eat')
+			elif question_type == 'disease_drug' or question_type == 'drug_disease':
+				relations.append('common_drug')
+				relations.append('recommand_drug')
+			elif question_type == 'disease_check' or question_type == 'check_disease':
+				relations.append('need_check')
+		self.struc_q.relations = relations
+		return None
+
 	def sql_generate(self):
 		args = self.struc_q.question_class['args']
 		entity_dict = {}
@@ -324,33 +365,6 @@ class RuleParserMedical(QuestionParser):
 			self.struc_q.neo_sqls = sqls
 		return None
 
-	def build_wdtype_dict(self):
-		wd_dict = dict()
-		for wd in self.region_words:
-			wd_dict[wd] = []
-			if wd in self.disease_wds:
-				wd_dict[wd].append('disease')
-			if wd in self.department_wds:
-				wd_dict[wd].append('department')
-			if wd in self.check_wds:
-				wd_dict[wd].append('check')
-			if wd in self.drug_wds:
-				wd_dict[wd].append('drug')
-			if wd in self.food_wds:
-				wd_dict[wd].append('food')
-			if wd in self.symptom_wds:
-				wd_dict[wd].append('symptom')
-			if wd in self.producer_wds:
-				wd_dict[wd].append('producer')
-		return wd_dict
-
-	def build_actree(self, wordlist):
-		actree = ahocorasick.Automaton()
-		for index, word in enumerate(wordlist):
-			actree.add_word(word, (index, word))
-		actree.make_automaton()
-		return actree
-
 	def check_words(self, wds, sent):
 		for wd in wds:
 			if wd in sent:
@@ -365,89 +379,90 @@ class RuleParserMedical(QuestionParser):
 		sql = []
 		# 查询疾病的原因
 		if question_type == 'disease_cause':
-			sql = ["MATCH (m:Disease) where m.name = '{0}' return m.name, m.cause".format(i) for i in entities]
+			sql = ["MATCH (m:diseases) where m.name = '{0}' return m.name, m.cause".format(i) for i in entities]
 
 		# 查询疾病的防御措施
 		elif question_type == 'disease_prevent':
-			sql = ["MATCH (m:Disease) where m.name = '{0}' return m.name, m.prevent".format(i) for i in entities]
+			sql = ["MATCH (m:diseases) where m.name = '{0}' return m.name, m.prevent".format(i) for i in entities]
 
 		# 查询疾病的持续时间
 		elif question_type == 'disease_lasttime':
-			sql = ["MATCH (m:Disease) where m.name = '{0}' return m.name, m.cure_lasttime".format(i) for i in entities]
+			sql = ["MATCH (m:diseases) where m.name = '{0}' return m.name, m.cure_lasttime".format(i) for i in entities]
 
 		# 查询疾病的治愈概率
 		elif question_type == 'disease_cureprob':
-			sql = ["MATCH (m:Disease) where m.name = '{0}' return m.name, m.cured_prob".format(i) for i in entities]
+			sql = ["MATCH (m:diseases) where m.name = '{0}' return m.name, m.cured_prob".format(i) for i in entities]
 
 		# 查询疾病的治疗方式
 		elif question_type == 'disease_cureway':
-			sql = ["MATCH (m:Disease) where m.name = '{0}' return m.name, m.cure_way".format(i) for i in entities]
+			sql = ["MATCH (m:diseases) where m.name = '{0}' return m.name, m.cure_way".format(i) for i in entities]
 
 		# 查询疾病的易发人群
 		elif question_type == 'disease_easyget':
-			sql = ["MATCH (m:Disease) where m.name = '{0}' return m.name, m.easy_get".format(i) for i in entities]
+			sql = ["MATCH (m:diseases) where m.name = '{0}' return m.name, m.easy_get".format(i) for i in entities]
 
 		# 查询疾病的相关介绍
 		elif question_type == 'disease_desc':
-			sql = ["MATCH (m:Disease) where m.name = '{0}' return m.name, m.desc".format(i) for i in entities]
+			sql = ["MATCH (m:diseases) where m.name = '{0}' return m.name, m.desc".format(i) for i in entities]
 
 		# 查询疾病有哪些症状
 		elif question_type == 'disease_symptom':
-			sql = ["MATCH (m:Disease)-[r:has_symptom]->(n:Symptom) where m.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
+			sql = ["MATCH (m:diseases)-[r:has_symptom]->(n:symptoms) where m.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
 
 		# 查询症状会导致哪些疾病
 		elif question_type == 'symptom_disease':
-			sql = ["MATCH (m:Disease)-[r:has_symptom]->(n:Symptom) where n.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
+			sql = ["MATCH (m:diseases)-[r:has_symptom]->(n:symptoms) where n.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
 
 		# 查询疾病的并发症
 		elif question_type == 'disease_acompany':
-			sql1 = ["MATCH (m:Disease)-[r:acompany_with]->(n:Disease) where m.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
-			sql2 = ["MATCH (m:Disease)-[r:acompany_with]->(n:Disease) where n.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
+			sql1 = ["MATCH (m:diseases)-[r:acompany_with]->(n:diseases) where m.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
+			sql2 = ["MATCH (m:diseases)-[r:acompany_with]->(n:diseases) where n.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
 			sql = sql1 + sql2
 		# 查询疾病的忌口
 		elif question_type == 'disease_not_food':
-			sql = ["MATCH (m:Disease)-[r:no_eat]->(n:Food) where m.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
+			sql = ["MATCH (m:diseases)-[r:no_eat]->(n:foods) where m.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
 
 		# 查询疾病建议吃的东西
 		elif question_type == 'disease_do_food':
-			sql1 = ["MATCH (m:Disease)-[r:do_eat]->(n:Food) where m.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
-			sql2 = ["MATCH (m:Disease)-[r:recommand_eat]->(n:Food) where m.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
+			sql1 = ["MATCH (m:diseases)-[r:do_eat]->(n:foods) where m.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
+			sql2 = ["MATCH (m:diseases)-[r:recommand_eat]->(n:foods) where m.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
 			sql = sql1 + sql2
 
 		# 已知忌口查疾病
 		elif question_type == 'food_not_disease':
-			sql = ["MATCH (m:Disease)-[r:no_eat]->(n:Food) where n.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
+			sql = ["MATCH (m:diseases)-[r:no_eat]->(n:foods) where n.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
 
 		# 已知推荐查疾病
 		elif question_type == 'food_do_disease':
-			sql1 = ["MATCH (m:Disease)-[r:do_eat]->(n:Food) where n.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
-			sql2 = ["MATCH (m:Disease)-[r:recommand_eat]->(n:Food) where n.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
+			sql1 = ["MATCH (m:diseases)-[r:do_eat]->(n:foods) where n.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
+			sql2 = ["MATCH (m:diseases)-[r:recommand_eat]->(n:foods) where n.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
 			sql = sql1 + sql2
 
 		# 查询疾病常用药品－药品别名记得扩充
 		elif question_type == 'disease_drug':
-			sql1 = ["MATCH (m:Disease)-[r:common_drug]->(n:Drug) where m.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
-			sql2 = ["MATCH (m:Disease)-[r:recommand_drug]->(n:Drug) where m.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
+			sql1 = ["MATCH (m:diseases)-[r:common_drug]->(n:drugs) where m.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
+			sql2 = ["MATCH (m:diseases)-[r:recommand_drug]->(n:drugs) where m.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
 			sql = sql1 + sql2
 
 		# 已知药品查询能够治疗的疾病
 		elif question_type == 'drug_disease':
-			sql1 = ["MATCH (m:Disease)-[r:common_drug]->(n:Drug) where n.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
-			sql2 = ["MATCH (m:Disease)-[r:recommand_drug]->(n:Drug) where n.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
+			sql1 = ["MATCH (m:diseases)-[r:common_drug]->(n:drugs) where n.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
+			sql2 = ["MATCH (m:diseases)-[r:recommand_drug]->(n:drugs) where n.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
 			sql = sql1 + sql2
 		# 查询疾病应该进行的检查
 		elif question_type == 'disease_check':
-			sql = ["MATCH (m:Disease)-[r:need_check]->(n:Check) where m.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
+			sql = ["MATCH (m:diseases)-[r:need_check]->(n:checks) where m.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
 
 		# 已知检查查询疾病
 		elif question_type == 'check_disease':
-			sql = ["MATCH (m:Disease)-[r:need_check]->(n:Check) where n.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
+			sql = ["MATCH (m:diseases)-[r:need_check]->(n:checks) where n.name = '{0}' return m.name, r.name, n.name".format(i) for i in entities]
 
 		return sql
 
 	def parse(self) -> StrucQ:
 		self.entity_extract()
 		self.question_classify()
+		self.relation_extract()
 		self.sql_generate()
 		self.struc_q_format()
 		return self.struc_q
