@@ -1,15 +1,18 @@
 # 知识问答demo
 
-### 支持基于知识库匹配方式的问答搜索流程，以提供的测试数据集为例，效果如下：
+### 支持基于知识库匹配方式的问答搜索流程，效果如下：
 #### 企业投融资与知识产权数据集（来自内部构建）
 * ![ask_investor](../../../docs/pics/ask_investor.jpg)
 * ![ask_investor](../../../docs/pics/ask_patent_num.jpg)
 * ![ask_investor](../../../docs/pics/ask_patent.jpg)
+
+### 支持基于知识图谱数据库查询方式的问答搜索流程，效果如下：
 #### 医疗健康数据集（来自：https://github.com/liuhuanyong/QASystemOnMedicalKG）
 * ![ask_disease](../../../docs/pics/ask_disease1.jpg)
 * ![ask_disease](../../../docs/pics/ask_disease2.jpg)
 
-### 支持基于知识图谱向量表示的问答计算流程（待实现）
+### 支持基于知识图谱向量表示计算的问答计算流程，效果如下：
+（待实现）
 
 ### 若要实现一个自定义的问答功能需实现以下工作：
 1. 按照OPENKS的输入数据格式构建知识图谱数据集并放入openks/data/中，可参考[此文档](https://github.com/ZJU-OpenKS/OpenKS/blob/master/openks/data/README.md)
