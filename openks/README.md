@@ -1,7 +1,7 @@
 # OpenKS核心框架
 
 ## 整体模块逻辑图
-![openks](./docs/pics/openks.jpg)
+![openks](../docs/pics/openks.jpg)
 
 ## 模块说明
 
