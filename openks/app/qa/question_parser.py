@@ -109,10 +109,8 @@ class QuestionParser(object):
 	"""
 	question text string  -->  StrucQ
 	"""
-	def __init__(self, question, graph: MTG) -> None:
-		self.question = question
+	def __init__(self, graph: MTG) -> None:
 		self.struc_q = struc_q
-		self.struc_q.text = question
 		self.graph = graph
 
 	def entity_extract(self) -> None:
@@ -169,12 +167,14 @@ class QuestionParser(object):
 		print("图谱请求SQL：" + str(struc_q.neo_sqls))
 		print("-----------------------------------------------")
 
-	def parse(self) -> StrucQ:
+	def parse(self, question) -> StrucQ:
 		""" actual question parsing function """
+		self.struc_q.text = question
 		# self.entity_extract()
 		# self.relation_extract()
 		# self.target_detect()
 		# self.question_classify()
 		# self.entity_link()
 		# self.question_embed()
+		# self.struc_q_format()
 		return self.struc_q

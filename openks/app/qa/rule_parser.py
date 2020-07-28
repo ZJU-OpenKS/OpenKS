@@ -13,8 +13,8 @@ class RuleParserCom(QuestionParser):
 	"""
 	Rules for the domain of investor-company-patent dataset
 	"""
-	def __init__(self, question: str, graph: MTG) -> None:
-		super(RuleParserCom, self).__init__(question, graph)
+	def __init__(self, graph: MTG) -> None:
+		super(RuleParserCom, self).__init__(graph)
 		self.question_type = {'entity': ['哪些', '哪家', '哪个', '哪几个', '谁'], 'quantity': ['多少', '几个', '几家']}
 		self.question_target = {'company': ['公司', '企业'], 'patent': ['专利', '知识产权'], 'investor': ['投资人', '投资机构']}
 		self.question_target_single = {'company': ['谁被.*投资', '谁申请了'], 'investor': ['谁投资了']}
@@ -80,7 +80,8 @@ class RuleParserCom(QuestionParser):
 		self.struc_q.question_class = question_class
 		return None
 
-	def parse(self) -> StrucQ:
+	def parse(self, question: str) -> StrucQ:
+		self.struc_q.text = question
 		self.entity_extract()
 		self.relation_extract()
 		self.target_detect()
@@ -93,9 +94,8 @@ class RuleParserMedical(QuestionParser):
 	"""
 	copied and modified from https://github.com/liuhuanyong/QASystemOnMedicalKG
 	"""
-	def __init__(self, question: str, graph: MTG):
-		super(RuleParserMedical, self).__init__(question, graph)
-		cur_dir = '/'.join(os.path.abspath(__file__).split('/')[:-1])
+	def __init__(self, graph: MTG):
+		super(RuleParserMedical, self).__init__(graph)
 		# 加载特征词
 		self.disease_wds = [item[2][0] for item in self.graph.entities if item[1] == 'diseases']
 		self.department_wds= [item[2][0] for item in self.graph.entities if item[1] == 'departments']
@@ -120,36 +120,34 @@ class RuleParserMedical(QuestionParser):
 		self.check_qwds = ['检查', '检查项目', '查出', '检查', '测出', '试出']
 		self.belong_qwds = ['属于什么科', '属于', '什么科', '科室']
 		self.cure_qwds = ['治疗什么', '治啥', '治疗啥', '医治啥', '治愈啥', '主治啥', '主治什么', '有什么用', '有何用', '用处', '用途','有什么好处', '有什么益处', '有何益处', '用来', '用来做啥', '用来作甚', '需要', '要']
-
+		# 构造领域actree
+		self.actree = ahocorasick.Automaton()
+		for index, word in enumerate(list(self.region_words)):
+			self.actree.add_word(word, (index, word))
+		self.actree.make_automaton()
+		# 构建词典
+		self.wd_dict = dict()
+		for wd in self.region_words:
+			self.wd_dict[wd] = []
+			if wd in self.disease_wds:
+				self.wd_dict[wd].append('disease')
+			if wd in self.department_wds:
+				self.wd_dict[wd].append('department')
+			if wd in self.check_wds:
+				self.wd_dict[wd].append('check')
+			if wd in self.drug_wds:
+				self.wd_dict[wd].append('drug')
+			if wd in self.food_wds:
+				self.wd_dict[wd].append('food')
+			if wd in self.symptom_wds:
+				self.wd_dict[wd].append('symptom')
+			if wd in self.producer_wds:
+				self.wd_dict[wd].append('producer')
 		print('model init finished ......')
 
 	def entity_extract(self):
-		# 构造领域actree
-		actree = ahocorasick.Automaton()
-		for index, word in enumerate(list(self.region_words)):
-			actree.add_word(word, (index, word))
-		actree.make_automaton()
-		# 构建词典
-		wd_dict = dict()
-		for wd in self.region_words:
-			wd_dict[wd] = []
-			if wd in self.disease_wds:
-				wd_dict[wd].append('disease')
-			if wd in self.department_wds:
-				wd_dict[wd].append('department')
-			if wd in self.check_wds:
-				wd_dict[wd].append('check')
-			if wd in self.drug_wds:
-				wd_dict[wd].append('drug')
-			if wd in self.food_wds:
-				wd_dict[wd].append('food')
-			if wd in self.symptom_wds:
-				wd_dict[wd].append('symptom')
-			if wd in self.producer_wds:
-				wd_dict[wd].append('producer')
-
 		region_wds = []
-		for i in actree.iter(self.struc_q.text):
+		for i in self.actree.iter(self.struc_q.text):
 			wd = i[1][1]
 			region_wds.append(wd)
 		stop_wds = []
@@ -158,7 +156,7 @@ class RuleParserMedical(QuestionParser):
 				if wd1 in wd2 and wd1 != wd2:
 					stop_wds.append(wd1)
 		final_wds = [i for i in region_wds if i not in stop_wds]
-		final_dict = {i: wd_dict.get(i) for i in final_wds}
+		final_dict = {i: self.wd_dict.get(i) for i in final_wds}
 		self.struc_q.entities = final_dict
 		return None
 
@@ -459,7 +457,8 @@ class RuleParserMedical(QuestionParser):
 
 		return sql
 
-	def parse(self) -> StrucQ:
+	def parse(self, question: str) -> StrucQ:
+		self.struc_q.text = question
 		self.entity_extract()
 		self.question_classify()
 		self.relation_extract()

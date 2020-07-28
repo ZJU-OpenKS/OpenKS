@@ -7,6 +7,7 @@ from py2neo import Graph
 # 载入参数配置与数据集载入
 loader_config.source_type = SourceType.LOCAL_FILE
 loader_config.file_type = FileType.OPENKS
+# loader_config.source_uris = 'openks/data/company-dev'
 loader_config.source_uris = 'openks/data/medical'
 loader_config.data_name = 'test-data-set'
 loader = Loader(loader_config)
@@ -19,7 +20,8 @@ graph.info_display()
 # 图谱图数据库写入
 print("将graph导入数据库：")
 graph_db = Graph(host='127.0.0.1', http_port=7474, user='neo4j', password='123456')
-graph_loader.graph2neo(graph, graph_db, clean=True)
+# 将MTG图写入图数据库，clean为False表示不进行清空和重新导入
+graph_loader.graph2neo(graph, graph_db, clean=False)
 
 ''' 图谱表示学习模型训练 '''
 # 列出已加载模型
@@ -37,16 +39,16 @@ graph_loader.graph2neo(graph, graph_db, clean=True)
 # print()
 
 ''' 知识图谱问答 '''
+# 选择问题解析类并进行模型预加载
+# parser = RuleParserCom(graph)
+parser = RuleParserMedical(graph)
 while(1):
 	question = input("输入问题：")
-	# 选择问题解析类
-	# parser = RuleParserCom(question, graph)
-	parser = RuleParserMedical(question, graph)
-	struc_q = parser.parse()
+	struc_q = parser.parse(question)
 	# 进行答案获取
-	# fetcher = AnswerFetcher(struc_q, graph)
 	fetcher = AnswerFetcher(struc_q, graph)
 	print("答案：")
+	# 选择答案获取的方式
 	# print(fetcher.fetch_by_matching())
 	print(fetcher.fetch_by_db_query(graph_db))
 	print("-----------------------------------------------")
