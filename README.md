@@ -21,6 +21,66 @@
 ```
 python main.py
 ```
+### 使用说明
+1. 图谱数据载入与图谱结构生成
+```
+# 使用loader_config配置数据载入参数，包括数据文件格式类型、文件路径、数据集名称等
+from openks.loaders import *
+loader_config.file_type = FileType.OPENKS
+loader_config.source_uris = 'openks/data/medical'
+loader_config.data_name = 'test-data-set'
+```
+```
+# 数据文件载入为内存数据集格式，并进行数据集信息展示
+loader = Loader(loader_config)
+dataset = loader.dataset
+dataset.info_display()
+```
+```
+# 知识图谱数据内存数据格式载入，并进行图谱信息展示
+graph_loader = GraphLoader(loader_config)
+graph = graph_loader.graph
+graph.info_display()
+```
+```
+# 可以将内存图谱数据写入neo4j图数据库中用于下游任务
+from py2neo import Graph
+graph_db = Graph(host='127.0.0.1', http_port=7474, user='neo4j', password='123456')
+graph_loader.graph2neo(graph, graph_db, clean=False) # clean为False表示不进行清空，True为清空并重新导入
+```
+2. 图谱表示学习模型训练
+```
+# 列出已注册的所有算法模型
+from openks.models import *
+OpenKSModel.list_modules()
+```
+```
+# 算法模型选择配置，包括框架选择、模型大类选择、算法选择等
+platform = 'PyTorch'
+model_type = 'KGLearn'
+model = 'TransE'
+```
+```
+# 算法模型加载与训练
+model_type = OpenKSModel.get_module(platform, model_type)
+kgmodel = model_type(graph=graph, model=OpenKSModel.get_module(platform, model), args=None)
+kgmodel.run()
+```
+3. 知识图谱问答
+```
+# 选择自定义的问题解析类并进行规则和模型预加载
+parser = RuleParserMedical(graph)
+```
+```
+# 输入问题并对问题进行结构化解析
+question = input("输入问题：")
+struc_q = parser.parse(question)
+```
+```
+# 根据结构化问题获取答案，支持直接内存数据匹配、外部数据库查询、图谱向量表示计算等方式
+fetcher = AnswerFetcher(struc_q, graph)
+print(fetcher.fetch_by_db_query(graph_db))
+```
 
 ## 系统逻辑
 ![pipeline](./docs/pics/running_steps.jpg)
