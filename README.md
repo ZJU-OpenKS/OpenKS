@@ -7,6 +7,9 @@
 - 分布式机器学习优化算法
 - 基于知识图谱的智能应用
 
+## 模块架构
+![architect](./docs/pics/architect.jpg)
+
 ## 环境要求
 - Python 3.x
 - 百度飞桨Paddle(https://github.com/paddlepaddle/paddle)
