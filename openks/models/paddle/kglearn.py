@@ -4,13 +4,13 @@ import os
 import paddle.fluid as fluid
 import numpy as np
 from sklearn.model_selection import train_test_split
-from ..model import KGModelBase
+from ..model import KGLearnModel
 
 logger = logging.getLogger(__name__)
 
 
-@KGModelBase.register("KGLearn", "Paddle")
-class KGModel(KGModelBase):
+@KGLearnModel.register("KGLearn", "Paddle")
+class KGLearnPaddle(KGLearnModel):
 	def __init__(self, name='paddle-default', graph=None, model=None, args=None):
 		self.name = name
 		self.graph = graph

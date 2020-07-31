@@ -1,5 +1,5 @@
 """
 init
 """
-from .kgmodel import *
+from .kglearn import *
 from .TransE import *

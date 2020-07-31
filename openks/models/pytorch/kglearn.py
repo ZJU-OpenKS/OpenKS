@@ -8,7 +8,7 @@ import torch.optim as optim
 from torch.optim import optimizer
 import numpy as np
 from sklearn.model_selection import train_test_split
-from ..model import KGModelBase, TorchDataset
+from ..model import KGLearnModel, TorchDataset
 import pdb
 
 logger = logging.getLogger(__name__)
@@ -26,8 +26,8 @@ class DataSet(TorchDataset):
 		return head, relation, tail
 
 
-@KGModelBase.register("KGLearn", "PyTorch")
-class KGModel(KGModelBase):
+@KGLearnModel.register("KGLearn", "PyTorch")
+class KGLearnTorch(KGLearnModel):
 	def __init__(self, name='pytorch-default', graph=None, model=None, args=None):
 		self.name = name
 		self.graph = graph

@@ -1,6 +1,6 @@
 from openks.loaders import *
 from openks.models import *
-from openks.app.qa import *
+from openks.apps.qa import *
 from py2neo import Graph
 
 ''' 图谱载入与图谱数据结构生成 '''
@@ -25,19 +25,18 @@ graph_loader.graph2neo(graph, graph_db, clean=False)
 
 ''' 图谱表示学习模型训练 '''
 # 列出已加载模型
-# OpenKSModel.list_modules()
+OpenKSModel.list_modules()
 # 算法模型选择配置
-# platform = 'PyTorch'
-# model_type = 'KGLearn'
-# model = 'TransE'
-# print("根据配置，使用 {} 框架，{} 类型的 {} 模型。".format(platform, model_type, model))
-# print("-----------------------------------------------")
+platform = 'Paddle'
+model_type = 'KGLearn'
+model = 'TransE'
+print("根据配置，使用 {} 框架，{} 类型的 {} 模型。".format(platform, model_type, model))
+print("-----------------------------------------------")
 # 模型训练
-# model_type = OpenKSModel.get_module(platform, model_type)
-# kgmodel = model_type(graph=graph, model=OpenKSModel.get_module(platform, model), args=None)
-# kgmodel.run()
-# print()
-
+model_type = OpenKSModel.get_module(platform, model_type)
+kglearn = model_type(graph=graph, model=OpenKSModel.get_module(platform, model), args=None)
+kglearn.run()
+print("-----------------------------------------------")
 ''' 知识图谱问答 '''
 # 选择问题解析类并进行模型预加载
 # parser = RuleParserCom(graph)
