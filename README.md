@@ -16,7 +16,7 @@
 - PyTorch(https://github.com/pytorch/pytorch)
 - NumPy(https://github.com/numpy/numpy)
 - scikit-learn(https://github.com/scikit-learn/scikit-learn)
-- py2neo(for KGQA application with graph database)(https://pypi.org/project/py2neo/)
+- py2neo(for KGQA application with graph database)(https://pypi.org/project/py2neo/) - 2020.7b8 版本以上
 - pyahocorasick(for KGQA application with graph database)(https://pypi.org/project/pyahocorasick/)
 
 ## 快速上手

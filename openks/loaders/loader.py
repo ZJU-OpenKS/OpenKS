@@ -17,6 +17,7 @@ logger = logging.getLogger(__name__)
 class SourceType(Enum):
 	LOCAL_FILE = 'local_file'
 	HDFS = 'hdfs'
+	NEO4J = 'neo4j'
 
 @unique
 class FileType(Enum):
@@ -52,13 +53,15 @@ class LoaderConfig(object):
 		source_type: SourceType = SourceType.LOCAL_FILE, 
 		file_type: FileType = FileType.CSV,
 		source_uris: List = [], 
-		data_name: str = ''
+		data_name: str = '',
+		graph_db = None
 		) -> None:
 		self._source_type = source_type
 		self._file_type = file_type
 		# support loading multiple files
 		self._source_uri = source_uris
 		self._data_name = data_name
+		self._graph_db = graph_db
 
 	@property
 	def source_type(self):
@@ -92,6 +95,14 @@ class LoaderConfig(object):
 	def data_name(self, data_name: str):
 		self._data_name = data_name
 
+	@property
+	def graph_db(self):
+		return self._graph_db
+	
+	@graph_db.setter
+	def graph_db(self, graph_db: str):
+		self._graph_db = graph_db
+
 
 loader_config = LoaderConfig()
 mmd = MMD()
@@ -110,6 +121,9 @@ class Loader(object):
 			return self._read_files()
 		elif self.config.source_type == SourceType.HDFS:
 			return self._read_hdfs()
+		elif self.config.source_type == SourceType.NEO4J:
+			return self._read_neo4j(self.config.graph_db)
+
 		else:
 			raise NotImplementedError("The source type {} has not been implemented yet.".format(loader_config.source_type))
 
@@ -188,6 +202,37 @@ class Loader(object):
 				logger.warn('Only allows loading with entities and triples for now!')
 				raise IOError
 
+		mmd.name = self.config.data_name
+		mmd.headers = headers
+		mmd.bodies = bodies
+		return mmd
+
+	def _read_neo4j(self, graph_db) -> MMD:
+		headers = []
+		bodies = []
+		logger.info('Loading data from GraphDB...')
+		if self.config.file_type == FileType.OPENKS:
+			headers = [['entities'], ['triples']]
+			entities = []
+			for label in graph_db.schema.node_labels:
+				for node in graph_db.nodes.match(label):
+					# hack here to just use gid and name, user can change here to use all properties such as : list(dict(item).values())
+					entities.append(tuple([dict(node)['gid'], label, dict(node)['name']]))
+			logger.info('Loaded entites.')
+			head = None
+			tail = None
+			triples = []
+			for label in graph_db.schema.relationship_types:
+				for rel in graph_db.relationships.match(nodes=None, r_type=label):
+					for item in list(rel.nodes[0].items()):
+						if item[0] == 'gid':
+							head = item[1]
+					for item in list(rel.nodes[1].items()):
+						if item[0] == 'gid':
+							tail = item[1]
+					triples.append(tuple([head, label, tail, list(rel.values())[0]]))
+				logger.info('Loaded relation type: ' + label)
+			bodies = [entities, triples]
 		mmd.name = self.config.data_name
 		mmd.headers = headers
 		mmd.bodies = bodies
