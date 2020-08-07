@@ -15,7 +15,7 @@ from openKS_distributed.base import \
 BaseDistributedAlgorithm, BaseDistributedOptimizer, Mode
 
 from paddle.fluid import compiler
-from paddle.distributed.fs_wrapper import LocalFS, BDFS
+from .fs_wrapper import LocalFS, BDFS
 
 import os
 import sys

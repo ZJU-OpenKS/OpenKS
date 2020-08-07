@@ -25,8 +25,8 @@ from argparse import ArgumentParser, REMAINDER
 import paddle
 import paddle.fluid as fluid
 
-from paddle.distributed.utils import *
-import paddle.distributed.cloud_utils as cloud_utils
+from utils import *
+import cloud_utils as cloud_utils
 
 
 class ps_launcher(object):
