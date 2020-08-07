@@ -1,4 +1,4 @@
-from openKS_strategy.base import _StrategyBase, _ExecuteConfig, _DistributeConfig
+from ..openKS_strategy.base import _StrategyBase, _ExecuteConfig, _DistributeConfig
 
 
 class CPUStrategy(_StrategyBase):
@@ -7,6 +7,7 @@ class CPUStrategy(_StrategyBase):
         from paddle.fluid import ExecutionStrategy
         from paddle.fluid.transpiler.distribute_transpiler import DistributeTranspilerConfig
         self._strategy = DistributeTranspilerConfig()
+        self._strategy.wait_port = False
         for conf in dist_config:
             conf.setup(self._strategy)
 

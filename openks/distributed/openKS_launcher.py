@@ -373,21 +373,21 @@ class openKS_launcher(object):
         self.launcher.launch()
 
 # server num, worker num        
-if __name__ == "__main__":
-    parser = ArgumentParser()
-    parser.add_argument("--mode", type=str, default="cpu", choices=['cpu', 'gpu'], help="using cpu or gpu")
-    parser.add_argument("--worker_num", type=int, default=2, help="number of workers")
-    parser.add_argument("--server_num", type=int, default=2, help="number of servers")
-    parser.add_argument(
-            "training_script",
-            type=str,
-            help="The full path to the single GPU training "
-            "program/script to be launched in parallel, "
-            "followed by all the arguments for the "
-            "training script")
+# if __name__ == "__main__":
+parser = ArgumentParser()
+parser.add_argument("--mode", type=str, default="cpu", choices=['cpu', 'gpu'], help="using cpu or gpu")
+parser.add_argument("--worker_num", type=int, default=2, help="number of workers")
+parser.add_argument("--server_num", type=int, default=2, help="number of servers")
+parser.add_argument(
+        "training_script",
+        type=str,
+        help="The full path to the single GPU training "
+        "program/script to be launched in parallel, "
+        "followed by all the arguments for the "
+        "training script")
 
-    opt = parser.parse_args()
+opt = parser.parse_args()
 
-    ks_launch = openKS_launcher(opt.mode)
-    ks_launch.launch()
+ks_launch = openKS_launcher(opt.mode)
+ks_launch.launch()
 

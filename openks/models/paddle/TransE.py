@@ -1,8 +1,10 @@
 import logging
+import uuid
 import paddle.fluid as fluid
 import paddle.fluid.layers as layers
 from paddle.fluid.layer_helper import LayerHelper
 from ..model import PaddleModel
+from ...distributed.openKS_strategy.cpu import CPUStrategy, SyncModeConfig
 
 logger = logging.getLogger(__name__)
 
@@ -15,6 +17,7 @@ class TransE(PaddleModel):
 		self.margin = kwargs['margin']
 		self.learning_rate = kwargs['lr']
 		self.opt = kwargs['opt']
+		self.dist = kwargs['dist']
 		self._ent_shape = [self.num_entity, self.hidden_dim]
 		self._rel_shape = [self.num_relation, self.hidden_dim]
 		self.forward()
@@ -43,8 +46,9 @@ class TransE(PaddleModel):
 
 	def create_share_variables(self):
 		""" Share variables for train and test programs. """
-		entity_embedding = fluid.layers.create_parameter(shape=self._ent_shape, dtype="float32", name='ent_emb')
-		relation_embedding = fluid.layers.create_parameter(shape=self._rel_shape, dtype="float32", name='rel_emb')
+
+		entity_embedding = fluid.layers.create_parameter(shape=self._ent_shape, dtype="float32", name='ent_emb' + str(uuid.uuid1()))
+		relation_embedding = fluid.layers.create_parameter(shape=self._rel_shape, dtype="float32", name='rel_emb' + str(uuid.uuid1()))
 		return entity_embedding, relation_embedding
 
 	@staticmethod
@@ -67,7 +71,7 @@ class TransE(PaddleModel):
 			self.train_feed_vars = [self.train_pos_input, self.train_neg_input]
 			self.train_fetch_vars = self.train_forward()
 			loss = self.train_fetch_vars[0]
-			self.backward(loss, opt=self.opt)
+			self.backward(loss, opt=self.opt, dist=self.dist)
 
 		with fluid.program_guard(self.test_program, self.startup_program):
 			self.test_input = layers.data("test_triple", dtype="int64", shape=[3], append_batch_size=False)
@@ -101,7 +105,7 @@ class TransE(PaddleModel):
 		id_replace_tail = layers.reduce_sum(layers.abs(entity - rel_vec - head_vec), dim=1)
 		return [id_replace_head, id_replace_tail]
 
-	def backward(self, loss, opt):
+	def backward(self, loss, opt, dist=None):
 		optimizer_available = {
 			"adam": fluid.optimizer.Adam,
 			"sgd": fluid.optimizer.SGD,
@@ -115,4 +119,6 @@ class TransE(PaddleModel):
 			raise ValueError("You should chose the optimizer in %s" % optimizer_available.keys())
 		else:
 			optimizer = opt_func(learning_rate=self.learning_rate)
+			if dist:
+				optimizer = CPUStrategy([SyncModeConfig()]).setup_optimizer(dist, optimizer)
 			return optimizer.minimize(loss)

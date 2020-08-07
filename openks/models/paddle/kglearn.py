@@ -5,6 +5,9 @@ import paddle.fluid as fluid
 import numpy as np
 from sklearn.model_selection import train_test_split
 from ..model import KGLearnModel
+from ...distributed.openKS_distributed import KSDistributedFactory
+from ...distributed.openKS_distributed.base import RoleMaker
+from ...distributed.openKS_strategy.cpu import CPUStrategy, SyncModeConfig
 
 logger = logging.getLogger(__name__)
 
@@ -109,10 +112,18 @@ class KGLearnPaddle(KGLearnModel):
 		raw_rank = np.array(all_rank)
 		return (raw_rank <= 1).mean(), (raw_rank <= 3).mean(), (raw_rank <= 10).mean(), (1 / raw_rank).mean()
 
-	def run(self):
-		device = fluid.cuda_places() if self.args.gpu else fluid.cpu_places()
+	def run(self, dist=False):
+		program = None
+		dist_algorithm = None
 
 		train_triples, valid_triples, test_triples = self.triples_reader(ratio=0.01)
+
+		device = fluid.cuda_places() if self.args.gpu else fluid.cpu_places()
+
+		if dist:
+			dist_algorithm = KSDistributedFactory.instantiation(flag=0)
+			role = RoleMaker.PaddleCloudRoleMaker()
+			dist_algorithm.init(role)
 
 		model = self.model(
 			num_entity=self.graph.get_entity_num(),
@@ -120,7 +131,18 @@ class KGLearnPaddle(KGLearnModel):
 			hidden_dim=self.args.hidden_dim,
 			margin=self.args.margin,
 			lr=self.args.lr,
-			opt=self.args.opt)
+			opt=self.args.opt,
+			dist=dist_algorithm)
+
+		if dist:
+			if dist_algorithm.is_server():
+				dist_algorithm.init_server()
+				dist_algorithm.run_server()
+			elif dist_algorithm.is_worker():
+				dist_algorithm.init_worker()
+				program = dist_algorithm.main_program
+		else:
+			program = fluid.CompiledProgram(model.train_program).with_data_parallel(loss_name=model.train_fetch_vars[0].name)
 
 		train_loader = fluid.io.DataLoader.from_generator(feed_list=model.train_feed_vars, capacity=20, iterable=True)
 		train_loader.set_batch_generator(self.triples_generator(train_triples, batch_size=self.args.batch_size), places=device)
@@ -128,10 +150,8 @@ class KGLearnPaddle(KGLearnModel):
 		exe = fluid.Executor(device[0])
 		exe.run(model.startup_program)
 		exe.run(fluid.default_startup_program())
-		program = fluid.CompiledProgram(model.train_program).with_data_parallel(loss_name=model.train_fetch_vars[0].name)
 
 		best_score = 0.0
-
 		for epoch in range(1, self.args.epochs + 1):
 			print("Starting epoch: ", epoch)
 			loss = 0
@@ -150,6 +170,8 @@ class KGLearnPaddle(KGLearnModel):
 				if score > best_score:
 					best_score = score
 					fluid.io.save_params(exe, dirname=self.args.model_path, main_program=model.train_program)
+		if dist:
+			dist_algorithm.stop_worker()
 
 		# load saved model and test
 		fluid.io.load_params(exe, dirname=self.args.model_path, main_program=model.train_program)
