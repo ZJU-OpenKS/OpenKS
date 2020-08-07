@@ -11,7 +11,7 @@ from paddle.fluid.parallel_executor import ParallelExecutor
 from paddle.fluid.compiler import CompiledProgram
 from paddle.fluid.framework import Program
 
-from ...openKS_distributed.base import \
+from ...openks_distributed.base import \
 BaseDistributedAlgorithm, BaseDistributedOptimizer, Mode
 
 from paddle.fluid import compiler

@@ -362,7 +362,7 @@ class launcher(object):
 
             time.sleep(3)
 
-class openKS_launcher(object):
+class OpenKS_Launcher(object):
     def __init__(self, mode):
         if mode == 'cpu':
             self.launcher = ps_launcher()
@@ -388,6 +388,6 @@ parser.add_argument(
 
 opt = parser.parse_args()
 
-ks_launch = openKS_launcher(opt.mode)
+ks_launch = OpenKS_Launcher(opt.mode)
 ks_launch.launch()
 

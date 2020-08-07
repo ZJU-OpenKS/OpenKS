@@ -24,11 +24,18 @@
 ```
 python main.py
 ```
+
+#### 分布式图表示模型训练
+```
+python openks/distributed/openKS_launcher.py --mode cpu --worker_num 2 --server_num 2 main_dist.py
+```
+
 ### 使用说明
 1. 图谱数据载入与图谱结构生成
 ```
-# 使用loader_config配置数据载入参数，包括数据文件格式类型、文件路径、数据集名称等
+# 使用loader_config配置数据载入参数，包括数据来源（本地文件/图数据库）、数据文件格式类型（OpenKS格式/压缩目录）、文件路径、数据集名称等
 from openks.loaders import *
+loader_config.source_type = SourceType.LOCAL_FILE
 loader_config.file_type = FileType.OPENKS
 loader_config.source_uris = 'openks/data/medical'
 loader_config.data_name = 'test-data-set'
@@ -40,7 +47,7 @@ dataset = loader.dataset
 dataset.info_display()
 ```
 ```
-# 知识图谱数据内存数据格式载入，并进行图谱信息展示
+# 知识图谱数据内存数据格式载入，并进行图谱信息展示（可以不进行数据集载入而直接进行图谱载入）
 graph_loader = GraphLoader(loader_config)
 graph = graph_loader.graph
 graph.info_display()
@@ -59,15 +66,15 @@ OpenKSModel.list_modules()
 ```
 ```
 # 算法模型选择配置，包括框架选择、模型大类选择、算法选择等
-platform = 'PyTorch'
+platform = 'Paddle'
 model_type = 'KGLearn'
 model = 'TransE'
 ```
 ```
-# 算法模型加载与训练
+# 算法模型加载与训练（如需要分布式训练，需配置run方法的参数，如run(dist=True)）
 model_type = OpenKSModel.get_module(platform, model_type)
 kgmodel = model_type(graph=graph, model=OpenKSModel.get_module(platform, model), args=None)
-kgmodel.run()
+kgmodel.run(dist=False)
 ```
 3. 知识图谱问答
 ```

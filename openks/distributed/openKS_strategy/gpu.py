@@ -1,4 +1,4 @@
-from openKS_strategy.base import _StrategyBase, _ExecuteConfig, _DistributeConfig
+from ..openks_strategy.base import _StrategyBase, _ExecuteConfig, _DistributeConfig
 from typing import List
 
 

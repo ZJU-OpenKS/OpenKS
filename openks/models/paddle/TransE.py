@@ -4,7 +4,7 @@ import paddle.fluid as fluid
 import paddle.fluid.layers as layers
 from paddle.fluid.layer_helper import LayerHelper
 from ..model import PaddleModel
-from ...distributed.openKS_strategy.cpu import CPUStrategy, SyncModeConfig
+from ...distributed.openks_strategy.cpu import CPUStrategy, SyncModeConfig
 
 logger = logging.getLogger(__name__)
 
