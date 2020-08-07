@@ -52,3 +52,7 @@
   - 替换压缩包中修改后的`collective_train.py`和`distributed_train.py`
   - 将`openKS_distributed` package 放在`quick-start`目录或python `site-packages`标准第三方包安装目录
   - `./run_collective.sh && ./run_parameter_server.sh`
+
+  或者
+
+  - 直接在本目录运行：`python -m openKS_launcher --mode cpu --worker_num 2 --server_num 2 openKS_CPU_test.py`
