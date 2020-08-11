@@ -3,6 +3,7 @@ import argparse
 import torch
 import torch.nn as nn
 from sklearn.model_selection import train_test_split
+from ..model import KGBuildModel
 
 @KGBuildModel.register("KGBuild", "PyTorch")
 class KGBuildTorch(KGBuildModel):

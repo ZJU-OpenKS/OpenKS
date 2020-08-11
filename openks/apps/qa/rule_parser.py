@@ -96,6 +96,7 @@ class RuleParserMedical(QuestionParser):
 	"""
 	def __init__(self, graph: MTG):
 		super(RuleParserMedical, self).__init__(graph)
+		print('initializing model......')
 		# 加载特征词
 		self.disease_wds = [item[2][0] for item in self.graph.entities if item[1] == 'diseases']
 		self.department_wds= [item[2][0] for item in self.graph.entities if item[1] == 'departments']
