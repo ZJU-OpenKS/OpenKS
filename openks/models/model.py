@@ -9,6 +9,7 @@ import paddle.fluid as fluid
 from paddle.fluid import Variable
 from ..common.register import Register
 from ..abstract.mtg import MTG
+from ..abstract.mmd import MMD
 
 logger = logging.getLogger(__name__)
 
@@ -74,6 +75,7 @@ class OpenKSModel(Register):
 
 
 class KGLearnModel(OpenKSModel):
+	''' Base class for knowledge graph representation learning trainer '''
 	def __init__(self, name: str = 'model-name', graph: MTG = None, args: List = None):
 		self.name = name
 		self.graph = graph
@@ -85,6 +87,31 @@ class KGLearnModel(OpenKSModel):
 		return NotImplemented
 
 	def triples_generator(self, *args):
+		return NotImplemented
+
+	def evaluate(self, *args):
+		return NotImplemented
+
+	def load_model(self, *args):
+		return NotImplemented
+
+	def save_model(self, *args):
+		return NotImplemented
+
+	def run(self, *args):
+		return NotImplemented
+
+
+class KGBuildModel(OpenKSModel):
+	''' Base class for knowledge graph building trainer, such as text and image information extraction '''
+	def __init__(self, name: str = 'model-name', dataset: MMD = None, args: List = None):
+		self.name = name
+		self.dataset = dataset
+
+	def parse_args(self):
+		return NotImplemented
+
+	def data_reader(self, *args):
 		return NotImplemented
 
 	def evaluate(self, *args):

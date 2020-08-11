@@ -37,7 +37,7 @@ print("-----------------------------------------------")
 # 模型训练
 model_type = OpenKSModel.get_module(platform, model_type)
 kglearn = model_type(graph=graph, model=OpenKSModel.get_module(platform, model), args=None)
-kglearn.run(dist=False)
+# kglearn.run(dist=False)
 print("-----------------------------------------------")
 ''' 知识图谱问答 '''
 # 选择问题解析类并进行模型预加载

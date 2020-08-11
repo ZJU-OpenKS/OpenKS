@@ -2,6 +2,7 @@
 Answer fetch progam to receive structured question and get possible answers
 """
 import logging
+from sklearn.metrics.pairwise import euclidean_distances
 from typing import TypeVar
 from .question_parser import StrucQ
 from ...abstract.mtg import MTG
@@ -93,14 +94,42 @@ class AnswerFetcher(object):
 			final_answers.append(answers)
 		return final_answers
 
-	def fetch_by_similarity(self) -> T:
-		""" fetch the answer through calculating vector similarities """
+	def fetch_by_similarity(self, embeddings) -> T:
+		""" 
+		fetch the answer through calculating vector similarities 
+		refer to paper: Knowledge Graph Embedding Based Question Answering, WSDM 2019
+
+		"""
 		if not self.struc_q_embed_check():
 			return None
 
 		else:
 			# should calculate embedding similarities between question and graph nodes
-			return NotImplemented
+			# match entity name in MTG graph to filter a smaller set of candidates
+			matched_ids = entity_name_match(self.struc_q.entities, self.graph)
+			# further calculate distances between question entity embeddings and graph embeddings
+			similarities = euclidean_distances(self.struc_q.q_entity_embed * len(matched_ids), embeddings[matched_ids], squared=True).argsort(axis=1)
+			# get the shortest distance entity id
+			index_top = sort_with_index(similarities)[0]
+			# use relation function to calculate the target entity embedding
+			target_embed = relation_func(self.struc_q.q_entity_embed[index_top], self.struc_q.q_relation_embed)
+			# find the closest target entity id
+			closest_target_id = find_closest(target_embed, embeddings)
+			# get the target entity object
+			answer = [ent for ent in self.graph.entities if ent[0] == closest_target_id][0]
+			return answer
 
+
+def entity_name_match(entities, graph):
+	return NotImplemented
+
+def sort_with_index(value_array):
+	return NotImplemented
+
+def relation_func(head, relation):
+	return NotImplemented
+
+def find_closest(embed, embeddings):
+	return NotImplemented
 
 
