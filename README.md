@@ -1,4 +1,4 @@
-# OpenKS - A Domain Generalised Knowledge Computing Platform
+# OpenKS - A Domain Generalized Knowledge Computing Platform
 
 ## 引擎特点
 - 大数据信息抽取
