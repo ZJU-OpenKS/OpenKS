@@ -1,7 +1,7 @@
 # OpenKS模型开发与使用说明
 
 ## OpenKS模型开发封装示意图：
-![model](../../../docs/pics/model.jpg)
+![model](../../docs/pics/model.jpg)
 
 ## 开发者模式
 * 支持多种深度学习框架的模型开发与集成，目前支持：
