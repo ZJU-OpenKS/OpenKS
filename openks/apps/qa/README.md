@@ -1,7 +1,7 @@
 # 知识问答demo
 
 ## OpenKS问答流程图：
-![qa_process](../../../docs/pics/qa.png)
+![qa_process](../../../docs/pics/qa.jpg)
 
 ### 支持基于知识库匹配方式的问答搜索流程，效果如下：
 #### 企业投融资与知识产权数据集（来自内部构建）
