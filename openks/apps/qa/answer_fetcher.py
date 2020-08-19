@@ -12,9 +12,8 @@ T = TypeVar('T')
 
 class AnswerFetcher(object):
 
-	def __init__(self, struc_q: StrucQ, graph: MTG) -> None:
+	def __init__(self, struc_q: StrucQ) -> None:
 		self.struc_q = struc_q
-		self.graph = graph
 
 	def struc_q_rule_check(self) -> bool:
 		if len(self.struc_q.relations) == 0:
@@ -33,7 +32,7 @@ class AnswerFetcher(object):
 		else:
 			return True
 
-	def fetch_by_matching(self) -> T:
+	def fetch_by_matching(self, graph: MTG) -> T:
 		""" fetch the answer through matching MTG knowledge graph dataset """
 		if not self.struc_q_rule_check():
 			return None
@@ -47,7 +46,7 @@ class AnswerFetcher(object):
 		entity_type = entity_info['type']
 		source_rel_col_index = 0
 		target_rel_col_index = 0
-		for item in self.graph.schema:
+		for item in graph.schema:
 			if item['type'] == 'relation' and item['concept'] == relation_type:
 				if item['members'].index(entity_type) == 0:
 					source_rel_col_index = 0
@@ -57,18 +56,18 @@ class AnswerFetcher(object):
 					target_rel_col_index = 0
 
 		target_ids = []
-		for rel in self.graph.triples:
+		for rel in graph.triples:
 			if rel[0][1] == relation_type:
 				if rel[0][source_rel_col_index] == entity_id:
 					target_ids.append(rel[0][target_rel_col_index])
 
 		target_items = []
-		for ent in self.graph.entities:
+		for ent in graph.entities:
 			if ent[1] == target_type:
 				for tar_id in target_ids:
 					if ent[0] == tar_id:
 						target_items.append(ent)
-		target_props = [item['properties'] for item in self.graph.schema if item['type'] == 'entity' and item['concept'] == target_type]
+		target_props = [item['properties'] for item in graph.schema if item['type'] == 'entity' and item['concept'] == target_type]
 		target_cols = [item['name'] for item in target_props[0]]
 		res = []
 		for item in target_items:
