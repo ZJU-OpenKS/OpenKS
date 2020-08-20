@@ -163,14 +163,17 @@ class KGLearnTorch(KGLearnModel):
 		# train iteratively
 		for epoch in range(start_epoch, self.args['epoch'] + 1):
 			print("Starting epoch: ", epoch)
+			run_loss = 0
 			model.train()
 			# train in a batch
 			for train_triples in train_generator:
 				positive_triples, negative_triples = self.triples_generator(train_triples, device)
 				opt.zero_grad()
 				loss, pos_score, neg_score = model(positive_triples, negative_triples)
+				run_loss += loss.mean().item()
 				loss.mean().backward()
 				opt.step()
+			print("Loss: " + str(run_loss))
 
 			# evaluation periodically
 			if epoch % self.args['eval_freq'] == 0:
