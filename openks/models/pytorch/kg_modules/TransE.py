@@ -2,9 +2,7 @@ import logging
 import torch
 import torch.nn as nn
 import numpy as np
-from ..model import TorchModel
-
-logger = logging.getLogger(__name__)
+from ...model import TorchModel
 
 
 @TorchModel.register("TransE", "PyTorch")
@@ -13,13 +11,13 @@ class TransE(TorchModel):
 		super(TransE, self).__init__()
 		self.num_entity = kwargs['num_entity']
 		self.num_relation = kwargs['num_relation']
-		self.hidden_dim = kwargs['hidden_dim']
+		self.hidden_size = kwargs['hidden_size']
 		self.margin = kwargs['margin']
 		self.norm = 1
 
-		uniform_range = 6 / np.sqrt(self.hidden_dim)
-		self.entities_emb = nn.Embedding(self.num_entity, self.hidden_dim)
-		self.relations_emb = nn.Embedding(self.num_relation, self.hidden_dim)
+		uniform_range = 6 / np.sqrt(self.hidden_size)
+		self.entities_emb = nn.Embedding(self.num_entity, self.hidden_size)
+		self.relations_emb = nn.Embedding(self.num_relation, self.hidden_size)
 		self.entities_emb.weight.data.uniform_(-uniform_range, uniform_range)
 		self.relations_emb.weight.data.uniform_(-uniform_range, uniform_range)
 

@@ -29,16 +29,30 @@ print("将graph导入数据库：")
 # 列出已加载模型
 OpenKSModel.list_modules()
 # 算法模型选择配置
+args = {
+	'gpu': False, 
+	'learning_rate': 0.001, 
+	'epoch': 10, 
+	'batch_size': 1000, 
+	'optimizer': 'adam', 
+	'hidden_size': 50, 
+	'margin': 4.0, 
+	'model_dir': './', 
+	'eval_freq': 10
+}
 platform = 'Paddle'
-model_type = 'KGLearn'
+executor = 'KGLearn'
 model = 'TransE'
-print("根据配置，使用 {} 框架，{} 类型的 {} 模型。".format(platform, model_type, model))
+print("根据配置，使用 {} 框架，{} 执行器训练 {} 模型。".format(platform, executor, model))
 print("-----------------------------------------------")
 # 模型训练
-model_type = OpenKSModel.get_module(platform, model_type)
-kglearn = model_type(graph=graph, model=OpenKSModel.get_module(platform, model), args=None)
-# kglearn.run(dist=False)
+executor = OpenKSModel.get_module(platform, executor)
+kglearn = executor(graph=graph, model=OpenKSModel.get_module(platform, model), args=args)
+kglearn.run(dist=False)
 print("-----------------------------------------------")
+
+
+
 ''' 知识图谱问答 '''
 # 选择问题解析类并进行模型预加载
 parser = RuleParserCom(graph)

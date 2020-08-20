@@ -2,4 +2,4 @@
 init
 """
 from .kglearn import *
-from .TransE import *
+from .kg_modules import *

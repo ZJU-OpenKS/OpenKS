@@ -3,10 +3,10 @@ import argparse
 import torch
 import torch.nn as nn
 from sklearn.model_selection import train_test_split
-from ..model import KGBuildModel
+from ..model import GeneralModel
 
-@KGBuildModel.register("KGBuild", "PyTorch")
-class KGBuildTorch(KGBuildModel):
+@GeneralModel.register("general", "PyTorch")
+class GeneralTorch(GeneralModel):
 	def __init__(self, name='pytorch-default', dataset=None, model=None, args=None):
 		self.name = name
 		self.dataset = dataset

@@ -31,25 +31,8 @@ class KGLearnTorch(KGLearnModel):
 	def __init__(self, name='pytorch-default', graph=None, model=None, args=None):
 		self.name = name
 		self.graph = graph
-		self.args = self.parse_args(args)
+		self.args = args
 		self.model = model
-
-	def parse_args(self, args):
-		""" parameter settings """
-		parser = argparse.ArgumentParser(
-			description='Training and Testing Knowledge Graph Embedding Models',
-			usage='train.py [<args>] [-h | --help]'
-		)
-		parser.add_argument('--margin', default=1.0, type=float)
-		parser.add_argument('--gpu', action='store_true')
-		parser.add_argument('--batch_size', default=1024, type=int)
-		parser.add_argument('--hidden_dim', default=50, type=int)
-		parser.add_argument('--lr', default=0.01, type=float)
-		parser.add_argument('--epochs', default=100, type=int)
-		parser.add_argument('--valid_freq', default=10, type=int)
-		parser.add_argument('--model_path', default='./model.tar', type=str)
-		parser.add_argument('--opt', default='sgd', type=str)
-		return parser.parse_args(args)
 
 	def triples_reader(self, ratio=0.01):
 		"""read from triple data files to id triples"""
@@ -146,13 +129,13 @@ class KGLearnTorch(KGLearnModel):
 			'best_score': best_score
 		}, model_path)
 
-	def run(self):
-		device = torch.device('cuda') if self.args.gpu else torch.device('cpu')
+	def run(self, dist=False):
+		device = torch.device('cuda') if self.args['gpu'] else torch.device('cpu')
 
 		train_triples, valid_triples, test_triples = self.triples_reader(ratio=0.01)
 		# set PyTorch sample iterators
 		train_set = DataSet(train_triples)
-		train_generator = data.DataLoader(train_set, batch_size=self.args.batch_size)
+		train_generator = data.DataLoader(train_set, batch_size=self.args['batch_size'])
 		valid_set = DataSet(valid_triples)
 		valid_generator = data.DataLoader(valid_set, batch_size=1)
 		test_set = DataSet(test_triples)
@@ -162,8 +145,8 @@ class KGLearnTorch(KGLearnModel):
 		model = self.model(
 			num_entity=self.graph.get_entity_num(),
 			num_relation=self.graph.get_relation_num(),
-			hidden_dim=self.args.hidden_dim,
-			margin=self.args.margin
+			hidden_size=self.args['hidden_size'],
+			margin=self.args['margin']
 		)
 		model = model.to(device)
 
@@ -172,13 +155,13 @@ class KGLearnTorch(KGLearnModel):
 			"adam": optim.Adam,
 			"sgd": optim.SGD,
 		}
-		opt = optimizer_available[self.args.opt](model.parameters(), lr=self.args.lr)
+		opt = optimizer_available[self.args['optimizer']](model.parameters(), lr=self.args['learning_rate'])
 
 		start_epoch = 1
 		best_score = 0.0
 
 		# train iteratively
-		for epoch in range(start_epoch, self.args.epochs + 1):
+		for epoch in range(start_epoch, self.args['epoch'] + 1):
 			print("Starting epoch: ", epoch)
 			model.train()
 			# train in a batch
@@ -190,7 +173,7 @@ class KGLearnTorch(KGLearnModel):
 				opt.step()
 
 			# evaluation periodically
-			if epoch % self.args.valid_freq == 0:
+			if epoch % self.args['eval_freq'] == 0:
 				print("Starting validation...")
 				model.eval()
 				_, _, hits_at_10, _ = self.evaluate(model=model, data_generator=valid_generator, num_entity=self.graph.get_entity_num(), device=device)
@@ -198,10 +181,10 @@ class KGLearnTorch(KGLearnModel):
 				print("HIT@10: " + str(score))
 				if score > best_score:
 					best_score = score
-					self.save_model(model, opt, epoch, best_score, self.args.model_path)
+					self.save_model(model, opt, epoch, best_score, self.args['model_dir'])
 
 		# load saved model and test
-		self.load_model(self.args.model_path, model, opt)
+		self.load_model(self.args['model_dir'], model, opt)
 		best_model = model.to(device)
 		best_model.eval()
 		scores = self.evaluate(model=best_model, data_generator=test_generator, num_entity=self.graph.get_entity_num(), device=device)

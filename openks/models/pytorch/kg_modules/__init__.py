@@ -1,0 +1,4 @@
+"""
+init
+"""
+from .TransE import *

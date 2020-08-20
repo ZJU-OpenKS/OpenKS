@@ -2,12 +2,12 @@ import logging
 import paddle.fluid as fluid
 import paddle.fluid.layers as layers
 from paddle.fluid.layer_helper import LayerHelper
-from ..model import PaddleModel
+from ...model import PaddleModel
 
 logger = logging.getLogger(__name__)
 
 @PaddleModel.register("GCN", "Paddle")
-class TransE(PaddleModel):
+class GCN(PaddleModel):
 	def __init__(self, **kwargs):
 		# parameters setup
 		self.hidden_dim = kwargs['hidden_dim']

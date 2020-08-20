@@ -17,25 +17,8 @@ class KGLearnPaddle(KGLearnModel):
 	def __init__(self, name='paddle-default', graph=None, model=None, args=None):
 		self.name = name
 		self.graph = graph
-		self.args = self.parse_args(args)
+		self.args = args
 		self.model = model
-
-	def parse_args(self, args):
-		""" parameter settings """
-		parser = argparse.ArgumentParser(
-			description='Training and Testing Knowledge Graph Embedding Models',
-			usage='train.py [<args>] [-h | --help]'
-		)
-		parser.add_argument('--margin', default=1.0, type=float)
-		parser.add_argument('--gpu', action='store_true')
-		parser.add_argument('--batch_size', default=1024, type=int)
-		parser.add_argument('--hidden_dim', default=50, type=int)
-		parser.add_argument('--lr', default=0.01, type=float)
-		parser.add_argument('--epochs', default=100, type=int)
-		parser.add_argument('--valid_freq', default=10, type=int)
-		parser.add_argument('--model_path', default='./', type=str)
-		parser.add_argument('--opt', default='sgd', type=str)
-		return parser.parse_args(args)
 
 	def triples_reader(self, ratio=0.01):
 		"""read from triple data files to id triples"""
@@ -118,7 +101,7 @@ class KGLearnPaddle(KGLearnModel):
 
 		train_triples, valid_triples, test_triples = self.triples_reader(ratio=0.01)
 
-		device = fluid.cuda_places() if self.args.gpu else fluid.cpu_places()
+		device = fluid.cuda_places() if self.args['gpu'] else fluid.cpu_places()
 
 		if dist:
 			dist_algorithm = KSDistributedFactory.instantiation(flag=0)
@@ -128,10 +111,10 @@ class KGLearnPaddle(KGLearnModel):
 		model = self.model(
 			num_entity=self.graph.get_entity_num(),
 			num_relation=self.graph.get_relation_num(),
-			hidden_dim=self.args.hidden_dim,
-			margin=self.args.margin,
-			lr=self.args.lr,
-			opt=self.args.opt,
+			hidden_size=self.args['hidden_size'],
+			margin=self.args['margin'],
+			lr=self.args['learning_rate'],
+			opt=self.args['optimizer'],
 			dist=dist_algorithm)
 
 		if dist:
@@ -145,14 +128,14 @@ class KGLearnPaddle(KGLearnModel):
 			program = fluid.CompiledProgram(model.train_program).with_data_parallel(loss_name=model.train_fetch_vars[0].name)
 
 		train_loader = fluid.io.DataLoader.from_generator(feed_list=model.train_feed_vars, capacity=20, iterable=True)
-		train_loader.set_batch_generator(self.triples_generator(train_triples, batch_size=self.args.batch_size), places=device)
+		train_loader.set_batch_generator(self.triples_generator(train_triples, batch_size=self.args['batch_size']), places=device)
 
 		exe = fluid.Executor(device[0])
 		exe.run(model.startup_program)
 		exe.run(fluid.default_startup_program())
 
 		best_score = 0.0
-		for epoch in range(1, self.args.epochs + 1):
+		for epoch in range(1, self.args['epoch'] + 1):
 			print("Starting epoch: ", epoch)
 			loss = 0
 			# train in a batch
@@ -162,18 +145,18 @@ class KGLearnPaddle(KGLearnModel):
 			print("Loss: " + str(loss))
 
 			# evaluation periodically
-			if epoch % self.args.valid_freq == 0:
+			if epoch % self.args['eval_freq'] == 0:
 				print("Starting validation...")
 				_, _, hits_at_10, _ = self.evaluate(exe, model.test_program, valid_triples, model.test_feed_list, model.test_fetch_vars)
 				score = hits_at_10
 				print("HIT@10: " + str(score))
 				if score > best_score:
 					best_score = score
-					fluid.io.save_params(exe, dirname=self.args.model_path, main_program=model.train_program)
+					fluid.io.save_params(exe, dirname=self.args['model_dir'], main_program=model.train_program)
 		if dist:
 			dist_algorithm.stop_worker()
 
 		# load saved model and test
-		fluid.io.load_params(exe, dirname=self.args.model_path, main_program=model.train_program)
+		fluid.io.load_params(exe, dirname=self.args['model_dir'], main_program=model.train_program)
 		scores = self.evaluate(exe, program, test_triples, model.test_feed_list, model.test_fetch_vars)
 		print("Test scores: ", scores)

@@ -3,8 +3,8 @@ import uuid
 import paddle.fluid as fluid
 import paddle.fluid.layers as layers
 from paddle.fluid.layer_helper import LayerHelper
-from ..model import PaddleModel
-from ...distributed.openks_strategy.cpu import CPUStrategy, SyncModeConfig
+from ...model import PaddleModel
+from ....distributed.openks_strategy.cpu import CPUStrategy, SyncModeConfig
 
 logger = logging.getLogger(__name__)
 
@@ -13,13 +13,13 @@ class TransE(PaddleModel):
 	def __init__(self, **kwargs):
 		self.num_entity = kwargs['num_entity']
 		self.num_relation = kwargs['num_relation']
-		self.hidden_dim = kwargs['hidden_dim']
+		self.hidden_size = kwargs['hidden_size']
 		self.margin = kwargs['margin']
 		self.learning_rate = kwargs['lr']
 		self.opt = kwargs['opt']
 		self.dist = kwargs['dist']
-		self._ent_shape = [self.num_entity, self.hidden_dim]
-		self._rel_shape = [self.num_relation, self.hidden_dim]
+		self._ent_shape = [self.num_entity, self.hidden_size]
+		self._rel_shape = [self.num_relation, self.hidden_size]
 		self.forward()
 
 	@staticmethod
