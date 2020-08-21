@@ -190,6 +190,7 @@ class Loader(object):
 			headers.append(tuple(header))
 			bodies.append(tuple([tuple(item) for item in body]))
 		elif self.config.file_type == FileType.OPENKS:
+			# knowledge graph dataset loading 
 			if os.path.exists(self.config.source_uris + '/entities') and os.path.exists(self.config.source_uris + '/triples'):
 				headers = [['entities'], ['triples']]
 				for file in ['entities', 'triples']:
@@ -197,6 +198,15 @@ class Loader(object):
 					with open(self.config.source_uris + '/' + file, 'r') as load_f:
 						for line in load_f:
 							tmp.append(tuple([item.strip() for item in line.split('\t')]))
+						bodies.append(tuple(tmp))
+			# general text dataset loading
+			elif os.path.exists(self.config.source_uris + '/train') and os.path.exists(self.config.source_uris + '/valid'):
+				headers = [['train'], ['valid']]
+				for file in ['train', 'valid']:
+					tmp = []
+					with open(self.config.source_uris + '/' + file, 'r') as load_f:
+						for line in load_f:
+							tmp.append(tuple([item.strip() for item in line.split('@@')]))
 						bodies.append(tuple(tmp))
 			else:
 				logger.warn('Only allows loading with entities and triples for now!')

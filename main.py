@@ -10,12 +10,13 @@ loader_config.source_type = SourceType.LOCAL_FILE
 graph_db = Graph(host='127.0.0.1', http_port=7474, user='neo4j', password='123456')
 loader_config.graph_db = graph_db
 loader_config.file_type = FileType.OPENKS
-loader_config.source_uris = 'openks/data/company-dev'
-# loader_config.source_uris = 'openks/data/medical'
-loader_config.data_name = 'test-data-set'
-#loader = Loader(loader_config)
-#dataset = loader.dataset
-#dataset.info_display()
+# loader_config.source_uris = 'openks/data/company-kg'
+# loader_config.source_uris = 'openks/data/medical-kg'
+loader_config.source_uris = 'openks/data/investment-text'
+loader_config.data_name = 'my-data-set'
+# loader = Loader(loader_config)
+# dataset = loader.dataset
+# dataset.info_display()
 # 图谱数据结构载入
 graph_loader = GraphLoader(loader_config)
 graph = graph_loader.graph
@@ -50,7 +51,6 @@ executor = OpenKSModel.get_module(platform, executor)
 kglearn = executor(graph=graph, model=OpenKSModel.get_module(platform, model), args=args)
 kglearn.run(dist=False)
 print("-----------------------------------------------")
-
 
 
 ''' 知识图谱问答 '''
