@@ -42,7 +42,7 @@ args = {
 }
 platform = 'PyTorch'
 executor = 'KGLearn'
-model = 'TransH'
+model = 'TransR'
 print("根据配置，使用 {} 框架，{} 执行器训练 {} 模型。".format(platform, executor, model))
 print("-----------------------------------------------")
 # 模型训练
