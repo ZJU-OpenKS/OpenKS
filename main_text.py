@@ -25,7 +25,8 @@ args = {
 	'mix_hidden_lr': 1e-3, 
 	'hidden_lr': 1e-3, 
 	'epoch': 100, 
-	'batch_size': 10
+	'batch_size': 10,
+	'model_dir': './ner_model'
 }
 platform = 'Paddle'
 executor = 'general'

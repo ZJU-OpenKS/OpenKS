@@ -220,7 +220,7 @@ class GeneralPaddle(GeneralModel):
 			return
 
 		# Directory for saving the trained model
-		save_dirname = "label_semantic_roles.inference.model"
+		save_dirname = self.args['model_dir']
 
 		self.train(self.args['gpu'], save_dirname)
 		self.infer(self.args['gpu'], save_dirname)
