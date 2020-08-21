@@ -1,8 +1,6 @@
-import math, os
 import numpy as np
 import paddle
 import paddle.fluid as fluid
-import six
 import time
 import ast
 from ..model import GeneralModel
@@ -15,8 +13,6 @@ class GeneralPaddle(GeneralModel):
 		self.dataset = dataset
 		self.args = args
 		self.model = model
-
-		self.with_gpu = os.getenv('WITH_GPU', '0') != '0'
 
 		train_set = self.dataset.bodies[0]
 		valid_set = self.dataset.bodies[1]
