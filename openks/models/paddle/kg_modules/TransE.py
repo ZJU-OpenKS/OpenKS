@@ -45,8 +45,10 @@ class TransE(PaddleModel):
 	def create_share_variables(self):
 		""" Share variables for train and test programs. """
 
-		entity_embedding = fluid.layers.create_parameter(shape=self._ent_shape, dtype="float32", name='ent_emb' + str(uuid.uuid1()))
-		relation_embedding = fluid.layers.create_parameter(shape=self._rel_shape, dtype="float32", name='rel_emb' + str(uuid.uuid1()))
+		# entity_embedding = fluid.layers.create_parameter(shape=self._ent_shape, dtype="float32", name='ent_emb' + str(uuid.uuid1()))
+		# relation_embedding = fluid.layers.create_parameter(shape=self._rel_shape, dtype="float32", name='rel_emb' + str(uuid.uuid1()))
+		entity_embedding = fluid.layers.create_parameter(shape=self._ent_shape, dtype="float32")
+		relation_embedding = fluid.layers.create_parameter(shape=self._rel_shape, dtype="float32")
 		return entity_embedding, relation_embedding
 
 	@staticmethod

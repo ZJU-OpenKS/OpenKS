@@ -1,6 +1,7 @@
 import torch
 from torch import nn
 from torch.nn import functional as F
+from ...model import TorchModel
 
 
 class GCNLayer(nn.Module):
@@ -46,16 +47,16 @@ class GCN(TorchModel):
 
 		self.input_dim = kwargs['input_dim']
 		self.output_dim = kwargs['output_dim']
-        self.num_features_nonzero = kwargs['num_features_nonzero']
-        self.hidden_size = kwargs['hidden_size']
-        self.dropout = dropout
+		self.num_features_nonzero = kwargs['num_features_nonzero']
+		self.hidden_size = kwargs['hidden_size']
+		self.dropout = dropout
 		print('input dim:', self.input_dim)
 		print('output dim:', self.output_dim)
 		print('num_features_nonzero:', self.num_features_nonzero)
 
 		self.layers = nn.Sequential(
-            GCNLayer(self.input_dim, self.hidden_size, self.num_features_nonzero,
-                activation=F.relu,
+			GCNLayer(self.input_dim, self.hidden_size, self.num_features_nonzero,
+				activation=F.relu,
 				dropout=self.dropout,
 				is_sparse_inputs=True),
 			GCNLayer(self.hidden_size, self.output_dim, self.num_features_nonzero,
