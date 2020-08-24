@@ -14,14 +14,14 @@
 		| KGLearn | 针对知识图谱表示学习的执行类 | KGLearnModel |
 		| general | 针对其他一般深度学习模型训练的执行类 | GeneralModel |
 	- 模型核心算法类
-| 注册名称 | 用途 | 支持框架 |
-| :----: | :----: | :----: |
-| TransE | TransE算法图谱表示学习 | Paddle/PyTorch |
-| TransH | TransH算法图谱表示学习 | PyTorch |
-| TransR | TransR算法图谱表示学习 | Paddle/PyTorch |
-| GCN | GCN算法图表示学习 | Paddle/PyTorch |
-| entity-extract| 文本实体识别抽取 | Paddle/PyTorch |
-| question-embedding | 文本问题嵌入表示 | PyTorch |
+		| 注册名称 | 用途 | 支持框架 |
+		| :----: | :----: | :----: |
+		| TransE | TransE算法图谱表示学习 | Paddle/PyTorch |
+		| TransH | TransH算法图谱表示学习 | PyTorch |
+		| TransR | TransR算法图谱表示学习 | Paddle/PyTorch |
+		| GCN | GCN算法图表示学习 | Paddle/PyTorch |
+		| entity-extract| 文本实体识别抽取 | Paddle/PyTorch |
+		| question-embedding | 文本问题嵌入表示 | PyTorch |
 
 
 * 模型运行类用于数据预处理、数据载入框架、模型评估逻辑、模型保存与读取、模型运行等
