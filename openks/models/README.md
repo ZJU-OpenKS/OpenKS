@@ -8,15 +8,22 @@
 	- PyTorch
 	- PaddlePaddle
 * 参考`model`脚本，在对应的框架目录中定义模型及运行逻辑，支持的模型有：
-	- 模型运行类
-		- 针对图表示学习的`kglearn.py`继承自`KGLearnModel`
-		- 针对图谱构建和一般训练的`kgbuild.py`继承自`KGBuildModel`
+	- 模型执行类
+		| 注册名称 | 用途 | 继承父类 |
+		| :----: | :----: | :----: |
+		| KGLearn | 针对知识图谱表示学习的执行类 | KGLearnModel |
+		| general | 针对其他一般深度学习模型训练的执行类 | GeneralModel |
 	- 模型核心算法类
-		- `TransE.py`
-		- `GCN.py`
-		- `entity_extract.py`
-		- `question_embedding.py`
-		- ...
+| 注册名称 | 用途 | 支持框架 |
+| :----: | :----: | :----: |
+| TransE | TransE算法图谱表示学习 | Paddle/PyTorch |
+| TransH | TransH算法图谱表示学习 | PyTorch |
+| TransR | TransR算法图谱表示学习 | Paddle/PyTorch |
+| GCN | GCN算法图表示学习 | Paddle/PyTorch |
+| entity-extract| 文本实体识别抽取 | Paddle/PyTorch |
+| question-embedding | 文本问题嵌入表示 | PyTorch |
+
+
 * 模型运行类用于数据预处理、数据载入框架、模型评估逻辑、模型保存与读取、模型运行等
 * 模型算法类用于实现针对不同算法框架的算法逻辑、损失计算、反向传播等
 * 模型运行类和模型算法类需利用装饰器注册到Register中，才能在使用者模式中调用，注册时需指明模型名称和所用框架名称（Paddle/PyTorch）
