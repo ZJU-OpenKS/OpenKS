@@ -8,6 +8,7 @@ from ..model import GeneralModel
 
 @GeneralModel.register("general", "Paddle")
 class GeneralPaddle(GeneralModel):
+
 	def __init__(self, name='paddle-default', dataset=None, model=None, args=None):
 		self.name = name
 		self.dataset = dataset
@@ -42,64 +43,6 @@ class GeneralPaddle(GeneralModel):
 		self.word_dict_len = len(self.word_dict)
 		self.label_dict_len = len(self.label_dict)
 
-		self.word_dim = 32
-		self.hidden_dim = 512
-		self.depth = 8
-		self.mix_hidden_lr = 1e-3
-		self.hidden_lr = 1e-3
-
-		self.PASS_NUM = 10
-		self.BATCH_SIZE = 10
-
-		self.embedding_name = 'emb'
-
-	def db_lstm(self, word):
-		word_input = [word]
-		emb_layers = [
-			fluid.embedding(
-				size=[self.word_dict_len, self.args['word_dim']], 
-				input=x, 
-				param_attr=fluid.ParamAttr(name=self.embedding_name, learning_rate=self.args['hidden_lr'], trainable=True))
-			for x in word_input
-		]
-
-		hidden_0_layers = [fluid.layers.fc(input=emb, size=self.args['hidden_size'], act='tanh') for emb in emb_layers]
-
-		hidden_0 = fluid.layers.sums(input=hidden_0_layers)
-
-		lstm_0 = fluid.layers.dynamic_lstm(
-			input=hidden_0,
-			size=self.args['hidden_size'],
-			candidate_activation='relu',
-			gate_activation='sigmoid',
-			cell_activation='sigmoid')
-
-		# stack L-LSTM and R-LSTM with direct edges
-		input_tmp = [hidden_0, lstm_0]
-
-		for i in range(1, self.args['depth']):
-			mix_hidden = fluid.layers.sums(input=[
-				fluid.layers.fc(input=input_tmp[0], size=self.args['hidden_size'], act='tanh'),
-				fluid.layers.fc(input=input_tmp[1], size=self.args['hidden_size'], act='tanh')
-			])
-
-			lstm = fluid.layers.dynamic_lstm(
-				input=mix_hidden,
-				size=self.args['hidden_size'],
-				candidate_activation='relu',
-				gate_activation='sigmoid',
-				cell_activation='sigmoid',
-				is_reverse=((i % 2) == 1))
-
-			input_tmp = [mix_hidden, lstm]
-
-		feature_out = fluid.layers.sums(input=[
-			fluid.layers.fc(input=input_tmp[0], size=self.label_dict_len, act='tanh'),
-			fluid.layers.fc(input=input_tmp[1], size=self.label_dict_len, act='tanh')
-		])
-
-		return feature_out
-
 
 	def generator_creator(self, train_set):
 
@@ -119,51 +62,33 @@ class GeneralPaddle(GeneralModel):
 
 
 	def train(self, use_cuda, save_dirname=None):
-		# define data layers
-		word = fluid.data(name='word_data', shape=[None, 1], dtype='int64', lod_level=1)
 
-		fluid.default_startup_program().random_seed = 90
-		fluid.default_main_program().random_seed = 90
-
-		# define network topology
-		feature_out = self.db_lstm(word)
-		target = fluid.layers.data(name='target', shape=[1], dtype='int64', lod_level=1)
-		crf_cost = fluid.layers.linear_chain_crf(
-			input=feature_out,
-			label=target,
-			param_attr=fluid.ParamAttr(name='crfw', learning_rate=self.mix_hidden_lr))
-
-		avg_cost = fluid.layers.mean(crf_cost)
-
-		sgd_optimizer = fluid.optimizer.SGD(
-			learning_rate=fluid.layers.exponential_decay(
-				learning_rate=0.01,
-				decay_steps=100000,
-				decay_rate=0.5,
-				staircase=True))
-
-		sgd_optimizer.minimize(avg_cost)
-
-		crf_decode = fluid.layers.crf_decoding(
-			input=feature_out, param_attr=fluid.ParamAttr(name='crfw'))
+		model = self.model(
+			word_dict_len=self.word_dict_len,
+			label_dict_len=self.label_dict_len,
+			mix_hidden_lr=self.args['mix_hidden_lr'],
+			word_dim=self.args['word_dim'],
+			hidden_lr=self.args['hidden_lr'],
+			hidden_size=self.args['hidden_size'],
+			depth=self.args['depth'])
 
 		train_data = paddle.batch(self.generator_creator(self.dataset.bodies[0]), batch_size=self.args['batch_size'])
 
 		place = fluid.CUDAPlace(0) if use_cuda else fluid.CPUPlace()
 
-		feeder = fluid.DataFeeder(feed_list=[word, target], place=place)
+		feeder = fluid.DataFeeder(feed_list=[model.word, model.target], place=place)
 		exe = fluid.Executor(place)
 
 		def train_loop(main_program):
 			exe.run(fluid.default_startup_program())
-			embedding_param = fluid.global_scope().find_var(self.embedding_name).get_tensor()
+			embedding_param = fluid.global_scope().find_var('emb').get_tensor()
 
 			start_time = time.time()
 			batch_id = 0
 			for pass_id in range(0, self.args['epoch']):
 				for data in train_data():
 					cost = exe.run(
-						main_program, feed=feeder.feed(data), fetch_list=[avg_cost])
+						main_program, feed=feeder.feed(data), fetch_list=[model.loss])
 					cost = cost[0]
 
 					if batch_id % 10 == 0:
@@ -176,8 +101,7 @@ class GeneralPaddle(GeneralModel):
 							print("kpis\ttrain_cost\t%f" % cost)
 
 							if save_dirname is not None:
-								# TODO(liuyiqun): Change the target to crf_decode
-								fluid.io.save_inference_model(save_dirname, ['word_data'], [feature_out], exe)
+								fluid.io.save_inference_model(save_dirname, ['word_data'], [model.feature_out], exe)
 							return
 
 					batch_id = batch_id + 1

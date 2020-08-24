@@ -30,11 +30,11 @@ args = {
 }
 platform = 'Paddle'
 executor = 'general'
-model = ''
+model = 'entity-extract'
 print("根据配置，使用 {} 框架，{} 执行器训练 {} 模型。".format(platform, executor, model))
 print("-----------------------------------------------")
 # 模型训练
 executor = OpenKSModel.get_module(platform, executor)
-text_ner = executor(dataset=dataset, model=model, args=args)
+text_ner = executor(dataset=dataset, model=OpenKSModel.get_module(platform, model), args=args)
 text_ner.run()
 print("-----------------------------------------------")
