@@ -20,12 +20,22 @@
 - pyahocorasick(for KGQA application with graph database)(https://pypi.org/project/pyahocorasick/)
 
 ## 快速上手
-### 知识计算全流程一键测试（数据载入 - 图谱生成 - 模型训练 - 问答推荐）
+### 知识图谱问答
 ```
-python main.py
+python example_kg_qa.py
 ```
 
-#### 分布式图表示模型训练
+### 文本信息抽取训练
+```
+python example_text_train.py
+```
+
+### 知识图谱表示学习训练
+```
+python example_kg_train.py
+```
+
+### 分布式图表示模型训练
 ```
 python openks/distributed/openKS_launcher.py --mode cpu --worker_num 2 --server_num 2 main_dist.py
 ```
@@ -33,8 +43,9 @@ python openks/distributed/openKS_launcher.py --mode cpu --worker_num 2 --server_
 ### 使用说明
 1. 图谱数据载入与图谱结构生成
 ```
+from openks.loaders import loader_config, SourceType, FileType, GraphLoader
+
 # 使用loader_config配置数据载入参数，包括数据来源（本地文件/图数据库）、数据文件格式类型（OpenKS格式/压缩目录）、文件路径、数据集名称等
-from openks.loaders import *
 loader_config.source_type = SourceType.LOCAL_FILE
 loader_config.file_type = FileType.OPENKS
 loader_config.source_uris = 'openks/data/medical'
@@ -53,15 +64,17 @@ graph = graph_loader.graph
 graph.info_display()
 ```
 ```
-# 可以将内存图谱数据写入neo4j图数据库中用于下游任务
 from py2neo import Graph
+
+# 可以将内存图谱数据写入neo4j图数据库中用于下游任务
 graph_db = Graph(host='127.0.0.1', http_port=7474, user='neo4j', password='123456')
 graph_loader.graph2neo(graph, graph_db, clean=False) # clean为False表示不进行清空，True为清空并重新导入
 ```
 2. 图谱表示学习模型训练
 ```
+from openks.models import OpenKSModel
+
 # 列出已注册的所有算法模型
-from openks.models import *
 OpenKSModel.list_modules()
 ```
 ```
@@ -78,6 +91,8 @@ kgmodel.run(dist=False)
 ```
 3. 知识图谱问答
 ```
+from openks.apps.qa import RuleParserMedical, AnswerFetcher
+
 # 选择自定义的问题解析类并进行规则和模型预加载
 parser = RuleParserMedical(graph)
 ```

@@ -1,7 +1,5 @@
-from openks.loaders import *
-from openks.models import *
-from openks.apps.qa import *
-from py2neo import Graph
+from openks.loaders import loader_config, SourceType, FileType, Loader
+from openks.models import OpenKSModel
 
 ''' 文本载入与MMD数据结构生成 '''
 # 载入参数配置与数据集载入

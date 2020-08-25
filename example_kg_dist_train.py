@@ -1,5 +1,5 @@
-from openks.loaders import *
-from openks.models import *
+from openks.loaders import loader_config, SourceType, FileType, GraphLoader
+from openks.models import OpenKSModel
 
 ''' 图谱载入与图谱数据结构生成 '''
 # 载入参数配置与数据集载入
@@ -8,9 +8,6 @@ loader_config.file_type = FileType.OPENKS
 # loader_config.source_uris = 'openks/data/company-kg'
 loader_config.source_uris = 'openks/data/medical-kg'
 loader_config.data_name = 'test-data-set'
-#loader = Loader(loader_config)
-#dataset = loader.dataset
-#dataset.info_display()
 # 图谱数据结构载入
 graph_loader = GraphLoader(loader_config)
 graph = graph_loader.graph
@@ -39,4 +36,5 @@ print("-----------------------------------------------")
 # 模型训练
 model_type = OpenKSModel.get_module(platform, model_type)
 kglearn = model_type(graph=graph, model=OpenKSModel.get_module(platform, model), args=args)
+# 设置dist参数为True用于进行分布式训练
 kglearn.run(dist=True)
