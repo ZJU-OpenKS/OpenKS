@@ -30,17 +30,17 @@ class GCNRec(object):
 		self.node_dropout = tf.placeholder(tf.float32, shape=[None])
 		self.mess_dropout = tf.placeholder(tf.float32, shape=[None])
 
-		self.weights = self._init_weights()
-		self.ua_embeddings, self.ia_embeddings = self._create_gcn_embed()
+		self.weights = self.init_weights()
+		self.ua_embeddings, self.ia_embeddings = self.gcn_embed()
 		self.u_g_embeddings = tf.nn.embedding_lookup(self.ua_embeddings, self.users)
 		self.pos_i_g_embeddings = tf.nn.embedding_lookup(self.ia_embeddings, self.pos_items)
 		self.neg_i_g_embeddings = tf.nn.embedding_lookup(self.ia_embeddings, self.neg_items)
 
-		self.mf_loss, self.emb_loss, self.reg_loss = self.create_bpr_loss(self.u_g_embeddings, self.pos_i_g_embeddings, self.neg_i_g_embeddings)
+		self.mf_loss, self.emb_loss, self.reg_loss = self.bpr_loss(self.u_g_embeddings, self.pos_i_g_embeddings, self.neg_i_g_embeddings)
 		self.loss = self.mf_loss + self.emb_loss + self.reg_loss
 		self.opt = tf.train.AdamOptimizer(learning_rate=self.lr).minimize(self.loss)
 
-	def _init_weights(self):
+	def init_weights(self):
 		all_weights = dict()
 
 		initializer = tf.contrib.layers.xavier_initializer()
@@ -63,7 +63,7 @@ class GCNRec(object):
 
 		return all_weights
 
-	def _split_A_hat(self, X):
+	def split_hat(self, X):
 		A_fold_hat = []
 		fold_len = (self.n_users + self.n_items) // self.n_fold
 		for i_fold in range(self.n_fold):
@@ -72,11 +72,16 @@ class GCNRec(object):
 				end = self.n_users + self.n_items
 			else:
 				end = (i_fold + 1) * fold_len
-			A_fold_hat.append(self._convert_sp_mat_to_sp_tensor(X[start:end]))
+			A_fold_hat.append(self.mat_to_tensor(X[start:end]))
 		return A_fold_hat
 
-	def _create_gcn_embed(self):
-		A_fold_hat = self._split_A_hat(self.norm_adj)
+	def mat_to_tensor(self, X):
+		coo = X.tocoo().astype(np.float32)
+		indices = np.mat([coo.row, coo.col]).transpose()
+		return tf.SparseTensor(indices, coo.data, coo.shape)
+
+	def gcn_embed(self):
+		A_fold_hat = self.split_hat(self.norm_adj)
 		embeddings = tf.concat([self.weights['user_embedding'], self.weights['item_embedding']], axis=0)
 		all_embeddings = [embeddings]
 
@@ -95,7 +100,7 @@ class GCNRec(object):
 		u_g_embeddings, i_g_embeddings = tf.split(all_embeddings, [self.n_users, self.n_items], 0)
 		return u_g_embeddings, i_g_embeddings
 
-	def create_bpr_loss(self, users, pos_items, neg_items):
+	def bpr_loss(self, users, pos_items, neg_items):
 		pos_scores = tf.reduce_sum(tf.multiply(users, pos_items), axis=1)
 		neg_scores = tf.reduce_sum(tf.multiply(users, neg_items), axis=1)
 
@@ -107,9 +112,4 @@ class GCNRec(object):
 		emb_loss = self.decay * regularizer
 		reg_loss = tf.constant(0.0, tf.float32, [1])
 		return mf_loss, emb_loss, reg_loss
-
-	def _convert_sp_mat_to_sp_tensor(self, X):
-		coo = X.tocoo().astype(np.float32)
-		indices = np.mat([coo.row, coo.col]).transpose()
-		return tf.SparseTensor(indices, coo.data, coo.shape)
 

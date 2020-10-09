@@ -172,13 +172,77 @@ class RecTF(RecModel):
 	def save_model(self):
 		return NotImplemented
 
-
 	def load_model(self):
 		return NotImplemented
 
+	def get_auc(item_score, user_pos_test):
+		item_score = sorted(item_score.items(), key=lambda kv: kv[1])
+		item_score.reverse()
+		item_sort = [x[0] for x in item_score]
+		posterior = [x[1] for x in item_score]
+
+		r = []
+		for i in item_sort:
+			if i in user_pos_test:
+				r.append(1)
+			else:
+				r.append(0)
+		auc = metrics.auc(ground_truth=r, prediction=posterior)
+		return auc
+
+	def ranklist_by_sorted(user_pos_test, test_items, rating, ranks):
+		item_score = {}
+		for i in test_items:
+			item_score[i] = rating[i]
+
+		K_max = max(ranks)
+		K_max_item_score = heapq.nlargest(K_max, item_score, key=item_score.get)
+
+		r = []
+		for i in K_max_item_score:
+			if i in user_pos_test:
+				r.append(1)
+			else:
+				r.append(0)
+		auc = get_auc(item_score, user_pos_test)
+		return r, auc
+
+	def get_performance(user_pos_test, r, auc, ranks):
+		precision, recall, ndcg, hit_ratio = [], [], [], []
+
+		for K in ranks:
+			precision.append(metrics.precision_at_k(r, K))
+			recall.append(metrics.recall_at_k(r, K, len(user_pos_test)))
+			ndcg.append(metrics.ndcg_at_k(r, K))
+			hit_ratio.append(metrics.hit_at_k(r, K))
+
+		return {'recall': np.array(recall), 'precision': np.array(precision),
+				'ndcg': np.array(ndcg), 'hit_ratio': np.array(hit_ratio), 'auc': auc}
+
+	def test_one_user(x):
+		# user u's ratings for user u
+		rating = x[0]
+		#uid
+		u = x[1]
+		#user u's items in the training set
+		try:
+			training_items = data_generator.train_items[u]
+		except Exception:
+			training_items = []
+		#user u's items in the test set
+		user_pos_test = data_generator.test_set[u]
+
+		all_items = set(range(self.n_items))
+
+		test_items = list(all_items - set(training_items))
+
+		r, auc = ranklist_by_sorted(user_pos_test, test_items, rating, self.args['ranks'])
+
+		return get_performance(user_pos_test, r, auc, self.args['ranks'])
+
 	def evaluate(sess, model, users_to_test, batch_size, drop_flag=False, batch_test_flag=False):
-		result = {'precision': np.zeros(len(Ks)), 'recall': np.zeros(len(Ks)), 'ndcg': np.zeros(len(Ks)),
-				  'hit_ratio': np.zeros(len(Ks)), 'auc': 0.}
+		result = {'precision': np.zeros(len(self.args['ranks'])), 'recall': np.zeros(len(self.args['ranks'])), 
+					'ndcg': np.zeros(len(self.args['ranks'])), 'hit_ratio': np.zeros(len(self.args['ranks'])), 'auc': 0.}
 
 		pool = multiprocessing.Pool(cores)
 
@@ -249,6 +313,21 @@ class RecTF(RecModel):
 		pool.close()
 		return result
 
+	def early_stopping(self, log_value, best_value, stopping_step, expected_order='acc', flag_step=100):
+		assert expected_order in ['acc', 'dec']
+		if (expected_order == 'acc' and log_value >= best_value) or (expected_order == 'dec' and log_value <= best_value):
+			stopping_step = 0
+			best_value = log_value
+		else:
+			stopping_step += 1
+
+		if stopping_step >= flag_step:
+			print("Early stopping is trigger at step: {} log:{}".format(flag_step, log_value))
+			should_stop = True
+		else:
+			should_stop = False
+		return best_value, stopping_step, should_stop
+
 	
 	def run(self):
 		n_users, n_items, n_train, n_test = self.data_counter()
@@ -263,6 +342,12 @@ class RecTF(RecModel):
 			n_users=n_users,
 			n_items=n_items,
 			adj=plain_adj)
+
+		config = tf.ConfigProto()
+		sess = tf.Session(config=config)
+		sess.run(tf.global_variables_initializer())
+		best_res = 0.
+
 
 		for epoch in range(self.args['epoch']):
 			t1 = time()
@@ -293,13 +378,23 @@ class RecTF(RecModel):
 
 			t2 = time()
 			users_to_test = list(test_set.keys())
-			ret = self.evaluate(sess, model, users_to_test, self.args['batch_size'], drop_flag=True)
+			res = self.evaluate(sess, model, users_to_test, self.args['batch_size'], drop_flag=True)
 
 			t3 = time()
 
 			perf_str = 'Epoch %d [%.1fs + %.1fs]: train==[%.5f=%.5f + %.5f + %.5f], recall=[%.5f, %.5f], ' \
 					'precision=[%.5f, %.5f], hit=[%.5f, %.5f], ndcg=[%.5f, %.5f]' % \
-					(epoch, t2 - t1, t3 - t2, loss, mf_loss, emb_loss, reg_loss, ret['recall'][0], ret['recall'][-1],
-					ret['precision'][0], ret['precision'][-1], ret['hit_ratio'][0], ret['hit_ratio'][-1],
-					ret['ndcg'][0], ret['ndcg'][-1])
+					(epoch, t2 - t1, t3 - t2, loss, mf_loss, emb_loss, reg_loss, res['recall'][0], res['recall'][-1],
+					res['precision'][0], res['precision'][-1], res['hit_ratio'][0], res['hit_ratio'][-1],
+					res['ndcg'][0], res['ndcg'][-1])
 			print(perf_str)
+
+			best_res, stopping_step, should_stop = self.early_stopping(
+				res['recall'][0], best_res, stopping_step, expected_order='acc', flag_step=5)
+
+			if should_stop == True:
+				break
+
+			if res['recall'][0] == best_res and args.save_flag == 1:
+				save_saver.save(sess, self.args['model_dir'] + '/weights', global_step=epoch)
+				print('save the weights in path: ', self.args['model_dir'])
