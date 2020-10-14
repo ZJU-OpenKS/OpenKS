@@ -11,13 +11,16 @@
 ![architect](./docs/pics/architect.jpg)
 
 ## 环境要求
-- Python 3.x
-- 百度飞桨Paddle(https://github.com/paddlepaddle/paddle)
-- PyTorch(https://github.com/pytorch/pytorch)
-- NumPy(https://github.com/numpy/numpy)
-- scikit-learn(https://github.com/scikit-learn/scikit-learn)
-- py2neo(for KGQA application with graph database)(https://pypi.org/project/py2neo/) - 2020.7b8 版本以上
-- pyahocorasick(for KGQA application with graph database)(https://pypi.org/project/pyahocorasick/)
+### 在以下版本依赖下进行测试
+- Python 3.7
+- 百度飞桨Paddle - 1.7.1 (https://github.com/paddlepaddle/paddle)
+- PyTorch - 1.4.0 (https://github.com/pytorch/pytorch)
+- TensorFlow - 2.2.1 (https://github.com/tensorflow/tensorflow)
+- NumPy - 1.18.1 (https://github.com/numpy/numpy)
+- Ray - 1.0.0 (https://github.com/ray-project/ray)
+- scikit-learn - 0.22.1 (https://github.com/scikit-learn/scikit-learn)
+- py2neo - 2020.7b8 (for KGQA application with graph database)(https://pypi.org/project/py2neo/)
+- pyahocorasick - 1.4.0 (for KGQA application with graph database)(https://pypi.org/project/pyahocorasick/)
 
 ## 快速上手
 ### 知识图谱问答
@@ -35,7 +38,12 @@ python example_text_train.py
 python example_kg_train.py
 ```
 
-### 分布式图表示模型训练
+### 分布式图表示模型训练(Ray)
+```
+python example_kg_dist_train.py
+```
+
+### 分布式图表示模型训练(Fleet)
 ```
 python openks/distributed/openKS_launcher.py --mode cpu --worker_num 2 --server_num 2 main_dist.py
 ```
