@@ -3,6 +3,7 @@ An abstract class for openks models to be trained with Paddle
 """
 import logging
 from typing import Tuple, List, Any
+import torch
 import torch.nn as nn
 from torch.utils import data
 import paddle.fluid as fluid
@@ -54,6 +55,25 @@ class TorchModel(nn.Module, Register):
 
 	def _algorithm(self, *args):
 		return NotImplemented
+
+	# getter and setter for Ray distributed training
+	def get_weights(self):
+		return {k: v.cpu() for k, v in self.state_dict().items()}
+
+	def set_weights(self, weights):
+		self.load_state_dict(weights)
+
+	def get_gradients(self):
+		grads = []
+		for p in self.parameters():
+			grad = None if p.grad is None else p.grad.data.cpu().numpy()
+			grads.append(grad)
+		return grads
+
+	def set_gradients(self, gradients):
+		for g, p in zip(gradients, self.parameters()):
+			if g is not None:
+				p.grad = torch.from_numpy(g)
 
 
 class TorchDataset(data.Dataset):
