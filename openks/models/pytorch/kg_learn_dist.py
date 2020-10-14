@@ -168,7 +168,7 @@ class KGLearnTorch(KGLearnModel):
 			'best_score': best_score
 		}, model_path)
 
-	def run(self):
+	def run(self, architect='ps', num_workers=2):
 		device = torch.device('cuda') if self.args['gpu'] else torch.device('cpu')
 
 		train_triples, valid_triples, test_triples = self.triples_reader(ratio=0.01)
@@ -188,44 +188,50 @@ class KGLearnTorch(KGLearnModel):
 			margin=self.args['margin']
 		)
 
-		# initialize ps and workers
-		ray.init(ignore_reinit_error=True)
-		ps = ParameterServer.remote(model, self.args['learning_rate'], self.args['optimizer'])
-		workers = [DataWorker.remote(model) for i in range(self.args["num_workers"])]
+		if (architect == 'ps'):
+			# initialize ps and workers
+			ray.init(ignore_reinit_error=True)
+			ps = ParameterServer.remote(model, self.args['learning_rate'], self.args['optimizer'])
+			workers = [DataWorker.remote(model) for i in range(num_workers)]
 
-		print("Running synchronous parameter server training.")
-		current_weights = ps.get_weights.remote()
+			print("Running synchronous parameter server training.")
+			current_weights = ps.get_weights.remote()
 
-		start_epoch = 1
-		best_score = 0.0
+			start_epoch = 1
+			best_score = 0.0
 
-		# train iteratively
-		for epoch in range(start_epoch, self.args['epoch'] + 1):
-			print("Starting epoch: ", epoch)
-			run_loss = 0
-			# train in a batch
-			for train_triples in train_generator:
-				gradients = [worker.compute_gradients.remote(current_weights, train_triples) for worker in workers]
-				loss = [ray.get(worker.get_loss.remote()) for worker in workers]
-				current_weights = ps.apply_gradients.remote(*gradients)
-				run_loss += np.mean(loss)
-			print("Loss: " + str(run_loss))
+			# train iteratively
+			for epoch in range(start_epoch, self.args['epoch'] + 1):
+				print("Starting epoch: ", epoch)
+				run_loss = 0
+				# train in a batch
+				for train_triples in train_generator:
+					# get gradients from all workers
+					gradients = [worker.compute_gradients.remote(current_weights, train_triples) for worker in workers]
+					loss = [ray.get(worker.get_loss.remote()) for worker in workers]
+					# update parameters from PS
+					current_weights = ps.apply_gradients.remote(*gradients)
+					run_loss += np.mean(loss)
+				print("Loss: " + str(run_loss))
 
-			# evaluation periodically
-			if epoch % self.args['eval_freq'] == 0:
-				print("Starting validation...")
-				model.set_weights(ray.get(current_weights))
-				_, _, hits_at_10, _ = self.evaluate(model=model, data_generator=valid_generator, num_entity=self.graph.get_entity_num(), device=device)
-				score = hits_at_10
-				print("HIT@10: " + str(score))
-				if score > best_score:
-					best_score = score
-					self.save_model(model, opt, epoch, best_score, self.args['model_dir'])
+				# evaluation periodically
+				if epoch % self.args['eval_freq'] == 0:
+					print("Starting validation...")
+					model.set_weights(ray.get(current_weights))
+					_, _, hits_at_10, _ = self.evaluate(model=model, data_generator=valid_generator, num_entity=self.graph.get_entity_num(), device=device)
+					score = hits_at_10
+					print("HIT@10: " + str(score))
+					if score > best_score:
+						best_score = score
+						self.save_model(model, opt, epoch, best_score, self.args['model_dir'])
 
-		# load saved model and test
-		self.load_model(self.args['model_dir'], model, opt)
-		best_model = model.to(device)
-		best_model.eval()
-		scores = self.evaluate(model=best_model, data_generator=test_generator, num_entity=self.graph.get_entity_num(), device=device)
-		print("Test scores: ", scores)
-		ray.shutdown()
+			# load saved model and test
+			self.load_model(self.args['model_dir'], model, opt)
+			best_model = model.to(device)
+			best_model.eval()
+			scores = self.evaluate(model=best_model, data_generator=test_generator, num_entity=self.graph.get_entity_num(), device=device)
+			print("Test scores: ", scores)
+			ray.shutdown()
+		else:
+			return NotImplemented
+
