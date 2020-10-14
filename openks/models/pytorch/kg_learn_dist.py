@@ -228,4 +228,5 @@ class KGLearnTorch(KGLearnModel):
 		best_model.eval()
 		scores = self.evaluate(model=best_model, data_generator=test_generator, num_entity=self.graph.get_entity_num(), device=device)
 		print("Test scores: ", scores)
+        ray.shutdown()
 
