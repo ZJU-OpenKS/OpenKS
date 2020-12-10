@@ -55,7 +55,7 @@ class TransR(TorchModel):
 
 	def loss(self, positive_score, negative_score):
 		"""graph embedding loss function"""
-		target = torch.tensor([-1], dtype=torch.long)
+		target = torch.tensor([-1], dtype=torch.long, device=positive_score.device)
 		loss_func = nn.MarginRankingLoss(margin=self.margin, reduction='none')
 		return loss_func(positive_score, negative_score, target)
 

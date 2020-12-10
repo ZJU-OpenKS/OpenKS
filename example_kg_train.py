@@ -29,9 +29,9 @@ args = {
 	'hidden_size': 50, 
 	'margin': 4.0, 
 	'model_dir': './', 
-	'eval_freq': 10
+	'eval_freq': 1
 }
-platform = 'Paddle'
+platform = 'PyTorch'
 executor = 'KGLearn'
 model = 'TransR'
 print("根据配置，使用 {} 框架，{} 执行器训练 {} 模型。".format(platform, executor, model))

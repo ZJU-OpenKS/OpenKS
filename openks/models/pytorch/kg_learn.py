@@ -48,8 +48,8 @@ class KGLearnTorch(KGLearnModel):
 		positive_triples = torch.stack((heads_pos, relations_pos, tails_pos), dim=1)
 		head_or_tail = torch.randint(high=2, size=heads.size(), device=device)
 		random_entities = torch.randint(high=len(train_triples), size=heads.size(), device=device)
-		broken_heads = torch.where(head_or_tail==1, random_entities, heads)
-		broken_tails = torch.where(head_or_tail==0, random_entities, tails)
+		broken_heads = torch.where(head_or_tail==1, random_entities, heads_pos)
+		broken_tails = torch.where(head_or_tail==0, random_entities, tails_pos)
 		negative_triples = torch.stack((broken_heads, relations, broken_tails), dim=1)
 		return positive_triples, negative_triples
 
@@ -89,6 +89,8 @@ class KGLearnTorch(KGLearnModel):
 			tails_predictions = model.predict(triplets).reshape(current_batch_size, -1)
 			triplets = torch.stack((all_entities, relations, tails), dim=2).reshape(-1, 3)
 			heads_predictions = model.predict(triplets).reshape(current_batch_size, -1)
+
+			pdb.set_trace()
 
 			predictions = torch.cat((tails_predictions, heads_predictions), dim=0)
 			ground_truth_entity_id = torch.cat((head.reshape(-1, 1), tail.reshape(-1, 1)))

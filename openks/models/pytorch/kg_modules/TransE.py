@@ -33,7 +33,7 @@ class TransE(TorchModel):
 	def loss(self, positive_score, negative_score):
 		"""graph embedding loss function"""
 		target = torch.tensor([-1], dtype=torch.long)
-		loss_func = nn.MarginRankingLoss(margin=self.margin, reduction='none')
+		loss_func = nn.MarginRankingLoss(margin=self.margin, reduction='none', device=positive_score.device)
 		return loss_func(positive_score, negative_score, target)
 
 	def forward(self, pos_triples, neg_triples):
