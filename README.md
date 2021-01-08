@@ -1,6 +1,6 @@
 ![dcd](./docs/pics/zjudcd.png)
 
-# ![logo](./docs/pics/openkslogo.jpg) OpenKS：领域可泛化的知识学习与计算引擎
+# ![logo](./docs/pics/logo.png) OpenKS：领域可泛化的知识学习与计算引擎
 
 ## 平台支持功能
 | 基础能力 | 领域泛化能力 | 跨领域能力 | 现实问题解决能力 | 开放服务使用能力 |
