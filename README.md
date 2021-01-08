@@ -1,4 +1,6 @@
-# OpenKS - A Domain Generalized Knowledge Computing Platform
+![dcd](./docs/pics/zjudcd.png)
+
+# ![logo](./docs/pics/openkslogo.jpg){:height="50%" width="50%"} OpenKS：领域可泛化的知识学习与计算引擎
 
 ## 平台支持功能
 | 基础能力 | 领域泛化能力 | 跨领域能力 | 现实问题解决能力 | 开放服务使用能力 |
@@ -115,5 +117,5 @@ fetcher = AnswerFetcher(struc_q, graph)
 print(fetcher.fetch_by_db_query(graph_db))
 ```
 
-## 系统逻辑
+## 系统运行逻辑
 ![pipeline](./docs/pics/running_steps.jpg)
