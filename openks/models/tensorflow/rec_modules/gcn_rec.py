@@ -1,3 +1,6 @@
+# Copyright (c) 2021 OpenKS Authors, DCD Research Lab, Zhejiang University. 
+# All Rights Reserved.
+
 '''
 reference to: https://github.com/xiangwang1223/neural_graph_collaborative_filtering
 '''

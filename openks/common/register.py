@@ -1,3 +1,6 @@
+# Copyright (c) 2021 OpenKS Authors, DCD Research Lab, Zhejiang University. 
+# All Rights Reserved.
+
 """
 Any base class inherits this Register class gives its subclasses ability to be registered in a named registry with decoration
 """

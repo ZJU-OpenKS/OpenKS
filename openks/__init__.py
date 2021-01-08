@@ -1,4 +1,7 @@
+# Copyright (c) 2021 OpenKS Authors, DCD Research Lab, Zhejiang University. 
+# All Rights Reserved.
+
 """
 init
 """
-__version__ = "0.1.1"
+__version__ = "1.0"

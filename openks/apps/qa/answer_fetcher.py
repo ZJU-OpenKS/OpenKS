@@ -1,3 +1,6 @@
+# Copyright (c) 2021 OpenKS Authors, DCD Research Lab, Zhejiang University. 
+# All Rights Reserved.
+
 """
 Answer fetch progam to receive structured question and get possible answers
 """

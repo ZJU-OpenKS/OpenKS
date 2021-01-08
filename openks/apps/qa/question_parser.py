@@ -1,3 +1,6 @@
+# Copyright (c) 2021 OpenKS Authors, DCD Research Lab, Zhejiang University. 
+# All Rights Reserved.
+
 """
 This module implements a basic parsing procedure for recoginzing entities and relation types from questions
 """

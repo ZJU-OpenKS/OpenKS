@@ -1,3 +1,6 @@
+# Copyright (c) 2021 OpenKS Authors, DCD Research Lab, Zhejiang University. 
+# All Rights Reserved.
+
 import tensorflow as tf
 from .rec_operator import RecOperator
 from ...models import *

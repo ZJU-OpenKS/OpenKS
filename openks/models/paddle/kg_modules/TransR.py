@@ -1,3 +1,6 @@
+# Copyright (c) 2021 OpenKS Authors, DCD Research Lab, Zhejiang University. 
+# All Rights Reserved.
+
 import numpy as np
 import paddle.fluid as fluid
 import paddle.fluid.layers as layers

@@ -1,3 +1,6 @@
+# Copyright (c) 2021 OpenKS Authors, DCD Research Lab, Zhejiang University. 
+# All Rights Reserved.
+
 import torch
 from .question_parser import QuestionParser, StrucQ
 from ...models import *
