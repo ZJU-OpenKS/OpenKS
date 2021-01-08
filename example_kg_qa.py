@@ -1,3 +1,6 @@
+# Copyright (c) 2021 OpenKS Authors, DCD Research Lab, Zhejiang University. 
+# All Rights Reserved.
+
 from openks.loaders import loader_config, SourceType, FileType, GraphLoader
 from openks.apps.qa import RuleParserCom, AnswerFetcher
 from py2neo import Graph
