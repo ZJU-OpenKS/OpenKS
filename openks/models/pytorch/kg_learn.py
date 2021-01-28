@@ -40,20 +40,23 @@ class KGLearnTorch(KGLearnModel):
 	def triples_reader(self, ratio=0.01):
 		"""read from triple data files to id triples"""
 		rel2id = self.graph.relation_to_id()
-		train_triples, test_triples = train_test_split(self.graph.triples, test_size=ratio)
+		train_valid_triples, test_triples = train_test_split(self.graph.triples, test_size=ratio)
+		train_triples, valid_triples = train_test_split(train_valid_triples, test_size=ratio)
 		train_triples = [(triple[0][0], rel2id[triple[0][1]], triple[0][2]) for triple in train_triples]
+		valid_triples = [(triple[0][0], rel2id[triple[0][1]], triple[0][2]) for triple in valid_triples]
 		test_triples = [(triple[0][0], rel2id[triple[0][1]], triple[0][2]) for triple in test_triples]
-		return train_triples, test_triples, test_triples
+		return train_triples, valid_triples, test_triples
 
 	def triples_generator(self, train_triples, device):
 		heads, relations, tails = train_triples
 		heads_pos, relations_pos, tails_pos = (heads.to(device), relations.to(device), tails.to(device))
 		positive_triples = torch.stack((heads_pos, relations_pos, tails_pos), dim=1)
 		head_or_tail = torch.randint(high=2, size=heads.size(), device=device)
-		random_entities = torch.randint(high=len(train_triples), size=heads.size(), device=device)
+		random_entities = torch.randint(high=self.graph.get_entity_num(), size=heads.size(), device=device)
+		# random_entities = torch.randint(high=len(train_triples), size=heads.size(), device=device)
 		broken_heads = torch.where(head_or_tail==1, random_entities, heads_pos)
 		broken_tails = torch.where(head_or_tail==0, random_entities, tails_pos)
-		negative_triples = torch.stack((broken_heads, relations, broken_tails), dim=1)
+		negative_triples = torch.stack((broken_heads, relations_pos, broken_tails), dim=1)
 		return positive_triples, negative_triples
 
 	def hit_at_k(self, predictions, ground_truth_idx, device, k=10):
@@ -93,9 +96,10 @@ class KGLearnTorch(KGLearnModel):
 			triplets = torch.stack((all_entities, relations, tails), dim=2).reshape(-1, 3)
 			heads_predictions = model.predict(triplets).reshape(current_batch_size, -1)
 
-			pdb.set_trace()
+			# pdb.set_trace()
 
-			predictions = torch.cat((tails_predictions, heads_predictions), dim=0)
+			# predictions = torch.cat((tails_predictions, heads_predictions), dim=0)
+			predictions = torch.cat((heads_predictions, tails_predictions), dim=0)
 			ground_truth_entity_id = torch.cat((head.reshape(-1, 1), tail.reshape(-1, 1)))
 
 			hits_at_1 += self.hit_at_k(predictions, ground_truth_entity_id, device=device, k=1)
@@ -104,11 +108,11 @@ class KGLearnTorch(KGLearnModel):
 			mrr_value += self.mrr(predictions, ground_truth_entity_id)
 			examples_count += predictions.size()[0]
 
+			count += 1
 			if count % 500 == 0:
 				print("=================")
 				print(hits_at_1, hits_at_3, hits_at_10)
 				print("=================")
-			count += 1
 
 		hits_at_1_score = hits_at_1 / examples_count
 		hits_at_3_score = hits_at_3 / examples_count
@@ -135,7 +139,7 @@ class KGLearnTorch(KGLearnModel):
 		}, model_path)
 
 	def run(self, dist=False):
-		device = torch.device('cuda') if self.args['gpu'] else torch.device('cpu')
+		device = torch.device('cuda:5') if self.args['gpu'] else torch.device('cpu')
 
 		train_triples, valid_triples, test_triples = self.triples_reader(ratio=0.01)
 		# set PyTorch sample iterators
@@ -145,6 +149,9 @@ class KGLearnTorch(KGLearnModel):
 		valid_generator = data.DataLoader(valid_set, batch_size=1)
 		test_set = DataSet(test_triples)
 		test_generator = data.DataLoader(test_set, batch_size=1)
+
+		train_part_triples = train_triples[:1000]
+		train_part_generator = data.DataLoader(train_part_triples, batch_size=1)
 
 		# initialize model
 		model = self.model(
@@ -184,6 +191,9 @@ class KGLearnTorch(KGLearnModel):
 			if epoch % self.args['eval_freq'] == 0:
 				print("Starting validation...")
 				model.eval()
+				print("train set...")
+				_, _, hits_at_10, _ = self.evaluate(model=model, data_generator=train_part_generator, num_entity=self.graph.get_entity_num(), device=device)
+				print("valid set...")
 				_, _, hits_at_10, _ = self.evaluate(model=model, data_generator=valid_generator, num_entity=self.graph.get_entity_num(), device=device)
 				score = hits_at_10
 				print("HIT@10: " + str(score))
