@@ -12,6 +12,8 @@ from torch.optim import optimizer
 import numpy as np
 from sklearn.model_selection import train_test_split
 from ..model import KGLearnModel, TorchDataset
+from .kg_modules import NCESoftmaxLossNS
+
 import pdb
 
 logger = logging.getLogger(__name__)
@@ -208,3 +210,135 @@ class KGLearnTorch(KGLearnModel):
 		scores = self.evaluate(model=best_model, data_generator=test_generator, num_entity=self.graph.get_entity_num(), device=device)
 		print("Test scores: ", scores)
 
+
+@KGLearnModel.register("KGLearn_GCN", "PyTorch")
+class KGLearn_GCNTorch(KGLearnModel):
+	def __init__(self, name='pytorch-default', graph=None, model=None, args=None):
+		self.name = name
+		self.graph = graph
+		self.args = args
+		self.model = model
+		self.train_loader = args['train_loader']
+
+	def triples_reader(self, ratio=0.01):
+		"""read from triple data files to id triples"""
+		pass
+
+	def triples_generator(self, train_triples, device):
+		pass
+
+	def hit_at_k(self, predictions, ground_truth_idx, device, k=10):
+		"""how many true entities in top k similar ones"""
+		pass
+
+
+	def mrr(self, predictions, ground_truth_idx):
+		"""Mean Reciprocal Rank"""
+		pass
+
+	def evaluate(self, model, data_generator, num_entity, device):
+		"""predicting validation and test set and show performance metrics"""
+		pass
+
+	def load_model(self, model_path, model, opt):
+		"""load model from local model file"""
+		checkpoint = torch.load(model_path)
+		model.load_state_dict(checkpoint['model_state_dict'])
+		opt.load_state_dict(checkpoint['optimizer_state_dict'])
+		start_epoch = checkpoint['epoch'] + 1
+		best_score = checkpoint['best_score']
+		return start_epoch, best_score
+
+	def save_model(self, model, optim, epoch, best_score, model_path):
+		"""save model to local file"""
+		torch.save({
+			'model_state_dict': model.state_dict(),
+			'optimizer_state_dict': optim.state_dict(),
+			'epoch': epoch,
+			'best_score': best_score
+		}, model_path)
+
+	def run(self, dist=False):
+		device = torch.device('cuda') if self.args['gpu'] else torch.device('cpu')
+
+		# train_triples, valid_triples, test_triples = self.triples_reader(ratio=0.01)
+		# # set PyTorch sample iterators
+		# train_set = DataSet(train_triples)
+		# train_generator = data.DataLoader(train_set, batch_size=self.args['batch_size'])
+		# valid_set = DataSet(valid_triples)
+		# valid_generator = data.DataLoader(valid_set, batch_size=1)
+		# test_set = DataSet(test_triples)
+		# test_generator = data.DataLoader(test_set, batch_size=1)
+
+		# initialize model
+		# model = self.model(
+		# 	num_entity=self.graph.get_entity_num(),
+		# 	num_relation=self.graph.get_relation_num(),
+		# 	hidden_size=self.args['hidden_size'],
+		# 	margin=self.args['margin']
+		# )
+		model = self.model(num_layers=self.args['num_layer'], gnn_model='gat')
+		model = model.to(device)
+
+		# initialize optimizer
+		optimizer_available = {
+			"adam": optim.Adam,
+			"sgd": optim.SGD,
+		}
+		opt = optimizer_available[self.args['optimizer']](model.parameters(), lr=self.args['learning_rate'])
+
+		start_epoch = 1
+		best_score = 0.0
+		criterion = NCESoftmaxLossNS()
+		criterion = criterion.to(device)
+		# train iteratively
+		for epoch in range(start_epoch, self.args['epoch'] + 1):
+			print("Starting epoch: ", epoch)
+			run_loss = 0
+			model.train()
+			# train in a batch
+			for idx, batch in enumerate(self.train_loader):
+				graph_q, graph_k = batch
+				graph_q.to(device)
+				graph_k.to(device)
+				bsz = graph_q.batch_size
+				feat_q = model(graph_q)
+				feat_k = model(graph_k)
+
+				# out = torch.matmul(feat_k, feat_q.t()) / opt.nce_t
+				out = torch.matmul(feat_k, feat_q.t()) / self.args["nce_t"]
+				prob = out[range(graph_q.batch_size), range(graph_q.batch_size)].mean()
+				opt.zero_grad()
+
+				loss = criterion(out)
+				loss.backward()
+				run_loss += loss.mean().item()
+				# grad_norm = clip_grad_norm(model.parameters(), opt.clip_norm)
+
+				# global_step = epoch * n_batch + idx
+				# lr_this_step = opt.learning_rate * warmup_linear(
+				# 	global_step / (opt.epochs * n_batch), 0.1
+				# )
+				# for param_group in optimizer.param_groups:
+				# 	param_group["lr"] = lr_this_step
+				opt.step()
+
+			print("Loss: " + str(run_loss))
+
+			# evaluation periodically
+			# if epoch % self.args['eval_freq'] == 0:
+			# 	print("Starting validation...")
+			# 	model.eval()
+			# 	_, _, hits_at_10, _ = self.evaluate(model=model, data_generator=valid_generator, num_entity=self.graph.get_entity_num(), device=device)
+			# 	score = hits_at_10
+			# 	print("HIT@10: " + str(score))
+			# 	if score > best_score:
+			# 		best_score = score
+			# 		self.save_model(model, opt, epoch, best_score, self.args['model_dir'])
+
+		# load saved model and test
+		# self.load_model(self.args['model_dir'], model, opt)
+		# best_model = model.to(device)
+		# best_model.eval()
+		# scores = self.evaluate(model=best_model, data_generator=test_generator, num_entity=self.graph.get_entity_num(), device=device)
+		# print("Test scores: ", scores)
