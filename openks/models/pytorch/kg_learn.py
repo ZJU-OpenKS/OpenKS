@@ -267,7 +267,7 @@ class KGLearn_GCNTorch(KGLearnModel):
 		# 	hidden_size=self.args['hidden_size'],
 		# 	margin=self.args['margin']
 		# )
-		model = self.model(num_layers=self.args['num_layer'], gnn_model='gcn')
+		model = self.model(num_layers=self.args['num_layer'], gnn_model='gat')
 		model = model.to(device)
 
 		# initialize optimizer
