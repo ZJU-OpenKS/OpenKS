@@ -8,9 +8,9 @@ import paddle.fluid as fluid
 import numpy as np
 from sklearn.model_selection import train_test_split
 from ..model import KGLearnModel
-from ...distributed.openks_distributed import KSDistributedFactory
-from ...distributed.openks_distributed.base import RoleMaker
-from ...distributed.openks_strategy.cpu import CPUStrategy, SyncModeConfig
+from ...distributed.openKS_distributed import KSDistributedFactory
+from ...distributed.openKS_distributed.base import RoleMaker
+from ...distributed.openKS_strategy.cpu import CPUStrategy, SyncModeConfig
 
 logger = logging.getLogger(__name__)
 
