@@ -1,7 +1,7 @@
 # Copyright (c) 2021 OpenKS Authors, DCD Research Lab, Zhejiang University. 
 # All Rights Reserved.
 
-from ..openks_strategy.base import _StrategyBase, _ExecuteConfig, _DistributeConfig
+from ..openKS_strategy.base import _StrategyBase, _ExecuteConfig, _DistributeConfig
 from typing import List
 
 

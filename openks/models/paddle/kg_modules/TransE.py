@@ -6,7 +6,7 @@ import paddle.fluid as fluid
 import paddle.fluid.layers as layers
 from paddle.fluid.layer_helper import LayerHelper
 from ...model import PaddleModel
-from ....distributed.openks_strategy.cpu import CPUStrategy, SyncModeConfig
+from ....distributed.openKS_strategy.cpu import CPUStrategy, SyncModeConfig
 
 
 @PaddleModel.register("TransE", "Paddle")
