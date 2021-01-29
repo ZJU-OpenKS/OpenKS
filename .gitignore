@@ -196,5 +196,7 @@ dmypy.json
 
 logs/
 
-# vscode configure
+# IDE configure
 .vscode/
+.idea/
+.ipynb_checkpoints
