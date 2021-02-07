@@ -141,7 +141,7 @@ class KGLearnTorch(KGLearnModel):
 		}, model_path)
 
 	def run(self, dist=False):
-		device = torch.device('cuda:5') if self.args['gpu'] else torch.device('cpu')
+		device = torch.device('cuda') if self.args['gpu'] else torch.device('cpu')
 
 		train_triples, valid_triples, test_triples = self.triples_reader(ratio=0.01)
 		# set PyTorch sample iterators
@@ -156,11 +156,18 @@ class KGLearnTorch(KGLearnModel):
 		train_part_generator = data.DataLoader(train_part_triples, batch_size=1)
 
 		# initialize model
+		# model = self.model(
+		# 	num_entity=self.graph.get_entity_num(),
+		# 	num_relation=self.graph.get_relation_num(),
+		# 	hidden_size=self.args['hidden_size'],
+		# 	margin=self.args['margin']
+		# )
 		model = self.model(
 			num_entity=self.graph.get_entity_num(),
 			num_relation=self.graph.get_relation_num(),
-			hidden_size=self.args['hidden_size'],
-			margin=self.args['margin']
+			# hidden_size=self.args['hidden_size'],
+			# margin=self.args['margin']
+			**self.args
 		)
 		model = model.to(device)
 

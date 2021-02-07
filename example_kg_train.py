@@ -28,16 +28,19 @@ args = {
 	'gpu': True,
 	'learning_rate': 0.001, 
 	'epoch': 500,
-	'batch_size': 1000, 
+	'batch_size': 1024, 
 	'optimizer': 'adam', 
-	'hidden_size': 50, 
+	'hidden_size': 500, 
 	'margin': 4.0, 
 	'model_dir': './',
-	'eval_freq': 20
+	'eval_freq': 20,
+	'gamma': 12.0,
+	'epsilon': 2.0
 }
 platform = 'PyTorch'
 executor = 'KGLearn'
-model = 'TransR'
+model = 'RotatE'
+# model = 'TransE'
 args['model_dir'] = model+'.pt'
 print("根据配置，使用 {} 框架，{} 执行器训练 {} 模型。".format(platform, executor, model))
 print("-----------------------------------------------")
