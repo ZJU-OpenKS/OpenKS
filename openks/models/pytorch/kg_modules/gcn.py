@@ -18,7 +18,6 @@ from ...model import TorchModel
 
 class GCNLayer(nn.Module):
     """Single layer GCN for updating node features
-
     Parameters
     ----------
     in_feats : int
@@ -55,7 +54,6 @@ class GCNLayer(nn.Module):
 
     def forward(self, g, feats):
         """Update atom representations
-
         Parameters
         ----------
         g : DGLGraph
@@ -63,7 +61,6 @@ class GCNLayer(nn.Module):
         feats : FloatTensor of shape (N, M1)
             * N is the total number of atoms in the batched graph
             * M1 is the input atom feature size, must match in_feats in initialization
-
         Returns
         -------
         new_feats : FloatTensor of shape (N, M2)
@@ -82,7 +79,6 @@ class GCNLayer(nn.Module):
 
 class GATLayer(nn.Module):
     """Single layer GAT for updating node features
-
     Parameters
     ----------
     in_feats : int
@@ -118,7 +114,6 @@ class GATLayer(nn.Module):
 
     def forward(self, bg, feats):
         """Update atom representations
-
         Parameters
         ----------
         bg : DGLGraph
@@ -126,7 +121,6 @@ class GATLayer(nn.Module):
         feats : FloatTensor of shape (N, M1)
             * N is the total number of atoms in the batched graph
             * M1 is the input atom feature size, must match in_feats in initialization
-
         Returns
         -------
         new_feats : FloatTensor of shape (N, M2)
