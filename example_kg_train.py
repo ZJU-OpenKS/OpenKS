@@ -13,7 +13,7 @@ loader_config.file_type = FileType.OPENKS
 # graph_db = Graph(host='127.0.0.1', http_port=7474, user='neo4j', password='123456')
 # loader_config.graph_db = graph_db
 # loader_config.source_uris = 'openks/data/company-kg'
-loader_config.source_uris = 'openks/data/FB15k-237'
+loader_config.source_uris = 'openks/data/FB15k-237_new'
 # loader_config.source_uris = 'openks/data/medical-kg'
 loader_config.data_name = 'my-data-set'
 # 图谱数据结构载入
@@ -27,14 +27,14 @@ OpenKSModel.list_modules()
 args = {
 	'gpu': True,
 	'learning_rate': 0.001, 
-	'epoch': 500,
+	'epoch': 1024,
 	'batch_size': 1024, 
 	'optimizer': 'adam', 
-	'hidden_size': 500, 
+	'hidden_size': 1000, 
 	'margin': 4.0, 
 	'model_dir': './',
 	'eval_freq': 20,
-	'gamma': 12.0,
+	'gamma': 24.0,
 	'epsilon': 2.0
 }
 platform = 'PyTorch'
