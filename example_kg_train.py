@@ -6,6 +6,27 @@ from openks.loaders import loader_config, SourceType, FileType, GraphLoader
 from openks.models import OpenKSModel
 from py2neo import Graph
 
+
+def parse_args(args=None):
+	parser = argparse.ArgumentParser(
+		description='Training and Testing Knowledge Graph Embedding Models',
+		usage='train.py [<args>] [-h | --help]'
+	)
+	parser.add_argument('--model', default='TransE', type=str)
+	parser.add_argument('--dataset', default='FB15k-237', type=str)
+	parser.add_argument('-d', '--hidden_dim', default=1000, type=int)
+	parser.add_argument('--max_steps', default=100000, type=int)
+	parser.add_argument('-ef', '--eval_freq', default=10000, type=int)
+	parser.add_argument('--test_batch_size', default=16, type=int, help='valid/test batch size')
+	parser.add_argument('-rs', '--random_split', action='store_false', default=True)
+	parser.add_argument('-de', '--double_entity_embedding', action='store_true')
+	parser.add_argument('-dr', '--double_relation_embedding', action='store_true')
+
+	return parser.parse_args(args)
+
+
+args_from_parse = parse_args()
+
 ''' 图谱载入与图谱数据结构生成 '''
 # 载入参数配置与数据集载入
 loader_config.source_type = SourceType.LOCAL_FILE
@@ -14,7 +35,8 @@ loader_config.file_type = FileType.OPENKS
 # graph_db = Graph(host='127.0.0.1', http_port=7474, user='neo4j', password='123456')
 # loader_config.graph_db = graph_db
 # loader_config.source_uris = 'openks/data/company-kg'
-dataset_name = 'FB15k-237'
+# dataset_name = 'FB15k-237'
+dataset_name = args_from_parse.dataset
 loader_config.source_uris = 'openks/data/'+dataset_name
 # loader_config.source_uris = 'openks/data/medical-kg'
 loader_config.data_name = 'my-data-set'
@@ -27,22 +49,6 @@ graph.info_display()
 OpenKSModel.list_modules()
 
 
-def parse_args(args=None):
-	parser = argparse.ArgumentParser(
-		description='Training and Testing Knowledge Graph Embedding Models',
-		usage='train.py [<args>] [-h | --help]'
-	)
-	parser.add_argument('--model', default='TransE', type=str)
-	parser.add_argument('-d', '--hidden_dim', default=1000, type=int)
-	parser.add_argument('--max_steps', default=100000, type=int)
-	parser.add_argument('-ef', '--eval_freq', default=10000, type=int)
-	parser.add_argument('-de', '--double_entity_embedding', action='store_true')
-	parser.add_argument('-dr', '--double_relation_embedding', action='store_true')
-
-	return parser.parse_args(args)
-
-
-args_from_parse = parse_args()
 # 算法模型选择配置
 args = {
 	'gpu': True,
@@ -57,7 +63,6 @@ args = {
 	'gamma': 9.0,
 	'epsilon': 2.0,
 	'negative_sample_size': 256,
-	'test_batch_size': 16,
 	'negative_adversarial_sampling': True,
 	'adversarial_temperature': 1.0,
 	'cpu_num': 10,
@@ -68,7 +73,6 @@ args = {
 	'do_valid': True,
 	'do_test': True,
 	'evaluate_train': True,
-	'random_split': False,
 	'random_seed': 1
 }
 platform = 'PyTorch'
@@ -83,6 +87,8 @@ args['model_dir'] = 'models/'+model+'_'+dataset_name+'_'+str(args['random_seed']
 args['save_path'] = args['model_dir']
 args['double_entity_embedding'] = args_from_parse.double_entity_embedding
 args['double_relation_embedding'] = args_from_parse.double_relation_embedding
+args['random_split'] = args_from_parse.random_split
+args['test_batch_size'] = args_from_parse.test_batch_size
 if not os.path.exists(args['save_path']):
 	os.makedirs(args['save_path'])
 print("根据配置，使用 {} 框架，{} 执行器训练 {} 模型。".format(platform, executor, model))
