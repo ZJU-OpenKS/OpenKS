@@ -15,25 +15,60 @@ class TransR(TorchModel):
 		super(TransR, self).__init__()
 		self.num_entity = kwargs['num_entity']
 		self.num_relation = kwargs['num_relation']
-		self.entity_size = kwargs['hidden_size']
-		self.relation_size = kwargs['hidden_size']
+		# self.entity_size = kwargs['hidden_size']
+		# self.relation_size = kwargs['hidden_size']
+		self.hidden_size = kwargs['hidden_size']
 		self.margin = kwargs['margin']
 		self.norm = 1
+		self.epsilon = kwargs['epsilon']
+		self.gamma = kwargs['gamma']
 
-		self.entities_emb = nn.Embedding(self.num_entity, self.entity_size)
-		self.relations_emb = nn.Embedding(self.num_relation, self.relation_size)
-		self.transfer_matrix = nn.Embedding(self.num_relation, self.entity_size * self.relation_size)
+		self.uniform_range = (self.epsilon + self.gamma) / self.hidden_size
+
+		self.entity_dim = self.hidden_size * 2 if kwargs['double_entity_embedding'] else self.hidden_size
+		self.relation_dim = self.hidden_size * 2 if kwargs['double_relation_embedding'] else self.hidden_size
+
+		self.entity_embedding = nn.Parameter(torch.zeros(self.num_entity, self.entity_dim))
+		nn.init.uniform_(
+			tensor=self.entity_embedding,
+			a=-self.uniform_range,
+			b=self.uniform_range
+		)
+
+		self.relation_embedding = nn.Parameter(torch.zeros(self.num_relation, self.relation_dim))
+		nn.init.uniform_(
+			tensor=self.relation_embedding,
+			a=-self.uniform_range,
+			b=self.uniform_range
+		)
+
+		# self.entities_emb = nn.Embedding(self.num_entity, self.entity_size)
+		# self.relations_emb = nn.Embedding(self.num_relation, self.relation_size)
+		# self.transfer_matrix = nn.Embedding(self.num_relation, self.entity_size * self.relation_size)
+		self.transfer_matrix = nn.Parameter(torch.zeros(self.num_relation, self.entity_dim * self.relation_dim))
+		# nn.init.xavier_uniform_(self.entities_emb.weight.data)
+		# nn.init.xavier_uniform_(self.relations_emb.weight.data)
 		
-		nn.init.xavier_uniform_(self.entities_emb.weight.data)
-		nn.init.xavier_uniform_(self.relations_emb.weight.data)
-		
-		identity = torch.zeros(self.entity_size, self.relation_size)
-		for i in range(min(self.entity_size, self.relation_size)):
+		identity = torch.zeros(self.entity_dim, self.relation_dim)
+		for i in range(min(self.entity_dim, self.relation_dim)):
 			identity[i][i] = 1
-		identity = identity.view(self.relation_size * self.entity_size)
+		identity = identity.view(self.relation_dim * self.entity_dim)
 		for i in range(self.num_relation):
-			self.transfer_matrix.weight.data[i] = identity
+			self.transfer_matrix.data[i] = identity
 
+	def forward(self, head, relation, tail, r_transfer, mode):
+		r_transfer = r_transfer.view(-1, self.entity_dim, self.relation_dim)
+		h = self._transfer(head, r_transfer)
+		t = self._transfer(tail, r_transfer)
+		if mode == 'head-batch':
+			score = h + (relation - t)
+		else:
+			score = (h + relation) - t
+
+		score = self.gamma - torch.norm(score, p=1, dim=2)
+		return score
+
+	'''
 	def _algorithm(self, triples):
 		""" graph embedding similarity algorithm method """
 		heads = triples[:, 0]
@@ -45,9 +80,12 @@ class TransR(TorchModel):
 		score = h + self.relations_emb(relations) - t
 		score = score.norm(p=self.norm, dim=1)
 		return score
+	'''
 
 	def _transfer(self, e, r_transfer):
-		r_transfer = r_transfer.view(-1, self.entity_size, self.relation_size)
+		assert e.shape[0] == r_transfer.shape[0] and e.ndim == 3
+		return torch.matmul(e, r_transfer)
+		'''
 		if e.shape[0] != r_transfer.shape[0]:
 			e = e.view(-1, r_transfer.shape[0], self.entity_size).permute(1, 0, 2)
 			e = torch.matmul(e, r_transfer).permute(1, 0, 2)
@@ -55,7 +93,9 @@ class TransR(TorchModel):
 			e = e.view(-1, 1, self.entity_size)
 			e = torch.matmul(e, r_transfer)
 		return e.view(-1, self.relation_size)
+		'''
 
+	'''
 	def loss(self, positive_score, negative_score):
 		"""graph embedding loss function"""
 		target = torch.tensor([-1], dtype=torch.long, device=positive_score.device)
@@ -71,3 +111,4 @@ class TransR(TorchModel):
 	def predict(self, triples):
 		"""dissimilar score calculation for triples"""
 		return self._algorithm(triples)
+	'''

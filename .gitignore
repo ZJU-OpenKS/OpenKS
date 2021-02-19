@@ -200,3 +200,4 @@ logs/
 .vscode/
 .idea/
 .ipynb_checkpoints
+/openks/data/FB15k-237/entities.dict
