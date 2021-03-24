@@ -13,12 +13,13 @@ def parse_args(args=None):
 		usage='train.py [<args>] [-h | --help]'
 	)
 	parser.add_argument('--model', default='TransE', type=str)
-	parser.add_argument('--dataset', default='FB15k-237', type=str)
+	parser.add_argument('--dataset', default='FB15k', type=str)
 	parser.add_argument('-d', '--hidden_dim', default=1000, type=int)
-	parser.add_argument('--max_steps', default=100000, type=int)
+	parser.add_argument('--max_steps', default=150000, type=int)
 	parser.add_argument('-ef', '--eval_freq', default=10000, type=int)
 	parser.add_argument('--test_batch_size', default=16, type=int, help='valid/test batch size')
-	parser.add_argument('-rs', '--random_split', action='store_false', default=True)
+	parser.add_argument('-nrs', '--random_split', action='store_false', default=True)
+	parser.add_argument('--split_ratio', default=0.05, type=float)
 	parser.add_argument('-de', '--double_entity_embedding', action='store_true')
 	parser.add_argument('-dr', '--double_relation_embedding', action='store_true')
 
@@ -52,7 +53,7 @@ OpenKSModel.list_modules()
 # 算法模型选择配置
 args = {
 	'gpu': True,
-	'learning_rate': 0.00005,
+	'learning_rate': 0.0001,
 	'epoch': 1024,
 	'batch_size': 1024, 
 	'optimizer': 'adam',
@@ -60,7 +61,7 @@ args = {
 	'data_dir': loader_config.source_uris,
 	'log_steps': 100,
 	'test_log_steps': 1000,
-	'gamma': 9.0,
+	'gamma': 24.0,
 	'epsilon': 2.0,
 	'negative_sample_size': 256,
 	'negative_adversarial_sampling': True,
@@ -88,6 +89,7 @@ args['save_path'] = args['model_dir']
 args['double_entity_embedding'] = args_from_parse.double_entity_embedding
 args['double_relation_embedding'] = args_from_parse.double_relation_embedding
 args['random_split'] = args_from_parse.random_split
+args['split_ratio'] = args_from_parse.split_ratio
 args['test_batch_size'] = args_from_parse.test_batch_size
 if not os.path.exists(args['save_path']):
 	os.makedirs(args['save_path'])

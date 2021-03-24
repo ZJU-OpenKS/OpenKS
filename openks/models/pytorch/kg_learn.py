@@ -250,7 +250,7 @@ class KGLearn_DyTorch(KGLearnModel):
 		device = torch.device('cuda') if self.args['gpu'] else torch.device('cpu')
 
 		if self.args['random_split']:
-			train_triples, valid_triples, test_triples = self.triples_reader(ratio=0.05)
+			train_triples, valid_triples, test_triples = self.triples_reader(ratio=self.args['split_ratio'])
 		else:
 			train_triples, valid_triples, test_triples = self.triples_reader_v2()
 		all_true_triples = train_triples + valid_triples + test_triples
