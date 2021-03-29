@@ -91,6 +91,13 @@ class TorchDataset(data.Dataset):
 		return item
 
 
+class MLModel(Register):
+	def __init__(self, **kwargs):
+		self.process()
+
+	def process(self, *args):
+		return NotImplemented
+
 
 class OpenKSModel(Register):
 	def __init__(self):
@@ -148,3 +155,5 @@ class GeneralModel(OpenKSModel):
 
 	def run(self, *args):
 		return NotImplemented
+
+

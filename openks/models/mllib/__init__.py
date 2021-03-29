@@ -4,8 +4,5 @@
 """
 init
 """
-from .model import *
-from .paddle import *
-from .pytorch import *
-from .tensorflow import *
-from .mllib import *
+from .gen_learn import *
+from .gen_modules import *

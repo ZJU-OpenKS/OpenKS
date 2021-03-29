@@ -4,8 +4,4 @@
 """
 init
 """
-from .model import *
-from .paddle import *
-from .pytorch import *
-from .tensorflow import *
-from .mllib import *
+from .keyphrase_extract import *
