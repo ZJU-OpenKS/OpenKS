@@ -25,16 +25,19 @@ class SimilarityRank(object):
                 stop_words.append(line)
         return stop_words
 
-    def get_topic_embedding(self, topic):
+    def get_topic_embedding(self, topics):
         topic_word_embedding_list = []
-        topic_words = jieba.lcut(topic)
-        for word in topic_words:
-            if word in self.stop_words:
-                continue
-            if word not in self.word_embedding:
+        if len(topics) == 0:
+            topic_word_embedding_list.append(np.zeros(300))
+        for phrase in topics:
+            if not phrase:
                 topic_word_embedding_list.append(np.zeros(300))
             else:
-                topic_word_embedding_list.append(self.word_embedding[word])
+                for word in jieba.lcut(phrase):
+                    if word not in self.word_embedding:
+                        topic_word_embedding_list.append(np.zeros(300))
+                    else:
+                        topic_word_embedding_list.append(self.word_embedding[word])
 
         topic_embedding = np.array(np.mean(topic_word_embedding_list, axis=0))
         return topic_embedding
@@ -52,8 +55,8 @@ class SimilarityRank(object):
             phrase_embedding_dict[phrase] = phrase_embedding
         return phrase_embedding_dict
 
-    def rank(self, topic, phrases, algorithm='cosine'):
-        topic_embedding = self.get_topic_embedding(topic)
+    def rank(self, topics, phrases, algorithm='cosine'):
+        topic_embedding = self.get_topic_embedding(topics)
         phrase_embedding_dict = self.get_phrases_embeddings(phrases)
         similarity_dict = {}
         for phrase, embedding in phrase_embedding_dict.items():

@@ -41,9 +41,8 @@ class Rake(MLModel):
         return False 
 
     def process(self, dataset, top_k=100):
-        texts = [item[1] for item in list(dataset)]
         result = []
-        for text in texts:
+        for text in dataset:
             sentences = self.split_sentences(text)
             phrases = self.generate_candidate_keywords(sentences)
             if self.params['SUFFIX_REMOVE']:
@@ -239,31 +238,34 @@ class TopicRake(MLModel):
 
     def process(self, dataset, top_k=100):
         topic_text = [item[0] for item in list(dataset)]
-        key_phrases = self.rake.process(dataset)
+        doc_text = [item[1] for item in list(dataset)]
+        key_phrases = self.rake.process(doc_text)
+        topic_phrases = self.rake.process(topic_text)
         total_result = []
-        total_count = len(topic_text)
+        total_count = len(topic_phrases)
         for i in range(total_count):
             result_dict = {}
-            topic = topic_text[i]
-            key_phrase = key_phrases[i]
-            phrases = [item[0] for item in key_phrase]
-            topic_phrases = self.similarRank.rank(topic, phrases)
+            topics = [item[0] for item in topic_phrases[i]]
+            phrases = [item[0] for item in key_phrases[i]]
+            topic_sim = self.similarRank.rank(topics, phrases)
             for j in range(len(phrases)):
                 if self.rank_alg == 'average':
-                    item = phrases[j]
-                    for k in range(len(topic_phrases)):
-                        if topic_phrases[k][0] == item:
-                            result_dict[item] = (topic_phrases[k][1] + key_phrase[j][1]) / 2
+                    for k in range(len(topic_sim)):
+                        if topic_sim[k][0] == phrases[j]:
+                            if topic_sim[k][1] >= self.params['SIM_SCORE']:
+                                result_dict[phrases[j]] = (5 * topic_sim[k][1] + key_phrases[i][j][1]) / 6
+                                # result_dict[phrases[j]] = topic_sim[k][1]
+                            else:
+                                break
                         else:
                             continue
-            sorted_list = []
-            sorted_keys = sorted(result_dict, key=result_dict.get, reverse=True)
-            
+            high_score_dict = {}
             for w in result_dict:
-                if result_dict[w] < self.params['SIM_SCORE']:
-                    continue
-                sorted_list.append([w, result_dict[w]])
-            total_result.append(sorted_list)
+                if result_dict[w] >= self.params['MIN_SCORE_TOTAL']:
+                    high_score_dict[w] = result_dict[w]
+
+            sorted_list = sorted(high_score_dict, key=high_score_dict.get, reverse=True)
+            total_result.append([[item, high_score_dict[item]] for item in sorted_list])
         return total_result
 
 
