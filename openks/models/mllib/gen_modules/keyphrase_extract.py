@@ -41,7 +41,7 @@ class Rake(MLModel):
         return False 
 
     def process(self, dataset, top_k=100):
-        texts = dataset[1]
+        texts = [item[1] for item in list(dataset)]
         result = []
         for text in texts:
             sentences = self.split_sentences(text)
@@ -238,13 +238,13 @@ class TopicRake(MLModel):
         self.params = args['params']
 
     def process(self, dataset, top_k=100):
-        topic_text = dataset
+        topic_text = [item[0] for item in list(dataset)]
         key_phrases = self.rake.process(dataset)
         total_result = []
-        total_count = len(topic_text[0])
+        total_count = len(topic_text)
         for i in range(total_count):
             result_dict = {}
-            topic = topic_text[0][i]
+            topic = topic_text[i]
             key_phrase = key_phrases[i]
             phrases = [item[0] for item in key_phrase]
             topic_phrases = self.similarRank.rank(topic, phrases)
