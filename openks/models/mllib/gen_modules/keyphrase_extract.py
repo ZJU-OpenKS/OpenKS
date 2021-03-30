@@ -10,29 +10,28 @@ import jieba.posseg as pg
 import json
 from gensim.models import Word2Vec
 
-from topic_similarity_rank import SimilarityRank
+from ...model import MLModel
+from .topic_similarity_rank import SimilarityRank
 
 DIR = os.path.dirname(__file__)
 logging.basicConfig(level=logging.INFO)
 
-@MLModel.register("keyphrase-extract", "MLLib")
+@MLModel.register("keyphrase-rake", "MLLib")
 class Rake(MLModel):
     ''' Key phrase extration with Rake modified for Chinese text.
     Reference project: https://github.com/fabianvf/python-rake
     Reference paper: Rose, S., Engel, D., Cramer, N., & Cowley, W. (2010). Automatic Keyword Extraction from Individual Documents
     '''
-    def __init__(self, config):
-        if not config['stop_word']:
+    def __init__(self, args):
+        if not args['stopword']:
             logging.warning("No file for stop words is configured!")
             raise Exception("请先指定中文停用词文件路径！")
         else:
-            sw_file = os.path.join(DIR, config['stop_word'])
-        sw_open = config['stop_word_open']
-        self.doc_structure = config['input_structure']
-        self.data_dir = config['data_dir']
+            sw_file = os.path.join(DIR, args['stopword'])
+        sw_open = args['stopword_open']
         self.stop_words = self.load_stop_words(sw_file)
         self.stop_words_open = self.load_stop_words(sw_open)
-        self.params = config['params']
+        self.params = args['params']
         # jieba.load_userdict(sw_file)
     
     def is_duplicate(self, new_word, words):
@@ -41,30 +40,8 @@ class Rake(MLModel):
                 return True 
         return False 
 
-    def load_text(self, text_layer):
-        for layer in self.doc_structure:
-            if layer['layer'] == text_layer:
-                layer_data_dir = self.data_dir + '/' + layer['name']
-                with open(layer_data_dir, "r") as f:
-                    text = f.read()
-            else:
-                continue
-        return text
-    
-    def load_text_list(self, text_layer):
-        text = []
-        for layer in self.doc_structure:
-            if layer['layer'] == text_layer:
-                layer_data_dir = self.data_dir + '/' + layer['name']
-                with open(layer_data_dir, "r") as f:
-                    for line in f:
-                        text.append(line)
-            else:
-                continue
-        return text
-
-    def process(self, top_k=100):
-        texts = self.load_text_list(2)
+    def process(self, dataset, top_k=100):
+        texts = dataset[1]
         result = []
         for text in texts:
             sentences = self.split_sentences(text)
@@ -248,63 +225,29 @@ class Rake(MLModel):
         return keyword_candidates_normalized
 
 
-class TopicRake(object):
+@MLModel.register("keyphrase-rake-topic", "MLLib")
+class TopicRake(MLModel):
     ''' A topic relevant key phrase extraction on top of Rake.
     Using a combined score between phrase importance and semantic similarity.
     Reference paper: Technical Phrase Extraction for Patent Mining: A Multi-level Approach
     '''
-    def __init__(self, config):
-        self.rake = Rake(config)
-        self.similarRank = SimilarityRank(config)
-        self.doc_structure = config['input_structure']
-        self.data_dir = config['data_dir']
-        self.rank_alg = config['rank_algorithm']
+    def __init__(self, args):
+        self.rake = Rake(args)
+        self.similarRank = SimilarityRank(args)
+        self.rank_alg = args['rank']
+        self.params = args['params']
 
-    def load_topic_text(self, topic_layer, text_layer):
-        topic_text = {'topic': None, 'text': None}
-        for layer in self.doc_structure:
-            layer_data_dir = self.data_dir + '/' + layer['name']
-            with open(layer_data_dir, "r") as f:
-                if layer['layer'] == topic_layer:
-                    topic_text['topic'] = f.read()
-                elif layer['layer'] == text_layer:
-                    topic_text['text'] = f.read()
-                else:
-                    continue
-        return topic_text
-    
-    def load_topic_text_list(self, topic_layer, text_layer):
-        topic_text = {'topic': None, 'text': None}
-        for layer in self.doc_structure:
-            layer_data_dir = self.data_dir + '/' + layer['name']
-            with open(layer_data_dir, "r") as f:
-                if layer['layer'] == topic_layer:
-                    temp_list = []
-                    for line in f:
-                        temp_list.append(line)
-                    topic_text['topic'] = temp_list
-                elif layer['layer'] == text_layer:
-                    temp_list = []
-                    for line in f:
-                        temp_list.append(line)
-                    topic_text['text'] = temp_list
-                else:
-                    continue
-        return topic_text
-
-    def process(self, top_k=100):
-        topic_text = self.load_topic_text_list(1, text_layer)
-        key_phrases = self.rake.process(2, True, top_k)
+    def process(self, dataset, top_k=100):
+        topic_text = dataset
+        key_phrases = self.rake.process(dataset)
         total_result = []
-        total_count = len(topic_text['topic'])
+        total_count = len(topic_text[0])
         for i in range(total_count):
             result_dict = {}
-            topic = topic_text['topic'][i]
+            topic = topic_text[0][i]
             key_phrase = key_phrases[i]
             phrases = [item[0] for item in key_phrase]
             topic_phrases = self.similarRank.rank(topic, phrases)
-            # minimum_rake = phrases[-1]
-            # minimum_simi = list(topic_phrases.items())[-1][0]
             for j in range(len(phrases)):
                 if self.rank_alg == 'average':
                     item = phrases[j]
@@ -317,7 +260,7 @@ class TopicRake(object):
             sorted_keys = sorted(result_dict, key=result_dict.get, reverse=True)
             
             for w in result_dict:
-                if result_dict[w] < self.config['params']['SIM_SCORE']:
+                if result_dict[w] < self.params['SIM_SCORE']:
                     continue
                 sorted_list.append([w, result_dict[w]])
             total_result.append(sorted_list)
@@ -329,22 +272,17 @@ if __name__ == '__main__':
         config = f.read()
     config = yaml.load(config, Loader=yaml.Loader)
     
-    if config['phrase_extractor'] == 'rake':
+    if config['extractor'] == 'rake':
         extractor = Rake(config)
         res = extractor.process()
+        with open(config['result_dir'] + '/' + config['extractor'] + '_', "w") as out:
+            for res_item in res:
+                out.write(json.dumps(res_item, ensure_ascii=False) + '\n')
 
-        for layer in config['input_structure']:
-            if layer['layer'] == 2:
-                with open(config['result_dir'] + '/' + config['phrase_extractor'] + '_' + layer['name'] + '_', "w") as out:
-                    for res_item in res:
-                        out.write(json.dumps(res_item, ensure_ascii=False) + '\n')
-
-    elif config['phrase_extractor'] == 'topic-rake':
+    elif config['extractor'] == 'topic-rake':
         extractor = TopicRake(config)
         res = extractor.process()
-        for layer in config['input_structure']:
-            if layer['layer'] == 2:
-                with open(config['result_dir'] + '/' + config['phrase_extractor'] + '_' + layer['name'] + '_' + str(threshold), "w") as out:
-                    for res_item in res:
-                        out.write(json.dumps(res_item, ensure_ascii=False) + '\n')
+        with open(config['result_dir'] + '/' + config['extractor'] + '_' + str(threshold), "w") as out:
+            for res_item in res:
+                out.write(json.dumps(res_item, ensure_ascii=False) + '\n')
     

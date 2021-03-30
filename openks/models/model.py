@@ -91,6 +91,11 @@ class TorchDataset(data.Dataset):
 		return item
 
 
+class TFModel(Register):
+	def __init__(self, **kwargs):
+		return NotImplemented
+
+
 class MLModel(Register):
 	def __init__(self, **kwargs):
 		self.process()
@@ -157,3 +162,26 @@ class GeneralModel(OpenKSModel):
 		return NotImplemented
 
 
+class RecModel(OpenKSModel):
+	''' Base class for recommendation trainer, such as text and image information extraction '''
+	def __init__(self, name: str = 'model-name', dataset: MMD = None, args: List = None):
+		self.name = name
+		self.dataset = dataset
+
+	def parse_args(self):
+		return NotImplemented
+
+	def data_reader(self, *args):
+		return NotImplemented
+
+	def evaluate(self, *args):
+		return NotImplemented
+
+	def load_model(self, *args):
+		return NotImplemented
+
+	def save_model(self, *args):
+		return NotImplemented
+
+	def run(self, *args):
+		return NotImplemented

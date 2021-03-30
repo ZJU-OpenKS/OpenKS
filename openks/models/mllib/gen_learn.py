@@ -3,6 +3,8 @@
 
 import logging
 import argparse
+import json
+
 from ..model import GeneralModel
 
 @GeneralModel.register("general", "MLLib")
@@ -13,7 +15,11 @@ class GeneralMLLib(GeneralModel):
         self.args = args
         self.model = model
 
-    def candidate_length_summarize(input_path):
+    def data_reader(self):
+        text = [item for item in self.dataset.bodies[0]]
+        return text
+
+    def candidate_length_summarize(self, input_path):
         minimum_length = 100
         maximum_length = 0
         total_length = 0
@@ -29,8 +35,8 @@ class GeneralMLLib(GeneralModel):
         print(minimum_length, maximum_length, total_length / total_count)
         return [minimum_length, maximum_length, total_length / total_count]
 
-    def evaluate(input_path, standard_path):
-        f = open(input_path, 'r')
+    def evaluate(self, result_path, standard_path):
+        f = open(result_path, 'r')
         p = open(standard_path, 'r')
         patents = [line for line in p]
         line_num = 0
@@ -54,12 +60,13 @@ class GeneralMLLib(GeneralModel):
 
     def run(self):
         model = self.model(self.args)
-        res = model.process()
+        data = self.data_reader()
+        res = model.process(data)
 
-        with open(self.args['result_dir'] + '/' + self.args['phrase_extractor'], "w") as out:
+        with open(self.args['result_dir'] + '/' + self.args['extractor'], "w") as out:
             for res_item in res:
                 out.write(json.dumps(res_item, ensure_ascii=False) + '\n')
 
-        result_path = self.args['result_dir'] + '/' + 'model'
+        result_path = self.args['result_dir'] + '/' + self.args['extractor']
         standard_path = self.args['result_dir'] + '/' + 'standard'
         self.evaluate(result_path, standard_path)

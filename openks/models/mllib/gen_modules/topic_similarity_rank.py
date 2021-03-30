@@ -12,10 +12,10 @@ logging.basicConfig(level=logging.INFO)
 class SimilarityRank(object):
 
     def __init__(self, config):
-        stop_word_path = config['stop_word']
+        stop_word_path = config['stopword']
         self.stop_words = self.load_stop_words(stop_word_path)
         # self.word_embedding = word2vec.KeyedVectors.load_word2vec_format(embedding_path)
-        self.word_embedding = Word2Vec.load(config['updated_embedding'])
+        self.word_embedding = Word2Vec.load(config['finetuned'])
 
     def load_stop_words(self, sw_file):
         stop_words = []
