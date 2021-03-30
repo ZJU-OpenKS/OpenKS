@@ -19,6 +19,8 @@
 - NumPy - 1.18.1 (https://github.com/numpy/numpy)
 - Ray - 1.0.0 (https://github.com/ray-project/ray)
 - scikit-learn - 0.22.1 (https://github.com/scikit-learn/scikit-learn)
+- gensim - 4.0.0 (https://github.com/RaRe-Technologies/gensim)
+- jieba - 0.42.1 (https://github.com/fxsjy/jieba)
 - py2neo - 2020.7b8 (for KGQA application with graph database)(https://pypi.org/project/py2neo/)
 - pyahocorasick - 1.4.0 (for KGQA application with graph database)(https://pypi.org/project/pyahocorasick/)
 
