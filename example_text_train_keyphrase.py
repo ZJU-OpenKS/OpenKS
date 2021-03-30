@@ -34,7 +34,7 @@ args = {
         'OPEN_STOPWORD': True,
         'WORD_SEPARATOR': True
     },
-    'result_dir': '/Users/zongchang/OneDrive/可泛化知识计算引擎的副本/code/get_phrase/result_data', 
+    'result_dir': loader_config.source_uris, 
     'rank': 'average'
 }
 
