@@ -33,7 +33,7 @@ class SimilarityRank(object):
             if not phrase:
                 topic_word_embedding_list.append(np.zeros(300))
             else:
-                for word in jieba.lcut(phrase):
+                for word in jieba.lcut(phrase, cut_all=True):
                     if word not in self.word_embedding:
                         topic_word_embedding_list.append(np.zeros(300))
                     else:
@@ -46,7 +46,7 @@ class SimilarityRank(object):
         phrase_embedding_dict = {}
         for phrase in phrases:
             phrase_word_embedding_list = []
-            for word in jieba.lcut(phrase):
+            for word in jieba.lcut(phrase, cut_all=True):
                 if word not in self.word_embedding:
                     phrase_word_embedding_list.append(np.zeros(300))
                 else:
@@ -61,7 +61,12 @@ class SimilarityRank(object):
         similarity_dict = {}
         for phrase, embedding in phrase_embedding_dict.items():
             if algorithm == 'cosine':
-                similarity = np.dot(embedding, topic_embedding) / (np.linalg.norm(embedding)*(np.linalg.norm(topic_embedding)))
+                norm = np.linalg.norm(embedding) * np.linalg.norm(topic_embedding)
+                if norm == 0.0:
+                    similarity = 0.5
+                else:
+                    similarity = np.dot(embedding, topic_embedding) / norm
+                    similarity = similarity.item()
             similarity_dict[phrase] = similarity
 
         sorted_list = []
@@ -76,5 +81,5 @@ if __name__ == '__main__':
         config = f.read()
     config = yaml.load(config, Loader=yaml.Loader)
     sim_rank = SimilarityRank(config)
-    rank_res = sim_rank.rank("电子级酸性试剂", ['14纳米及以下宽先进制程电子级盐酸', '抗干扰性痕量杂质离子检测', '湿电子化学材料纯化除杂', '集成电路芯片先进制程', '国际先进水平', '除杂工艺选型', '电子级盐酸', '重大科学问题', '酸性试剂产品', '电子级硝酸', '电子级硫酸', '国产化配套', '分析检测', '金属离子', '国际smei标准', '1um颗粒数量', '04um颗粒数量', '12英寸晶圆'])
+    rank_res = sim_rank.rank(["电子级酸性试剂"], ['14纳米及以下宽先进制程电子级盐酸', '抗干扰性痕量杂质离子检测', '湿电子化学材料纯化除杂', '集成电路芯片先进制程', '国际先进水平', '除杂工艺选型', '电子级盐酸', '重大科学问题', '酸性试剂产品', '电子级硝酸', '电子级硫酸', '国产化配套', '分析检测', '金属离子', '国际smei标准', '1um颗粒数量', '04um颗粒数量', '12英寸晶圆'])
     print(rank_res)

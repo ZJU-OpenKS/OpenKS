@@ -25,8 +25,6 @@ args = {
     'stopword': '/Users/zongchang/OneDrive/可泛化知识计算引擎的副本/code/get_phrase/stopwords/stopwords_cn.txt',
     'stopword_open': '/Users/zongchang/OneDrive/可泛化知识计算引擎的副本/code/get_phrase/stopwords/hit_stopwords.txt', 
     'params': {
-        'MIN_SCORE': 0.0,
-        'SIM_SCORE': 0.0,
         'MIN_SCORE_TOTAL': 0.2,
         'MIN_WORD_LEN': 3,
         'SUFFIX_REMOVE': True,
