@@ -11,38 +11,39 @@
 ![architect](./docs/pics/architect.jpg)
 
 ## 环境要求
-### 在以下版本依赖下进行测试
-- Python 3.7
-- 百度飞桨Paddle - 1.7.1 (https://github.com/paddlepaddle/paddle)
-- PyTorch - 1.4.0 (https://github.com/pytorch/pytorch)
-- TensorFlow - 2.2.1 (https://github.com/tensorflow/tensorflow)
-- NumPy - 1.18.1 (https://github.com/numpy/numpy)
-- Ray - 1.0.0 (https://github.com/ray-project/ray)
-- scikit-learn - 0.22.1 (https://github.com/scikit-learn/scikit-learn)
-- gensim - 4.0.0 (https://github.com/RaRe-Technologies/gensim)
-- jieba - 0.42.1 (https://github.com/fxsjy/jieba)
-- py2neo - 2020.7b8 (for KGQA application with graph database)(https://pypi.org/project/py2neo/)
-- pyahocorasick - 1.4.0 (for KGQA application with graph database)(https://pypi.org/project/pyahocorasick/)
+### 各模块及其依赖第三方库如下
+| 模块 | 依赖 |
+| :----: | :----: |
+| all | Python 3.7 / NumPy - 1.18.1 (https://github.com/numpy/numpy) / NumPy - 2.4 (https://github.com/networkx/networkx) |
+| models | scikit-learn - 0.22.1 (https://github.com/scikit-learn/scikit-learn) |
+| models.paddle | Paddle - 1.7.1 (https://github.com/paddlepaddle/paddle) |
+| models.pytorch | PyTorch - 1.4.0 (https://github.com/pytorch/pytorch) |
+| models.tensorflow | TensorFlow - 2.2.1 (https://github.com/tensorflow/tensorflow) |
+| models.pytorch.kg_learn_dist | Ray - 1.0.0 (https://github.com/ray-project/ray) |
+| models.distributed | PGL |
+| models.mllib | gensim - 4.0.0 (https://github.com/RaRe-Technologies/gensim) / jieba - 0.42.1 (https://github.com/fxsjy/jieba) |
 
 ## 快速上手
 ### 知识图谱问答
 ```
-python example_kg_qa.py
+python -m examples.kg_qa.py
 ```
 
 ### 文本信息抽取训练
 ```
-python example_text_train.py
+python -m examples.text_train.py
+
+python -m examples.text_train_keyphrase.py
 ```
 
 ### 知识图谱表示学习训练
 ```
-python example_kg_train.py
+python -m examples.kg_train.py
 ```
 
 ### 分布式图表示模型训练(Ray)
 ```
-python example_kg_dist_train.py
+python -m examples.kg_dist_train.py
 ```
 
 ### 分布式图表示模型训练(Fleet)
