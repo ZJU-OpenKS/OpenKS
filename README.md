@@ -31,19 +31,19 @@ python -m examples.kg_qa.py
 
 ### 文本信息抽取训练
 ```
-python -m examples.text_train.py
+python -m examples.text_entity.py
 
-python -m examples.text_train_keyphrase.py
+python -m examples.text_keyphrase.py
 ```
 
 ### 知识图谱表示学习训练
 ```
-python -m examples.kg_train.py
+python -m examples.kg_learn.py
 ```
 
 ### 分布式图表示模型训练(Ray)
 ```
-python -m examples.kg_dist_train.py
+python -m examples.kg_dist_learn.py
 ```
 
 ### 分布式图表示模型训练(Fleet)
