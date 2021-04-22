@@ -6,10 +6,10 @@ import argparse
 import torch
 import torch.nn as nn
 from sklearn.model_selection import train_test_split
-from ..model import GeneralModel
+from ..model import KELearnModel
 
-@GeneralModel.register("general", "PyTorch")
-class GeneralTorch(GeneralModel):
+@KELearnModel.register("KELearn", "PyTorch")
+class KELearnTorch(KELearnModel):
 	def __init__(self, name='pytorch-default', dataset=None, model=None, args=None):
 		self.name = name
 		self.dataset = dataset

@@ -137,7 +137,7 @@ class KGLearnModel(OpenKSModel):
 		return NotImplemented
 
 
-class GeneralModel(OpenKSModel):
+class KELearnModel(OpenKSModel):
 	''' Base class for knowledge graph building trainer, such as text and image information extraction '''
 	def __init__(self, name: str = 'model-name', dataset: MMD = None, args: List = None):
 		self.name = name

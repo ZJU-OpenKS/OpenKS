@@ -6,11 +6,11 @@ import paddle
 import paddle.fluid as fluid
 import time
 import ast
-from ..model import GeneralModel
+from ..model import KELearnModel
 
 
-@GeneralModel.register("general", "Paddle")
-class GeneralPaddle(GeneralModel):
+@KELearnModel.register("KELearn", "Paddle")
+class KELearnPaddle(KELearnModel):
 
 	def __init__(self, name='paddle-default', dataset=None, model=None, args=None):
 		self.name = name

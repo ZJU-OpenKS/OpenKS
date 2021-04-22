@@ -7,14 +7,14 @@ import tensorflow as tf
 import numpy as np
 import ast
 import os
-from ..model import GeneralModel
+from ..model import KELearnModel
 from .utils import extract_kvpairs_in_bio, cal_f1_score, cal_f1_score_org_pro, load_vocabulary
 from .utils import DataProcessor_LSTM as DataProcessor
 from .utils import DataProcessor_LSTM_for_sentences as DataProcessor_predict
 from ..model import logger
 
-@GeneralModel.register("general", "TensorFlow")
-class GeneralTorch(GeneralModel):
+@KELearnModel.register("KELearn", "TensorFlow")
+class KELearnTorch(KELearnModel):
     def __init__(self, name='tensorflow-default', dataset=None, model=None, args=None):
         self.name = name
         self.dataset = dataset

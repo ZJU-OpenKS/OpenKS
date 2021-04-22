@@ -6,6 +6,7 @@ import torch
 import torch.nn as nn
 import numpy as np
 from ...model import TorchModel
+import pdb
 
 
 @TorchModel.register("TransE", "PyTorch")
@@ -29,6 +30,7 @@ class TransE(TorchModel):
 		heads = triples[:, 0]
 		relations = triples[:, 1]
 		tails = triples[:, 2]
+		pdb.set_trace()
 		score = self.entities_emb(heads) + self.relations_emb(relations) - self.entities_emb(tails)
 		score = score.norm(p=self.norm, dim=1)
 		return score

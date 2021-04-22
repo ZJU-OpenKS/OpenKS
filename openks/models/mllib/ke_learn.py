@@ -5,10 +5,10 @@ import logging
 import argparse
 import json
 
-from ..model import GeneralModel
+from ..model import KELearnModel
 
-@GeneralModel.register("general", "MLLib")
-class GeneralMLLib(GeneralModel):
+@KELearnModel.register("KELearn", "MLLib")
+class KELearnMLLib(KELearnModel):
     def __init__(self, name='mllib-default', dataset=None, model=None, args=None):
         self.name = name
         self.dataset = dataset
