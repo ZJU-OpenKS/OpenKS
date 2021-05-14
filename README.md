@@ -14,12 +14,12 @@
 ### 各模块及其依赖第三方库如下
 | 模块 | 依赖 |
 | :----: | :----: |
-| all | Python 3.7 / NumPy - 1.18.1 (https://github.com/numpy/numpy) / NetworkX - 2.4 (https://github.com/networkx/networkx) |
+| all | Python 3.7 / NumPy - 1.19.5 (https://github.com/numpy/numpy) / NetworkX - 2.4 (https://github.com/networkx/networkx) |
 | models | scikit-learn - 0.22.1 (https://github.com/scikit-learn/scikit-learn) |
-| distributed | PGL - 1.0.1 (https://github.com/PaddlePaddle/PGL) / Paddle - 1.7.1 (https://github.com/paddlepaddle/paddle) |
+| distributed | PGL - 1.0.1 (https://github.com/PaddlePaddle/PGL) / Paddle - 1.8.5 (https://github.com/paddlepaddle/paddle) |
 | models.paddle | Paddle - 1.8.5 (https://github.com/paddlepaddle/paddle) |
-| models.pytorch | PyTorch - 1.4.0 (https://github.com/pytorch/pytorch) |
-| models.tensorflow | TensorFlow - 2.2.1 (https://github.com/tensorflow/tensorflow) |
+| models.pytorch | PyTorch - 1.7.1 (https://github.com/pytorch/pytorch) |
+| models.tensorflow | TensorFlow - 1.14.0 (https://github.com/tensorflow/tensorflow) |
 | models.pytorch.kg_learn_dist | Ray - 1.0.0 (https://github.com/ray-project/ray) |
 | models.mllib | gensim - 4.0.0 (https://github.com/RaRe-Technologies/gensim) / jieba - 0.42.1 (https://github.com/fxsjy/jieba) |
 
