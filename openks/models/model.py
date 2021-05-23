@@ -185,3 +185,31 @@ class RecModel(OpenKSModel):
 
 	def run(self, *args):
 		return NotImplemented
+
+
+class VisualConstructionModel(OpenKSModel):
+	''' 
+	Base class for visual part of multimedia knowledge graph building trainer, 
+	which focus on image information extraction 
+	'''
+	def __init__(self, name: str = 'model-name', dataset: MMD = None, args: List = None):
+		self.name = name
+		self.dataset = dataset
+
+	def parse_args(self):
+		return NotImplemented
+
+	def data_reader(self, *args):
+		return NotImplemented
+
+	def evaluate(self, *args):
+		return NotImplemented
+
+	def load_model(self, *args):
+		return NotImplemented
+
+	def save_model(self, *args):
+		return NotImplemented
+
+	def train(self, *args):
+		return NotImplemented
