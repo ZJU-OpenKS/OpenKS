@@ -16,8 +16,10 @@ class GeneralMLLib(GeneralModel):
         self.model = model
 
     def data_reader(self):
-        text = [item for item in self.dataset.bodies[0]]
-        return text
+        dataset = [item for item in self.dataset.bodies]
+        train = dataset[0]
+        valid = dataset[1]
+        return train, valid
 
     def candidate_length_summarize(self, input_path):
         minimum_length = 100
@@ -60,8 +62,8 @@ class GeneralMLLib(GeneralModel):
 
     def run(self):
         model = self.model(self.args)
-        data = self.data_reader()
-        res = model.process(data)
+        train, valid = self.data_reader()
+        res = model.process(train)
 
         with open(self.args['result_dir'] + '/' + self.args['extractor'], "w") as out:
             for res_item in res:

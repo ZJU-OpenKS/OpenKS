@@ -20,13 +20,10 @@ OpenKSModel.list_modules()
 # 算法模型选择配置
 args = {
     'extractor': 'topic-rake', 
-    'pretrained': '/Users/zongchang/Downloads/embedding_model/baike_word_ngram_300d', 
-    'finetuned': '/Users/zongchang/Downloads/embedding_model/mydomain_word_ngram_300d',
-    'stopword': '/Users/zongchang/OneDrive/可泛化知识计算引擎的副本/code/get_phrase/stopwords/stopwords_cn.txt',
-    'stopword_open': '/Users/zongchang/OneDrive/可泛化知识计算引擎的副本/code/get_phrase/stopwords/hit_stopwords.txt', 
+    'finetuned': '/path/to/finetuned/word_embedding',
+    'stopword': '/path/to/domain/stopwords.txt',
+    'stopword_open': '/path/to/common/stopwords.txt', 
     'params': {
-        'MIN_SCORE': 0.0,
-        'SIM_SCORE': 0.0,
         'MIN_SCORE_TOTAL': 0.2,
         'MIN_WORD_LEN': 3,
         'SUFFIX_REMOVE': True,
@@ -34,7 +31,7 @@ args = {
         'OPEN_STOPWORD': True,
         'WORD_SEPARATOR': True
     },
-    'result_dir': '/Users/zongchang/OneDrive/可泛化知识计算引擎的副本/code/get_phrase/result_data', 
+    'result_dir': loader_config.source_uris, 
     'rank': 'average'
 }
 
@@ -45,6 +42,6 @@ print("根据配置，使用 {} 框架，{} 执行器训练 {} 模型。".format
 print("-----------------------------------------------")
 # 模型训练
 executor = OpenKSModel.get_module(platform, executor)
-text_ner = executor(dataset=dataset, model=OpenKSModel.get_module(platform, model), args=args)
-text_ner.run()
+text_keyphrase = executor(dataset=dataset, model=OpenKSModel.get_module(platform, model), args=args)
+text_keyphrase.run()
 print("-----------------------------------------------")

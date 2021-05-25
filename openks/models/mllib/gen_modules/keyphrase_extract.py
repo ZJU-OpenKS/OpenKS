@@ -8,7 +8,8 @@ import logging
 import jieba
 import jieba.posseg as pg
 import json
-from gensim.models import Word2Vec
+import networkx as nx
+import copy
 
 from ...model import MLModel
 from .topic_similarity_rank import SimilarityRank
@@ -41,9 +42,8 @@ class Rake(MLModel):
         return False 
 
     def process(self, dataset, top_k=100):
-        texts = dataset[1]
         result = []
-        for text in texts:
+        for text in dataset:
             sentences = self.split_sentences(text)
             phrases = self.generate_candidate_keywords(sentences)
             if self.params['SUFFIX_REMOVE']:
@@ -51,7 +51,7 @@ class Rake(MLModel):
             word_scores = self.calculate_word_scores(phrases)
             keyword_candidates = self.generate_candidate_keyword_scores(phrases, word_scores)
             sorted_keywords = sorted(keyword_candidates.items(), key=lambda x:x[1], reverse=True)
-            result.append([k for k in sorted_keywords[:top_k] if k[1] >= self.params['MIN_SCORE']])
+            result.append([k for k in sorted_keywords[:top_k]])
         return result
 
 
@@ -95,6 +95,13 @@ class Rake(MLModel):
                             continue
                 s = ''.join(s.split(' '))
 
+            # assumption：if a verb is not used in phrase, it usually after some preposition
+            slist = pg.cut(s)
+            for word in slist:
+                for tmp in ['再', '上', '用于', '可以', '不会', '有效', '通过']:
+                    if word.flag == 'v' and (tmp + word.word or s.index(word.word) == 0) in s:
+                        s = re.sub(tmp + word.word, '|', s)
+
             # 处理多字停用词，不切词直接替换
             for stop in self.stop_words:
                 if len(stop) > 1:
@@ -133,8 +140,10 @@ class Rake(MLModel):
         words = []
         for single_word in [w for w in text]:
             current_word = single_word.strip().lower()
+            if current_word != '' and current_word.isascii():
+                words.extend(list(current_word))
             # leave numbers in phrase, but don't count as words, since they tend to invalidate scores of their phrases
-            if current_word != '' and not self.is_number(current_word):
+            elif current_word != '' and not self.is_number(current_word):
                 words.append(current_word)
         # print(words)
         return words
@@ -237,33 +246,65 @@ class TopicRake(MLModel):
         self.rank_alg = args['rank']
         self.params = args['params']
 
+    # For each phrase candidate,
+    # calculate similarity with all other phrases,
+    # generate similarity triples and apply TextRank
+    def semantic_graph_rank(self, topics, phrases):
+        similar_graph = []
+        topics = list(set(topics))
+        phrases = list(set(phrases))
+        topic_sim = self.similarRank.rank(topics, phrases)
+        for item in topic_sim:
+            similar_graph.append(('topic', item[0], item[1]))
+            similar_graph.append((item[0], 'topic', item[1]))
+        for phrase in phrases:
+            tmp = copy.deepcopy(phrases)
+            tmp.remove(phrase)
+            inter_sim = self.similarRank.rank([phrase], tmp)
+            for item in inter_sim:
+                similar_graph.append((phrase, item[0], item[1]))
+                similar_graph.append((item[0], phrase, item[1]))
+        graph=nx.DiGraph()
+        graph.add_weighted_edges_from(similar_graph)
+        scores = nx.pagerank_numpy(graph)
+        scores.pop('topic')
+        sorted_list = sorted(scores.items(), key=lambda x:x[1], reverse=True)
+        max_score = sorted_list[0][1]
+        min_score = sorted_list[-1][1]
+        if max_score - min_score == 0.0:
+            return {item[0]: 1.0 for item in sorted_list}
+        else:
+            return {item[0]: (item[1] - min_score) / (max_score - min_score) for item in sorted_list}
+
     def process(self, dataset, top_k=100):
-        topic_text = dataset
-        key_phrases = self.rake.process(dataset)
+        topic_text = [item[0] for item in list(dataset)]
+        doc_text = [item[1] for item in list(dataset)]
+        key_phrases = self.rake.process(doc_text)
+        topic_phrases = self.rake.process(topic_text)
         total_result = []
-        total_count = len(topic_text[0])
+        total_count = len(topic_phrases)
         for i in range(total_count):
             result_dict = {}
-            topic = topic_text[0][i]
-            key_phrase = key_phrases[i]
-            phrases = [item[0] for item in key_phrase]
-            topic_phrases = self.similarRank.rank(topic, phrases)
+            topics = [item[0] for item in topic_phrases[i]]
+            phrases = [item[0] for item in key_phrases[i]]
+
+            scores = self.semantic_graph_rank(topics, phrases)
+
+            topic_sim = self.similarRank.rank(topics, phrases)
             for j in range(len(phrases)):
                 if self.rank_alg == 'average':
-                    item = phrases[j]
-                    for k in range(len(topic_phrases)):
-                        if topic_phrases[k][0] == item:
-                            result_dict[item] = (topic_phrases[k][1] + key_phrase[j][1]) / 2
+                    for k in range(len(topic_sim)):
+                        if topic_sim[k][0] == phrases[j]:
+                            result_dict[phrases[j]] = (key_phrases[i][j][1] + 2 * topic_sim[k][1] + scores[key_phrases[i][j][0]]) / 4
                         else:
                             continue
-            sorted_list = []
-            sorted_keys = sorted(result_dict, key=result_dict.get, reverse=True)
-            
+            high_score_dict = {}
             for w in result_dict:
-                if result_dict[w] < self.params['SIM_SCORE']:
-                    continue
-                sorted_list.append([w, result_dict[w]])
-            total_result.append(sorted_list)
+                if result_dict[w] >= self.params['MIN_SCORE_TOTAL']:
+                    high_score_dict[w] = result_dict[w]
+
+            sorted_list = sorted(high_score_dict, key=high_score_dict.get, reverse=True)
+            total_result.append([[item, high_score_dict[item]] for item in sorted_list])
         return total_result
 
 

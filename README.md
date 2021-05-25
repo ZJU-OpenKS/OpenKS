@@ -1,6 +1,4 @@
-![dcd](./docs/pics/zjudcd.png)
-
-# ![logo](./docs/pics/logo.png) 领域可泛化的知识学习与计算引擎
+# OpenKS（知目）——领域可泛化的知识学习与计算引擎
 
 ## 平台支持功能
 | 基础能力 | 领域泛化能力 | 跨领域能力 | 现实问题解决能力 | 开放服务使用能力 |
@@ -13,36 +11,39 @@
 ![architect](./docs/pics/architect.jpg)
 
 ## 环境要求
-### 在以下版本依赖下进行测试
-- Python 3.7
-- 百度飞桨Paddle - 1.7.1 (https://github.com/paddlepaddle/paddle)
-- PyTorch - 1.4.0 (https://github.com/pytorch/pytorch)
-- TensorFlow - 2.2.1 (https://github.com/tensorflow/tensorflow)
-- NumPy - 1.18.1 (https://github.com/numpy/numpy)
-- Ray - 1.0.0 (https://github.com/ray-project/ray)
-- scikit-learn - 0.22.1 (https://github.com/scikit-learn/scikit-learn)
-- py2neo - 2020.7b8 (for KGQA application with graph database)(https://pypi.org/project/py2neo/)
-- pyahocorasick - 1.4.0 (for KGQA application with graph database)(https://pypi.org/project/pyahocorasick/)
+### 各模块及其依赖第三方库如下
+| 模块 | 依赖 |
+| :----: | :----: |
+| all | Python 3.7 / NumPy - 1.18.1 (https://github.com/numpy/numpy) / NetworkX - 2.4 (https://github.com/networkx/networkx) |
+| models | scikit-learn - 0.22.1 (https://github.com/scikit-learn/scikit-learn) |
+| distributed | PGL - 1.0.1 (https://github.com/PaddlePaddle/PGL) / Paddle - 1.7.1 (https://github.com/paddlepaddle/paddle) |
+| models.paddle | Paddle - 1.7.1 (https://github.com/paddlepaddle/paddle) |
+| models.pytorch | PyTorch - 1.4.0 (https://github.com/pytorch/pytorch) |
+| models.tensorflow | TensorFlow - 2.2.1 (https://github.com/tensorflow/tensorflow) |
+| models.pytorch.kg_learn_dist | Ray - 1.0.0 (https://github.com/ray-project/ray) |
+| models.mllib | gensim - 4.0.0 (https://github.com/RaRe-Technologies/gensim) / jieba - 0.42.1 (https://github.com/fxsjy/jieba) |
 
 ## 快速上手
 ### 知识图谱问答
 ```
-python example_kg_qa.py
+python -m examples.kg_qa.py
 ```
 
 ### 文本信息抽取训练
 ```
-python example_text_train.py
+python -m examples.text_entity.py
+
+python -m examples.text_keyphrase.py
 ```
 
 ### 知识图谱表示学习训练
 ```
-python example_kg_train.py
+python -m examples.kg_learn.py
 ```
 
 ### 分布式图表示模型训练(Ray)
 ```
-python example_kg_dist_train.py
+python -m examples.kg_dist_learn.py
 ```
 
 ### 分布式图表示模型训练(Fleet)
@@ -121,10 +122,9 @@ print(fetcher.fetch_by_db_query(graph_db))
 ![pipeline](./docs/pics/running_steps.jpg)
 
 ## 团队
-### 浙江大学成员：
-- 教师团队：庄越挺老师、汤斯亮老师、肖俊老师、吴超老师、鲁伟明老师、张寅老师、杨易老师、杨洋老师、况琨老师
-- 学生团队：宗畅、倪子煊、慕宗燊、叶钰楠、张凤达、常嘉乐、李星晨、王晓强、李俊成、李嘉成、沈锴、戴光裕、陈董、丁亚东、黄成越、唐作其、李佳晖、肖少宁、高凯锋、胡一帆、周宇航、叶寅
+### 主要成员：
+- 学生：宗畅、倪子煊、慕宗燊、叶钰楠、张凤达、常嘉乐、李星晨、王晓强、李俊成、李嘉成、沈锴、戴光裕、陈董、丁亚东、黄成越、唐作其、李佳晖、肖少宁、高凯锋、胡一帆、周宇航、叶寅
+- 教师：庄越挺、汤斯亮、肖俊、吴超、鲁伟明、张寅、杨易、杨洋、况琨
 
-### 其他参与单位：
-- 学术机构：北京大学、北京航空航天大学、哈尔滨工业大学、西北工业大学、之江实验室
-- 企业：百度、海康威视、同盾科技、科大讯飞
+### 参与单位：
+浙江大学、北京大学、北京航空航天大学、哈尔滨工业大学、西北工业大学、之江实验室、百度、海康威视、同盾科技、科大讯飞、量知数据
