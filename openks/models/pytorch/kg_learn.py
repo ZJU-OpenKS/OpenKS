@@ -12,7 +12,6 @@ from torch.optim import optimizer
 import numpy as np
 from sklearn.model_selection import train_test_split
 from ..model import KGLearnModel, TorchDataset
-import pdb
 
 logger = logging.getLogger(__name__)
 
@@ -93,7 +92,6 @@ class KGLearnTorch(KGLearnModel):
 			triplets = torch.stack((all_entities, relations, tails), dim=2).reshape(-1, 3)
 			heads_predictions = model.predict(triplets).reshape(current_batch_size, -1)
 
-			pdb.set_trace()
 
 			predictions = torch.cat((tails_predictions, heads_predictions), dim=0)
 			ground_truth_entity_id = torch.cat((head.reshape(-1, 1), tail.reshape(-1, 1)))
