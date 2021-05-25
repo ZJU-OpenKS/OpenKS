@@ -9,3 +9,5 @@ from .gen_learn import *
 from .kg_modules import *
 from .gen_modules import *
 from .kg_learn_dist import *
+from .visual_entity_learn import *
+from .visual_relation_learn import *
