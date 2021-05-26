@@ -21,8 +21,6 @@ from .mmd_modules.det_sgg.maskrcnn_benchmark.data.datasets.utils.load_files impo
 from .mmd_modules.det_sgg.maskrcnn_benchmark.data import make_data_loader
 from .mmd_modules.det_sgg.maskrcnn_benchmark.solver import make_lr_scheduler
 from .mmd_modules.det_sgg.maskrcnn_benchmark.solver import make_optimizer
-from .mmd_modules.det_sgg.maskrcnn_benchmark.engine.trainer import do_train
-from .mmd_modules.det_sgg.maskrcnn_benchmark.modeling.detector import build_detection_model
 from .mmd_modules.det_sgg.maskrcnn_benchmark.engine.inference import inference
 from .mmd_modules.det_sgg.relation_predictor.relation_predictor import RelationPredictor
 from .mmd_modules.det_sgg.relation_predictor.AttrRCNN import AttrRCNN
@@ -42,8 +40,8 @@ class VisualRelationTorch(VisualConstructionModel):
         cfg.set_new_allowed(True)
         cfg.merge_from_other_cfg(sg_cfg)
         cfg.set_new_allowed(False)
-        cfg.merge_from_file(args.config_file)
-        cfg.merge_from_list(args.opts)
+        cfg.merge_from_file(self.args.config_file)
+        cfg.merge_from_list(self.args.opts)
         cfg.freeze()
 
         # Whether use multi gpus for model, initialize the process group.
@@ -64,7 +62,7 @@ class VisualRelationTorch(VisualConstructionModel):
         self.logger.info("Collecting env info (might take some time)")
         self.logger.info("\n" + collect_env_info())
 
-        with open(args.config_file, "r") as cf:
+        with open(self.args.config_file, "r") as cf:
             config_str = "\n" + cf.read()
             self.logger.info(config_str)
         self.logger.info("Running with config:\n{}".format(cfg))
@@ -83,10 +81,10 @@ class VisualRelationTorch(VisualConstructionModel):
         self.scheduler = make_lr_scheduler(cfg, self.optimizer)
 
     
-    def parse_args(self):
+    def parse_args(self, args):
         parser = argparse.ArgumentParser(description="Visual Relation Extraction Models")
         parser.add_argument("--config_file", 
-                            default="mmd_modules/det_sgg/sgg_configs/vg_vrd/rel_danfeiX_FPN50_nm.yaml",
+                            default="openks/models/pytorch/mmd_modules/det_sgg/sgg_configs/vg_vrd/rel_danfeiX_FPN50_nm.yaml",
                             metavar="FILE",
                             help="path to config file")
         parser.add_argument("--local_rank", type=int, default=0)
@@ -94,6 +92,12 @@ class VisualRelationTorch(VisualConstructionModel):
             "--ckpt",
             help="The path to the checkpoint for test, default is the latest checkpoint.",
             default="",
+        )
+        parser.add_argument(
+            "opts",
+            help="Modify config options using the command-line",
+            default=None,
+            nargs=argparse.REMAINDER,
         )
         parser.add_argument(
             "opts",
@@ -146,7 +150,7 @@ class VisualRelationTorch(VisualConstructionModel):
         return reduced_losses
 
     @torch.no_grad()
-    def evaluate(self, *args):
+    def evaluate(self):
         self.load_model(cfg.OUTPUT_DIR)
         iou_types = ("bbox",)
         if cfg.MODEL.MASK_ON:
@@ -188,6 +192,8 @@ class VisualRelationTorch(VisualConstructionModel):
             # this should be removed if we update BatchNorm stats
             broadcast_buffers=False,
         )
+        else:
+            model = self.model
         arguments = {}
         arguments["iteration"] = 0
 
@@ -218,7 +224,7 @@ class VisualRelationTorch(VisualConstructionModel):
         meters = MetricLogger(delimiter="  ")
 
         # save procedure is intergrated in this function
-        # TODO: Implement a training procedure here to flex the training process.
+        # NOTE: Implement a training procedure here to flex the training process.
         logger = logging.getLogger("VisualRelationTraining")
         logger.info("Start training")
         max_iter = len(data_loader)
@@ -357,17 +363,13 @@ class VisualRelationTorch(VisualConstructionModel):
             )
         )
 
-        return model
+        # return model
     
-    def run(self):
-        self.model = self.train()
-
-
-if __name__ == '__main__':
-
-    args = {
-        "MODEL.DEVICE": 'cpu'
-    }
-    learn_model = VisualRelationTorch(args=args)
-    learn_model.run()
+    def run(self, mode=""):
+        if mode == "train":
+            self.train()
+        elif mode == "eval":
+            self.evaluate()
+        elif mode == "single":
+            pass
     

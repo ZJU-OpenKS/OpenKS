@@ -2,7 +2,11 @@
 
 
 def _register_generic(module_dict, module_name, module):
-    assert module_name not in module_dict
+    # try:
+    # import pdb; pdb.set_trace()
+    assert module_name not in module_dict, f"module_dict is {module_dict}, module_name is {module_name}"
+    # except:
+    #     import pdb; pdb.set_trace()
     module_dict[module_name] = module
 
 

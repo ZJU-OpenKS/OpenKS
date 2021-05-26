@@ -1,5 +1,5 @@
 MODEL:
-    META_ARCHITECTURE: "SceneParser"
+    META_ARCHITECTURE: "RelationPredictor"
     WEIGHT: "pretrained_model/sgg_model_zoo/oi_R152_reldn.pth"
     USE_FREQ_PRIOR: False
     FREQ_PRIOR: "openimages_v5c/vrd/vrd_frequency_prior_include_background_update.npy"

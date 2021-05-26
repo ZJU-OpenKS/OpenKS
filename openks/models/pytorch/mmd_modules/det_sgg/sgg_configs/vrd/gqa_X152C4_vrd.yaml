@@ -1,5 +1,5 @@
 MODEL:
-    META_ARCHITECTURE: "SceneParser"
+    META_ARCHITECTURE: "RelationPredictor"
     WEIGHT: "pretrained_model/gqa/gqa_X152C4_vrdvgvrd_lr0.003_bsz8_objscore005_nooverlap/model_0080000.pth"
     USE_FREQ_PRIOR: True
     FREQ_PRIOR: "visualgenome/label_vg2gqa_saeed_frequency_prior_include_background.npy"

@@ -9,9 +9,9 @@ from sklearn.model_selection import train_test_split
 from ..model import VisualConstructionModel
 
 
-@VisualConstructionModel.register("VisualRelation", "PyTorch")
+@VisualConstructionModel.register("VisualEntity", "PyTorch")
 class VisualRelationTorch(VisualConstructionModel):
-    def __init__(self, name: str, dataset: MMD, args: List):
+    def __init__(self, name: str, dataset=None, args=None):
         super().__init__(name=name, dataset=dataset, args=args)
     
     def parse_args(self):

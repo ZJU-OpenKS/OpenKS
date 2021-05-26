@@ -198,3 +198,6 @@ logs/
 
 # VScode
 .vscode
+
+# Pytorch Models
+*.pth

@@ -13,7 +13,7 @@ from tqdm import tqdm
 from maskrcnn_benchmark.data.datasets.evaluation import evaluate
 from maskrcnn_benchmark.structures.tsv_file_ops import tsv_writer
 from maskrcnn_benchmark.data.datasets.utils.load_files import load_labelmap_file
-from scene_graph_benchmark.scene_parser import SceneParserOutputs
+from relation_predictor.relation_predictor import RelationPredictorOutputs
 
 from ..utils.comm import is_main_process, get_world_size
 from ..utils.comm import all_gather, gather_on_master
@@ -116,7 +116,7 @@ def convert_predictions_to_tsv(predictions, dataset, output_folder,
             image_width = dataset.get_img_info(idx)['width']
             image_height = dataset.get_img_info(idx)['height']
 
-            if isinstance(prediction, SceneParserOutputs):
+            if isinstance(prediction, RelationPredictorOutputs):
                 prediction_pred = prediction.prediction_pairs
                 prediction = prediction.predictions
 

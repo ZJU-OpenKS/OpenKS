@@ -14,7 +14,7 @@ from maskrcnn_benchmark.utils.comm import get_world_size, synchronize
 from maskrcnn_benchmark.utils.metric_logger import MetricLogger
 from maskrcnn_benchmark.engine.inference import inference
 
-from apex import amp
+# from apex import amp
 
 def reduce_loss_dict(loss_dict):
     """
