@@ -54,7 +54,7 @@ class LinkPrediction(TorchModel):
 
 
 @TorchModel.register("RelationPrediction", "PyTorch")
-class RelationPrediction(TorchModel):
+class   (TorchModel):
     def __init__(self, node_embeddings: torch.Tensor,
                  relation_embeddings: torch.Tensor) -> None:
         self.node_embeddings = node_embeddings
@@ -63,4 +63,4 @@ class RelationPrediction(TorchModel):
     def forward(self, head_id: int, tail_id: int):
         head_embed = self.node_embeddings[head_id]
         tail_embed = self.node_embeddings[tail_id]
-        return head_embed + self.relation_embeddings - tail_embed
+        return torch.norm(head_embed + self.relation_embeddings - tail_embed)
