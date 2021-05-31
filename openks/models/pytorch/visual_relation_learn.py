@@ -83,8 +83,10 @@ class VisualRelationTorch(VisualConstructionModel):
     
     def parse_args(self, args):
         parser = argparse.ArgumentParser(description="Visual Relation Extraction Models")
+        # TODO: The train and test process need different config WEIGHT
         parser.add_argument("--config_file", 
                             default="openks/models/pytorch/mmd_modules/det_sgg/sgg_configs/vg_vrd/rel_danfeiX_FPN50_nm.yaml",
+                            # default="openks/models/pytorch/mmd_modules/det_sgg/configs/e2e_faster_rcnn_R_50_FPN_1x.yaml",
                             metavar="FILE",
                             help="path to config file")
         parser.add_argument("--local_rank", type=int, default=0)
@@ -205,6 +207,7 @@ class VisualRelationTorch(VisualConstructionModel):
         )
         extra_checkpoint_data = checkpointer.load(cfg.MODEL.WEIGHT)
         arguments.update(extra_checkpoint_data)
+        arguments["iteration"] = 0
 
         data_loader = make_data_loader(
             cfg,
@@ -365,11 +368,11 @@ class VisualRelationTorch(VisualConstructionModel):
 
         # return model
     
-    def run(self, mode=""):
+    def run(self, mode="train"):
         if mode == "train":
             self.train()
         elif mode == "eval":
             self.evaluate()
         elif mode == "single":
-            pass
+            raise ValueError("UnImplemented mode!")
     

@@ -80,7 +80,7 @@ def _get_tensor_from_boxlist(proposals, field='labels'):
                 (im_inds, im_ind * torch.ones(num_proposals_im, 1)), dim=0)
 
     # TODO: support both cpu and gpu
-    im_inds_batch = torch.Tensor(im_inds).long().cuda()
+    im_inds_batch = torch.Tensor(im_inds).long().to(bbox_batch.device)
 
     return bbox_batch, output_batch, im_inds_batch
 

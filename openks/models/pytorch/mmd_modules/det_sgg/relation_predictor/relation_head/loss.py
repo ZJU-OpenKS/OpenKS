@@ -360,7 +360,6 @@ class FastRCNNLossComputation(object):
 
         labels = cat([proposal.get_field("labels") for proposal in proposals], dim=0)
 
-        # import pdb; pdb.set_trace()
         rel_fg_cnt = len(labels.nonzero())
         rel_bg_cnt = labels.shape[0] - rel_fg_cnt
         ce_weights = labels.new(class_logits.size(1)).fill_(1).float()
