@@ -129,6 +129,8 @@ class NeuralMotif(nn.Module):
             = _get_tensor_from_boxlist(proposals, 'boxes_all')
 
         # obj_gt_labels: (N,). Not one hot vector.
+        # NOTE: by Yunfei Wei, sgg doesnot need this, we just need the labels field for computing context.
+        # However I keep the original codes of scene graph benchmark.
         obj_gt_labels = None
         if self.training:
             _, obj_gt_labels, _ \

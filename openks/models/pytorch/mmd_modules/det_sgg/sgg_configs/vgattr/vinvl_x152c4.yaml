@@ -1,6 +1,7 @@
 MODEL:
     META_ARCHITECTURE: "AttrRCNN"
-    WEIGHT: "pretrained_model/gqa/gqa_X152C4_vrdvgvrd_lr0.003_bsz8_objscore005_nooverlap/model_0080000.pth"
+    # WEIGHT: "pretrained_model/gqa/gqa_X152C4_vrdvgvrd_lr0.003_bsz8_objscore005_nooverlap/model_0080000.pth"
+    WEIGHT: "/data5/zhaolichen/codes/openks-wei/sgg_models/vinvl/vinvl_vg_x152c4.pth"
     BACKBONE:
       CONV_BODY: "R-152-C4"
     RESNETS:
@@ -28,9 +29,14 @@ INPUT:
     MAX_SIZE_TEST: 1000
     PIXEL_MEAN: [103.530, 116.280, 123.675]
 DATASETS:
-    FACTORY_TEST: ("ODTSVDataset",)
-    TEST: ("flickr30k/tsv/flickr30k.yaml",)
-    LABELMAP_FILE: "visualgenome/VG-SGG-dicts-vgoi6-clipped.json"
+  FACTORY_TRAIN: ("VGTSVDataset",)
+  FACTORY_TEST: ("VGTSVDataset",)
+  TRAIN: ("visualgenome/train_danfeiX_relation_nm.yaml",)
+  TEST: ("visualgenome/test_danfeiX_relation.yaml",)
+# 
+#     FACTORY_TEST: ("ODTSVDataset",)
+#     TEST: ("flickr30k/tsv/flickr30k.yaml",)
+#     LABELMAP_FILE: "visualgenome/VG-SGG-dicts-vgoi6-clipped.json"
 DATALOADER:
     NUM_WORKERS: 0
 SOLVER:
@@ -47,6 +53,6 @@ TEST:
     SAVE_RESULTS_TO_TSV: True
     TSV_SAVE_SUBSET: ['rect', 'class', 'conf', 'feature']
     GATHER_ON_CPU: True
-OUTPUT_DIR: "./output/X152C5_test"
-DATA_DIR: "./datasets"
+OUTPUT_DIR: "./sgg_configs/vgattr"
+DATA_DIR: "./openks/data"
 DISTRIBUTED_BACKEND: 'gloo'

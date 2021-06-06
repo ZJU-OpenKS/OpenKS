@@ -12,6 +12,7 @@ from tqdm import tqdm
 import torch
 import torch.nn as nn
 import torch.distributed as dist
+from easydict import EasyDict
 
 from ..model import VisualConstructionModel
 
@@ -39,6 +40,7 @@ class VisualRelationTorch(VisualConstructionModel):
         self.args = self.parse_args(args)
         cfg.set_new_allowed(True)
         cfg.merge_from_other_cfg(sg_cfg)
+        cfg.MODEL.DEVICE = self.args['MODEL.DEVICE']
         cfg.set_new_allowed(False)
         cfg.merge_from_file(self.args.config_file)
         cfg.merge_from_list(self.args.opts)
@@ -76,45 +78,31 @@ class VisualRelationTorch(VisualConstructionModel):
             self.model = RelationPredictor(cfg)
         elif cfg.MODEL.META_ARCHITECTURE == "AttrRCNN":
             self.model = AttrRCNN(cfg)
+
+        print('MODEL DEVICE', cfg.MODEL.DEVICE, flush=True)
         self.device = self.model.to(cfg.MODEL.DEVICE)
         self.optimizer = make_optimizer(cfg, self.model)
         self.scheduler = make_lr_scheduler(cfg, self.optimizer)
 
     
     def parse_args(self, args):
-        parser = argparse.ArgumentParser(description="Visual Relation Extraction Models")
-        # TODO: The train and test process need different config WEIGHT
-        parser.add_argument("--config_file", 
-                            default="openks/models/pytorch/mmd_modules/det_sgg/sgg_configs/vg_vrd/rel_danfeiX_FPN50_nm.yaml",
-                            # default="openks/models/pytorch/mmd_modules/det_sgg/configs/e2e_faster_rcnn_R_50_FPN_1x.yaml",
-                            metavar="FILE",
-                            help="path to config file")
-        parser.add_argument("--local_rank", type=int, default=0)
-        parser.add_argument(
-            "--ckpt",
-            help="The path to the checkpoint for test, default is the latest checkpoint.",
-            default="",
-        )
-        parser.add_argument(
-            "opts",
-            help="Modify config options using the command-line",
-            default=None,
-            nargs=argparse.REMAINDER,
-        )
-        parser.add_argument(
-            "opts",
-            help="Modify config options using the command-line",
-            default=None,
-            nargs=argparse.REMAINDER,
-        )
-        parser.add_argument(
-            "MODEL.DEVICE",
-            help="Modify config options using the command-line",
-            default="cuda",
-            nargs=argparse.REMAINDER,
-        )
+        args_ = {
+            'MODEL.DEVICE': 'cuda',
+            'opts': [],
+            'ckpt': "",
+            'mode': 'relation'
+        }
 
-        args = parser.parse_args()
+        args_.update(args)
+        args = EasyDict(args_)
+        if args.mode == 'entity':
+            args.config_file = 'openks/models/pytorch/mmd_modules/det_sgg/sgg_configs/vgattr/vinvl_x152c4.yaml'
+        elif args.mode  == 'relation':
+            args.config_file = 'openks/models/pytorch/mmd_modules/det_sgg/sgg_configs/vg_vrd/rel_danfeiX_FPN50_nm.yaml'
+        else:
+            raise NotImplementedError(args)
+        print('Training Use Args', args)
+        # os.environ["CUDA_VISIBLE_DEVICES"] = "1"
         return args
 
     def _load_model(self, output_dir):

@@ -183,6 +183,9 @@ celerybeat-schedule
 .project
 .pydevproject
 
+# vim
+*.swp
+
 # mkdocs documentation
 /site
 
