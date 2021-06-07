@@ -17,8 +17,36 @@ class TransH(TorchModel):
 		self.num_relation = kwargs['num_relation']
 		self.hidden_size = kwargs['hidden_size']
 		self.margin = kwargs['margin']
-		self.norm = 1
+		# self.norm = 1
+		self.epsilon = kwargs['epsilon']
+		self.gamma = kwargs['gamma']
 
+		self.uniform_range = (self.epsilon + self.gamma) / self.hidden_size
+
+		self.entity_dim = self.hidden_size * 2 if kwargs['double_entity_embedding'] else self.hidden_size
+		self.relation_dim = self.hidden_size * 2 if kwargs['double_relation_embedding'] else self.hidden_size
+
+		self.entity_embedding = nn.Parameter(torch.zeros(self.num_entity, self.entity_dim))
+		nn.init.uniform_(
+			tensor=self.entity_embedding,
+			a=-self.uniform_range,
+			b=self.uniform_range
+		)
+
+		self.relation_embedding = nn.Parameter(torch.zeros(self.num_relation, self.relation_dim))
+		nn.init.uniform_(
+			tensor=self.relation_embedding,
+			a=-self.uniform_range,
+			b=self.uniform_range
+		)
+
+		self.norm_vector = nn.Parameter(torch.zeros(self.num_relation, self.relation_dim))
+		nn.init.uniform_(
+			tensor=self.norm_vector,
+			a=-self.uniform_range,
+			b=self.uniform_range
+		)
+		'''
 		uniform_range = 6 / np.sqrt(self.hidden_size)
 		self.entities_emb = nn.Embedding(self.num_entity, self.hidden_size)
 		self.relations_emb = nn.Embedding(self.num_relation, self.hidden_size)
@@ -26,7 +54,33 @@ class TransH(TorchModel):
 		self.entities_emb.weight.data.uniform_(-uniform_range, uniform_range)
 		self.relations_emb.weight.data.uniform_(-uniform_range, uniform_range)
 		self.norm_vector.weight.data.uniform_(-uniform_range, uniform_range)
+		'''
 
+	def forward(self, head, relation, tail, r_norm, mode):
+		h = self._transfer(head, r_norm)
+		t = self._transfer(tail, r_norm)
+		if mode == 'head-batch':
+			score = h + (relation - t)
+		else:
+			score = (h + relation) - t
+
+		score = self.gamma - torch.norm(score, p=1, dim=2)
+		return score
+
+	def _transfer(self, e, norm):
+		norm = F.normalize(norm, p=2, dim=-1)
+		assert e.shape[0] == norm.shape[0]
+		'''
+		if e.shape[0] != norm.shape[0]:
+			e = e.view(-1, norm.shape[0], e.shape[-1])
+			norm = norm.view(-1, norm.shape[0], norm.shape[-1])
+			e = e - torch.sum(e * norm, -1, True) * norm
+			return e.view(-1, e.shape[-1])
+		else:
+		'''
+		return e - torch.sum(e * norm, -1, True) * norm
+
+	'''
 	def _algorithm(self, triples):
 		""" graph embedding similarity algorithm method """
 		heads = triples[:, 0]
@@ -38,16 +92,6 @@ class TransH(TorchModel):
 		score = h + self.relations_emb(relations) - t
 		score = score.norm(p=self.norm, dim=1)
 		return score
-
-	def _transfer(self, e, norm):
-		norm = F.normalize(norm, p = 2, dim = -1)
-		if e.shape[0] != norm.shape[0]:
-			e = e.view(-1, norm.shape[0], e.shape[-1])
-			norm = norm.view(-1, norm.shape[0], norm.shape[-1])
-			e = e - torch.sum(e * norm, -1, True) * norm
-			return e.view(-1, e.shape[-1])
-		else:
-			return e - torch.sum(e * norm, -1, True) * norm
 
 	def loss(self, positive_score, negative_score):
 		"""graph embedding loss function"""
@@ -64,3 +108,4 @@ class TransH(TorchModel):
 	def predict(self, triples):
 		"""dissimilar score calculation for triples"""
 		return self._algorithm(triples)
+	'''
