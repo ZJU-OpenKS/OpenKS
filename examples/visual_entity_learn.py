@@ -11,7 +11,7 @@ args = {
     }
 platform = 'PyTorch'
 executor = 'VisualRelation'
-model = 'pytorch-VisualRelationExtractor'
+model = 'pytorch-VisualEntityExtractor'
 print("根据配置，使用 {} 框架，{} 执行器训练 {} 模型。".format(platform, executor, model))
 print("-----------------------------------------------")
 # 模型训练
