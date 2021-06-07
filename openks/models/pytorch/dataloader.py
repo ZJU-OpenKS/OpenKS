@@ -1,3 +1,5 @@
+# Copyright (c) 2021 OpenKS Authors, Dlib Lab, Peking University. 
+# All Rights Reserved.
 #!/usr/bin/python3
 
 from __future__ import absolute_import
