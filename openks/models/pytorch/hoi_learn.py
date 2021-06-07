@@ -28,6 +28,7 @@ from .mmd_modules.HOI.util import misc as utils
 
 @VisualConstructionModel.register("HOI", "PyTorch")
 class VisualRelationTorch(VisualConstructionModel):
+    # TODO distributed learning is not complete.
     def __init__(self, name: str = 'pytorch-default', use_distributed: bool = False, args = {"hoi": True}):
         self.name = name
         self.args = self.parse_args(args)
@@ -152,7 +153,7 @@ class VisualRelationTorch(VisualConstructionModel):
 
         parser.add_argument('--output_dir', default='logs_hoi',
                             help='path where to save, empty for no saving')
-        parser.add_argument('--device', default='cpu',
+        parser.add_argument('--device', default='cuda',
                             help='device used for training / testing')
         parser.add_argument('--seed', default=42, type=int)
         parser.add_argument('--resume', default='', help='resume from checkpoint')
