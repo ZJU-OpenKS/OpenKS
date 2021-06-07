@@ -12,15 +12,15 @@ import torch
 import torch.nn.functional as F
 from torch import nn
 
-from util import box_ops
-from util.misc import (NestedTensor, nested_tensor_from_tensor_list,
+from ..util import box_ops
+from ..util.misc import (NestedTensor, nested_tensor_from_tensor_list,
                        accuracy, get_world_size, interpolate,
                        is_dist_avail_and_initialized)
 
 from .backbone import build_backbone
 from .matcher import build_matcher
-from .segmentation import (DETRsegm, PostProcessPanoptic, PostProcessSegm,
-                           dice_loss, sigmoid_focal_loss)
+# from .segmentation import (DETRsegm, PostProcessPanoptic, PostProcessSegm,
+#                            dice_loss, sigmoid_focal_loss)
 from .hoi import (DETRHOI, SetCriterionHOI, PostProcessHOI)
 from .transformer import build_transformer
 
@@ -318,41 +318,23 @@ def build(args):
 
     transformer = build_transformer(args)
 
-    if args.hoi:
-        model = DETRHOI(
-            backbone,
-            transformer,
-            num_obj_classes=args.num_obj_classes,
-            num_verb_classes=args.num_verb_classes,
-            num_queries=args.num_queries,
-            aux_loss=args.aux_loss,
-        )
-    else:
-        model = DETR(
-            backbone,
-            transformer,
-            num_classes=num_classes,
-            num_queries=args.num_queries,
-            aux_loss=args.aux_loss,
-        )
-        if args.masks:
-            model = DETRsegm(model, freeze_detr=(args.frozen_weights is not None))
+    model = DETRHOI(
+        backbone,
+        transformer,
+        num_obj_classes=args.num_obj_classes,
+        num_verb_classes=args.num_verb_classes,
+        num_queries=args.num_queries,
+        aux_loss=args.aux_loss,
+    )
     matcher = build_matcher(args)
     weight_dict = {}
-    if args.hoi:
-        weight_dict['loss_obj_ce'] = args.obj_loss_coef
-        weight_dict['loss_verb_ce'] = args.verb_loss_coef
-        weight_dict['loss_sub_bbox'] = args.bbox_loss_coef
-        weight_dict['loss_obj_bbox'] = args.bbox_loss_coef
-        weight_dict['loss_sub_giou'] = args.giou_loss_coef
-        weight_dict['loss_obj_giou'] = args.giou_loss_coef
-    else:
-        weight_dict['loss_ce'] = 1
-        weight_dict['loss_bbox'] = args.bbox_loss_coef
-        weight_dict['loss_giou'] = args.giou_loss_coef
-        if args.masks:
-            weight_dict["loss_mask"] = args.mask_loss_coef
-            weight_dict["loss_dice"] = args.dice_loss_coef
+    weight_dict['loss_obj_ce'] = args.obj_loss_coef
+    weight_dict['loss_verb_ce'] = args.verb_loss_coef
+    weight_dict['loss_sub_bbox'] = args.bbox_loss_coef
+    weight_dict['loss_obj_bbox'] = args.bbox_loss_coef
+    weight_dict['loss_sub_giou'] = args.giou_loss_coef
+    weight_dict['loss_obj_giou'] = args.giou_loss_coef
+    
     # TODO this is a hack
     if args.aux_loss:
         aux_weight_dict = {}
@@ -360,26 +342,12 @@ def build(args):
             aux_weight_dict.update({k + f'_{i}': v for k, v in weight_dict.items()})
         weight_dict.update(aux_weight_dict)
 
-    if args.hoi:
-        losses = ['obj_labels', 'verb_labels', 'sub_obj_boxes', 'obj_cardinality']
-        criterion = SetCriterionHOI(args.num_obj_classes, args.num_queries, args.num_verb_classes, matcher=matcher,
-                                    weight_dict=weight_dict, eos_coef=args.eos_coef, losses=losses,
-                                    verb_loss_type=args.verb_loss_type)
-    else:
-        losses = ['labels', 'boxes', 'cardinality']
-        if args.masks:
-            losses += ["masks"]
-        criterion = SetCriterion(num_classes, matcher=matcher, weight_dict=weight_dict,
-                                 eos_coef=args.eos_coef, losses=losses)
+    losses = ['obj_labels', 'verb_labels', 'sub_obj_boxes', 'obj_cardinality']
+    criterion = SetCriterionHOI(args.num_obj_classes, args.num_queries, args.num_verb_classes, matcher=matcher,
+                                weight_dict=weight_dict, eos_coef=args.eos_coef, losses=losses,
+                                verb_loss_type=args.verb_loss_type)
+    
     criterion.to(device)
-    if args.hoi:
-        postprocessors = {'hoi': PostProcessHOI(args.subject_category_id)}
-    else:
-        postprocessors = {'bbox': PostProcess()}
-        if args.masks:
-            postprocessors['segm'] = PostProcessSegm()
-            if args.dataset_file == "coco_panoptic":
-                is_thing_map = {i: i <= 90 for i in range(201)}
-                postprocessors["panoptic"] = PostProcessPanoptic(is_thing_map, threshold=0.85)
-
+    
+    postprocessors = {'hoi': PostProcessHOI(args.subject_category_id)}
     return model, criterion, postprocessors

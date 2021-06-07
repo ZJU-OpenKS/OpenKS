@@ -8,12 +8,10 @@ import torch
 from torch import nn
 import torch.nn.functional as F
 
-from util.box_ops import box_cxcywh_to_xyxy, generalized_box_iou
-from util.misc import (NestedTensor, nested_tensor_from_tensor_list,
+from ..util.box_ops import box_cxcywh_to_xyxy, generalized_box_iou
+from ..util.misc import (NestedTensor, nested_tensor_from_tensor_list,
                        accuracy, get_world_size, interpolate,
                        is_dist_avail_and_initialized)
-
-from .dicriminator import Discriminator
 
 class DETRHOI(nn.Module):
 
@@ -46,7 +44,7 @@ class DETRHOI(nn.Module):
         outputs_obj_coord = self.obj_bbox_embed(hs).sigmoid()
         out = {'pred_obj_logits': outputs_obj_class[-1], 'pred_verb_logits': outputs_verb_class[-1],
                'pred_sub_boxes': outputs_sub_coord[-1], 'pred_obj_boxes': outputs_obj_coord[-1]}
-        out['hidden_state'] = hs[-1]
+        # out['hidden_state'] = hs[-1]
         if self.aux_loss:
             out['aux_outputs'] = self._set_aux_loss(outputs_obj_class, outputs_verb_class,
                                                     outputs_sub_coord, outputs_obj_coord)

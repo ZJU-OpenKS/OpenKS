@@ -15,7 +15,7 @@ import torch
 import torch.utils.data
 import torchvision
 
-import datasets.transforms as T
+from . import transforms as T
 
 
 class HICODetection(torch.utils.data.Dataset):

@@ -4,9 +4,6 @@ from openks.models import OpenKSModel
 # 列出已加载模型
 OpenKSModel.list_modules()
 
-# 数据集名
-dataset = "vg"
-
 # 算法模型选择配置
 args = {
         "MODEL.DEVICE": 'cpu'
