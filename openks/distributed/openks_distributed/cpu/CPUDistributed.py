@@ -21,9 +21,9 @@ from paddle.fluid.incubate.fleet.parameter_server.distribute_transpiler.distribu
 from paddle.fluid.transpiler.distribute_transpiler import DistributeTranspiler as OriginTranspiler
 from paddle.fluid.transpiler.distribute_transpiler import DistributeTranspilerConfig, ServerRuntimeConfig, DistributedMode
 
-from ...openks_distributed.base import \
+from ...openKS_distributed.base import \
 BaseDistributedAlgorithm, BaseDistributedOptimizer, Mode
-from ...openks_distributed.base import MPISymetricRoleMaker
+from ...openKS_distributed.base import MPISymetricRoleMaker
 
 class CPUDistributedAlgorithm(BaseDistributedAlgorithm):
     """
