@@ -199,3 +199,4 @@ if __name__ == "__main__":
     g.add_edges([0, 0, 1], [1, 2, 2])
     feat = torch.rand(3, 64)
     print(model(g, feat).shape)
+
