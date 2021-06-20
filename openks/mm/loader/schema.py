@@ -12,10 +12,11 @@ class SchemaMetaclass(type):
     def get_attr_from_bases(key, attrs, bases):
         value = attrs.pop(key, None)
         if value is None:
+            key = key[1:]
             for m in bases:
                 if not hasattr(m, "__schema__"):
                     continue
-                value = m.__schema__[key]
+                value = m.__schema__.get(key, None)
                 if value is not None:
                     return value
         return value
@@ -91,12 +92,13 @@ class Schema(dict, metaclass=SchemaMetaclass):
         raise NotImplementedError
 
     def __str__(self) -> str:
+        # TODO: format as per schema
         return "{}({})".format(
             self.__class__.__name__,
             ", ".join(
                 [f"_type={self.__schema__['type'].__repr__()}"] +
                 [f"_concept={self.__schema__['concept'].__repr__()}"] +
-                [f"{k}={v.__repr__()}" for k, v in self.items()]
+                [f"{k}={v.__repr__()}" for k, v in self.items() if not k.startswith("_")]
             ),
         )
 
@@ -116,7 +118,8 @@ class Entity(Schema):
         super().__init__(id=str(uuid4()), **all_properties)
 
     def dump(self):
-        properties = [v for k, v in self.items() if k != "id"]
+        # TODO: dump as per the schema
+        properties = [v for k, v in self.items() if k != "id" and not k.startswith("_")]
         return self.id, self.__schema__["concept"], *properties
 
 
@@ -133,7 +136,8 @@ class Relation(Schema):
         super().__init__(subject=subject, object=object, **all_properties)
 
     def dump(self):
-        properties = [v for k, v in self.items() if k not in ["subject", "object"]]
+        # TODO: dump as per the schema
+        properties = [v for k, v in self.items() if k not in ["subject", "object"] and not k.startswith("_")]
         return self.subject.id, self.__schema__["concept"], self.object.id, *properties
 
 
@@ -153,11 +157,11 @@ class SchemaSet:
         return self.schema_by_id[id]
 
     def add(self, schema):
-        self.schemas.append(schema)
         _id = schema.__schema__["id"]
         if _id in self.schema_by_id:
             return False
 
+        self.schemas.append(schema)
         _type = schema.__schema__["type"]
         _concept = schema.__schema__["concept"]
         self.schema_by_type[_type][_concept] = schema

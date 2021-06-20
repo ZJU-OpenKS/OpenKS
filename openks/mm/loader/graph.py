@@ -3,6 +3,7 @@ from pathlib import Path
 import json
 
 from .schema import SchemaSet, load_schemas, Entity, Relation
+from .utils import remove_null
 
 
 class MMGraph:
@@ -66,7 +67,9 @@ class MMGraph:
             path.mkdir()
 
         with open(path / "schema.json", "w") as f:
-            json.dump(self.schemas.dump(), f)
+            schemas = self.schemas.dump()
+            schemas = remove_null(schemas)
+            json.dump(schemas, f)
 
         with open(path / "entities", "w") as f:
             for entity in self.entities.values():
@@ -121,7 +124,7 @@ def main():
     r2 = SemanticallySimilar(e1, e3, score=100)
     g.add_relation(r2)
 
-    g.save("test-kg")
+    g.save("../test-kg")
 
     print(list(g.get_entities_by_concept("image")))
     print(list(g.get_entities_by_concept("image_view")))
