@@ -38,7 +38,10 @@ class SchemaMetaclass(type):
         # TODO: collect annotations from bases
         annotations = attrs.get("__annotations__", {})
         properties = {
-            k: {"name": k, "range": v.__name__,}
+            k: {
+                "name": k,
+                "range": v.__name__,
+            }
             for k, v in annotations.items()
             if not k.startswith("_") and not isfunction(v)
         }
