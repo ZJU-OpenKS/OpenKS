@@ -11,9 +11,9 @@ from paddle.fluid.executor import Executor
 from paddle.fluid.optimizer import SGD
 from paddle.fluid.contrib.mixed_precision.decorator import OptimizerWithMixedPrecision
 
-from ...openks_distributed.base.RoleMaker import MPISymetricRoleMaker, RoleMakerBase, UserDefinedRoleMaker
-from ...openks_distributed.base import mode
-from ...openks_distributed.base.mode import Mode
+from ...openKS_distributed.base.RoleMaker import MPISymetricRoleMaker, RoleMakerBase, UserDefinedRoleMaker
+from ...openKS_distributed.base import mode
+from ...openKS_distributed.base.mode import Mode
 
 __all__ = ['BaseDistributedAlgorithm', 'BaseDistributedOptimizer']
 __all__ += mode.__all__
