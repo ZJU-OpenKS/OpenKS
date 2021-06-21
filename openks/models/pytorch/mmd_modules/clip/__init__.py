@@ -9,11 +9,11 @@ from .clip import *
 
 class CLIP:
     def __init__(
-            self,
-            model_name: str = "ViT-B/32",
-            jit: bool = True,
-            device: str= "cpu",
-            threshold: float = 20.,
+        self,
+        model_name: str = "ViT-B/32",
+        jit: bool = True,
+        device: str = "cpu",
+        threshold: float = 20.0,
     ):
         self.device = torch.device(device)
         self.threshold = threshold
@@ -24,13 +24,15 @@ class CLIP:
         entities = []
         features = []
         for entity in chain(
-                graph.get_entities_by_concept("image"),
-                graph.get_entities_by_concept("image_view"),
+            graph.get_entities_by_concept("image"),
+            graph.get_entities_by_concept("image_view"),
         ):
             image = self.preprocess(entity.image).unsqueeze(0).to(self.device)
             with torch.no_grad():
                 image_features = self.model.encode_image(image)
-                image_features = image_features / image_features.norm(dim=-1, keepdim=True)
+                image_features = image_features / image_features.norm(
+                    dim=-1, keepdim=True
+                )
             entity._clip_features = image_features.squeeze(0)
 
             entities.append(entity)
@@ -46,6 +48,10 @@ class CLIP:
         for ind1, ind2 in inds.tolist():
             if ind1 == ind2:
                 continue
-            graph.add_relation(SemanticallySimilar(entities[ind1], entities[ind2], score=logits[ind1][ind2]))
+            graph.add_relation(
+                SemanticallySimilar(
+                    entities[ind1], entities[ind2], score=logits[ind1][ind2].item()
+                )
+            )
 
         return graph
