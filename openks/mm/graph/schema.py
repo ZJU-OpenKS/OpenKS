@@ -1,8 +1,8 @@
 import copy
-from uuid import uuid4
-from typing import Iterable, Dict, Any
 from collections import defaultdict
 from inspect import isfunction
+from typing import Any, Dict, Iterable
+from uuid import uuid4
 
 
 class SchemaMetaclass(type):
@@ -36,13 +36,11 @@ class SchemaMetaclass(type):
         _members = mcs.get_attr_from_bases("_members", attrs, bases)
 
         # TODO: collect annotations from bases
-        annotations = attrs.get('__annotations__', {})
+        annotations = attrs.get("__annotations__", {})
         properties = {
-            k: {
-                "name": k,
-                "range": v.__name__,
-            }
-            for k, v in annotations.items() if not k.startswith("_") and not isfunction(v)
+            k: {"name": k, "range": v.__name__,}
+            for k, v in annotations.items()
+            if not k.startswith("_") and not isfunction(v)
         }
 
         attrs["__schema__"] = {
@@ -73,7 +71,9 @@ class Schema(dict, metaclass=SchemaMetaclass):
         try:
             return self[key]
         except KeyError:
-            raise AttributeError(f"\"{self.__class__.__name__}\" schema has no attribute: {key}")
+            raise AttributeError(
+                f'"{self.__class__.__name__}" schema has no attribute: {key}'
+            )
 
     def __setattr__(self, key, value):
         self[key] = value
@@ -96,9 +96,13 @@ class Schema(dict, metaclass=SchemaMetaclass):
         return "{}({})".format(
             self.__class__.__name__,
             ", ".join(
-                [f"_type={self.__schema__['type'].__repr__()}"] +
-                [f"_concept={self.__schema__['concept'].__repr__()}"] +
-                [f"{k}={v.__repr__()}" for k, v in self.items() if not k.startswith("_")]
+                [f"_type={self.__schema__['type'].__repr__()}"]
+                + [f"_concept={self.__schema__['concept'].__repr__()}"]
+                + [
+                    f"{k}={v.__repr__()}"
+                    for k, v in self.items()
+                    if not k.startswith("_")
+                ]
             ),
         )
 
@@ -111,8 +115,7 @@ class Entity(Schema):
     def __init__(self, *properties, **kw_properties):
         # TODO: validation
         all_properties = {
-            k: v
-            for k, v in zip(self.__schema__["properties"].keys(), properties)
+            k: v for k, v in zip(self.__schema__["properties"].keys(), properties)
         }
         all_properties.update(kw_properties)
         super().__init__(id=str(uuid4()), **all_properties)
@@ -129,15 +132,18 @@ class Relation(Schema):
     def __init__(self, subject: Entity, object: Entity, *properties, **kw_properties):
         # TODO: validation
         all_properties = {
-            k: v
-            for k, v in zip(self.__schema__["properties"].keys(), properties)
+            k: v for k, v in zip(self.__schema__["properties"].keys(), properties)
         }
         all_properties.update(kw_properties)
         super().__init__(subject=subject, object=object, **all_properties)
 
     def dump(self):
         # TODO: dump as per the schema
-        properties = [v for k, v in self.items() if k not in ["subject", "object"] and not k.startswith("_")]
+        properties = [
+            v
+            for k, v in self.items()
+            if k not in ["subject", "object"] and not k.startswith("_")
+        ]
         return self.subject.id, self.__schema__["concept"], self.object.id, *properties
 
 

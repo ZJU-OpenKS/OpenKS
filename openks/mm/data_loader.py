@@ -1,8 +1,8 @@
-from abc import abstractmethod, ABCMeta
-from typing import Union
+from abc import ABCMeta, abstractmethod
 from pathlib import Path
+from typing import Union
 
-from .graph import MMGraph, ImageEntity
+from .graph import ImageEntity, MMGraph
 
 
 class DataLoader(metaclass=ABCMeta):

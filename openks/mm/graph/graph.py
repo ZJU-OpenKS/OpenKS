@@ -1,17 +1,17 @@
-from typing import Optional, Union, Dict, List, Iterable
-from pathlib import Path
 import json
+from pathlib import Path
+from typing import Dict, Iterable, List, Optional, Union
 
-from .schema import SchemaSet, load_schemas, Entity, Relation
+from .schema import Entity, Relation, SchemaSet, load_schemas
 from .utils import remove_null
 
 
 class MMGraph:
     def __init__(
-            self,
-            schemas: Optional[SchemaSet] = None,
-            entities: Optional[List[Entity]] = None,
-            relations: Optional[List[Relation]] = None,
+        self,
+        schemas: Optional[SchemaSet] = None,
+        entities: Optional[List[Entity]] = None,
+        relations: Optional[List[Relation]] = None,
     ):
         if schemas is None:
             schemas = SchemaSet()
@@ -20,10 +20,7 @@ class MMGraph:
         if relations is None:
             relations = []
         self.schemas: SchemaSet = schemas
-        self.entities: Dict[str, Entity] = {
-            entity.id: entities
-            for entity in entities
-        }
+        self.entities: Dict[str, Entity] = {entity.id: entities for entity in entities}
         self.relations: List[Relation] = relations
 
     @classmethod
@@ -103,7 +100,9 @@ class MMGraph:
         return self.entities[id]
 
     def get_entities_by_concept(self, concept: str):
-        return filter(lambda x: x.__schema__["concept"] == concept, self.entities.values())
+        return filter(
+            lambda x: x.__schema__["concept"] == concept, self.entities.values()
+        )
 
 
 def main():

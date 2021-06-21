@@ -1,4 +1,4 @@
-from typing import Optional, Callable, Tuple
+from typing import Callable, Optional, Tuple
 
 from .graph import MMGraph
 

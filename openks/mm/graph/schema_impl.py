@@ -1,5 +1,3 @@
-from PIL import Image
-
 from .schema import Entity, Relation
 from .utils import read_image
 
@@ -42,9 +40,9 @@ class ImageViewEntity(Entity):
     def data(self):
         img = self._src_image.data
         if len(img.shape) <= 3:
-            return img[self.y0: self.y1, self.x0: self.x1]
+            return img[self.y0 : self.y1, self.x0 : self.x1]
         else:
-            return img[..., self.y0: self.y1, self.x0: self.x1, :]
+            return img[..., self.y0 : self.y1, self.x0 : self.x1, :]
 
 
 class SemanticallySimilar(Relation):
