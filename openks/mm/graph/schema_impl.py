@@ -1,3 +1,5 @@
+from PIL import Image
+
 from .schema import Entity, Relation
 from .utils import read_image
 
@@ -15,6 +17,14 @@ class ImageEntity(Entity):
             self._data = read_image(self.file_name)
 
         return self._data
+
+    @property
+    def image(self):
+        if not hasattr(self, "_image"):
+            # TODO: support relative path
+            self._image = Image.open(self.file_name)
+
+        return self._image
 
     def view(self, x0: int, y0: int, x1: int, y1: int):
         return ImageViewEntity(image=self, x0=x0, y0=y0, x1=x1, y1=y1)
@@ -43,6 +53,10 @@ class ImageViewEntity(Entity):
             return img[self.y0 : self.y1, self.x0 : self.x1]
         else:
             return img[..., self.y0 : self.y1, self.x0 : self.x1, :]
+
+    @property
+    def image(self):
+        return self._src_image.crop(self.x0, self.y0, self.x1, self.y1)
 
 
 class SemanticallySimilar(Relation):
