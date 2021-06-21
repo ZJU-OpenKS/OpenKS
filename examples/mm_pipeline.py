@@ -7,6 +7,7 @@ def main():
     pipeline = Pipeline(
         GlobDataLoader(root_dir="../datasets/images"),
         CLIP("ViT-B/32", jit=False),
+        # Detection or Scene Graph models
     )
     graph = pipeline.run()
     graph.save("../datasets/test-kg")
