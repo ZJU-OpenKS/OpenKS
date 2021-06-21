@@ -29,7 +29,7 @@ args = {
 	'log_file_path': './industry_ner_model/run.log'
 }
 platform = 'TensorFlow'
-executor = 'general'
+executor = 'KELearn'
 model = 'industry-entity-extract'
 print("根据配置，使用 {} 框架，{} 执行器训练 {} 模型。".format(platform, executor, model))
 print("-----------------------------------------------")
