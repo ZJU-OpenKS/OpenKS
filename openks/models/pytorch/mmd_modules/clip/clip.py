@@ -5,10 +5,14 @@ import warnings
 from typing import List, Union
 
 import torch
-from PIL import Image
-from torchvision.transforms import (CenterCrop, Compose, InterpolationMode,
-                                    Normalize, Resize, ToTensor)
+from torchvision.transforms import (CenterCrop, Compose, Normalize, Resize,
+                                    ToTensor)
 from tqdm import tqdm
+
+try:
+    from torchvision.transforms import InterpolationMode
+except ImportError:
+    from PIL import Image as InterpolationMode
 
 from .model import build_model
 from .simple_tokenizer import SimpleTokenizer as _Tokenizer
