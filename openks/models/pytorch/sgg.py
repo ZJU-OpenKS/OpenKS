@@ -5,9 +5,6 @@ import json
 from tqdm import tqdm
 from typing import Callable, Optional, Tuple
 from easydict import EasyDict
-from itertools import chain
-import cv2
-from PIL import Image
 
 from .mmd_modules.det_sgg.relation_predictor.relation_predictor import RelationPredictor
 from .mmd_modules.det_sgg.relation_predictor.AttrRCNN import AttrRCNN
@@ -164,10 +161,10 @@ class SGG:
     def singleobject2entity(self, obj_id, obj, graph, entity, added) -> ImageViewEntity:
         obj_entity = None
         if not added[obj_id]:
-            x0, x1, y0, y1 = obj["rect"]
+            x0, y0, x1, y1 = obj["rect"]
             label = self.dataset_labelmap[obj["class"]]
             score = obj["conf"]
-            obj_entity = ImageViewEntity(entity, x0, x1, y0, y1, label, score)
+            obj_entity = ImageViewEntity(entity, x0, y0, x1, y1, label, score)
             hasRel = HasEntity(entity, obj_entity)
             graph.add_relation(hasRel)
             added[obj_id] = obj_entity.id

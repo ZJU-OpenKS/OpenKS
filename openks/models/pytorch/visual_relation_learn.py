@@ -4,7 +4,6 @@
 import logging
 import argparse
 import os
-os.chdir("/data5/zhaolichen/codes/openks-wei")
 import datetime
 import time
 from tqdm import tqdm
