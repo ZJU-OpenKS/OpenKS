@@ -1,8 +1,32 @@
 import copy
 from collections import defaultdict
 from inspect import isfunction
-from typing import Any, Dict, Iterable
+from typing import Any, Dict, Iterable, Optional, Union
 from uuid import uuid4
+
+GenericAlias = type(Dict)
+NoneType = type(None)
+
+
+def get_class_name(tp) -> str:
+    if isinstance(tp, GenericAlias):
+        origin = tp.__origin__
+        if origin is Union:
+            internal_types = tp.__args__
+            if len(internal_types) == 2 and (
+                    internal_types[0] is NoneType or internal_types[1] is NoneType
+            ):
+                # Optional[T]
+                internal_type = (
+                    internal_types[0]
+                    if internal_types[0] is not NoneType
+                    else internal_types[1]
+                )
+                return internal_type
+    elif hasattr(tp, "__name__"):
+        return tp.__name__
+
+    raise NotImplementedError(tp)
 
 
 class SchemaMetaclass(type):
@@ -40,7 +64,7 @@ class SchemaMetaclass(type):
         properties = {
             k: {
                 "name": k,
-                "range": v.__name__,
+                "range": get_class_name(v),
             }
             for k, v in annotations.items()
             if not k.startswith("_") and not isfunction(v)
