@@ -41,10 +41,15 @@ class ImageViewEntity(Entity):
     x1: int
     y1: int
 
-    def __init__(self, image: ImageEntity, x0: int, y0: int, x1: int, y1: int):
+    label: str
+    score: float
+
+    def __init__(self, image: ImageEntity, x0: int, y0: int, x1: int, y1: int, label: str, score: float):
         super().__init__(image_id=image.id, x0=x0, y0=y0, x1=x1, y1=y1)
 
         self._src_image = image
+        self.label = label
+        self.score = score
 
     @property
     def data(self):
@@ -64,3 +69,23 @@ class SemanticallySimilar(Relation):
 
     # properties
     score: float
+
+
+class HasEntity(Relation):
+    _concept = "has_entity"
+
+    # # properties
+    # score: float
+
+
+class Interaction(Relation):
+    _concept = "interaction"
+
+    # properties
+    score: float
+    predicate: str
+
+    def __init__(self, subject: Entity, object: Entity, predicate: str, score, *properties, **kw_properties):
+        super().__init__(subject, object, *properties, **kw_properties)
+        self.predicate = predicate
+        self.score = score

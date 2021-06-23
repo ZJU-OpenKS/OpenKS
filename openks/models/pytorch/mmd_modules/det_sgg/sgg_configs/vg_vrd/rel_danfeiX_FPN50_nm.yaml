@@ -1,9 +1,10 @@
 MODEL:
   DEVICE: "cpu"
   META_ARCHITECTURE: "RelationPredictor"
-  WEIGHT: "sgg_models/vgvrd/vgnm_usefpTrue_objctx0_edgectx2/model_final.pth"
+  # WEIGHT: "sgg_models/vgvrd/vgnm_usefpTrue_objctx0_edgectx2/model_final.pth"
+  WEIGHT: "sgg_models/vgvrd/vgnm_usefpFalse_objctx0_edgectx2/model_0035000.pth"
   # WEIGHT: "catalog://ImageNetPretrained/MSRA/R-50"
-  USE_FREQ_PRIOR: True
+  USE_FREQ_PRIOR: False
   FREQ_PRIOR: "visualgenome/label_danfeiX_clipped.freq_prior.npy"
   RESNETS:
     TRANS_FUNC: "BottleneckWithFixedBatchNorm"
@@ -36,7 +37,7 @@ MODEL:
     ALGORITHM: "sg_neuralmotif"
     MODE: 'sgdet'
     USE_BIAS: True
-    FILTER_NON_OVERLAP: False
+    FILTER_NON_OVERLAP: True
     UPDATE_BOX_REG: False
     NUM_CLASSES: 51
     POOLER_RESOLUTION: 7

@@ -10,7 +10,7 @@ class Pipeline:
     def run(self, graph: Optional[MMGraph] = None) -> MMGraph:
         if graph is None:
             graph = MMGraph()
-
+        
         for task in self.tasks:
             graph = task(graph)
 
