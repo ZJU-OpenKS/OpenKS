@@ -194,7 +194,7 @@ class SGG:
                     sub_entity = self.object2entity(subj_id, objects, graph, entity, added)
                     obj_entity = self.object2entity(obj_id, objects, graph, entity, added)
                     
-                    rel_pred = Interaction(sub_entity, obj_entity, predicate, rel_conf)
+                    rel_pred = Interaction(sub_entity, obj_entity, predicate=predicate, score=rel_conf)
                     graph.add_relation(rel_pred)
                     
             # whether there is no relation
