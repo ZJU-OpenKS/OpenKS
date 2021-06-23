@@ -14,7 +14,7 @@ def get_class_name(tp) -> str:
         if origin is Union:
             internal_types = tp.__args__
             if len(internal_types) == 2 and (
-                    internal_types[0] is NoneType or internal_types[1] is NoneType
+                internal_types[0] is NoneType or internal_types[1] is NoneType
             ):
                 # Optional[T]
                 internal_type = (
@@ -149,7 +149,9 @@ class Entity(Schema):
 
     def dump(self):
         # TODO: dump as per the schema
-        properties = tuple(v for k, v in self.items() if k != "id" and not k.startswith("_"))
+        properties = tuple(
+            v for k, v in self.items() if k != "id" and not k.startswith("_")
+        )
         return (self.id, self.__schema__["concept"]) + properties
 
 
@@ -171,7 +173,11 @@ class Relation(Schema):
             for k, v in self.items()
             if k not in ["subject", "object"] and not k.startswith("_")
         )
-        return (self.subject.id, self.__schema__["concept"], self.object.id) + properties
+        return (
+            self.subject.id,
+            self.__schema__["concept"],
+            self.object.id,
+        ) + properties
 
 
 class SchemaSet:
