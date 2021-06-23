@@ -149,8 +149,8 @@ class Entity(Schema):
 
     def dump(self):
         # TODO: dump as per the schema
-        properties = [v for k, v in self.items() if k != "id" and not k.startswith("_")]
-        return self.id, self.__schema__["concept"], *properties
+        properties = tuple(v for k, v in self.items() if k != "id" and not k.startswith("_"))
+        return (self.id, self.__schema__["concept"]) + properties
 
 
 class Relation(Schema):
@@ -166,12 +166,12 @@ class Relation(Schema):
 
     def dump(self):
         # TODO: dump as per the schema
-        properties = [
+        properties = tuple(
             v
             for k, v in self.items()
             if k not in ["subject", "object"] and not k.startswith("_")
-        ]
-        return self.subject.id, self.__schema__["concept"], self.object.id, *properties
+        )
+        return (self.subject.id, self.__schema__["concept"], self.object.id) + properties
 
 
 class SchemaSet:
