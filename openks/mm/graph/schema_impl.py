@@ -86,8 +86,8 @@ class HasEntity(Relation):
     _concept = "has_entity"
 
 
-class Interaction(Relation):
-    _concept = "interaction"
+class Interact(Relation):
+    _concept = "interact"
 
     # properties
     predicate: str

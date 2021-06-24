@@ -18,7 +18,7 @@ from .mmd_modules.det_sgg.maskrcnn_benchmark.data.datasets.utils.load_files impo
 from .mmd_modules.det_sgg.maskrcnn_benchmark.utils.miscellaneous import mkdir
 
 from openks.mm.graph import MMGraph
-from openks.mm.graph import ImageViewEntity, HasEntity, Interaction
+from openks.mm.graph import ImageViewEntity, HasEntity, Interact
 
 class SGG:
     """
@@ -187,7 +187,7 @@ class SGG:
                     sub_entity = self.object2entity(subj_id, objects, graph, entity, added)
                     obj_entity = self.object2entity(obj_id, objects, graph, entity, added)
                     
-                    rel_pred = Interaction(sub_entity, obj_entity, predicate=predicate, score=rel_conf)
+                    rel_pred = Interact(sub_entity, obj_entity, predicate=predicate, score=rel_conf)
                     graph.add_relation(rel_pred)
                     
             # whether there is no relation
