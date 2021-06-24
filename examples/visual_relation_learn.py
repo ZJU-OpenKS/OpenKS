@@ -15,7 +15,7 @@ print("根据配置，使用 {} 框架，{} 执行器训练 {} 模型。".format
 print("-----------------------------------------------")
 # 模型训练
 executor = OpenKSModel.get_module(platform, executor)
-# import pdb; pdb.set_trace()
+
 text_ner = executor(args=args)
 text_ner.run(mode="train")
 print("-----------------------------------------------")

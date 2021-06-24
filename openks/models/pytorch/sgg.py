@@ -93,13 +93,6 @@ class SGG:
         img_input = img_input.to(self.device)
         return img_input
 
-    # def read_img(self, img_file):
-    #     # import pdb; pdb.set_trace()
-    #     cv2_img = cv2.imread(img_file)
-    #     image = cv2.cvtColor(cv2_img, cv2.COLOR_BGR2RGB)
-    #     image = Image.fromarray(image)
-    #     return image
-
     def det_single_image(self, entity):
         # img_file = entity.file_name.name
         # image = self.read_img(img_file)
