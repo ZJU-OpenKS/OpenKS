@@ -22,7 +22,7 @@ def get_class_name(tp) -> str:
                     if internal_types[0] is not NoneType
                     else internal_types[1]
                 )
-                return internal_type
+                return get_class_name(internal_type)
     elif hasattr(tp, "__name__"):
         return tp.__name__
 
@@ -53,10 +53,11 @@ class SchemaMetaclass(type):
             return mcs.schemas.get(_id)
 
         _type = mcs.get_attr_from_bases("_type", attrs, bases)
+        _arguments = mcs.get_attr_from_bases("_arguments", attrs, bases)
         _concept = mcs.get_attr_from_bases("_concept", attrs, bases)
         # TODO: infer parent from bases
         _parent = mcs.get_attr_from_bases("_parent", attrs, bases)
-        is_abstract = any(k is None for k in [_type, _concept])
+        is_abstract = any(k is None for k in [_type, _arguments, _concept])
         _members = mcs.get_attr_from_bases("_members", attrs, bases)
 
         # Collect properties from bases
@@ -77,6 +78,7 @@ class SchemaMetaclass(type):
         attrs["__schema__"] = {
             "id": _id,
             "type": _type,
+            "arguments": _arguments,
             "concept": _concept,
             "parent": _parent,
             "members": _members,
@@ -93,7 +95,16 @@ class SchemaMetaclass(type):
         # Hook __init__
         assert hasattr(cls, "__schema__") and not cls.__schema__["is_abstract"]
 
-        # TODO: validation
+        # Validation and parse from str
+        """
+        properties_def = cls.__schema__["properties"]
+        for value, definition in cls.__schema__["properties"]:
+            ...
+        for key, value in kwargs.items():
+            if key in cls.__schema__["arguments"]:
+                continue
+            assert key in properties_def
+        """
         return super().__call__(*args, **kwargs)
 
 
@@ -144,6 +155,7 @@ class Schema(dict, metaclass=SchemaMetaclass):
 
 class Entity(Schema):
     _type = "entity"
+    _arguments = ("id",)
 
     def __init__(self, *properties, **kw_properties):
         # TODO: validation
@@ -162,6 +174,7 @@ class Entity(Schema):
 
 class Relation(Schema):
     _type = "relation"
+    _arguments = ("subject", "object")
 
     def __init__(self, subject: Entity, object: Entity, *properties, **kw_properties):
         # TODO: validation
