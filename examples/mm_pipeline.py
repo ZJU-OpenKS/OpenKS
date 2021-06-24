@@ -1,5 +1,5 @@
-from openks.mm.pipeline import Pipeline
 from openks.mm.data_loader import GlobDataLoader
+from openks.mm.pipeline import Pipeline
 from openks.models.pytorch.mmd_modules.clip import CLIP
 from openks.models.pytorch.sgg import SGG
 
