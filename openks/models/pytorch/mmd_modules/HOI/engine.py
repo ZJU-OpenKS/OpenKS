@@ -26,58 +26,6 @@ from .datasets.hico_eval import HICOEvaluator
 # from .datasets.vcoco_eval import VCOCOEvaluator
 
 
-def _get_src_permutation_idx(indices):
-    # permute predictions following indices
-    batch_idx = torch.cat([torch.full_like(src, i) for i, (src, _) in enumerate(indices)])
-    src_idx = torch.cat([src for (src, _) in indices])
-    return batch_idx, src_idx
-
-
-def _get_tgt_permutation_idx(indices):
-    # permute targets following indices
-    batch_idx = torch.cat([torch.full_like(tgt, i) for i, (_, tgt) in enumerate(indices)])
-    tgt_idx = torch.cat([tgt for (_, tgt) in indices])
-    return batch_idx, tgt_idx
-
-
-def contrastive_divergence(positive_energy, negative_energy, n_real, gt_mask=None, temp=1., opt="d"):
-    # pos_loss = torch.mean(temp * positive_energy)
-    # neg_loss = torch.mean(temp * negative_energy)
-
-    # Add the square regular term for maintain the output values from drifting too far away from 0...?
-    loss_ml = temp * negative_energy - temp * positive_energy + torch.sum(positive_energy ** 2 + negative_energy ** 2) * 0.001
-    if gt_mask is not None:
-        loss_ml *= gt_mask
-    return {'ML Loss (cd)' + opt: (torch.sum(loss_ml, dim=-1) / n_real).mean()}
-
-
-def d_logistic_loss(real_pred, fake_pred, n_real, gt_mask=None):
-    real_loss = F.softplus(-real_pred)
-    fake_loss = F.softplus(fake_pred)
-    if gt_mask is not None:
-        real_loss = real_loss * gt_mask
-        fake_loss = fake_loss * gt_mask
-    return ((real_loss.sum(dim=-1) + fake_loss.sum(dim=-1)) / n_real).mean()
-
-
-def g_nonsaturating_loss(fake_pred, n_real, gt_mask=None):
-    loss = F.softplus(-fake_pred)
-    if gt_mask is not None:
-        loss = loss * gt_mask
-    # pdb.set_trace()
-    return (loss.sum(dim=-1) / n_real).mean()
-
-
-# Maybe we don't need this, cause we apply the Spectral Norm
-def d_r1_loss(real_pred, real_img):
-    grad_real, = autograd.grad(
-        outputs=real_pred.sum(), inputs=real_img, create_graph=True
-    )
-    grad_penalty = grad_real.pow(2).reshape(grad_real.shape[0], -1).sum(1).mean()
-
-    return grad_penalty
-
-
 def train_one_epoch(model: torch.nn.Module, criterion: torch.nn.Module,
                     data_loader: Iterable, optimizer: torch.optim.Optimizer,
                     device: torch.device, epoch: int, max_norm: float = 0):

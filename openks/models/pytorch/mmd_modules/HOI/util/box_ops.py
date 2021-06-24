@@ -92,24 +92,3 @@ def masks_to_boxes(masks):
     y_min = y_mask.masked_fill(~(masks.bool()), 1e8).flatten(1).min(-1)[0]
 
     return torch.stack([x_min, y_min, x_max, y_max], 1)
-
-
-def box_union(boxlist1, boxlist2):
-    """
-    Compute the union region of two set of boxes
-
-    Arguments:
-      box1: (BoxList) bounding boxes, sized [N,4].
-      box2: (BoxList) bounding boxes, sized [N,4].
-
-    Returns:
-      (tensor) union, sized [N,4].
-    """
-    assert len(boxlist1) == len(boxlist2) and boxlist1.size == boxlist2.size
-    boxlist1 = boxlist1.convert("xyxy")
-    boxlist2 = boxlist2.convert("xyxy")
-    union_box = torch.cat((
-        torch.min(boxlist1.bbox[:,:2], boxlist2.bbox[:,:2]),
-        torch.max(boxlist1.bbox[:,2:], boxlist2.bbox[:,2:])
-        ),dim=1)
-    return BoxList(union_box, boxlist1.size, "xyxy")
