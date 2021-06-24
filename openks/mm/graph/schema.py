@@ -1,7 +1,7 @@
 import copy
 from collections import defaultdict
 from inspect import isfunction
-from typing import Any, Dict, Iterable, Optional, Union
+from typing import Any, Dict, Iterable, Tuple, Union
 from uuid import uuid4
 
 GenericAlias = type(Dict)
@@ -59,16 +59,20 @@ class SchemaMetaclass(type):
         is_abstract = any(k is None for k in [_type, _concept])
         _members = mcs.get_attr_from_bases("_members", attrs, bases)
 
-        # TODO: collect annotations from bases
+        # Collect properties from bases
+        properties = {}
+        for base in reversed(bases):
+            if hasattr(base, "__schema__"):
+                properties.update(base.__schema__["properties"])
         annotations = attrs.get("__annotations__", {})
-        properties = {
+        properties.update({
             k: {
                 "name": k,
                 "range": get_class_name(v),
             }
             for k, v in annotations.items()
             if not k.startswith("_") and not isfunction(v)
-        }
+        })
 
         attrs["__schema__"] = {
             "id": _id,
@@ -118,8 +122,11 @@ class Schema(dict, metaclass=SchemaMetaclass):
     def dump(self):
         raise NotImplementedError
 
+    def properties(self) -> Iterable[Tuple[str, Any]]:
+        for key in self.__schema__["properties"].keys():
+            yield key, self[key] if key in self else None
+
     def __str__(self) -> str:
-        # TODO: format as per schema
         return "{}({})".format(
             self.__class__.__name__,
             ", ".join(
@@ -127,8 +134,7 @@ class Schema(dict, metaclass=SchemaMetaclass):
                 + [f"_concept={self.__schema__['concept'].__repr__()}"]
                 + [
                     f"{k}={v.__repr__()}"
-                    for k, v in self.items()
-                    if not k.startswith("_")
+                    for k, v in self.properties()
                 ]
             ),
         )
@@ -148,9 +154,8 @@ class Entity(Schema):
         super().__init__(id=str(uuid4()), **all_properties)
 
     def dump(self):
-        # TODO: dump as per the schema
         properties = tuple(
-            v for k, v in self.items() if k != "id" and not k.startswith("_")
+            v for k, v in self.properties() if k != "id"
         )
         return (self.id, self.__schema__["concept"]) + properties
 
@@ -167,11 +172,10 @@ class Relation(Schema):
         super().__init__(subject=subject, object=object, **all_properties)
 
     def dump(self):
-        # TODO: dump as per the schema
         properties = tuple(
             v
-            for k, v in self.items()
-            if k not in ["subject", "object"] and not k.startswith("_")
+            for k, v in self.properties()
+            if k not in ["subject", "object"]
         )
         return (
             self.subject.id,
