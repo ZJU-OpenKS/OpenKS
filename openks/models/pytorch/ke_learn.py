@@ -2,18 +2,22 @@
 # All Rights Reserved.
 
 import logging
+import json
 import argparse
 import torch
 import torch.nn as nn
+from torch.utils.data import Dataset, Dataloader
+
 from sklearn.model_selection import train_test_split
 from ..model import KELearnModel
+from .ke_modules.nero_modules import read, nero_run
 
 @KELearnModel.register("KELearn", "PyTorch")
 class KELearnTorch(KELearnModel):
 	def __init__(self, name='pytorch-default', dataset=None, model=None, args=None):
 		self.name = name
 		self.dataset = dataset
-		self.args = self.parse_args(args)
+		self.args = args
 		self.model = model
 
 	def parse_args(self, args):
@@ -55,8 +59,8 @@ class KELearnTorch(KELearnModel):
 			for j in range(len(gold_batch)):
 				gold_label = gold_batch[j]
 				pred_label = pred_batch[j]
-				gold_span = get_span(gold_label, index2tag, type)
-				pred_span = get_span(pred_label, index2tag, type)
+				gold_span = self.get_span(gold_label, index2tag, type)
+				pred_span = self.get_span(pred_label, index2tag, type)
 				total_en += len(gold_span)
 				predicted += len(pred_span)
 				for item in pred_span:
@@ -79,16 +83,37 @@ class KELearnTorch(KELearnModel):
 	def save_model(self, model, model_path):
 		torch.save(model, model_path)
 
-	def run(self):
+	def run_nero_model(self):
+		# read data
+		# train
+		unlabeled_data, test_data, pattern = self.dataset.bodies[0], self.dataset.bodies[1], self.dataset.bodies[2]
+		
+		patterns = json.loads(pattern[0])
+		print(self.args)
+		self.args.patterns = patterns
+		data = read(self.args, unlabeled_data, test_data)
+		word2idx_dict, word_emb, train_data, dev_data, test_data = data
+		
+		model = self.model(self.args, word_emb, word2idx_dict)
+		nero_run(self.args, data, model)
+	
+	def run(self, run_type=None):
+		if run_type == 'relation-classification':
+			self.run_nero_model()
+		else:
+			self.default_run()
+
+	def default_run(self):
+		
 		device = torch.device('cuda') if self.args.gpu else torch.device('cpu')
 
 		train_set, valid_set, test_set = self.triples_reader(ratio=0.01)
-		train_set = DataSet(train_set)
-		train_generator = data.DataLoader(train_set, batch_size=self.args.batch_size)
-		valid_set = DataSet(valid_set)
-		valid_generator = data.DataLoader(valid_set, batch_size=1)
-		test_set = DataSet(test_set)
-		test_generator = data.DataLoader(test_set, batch_size=1)
+		train_set = Dataset(train_set)
+		train_generator = Dataloader(train_set, batch_size=self.args.batch_size)
+		valid_set = Dataset(valid_set)
+		valid_generator = Dataloader(valid_set, batch_size=1)
+		test_set = Dataset(test_set)
+		test_generator = Dataloader(test_set, batch_size=1)
 
 		model = self.model(
 			words_dim=self.args.words_dim,
@@ -98,7 +123,7 @@ class KELearnTorch(KELearnModel):
 		)
 		model = model.to(device)
 
-		optimizer = torch.optim.Adam(parameter, lr=self.args.lr, weight_decay=self.args.weight_decay)
+		optimizer = torch.optim.Adam(model.parameter, lr=self.args.lr, weight_decay=self.args.weight_decay)
 
 		index2tag = None
 		start_epoch = 1
