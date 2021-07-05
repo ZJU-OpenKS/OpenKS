@@ -17,18 +17,14 @@ np.set_printoptions(threshold=np.inf)
 def read(config, unlabeled_data=None, test_data=None):
 
     def _read(path, dataset):
-        if dataset == "tacred":
-            with open(path, "r") as fh:
-                return json.load(fh)
-        elif dataset == "semeval":
-            res = []
-            with open(path, "r") as fh:
-                for line in fh:
-                    line = line.strip()
-                    if len(line) > 0:
-                        d = json.loads(line)
-                        res.append(d)
-            return res
+        res = []
+        with open(path, "r") as fh:
+            for line in fh:
+                line = line.strip()
+                if len(line) > 0:
+                    d = json.loads(line)
+                    res.append(d)
+        return res
     def _read_mmd(entries):
         res = []
         for line in entries:

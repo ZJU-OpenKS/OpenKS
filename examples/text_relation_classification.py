@@ -24,24 +24,24 @@ OpenKSModel.list_modules()
 parser = argparse.ArgumentParser(description='NERO args.')
 
 
-parser.add_argument("--dataset", type=str, default="semeval", help='')
-parser.add_argument("--mode", type=str, default="regd", help="pretrain / pseudo / regd")
+# parser.add_argument("--dataset", type=str, default="nero", help='')
 parser.add_argument("--gpu", type=str, default="1", help="The GPU to run on")
 
-
-parser.add_argument("--pattern_file", type=str, default="./data/supply_cooperate_20210518_data/yanbao_ic_pattern.json", help="")
 parser.add_argument("--target_dir", type=str, default="data", help="")
 parser.add_argument("--log_dir", type=str, default="./log/event", help="")
 parser.add_argument("--save_dir", type=str, default="./log/model", help="")
+
+
+# specify the word_embedding_model position and pretrained bert-chinese model folder
 parser.add_argument("--word2vec_file", type=str, default="/home/ps/disk_sdb/yyr/codes/NEROtorch/embedding_model/word_embedding_model.model", help="")
+parser.add_argument("--bert_pretrained_model", type=str, default="/home/ps/disk_sdb/yyr/codes/NEROtorch/pretrain_models/bert", help="")
 
+# using loader_config.source_uris to replace the following argumnents.
+# parser.add_argument("--train_file", type=str, default="./data/supply_cooperate_20210518_data/train.json", help="")
+# parser.add_argument("--dev_file", type=str, default="./data/supply_cooperate_20210518_data/test.json", help="")
+# parser.add_argument("--test_file", type=str, default="./data/supply_cooperate_20210518_data/test.json", help="")
+# parser.add_argument("--pattern_file", type=str, default="./data/supply_cooperate_20210518_data/yanbao_ic_pattern.json", help="")
 
-
-parser.add_argument("--train_file", type=str, default="./data/supply_cooperate_20210518_data/train.json", help="")
-parser.add_argument("--dev_file", type=str, default="./data/supply_cooperate_20210518_data/test.json", help="")
-parser.add_argument("--test_file", type=str, default="./data/supply_cooperate_20210518_data/test.json", help="")
-
-parser.add_argument("--emb_dict", type=str, default="./data/supply_cooperate_20210518_data/emb_dict.json", help="")
 
 parser.add_argument("--checkpoint", type=str, default="./checkpoint/model.ckpt", help="")
 
@@ -80,6 +80,6 @@ print("-----------------------------------------------")
 # 模型训练
 executor = OpenKSModel.get_module(platform, executor)
 nero = executor(dataset=dataset, model=OpenKSModel.get_module(platform, model), args=args)
-nero.run(run_type='nero')
+nero.run(run_type='run_nero_model')
 
 print("-----------------------------------------------")

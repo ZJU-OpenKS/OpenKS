@@ -42,8 +42,8 @@ class SoftMatch(nn.Module):
         super(SoftMatch, self).__init__()
         self.config = config
 
-        self.bert = BertModel.from_pretrained('/home/ps/disk_sdb/yyr/codes/NEROtorch/pretrain_models/bert')
-        self.bert_no_grad = BertModel.from_pretrained('/home/ps/disk_sdb/yyr/codes/NEROtorch/pretrain_models/bert')
+        self.bert = BertModel.from_pretrained(self.config.bert_pretrained_model)
+        self.bert_no_grad = BertModel.from_pretrained(self.config.bert_pretrained_model)
         
         for name ,param in self.bert_no_grad.named_parameters():
             param.requires_grad = False

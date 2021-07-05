@@ -82,7 +82,7 @@ class KELearnTorch(KELearnModel):
 	def save_model(self, model, model_path):
 		torch.save(model, model_path)
 
-	def run_nero(self):
+	def run_nero_model(self):
 		# read data
 		# train
 		unlabeled_data, test_data, pattern = self.dataset.bodies[0], self.dataset.bodies[1], self.dataset.bodies[2]
@@ -95,12 +95,15 @@ class KELearnTorch(KELearnModel):
 		
 		model = self.model(self.args, word_emb, word2idx_dict)
 		nero_run(self.args, data, model)
-		
-
+	
 	def run(self, run_type=None):
-		if run_type == 'nero':
-			self.run_nero()
-			return
+		if run_type == 'run_nero_model':
+			self.run_nero_model()
+		else:
+			self.default_run()
+
+	def default_run(self):
+		
 		device = torch.device('cuda') if self.args.gpu else torch.device('cpu')
 
 		train_set, valid_set, test_set = self.triples_reader(ratio=0.01)
