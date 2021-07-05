@@ -2,18 +2,21 @@
 # All Rights Reserved.
 
 import logging
+import json
 import argparse
 import torch
 import torch.nn as nn
+import torch.utils.data.dataset as Dataset
 from sklearn.model_selection import train_test_split
 from ..model import KELearnModel
+from .ke_modules.nero_modules import read, nero_run
 
 @KELearnModel.register("KELearn", "PyTorch")
 class KELearnTorch(KELearnModel):
 	def __init__(self, name='pytorch-default', dataset=None, model=None, args=None):
 		self.name = name
 		self.dataset = dataset
-		self.args = self.parse_args(args)
+		self.args = args
 		self.model = model
 
 	def parse_args(self, args):
@@ -79,7 +82,25 @@ class KELearnTorch(KELearnModel):
 	def save_model(self, model, model_path):
 		torch.save(model, model_path)
 
-	def run(self):
+	def run_nero(self):
+		# read data
+		# train
+		unlabeled_data, test_data, pattern = self.dataset.bodies[0], self.dataset.bodies[1], self.dataset.bodies[2]
+		
+		patterns = json.loads(pattern[0])
+		print(self.args)
+		self.args.patterns = patterns
+		data = read(self.args, unlabeled_data, test_data)
+		word2idx_dict, word_emb, train_data, dev_data, test_data = data
+		
+		model = self.model(self.args, word_emb, word2idx_dict)
+		nero_run(self.args, data, model)
+		
+
+	def run(self, run_type=None):
+		if run_type == 'nero':
+			self.run_nero()
+			return
 		device = torch.device('cuda') if self.args.gpu else torch.device('cpu')
 
 		train_set, valid_set, test_set = self.triples_reader(ratio=0.01)
