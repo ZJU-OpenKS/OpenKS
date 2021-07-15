@@ -28,6 +28,7 @@ class FileType(Enum):
 	CNSCHEMA = 'cnschema'
 	OPENBASE = 'openbase'
 	OPENKS = 'openks'
+	NERO = 'nero'
 
 
 def flatten_json(y):
@@ -214,6 +215,14 @@ class Loader(object):
 			else:
 				logger.warn('Only allows loading with entities and triples for now!')
 				raise IOError
+		elif self.config.file_type == FileType.NERO:
+			headers = [['unlabeled_data'], ['predict'], ['pattern']]
+			for file in ['unlabeled_data', 'predict', 'pattern']:
+				tmp = []
+				with open(self.config.source_uris + '/' + file + '.json', 'r') as load_f:
+					for line in load_f:
+						tmp.append(line.strip())
+					bodies.append(tuple(tmp))
 
 		mmd.name = self.config.data_name
 		mmd.headers = headers
