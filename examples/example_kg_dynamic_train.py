@@ -3,7 +3,7 @@
 
 from openks.loaders import loader_config, SourceType, FileType, GraphLoader
 from openks.models import OpenKSModel
-from py2neo import Graph
+# from py2neo import Graph
 
 ''' 图谱载入与图谱数据结构生成 '''
 # 载入参数配置与数据集载入
@@ -38,13 +38,15 @@ args = {
 	'epsilon': 2.0
 }
 platform = 'PyTorch'
-executor = 'KGLearn'
-model = 'dyE'
+executor = 'KGLearn_Dy'
+model = 'DyE'
 args['model_dir'] = model+'.pt'
 print("根据配置，使用 {} 框架，{} 执行器训练 {} 模型。".format(platform, executor, model))
 print("-----------------------------------------------")
 # 模型训练
 executor = OpenKSModel.get_module(platform, executor)
+print('--')
+print(OpenKSModel.get_module(platform, model))
 kglearn = executor(graph=graph, model=OpenKSModel.get_module(platform, model), args=args)
 kglearn.run()
 print("-----------------------------------------------")
