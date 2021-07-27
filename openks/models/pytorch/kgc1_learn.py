@@ -49,11 +49,25 @@ class Data:
                 if i not in self.train_relations]
 
     def load_data(self, data_dir, data_type="train", reverse=False):
-        with open("%s/%s.txt" % (data_dir, data_type), "r") as f:
-            data = f.read().strip().split("\n")
-            data = [i.split() for i in data]
-            if reverse:
-                data += [[i[2], i[1]+"_reverse", i[0]] for i in data]
+        if data_type == "train":
+            data = []
+            big_dict = {}
+            with open("%s/%s" % (data_dir, "triples"), "r") as f:
+                triples = f.read().strip().split("\n")
+            with open("%s/%s" % (data_dir, "entities"), "r") as f:
+                entities = f.read().strip().split("\n")
+                for item in entities:
+                    tmp_list = item.split()
+                    big_dict[tmp_list[0]] = tmp_list[2]
+            for item in triples:
+                tmp = item.split()
+                data.append([big_dict[tmp[0]],tmp[1],big_dict[tmp[2]] ])
+        else:
+            with open("%s/%s.txt" % (data_dir, data_type), "r") as f:
+                data = f.read().strip().split("\n")
+                data = [i.split() for i in data]
+        if reverse:
+            data += [[i[2], i[1]+"_reverse", i[0]] for i in data]
         return data
 
     def get_relations(self, data):
