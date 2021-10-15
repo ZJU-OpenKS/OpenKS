@@ -4,7 +4,7 @@ import requests
 
 
 @HypernymExtractModel.register("HypernymExtract", "Paddle")
-class HypernymDiscoveryPaddle(HypernymExtractModel):
+class HypernymExtractPaddle(HypernymExtractModel):
     def __init__(self, name: str = 'HypernymExtractModel', ):
         super().__init__()
         self.name = name
