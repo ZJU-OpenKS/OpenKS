@@ -266,3 +266,11 @@ class HypernymDiscoveryModel(OpenKSModel):
 
     def run(self):
         return NotImplemented
+
+
+class HypernymExtractModel(OpenKSModel):
+    def __init__(self):
+        super().__init__()
+
+    def entity2hyper_lst(self, *args):
+        return NotImplemented
