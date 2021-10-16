@@ -146,6 +146,9 @@ class RelationExtractionTorch(RelationExtractionModel):
         #TODO
         return NotImplemented
         # return train_data, dev_data, test_data, label_list, task_ner_labels
+    
+    def embedding_initial_from_prompt(self, model, tokenizer, special_tokens):
+        return NotImplemented
 
     def save_model(self, output_dir):
         model_to_save = self.model.module if hasattr(self.model, 'module') else self.model
@@ -154,6 +157,7 @@ class RelationExtractionTorch(RelationExtractionModel):
         torch.save(model_to_save.state_dict(), output_model_file)
         model_to_save.config.to_json_file(output_config_file)
         self.tokenizer.save_vocabulary(output_dir)
+    
     
     def evaluate(self,device, eval_dataloader, eval_label_ids, num_labels):
         self.model.eval()
@@ -182,9 +186,9 @@ class RelationExtractionTorch(RelationExtractionModel):
         result['eval_loss'] = eval_loss
         return preds, result, logits
 
-    def get_features(self, dataset, label2id):
+    def get_features(self, dataset, label2id, special_tokens):
         raw_features = convert_examples_to_features(
-            dataset, label2id, self.args.max_seq_length, self.tokenizer, {}, unused_tokens=not(self.args.add_new_tokens))
+            dataset, label2id, self.args.max_seq_length, self.tokenizer, special_tokens, unused_tokens=not(self.args.add_new_tokens))
         all_input_ids = torch.tensor([f.input_ids for f in raw_features], dtype=torch.long)
         all_input_mask = torch.tensor([f.input_mask for f in raw_features], dtype=torch.long)
         all_segment_ids = torch.tensor([f.segment_ids for f in raw_features], dtype=torch.long)
@@ -201,7 +205,10 @@ class RelationExtractionTorch(RelationExtractionModel):
         id2label = {i: label for i, label in enumerate(label_list)}
         num_labels = len(label_list)
         add_marker_tokens(self.tokenizer, task_ner_labels)
-        train_data, _= self.get_features(train_dataset, label2id)
+        special_tokens = {}
+        train_data, _= self.get_features(train_dataset, label2id, special_tokens)
+        self.embedding_initial_from_prompt(self.model,self.tokenizer,special_tokens)
+        
         train_dataloader = DataLoader(train_data, batch_size=self.args.train_batch_size)
         eval_data, eval_label_ids= self.get_features(eval_dataset, label2id)
         eval_dataloader = DataLoader(eval_data, batch_size=self.args.eval_batch_size)
