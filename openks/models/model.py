@@ -252,3 +252,45 @@ class KGC2LearnModel(OpenKSModel):
 
 	def run(self, *args):
 		return NotImplemented
+
+
+class NerModel(OpenKSModel):
+	''' Base class for ner trainer '''
+	def __init__(self, name: str = 'model-name', args: List = None):
+		self.name = name
+
+	def data_reader(self, *args):
+		return NotImplemented
+
+	def evaluate(self, *args):
+		return NotImplemented
+
+	def load_model(self, *args):
+		return NotImplemented
+
+	def save_model(self, *args):
+		return NotImplemented
+
+	def run(self, *args):
+		return NotImplemented
+
+
+class Relation_ExtractionModel(OpenKSModel):
+	''' Base class for relation extraction trainer '''
+	def __init__(self, name: str = 'model-name', args: List = None):
+		self.name = name
+
+	def data_reader(self, *args):
+		return NotImplemented
+
+	def evaluate(self, *args):
+		return NotImplemented
+
+	def load_model(self, *args):
+		return NotImplemented
+
+	def save_model(self, *args):
+		return NotImplemented
+
+	def run(self, *args):
+		return NotImplemented
