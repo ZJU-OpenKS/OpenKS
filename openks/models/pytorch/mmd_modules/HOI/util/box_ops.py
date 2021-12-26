@@ -1,10 +1,3 @@
-# ------------------------------------------------------------------------
-# Copyright (c) Hitachi, Ltd. All Rights Reserved.
-# Licensed under the Apache License, Version 2.0 [see LICENSE for details]
-# ------------------------------------------------------------------------
-# Modified from DETR (https://github.com/facebookresearch/detr)
-# Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
-# ------------------------------------------------------------------------
 """
 Utilities for bounding box manipulation and GIoU.
 """
@@ -92,3 +85,18 @@ def masks_to_boxes(masks):
     y_min = y_mask.masked_fill(~(masks.bool()), 1e8).flatten(1).min(-1)[0]
 
     return torch.stack([x_min, y_min, x_max, y_max], 1)
+
+
+def union_box(boxes1, boxes2):
+    """
+    make sure bbox format is cxcywh
+    """
+    if len(boxes1) == 0 or len(boxes2) == 0:
+        return torch.tensor([]).view(0, 4).to(boxes1.device)
+
+    boxes1, boxes2 = box_cxcywh_to_xyxy(boxes1), box_cxcywh_to_xyxy(boxes2)
+    b1x0, b1y0, b1x1, b1y1 = boxes1.unbind(-1)
+    b2x0, b2y0, b2x1, b2y1 = boxes2.unbind(-1)
+    union = [torch.min(b1x0, b2x0), torch.min(b1y0, b2y0),
+             torch.max(b1x1, b2x1), torch.max(b1y1, b2y1)]
+    return box_xyxy_to_cxcywh(torch.stack(union, dim=-1))

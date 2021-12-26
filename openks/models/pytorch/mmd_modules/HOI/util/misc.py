@@ -1,10 +1,3 @@
-# ------------------------------------------------------------------------
-# Copyright (c) Hitachi, Ltd. All Rights Reserved.
-# Licensed under the Apache License, Version 2.0 [see LICENSE for details]
-# ------------------------------------------------------------------------
-# Modified from DETR (https://github.com/facebookresearch/detr)
-# Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
-# ------------------------------------------------------------------------
 """
 Misc functions, including distributed helpers.
 
@@ -435,3 +428,228 @@ def interpolate(input, size=None, scale_factor=None, mode="nearest", align_corne
         return _new_empty_tensor(input, output_shape)
     else:
         return torchvision.ops.misc.interpolate(input, size, scale_factor, mode, align_corners)
+
+
+class RecorderHOI:
+    def __init__(self):
+        self.epoch = None
+        self.best_metrics = None
+
+    def set_best_metrics(self, metrics, epoch):
+        self.epoch = epoch
+        self.best_metrics = metrics
+
+    def is_best(self, metrics, epoch):
+        if self.best_metrics is None:
+            self.epoch = epoch
+            self.best_metrics = metrics
+            return True
+
+        if metrics['mAP'] > self.best_metrics['mAP']:
+            self.epoch = epoch
+            self.best_metrics = metrics
+            return True
+
+        return False
+
+    def get_best_metrics(self):
+        return self.epoch, self.best_metrics
+
+    def print_best_metrics(self):
+        line = f'best metrics (epoch {self.epoch}):\n' \
+               f'mAP: {self.best_metrics["mAP"]} ' \
+               f'mAP rare: {self.best_metrics["mAP rare"]} ' \
+               f'mAP non-rare: {self.best_metrics["mAP non-rare"]} ' \
+               f'mean max recall: {self.best_metrics["mean max recall"]}'
+
+        print('--------------------')
+        print(line)
+        print('--------------------')
+
+
+def save_checkpoints(args, output_dir, recorder, epoch, test_stats,
+                     model_without_ddp, optimizer, lr_scheduler,
+                     hoi_evaluator=None):
+    if args.output_dir:
+        checkpoint_paths = [output_dir / 'checkpoint.pth']
+
+        # save best metrics
+        if recorder is not None and recorder.is_best(test_stats, epoch):
+            checkpoint_paths.append(output_dir / 'checkpoint_best.pth')
+            if hoi_evaluator is not None:
+                hoi_evaluator.save_best_prediction(output_dir)
+        # extra checkpoint before LR drop and every 100 epochs
+        if (epoch + 1) % args.lr_drop == 0 or (epoch + 1) % 100 == 0:
+            checkpoint_paths.append(output_dir / f'checkpoint{epoch:04}.pth')
+
+        for checkpoint_path in checkpoint_paths:
+            save_dict = {
+                'model': model_without_ddp.state_dict(),
+                'optimizer': optimizer.state_dict(),
+                'lr_scheduler': lr_scheduler.state_dict(),
+                'epoch': epoch,
+                'args': args,
+            }
+            if recorder is not None:
+                best_epoch, best_metrics = recorder.get_best_metrics()
+                save_dict.update({
+                    'best_metrics': (best_epoch, best_metrics)
+                })
+            save_on_master(save_dict, checkpoint_path)
+
+
+def save_logs(args, train_stats, test_stats, epoch, n_parameters,
+              output_dir, coco_evaluator=None):
+    log_stats = {**{f'train_{k}': v for k, v in train_stats.items()},
+                 **{f'test_{k}': v for k, v in test_stats.items()},
+                 'epoch': epoch,
+                 'n_parameters': n_parameters}
+
+    if args.output_dir and is_main_process():
+        with (output_dir / "log.txt").open("a") as f:
+            f.write(json.dumps(log_stats) + "\n")
+
+        # for evaluation logs
+        if coco_evaluator is not None:
+            (output_dir / 'eval').mkdir(exist_ok=True)
+            if "bbox" in coco_evaluator.coco_eval:
+                filenames = ['latest.pth']
+                if epoch % 50 == 0:
+                    filenames.append(f'{epoch:03}.pth')
+                for name in filenames:
+                    torch.save(coco_evaluator.coco_eval["bbox"].eval,
+                               output_dir / "eval" / name)
+
+
+def load_pretrained_encoder(args, checkpoint):
+    print('Loading encoder...')
+    extra_weights = {}
+    if args.enc_layers + args.hoi_enc_layers == 6:
+        replace_list = [
+            'self_attn{}.in_proj_weight', 'self_attn{}.in_proj_bias',
+            'self_attn{}.out_proj.weight', 'self_attn{}.out_proj.bias',
+            'linear1{}.weight', 'linear1{}.bias',
+            'linear2{}.weight', 'linear2{}.bias',
+            'norm1.weight', 'norm1.bias',
+            'norm2.weight', 'norm2.bias',
+        ]
+        for i in range(args.enc_layers, 6):
+            prefix1 = f'transformer.encoder.layers.{i}.'
+            prefix2 = f'transformer.encoder.hoi_layers.{i - args.enc_layers}.'
+            for k in replace_list:
+                if k.startswith('self'):
+                    extra_weights[f'{prefix2}{k.format("")}'] = checkpoint[f'{prefix1}{k.format("")}']
+                elif k.startswith('linear'):
+                    extra_weights[f'{prefix2}{k.format("")}'] = checkpoint[f'{prefix1}{k.format("")}']
+                else:
+                    extra_weights[f'{prefix2}{k}'] = checkpoint[f'{prefix1}{k}']
+
+    return extra_weights
+
+
+def load_pretrained_decoder(args, checkpoint):
+    print('Loading decoder...')
+    extra_weights = {}
+    if args.dec_layers + args.hoi_dec_layers == 6:
+        replace_dict = {
+            'cross_attn{}.in_proj_weight': 'multihead_attn.in_proj_weight',
+            'cross_attn{}.in_proj_bias': 'multihead_attn.in_proj_bias',
+            'cross_attn{}.out_proj.weight': 'multihead_attn.out_proj.weight',
+            'cross_attn{}.out_proj.bias': 'multihead_attn.out_proj.bias',
+        }
+
+        if args.vanilla_dec_type == 'vanilla_bottleneck' and args.load_bottleneck_dec_ca_weights:
+            for i in range(0, args.dec_layers):
+                prefix = f'transformer.decoder.layers.{i}.'
+                for k, v in replace_dict.items():
+                    for tgt in ['_sub', '_obj', '_verb']:
+                        name = prefix + k.format(tgt)
+                        extra_weights[name] = checkpoint[f'{prefix}{v}']
+
+        if args.hoi_dec_type == 'vanilla_bottleneck':
+            if args.load_bottleneck_dec_ca_weights:
+                for i in range(args.dec_layers, 6):
+                    prefix1 = f'transformer.decoder.layers.{i}.'
+                    prefix2 = f'transformer.decoder.hoi_layers.{i - args.dec_layers}.'
+                    for k, v in replace_dict.items():
+                        for tgt in ['_sub', '_obj', '_verb']:
+                            name = prefix2 + k.format(tgt)
+                            extra_weights[name] = checkpoint[f'{prefix1}{v}']
+        else:
+            replace_list = [
+                'self_attn.in_proj_weight', 'self_attn.in_proj_bias',
+                'self_attn.out_proj.weight', 'self_attn.out_proj.bias',
+                'multihead_attn.in_proj_weight', 'multihead_attn.in_proj_bias',
+                'multihead_attn.out_proj.weight', 'multihead_attn.out_proj.bias',
+                'norm1.weight', 'norm1.bias',
+                'norm2.weight', 'norm2.bias',
+                'norm3.weight', 'norm3.bias'
+            ]
+            if args.dim_feedforward_hoi == 2048:
+                replace_list.extend([
+                    'linear1.weight', 'linear1.bias',
+                    'linear2.weight', 'linear2.bias',
+                ])
+
+            dec_layer = 0
+            for i in range(args.dec_layers, 6):
+                prefix1 = f'transformer.decoder.layers.{i}.'
+                prefix2 = f'transformer.decoder.hoi_layers.'
+                for _ in range(3):
+                    for k in replace_list:
+                        name = prefix2 + f'{dec_layer}.' + k
+                        extra_weights[name] = checkpoint[f'{prefix1}{k}']
+                    dec_layer += 1
+
+    return extra_weights
+
+
+def load_split_query(checkpoint):
+    extra_weights = {'h_query_embed.weight': checkpoint['query_embed.weight'],
+                     'o_query_embed.weight': checkpoint['query_embed.weight'],
+                     'v_query_embed.weight': checkpoint['query_embed.weight']}
+    return extra_weights
+
+
+def load_pretrained_detr(args, model_without_ddp):
+    print('Loading weights of DETR pre-trained on ms-coco...')
+    checkpoint = torch.load(args.pretrained, 'cpu')['model']
+
+    extra_weights = {}
+    extra_weights.update(load_pretrained_encoder(args, checkpoint))
+    extra_weights.update(load_pretrained_decoder(args, checkpoint))
+    if args.split_query:
+        extra_weights.update(load_split_query(checkpoint))
+    print('All Loaded')
+
+    checkpoint.update(extra_weights)
+
+    print('\nexclude weights:')
+    for n, p in model_without_ddp.named_parameters():
+        if n not in checkpoint:
+            print(n)
+
+    model_without_ddp.load_state_dict(checkpoint, strict=False)
+    del checkpoint, extra_weights
+
+
+def load_model_weights(args, model_without_ddp, optimizer=None, lr_scheduler=None, recorder=None):
+    if args.resume:
+        if args.resume.startswith('https'):
+            checkpoint = torch.hub.load_state_dict_from_url(
+                args.resume, map_location='cpu', check_hash=True)
+        else:
+            checkpoint = torch.load(args.resume, map_location='cpu')
+        model_without_ddp.load_state_dict(checkpoint['model'])
+        if not args.eval:
+            if 'optimizer' in checkpoint and optimizer is not None:
+                optimizer.load_state_dict(checkpoint['optimizer'])
+            if 'lr_scheduler' in checkpoint and lr_scheduler is not None:
+                lr_scheduler.load_state_dict(checkpoint['lr_scheduler'])
+            if 'epoch' in checkpoint:
+                args.start_epoch = checkpoint['epoch'] + 1
+            if 'best_metrics' in checkpoint and recorder is not None:
+                best_epoch, best_metrics = checkpoint['best_metrics']
+                recorder.set_best_metrics(best_metrics, best_epoch)
+    elif args.pretrained:
+        load_pretrained_detr(args, model_without_ddp)
