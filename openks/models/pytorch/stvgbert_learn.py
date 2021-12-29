@@ -30,22 +30,22 @@ def add_path(path):
     if path not in sys.path:
         sys.path.insert(0, path)
 this_dir = os.path.dirname(__file__)
-lib_path = os.path.join(this_dir, 'mmd_modules/STVGBert/src/lib')
+lib_path = os.path.join(this_dir, 'mmd_modules/STVGBert/src/stvglib')
 add_path(lib_path)
 print(lib_path)
 ##train_related
-from .mmd_modules.STVGBert.src.lib.opts import opts
-from .mmd_modules.STVGBert.src.lib.models.model import create_model, load_model, save_model
-from .mmd_modules.STVGBert.src.lib.models.data_parallel import DataParallel
-from .mmd_modules.STVGBert.src.lib.logger import Logger
-from .mmd_modules.STVGBert.src.lib.datasets.dataset_factory import get_dataset
-from .mmd_modules.STVGBert.src.lib.trains.train_factory import train_factory
+from .mmd_modules.STVGBert.src.stvglib.opts import opts
+from .mmd_modules.STVGBert.src.stvglib.models.model import create_model, load_model, save_model
+from .mmd_modules.STVGBert.src.stvglib.models.data_parallel import DataParallel
+from .mmd_modules.STVGBert.src.stvglib.logger import Logger
+from .mmd_modules.STVGBert.src.stvglib.datasets.dataset_factory import get_dataset
+from .mmd_modules.STVGBert.src.stvglib.trains.train_factory import train_factory
 
 ##evaluate_related
-# from .mmd_modules.STVGBert.src.lib.external.nms import soft_nms
-# from .mmd_modules.STVGBert.src.lib.utils.utils import AverageMeter
-# from .mmd_modules.STVGBert.src.lib.datasets.dataset_factory import dataset_factory
-# from .mmd_modules.STVGBert.src.lib.detectors.detector_factory import detector_factory
+# from .mmd_modules.STVGBert.src.stvglib.external.nms import soft_nms
+# from .mmd_modules.STVGBert.src.stvglib.utils.utils import AverageMeter
+# from .mmd_modules.STVGBert.src.stvglib.datasets.dataset_factory import dataset_factory
+# from .mmd_modules.STVGBert.src.stvglib.detectors.detector_factory import detector_factory
 from .mmd_modules.STVGBert.src.test import test, prefetch_test
 
 
