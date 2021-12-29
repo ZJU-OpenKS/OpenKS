@@ -66,7 +66,7 @@ class VisualRelationTorch(VisualConstructionModel):
         self.optimizer = torch.optim.AdamW(self.param_dicts, lr=self.args.lr, weight_decay=self.args.weight_decay)
         self.lr_scheduler = torch.optim.lr_scheduler.StepLR(self.optimizer, self.args.lr_drop)
 
-        self.output_dir = Path(args.output_dir)
+        self.output_dir = Path(self.args.output_dir)
         self.recorder = utils.RecorderHOI() if self.args.hoi else None
         utils.load_model_weights(self.args, self.model_without_ddp, self.optimizer, self.lr_scheduler, self.recorder)
     

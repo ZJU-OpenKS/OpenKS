@@ -1,7 +1,7 @@
 import torch
 from torch import nn
 
-from util.misc import NestedTensor, nested_tensor_from_tensor_list
+from ..util.misc import NestedTensor, nested_tensor_from_tensor_list
 from .tr_helper import MLP
 
 
