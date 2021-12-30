@@ -1,0 +1,2 @@
+cd src
+python main.py ctdet --exp_id vidstg_svgnet_resize_7 --dataset vidstg --arch resdcn_101 --bert_config_path bert_base_6layer_6conect.json --batch_size 1 --master_batch 1 --lr_step 10 --num_epochs 15 --lr 1e-5 --gpus 3 --num_workers 8 --no_color_aug --not_rand_crop --input_res 256 # --load_model /home/rusu5516/project/st_grouding/exp/ctdet/vidstg_svgnet_temmap_5/model_last.pth

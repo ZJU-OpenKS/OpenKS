@@ -14,5 +14,5 @@ from .kg_learn_dist import *
 # from .visual_entity_learn import *
 from .visual_relation_learn import *
 from .hoi_learn import *
-
+from stvgbert_learn import *
 from .dataloader import *

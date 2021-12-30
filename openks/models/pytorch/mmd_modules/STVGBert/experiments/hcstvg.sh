@@ -1,0 +1,2 @@
+cd src
+python main.py ctdet --exp_id hcstvg_svgnet_4 --dataset hcstvg --arch resdcn_101 --batch_size 5 --master_batch 5 --lr_step 80 --num_epochs 100 --lr 1e-5 --gpus 0 --num_workers 4 --no_color_aug --not_rand_crop --input_res 256 #--resume --load_model /home/rusu5516/project/st_grouding/exp/ctdet/hcstvg_svgnet/model_last.pth
