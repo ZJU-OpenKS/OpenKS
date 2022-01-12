@@ -6,7 +6,9 @@ OpenKSModel.list_modules()
 
 # 算法模型选择配置
 args = {
-        "--hoi": True
+        "--hoi": True,
+        "--split_query": True,
+        "--interact_query": True,
         # "--device": 'cpu'
     }
 platform = 'PyTorch'

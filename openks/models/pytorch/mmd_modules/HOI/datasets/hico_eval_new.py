@@ -6,7 +6,7 @@ import numpy as np
 # sys.path.insert(0, "/home/xian/Documents/code/GGNet/src/lib")
 # from utils.bbox import compute_iou
 import json
-import util.io as io
+import ..util.io as io
 
 
 def match_hoi(pred_det, gt_dets):
