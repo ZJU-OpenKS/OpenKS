@@ -1,6 +1,8 @@
 # OpenKS（知目）——领域可泛化的知识学习与计算引擎
 
 ## 平台支持功能
+![modules](./docs/pics/openks.jpg)
+
 | 基础能力 | 领域泛化能力 | 跨领域能力 | 现实问题解决能力 | 开放服务使用能力 |
 | :----: | :----: | :----: | :----: | :----: |
 | 知识图谱载入与构建 | 领域启发式知识表示处理与推理应用 | 跨领域知识融合表示学习与推理（待支持） | 大规模高效率知识图谱学习与推理 | 前沿算法集成与高性能模型调用 |
@@ -117,6 +119,23 @@ struc_q = parser.parse(question)
 fetcher = AnswerFetcher(struc_q, graph)
 print(fetcher.fetch_by_db_query(graph_db))
 ```
+## 算法支持
+| 算法名称 | 算法功能 | 实现框架 |
+| :----: | :----: | :----: |
+| Rake/Topic-Rake | 概念短语抽取 | 传统机器学习 |
+| GRU/LSTM | 实体识别 | PaddlePaddle/PyTorch/TensorFlow |
+| Nero | 关系抽取 | PyTorch |
+| TransE | 知识图谱表示学习 | PaddlePaddle/PyTorch |
+| TransH | 知识图谱表示学习 | PaddlePaddle/PyTorch |
+| TransR | 知识图谱表示学习 | PaddlePaddle/PyTorch |
+| RotatE | 知识图谱表示学习 | PyTorch |
+| GCN | 图嵌入表示学习 | PaddlePaddle/PyTorch |
+| GAT | 图嵌入表示学习 | PyTorch |
+| GIN | 图嵌入表示学习 | PyTorch |
+| MPNN | 图嵌入表示学习 | PyTorch |
+| DyE | 图嵌入表示学习 | PyTorch |
+| KGC | 图嵌入表示学习 | PyTorch |
+| GCN-REC | 图推荐算法 | PyTorch |
 
 ## 系统运行逻辑
 ![pipeline](./docs/pics/running_steps.jpg)

@@ -18,11 +18,15 @@ dataset.info_display()
 # 列出已加载模型
 OpenKSModel.list_modules()
 # 算法模型选择配置
+# pretrained 使用300维百科词向量：https://github.com/Embedding/Chinese-Word-Vectors
 args = {
     'extractor': 'topic-rake', 
-    'finetuned': '/path/to/finetuned/word_embedding',
-    'stopword': '/path/to/domain/stopwords.txt',
-    'stopword_open': '/path/to/common/stopwords.txt', 
+    'use_finetune': True,
+    'data_dir': './' + loader_config.source_uris + '/train',
+    'pretrained': '/Users/zongchang/Downloads/sgns.target.word-ngram.1-2.dynwin5.thr10.neg5.dim300.iter5',
+    'finetuned': '/Users/zongchang/Downloads/updated_embedding',
+    'stopword': '/Users/zongchang/OneDrive/可泛化知识计算引擎/思-通-行/OpenKS-algorithm/get_phrase/stopwords/stopwords_cn.txt',
+    'stopword_open': '/Users/zongchang/OneDrive/可泛化知识计算引擎/思-通-行/OpenKS-algorithm/get_phrase/stopwords/hit_stopwords.txt', 
     'params': {
         'MIN_SCORE_TOTAL': 0.2,
         'MIN_WORD_LEN': 3,
