@@ -19,7 +19,6 @@ from .dataloader import TrainDataset, TestDataset
 from .dataloader import BidirectionalOneShotIterator
 import json
 
-import pdb
 
 logger = logging.getLogger(__name__)
 
@@ -113,7 +112,9 @@ class KGLearnTorch(KGLearnModel):
 		input_rel = input_rel[None, :]
 		input_tail = input_tail[None, :]
 		input = (input_head, input_rel, input_tail, mode)
-		torch.onnx.export(model, input, self.args['market_path'], verbose=True)
+		input_names = ['head_input', 'relation_input', 'tail_input']
+		output_names = ['score']
+		torch.onnx.export(model, input, self.args['market_path'], verbose=True, input_names=input_names, output_names=output_names)
 
 	def save_model(self, model, optimizer, save_variable_list):
 		'''
@@ -265,7 +266,7 @@ class KGLearnTorch(KGLearnModel):
 					self.model_to_onnx(model)
 
 		# load saved model and test
-		self.load_model(model, opt)
+		# self.load_model(model, opt)
 		model = model.to(device)
 
 		if self.args['do_valid']:
