@@ -18,12 +18,13 @@
 | :----: | :----: |
 | all | Python 3.7 / NumPy - 1.19.5 (https://github.com/numpy/numpy) / NetworkX - 2.4 (https://github.com/networkx/networkx) |
 | models | scikit-learn - 0.22.1 (https://github.com/scikit-learn/scikit-learn) |
-| distributed | PGL - 1.0.1 (https://github.com/PaddlePaddle/PGL) / Paddle - 1.8.5 (https://github.com/paddlepaddle/paddle) |
+| distributed | PGL - 2.1.5 (https://github.com/PaddlePaddle/PGL) / Paddle - 1.8.5 (https://github.com/paddlepaddle/paddle) |
 | models.paddle | Paddle - 1.8.5 (https://github.com/paddlepaddle/paddle) |
 | models.pytorch | PyTorch - 1.7.1 (https://github.com/pytorch/pytorch) |
 | models.tensorflow | TensorFlow - 1.14.0 (https://github.com/tensorflow/tensorflow) |
 | models.pytorch.kg_learn_dist | Ray - 1.0.0 (https://github.com/ray-project/ray) |
-| models.mllib | gensim - 4.0.0 (https://github.com/RaRe-Technologies/gensim) / jieba - 0.42.1 (https://github.com/fxsjy/jieba) |
+| models.mllib | gensim - 3.8.3 (https://github.com/RaRe-Technologies/gensim) / jieba - 0.42.1 (https://github.com/fxsjy/jieba) |
+| market | onnx - 1.7.0 (https://github.com/onnx/onnx)|
 
 ## 快速上手
 ### 知识图谱问答

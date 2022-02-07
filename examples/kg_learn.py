@@ -52,7 +52,7 @@ OpenKSModel.list_modules()
 
 # 算法模型选择配置
 args = {
-	'gpu': True,
+	'gpu': False,
 	'learning_rate': 0.0001,
 	'epoch': 1024,
 	'batch_size': 1024, 
