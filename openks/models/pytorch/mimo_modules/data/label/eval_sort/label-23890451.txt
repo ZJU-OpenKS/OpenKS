@@ -1,0 +1,79 @@
+# n1:[interferon_gamma_production,as,ifn-gamma_production]
+# n2:[jurkat_cells,as,jurkatcells]
+
+# h1:[various_mediators,contain,cytokines]
+# h2:[kb_cells,contain,lps-stimulated_kb_cells]
+
+# 23890451	Aggregatibacter#0 actinomycetemcomitans#1 lipopolysaccharide#2 stimulated#3 epithelial#4 cells#5 produce#6 interleukin-15#7 that#8 regulates#9 t#10 cell#11 activation#12 .#13 
+
+f1:[aggregatibacter_actinomycetemcomitans_lipopolysaccharide_stimulated_epithelial_cells#0,produce#6,interleukin-15#7]
+c1:[interleukin-15#7,regulates#9,{t_cell#10:activation#12}]
+stmt1 = f1 c1
+
+# 23890451	Oral#0 epithelial#1 cells#2 act#3 not#4 only#5 as#6 mechanical#7 barriers#8 but#9 also#10 as#11 immunological#12 barriers#13 by#14 producing#15 various#16 mediators#17 such#18 as#19 cytokines#20 .#21 
+
+f2:[oral_epithelial_cells#0,act_not_only_as#3,mechanical_barriers#7]
+f3:[oral_epithelial_cells#0,also_as#10,immunological_barriers#12]
+c2:[NIL,by_producing#14,various_mediators#16]
+c3:[NIL,by_producing#14,cytokines#20]
+stmt2 = f2 f3 c2 c3
+
+# 23890451	Since#0 ,#1 in#2 periodontal#3 disease#4 ,#5 limited#6 information#7 is#8 available#9 regarding#10 the#11 role#12 of#13 oral#14 epithelial#15 cell-derived#16 cytokines#17 on#18 T#19 cell#20 activation#21 ,#22 we#23 investigated#24 the#25 responses#26 of#27 human#28 T#29 cells#30 to#31 cytokines#32 in#33 KB#34 cells#35 that#36 had#37 been#38 stimulated#39 with#40 Aggregatibacter#41 actinomycetemcomitans#42 lipopolysaccharide(LPS)#43 .#44 
+
+f4:[limited_information#6,is_available_regarding#8,{oral_epithelial_cell-derived_cytokines#14:role#12}]
+f5:[NIL,investigated#24,{human_t_cells#28:responses#26}]
+f6:[kb_cells#34,had_been_stimulated_with#37,aggregatibacter_actinomycetemcomitans_lipopolysaccharide(lps)#41]
+c4:[NIL,in#2,periodontal_disease#3]
+c5:[oral_epithelial_cell-derived_cytokines#14,on#18,t_cell_activation#19]
+c6:[cytokines#32,in#33,kb_cells#34]
+stmt3 = f4 f5 f6 c4 c5 c6
+
+# 23890451	To#0 evaluate#1 T#2 cell#3 activation#4 in#5 response#6 to#7 the#8 culture#9 supernatant#10 of#11 KB#12 cells#13 ,#14 we#15 examined#16 cell#17 proliferation#18 and#19 interferon#20 gamma#21 production#22 ,#23 which#24 is#25 closely#26 related#27 to#28 periodontal#29 disease#30 ,#31 in#32 Jurkat#33 cells#34 .#35 
+
+f7:[NIL,to_evaluate#0,{t_cell#2:activation#4}]
+f8:[NIL,examined#16,cell_proliferation_and_interferon_gamma_production#17]
+c7:[{t_cell#2:activation#4},in_response_to#5,{kb_cells#12:culture_supernatant#9}]
+c8:[cell_proliferation_and_interferon_gamma_production#17,is_closely_related_to#25,periodontal_disease#29]
+c9:[NIL,in#32,jurkat_cells#33]
+stmt4 = f7 f8 c7 c8 c9
+
+# 23890451	Culture#0 supernatant#1 of#2 LPS-stimulated#3 KB#4 cells#5 enhanced#6 cell#7 proliferation#8 and#9 IFN-gamma#10 production#11 in#12 Jurkat#13 cells#14 .#15 
+
+f9:[{lps-stimulated_kb_cells#3:culture_supernatant#0},enhanced#6,cell_proliferation#7]
+f10:[{lps-stimulated_kb_cells#3:culture_supernatant#0},enhanced#6,ifn-gamma_production#10]
+c10:[cell_proliferation#7,in#12,jurkat_cells#13]
+c11:[ifn-gamma_production#10,in#12,jurkat_cells#13]
+stmt5 = f9 f10 c10 c11
+
+# 23890451	To#0 determine#1 the#2 active#3 component#4 within#5 the#6 culture#7 supernatant#8 ,#9 the#10 production#11 of#12 epithelial#13 cell-derived#14 cytokines#15 ,#16 interleukin-12#17 ,#18 IL-15#19 and#20 IL-18#21 ,#22 in#23 LPS-stimulated#24 KB#25 cells#26 wasanalysed#27 .#28 
+
+f11:[NIL,to_determine#0,active_component#3]
+f12:[{epithelial_cell-derived_cytokines#13:production#11},wasanalysed#27,NIL]
+f13:[{interleukin-12#17:production#11},wasanalysed#27,NIL]
+f14:[{il-15#19:production#11},wasanalysed#27,NIL]
+f15:[{il-18#21:production#11},wasanalysed#27,NIL]
+c12:[active_component#3,within#5,culture_supernatant#7]
+c13:[NIL,in#23,lps-stimulated_kb_cells#24]
+stmt6 = f11 f12 f13 f14 f15 c12 c13
+
+# 23890451	IL-15#0 ,#1 but#2 not#3 IL-18#4 ,#5 was#6 significantly#7 increased#8 in#9 the#10 culture#11 supernatant#12 of#13 LPS-stimulated#14 KB#15 cells#16 .#17 
+
+f16:[il-15#0,was_significantly_increased#6,NIL#-1]
+c14:[il-15#0,in#9,{lps-stimulated_kb_cells#14:culture_supernatant#11}]
+c15:[NIL,not#3,il-18#4]
+stmt7 = f16 c14 c15
+
+# 23890451	Moreover#0 ,#1 additional#2 anti-IL-15#3 neutralizing#4 antibody#5 abolished#6 culture#7 supernatant-induced#8 IFN-gamma#9 expression#10 in#11 Jurkatcells#12 .#13 
+
+f17:[additional_anti-IL-15_neutralizing_antibody#2,abolished#6,culture_supernatant-induced_ifn-gamma_expression#7]
+c16:[culture_supernatant-induced_ifn-gamma_expression#7,in#11,jurkatcells#12]
+stmt8 = f17 c16
+
+# 23890451	These#0 results#1 suggest#2 that#3 periodontal#4 pathogens#5 induce#6 the#7 production#8 of#9 IL-15#10 from#11 epithelial#12 cells#13 ,#14 and#15 leading#16 the#17 activation#18 of#19 T#20 cells#21 in#22 periodontal#23 lesions#24 .#25 
+
+f18:[{NIL#-1:results#1},suggest_that#2,NIL]
+f19:[periodontal_pathogens#4,induce#6,{il-15#10:production#8}]
+f20:[periodontal_pathogens#4,leading#16,{t_cells#20:activation#18}]
+c17:[{il-15#10:production#8},from#11,epithelial_cells#12]
+c18:[{t_cells#20:activation#18},in#22,periodontal_lesions#23]
+stmt9 = f18 f19 f20 c17 c18

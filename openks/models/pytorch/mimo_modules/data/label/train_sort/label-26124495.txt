@@ -1,0 +1,95 @@
+# 26124495	Live#0 cell#1 evaluation#2 of#3 granzyme#4 delivery#5 and#6 death#7 receptor#8 signaling#9 in#10 tumor#11 cells#12 targeted#13 by#14 human#15 natural#16 killer#17 cells#18 .#19 
+
+c1:[{granzyme_delivery#4:live_cell_evaluation#0},in#10,tumor_cells#11]
+c2:[{death_receptor_signaling#7:live_cell_evaluation#0},in#10,tumor_cells#11]
+c3:[tumor_cells#11,targeted_by#13,human_natural_killer_cells#15]
+stmt1 = c1 c2 c3
+
+# 26124495	Growing#0 interest#1 in#2 natural#3 killer#4 cell-based#5 therapy#6 for#7 treating#8 human#9 cancer#10 has#11 made#12 it#13 imperative#14 to#15 develop#16 new#17 tools#18 to#19 measure#20 early#21 events#22 in#23 cell#24 death#25 .#26 
+
+f1:[{natural_killer_cell-based_therapy#3:growing_interest#0},has_made_it_imperative_to_develop#11,{NIL#-1:new_tools#17}]
+c4:[{natural_killer_cell-based_therapy#3:growing_interest#0},for_treating#7,human_cancer#9]
+c5:[{NIL#-1:new_tools#17},to_measure#19,{cell_death#24:early_events#21}]
+stmt2 = f1 c4 c5
+
+# 26124495	We#0 recently#1 demonstrated#2 that#3 protease-cleavable#4 luciferase#5 biosensors#6 detect#7 granzyme#8 B#9 and#10 pro-apoptotic#11 caspase#12 activation#13 within#14 minutes#15 of#16 target#17 cell#18 recognition#19 by#20 murine#21 cytotoxic#22 lymphocytes#23 .#24 
+
+f2:[NIL,recently_demonstrated_that#1,NIL]
+f3:[protease-cleavable_luciferase_biosensors#4,detect#7,granzyme_b#8]
+f4:[protease-cleavable_luciferase_biosensors#4,detect#7,pro-apoptotic_caspase_activation#11]
+c6:[pro-apoptotic_caspase_activation#11,within#14,target_cell_recognition#17]
+c7:[target_cell_recognition#17,by#20,murine_cytotoxic_lymphocytes#21]
+stmt3 = f2 f3 f4 c6 c7
+
+# 26124495	Here#0 ,#1 we#2 report#3 successful#4 adaptation#5 of#6 the#7 biosensor#8 technology#9 to#10 assess#11 perforin-dependent#12 and#13 independent#14 induction#15 of#16 death#17 pathways#18 in#19 tumor#20 cells#21 recognized#22 by#23 human#24 natural#25 killer#26 cell#27 lines#28 and#29 primary#30 cells#31 .#32 
+
+f5:[NIL,report#3,{biosensor_technology#8:successful_adaptation#4}]
+f6:[NIL,to_assess#10,{death_pathways#17:perforin-dependent#12}]
+f7:[NIL,to_assess#10,{death_pathways#17:independent_induction#14}]
+c8:[{death_pathways#17:perforin-dependent#12},in#19,tumor_cells#20]
+c9:[{death_pathways#17:perforin-dependent#12},recognized_by#22,human_natural_killer_cell_lines#24]
+c10:[{death_pathways#17:perforin-dependent#12},recognized_by#22,primary_cells#30]
+c11:[{death_pathways#17:independent_induction#14},in#19,tumor_cells#20]
+c12:[{death_pathways#17:independent_induction#14},recognized_by#22,primary_cells#30]
+stmt4 = f5 f6 f7 c8 c9 c10 c11 c12
+
+# 26124495	Cell-cell#0 signaling#1 via#2 both#3 Fc#4 receptors#5 and#6 NK#7 activating#8 receptors#9 led#10 to#11 measurable#12 luciferase#13 signal#14 within#15 15#16 minutes#17 .#18 
+
+f8:[cell-cell_signaling#0,led_to#10,measurable_luciferase_signal#12]
+c13:[cell-cell_signaling#0,via#2,fc_receptors#4]
+c14:[cell-cell_signaling#0,via#2,nk_activating_receptors#7]
+c15:[measurable_luciferase_signal#12,within#15,{NIL#-1:15_minutes#16}]
+stmt5 = f8 c13 c14 c15
+
+# 26124495	In#0 addition#1 to#2 the#3 previously#4 described#5 aspartase-cleavable#6 biosensors#7 ,#8 we#9 report#10 development#11 of#12 granzyme#13 A#14 and#15 granzyme#16 K#17 biosensors#18 ,#19 for#20 which#21 no#22 other#23 functional#24 reporters#25 are#26 available#27 .#28 
+
+f9:[NIL,report#10,{granzyme_a#13:development#11}]
+f10:[NIL,report#10,{granzyme_k_biosensors#16:development#11}]
+f11:[functional_reporters#24,are_available#26,NIL]
+c16:[NIL,in_addition_to#0,aspartase-cleavable_biosensors#6]
+c17:[NIL,no_other#22,functional_reporters#24]
+stmt6 = f9 f10 f11 c16 c17
+
+# 26124495	The#0 strength#1 of#2 signaling#3 for#4 granzyme#5 biosensors#6 was#7 dependent#8 upon#9 perforin#10 expression#11 in#12 IL-2-activated#13 NK#14 effectors#15 .#16 
+
+f12:[{signaling_for_granzyme_biosensors#3:strength#1},was_dependent_upon#7,perforin_expression#10]
+c18:[perforin_expression#10,in#12,il-2-activated_nk_effectors#13]
+stmt7 = f12 c18
+
+# 26124495	Perforin-independent#0 induction#1 of#2 apoptotic#3 caspases#4 was#5 mediated#6 by#7 death#8 receptor#9 ligation#10 and#11 was#12 detectable#13 after#14 45#15 minutes#16 of#17 conjugation#18 .#19 
+
+f13:[{apoptotic_caspases#3:perforin-independent_induction#0},was_mediated_by#5,death_receptor_ligation#8]
+f14:[{apoptotic_caspases#3:perforin-independent_induction#0},was_detectable_after#12,{conjugation#18:45_minutes#15}]
+stmt8 = f13 f14
+
+# 26124495	Evidence#0 of#1 both#2 FasL#3 and#4 TRAIL-mediated#5 signaling#6 was#7 seen#8 following#9 engagement#10 of#11 Jurkat#12 cells#13 by#14 perforin-deficient#15 human#16 cytotoxic#17 lymphocytes#18 .#19 
+
+f15:[{fasl#3:evidence#0},was_seen_following#7,{jurkat#12:engagement#10}]
+f16:[{trail-mediated_signaling#5:evidence#0},was_seen_following#7,{jurkat#12:engagement#10}]
+c19:[{jurkat#12:engagement#10},by#14,perforin-deficient_human_cytotoxic_lymphocytes#15]
+stmt9 = f15 f16 c19
+
+# 26124495	Although#0 K562#1 cells#2 have#3 been#4 reported#5 to#6 be#7 insensitive#8 to#9 TRAIL#10 ,#11 robust#12 activation#13 of#14 pro-apoptotic#15 caspases#16 by#17 NK#18 cell-derived#19 TRAIL#20 was#21 detectable#22 in#23 K562#24 cells#25 .#26 
+
+f17:[k562_cells#1,be_insensitive_to#7,trail#10]
+f18:[{pro-apoptotic_caspases#15:robust_activation#12},was_detectable_in#21,k562_cells#1]
+c20:[{pro-apoptotic_caspases#15:robust_activation#12},by#17,nk_cell-derived_trail#18]
+stmt10 = f17 f18 c20
+
+# 26124495	These#0 studies#1 highlight#2 the#3 sensitivity#4 of#5 protease-cleaved#6 luciferase#7 biosensors#8 to#9 measure#10 previously#11 undetectable#12 events#13 in#14 live#15 cells#16 in#17 real#18 time#19 .#20 
+
+f19:[{NIL#-1:studies#1},highlight#2,{protease-cleaved_luciferase_biosensors#6:sensitivity#4}]
+f20:[{NIL#-1:studies#1},to_measure#9,undetectable_events#12]
+c21:[undetectable_events#12,in#14,live_cells#15]
+c22:[live_cells#15,in#17,real_time#18]
+stmt11 = f19 f20 c21 c22
+
+# 26124495	Further#0 development#1 of#2 caspase#3 and#4 granzyme#5 biosensors#6 will#7 allow#8 interrogation#9 of#10 additional#11 features#12 of#13 granzyme#14 activity#15 in#16 live#17 cells#18 including#19 localization#20 ,#21 timing#22 ,#23 and#24 specificity#25 .#26 
+
+f21:[{caspase#3:development#1},will_allow#7,{additional_features_of_granzyme_activity#11:interrogation#9}]
+f22:[{granzyme_biosensors#5:development#1},will_allow#7,{additional_features_of_granzyme_activity#11:interrogation#9}]
+f23:[live_cells#17,including#19,localization#20]
+f24:[live_cells#17,including#19,timing#22]
+f25:[live_cells#17,including#19,specificity#25]
+c23:[{additional_features_of_granzyme_activity#11:interrogation#9},in#16,live_cells#17]
+stmt12 = f21 f22 f23 f24 f25 c23

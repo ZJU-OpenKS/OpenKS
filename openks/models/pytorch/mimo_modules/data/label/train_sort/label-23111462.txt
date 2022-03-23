@@ -1,0 +1,110 @@
+# n1:[trpv5,as,transient_receptor_potential_vanilloid_channels_trpv5]
+# n2:[jurkat_t_cells,as,jurkat_leukemia_t_cells]
+# n3:[lymphocytes,as,lymphocyte]
+# n4:[trpv5/v6,as,transient_receptor_potential_vanilloid_5_and_6]
+# n5:[jurkat_t_cells,as,jurkat_cells]
+
+# h1:[lymphocytes,contain,human_lymphocytes]
+# h2:[human_lymphocytes,contain,human_blood_lymphocytes]
+# h3:[ca(2+)-selective_members,contain,trps]
+# h4:[ca(2+)-selective_members,contain,ca(2+)_channels]
+# h5:[ca(2+)-selective_members,contain,transient_receptor_potential_vanilloid_5_and_6]
+
+# 23111462	expression#0 of#1 transient#2 receptor#3 potential#4 vanilloid#5 channels#6 trpv5#7 and#8 trpv6#9 in#10 human#11 blood#12 lymphocytes#13 and#14 jurkat#15 leukemia#16 t#17 cells#18 .#19 
+
+c1:[{transient_receptor_potential_vanilloid_channels_trpv5#2:expression#0},in#10,human_blood_lymphocytes#11]
+c2:[{transient_receptor_potential_vanilloid_channels_trpv5#2:expression#0},in#10,jurkat_leukemia_t_cells#15]
+c3:[{trpv6#9:expression#0},in#10,human_blood_lymphocytes#11]
+c4:[{trpv6#9:expression#0},in#10,jurkat_leukemia_t_cells#15]
+stmt1 = c1 c2 c3 c4
+
+# 23111462	regulation#0 of#1 ca(2+)#2 entry#3 is#4 a#5 key#6 process#7 for#8 lymphocyte#9 activation#10 ,#11 cytokine#12 synthesis#13 and#14 proliferation#15 .#16 
+
+f1:[{ca(2+)_entry#2:regulation#0},is_a_key_process_for#4,lymphocyte_activation#9]
+f2:[{ca(2+)_entry#2:regulation#0},is_a_key_process_for#4,cytokine_synthesis#12]
+f3:[{ca(2+)_entry#2:regulation#0},is_a_key_process_for#4,proliferation#15]
+stmt2 = f1 f2 f3
+
+# 23111462	several#0 members#1 of#2 the#3 transient#4 receptor#5 potential#6 channel#7 family#8 can#9 contribute#10 to#11 changes#12 in#13 [ca(2+)](in)#14 ,#15 however#16 ,#17 the#18 properties#19 and#20 expression#21 levels#22 of#23 these#24 channels#25 in#26 human#27 lymphocytes#28 continue#29 to#30 be#31 elusive#32 .#33 
+
+f4:[{transient_receptor_potential_channel_family#4:members#1},can_contribute_to#9,{[ca(2+)](in)#14:changes#12}]
+f5:[{channels#25:properties#19},continue_to_be_elusive#29,NIL]
+f6:[{channels#25:expression_levels#21},continue_to_be_elusive#29,NIL]
+c5:[{channels#25:properties#19},in#26,human_lymphocytes#27]
+c6:[{channels#25:expression_levels#21},in#26,human_lymphocytes#27]
+stmt3 = f4 f5 f6 c5 c6
+
+# 23111462	here#0 ,#1 we#2 established#3 and#4 compared#5 the#6 expression#7 of#8 the#9 most#10 ca(2+)-selective#11 members#12 of#13 the#14 trps#15 ,#16 ca(2+)#17 channels#18 transient#19 receptor#20 potential#21 vanilloid#22 5#23 and#24 6#25 ,#26 in#27 human#28 blood#29 lymphocytes#30 and#31 leukemia#32 jurkat#33 t#34 cells#35 .#36 
+
+f7:[NIL,established#3,{ca(2+)-selective_members#11:expression#7}]
+f8:[NIL,established#3,{ca(2+)_channels_transient_receptor_potential_vanilloid_5#17:expression#7}]
+f9:[NIL,established#3,{6#25:expression#7}]
+f10:[NIL,compared#5,{ca(2+)-selective_members#11:expression#7}]
+f11:[NIL,compared#5,{ca(2+)_channels_transient_receptor_potential_vanilloid_5#17:expression#7}]
+f12:[NIL,compared#5,{6#25:expression#7}]
+c7:[NIL,in#27,human_blood_lymphocytes#28]
+c8:[NIL,in#27,leukemia_jurkat_t_cells#32]
+stmt4 = f7 f8 f9 f10 f11 f12 c7 c8
+
+# 23111462	we#0 found#1 that#2 trpv6#3 and#4 trpv5#5 mrnas#6 are#7 expressed#8 in#9 both#10 jurkat#11 cells#12 and#13 quiescent#14 hbls#15 ,#16 however#17 ,#18 the#19 levels#20 of#21 mrnas#22 were#23 significantly#24 higher#25 in#26 malignant#27 cells#28 than#29 in#30 quiescent#31 lymphocytes#32 .#33 
+
+
+f13:[NIL,found_that#1,NIL]
+f14:[trpv6#3,are_expressed_in#7,jurkat_cells#11]
+f15:[trpv6#3,are_expressed_in#7,quiescent_hbls#14]
+f16:[trpv5_mrnas#5,are_expressed_in#7,jurkat_cells#11]
+f17:[trpv5_mrnas#5,are_expressed_in#7,quiescent_hbls#14]
+f18:[{mrnas#22:levels#20},were_significantly_higher_in#23,malignant_cells#27]
+c9:[NIL,than_in#29,quiescent_lymphocytes#31]
+stmt5 = f13 f14 f15 f16 f17 f18 c9
+
+# 23111462	western#0 blot#1 analysis#2 showed#3 trpv5/v6#4 proteins#5 in#6 jurkat#7 t#8 cells#9 and#10 trpv5#11 protein#12 in#13 quiescent#14 hbls#15 .#16
+
+f19:[western_blot_analysis#0,showed#3,trpv5/v6_proteins#4]
+f20:[western_blot_analysis#0,showed#3,trpv5_protein#11]
+c10:[trpv5/v6_proteins#4,in#6,jurkat_t_cells#7]
+c11:[trpv5_protein#11,in#13,quiescent_hbls#14]
+stmt6 = f19 f20 c10 c11
+
+# 23111462	however#0 ,#1 the#2 expression#3 of#4 trpv6#5 protein#6 was#7 switched#8 off#9 in#10 quiescent#11 hbls#12 and#13 turned#14 on#15 after#16 mitogen#17 stimulation#18 of#19 the#20 cells#21 with#22 phytohemagglutinin#23 .#24 
+
+f21:[{trpv6_protein#5:expression#3},was_switched_off_in#7,quiescent_hbls#11]
+f22:[{trpv6_protein#5:expression#3},turned_on_after#14,{cells_with_phytohemagglutinin#21:mitogen_stimulation#17}]
+stmt7 = f21 f22
+
+# 23111462	inwardly#0 directed#1 monovalent#2 currents#3 that#4 displayed#5 characteristics#6 of#7 trpv5/v6#8 currents#9 were#10 recorded#11 in#12 both#13 jurkat#14 cells#15 and#16 normal#17 hbls#18 .#19 
+
+f23:[inwardly_directed_monovalent_currents#0,were_recorded_in#10,jurkat_cells#14]
+f24:[inwardly_directed_monovalent_currents#0,were_recorded_in#10,normal_hbls#17]
+c12:[inwardly_directed_monovalent_currents#0,displayed#5,{trpv5/v6_currents#8:characteristics#6}]
+stmt8 = f23 f24 c12
+
+# 23111462	in#0 outside-out#1 patch-clamp#2 studies#3 ,#4 currents#5 were#6 reduced#7 by#8 ruthenium#9 red#10 ,#11 a#12 nonspecific#13 inhibitor#14 of#15 trpv5/v6#16 channels#17 .#18 
+
+f25:[currents#5,were_reduced_by#6,ruthenium_red#9]
+f26:[currents#5,were_reduced_by#6,{trpv5/v6_channels#16:nonspecific_inhibitor#13}]
+c13:[NIL,in#0,outside-out_patch-clamp_studies#1]
+stmt9 = f25 f26 c13
+
+# 23111462	in#0 addition#1 ,#2 ruthenium#3 red#4 downregulated#5 cell-cycle#6 progression#7 in#8 both#9 activated#10 hbls#11 and#12 jurkat#13 cells#14 .#15 
+
+f27:[ruthenium_red#3,downregulated#5,cell-cycle_progression#6]
+c14:[cell-cycle_progression#6,in#8,activated_hbls#10]
+c15:[cell-cycle_progression#6,in#8,jurkat_cells#13]
+stmt10 = f27 c14 c15
+
+# 23111462	thus#0 ,#1 we#2 identified#3 trpv5#4 and#5 trpv6#6 calcium#7 channels#8 ,#9 which#10 can#11 be#12 considered#13 new#14 candidates#15 for#16 ca(2+)#17 entry#18 into#19 human#20 lymphocytes#21 .#22 
+
+f28:[NIL,identified#3,trpv5#4]
+f29:[NIL,identified#3,trpv6_calcium_channels#6]
+c16:[trpv5#4,can_be_considered#11,{ca(2+)_entry#17:new_candidates#14}]
+c17:[trpv6_calcium_channels#6,can_be_considered#11,{ca(2+)_entry#17:new_candidates#14}]
+c18:[{ca(2+)_entry#17:new_candidates#14},into#19,human_lymphocytes#20]
+stmt11 = f28 f29 c16 c17 c18
+
+# 23111462	the#0 correlation#1 between#2 expression#3 of#4 trpv6#5 channels#6 and#7 the#8 proliferative#9 status#10 of#11 lymphocytes#12 suggests#13 that#14 trpv6#15 may#16 be#17 involved#18 in#19 the#20 physiological#21 and/or#22 pathological#23 proliferation#24 of#25 lymphocytes#26 .#27 
+
+f30:[trpv6#15,may_be_involved_in#16,{lymphocytes#26:physiological_and/or_pathological_proliferation#21}]
+c19:[{NIL#-1:correlation#1},between#2,{trpv6_channels#5:expression#3}]
+c20:[{NIL#-1:correlation#1},between#2,{lymphocytes#12:proliferative_status#9}]
+stmt12 = f30 c19 c20

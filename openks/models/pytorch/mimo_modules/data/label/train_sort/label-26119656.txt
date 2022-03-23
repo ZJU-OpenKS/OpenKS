@@ -1,0 +1,92 @@
+# 26119656	The#0 neutrophil#1 function#2 and#3 lymphocyte#4 profile#5 of#6 milk#7 from#8 bovine#9 mammary#10 glands#11 infected#12 with#13 streptococcus#14 dysgalactiae#15 .#16 
+
+c1:[{milk#7:neutrophil_function#1},from#8,bovine_mammary_glands#9]
+c2:[{milk#7:lymphocyte_profile#4},from#8,bovine_mammary_glands#9]
+c3:[bovine_mammary_glands#9,infected_with#12,streptococcus_dysgalactiae#14]
+stmt1 = c1 c2 c3
+
+# 26119656	Streptococcus#0 dysgalactiae#1 is#2 a#3 bacterium#4 that#5 accounts#6 for#7 a#8 notable#9 proportion#10 of#11 both#12 clinical#13 and#14 subclinical#15 intramammary#16 infections#17 .#18 
+
+f1:[streptococcus_dysgalactiae#0,is#2,bacterium#4]
+c4:[bacterium#4,accounts_for#6,{clinical#13:notable_proportion#9}]
+c5:[bacterium#4,accounts_for#6,{subclinical_intramammary_infections#15:notable_proportion#9}]
+stmt2 = f1 c4 c5
+
+# 26119656	Thus#0 ,#1 the#2 present#3 study#4 explores#5 the#6 function#7 of#8 milk#9 neutrophils#10 and#11 the#12 lymphocyte#13 profile#14 in#15 mammary#16 glands#17 naturally#18 infected#19 with#20 Streptococcus#21 dysgalactiae#22 .#23 
+
+f2:[{NIL#-1:present_study#3},explores#5,{milk_neutrophils#9:function#7}]
+f3:[{NIL#-1:present_study#3},explores#5,{lymphocyte_profile#13:function#7}]
+c6:[{milk_neutrophils#9:function#7},in#15,mammary_glands#16]
+c7:[{lymphocyte_profile#13:function#7},in#15,mammary_glands#16]
+c8:[mammary_glands#16,naturally_infected_with#18,streptococcus_dysgalactiae#21]
+stmt3 = f2 f3 c6 c7 c8
+
+# 26119656	Here#0 ,#1 we#2 used#3 32#4 culture-negative#5 control#6 quarters#7 from#8 eight#9 clinically#10 healthy#11 dairy#12 cows#13 with#14 low#15 somatic#16 cell#17 counts#18 and#19 13#20 S.#21 dysgalactiae-infected#22 quarters#23 from#24 six#25 dairy#26 cows#27 .#28 
+
+f4:[NIL,used#3,culture-negative_control_quarters#5]
+f5:[NIL,used#3,s._dysgalactiae-infected_quarters#21]
+c9:[culture-negative_control_quarters#5,from#8,{clinically_healthy_dairy_cows#10:eight#9}]
+c10:[{clinically_healthy_dairy_cows#10:eight#9},with#14,low_somatic_cell_counts#15]
+c11:[s._dysgalactiae-infected_quarters#21,from#24,dairy_cows#26]
+stmt4 = f4 f5 c9 c10 c11
+
+# 26119656	Using#0 flow#1 cytometry#2 ,#3 we#4 evaluated#5 the#6 percentage#7 of#8 milk#9 monocytes/macrophages#10 and#11 neutrophils#12 ,#13 expression#14 of#15 CD62L#16 ,#17 CD11b#18 and#19 CD44#20 by#21 milk#22 neutrophils#23 ,#24 the#25 levels#26 of#27 intracellular#28 reactive#29 oxygen#30 species#31 production#32 and#33 phagocytosis#34 of#35 Staphylococcus#36 aureus#37 by#38 milk#39 neutrophils#40 ,#41 and#42 neutrophil#43 viability#44 .#45
+
+f6:[NIL,evaluated#5,{milk_monocytes/macrophages#9:percentage#7}]
+f7:[NIL,evaluated#5,{neutrophils#12:percentage#7}]
+f8:[NIL,evaluated#5,{cd62l#16:expression#14}]
+f9:[NIL,evaluated#5,{cd11b#18:expression#14}]
+f10:[NIL,evaluated#5,{cd44#20:expression#14}]
+f11:[NIL,evaluated#5,{intracellular_reactive_oxygen_species_production#28:levels#26}]
+f12:[NIL,evaluated#5,{staphylococcus_aureus#36:phagocytosis#34}]
+f13:[NIL,evaluated#5,neutrophil_viability#43]
+c12:[NIL,using#0,flow_cytometry#1]
+c13:[{cd62l#16:expression#14},by#21,milk_neutrophils#22]
+c14:[{cd11b#18:expression#14},by#21,milk_neutrophils#22]
+c15:[{cd44#20:expression#14},by#21,milk_neutrophils#22]
+c16:[{staphylococcus_aureus#36:phagocytosis#34},by#38,milk_neutrophils#39]
+stmt5 = f6 f7 f8 f9 f10 f11 f12 f13 c12 c13 c14 c15 c16
+
+# 26119656	Furthermore#0 ,#1 the#2 percentages#3 of#4 B#5 cell#6 and#7 T#8 lymphocyte#9 subsets#10 ,#11 and#12 the#13 expression#14 of#15 CD25#16 by#17 T#18 milk#19 lymphocytes#20 and#21 T#22 CD4+#23 milk#24 cells#25 were#26 also#27 assessed#28 by#29 flow#30 cytometry#31 using#32 monoclonal#33 antibodies#34 .#35 
+
+f14:[{b_cell#5:percentages#3},were_also_assessed_by#26,flow_cytometry#30]
+f15:[{t_lymphocyte_subsets#8:percentages#3},were_also_assessed_by#26,flow_cytometry#30]
+f16:[{cd25#16:expression#14},were_also_assessed_by#26,flow_cytometry#30]
+f17:[{t_cd4+_milk_cells#22:expression#14},were_also_assessed_by#26,flow_cytometry#30]
+c17:[{cd25#16:expression#14},by#17,t_milk_lymphocytes#18]
+c18:[flow_cytometry#30,using#32,monoclonal_antibodies#33]
+stmt6 = f14 f15 f16 f17 c17 c18
+
+# 26119656	The#0 present#1 study#2 showed#3 a#4 higher#5 SCC#6 and#7 percentage#8 of#9 milk#10 neutrophils#11 ,#12 and#13 a#14 decrease#15 in#16 the#17 percentage#18 of#19 milk#20 monocytes/macrophages#21 from#22 S.#23 dysgalactiae-infected#24 quarters#25 when#26 compared#27 to#28 uninfected#29 ones#30 .#31 
+
+f18:[NIL,showed#3,{milk_neutrophils#10:higher_scc#5}]
+f19:[NIL,showed#3,{milk_neutrophils#10:percentage#8}]
+f20:[NIL,showed#3,{NIL#-1:decrease#15}]
+c19:[{NIL#-1:decrease#15},in#16,{milk_monocytes/macrophages#20:percentage#18}]
+c20:[{milk_monocytes/macrophages#20:percentage#18},from#22,s._dysgalactiae-infected_quarters#23]
+c21:[NIL,compared_to#27,{NIL#-1:uninfected_ones#29}]
+stmt7 = f18 f19 f20 c19 c20 c21
+
+# 26119656	We#0 also#1 observed#2 a#3 higher#4 expression#5 of#6 CD11b#7 by#8 milk#9 neutrophils#10 and#11 a#12 tendency#13 toward#14 a#15 decrease#16 in#17 neutrophil#18 apoptosis#19 rate#20 in#21 S.#22 dysgalactiae-infected#23 quarters#24 .#25 
+
+f21:[NIL,observed#2,{cd11b#7:higher_expression#4}]
+f22:[NIL,observed#2,{NIL#-1:tendency#13}]
+c22:[{cd11b#7:higher_expression#4},by#8,milk_neutrophils#9]
+c23:[{NIL#-1:tendency#13},toward#14,{neutrophil_apoptosis_rate#18:decrease#16}]
+c24:[{neutrophil_apoptosis_rate#18:decrease#16},in#21,s._dysgalactiae-infected_quarters#22]
+stmt8 = f21 f22 c22 c23 c24
+
+# 26119656	In#0 addition#1 ,#2 the#3 S.#4 dysgalactiae-infected#5 quarters#6 had#7 higher#8 percentages#9 of#10 milk#11 T#12 cells#13 and#14 their#15 subset#16 CD3+CD8+CD4-#17 cells#18 .#19 
+
+f23:[s._dysgalactiae-infected_quarters#4,had#7,{milk_t_cells#11:higher_percentages#8}]
+f24:[s._dysgalactiae-infected_quarters#4,had#7,{cd3+cd8+cd4-_cells#17:higher_percentages#8}]
+stmt9 = f23 f24
+
+# 26119656	Overall#0 ,#1 the#2 present#3 study#4 provided#5 new#6 insights#7 into#8 S.#9 dysgalactiae#10 IMIs#11 ,#12 including#13 distinct#14 lymphocyte#15 profiles#16 ,#17 and#18 a#19 tendency#20 toward#21 an#22 inhibition#23 of#24 apoptosis#25 in#26 milk#27 neutrophils#28 .#29 
+
+f25:[{NIL#-1:present_study#3},provided#5,{s._dysgalactiae_imis#9:new_insights#6}]
+f26:[{NIL#-1:present_study#3},provided#5,{NIL#-1:tendency#20}]
+c25:[{s._dysgalactiae_imis#9:new_insights#6},including#13,distinct_lymphocyte_profiles#14]
+c26:[{NIL#-1:tendency#20},toward#21,{apoptosis#25:inhibition#23}]
+c27:[{apoptosis#25:inhibition#23},in#26,milk_neutrophils#27]
+stmt10 = f25 f26 c25 c26 c27

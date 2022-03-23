@@ -1,0 +1,89 @@
+# 26117043	[#0 Effect#1 of#2 sAHA#3 on#4 maturation#5 of#6 dendritic#7 cells#8 and#9 its#10 mechanism]#11 .#12 
+
+c1:[{saha#3:effect#1},on#4,{dendritic_cells#7:maturation#5}]
+c2:[{saha#3:mechanism]#11},NIL#-1,NIL]
+stmt1 = c1 c2
+
+# 26117043	To#0 investigate#1 the#2 effect#3 of#4 SAHA#5 on#6 the#7 maturation#8 of#9 human#10 dendritic#11 cells#12 and#13 to#14 explore#15 its#16 underlyingmechanism#17 .#18 
+
+f1:[NIL,to_investigate#0,{saha#5:effect#3}]
+f2:[NIL,to_explore#14,{saha#5:underlyingmechanism#17}]
+c3:[{saha#5:effect#3},on#6,{human_dendritic_cells#10:maturation#8}]
+stmt2 = f1 f2 c3
+
+# 26117043	Peripheral#0 blood#1 mononuclear#2 cells#3 were#4 isolated#5 from#6 human#7 peripheral#8 blood#9 and#10 cultured#11 in#12 RPMI#13 1640#14 medium#15 with#16 100#17 ng/ml#18 rhGM-CSF#19 and#20 500#21 U/ml#22 rhIL-4#23 .#24 
+
+f3:[peripheral_blood_mononuclear_cells#0,were_isolated_from#4,human_peripheral_blood#7]
+f4:[peripheral_blood_mononuclear_cells#0,cultured_in#11,rpmi_1640_medium#13]
+c4:[rpmi_1640_medium#13,with#16,{rhgm-csf#19:100_ng/ml#17}]
+c5:[rpmi_1640_medium#13,with#16,{rhil-4#23:500_u/ml#21}]
+stmt3 = f3 f4 c4 c5
+
+# 26117043	In#0 the#1 LPS#2 induced#3 maturation#4 process#5 ,#6 dendritic#7 cells#8 treated#9 with#10 or#11 without#12 SAHA#13 were#14 used#15 as#16 test#17 group#18 ,#19 and#20 dendritic#21 cells#22 treated#23 without#24 LPS#25 or#26 SAHA#27 were#28 used#29 as#30 control#31 group#32 .#33 
+
+f5:[dendritic_cells#7,were_used_as#14,test_group#17]
+f6:[dendritic_cells#21,were_used_as#28,control_group#31]
+c6:[NIL,in#0,lps_induced_maturation_process#2]
+c7:[dendritic_cells#7,treated_with_or_without#9,saha#13]
+c8:[dendritic_cells#21,treated_without#23,lps#25]
+c9:[dendritic_cells#21,treated_without#23,saha#27]
+stmt4 = f5 f6 c6 c7 c8 c9
+
+# 26117043	DC#0 was#1 observed#2 under#3 inverted#4 microscope#5 .#6 
+
+f7:[dc#0,was_observed_under#1,inverted_microscope#4]
+stmt5 = f7
+
+# 26117043	Flow#0 cytometer#1 was#2 used#3 to#4 detect#5 the#6 surface#7 antigen#8 molecules#9 expressed#10 by#11 DC#12 .#13 
+
+f8:[flow_cytometer#0,was_used_to_detect#2,surface_antigen_molecules#7]
+c10:[surface_antigen_molecules#7,expressed_by#10,dc#12]
+stmt6 = f8 c10
+
+# 26117043	The#0 mixed#1 lymphocyte#2 culture#3 was#4 used#5 to#6 observe#7 the#8 allogeneic#9 lymphocyte#10 stimulation#11 .#12 
+
+f9:[mixed_lymphocyte_culture#1,was_used_to_observe#4,allogeneic_lymphocyte_stimulation#9]
+stmt7 = f9
+
+# 26117043	The#0 NF-kappaB#1 signaling#2 pathway#3 was#4 detected#5 by#6 electrophoretic#7 mobility#8 shift#9 assay(EMSA)#10 .#11 
+
+f10:[nf-kappab_signaling_pathway#1,was_detected_by#4,electrophoretic_mobility_shift_assay(emsa)#7]
+stmt8 = f10
+
+# 26117043	the#0 saha#1 could#2 effectively#3 suppress#4 the#5 maturation#6 of#7 dc#8 induced#9 by#10 lps#11 ,#12 the#13 dc#14 treated#15 with#16 saha+lps#17 had#18 immature#19 morphological#20 characteristics#21 ,#22 the#23 expression#24 of#25 cd80#26 ,#27 cd83#28 and#29 hla-dr#30 in#31 saha+lps#32 group#33 and#34 control#35 group#36 were#37 significantly#38 down-regulated#39 as#40 compared#41 with#42 single#43 lps#44 group#45 ,#46 the#47 ability#48 of#49 dc#50 to#51 stimulate#52 the#53 proliferation#54 of#55 allogeneic#56 t#57 lymphocytes#58 in#59 saha+lps#60 group#61 and#62 control#63 group#64 was#65 significantly#66 weaker#67 than#68 that#69 in#70 single#71 lps#72 group#73 ,#74 emsa#75 results#76 showed#77 that#78 nf-kappab#79 activity#80 decreased#81 after#82 saha#83 and#84 lps#85 treatment#86 and#87 was#88 significantly#89 lower#90 than#91 that#92 of#93 single#94 lpsgroup#95 .#96
+
+f11:[saha#1,could_effectively_suppress#2,{dc#8:maturation#6}]
+f12:[dc#14,had#18,immature_morphological_characteristics#19]
+f13:[{cd80#26:expression#24},were_significantly_down-regulated#37,NIL]
+f14:[{cd83#28:expression#24},were_significantly_down-regulated#37,NIL]
+f15:[{hla-dr#30:expression#24},were_significantly_down-regulated#37,NIL]
+f16:[{dc#50:ability#48},was_significantly_weaker_than_that_in#65,single_lps_group#71]
+f17:[nf-kappab_activity#79,decreased_after#81,saha#83]
+f18:[nf-kappab_activity#79,decreased_after#81,lps_treatment#85]
+f19:[nf-kappab_activity#79,was_significantly_lower_than_that_in#88,single_lpsgroup#94]
+c11:[{dc#8:maturation#6},induced_by#9,lps#11]
+c12:[dc#14,treated_with#15,saha+lps#17]
+c13:[{cd80#26:expression#24},in#31,saha+lps_group#32]
+c14:[{cd80#26:expression#24},in#31,control_group#35]
+c15:[{cd83#28:expression#24},in#31,saha+lps_group#32]
+c16:[{cd83#28:expression#24},in#31,control_group#35]
+c17:[{hla-dr#30:expression#24},in#31,saha+lps_group#32]
+c18:[{hla-dr#30:expression#24},in#31,control_group#35]
+c19:[saha+lps_group#32,compared_with#41,single_lps_group#43]
+c20:[control_group#35,compared_with#41,single_lps_group#43]
+c21:[{dc#50:ability#48},to_stimulate#51,{allogeneic_t_lymphocytes#56:proliferation#54}]
+c22:[{allogeneic_t_lymphocytes#56:proliferation#54},in#59,saha+lps_group#60]
+c23:[{allogeneic_t_lymphocytes#56:proliferation#54},in#59,control_group#63]
+stmt9 = f11 f12 f13 f14 f15 f16 f17 f18 f19 c11 c12 c13 c14 c15 c16 c17 c18 c19 c20 c21 c22 c23
+
+# 26117043	saha#0 can#1 effectively#2 suppress#3 dc#4 maturation#5 induced#6 by#7 lps#8 and#9 also#10 weaken#11 the#12 ability#13 to#14 stimulate#15 allogeneic#16 t#17 lymphocyte#18 .#19 
+
+f20:[saha#0,can_effectively_suppress#1,dc_maturation#4]
+f21:[saha#0,weaken_ability_to_stimulate#11,allogeneic_t_lymphocyte#16]
+c24:[dc_maturation#4,induced_by#6,lps#8]
+stmt10 = f20 f21 c24
+
+# 26117043	nf-kappab#0 signaling#1 pathway#2 is#3 involved#4 in#5 regulating#6 dc#7 maturation#8 .#9 
+
+f22:[nf-kappab_signaling_pathway#0,is_involved_in#3,regulating_dc_maturation#6]
+stmt11 = f22

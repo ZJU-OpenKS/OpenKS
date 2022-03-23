@@ -1,0 +1,84 @@
+# 15647045	age-#0 and#1 infection-related#2 maturation#3 of#4 the#5 nasal#6 immune#7 response#8 in#9 0-2-year-old#10 children#11 .#12
+
+c1:[{nasal_immune_response#6:age-#0},in#9,0-2-year-old_children#10]
+c2:[{nasal_immune_response#6:infection-related_maturation#2},in#9,0-2-year-old_children#10]
+stmt1 = c1 c2
+
+# 15647045	the#0 hygiene#1 hypothesis#2 suggests#3 that#4 exposure#5 to#6 micro-organisms#7 influences#8 development#9 of#10 the#11 immune#12 system#13 inchildren#14 .#15
+
+f1:[hygiene_hypothesis#1,suggests_that#3,NIL]
+f2:[{NIL#-1:exposure#5},influences#8,{immune_system_inchildren#12:development#9}]
+c3:[{NIL#-1:exposure#5},to#6,micro-organisms#7]
+stmt2 = f1 f2 c3
+
+# 15647045	in#0 this#1 study#2 ,#3 we#4 examined#5 nasal#6 immune#7 responses#8 in#9 the#10 first#11 2#12 years#13 of#14 life#15 in#16 relation#17 to#18 age#19 of#20 children#21 and#22 the#23 number#24 of#25 viral#26 infections#27 they#28 have#29 experienced#30 .#31
+
+f3:[NIL,examined#5,nasal_immune_responses#6]
+f4:[NIL,examined#5,{viral_infections#26:number#24}]
+c4:[NIL,in#0,{NIL#-1:study#2}]
+c5:[nasal_immune_responses#6,in#9,{life#15:first_2_years#11}]
+c6:[{life#15:first_2_years#11},in_relation_to#16,{children#21:age#19}]
+c7:[{viral_infections#26:number#24},they_have_experienced#28,NIL]
+stmt3 = f3 f4 c4 c5 c6 c7
+
+# 15647045	nasal#0 brushes#1 were#2 taken#3 during#4 rhinovirus-#5 or#6 respiratory#7 syncytial#8 virus#9 (rsv)-induced#10 upper#11 respiratory#12 tract#13 infections#14 ,#15 and#16 of#17 controls#18 .#19
+
+f5:[nasal_brushes#0,were_taken#2,NIL]
+c8:[NIL,during#4,rhinovirus-#5]
+c9:[NIL,during#4,respiratory_syncytial_virus_(rsv)-induced_upper_respiratory_tract_infections#7]
+stmt4 = f5 c8 c9
+
+# 15647045	the#0 number#1 of#2 macrophages#3 were#4 higher#5 during#6 urti#7 and#8 increased#9 with#10 age#11 .#12
+
+f6:[{macrophages#3:number#1},were_higher#4,NIL]
+c10:[{macrophages#3:number#1},increased_with#9,{NIL#-1:age#11}]
+c11:[NIL,during#6,urti#7]
+stmt5 = f6 c10 c11
+
+# 15647045	the#0 number#1 of#2 t#3 lymphocytes#4 increased#5 with#6 age#7 in#8 controls#9 and#10 were#11 higher#12 during#13 urti#14 at#15 all#16 ages#17 .#18
+
+f7:[{t_lymphocytes#3:number#1},increased_with#5,{NIL#-1:age#7}]
+f8:[{t_lymphocytes#3:number#1},were_higher#11,NIL]
+c12:[{NIL#-1:age#7},in#8,{NIL#-1:controls#9}]
+c13:[NIL,during#13,urti#14]
+c14:[urti#14,at#15,all_ages#16]
+stmt6 = f7 f8 c12 c13 c14
+
+# 15647045	we#0 found#1 an#2 age-related#3 decrease#4 in#5 the#6 number#7 of#8 interleukin#9 (il)-4-#10 and#11 il-10-positive#12 cells#13 in#14 controls#15 ,#16 while#17 the#18 number#19 of#20 il-12-positive#21 cells#22 remained#23 unchanged#24 .#25
+
+f9:[NIL,found#1,age-related_decrease#3]
+f10:[{il-12-positive_cells#21:number#19},remained_unchanged#23,NIL]
+c15:[age-related_decrease#3,in#5,{interleukin_(il)-4-#9:number#7}]
+c16:[age-related_decrease#3,in#5,{il-10-positive_cells#12:number#7}]
+c17:[{il-10-positive_cells#12:number#7},in#14,{controls#15:number#7}]
+stmt7 = f9 f10 c15 c16 c17
+
+# 15647045	changes#0 in#1 t#2 lymphocyte#3 and#4 il-4#5 cell#6 number#7 were#8 stronger#9 related#10 to#11 the#12 age#13 of#14 the#15 child#16 than#17 to#18 the#19 number#20 of#21 respiratory#22 infections#23 ,#24 while#25 the#26 opposite#27 was#28 true#29 formacrophages#30 .#31
+
+f11:[{t_lymphocyte#2:changes#0},were_stronger_related_to#8,{child#16:age#13}]
+f12:[{il-4_cell_number#5:changes#0},were_stronger_related_to#8,{child#16:age#13}]
+f13:[opposite#27,was#28,true_formacrophages#29]
+c18:[{child#16:age#13},than_to#17,{respiratory_infections#22:number#20}]
+stmt8 = f11 f12 f13 c18
+
+# 15647045	in#0 infants#1 ,#2 we#3 found#4 an#5 infection-#6 and#7 age-related#8 increase#9 respectively#10 for#11 nasal#12 macrophages#13 and#14 t#15 lymphocytes#16 during#17 urti#18 .#19
+
+f14:[NIL,found#4,infection-_and_age-related_increase#6]
+c19:[NIL,in#0,infants#1]
+c20:[infection-_and_age-related_increase#6,for#11,nasal_macrophages#12]
+c21:[infection-_and_age-related_increase#6,for#11,t_lymphocytes#15]
+c22:[NIL,during#17,urti#18]
+stmt9 = f14 c19 c20 c21 c22
+
+# 15647045	furthermore#0 ,#1 the#2 number#3 of#4 il-4-#5 and#6 il-10-positive#7 cells#8 decreased#9 with#10 age#11 .#12
+
+f15:[{il-4-#5:number#3},decreased_with#9,age#11]
+f16:[{il-10-positive_cells#7:number#3},decreased_with#9,age#11]
+stmt10 = f15 f16
+
+# 15647045	whether#0 this#1 maturation#2 reflects#3 a#4 natural#5 age-related#6 maturation#7 ,#8 the#9 degree#10 of#11 exposure#12 to#13 respiratory#14 infections#15 ,#16 or#17 possibly#18 both#19 ,#20 could#21 not#22 be#23 resolved#24 and#25 needs#26 further#27 study#28 .#29
+
+f17:[maturation#2,reflects#3,natural_age-related_maturation#5]
+f18:[{exposure_to_respiratory_infections#12:degree#10},could_not_be_resolved#21,NIL]
+f19:[{exposure_to_respiratory_infections#12:degree#10},needs#26,{NIL#-1:further_study#27}]
+stmt11 = f17 f18 f19

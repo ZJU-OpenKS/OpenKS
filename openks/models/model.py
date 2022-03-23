@@ -252,3 +252,11 @@ class KGC2LearnModel(OpenKSModel):
 
 	def run(self, *args):
 		return NotImplemented
+
+class openieModel(OpenKSModel):
+	''' Joint Extraction of Fact and Condition Tuples '''
+	def __init__(self, name: str = 'model-name', args: List = None):
+		self.name = name
+
+	def run(self, *args):
+		return NotImplemented

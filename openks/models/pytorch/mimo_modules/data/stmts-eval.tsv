@@ -1,0 +1,1166 @@
+===== 26133121 stmt1 =====
+WORD	An	act	of	balance	between	adaptive	and	maladaptive	immunity	in	depression	,	a	role	for	t	lymphocytes	.
+POSTAG	DT	NN	IN	NN	IN	JJ	CC	JJ	NN	IN	NN	,	DT	NN	IN	NN	NNS	.
+CAP	O	B-A	O	B-C	O	O	O	B-P	I-P	O	B-C	O	O	B-A	O	B-C	I-C	O
+c1	O	B-c1A	O	B-c1C	B-c2P	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O
+c2	O	B-c1A	O	B-c1C	B-c2P	O	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O
+c3	O	B-c1A	O	B-c1C	O	O	O	O	O	O	O	O	B-c2P	I-c2P	I-c2P	B-c3C	I-c3C	O
+c4	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	O	O	O	O	O	O	O
+===== 26133121 stmt2 =====
+WORD	Historically	the	monoaminergic	neurotransmitter	system	,	in	particular	the	serotonergic	system	,	was	seen	as	being	responsible	for	the	pathophysiology	of	major	depressive	disorder	.
+POSTAG	RB	DT	NN	NN	NN	,	IN	JJ	DT	NN	NN	,	VBD	VBN	IN	VBG	JJ	IN	DT	NN	IN	JJ	JJ	NN	.
+CAP	O	O	B-P	I-P	I-P	O	O	O	O	B-P	I-P	O	O	O	O	O	O	O	O	B-A	O	B-C	I-C	I-C	O
+f1	O	O	B-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O	B-f3A	O	B-f3C	I-f3C	I-f3C	O
+f2	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O	B-f3A	O	B-f3C	I-f3C	I-f3C	O
+===== 26133121 stmt3 =====
+WORD	With	the	advent	of	psychoneuroimmunology	an	important	role	of	the	immune	system	in	the	interface	between	the	central	nervous	systems	and	peripheral	organ	systems	has	emerged	.
+POSTAG	IN	DT	NN	IN	NN	DT	JJ	NN	IN	DT	NN	NN	IN	DT	NN	IN	DT	JJ	JJ	NNS	CC	JJ	NN	NNS	VBZ	VBN	.
+CAP	O	O	B-A	O	B-C	O	B-P	I-P	O	O	B-C	I-C	O	O	B-P	O	O	B-C	I-C	I-C	O	B-P	I-P	I-P	O	O	O
+f3	O	O	O	O	O	O	B-f1A	I-f1A	O	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	O
+c5	B-c2P	O	B-c3A	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c6	O	O	O	O	O	O	B-c1A	I-c1A	O	O	B-c1C	I-c1C	B-c2P	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O
+c7	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	O	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O
+c8	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	O	O	O	O	O	B-c3C	I-c3C	I-c3C	O	O	O
+===== 26133121 stmt4 =====
+WORD	In	addition	to	the	well-characterised	neurobiological	activities	of	cytokines	,	T	cell	function	in	the	context	of	depression	has	been	neglected	so	far	.
+POSTAG	IN	NN	TO	DT	JJ	JJ	NNS	IN	NNS	,	NNP	NN	NN	IN	DT	NN	IN	NN	VBZ	VBN	VBN	RB	RB	.
+CAP	O	B-A	O	O	B-A	I-A	I-A	O	B-C	O	B-C	I-C	I-C	O	O	B-A	O	B-C	O	O	O	O	O	O
+f4	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O	O	O
+c9	B-c2P	I-c2P	I-c2P	O	B-c3A	I-c3A	I-c3A	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c10	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	O	B-c3A	O	B-c3C	O	O	O	O	O	O
+===== 26133121 stmt5 =====
+WORD	In	this	review	we	will	investigate	the	biological	roles	of	T	cells	in	depression	.
+POSTAG	IN	DT	NN	PRP	MD	VB	DT	JJ	NNS	IN	NNP	NNS	IN	NN	.
+CAP	O	O	B-P	O	O	O	O	B-A	I-A	O	B-C	I-C	O	B-C	O
+f5	O	O	O	O	B-f2P	I-f2P	O	B-f3A	I-f3A	O	B-f3C	I-f3C	O	O	O
+c11	B-c2P	O	B-c3A	O	O	O	O	O	O	O	O	O	O	O	O
+c12	O	O	O	O	O	O	O	B-c1A	I-c1A	O	B-c1C	I-c1C	B-c2P	B-c3C	O
+===== 26133121 stmt6 =====
+WORD	Originally	it	was	thought	that	the	adaptive	immune	arm	including	T	lymphocytes	was	excluded	from	the	CNS	.
+POSTAG	RB	PRP	VBD	VBN	IN	DT	JJ	NN	NN	VBG	NNP	NNS	VBD	VBN	IN	DT	NNP	.
+CAP	O	O	O	O	O	O	B-P	I-P	I-P	O	B-C	I-C	O	O	O	O	B-C	O
+f6	O	B-f2P	I-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O
+f7	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	O	O	O	B-f2P	I-f2P	I-f2P	O	B-f3C	O
+c13	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O
+===== 26133121 stmt7 =====
+WORD	It	is	now	clear	that	peripheral	naive	T	cells	not	only	carry	out	continuous	surveillance	within	the	brain	but	also	maintain	neural	plasticity	.
+POSTAG	PRP	VBZ	RB	JJ	IN	JJ	JJ	NNP	NNS	RB	RB	VB	RP	JJ	NN	IN	DT	NN	CC	RB	VBP	JJ	NN	.
+CAP	O	O	O	O	O	B-P	I-P	I-P	I-P	O	O	O	O	B-P	I-P	O	O	B-C	O	O	O	B-P	I-P	O
+f8	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f9	O	O	O	O	O	B-f1C	I-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O
+f10	O	O	O	O	O	B-f1C	I-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	B-f3C	I-f3C	O
+c14	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	O	B-c3C	O	O	O	O	O	O
+===== 26133121 stmt8 =====
+WORD	Furthermore	animal	studies	demonstrate	that	regulatory	T	lymphocytes	can	provide	protection	against	maladaptive	behavioural	responses	associated	with	depression	.
+POSTAG	RB	JJ	NNS	VBP	IN	JJ	NNP	NNS	MD	VB	NN	IN	JJ	JJ	NNS	VBN	IN	NN	.
+CAP	O	B-C	I-C	O	O	O	B-C	I-C	O	O	B-C	O	B-P	I-P	I-P	O	O	B-C	O
+f11	O	B-f1C	I-f1C	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f12	O	O	O	O	O	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	B-f3A	O	O	O	O	O	O	O	O
+c15	O	O	O	O	O	O	O	O	O	O	B-c1A	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O
+c16	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	I-c2P	B-c3C	O
+===== 26133121 stmt9 =====
+WORD	Psychogenic	stress	as	a	major	inducer	of	depression	can	lead	to	transient	trafficking	of	T	lymphocytes	into	the	brain	stimulating	the	secretion	of	certain	neurotrophic	factors	and	cytokines	.
+POSTAG	JJ	NN	IN	DT	JJ	NN	IN	NN	MD	VB	TO	JJ	NN	IN	NNP	NNS	IN	DT	NN	VBG	DT	NN	IN	JJ	JJ	NNS	CC	NNS	.
+CAP	B-P	I-P	O	O	B-A	I-A	O	B-C	O	O	O	B-P	I-P	O	B-C	I-C	O	O	B-C	O	O	B-A	O	B-C	I-C	I-C	O	B-C	O
+f13	B-f1C	I-f1C	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	B-f3A	I-f3A	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+c17	B-c1C	I-c1C	B-c2P	O	B-c3A	I-c3A	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c18	O	O	O	O	O	O	O	O	O	O	O	B-c1A	I-c1A	O	B-c1C	I-c1C	B-c2P	O	B-c3A	I-c3A	I-c3A	I-c3A	O	B-c3C	I-c3C	I-c3C	O	O	O
+c19	O	O	O	O	O	O	O	O	O	O	O	B-c1A	I-c1A	O	B-c1C	I-c1C	B-c2P	O	B-c3A	I-c3A	I-c3A	I-c3A	O	O	O	O	O	B-c3C	O
+===== 26133121 stmt10 =====
+WORD	The	separate	and	combined	mechanism	of	CD4	and	CD8	T	cell	activation	is	likely	to	determine	the	response	pattern	of	CNS	specific	neurokines	and	neurotrophins	.
+POSTAG	DT	JJ	CC	JJ	NN	IN	NNP	CC	NNP	NNP	NN	NN	VBZ	JJ	TO	VB	DT	NN	NN	IN	NNP	JJ	NNS	CC	NNS	.
+CAP	O	O	O	B-A	I-A	O	B-C	O	B-P	I-P	I-P	I-P	O	O	O	O	O	B-A	I-A	O	B-C	I-C	I-C	O	B-C	O
+f14	O	B-f1A	I-f1A	I-f1A	I-f1A	O	B-f1C	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	O	B-f3A	I-f3A	O	B-f3C	I-f3C	I-f3C	O	O	O
+f15	O	B-f1A	I-f1A	I-f1A	I-f1A	O	B-f1C	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	O	B-f3A	I-f3A	O	O	O	O	O	B-f3C	O
+f16	O	B-f1A	I-f1A	I-f1A	I-f1A	O	O	O	B-f1C	I-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	O	B-f3A	I-f3A	O	B-f3C	I-f3C	I-f3C	O	O	O
+f17	O	B-f1A	I-f1A	I-f1A	I-f1A	O	O	O	B-f1C	I-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	O	B-f3A	I-f3A	O	O	O	O	O	B-f3C	O
+===== 26133121 stmt11 =====
+WORD	Under	chronic	stress-induced	neuroinflammatory	conditions	associated	with	depression	,	T	cell	responses	may	become	maladaptive	and	can	be	involved	in	neurodegeneration	.
+POSTAG	IN	JJ	JJ	JJ	NNS	VBN	IN	NN	,	NNP	NN	NNS	MD	VB	JJ	CC	MD	VB	VBN	IN	NN	.
+CAP	O	B-P	I-P	I-P	I-P	O	O	B-C	O	B-C	I-C	I-C	O	O	O	O	O	O	O	O	B-C	O
+f18	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O
+f19	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	B-f3C	O
+c20	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	I-c2P	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 26133121 stmt12 =====
+WORD	Additionally	,	intracellular	adhesion	and	MHC	molecule	expression	as	well	as	glucocorticoid	receptor	expression	within	the	brain	may	play	a	role	in	determining	T	lymphocyte	functionality	in	depression	.
+POSTAG	RB	,	JJ	NN	CC	NNP	NN	NN	RB	RB	IN	JJ	NN	NN	IN	DT	NN	MD	VB	DT	NN	IN	VBG	NNP	JJ	NN	IN	NN	.
+CAP	O	O	B-P	I-P	O	B-P	I-P	I-P	O	O	O	B-C	I-C	B-A	O	O	B-C	O	O	O	B-C	O	O	B-P	I-P	I-P	O	B-C	O
+f20	O	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	O	B-f3A	O	O	O	O	O	O	O	O
+f21	O	O	O	O	O	B-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	O	B-f3A	O	O	O	O	O	O	O	O
+f22	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	O	O	O	B-f2P	I-f2P	O	B-f3A	O	O	O	O	O	O	O	O
+c21	O	O	B-c1C	I-c1C	O	O	O	O	O	O	O	O	O	O	B-c2P	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O
+c22	O	O	O	O	O	B-c1C	I-c1C	I-c1C	O	O	O	O	O	O	B-c2P	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O
+c23	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O
+c24	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O
+c25	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	B-c3C	O
+===== 26133121 stmt13 =====
+WORD	Taken	together	,	T	lymphocyte	mechanisms	,	which	confer	susceptibility	or	resilience	to	MDD	,	are	not	yet	fully	understood	.
+POSTAG	VBN	RB	,	NNP	NN	NN	,	WDT	VBP	NN	CC	NN	TO	NNP	,	VBP	RB	RB	RB	JJ	.
+CAP	O	O	O	B-C	I-C	B-A	O	O	O	B-C	O	B-P	O	B-P	O	O	O	O	O	O	O
+f23	O	O	O	B-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O
+c26	O	O	O	B-c1C	I-c1C	I-c1C	O	O	B-c2P	I-c2P	I-c2P	I-c2P	I-c2P	B-c3C	O	O	O	O	O	O	O
+===== 26133121 stmt14 =====
+WORD	Further	insight	into	the	cellular	and	molecular	mechanisms	which	balance	the	adaptive	and	maladaptive	roles	of	T	lymphocytes	may	provide	a	better	understanding	of	both	the	neuro-	degenerative	and	-regenerative	repair	functions	as	present	within	the	neuroimmune	network	during	depression	.
+POSTAG	RB	NN	IN	DT	JJ	CC	JJ	NNS	WDT	VBP	DT	JJ	CC	JJ	NNS	IN	NNP	NNS	MD	VB	DT	JJR	NN	IN	DT	DT	JJ	NN	CC	JJ	NN	NNS	IN	NN	IN	DT	JJ	NN	IN	NN	.
+CAP	O	B-C	O	O	O	O	B-C	I-C	O	O	O	O	O	B-A	I-A	O	B-C	I-C	O	O	O	O	B-A	O	O	O	B-P	I-P	O	O	O	O	O	B-P	O	O	B-P	I-P	O	B-C	O
+f24	B-f1A	I-f1A	O	O	B-f1C	I-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	O	B-f3A	I-f3A	O	O	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+f25	B-f1A	I-f1A	O	O	B-f1C	I-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	O	B-f3A	I-f3A	O	O	O	O	O	O	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O
+c27	B-c1A	I-c1A	O	O	B-c1C	I-c1C	I-c1C	I-c1C	O	B-c2P	O	B-c3A	O	O	O	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c28	B-c1A	I-c1A	O	O	B-c1C	I-c1C	I-c1C	I-c1C	O	B-c2P	O	O	O	B-c3A	I-c3A	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c29	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	O	O	O	O	B-c2P	I-c2P	I-c2P	O	B-c3C	I-c3C	O	O	O
+c30	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	I-c2P	I-c2P	O	B-c3C	I-c3C	O	O	O
+c31	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c2P	B-c3C	O
+===== 26133121 stmt15 =====
+WORD	Furthermore	T	cells	may	be	important	players	in	restoration	of	normal	behaviour	and	immune	cell	homeostasis	in	depression	.
+POSTAG	RB	NNP	NNS	MD	VB	JJ	NNS	IN	NN	IN	JJ	NN	CC	NN	NN	NN	IN	NN	.
+CAP	O	B-C	I-C	O	O	B-P	I-P	O	B-A	O	B-C	I-C	O	B-P	I-P	I-P	O	B-C	O
+f26	O	B-f1C	I-f1C	B-f2P	I-f2P	B-f3A	I-f3A	O	O	O	O	O	O	O	O	O	O	O	O
+c32	O	O	O	O	O	B-c1A	I-c1A	B-c2P	B-c3A	O	B-c3C	I-c3C	O	O	O	O	O	O	O
+c33	O	O	O	O	O	B-c1A	I-c1A	B-c2P	O	O	O	O	O	B-c3C	I-c3C	I-c3C	O	O	O
+c34	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	B-c3C	O
+===== 26118933 stmt1 =====
+WORD	Immunization	of	sea	bream	juveniles	against	photobacterium	damselae	subsp.	piscicida	by	short	bath	,	effect	on	some	pro-inflammatory	molecules	and	the	mx	gene	expression	.
+POSTAG	NN	IN	NN	NN	NNS	IN	NN	NN	NN	NN	IN	JJ	NN	,	NN	IN	DT	JJ	NNS	CC	DT	JJ	NN	NN	.
+CAP	B-A	O	B-C	I-C	I-C	O	B-P	I-P	I-P	I-P	O	B-P	I-P	O	B-C	O	O	B-C	I-C	O	O	B-P	I-P	I-P	O
+c1	B-c1A	O	B-c1C	I-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c2	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	B-c2P	O	B-c3C	I-c3C	O	O	O	O	O	O
+c3	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	B-c2P	O	O	O	O	O	B-c3C	I-c3C	I-c3C	O
+===== 26118933 stmt2 =====
+WORD	cytokines	are	a	family	of	proteins	derived	from	macrophages	,	lymphocytes	,	granulocytes	,	mast	cells	and	epithelial	cells	and	can	be	divided	into	interferons	,	Interleukins	and	Tumor	Necrosis	factors	among	others	.
+POSTAG	NNS	VBP	DT	NN	IN	NNS	VBN	IN	NNS	,	NNS	,	NNS	,	NN	NNS	CC	JJ	NNS	CC	MD	VB	VBN	IN	NNS	,	NNP	CC	NNP	NNP	NNS	IN	NNS	.
+CAP	B-C	O	O	B-A	O	B-C	O	O	B-C	O	B-C	O	B-C	O	B-C	I-C	O	B-C	I-C	O	O	O	O	O	B-C	O	B-P	O	B-C	I-C	I-C	O	B-C	O
+f1	B-f1C	B-f2P	O	B-f3A	O	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f2	B-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	B-f3C	O	O	O	O	O	O	O	O	O
+f3	B-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	O	O	B-f3C	O	O	O	O	O	O	O
+f4	B-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	O	O	O	O	B-f3C	I-f3C	I-f3C	O	O	O
+c4	O	O	O	O	O	B-c1C	B-c2P	I-c2P	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c5	O	O	O	O	O	B-c1C	B-c2P	I-c2P	O	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c6	O	O	O	O	O	B-c1C	B-c2P	I-c2P	O	O	O	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c7	O	O	O	O	O	B-c1C	B-c2P	I-c2P	O	O	O	O	O	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c8	O	O	O	O	O	B-c1C	B-c2P	I-c2P	O	O	O	O	O	O	O	O	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c9	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	I-c2P	O
+===== 26118933 stmt3 =====
+WORD	The	presence	of	cytokines	in	a	wide	number	of	fish	species	has	been	proved	and	several	molecules	types	have	been	already	cloned	and	sequenced	.
+POSTAG	DT	NN	IN	NNS	IN	DT	JJ	NN	IN	JJ	NNS	VBZ	VBN	VBN	CC	JJ	NNS	NNS	VBP	VBN	RB	VBN	CC	VBN	.
+CAP	O	B-A	O	B-C	O	O	B-A	I-A	O	B-C	I-C	O	O	O	O	B-P	I-P	I-P	O	O	O	O	O	O	O
+f5	O	B-f1A	O	B-f1C	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O
+f6	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	O	O	O
+f7	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	O	O	O	O	O	B-f2P	O
+c10	O	B-c1A	O	B-c1C	B-c2P	O	O	O	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 26118933 stmt4 =====
+WORD	In	this	work	some	proinflamatory	molecules	and	Mx	gene	were	detected	in	the	liver	of	vaccinated	sea	bream	juveniles	with	an	average	body	weight	of	5	g	.
+POSTAG	IN	DT	NN	DT	JJ	NNS	CC	NNP	NN	VBD	VBN	IN	DT	NN	IN	JJ	NN	NN	NNS	IN	DT	JJ	NN	NN	IN	CD	NN	.
+CAP	O	O	B-C	O	B-P	I-P	O	B-C	I-C	O	O	O	O	B-A	O	B-C	I-C	I-C	I-C	O	O	O	B-C	I-C	O	O	O	O
+f8	O	O	O	O	B-f1C	I-f1C	O	O	O	B-f2P	I-f2P	I-f2P	O	B-f3A	O	B-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O
+f9	O	O	O	O	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	O	B-f3A	O	B-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O
+c11	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	B-c3C	I-c3C	O
+===== 26118933 stmt5 =====
+WORD	The	method	of	immunization	was	by	short	bath	and	three	different	bacterins	against	the	marine	pathogen	Photobacterium	damselae	subsp.	piscicida	were	designed	and	used	to	immunize	fish	.
+POSTAG	DT	NN	IN	NN	VBD	IN	JJ	NN	CC	CD	JJ	NNS	IN	DT	JJ	NN	NNP	NN	NN	NN	VBD	VBN	CC	VBN	TO	VB	NN	.
+CAP	O	B-A	O	B-C	O	O	B-P	I-P	O	O	B-P	I-P	O	O	B-P	I-P	I-P	I-P	I-P	I-P	O	O	O	O	O	O	B-C	O
+f10	O	B-f1A	O	B-f1C	B-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f11	O	O	O	O	O	O	O	O	O	O	O	B-f1C	O	O	O	O	O	O	O	O	B-f2P	I-f2P	O	O	O	O	O	O
+f12	O	O	O	O	O	O	O	O	O	O	O	B-f1C	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	B-f3C	O
+c12	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	O	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O
+===== 26118933 stmt6 =====
+WORD	Five	genes	encoding	for	five	different	molecules	were	analyzed	by	real	time	PCR	,	IL-1	beta	,	IL	Ir-2	,	Cox-2	,	Mx	and	TNFalpha	.
+POSTAG	CD	NNS	VBG	IN	CD	JJ	NNS	VBD	VBN	IN	JJ	NN	NNP	,	NNP	NN	,	NNP	NNP	,	NNP	,	NNP	CC	NNP	.
+CAP	O	B-C	O	O	O	B-C	I-C	O	O	O	B-P	I-P	I-P	O	B-C	I-C	O	B-P	I-P	O	B-C	O	B-P	O	B-C	O
+f13	O	B-f1C	O	O	O	O	O	B-f2P	I-f2P	I-f2P	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+f14	O	B-f1C	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O	O	O	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O
+f15	O	B-f1C	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	B-f3C	I-f3C	O	O	O	O	O	O	O
+f16	O	B-f1C	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	B-f3C	O	O	O	O	O
+f17	O	B-f1C	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	B-f3C	O	O	O
+f18	O	B-f1C	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f3C	O
+c13	O	B-c1C	B-c2P	I-c2P	O	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 26118933 stmt7 =====
+WORD	Gene	expression	was	quantified	along	four	days	after	fish	immunization	and	results	were	compared	among	groups	.
+POSTAG	NNP	NN	VBD	VBN	IN	CD	NNS	IN	JJ	NN	CC	NNS	VBD	VBN	IN	NNS	.
+CAP	B-P	I-P	O	O	O	O	B-C	O	B-P	I-P	O	B-C	O	O	O	B-C	O
+f19	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	B-f3A	I-f3A	O	O	O	O	O	O	O	O	O	O
+c14	O	O	O	O	O	O	O	O	B-c1C	I-c1C	O	O	B-c2P	I-c2P	I-c2P	B-c3C	O
+===== 26118933 stmt8 =====
+WORD	results	show	that	the	heat-inactivated	vaccine	stimulates	the	up-regulation	of	IL-1	beta	,	IL	Ir-2	,	Cox-2	and	TNFalpha	genes	whereas	the	UV-light	inactivated	vaccine	was	the	unique	vaccine	which	stimulates	the	expression	of	Mx	gene	.
+POSTAG	NNS	VBP	IN	DT	JJ	NN	VBZ	DT	NN	IN	NNP	NN	,	NNP	NNP	,	NNP	CC	NNP	NNS	VBD	DT	NNP	JJ	NN	VBD	DT	JJ	NN	WDT	VBZ	DT	NN	IN	NNP	NN	.
+CAP	B-C	O	O	O	B-P	I-P	O	O	B-A	O	B-C	I-C	O	B-P	I-P	O	B-C	O	B-P	I-P	O	O	B-P	I-P	I-P	O	O	B-P	I-P	O	O	O	B-A	O	B-C	I-C	O
+f20	B-f1A	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f21	O	O	O	O	B-f1C	I-f1C	B-f2P	O	B-f3A	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f22	O	O	O	O	B-f1C	I-f1C	B-f2P	O	B-f3A	O	O	O	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f23	O	O	O	O	B-f1C	I-f1C	B-f2P	O	B-f3A	O	O	O	O	O	O	O	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f24	O	O	O	O	B-f1C	I-f1C	B-f2P	O	B-f3A	O	O	O	O	O	O	O	O	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f25	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	B-f2P	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O
+c15	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	O	B-c2P	O	B-c3A	O	B-c3C	I-c3C	O
+===== 26118933 stmt9 =====
+WORD	The	present	is	a	novel	study	that	shows	by	the	first	time	the	effect	of	the	inactivation	process	of	vaccines	on	the	expression	levels	of	genes	involved	in	the	defense	against	Photobacterium	damselae	subsp	piscicida	.
+POSTAG	DT	JJ	VBZ	DT	NN	NN	WDT	VBZ	IN	DT	JJ	NN	DT	NN	IN	DT	NN	NN	IN	NNS	IN	DT	NN	NNS	IN	NNS	VBN	IN	DT	NN	IN	NNP	NN	NN	NN	.
+CAP	O	O	O	O	B-P	I-P	O	O	O	O	B-P	I-P	O	B-C	O	O	B-A	I-A	O	B-C	O	O	B-A	I-A	O	B-C	O	O	O	B-C	O	B-P	I-P	I-P	I-P	O
+f26	O	O	O	O	B-f1A	I-f1A	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O	B-f3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c16	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	B-c2P	O	B-c3A	I-c3A	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c17	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	I-c1A	O	B-c1C	B-c2P	O	B-c3A	I-c3A	O	B-c3C	O	O	O	O	O	O	O	O	O	O
+c18	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	I-c1A	O	B-c1C	O	O	O	O	O	B-c3C	I-c3C	I-c3C	I-c3C	O
+===== 26096460 stmt1 =====
+WORD	TRPV5/V6	channels	mediate	Ca(2+)	influx	in	jurkat	t	cells	under	the	control	of	extracellular	pH	.
+POSTAG	NNP	NNS	VBP	NNP	NN	IN	NN	NN	NNS	IN	DT	NN	IN	JJ	NN	.
+CAP	B-C	I-C	O	B-C	I-C	O	B-C	I-C	I-C	O	O	B-A	O	B-C	I-C	O
+f1	B-f1C	I-f1C	B-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O
+c1	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O
+c2	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	O	B-c3A	O	B-c3C	I-c3C	O
+===== 26096460 stmt2 =====
+WORD	Regulation	of	cytoplasmic	free	calcium	concentration	[	Ca(2+)	]i	is	a	key	factor	for	the	maintenance	of	cellular	homeostasis	in	different	cell	types	,	including	lymphocytes	.
+POSTAG	NN	IN	JJ	JJ	NN	NN	(	NNP	)	VBZ	DT	JJ	NN	IN	DT	NN	IN	JJ	NN	IN	JJ	NN	NNS	,	VBG	NNS	.
+CAP	B-A	O	B-C	I-C	I-C	I-C	O	B-C	O	O	O	B-P	I-P	O	O	B-A	O	B-C	I-C	O	B-C	I-C	I-C	O	O	B-A	O
+f2	B-f1A	O	B-f1C	I-f1C	I-f1C	I-f1C	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O	B-f3A	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O
+c3	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	B-c1C	I-c1C	B-c2P	O	O	O	O	O	B-c3C	O
+===== 26096460 stmt3 =====
+WORD	During	T	lymphocyte	activation	as	well	as	production	of	cytokines	,	sustained	Ca(2+)	influx	is	essential	,	however	it	remains	unclear	how	Ca(2+)	influx	is	regulated	.
+POSTAG	IN	NNP	JJ	NN	RB	RB	IN	NN	IN	NNS	,	VBD	NNP	NN	VBZ	JJ	,	RB	PRP	VBZ	JJ	WRB	NNP	NN	VBZ	VBN	.
+CAP	O	B-C	I-C	I-C	O	O	O	B-A	O	B-C	O	O	B-C	I-C	O	O	O	O	O	O	O	O	B-C	I-C	O	O	O
+f3	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O
+c4	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c5	B-c2P	O	O	O	O	O	O	B-c3A	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 26096460 stmt4 =====
+WORD	Previously	,	we	reported	the	expression	and	functional	activity	of	calcium	channels	TRPV5	and	TRPV6	in	human	leukemia	Jurkat	T	cells	.
+POSTAG	RB	,	PRP	VBD	DT	NN	CC	JJ	NN	IN	NN	NNS	NNP	CC	NNP	IN	JJ	NN	NNP	NNP	NNS	.
+CAP	O	O	O	O	O	B-C	O	B-A	I-A	O	B-C	I-C	I-C	O	B-C	O	B-P	I-P	I-P	I-P	I-P	O
+f4	O	O	O	B-f2P	O	B-f3A	O	O	O	O	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O
+f5	O	O	O	B-f2P	O	O	O	B-f3A	I-f3A	O	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O
+f6	O	O	O	B-f2P	O	B-f3A	O	O	O	O	O	O	O	O	B-f3C	O	O	O	O	O	O	O
+f7	O	O	O	B-f2P	O	O	O	B-f3A	I-f3A	O	O	O	O	O	B-f3C	O	O	O	O	O	O	O
+c6	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	O	O	B-c2P	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O
+c7	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O
+===== 26096460 stmt5 =====
+WORD	In	this	study	,	using	single	channel	recordings	,	we	found	that	activity	of	calcium	channels	TRPV5/V6	in	Jurkat	T	cells	is	subject	to	strong	control	of	external	stimuli	such	as	a	low-	or	high-pH	stressor	.
+POSTAG	IN	DT	NN	,	VBG	JJ	NN	NNS	,	PRP	VBD	IN	NN	IN	NN	NNS	NNP	IN	NNP	NNP	NNS	VBZ	JJ	TO	JJ	NN	IN	JJ	NNS	JJ	IN	DT	JJ	CC	JJ	NN	.
+CAP	O	O	B-A	O	O	B-P	I-P	I-P	O	O	O	O	B-A	O	B-C	I-C	I-C	O	B-C	I-C	I-C	O	O	O	B-A	I-A	O	B-C	I-C	O	O	O	O	O	B-P	I-P	O
+f8	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f9	O	O	O	O	O	O	O	O	O	O	O	O	B-f1A	O	B-f1C	I-f1C	I-f1C	O	O	O	O	B-f2P	I-f2P	I-f2P	B-f3A	I-f3A	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O
+f10	O	O	O	O	O	O	O	O	O	O	O	O	B-f1A	O	B-f1C	I-f1C	I-f1C	O	O	O	O	B-f2P	I-f2P	I-f2P	B-f3A	I-f3A	O	O	O	O	O	O	B-f3C	I-f3C	I-f3C	I-f3C	O
+c8	B-c2P	O	B-c3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c9	O	O	O	O	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c10	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	B-c1C	I-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 26096460 stmt6 =====
+WORD	We	showed	that	extracellular	acidic	pH	reduces	the	activity	of	TRPV5/V6	channels	,	whereas	alkaline	pH	increases	the	activity	of	TRPV5/V6	channels	in	Jurkat	T	cells	.
+POSTAG	PRP	VBD	IN	JJ	JJ	NN	VBZ	DT	NN	IN	NNP	NNS	,	NNS	NN	NN	VBZ	DT	NN	IN	NNP	NNS	IN	NNP	NNP	NNS	.
+CAP	O	O	O	B-P	I-P	I-P	O	O	B-A	O	B-C	I-C	O	B-P	B-C	I-C	O	O	B-A	O	B-C	I-C	O	B-C	I-C	I-C	O
+f11	O	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f12	O	O	O	B-f1C	I-f1C	I-f1C	B-f2P	O	B-f3A	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f13	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	B-f2P	O	B-f3A	O	B-f3C	I-f3C	O	O	O	O	O
+c11	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O
+===== 26096460 stmt7 =====
+WORD	Using	calcium	imaging	,	we	found	that	Ca(2+)	influx	in	Jurkat	T	cells	displayed	sensitivity	to	extracellular	pH	,	similar	to	that	shown	for	the	calcium	channels	TRPV5/V6	.
+POSTAG	VBG	NN	NN	,	PRP	VBD	IN	NNP	NN	IN	NNP	NNP	NNS	VBD	NN	TO	JJ	NN	,	JJ	TO	DT	VBN	IN	DT	NN	NNS	NNP	.
+CAP	O	B-C	I-C	O	O	O	O	B-C	I-C	O	B-C	I-C	I-C	O	B-A	O	B-C	I-C	O	O	O	O	O	O	O	B-C	I-C	I-C	O
+f14	O	O	O	O	O	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f15	O	O	O	O	O	O	O	B-f1C	I-f1C	O	O	O	O	B-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O
+c12	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c13	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c14	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c2P	I-c2P	I-c2P	I-c2P	I-c2P	O	B-c3C	I-c3C	I-c3C	O
+===== 26096460 stmt8 =====
+WORD	Double	immunostaining	of	Jurkat	cells	revealed	that	TRPV5	and	TRPV6	channels	colocalize	with	clathrin	and	the	early	endocytosis	marker	,	EEA1	.
+POSTAG	JJ	NN	IN	NNP	NNS	VBD	IN	NNP	CC	NNP	NNS	VBP	IN	NN	CC	DT	JJ	NN	NN	,	NNP	.
+CAP	B-A	I-A	O	B-C	I-C	O	O	B-C	O	B-C	I-C	O	O	B-C	O	O	B-P	I-P	I-P	O	B-C	O
+f16	O	O	O	O	O	O	O	B-f1C	O	O	O	B-f2P	I-f2P	B-f3C	O	O	O	O	O	O	O	O
+f17	O	O	O	O	O	O	O	B-f1C	O	O	O	B-f2P	I-f2P	O	O	O	B-f3C	I-f3C	I-f3C	O	O	O
+f18	O	O	O	O	O	O	O	B-f1C	O	O	O	B-f2P	I-f2P	O	O	O	O	O	O	O	B-f3C	O
+f19	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	B-f3C	O	O	O	O	O	O	O	O
+f20	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	O	O	O	B-f3C	I-f3C	I-f3C	O	O	O
+f21	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	O	O	O	O	O	O	O	B-f3C	O
+c15	B-c1A	I-c1A	O	B-c1C	I-c1C	B-c2P	I-c2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 26096460 stmt9 =====
+WORD	Moreover	,	we	demonstrated	that	a	specific	inhibitor	of	clathrin-dependent	endocytosis	,	dynasore	,	blocked	TRPV5/V6	activity	and	Ca(2+)	influx	into	Jurkat	cells	.
+POSTAG	RB	,	PRP	VBD	IN	DT	JJ	NN	IN	JJ	NN	,	NN	,	VBD	NNP	NN	CC	NNP	NN	IN	NNP	NNS	.
+CAP	O	O	O	O	O	O	B-A	I-A	O	B-C	I-C	O	B-C	O	O	B-P	I-P	O	B-C	I-C	O	B-C	I-C	O
+f22	O	O	O	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f23	O	O	O	O	O	O	B-f1A	I-f1A	O	B-f1C	I-f1C	O	O	O	B-f2P	B-f3C	B-f3A	O	O	O	O	O	O	O
+f24	O	O	O	O	O	O	B-f1A	I-f1A	O	B-f1C	I-f1C	O	O	O	B-f2P	O	O	O	B-f3C	I-f3C	O	O	O	O
+f25	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	O	B-f2P	B-f3C	B-f3A	O	O	O	O	O	O	O
+f26	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	O	B-f2P	O	O	O	B-f3C	I-f3C	O	O	O	O
+c16	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c1A	O	O	O	B-c2P	B-c3C	I-c3C	O
+c17	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	O
+===== 26096460 stmt10 =====
+WORD	Overall	,	our	findings	indicate	that	strong	environmental	cues	may	affect	the	intracellular	calcium	level	in	Jurkat	cells	by	influencing	the	traffic	of	TRPV5/V6	channels	in	lymphocytes	.
+POSTAG	JJ	,	PRP$	NNS	VBP	IN	JJ	JJ	NNS	MD	VB	DT	JJ	NN	NN	IN	NNP	NNS	IN	VBG	DT	NN	IN	NNP	NNS	IN	NNS	.
+CAP	O	O	O	B-C	O	O	B-P	I-P	I-P	O	O	O	B-P	I-P	I-P	O	B-C	I-C	O	O	O	B-A	O	B-C	I-C	O	B-C	O
+f27	O	O	O	B-f1A	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f28	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	O	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+c18	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O
+c19	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c2P	I-c2P	O	B-c3A	O	B-c3C	I-c3C	O	O	O
+c20	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	B-c1C	I-c1C	B-c2P	B-c3C	O
+===== 26096460 stmt11 =====
+WORD	This	article	is	protected	by	copyright	.
+POSTAG	DT	NN	VBZ	VBN	IN	NN	.
+CAP	O	B-P	O	O	O	B-P	O
+f29	O	B-f1C	B-f2P	I-f2P	I-f2P	B-f3C	O
+===== 26096460 stmt12 =====
+WORD	All	rights	reserved	.
+POSTAG	DT	NNS	VBN	.
+CAP	O	B-P	O	O
+c21	O	B-c1A	B-c2P	O
+===== 11726654 stmt1 =====
+WORD	Nuclear	receptor	peroxisome	proliferator-activated	receptor	alpha	is	expressed	in	resting	murine	lymphocytes.	the	PPARalpha	in	t	and	b	lymphocytes	is	both	transactivation	and	transrepression	competent	.
+POSTAG	JJ	NN	JJ	JJ	NN	NN	VBZ	VBN	IN	VBG	NN	VBZ	DT	NNP	IN	NN	CC	NN	NNS	VBZ	DT	NN	CC	NN	NN	.
+CAP	B-P	I-P	I-P	I-P	I-P	I-P	O	O	O	O	B-C	O	O	B-C	O	O	O	B-C	I-C	O	O	B-P	O	B-P	I-P	O
+f1	B-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f2	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	O	O	O	O	O	B-f2P	O	B-f3C	O	O	O	O
+f3	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	O	O	O	O	O	B-f2P	O	O	O	B-f3C	I-f3C	O
+c1	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	B-c3C	O	O	O	O	O	O	O	O	O	O
+c2	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	O	O	B-c3C	I-c3C	O	O	O	O	O	O	O
+===== 11726654 stmt2 =====
+WORD	Peroxisome	proliferator-activated	receptors	are	transcription	factors	that	belong	to	the	nuclear	hormone	receptor	superfamily	.
+POSTAG	NNP	JJ	NNS	VBP	JJ	NNS	WDT	VBP	TO	DT	JJ	NN	NN	RB	.
+CAP	B-C	I-C	I-C	O	B-P	I-P	O	O	O	O	B-P	I-P	I-P	O	O
+f4	B-f1C	I-f1C	I-f1C	B-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O
+c3	O	O	O	O	B-c1C	I-c1C	O	B-c2P	I-c2P	O	B-c3C	I-c3C	I-c3C	I-c3C	O
+===== 11726654 stmt3 =====
+WORD	PPARalpha	and	PPARgamma	ligands	have	been	demonstrated	to	exert	anti-inflammatory	activities	in	macrophages	by	repressing	the	activities	of	several	transcription	factors	.
+POSTAG	NNP	CC	NNP	NNS	VBP	VBN	VBN	TO	VB	JJ	NNS	IN	NNS	IN	VBG	DT	NNS	IN	JJ	NN	NNS	.
+CAP	B-C	O	B-P	I-P	O	O	O	O	O	B-P	I-P	O	B-C	O	O	O	B-A	O	B-C	I-C	I-C	O
+f5	B-f1C	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O
+f6	O	O	B-f1C	I-f1C	O	O	O	O	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O
+c4	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	O	O	O	O	O	O	O	O	O
+c5	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	I-c2P	O	B-c3A	O	O	B-c3C	I-c3C	O
+===== 11726654 stmt4 =====
+WORD	PPARgamma	is	expressed	in	T	lymphocytes	and	may	play	a	role	in	cytokine	production	,	cellular	proliferation	,	and	susceptibility	to	apoptosis	.
+POSTAG	NNP	VBZ	VBN	IN	NNP	NNS	CC	MD	VB	DT	NN	IN	JJ	NN	,	JJ	NN	,	CC	NN	TO	NN	.
+CAP	B-C	O	O	O	B-C	I-C	O	O	O	O	B-A	O	B-A	I-A	O	B-C	I-C	O	O	B-C	O	B-A	O
+f7	B-f1C	B-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f8	B-f1C	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O
+f9	B-f1C	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O	O	O	B-f3C	I-f3C	O	O	O	O	O	O
+f10	B-f1C	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	B-f3C	O	O	O
+c6	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	B-c3C	O
+===== 11726654 stmt5 =====
+WORD	Herein	,	we	demonstrate	that	T	and	B	lymphocytes	constitutively	express	PPARalpha	.
+POSTAG	NNP	,	PRP	VBP	IN	NNP	CC	NNP	NNS	RB	JJ	NNP	.
+CAP	B-P	O	O	O	O	O	O	B-C	I-C	O	B-P	I-P	O
+f11	O	O	O	B-f2P	I-f2P	O	O	O	O	O	O	O	O
+f12	O	O	O	O	O	B-f1C	O	O	O	B-f2P	I-f2P	B-f3C	O
+f13	O	O	O	O	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	B-f3C	O
+===== 11726654 stmt6 =====
+WORD	PPARalpha	represents	the	predominant	isoform	expressed	in	lymphocytes	,	whereas	PPARgamma	dominates	in	all	cell	types	of	the	myeloid	lineage	.
+POSTAG	NNP	VBZ	DT	JJ	NN	VBN	IN	NNS	,	NNS	NNP	NNS	IN	DT	NN	NNS	IN	DT	JJ	NN	.
+CAP	B-C	O	O	B-P	I-P	O	O	B-C	O	B-P	I-P	I-P	O	O	B-C	I-C	O	O	B-P	I-P	O
+f14	B-f1C	B-f2P	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f15	O	O	O	O	O	O	O	O	O	O	B-f1C	B-f2P	I-f2P	O	B-f3A	I-f3A	O	O	B-f3C	I-f3C	O
+c7	O	O	O	B-c1C	I-c1C	B-c2P	I-c2P	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 11726654 stmt7 =====
+WORD	PPARalpha	expression	was	down-regulated	following	T-cell	activation	while	PPARgamma	expression	increased	under	the	same	activating	conditions	.
+POSTAG	NNP	NN	VBD	JJ	JJ	NNP	NN	IN	NNP	NN	VBD	IN	DT	JJ	NN	NNS	.
+CAP	B-P	I-P	O	B-P	I-P	I-P	I-P	O	B-P	I-P	O	O	O	B-P	I-P	I-P	O
+f16	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O
+f17	O	O	O	O	O	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O
+===== 11726654 stmt8 =====
+WORD	PPARalpha	expression	in	T	cells	may	be	regulated	by	microenvironmental	factors	,	because	Peyer	's	patch	T	cells	expressed	far	greater	levels	of	PPARalpha	than	T	cells	isolated	from	peripheral	lymphoid	organs	.
+POSTAG	NNP	NN	IN	NNP	NNS	MD	VB	VBN	IN	JJ	NNS	,	IN	NNP	POS	NN	NNP	NNS	VBD	RB	JJR	NNS	IN	NNP	IN	NNP	NNS	VBN	IN	JJ	JJ	NNS	.
+CAP	B-P	I-P	O	B-A	I-A	O	O	O	O	B-C	I-C	O	O	B-C	I-C	I-C	B-A	I-A	O	O	O	B-A	O	B-C	O	B-A	I-A	O	O	B-C	I-C	I-C	O
+f18	B-f1C	I-f1C	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f19	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	O	B-f1A	I-f1A	I-f1A	B-f2P	B-f3A	I-f3A	I-f3A	O	B-f3C	O	O	O	O	O	O	O	O	O
+c8	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c9	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	I-c1A	I-c1A	O	B-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O
+c10	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	I-c2P	B-c3C	I-c3C	I-c3C	O
+===== 11726654 stmt9 =====
+WORD	Exposure	to	specific	ligand	determined	that	PPARalpha	in	lymphocytes	can	effectively	transactivate	a	peroxisome	proliferator	response	element	reporter	construct	.
+POSTAG	NN	TO	JJ	NN	VBD	IN	NNP	IN	NNS	MD	RB	VB	DT	JJ	NN	NN	NN	NN	NN	.
+CAP	B-P	O	B-P	I-P	O	O	B-C	O	B-C	O	O	O	O	B-P	I-P	I-P	I-P	I-P	I-P	O
+f20	B-f1A	O	O	O	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f21	O	O	O	O	O	O	B-f1C	O	O	B-f2P	I-f2P	I-f2P	O	B-f3C	I-f3C	I-f3C	I-f3C	I-f3C	I-f3C	O
+c11	B-c1A	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c12	O	O	O	O	O	O	B-c1C	B-c2P	B-c3C	O	O	O	O	O	O	O	O	O	O	O
+===== 11726654 stmt10 =====
+WORD	PPARalpha	's	ability	to	regulate	endogenous	genes	,	however	,	required	treatment	with	histone	deacetylase	inhibitors	.
+POSTAG	NNP	POS	NN	TO	VB	JJ	NNS	,	RB	,	VBN	NN	IN	NN	NN	NNS	.
+CAP	B-C	O	B-A	O	O	B-C	I-C	O	O	O	O	B-C	O	B-C	I-C	B-A	O
+f22	B-f1C	O	B-f1A	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	B-f3C	I-f3C	I-f3C	O
+c13	B-c1C	O	B-c1A	B-c2P	I-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O
+===== 11726654 stmt11 =====
+WORD	Finally	,	ligand	activation	of	lymphocyte	PPARalpha	antagonized	NF-kappaB	.
+POSTAG	RB	,	JJR	NN	IN	JJ	NNP	VBD	NNP	.
+CAP	O	O	O	B-A	O	B-C	I-C	O	B-C	O
+f23	O	O	B-f1A	I-f1A	O	B-f1C	I-f1C	B-f2P	B-f3C	O
+===== 11726654 stmt12 =====
+WORD	Our	observation	that	a	functional	PPARalpha	exists	within	T	cells	and	B	lymphocytes	suggests	an	expanding	role	for	this	nuclear	receptor	in	cells	of	the	immune	system	.
+POSTAG	PRP$	NN	IN	DT	JJ	NNP	NNS	IN	NNP	NNS	CC	NNP	NNS	VBZ	DT	VBG	NN	IN	DT	JJ	NN	IN	NNS	IN	DT	NN	NN	.
+CAP	O	B-C	O	O	B-P	I-P	I-P	O	B-C	I-C	O	B-C	I-C	O	O	O	B-A	O	O	B-P	I-P	O	B-A	O	O	B-C	I-C	O
+f24	O	B-f1A	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O	B-f3C	I-f3C	O	O	O	O	O	O	O
+f25	O	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f26	O	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	O	O	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c14	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3A	O	O	B-c3C	I-c3C	O
+===== 11934839 stmt1 =====
+WORD	PPAR	activators	as	antiinflammatory	mediators	in	human	t	lymphocytes	,	implications	for	atherosclerosis	and	transplantation-associated	arteriosclerosis	.
+POSTAG	NNP	NNS	IN	JJ	NNS	IN	JJ	NN	NNS	,	NNS	IN	NN	CC	JJ	NN	.
+CAP	B-P	I-P	O	B-P	I-P	O	O	B-C	I-C	O	B-P	O	B-C	O	B-C	I-C	O
+c1	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O
+c2	B-c1C	I-c1C	O	O	O	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O
+c3	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	B-c3C	O	O	O	O
+c4	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	O	O	B-c3C	I-c3C	O
+===== 11934839 stmt2 =====
+WORD	Activation	of	T	lymphocytes	and	their	ensuing	elaboration	of	proinflammatory	cytokines	,	such	as	interferon	(IFN)-gamma	,	represent	a	critical	step	in	atherogenesis	and	arteriosclerosis	.
+POSTAG	NN	IN	NNP	NNS	CC	PRP$	JJ	NN	IN	NN	NNS	,	JJ	IN	JJ	NN	,	VB	DT	JJ	NN	IN	NN	CC	NN	.
+CAP	B-A	O	B-C	I-C	O	O	B-A	I-A	O	B-C	I-C	O	O	O	B-C	I-C	O	O	O	B-P	I-P	O	B-C	O	B-C	O
+f1	B-f1A	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	O	B-f3A	I-f3A	O	B-f3C	O	O	O
+f2	B-f1A	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	O	B-f3A	I-f3A	O	O	O	B-f3C	O
+f3	O	O	O	O	O	O	B-f1A	I-f1A	O	B-f1C	I-f1C	O	O	O	O	O	O	B-f2P	O	B-f3A	I-f3A	O	B-f3C	O	O	O
+f4	O	O	O	O	O	O	B-f1A	I-f1A	O	B-f1C	I-f1C	O	O	O	O	O	O	B-f2P	O	B-f3A	I-f3A	O	O	O	B-f3C	O
+f5	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	O	B-f2P	O	B-f3A	I-f3A	O	B-f3C	O	O	O
+f6	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	O	B-f2P	O	B-f3A	I-f3A	O	O	O	B-f3C	O
+c5	O	O	O	O	O	O	B-c1A	I-c1A	O	B-c1C	I-c1C	O	B-c2P	I-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O
+===== 11934839 stmt3 =====
+WORD	IFNgamma	pathways	also	appear	integral	to	the	development	of	transplantation-associated	arteriosclerosis	,	limiting	long-term	cardiac	allograft	survival	.
+POSTAG	NNP	NNS	RB	VBP	JJ	TO	DT	NN	IN	JJ	NN	,	VBG	JJ	JJ	NN	NN	.
+CAP	B-P	I-P	O	O	O	O	O	B-A	O	B-C	I-C	O	O	B-P	I-P	I-P	I-P	O
+f7	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	O	B-f3A	O	B-f3C	I-f3C	O	O	O	O	O	O	O
+c6	O	O	O	O	O	O	O	O	O	O	O	O	B-c2P	B-c3C	I-c3C	I-c3C	I-c3C	O
+===== 11934839 stmt4 =====
+WORD	Although	disruption	of	these	IFNgamma	signaling	pathways	limits	atherosclerosis	and	Tx-AA	in	animals	,	little	is	known	about	inhibitory	regulation	of	proinflammatory	cytokine	production	in	humans	.
+POSTAG	IN	NN	IN	DT	NNP	NN	NNS	VBZ	NN	CC	NNP	IN	NNS	,	JJ	VBZ	VBN	IN	JJ	NN	IN	JJ	NN	NN	IN	NNS	.
+CAP	O	B-P	O	O	B-P	I-P	I-P	O	B-C	O	B-P	O	B-C	O	O	O	O	O	B-A	I-A	O	B-C	I-C	I-C	O	B-C	O
+f8	O	B-f1A	O	O	B-f1C	I-f1C	I-f1C	B-f2P	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f9	O	B-f1A	O	O	B-f1C	I-f1C	I-f1C	B-f2P	O	O	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f10	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	B-f3A	I-f3A	O	B-f3C	I-f3C	I-f3C	O	O	O
+c7	O	O	O	O	O	O	O	O	B-c1C	O	O	B-c2P	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c8	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c9	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	I-c1A	O	B-c1C	I-c1C	I-c1C	B-c2P	B-c3C	O
+===== 11934839 stmt5 =====
+WORD	The	present	study	investigated	whether	activators	of	peroxisome	proliferator-activated	receptor	(PPAR)alpha	and	PPARgamma	,	with	their	known	antiinflammatory	effects	,	might	regulate	the	expression	of	proinflammatory	cytokines	in	human	CD4-positive	T	cells	.
+POSTAG	DT	JJ	NN	VBD	IN	NNS	IN	JJ	JJ	NN	NN	CC	NNP	,	IN	PRP$	VBN	NN	NNS	,	MD	VB	DT	NN	IN	NN	NNS	IN	JJ	JJ	NNP	NNS	.
+CAP	O	B-C	I-C	O	O	B-A	O	B-C	I-C	I-C	I-C	O	B-C	O	O	O	O	B-P	I-P	O	O	O	O	B-A	O	B-C	I-C	O	B-P	I-P	I-P	I-P	O
+f11	O	B-f1A	I-f1A	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f12	O	O	O	O	O	B-f1A	O	B-f1C	I-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	O	B-f3A	O	B-f3C	I-f3C	O	O	O	O	O	O
+f13	O	O	O	O	O	B-f1A	O	O	O	O	O	O	B-f1C	O	O	O	O	O	O	O	B-f2P	I-f2P	O	B-f3A	O	B-f3C	I-f3C	O	O	O	O	O	O
+c10	O	O	O	O	O	B-c1A	O	B-c1C	I-c1C	I-c1C	I-c1C	O	O	O	B-c2P	O	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c11	O	O	O	O	O	B-c1A	O	O	O	O	O	O	B-c1C	O	B-c2P	O	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c12	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	I-c3C	O
+===== 11934839 stmt6 =====
+WORD	Isolated	human	CD4-positive	T	cells	express	PPARalpha	and	PPARgamma	mRNA	and	protein	.
+POSTAG	VBN	JJ	JJ	NNP	NNS	JJ	NNP	CC	NNP	NN	CC	NN	.
+CAP	O	B-P	I-P	I-P	I-P	I-P	I-P	O	B-P	I-P	O	B-C	O
+f14	B-f1C	I-f1C	I-f1C	I-f1C	I-f1C	B-f2P	B-f3C	O	O	O	O	O	O
+f15	B-f1C	I-f1C	I-f1C	I-f1C	I-f1C	B-f2P	O	O	B-f3C	I-f3C	O	O	O
+f16	B-f1C	I-f1C	I-f1C	I-f1C	I-f1C	B-f2P	O	O	O	O	O	B-f3C	O
+===== 11934839 stmt7 =====
+WORD	Activation	of	CD4-positive	T	cells	by	anti-CD3	monoclonal	antibodies	significantly	increased	IFNgamma	protein	secretion	from	0	to	504+/-168	pg/mL	,	as	determined	by	ELISA	.
+POSTAG	NN	IN	JJ	NNP	NNS	IN	JJ	JJ	NNS	RB	VBD	NNP	NN	NN	IN	CD	TO	JJ	NN	,	IN	VBN	IN	NNP	.
+CAP	B-A	O	B-C	I-C	I-C	O	O	B-C	I-C	O	O	B-P	I-P	I-P	O	O	O	O	O	O	O	O	O	B-C	O
+f17	B-f1A	O	B-f1C	I-f1C	I-f1C	O	O	O	O	B-f2P	I-f2P	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O
+c13	B-c1A	O	B-c1C	I-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c14	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O
+c15	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c2P	I-c2P	I-c2P	B-c3C	O
+===== 11934839 stmt8 =====
+WORD	Pretreatment	of	cells	with	well-established	PPARalpha	or	PPARgamma	activators	reduced	anti-CD3-induced	IFNgamma	secretion	in	a	concentration-dependent	manner	.
+POSTAG	NN	IN	NNS	IN	JJ	NNP	CC	NNP	NNS	VBD	JJ	NNP	NN	IN	DT	JJ	NN	.
+CAP	B-A	O	B-C	O	B-P	I-P	O	B-P	I-P	O	B-P	I-P	I-P	O	O	B-P	I-P	O
+f18	B-f1A	O	B-f1C	O	O	O	O	O	O	B-f2P	B-f3C	I-f3C	I-f3C	O	O	O	O	O
+c16	B-c1A	O	B-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O
+c17	B-c1A	O	B-c1C	B-c2P	O	O	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O
+c18	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	O	B-c3C	I-c3C	O
+===== 11934839 stmt9 =====
+WORD	PPAR	activators	also	inhibited	TNFalpha	and	interleukin-2	protein	expression	.
+POSTAG	NNP	NNS	RB	VBD	NNP	CC	JJ	NN	NN	.
+CAP	B-P	I-P	O	O	B-C	O	B-P	I-P	I-P	O
+f19	B-f1C	I-f1C	O	B-f2P	B-f3C	O	O	O	O	O
+f20	B-f1C	I-f1C	O	B-f2P	O	O	B-f3C	I-f3C	I-f3C	O
+===== 11934839 stmt10 =====
+WORD	In	addition	,	PPAR	activators	markedly	reduced	cytokine	mRNA	expression	in	these	cells	.
+POSTAG	IN	NN	,	NNP	NNS	RB	VBD	JJ	NN	NN	IN	DT	NNS	.
+CAP	O	B-C	O	B-P	I-P	O	O	B-P	I-P	I-P	O	O	B-C	O
+f21	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	B-f3C	I-f3C	I-f3C	O	O	O	O
+c19	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	O	B-c3C	O
+===== 11934839 stmt11 =====
+WORD	Such	antiinflammatory	actions	were	also	evident	in	cell-cell	interactions	with	medium	conditioned	by	PPAR	activator-treated	T	cells	attenuating	human	monocyte	CD64	expression	and	human	endothelial	cell	major	histocompatibility	complex	class	II	induction	.
+POSTAG	JJ	JJ	NNS	VBD	RB	JJ	IN	JJ	NNS	IN	NN	VBN	IN	NNP	JJ	NNP	NNS	VBG	JJ	NN	NNP	NN	CC	JJ	NN	NN	JJ	NN	JJ	NN	NNP	NN	.
+CAP	B-P	I-P	I-P	O	O	O	O	B-C	I-C	O	B-C	O	O	B-P	I-P	I-P	I-P	O	B-P	I-P	I-P	I-P	O	O	B-C	I-C	B-C	I-C	B-P	I-P	I-P	I-P	O
+f22	O	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c20	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	I-c2P	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O
+c21	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	I-c2P	O	O	O	O	O	O	O	O	O	O	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O
+===== 11934839 stmt12 =====
+WORD	Thus	,	activation	of	PPARalpha	and	PPARgamma	in	human	CD4-positive	T	cells	limits	the	expression	of	proinflammatory	cytokines	,	such	as	IFNgamma	,	yielding	potential	therapeutic	benefits	in	pathological	processes	,	such	as	atherosclerosis	and	Tx-AA	.
+POSTAG	RB	,	NN	IN	NNP	CC	NNP	IN	JJ	JJ	NNP	NNS	VBZ	DT	NN	IN	NN	NNS	,	JJ	IN	NNP	,	VBG	JJ	JJ	NNS	IN	JJ	NNS	,	JJ	IN	NN	CC	NNP	.
+CAP	O	O	B-A	O	B-C	O	B-C	O	B-P	I-P	I-P	I-P	O	O	B-A	O	B-C	I-C	O	O	O	B-C	O	O	B-P	I-P	I-P	O	B-P	I-P	O	O	O	B-C	O	B-P	O
+f23	O	O	B-f1A	O	B-f1C	O	O	O	O	O	O	O	B-f2P	O	B-f3A	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f24	O	O	B-f1A	O	B-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O
+f25	O	O	B-f1A	O	O	O	B-f1C	O	O	O	O	O	B-f2P	O	B-f3A	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f26	O	O	B-f1A	O	O	O	B-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O
+f27	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1A	O	B-f1C	I-f1C	O	B-f2P	I-f2P	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f28	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	O	O	O	O	B-f2P	I-f2P	B-f3C	O	O	O
+f29	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	O	O	O	O	B-f2P	I-f2P	O	O	B-f3C	O
+c22	O	O	B-c1A	O	B-c1C	O	O	B-c2P	B-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c23	O	O	B-c1A	O	O	O	B-c1C	B-c2P	B-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c24	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O
+===== 11991752 stmt1 =====
+WORD	Significant	antitumor	effects	obtained	by	autologous	tumor	cell	vaccine	engineered	to	secrete	interleukin	(IL)-12	and	iL-18	by	means	of	the	eBV/lipoplex	.
+POSTAG	JJ	NN	NNS	VBN	IN	JJ	NN	NN	NN	VBN	TO	VB	JJ	NN	CC	NN	IN	NNS	IN	DT	NN	.
+CAP	B-P	I-P	I-P	O	O	B-P	I-P	I-P	I-P	O	O	O	B-C	I-C	O	B-C	O	B-A	O	O	B-P	O
+c1	B-c1C	I-c1C	I-c1C	B-c2P	I-c2P	B-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+c2	O	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	I-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O
+c3	O	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	I-c2P	O	O	O	O	B-c3C	O	O	O	O	O	O
+c4	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c2P	I-c2P	I-c2P	O	B-c3C	O
+===== 11991752 stmt2 =====
+WORD	The	EBV/lipoplex	is	a	nonviral	gene	delivery	system	composed	of	a	cationic	lipid	and	Epstein-Barr	virus	(EBV)-based	plasmid	vector	that	carries	the	EBV	oriP	and	EBV	nuclear	antigen	1	gene	.
+POSTAG	DT	NNP	VBZ	DT	JJ	NN	NN	NN	VBN	IN	DT	JJ	NN	CC	JJ	NN	JJ	NN	NN	WDT	VBZ	DT	NNP	NN	CC	NNP	JJ	NN	CD	NN	.
+CAP	O	B-P	O	O	B-P	I-P	I-P	I-P	O	O	O	B-P	I-P	O	B-C	I-C	O	O	O	O	O	O	B-P	I-P	O	B-C	I-C	I-C	I-C	B-C	O
+f1	O	B-f1C	B-f2P	O	B-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c5	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	I-c2P	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c6	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	I-c2P	O	O	O	O	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O
+c7	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	I-c1C	O	B-c2P	O	B-c3C	I-c3C	O	O	O	O	O	O	O
+c8	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	I-c1C	O	B-c2P	O	O	O	O	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O
+===== 11991752 stmt3 =====
+WORD	Because	the	EBNA1	supports	retention	,	nuclear	localization	,	and	transcriptional	upregulation	of	the	oriP-bearing	plasmid	,	cells	transfected	with	the	EBV/lipoplex	express	the	transgene	at	a	very	high	level	.
+POSTAG	IN	DT	NNP	VBZ	NN	,	JJ	NN	,	CC	JJ	NN	IN	DT	JJ	NN	,	NNS	VBD	IN	DT	NNP	VBD	DT	NN	IN	DT	RB	JJ	NN	.
+CAP	O	O	B-P	O	B-C	O	B-P	I-P	O	O	B-P	I-P	O	O	B-P	I-P	O	B-C	O	O	O	B-P	O	O	B-C	O	O	O	B-P	I-P	O
+f2	O	O	B-f1C	B-f2P	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f3	O	O	B-f1C	B-f2P	O	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f4	O	O	B-f1C	B-f2P	O	O	O	O	O	O	B-f3A	I-f3A	O	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f5	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	O	O	O	O	B-f2P	O	B-f3C	O	O	O	O	O	O
+c9	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	I-c2P	O	B-c3C	O	O	O	O	O	O	O	O	O
+c10	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	O	B-c3C	I-c3C	I-c3C	O
+===== 11991752 stmt4 =====
+WORD	We	hypothesized	that	tumor	cells	genetically	manipulated	with	the	EBV/lipoplex	may	be	used	as	a	tumor	vaccine	without	drug	selection	,	strongly	contributing	to	immunotherapy	of	patients	with	malignancies	.
+POSTAG	PRP	VBD	IN	NN	NNS	RB	VBN	IN	DT	NNP	MD	VB	VBN	IN	DT	NN	NN	IN	NN	NN	,	RB	VBG	TO	VB	IN	NNS	IN	NNS	.
+CAP	O	O	O	B-C	I-C	O	O	O	O	B-P	O	O	O	O	O	B-C	I-C	O	B-P	I-P	O	O	O	O	O	O	B-C	O	B-C	O
+f6	O	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f7	O	O	O	B-f1C	I-f1C	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+f8	O	O	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	B-f3A	O	B-f3C	O	O	O
+c11	O	O	O	B-c1C	I-c1C	B-c2P	I-c2P	I-c2P	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c12	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O
+c13	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	B-c1C	B-c2P	B-c3C	O
+===== 11991752 stmt5 =====
+WORD	The	cytokines	interleukin	(IL)-12	and	IL-18	exert	a	variety	of	immune-regulatory	functions	including	interferon	(IFN)-gamma	production	and	cytotoxic	T	lymphocyte	and	natural	killer	activation	.
+POSTAG	DT	NNS	JJ	NN	CC	NNP	VBP	DT	NN	IN	JJ	NNS	VBG	JJ	JJ	NN	CC	NN	NNP	NN	CC	JJ	NN	NN	.
+CAP	O	B-C	B-C	I-C	O	B-C	O	O	B-A	O	B-C	I-C	O	B-P	I-P	I-P	O	B-C	I-C	I-C	O	B-C	I-C	B-A	O
+f9	O	B-f1C	I-f1C	O	O	O	B-f2P	O	O	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+f10	O	O	O	B-f1C	O	O	B-f2P	O	O	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+f11	O	O	O	O	O	B-f1C	B-f2P	O	O	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+c14	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	B-c3A	O	O	O	O	O	O	O	O	O
+c15	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	O	O	O	O	B-c3C	I-c3C	I-c3C	O	O	O	O	O
+c16	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	O	O	O	O	O	O	O	O	B-c3C	I-c3C	B-c3A	O
+===== 11991752 stmt6 =====
+WORD	Here	,	we	investigated	the	possible	therapeutic	effects	of	an	autologous	tumor	cell	vaccine	in	the	B16	melanoma	model	.
+POSTAG	RB	,	PRP	VBD	DT	JJ	JJ	NNS	IN	DT	JJ	NN	NN	NN	IN	DT	NNP	NN	NN	.
+CAP	O	O	O	O	O	B-P	I-P	I-P	O	O	B-P	I-P	I-P	I-P	O	O	B-P	I-P	I-P	O
+f12	O	O	O	B-f2P	O	B-f3A	I-f3A	I-f3A	O	O	B-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O
+c17	O	O	O	O	O	B-c1A	I-c1A	I-c1A	O	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	O	B-c3C	I-c3C	I-c3C	O
+===== 11991752 stmt7 =====
+WORD	The	vaccine	was	engineered	to	secrete	IL-12	and	IL-18	by	means	of	the	EBV/lipoplex	.
+POSTAG	DT	NN	VBD	VBN	TO	VB	NNP	CC	NNP	IN	NNS	IN	DT	NNP	.
+CAP	O	B-C	O	O	O	O	B-C	O	B-C	O	B-A	O	O	B-P	O
+f13	O	B-f1C	B-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O
+f14	O	B-f1C	B-f2P	I-f2P	I-f2P	O	O	O	B-f3C	O	O	O	O	O	O
+c18	O	O	O	O	O	O	O	O	B-c1C	B-c2P	I-c2P	I-c2P	O	B-c3C	O
+===== 11991752 stmt8 =====
+WORD	B16	cells	were	subcutaneously	implanted	into	syngenic	mice	followed	by	repetitive	immunization	with	irradiated	B16	cells	that	had	been	transfected	3	days	earlier	by	TFL2-3	,	a	novel	cationic	lipid	,	with	EBV-plasmid	vectors	encoding	IL-12	and/or	IL-18	genes	.
+POSTAG	NNP	NNS	VBD	RB	VBN	IN	JJ	NN	VBN	IN	JJ	NN	IN	JJ	NNP	NNS	WDT	VBD	VBN	VBN	CD	NNS	RB	IN	NNP	,	DT	JJ	JJ	NN	,	IN	JJ	NNS	VBG	JJ	JJ	NNP	NNS	.
+CAP	B-C	I-C	O	O	O	O	B-P	I-P	O	O	B-P	I-P	O	B-P	I-P	I-P	O	O	O	O	O	B-C	O	O	B-P	O	O	B-P	I-P	I-P	O	O	B-P	I-P	O	B-P	I-P	I-P	I-P	O
+f15	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f16	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	O	O	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O
+c19	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	I-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c20	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c21	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	O	B-c2P	I-c2P	I-c2P	I-c2P	I-c2P	I-c2P	I-c2P	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c22	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	O	O	O	O	O	O	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O
+c23	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	O	O	O	O	O	O	O	O	O	B-c2P	B-c3C	O	O	O	O
+c24	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	O	O	O	O	O	O	O	O	O	B-c2P	O	O	B-c3C	I-c3C	O
+===== 11991752 stmt9 =====
+WORD	The	mice	vaccinated	with	B16/mIL-12	underwent	strong	tumor	suppression	accompanied	by	a	high	IFN-gamma	production	.
+POSTAG	DT	NN	VBD	IN	NNP	NN	JJ	NN	NN	VBN	IN	DT	JJ	JJ	NN	.
+CAP	O	B-C	O	O	B-P	I-P	I-P	I-P	I-P	O	O	O	B-P	I-P	I-P	O
+f17	O	B-f1C	O	O	O	B-f2P	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O
+c25	O	B-c1C	B-c2P	I-c2P	B-c3C	O	O	O	O	O	O	O	O	O	O	O
+c26	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	I-c2P	O	B-c3C	I-c3C	B-c3A	O
+===== 11991752 stmt10 =====
+WORD	Both	CTL	and	NK	activities	were	significantly	elevated	in	these	mice	.
+POSTAG	DT	NNP	CC	NNP	NNS	VBD	RB	VBN	IN	DT	NNS	.
+CAP	O	B-C	O	B-P	I-P	O	O	O	O	O	B-C	O
+f18	O	B-f1C	O	O	B-f1A	B-f2P	I-f2P	I-f2P	I-f2P	O	B-f3C	O
+f19	O	O	O	B-f1C	B-f1A	B-f2P	I-f2P	I-f2P	I-f2P	O	B-f3C	O
+===== 11991752 stmt11 =====
+WORD	When	the	tumor	cell	vaccine	was	prepared	by	means	of	conventional	plasmid	vectors	combined	with	the	same	cationic	lipid	,	the	therapeutic	outcome	was	not	as	good	,	suggesting	the	superiority	of	the	EBV-based	plasmid	in	engineering	these	types	of	tumor	vaccines	.
+POSTAG	WRB	DT	NN	NN	NN	VBD	VBN	IN	NNS	IN	JJ	NN	NNS	VBN	IN	DT	JJ	JJ	NN	,	DT	JJ	NN	VBD	RB	RB	JJ	,	VBG	DT	NN	IN	DT	JJ	NN	IN	NN	DT	NNS	IN	NN	NNS	.
+CAP	O	O	B-P	I-P	I-P	O	O	O	B-A	O	B-C	I-C	I-C	O	O	O	B-P	I-P	I-P	O	O	B-P	I-P	O	O	O	O	O	O	O	B-P	O	O	B-P	I-P	O	B-C	O	B-A	O	B-C	I-C	O
+f20	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f21	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	O	O	O	O	O	B-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f22	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1A	O	O	B-f1C	I-f1C	O	B-f2P	O	O	O	B-f3C	I-f3C	O
+c27	O	O	B-c1C	I-c1C	I-c1C	B-c2P	I-c2P	I-c2P	I-c2P	I-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c28	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	I-c2P	O	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 11991752 stmt12 =====
+WORD	vaccination	with	B16/mIL-18	was	not	effective	in	suppressing	tumors	,	whereas	B16/mIL-12+mIL-18	showed	comparable	antitumor	therapeutic	validity	as	B16/mIL-12	did	.
+POSTAG	NN	IN	NNP	VBD	RB	JJ	IN	VBG	NNS	,	IN	NNP	VBD	JJ	NN	JJ	NN	IN	NNP	VBD	.
+CAP	B-A	O	B-P	O	O	O	O	O	B-C	O	O	B-P	O	B-P	I-P	I-P	I-P	O	B-P	O	O
+f23	B-f1C	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O
+f24	O	O	O	O	O	O	O	O	O	O	O	B-f1C	B-f2P	O	B-f3C	I-f3C	I-f3C	O	O	O	O
+c29	B-c1C	B-c2P	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c30	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	I-c2P	I-c2P	O
+===== 11991752 stmt13 =====
+WORD	When	IFN-gamma	mutant	mice	were	treated	,	B16/mIL-12	vaccine	did	not	show	any	therapeutic	activity	,	suggesting	the	necessity	of	IFN-gamma	in	the	anti-melanoma	immune	responses	.
+POSTAG	WRB	NNP	NN	NN	VBD	VBN	,	NNP	NN	VBD	RB	VB	DT	JJ	NN	,	VBG	DT	NN	IN	NNP	IN	DT	JJ	NN	NNS	.
+CAP	O	B-P	I-P	I-P	O	O	O	B-P	I-P	O	O	O	O	B-P	I-P	O	O	O	B-A	O	B-C	O	O	B-P	I-P	I-P	O
+f25	O	O	O	O	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O
+f26	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1A	O	B-f1C	B-f2P	O	B-f3C	I-f3C	I-f3C	O
+c31	O	B-c1C	I-c1C	I-c1C	B-c2P	I-c2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 11991752 stmt14 =====
+WORD	In	contrast	,	the	antitumor	effect	was	not	affected	by	NK	depletion	in	mice	that	received	repetitive	injections	with	anti-asialo	GM1	antibody	.
+POSTAG	IN	NN	,	DT	NN	NN	VBD	RB	VBN	IN	NNP	NN	IN	NN	IN	VBD	JJ	NNS	IN	JJ	NNP	NN	.
+CAP	O	B-C	O	O	B-C	I-C	O	O	O	O	B-P	I-P	O	B-C	O	O	B-P	I-P	O	B-P	I-P	I-P	O
+f27	O	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	B-f3C	B-f3A	O	O	O	O	O	O	O	O	O	O	O
+c32	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c1A	B-c2P	B-c3C	O	O	O	O	O	O	O	O	O
+c33	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	O	B-c2P	B-c3C	I-c3C	O	O	O	O	O
+c34	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O
+===== 11991752 stmt15 =====
+WORD	Furthermore	,	vaccination	with	B16/mIL-12	significantly	suppressed	pulmonary	metastases	in	mice	that	had	been	intravenously	injected	with	parental	B16	.
+POSTAG	RB	,	NN	IN	NNP	RB	VBD	JJ	NNS	IN	NN	WDT	VBD	VBN	RB	VBN	IN	JJ	NNP	.
+CAP	O	O	B-A	O	B-P	O	O	B-C	I-C	O	B-C	O	O	O	O	O	O	B-P	I-P	O
+f28	O	O	B-f1C	O	O	B-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O
+c35	O	O	B-c1C	B-c2P	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c36	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	O	O	O	O	O	O	O	O	O
+c37	O	O	O	O	O	O	O	O	O	O	B-c1C	O	B-c2P	I-c2P	I-c2P	I-c2P	I-c2P	B-c3C	I-c3C	O
+===== 11991752 stmt16 =====
+WORD	Our	results	suggest	that	the	EBV/lipoplex	is	quite	useful	in	generating	an	autologous	tumor	cell	vaccine	and	that	IL-12	is	an	important	component	of	the	vaccine	.
+POSTAG	PRP$	NNS	VBP	IN	DT	NNP	VBZ	RB	JJ	IN	VBG	DT	JJ	NN	NN	NN	CC	IN	NNP	VBZ	DT	JJ	NN	IN	DT	NN	.
+CAP	O	B-C	O	O	O	B-P	O	O	O	O	O	O	B-P	I-P	I-P	I-P	O	O	B-C	O	O	B-P	I-P	O	O	B-C	O
+f29	O	B-f1A	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f30	O	O	O	O	O	B-f1C	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O	B-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O
+f31	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	B-f2P	O	B-f3A	I-f3A	O	O	B-f3C	O
+===== 12027387 stmt1 =====
+WORD	Calcium	influx	into	dendrites	of	the	leech	retzius	neuron	evoked	by	5-hydroxytryptamine	.
+POSTAG	NN	NN	IN	NNS	IN	DT	JJ	NN	NN	VBN	IN	JJ	.
+CAP	B-P	I-P	O	B-C	O	O	B-P	I-P	I-P	O	O	O	O
+c1	B-c1C	I-c1C	B-c2P	B-c3A	O	O	B-c3C	I-c3C	I-c3C	O	O	O	O
+c2	O	O	O	B-c1A	O	O	B-c1C	I-c1C	I-c1C	B-c2P	I-c2P	B-c3C	O
+===== 12027387 stmt2 =====
+WORD	5-Hydroxytryptamine	is	a	ubiquitous	neurotransmitter	and	neuromodulator	that	affects	neural	circuits	and	behaviours	in	vertebrates	and	invertebrates	.
+POSTAG	JJ	VBZ	DT	JJ	NN	CC	NN	WDT	VBZ	JJ	NNS	CC	NNS	IN	NNS	CC	NNS	.
+CAP	O	O	O	B-P	I-P	O	B-P	O	O	B-C	I-C	O	B-P	O	B-C	O	B-C	O
+f1	B-f1C	B-f2P	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+f2	B-f1C	B-f2P	O	O	O	O	B-f3C	O	O	O	O	O	O	O	O	O	O	O
+c3	O	O	O	O	O	O	B-c1C	O	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O
+c4	O	O	O	O	O	O	B-c1C	O	B-c2P	O	O	O	B-c3C	O	O	O	O	O
+c5	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	B-c3C	O	O	O
+c6	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	O	O	B-c3C	O
+===== 12027387 stmt3 =====
+WORD	In	the	present	study	,	we	have	investigated	5-HT-induced	Ca(2+)	transients	in	subcellular	compartments	of	Retzius	neurons	in	the	leech	central	nervous	system	using	confocal	laser	scanning	microscopy	,	and	studied	the	effect	of	5-HT	on	the	electrical	coupling	between	the	Retzius	neurons	.
+POSTAG	IN	DT	JJ	NN	,	PRP	VBP	VBN	JJ	NNP	NNS	IN	JJ	NNS	IN	NNP	NNS	IN	DT	JJ	JJ	JJ	NN	VBG	JJ	NN	VBG	NN	,	CC	VBD	DT	NN	IN	JJ	IN	DT	JJ	NN	IN	DT	NNP	NNS	.
+CAP	O	O	B-C	I-C	O	O	O	O	O	O	O	O	B-A	I-A	O	B-C	I-C	O	O	O	B-C	I-C	I-C	O	B-C	I-C	I-C	I-C	O	O	O	O	B-C	O	O	O	O	B-P	I-P	O	O	B-C	I-C	O
+f3	O	O	O	O	O	O	B-f2P	I-f2P	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f4	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	O	B-f3A	O	B-f3C	O	O	O	O	O	O	O	O	O
+c7	B-c2P	O	B-c3A	I-c3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c8	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	B-c3A	I-c3A	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c9	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	O	O	O	O	O	O	B-c2P	O	B-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c10	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c11	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	B-c1C	B-c2P	O	B-c3C	I-c3C	O	O	O	O	O
+c12	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	O	B-c3C	I-c3C	O
+===== 12027387 stmt4 =====
+WORD	Bath	application	of	5-HT	induced	a	Ca(2+)	transient	in	axon	,	dendrites	and	cell	body	of	the	Retzius	neuron	.
+POSTAG	NNP	NN	IN	NNP	VBD	DT	NNP	NN	IN	NN	,	NNS	CC	NN	NN	IN	DT	NNP	NN	.
+CAP	B-P	I-P	O	O	O	O	B-P	I-P	O	B-P	O	B-C	O	B-P	I-P	O	O	B-P	I-P	O
+f5	B-f1A	I-f1A	O	B-f1C	B-f2P	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O
+f6	B-f1A	I-f1A	O	B-f1C	B-f2P	O	O	O	O	O	O	B-f3C	O	O	O	O	O	O	O	O
+f7	B-f1A	I-f1A	O	B-f1C	B-f2P	O	O	O	O	O	O	O	O	B-f3A	I-f3A	O	O	B-f3C	I-f3C	O
+c13	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	O	O	O	O	O	O	O	O	O	O
+===== 12027387 stmt5 =====
+WORD	This	Ca(2+)	transient	was	significantly	faster	and	larger	in	dendrites	than	in	axon	and	cell	body	,	and	was	half-maximal	at	a	5-HT	concentration	of	5-12mM	.
+POSTAG	DT	NNP	NN	VBD	RB	RBR	CC	JJR	IN	NNS	IN	IN	NN	CC	NN	NN	,	CC	VBD	JJ	IN	DT	JJ	NN	IN	JJ	.
+CAP	O	B-P	I-P	O	O	O	O	O	O	B-C	O	O	B-P	O	B-P	I-P	O	O	O	O	O	O	O	O	O	O	O
+f8	O	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f9	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O	B-f3C	I-f3C	O	B-f3A	O
+c14	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c15	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	O	O	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O
+===== 12027387 stmt6 =====
+WORD	The	Ca(2+)	transient	was	suppressed	in	the	absence	of	extracellular	Ca(2+)	and	by	methysergide	,	a	non-specific	antagonist	of	metabotropic	5-HT	receptors	,	and	was	strongly	reduced	by	bath	application	of	the	Ca(2+)	channel	blocker	Co(2+)	.
+POSTAG	DT	NNP	NN	VBD	VBN	IN	DT	NN	IN	JJ	NNP	CC	IN	NN	,	DT	JJ	NN	IN	JJ	JJ	NNS	,	CC	VBD	RB	VBN	IN	NN	NN	IN	DT	NNP	NN	NN	NNP	.
+CAP	O	B-P	I-P	O	O	O	O	B-A	O	B-C	I-C	O	O	B-P	O	O	B-A	I-A	O	B-C	I-C	I-C	O	O	O	O	O	O	B-P	I-P	O	O	B-P	I-P	I-P	I-P	O
+f10	O	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	O	B-f3A	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f11	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	B-f3A	I-f3A	O	O	B-f3C	I-f3C	I-f3C	I-f3C	O
+f12	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	O	O	B-f3A	I-f3A	O	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c16	O	B-c1C	I-c1C	O	O	O	O	O	O	O	O	O	B-c2P	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 12027387 stmt7 =====
+WORD	Injection	of	the	non-hydrolysable	GTP	analogue	GTPgammaS	increased	and	prolonged	the	dendritic	5-HT-induced	Ca(2+)	transient	.
+POSTAG	NN	IN	DT	JJ	NNP	NN	NNP	VBD	CC	VBD	DT	JJ	JJ	NNP	NN	.
+CAP	B-P	O	O	B-P	I-P	I-P	I-P	O	O	O	O	B-P	I-P	I-P	I-P	O
+f13	B-f1A	O	O	B-f1C	I-f1C	I-f1C	I-f1C	B-f2P	O	O	O	B-f3C	I-f3C	I-f3C	I-f3C	O
+f14	B-f1A	O	O	B-f1C	I-f1C	I-f1C	I-f1C	O	O	B-f2P	O	B-f3C	I-f3C	I-f3C	I-f3C	O
+===== 12027387 stmt8 =====
+WORD	The	non-selective	protein	kinase	inhibitor	H7	and	the	adenylate	cyclase	inhibitor	SQ22536	did	not	affect	the	Ca(2+)	transient	,	and	the	membrane-permeable	cAMP	analogue	dibutyryl-cAMP	did	not	mimic	the	effect	of	5-HT	application	.
+POSTAG	DT	JJ	NN	NN	NN	NNP	CC	DT	JJ	NN	NN	NNP	VBD	RB	VB	DT	NNP	NN	,	CC	DT	JJ	NN	NN	NN	VBD	RB	VB	DT	NN	IN	JJ	NN	.
+CAP	O	O	B-C	I-C	B-P	I-P	O	O	B-P	I-P	I-P	I-P	O	O	O	O	B-P	I-P	O	O	O	B-P	I-P	I-P	I-P	O	O	O	O	B-C	O	O	O	O
+f15	O	B-f1C	I-f1C	I-f1C	I-f1C	I-f1C	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f16	O	O	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f17	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	O	B-f3A	O	B-f3C	I-f3C	O
+===== 12027387 stmt9 =====
+WORD	5-HT	reduced	the	apparent	electrical	coupling	between	the	two	Retzius	neurons	,	whereas	suppression	of	the	Ca(2+)	influx	by	removal	of	external	Ca(2+)	improved	the	transmission	of	action	potentials	at	the	electrical	synapses	which	are	located	between	the	dendrites	of	the	adjacent	Retzius	neurons	.
+POSTAG	JJ	VBD	DT	JJ	JJ	NN	IN	DT	CD	NNP	NNS	,	JJ	NN	IN	DT	NNP	NN	IN	NN	IN	JJ	NNP	VBD	DT	NN	IN	NN	NNS	IN	DT	JJ	NNS	WDT	VBP	VBN	IN	DT	NNS	IN	DT	JJ	NNP	NNS	.
+CAP	O	O	O	B-P	I-P	I-P	O	O	O	B-C	I-C	O	B-P	I-P	O	O	B-C	I-C	O	B-A	O	B-C	I-C	O	O	B-A	O	B-C	I-C	O	O	B-P	I-P	O	O	O	O	O	B-C	O	O	B-P	I-P	I-P	O
+f18	B-f1C	B-f2P	O	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f19	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1A	O	O	B-f1C	I-f1C	O	O	O	O	O	B-f2P	O	B-f3A	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c17	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	O	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c18	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	O	B-c1C	I-c1C	B-c2P	B-c3A	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c19	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	B-c1C	I-c1C	B-c2P	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O
+c20	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	O	B-c2P	I-c2P	I-c2P	O	B-c3A	O	O	B-c3C	I-c3C	I-c3C	O
+===== 12027387 stmt10 =====
+WORD	The	results	indicate	that	5-HT	induces	a	Ca(2+)	influx	through	calcium	channels	located	primarily	in	the	dendrites	,	and	presumably	activated	by	a	G	protein-coupled	5-HT	receptor	.
+POSTAG	DT	NNS	VBP	IN	JJ	NNS	DT	NNP	NN	IN	NN	NNS	VBN	RB	IN	DT	NNS	,	CC	RB	VBN	IN	DT	NNP	JJ	JJ	NN	.
+CAP	O	B-C	O	O	O	O	O	B-C	I-C	O	B-C	I-C	O	O	O	O	B-C	O	O	O	O	O	O	B-P	I-P	I-P	I-P	O
+f20	O	B-f1A	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f21	O	O	O	O	B-f1C	B-f2P	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c21	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c22	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	I-c2P	I-c2P	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O
+c23	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	O	O	O	O	O	O	O	B-c2P	I-c2P	I-c2P	O	B-c3C	I-c3C	I-c3C	I-c3C	O
+===== 12027387 stmt11 =====
+WORD	The	dendritic	Ca(2+)	increase	appears	to	modulate	the	excitability	of	,	and	the	synchronization	between	,	the	two	Retzius	neurons	.
+POSTAG	DT	JJ	NNP	NN	VBZ	TO	VB	DT	NN	IN	,	CC	DT	NN	IN	,	DT	CD	NNP	NNS	.
+CAP	O	B-P	I-P	I-P	O	O	O	O	B-P	O	O	O	O	B-P	O	O	O	O	B-C	I-C	O
+f22	O	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	O	B-f3A	O	O	O	O	O	O	O	O	O	O	O	O
+f23	O	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	O	O	O	O	O	O	B-f3C	O	O	O	O	O	O	O
+c24	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	O	O	B-c3A	B-c3C	I-c3C	O
+===== 12064555 stmt1 =====
+WORD	Association	of	low	job	control	with	a	decrease	in	memory	t	lymphocytes	in	japanese	middle-aged	male	workers	in	an	electric	power	plant	.
+POSTAG	NNP	IN	JJ	NN	NN	IN	DT	NN	IN	NN	NN	VBZ	IN	JJ	JJ	JJ	NNS	IN	DT	JJ	NN	NN	.
+CAP	B-A	O	B-C	I-C	I-C	O	O	B-C	O	B-C	I-C	O	O	B-P	I-P	I-P	I-P	O	O	B-P	I-P	I-P	O
+c1	B-c1A	O	B-c1C	I-c1C	I-c1C	B-c2P	O	B-c3A	O	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O
+c2	O	O	O	O	O	O	O	B-c1A	O	B-c1C	I-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O
+c3	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	O	B-c3C	I-c3C	I-c3C	O
+===== 12064555 stmt2 =====
+WORD	To	clarify	the	relationship	between	perceived	job	stress	and	lymphocyte	subpopulations	,	a	cross-sectional	study	was	conducted	in	231	male	electric	power	plant	workers	.
+POSTAG	TO	VB	DT	NN	IN	VBN	NN	NN	CC	NN	NNS	,	DT	JJ	NN	VBD	VBN	IN	CD	NN	JJ	NN	NN	NNS	.
+CAP	O	O	O	B-C	O	O	B-P	I-P	O	B-C	I-C	O	O	B-P	I-P	O	O	O	O	B-P	I-P	I-P	I-P	I-P	O
+f1	B-f2P	I-f2P	O	B-f3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f2	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	B-f3C	I-f3C	I-f3C	I-f3C	I-f3C	I-f3C	O
+c4	O	O	O	B-c1A	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c5	O	O	O	B-c1A	B-c2P	O	O	O	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 12064555 stmt3 =====
+WORD	Job	stress	,	i.e.	,	job	control	,	job	demands	,	and	social	support	at	work	,	was	assessed	by	means	of	the	Japanese	version	of	the	Job	Content	Questionnaire	.
+POSTAG	NNP	NN	,	IN	,	NN	NN	,	NN	NNS	,	CC	JJ	NN	IN	NN	,	VBD	VBN	IN	NNS	IN	DT	JJ	NN	IN	DT	NNP	NNP	NNP	.
+CAP	B-P	I-P	O	O	O	B-P	I-P	O	B-P	I-P	O	O	B-C	I-C	O	B-C	O	O	O	O	B-P	O	O	B-P	I-P	O	O	B-P	I-P	I-P	O
+f3	B-f1C	I-f1C	O	B-f2P	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f4	B-f1C	I-f1C	O	B-f2P	O	O	O	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f5	B-f1C	I-f1C	O	B-f2P	O	O	O	O	O	O	O	O	B-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f6	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O	B-f3A	I-f3A	O	O	B-f3C	I-f3C	I-f3C	O
+===== 12064555 stmt4 =====
+WORD	Blood	samples	were	taken	from	all	the	workers	,	and	numbers	of	CD4+	T	lymphocyte	subpopulations	,	total	CD4+	T	,	T	lymphocytes	,	CD16CD56+	natural	killer	cells	,	total	lymphocytes	,	and	white	blood	cells	were	determined	.
+POSTAG	NN	NNS	VBD	VBN	IN	PDT	DT	NNS	,	CC	NNS	IN	NNP	NNP	NN	NNS	,	JJ	NNP	NNP	,	NNP	NNS	,	NNP	JJ	NN	NNS	,	JJ	NNS	,	CC	JJ	NN	NNS	VBD	VBN	.
+CAP	B-P	I-P	O	O	O	O	O	B-C	O	O	B-A	O	B-C	I-C	I-C	B-A	O	B-C	I-C	I-C	O	B-C	I-C	O	B-P	B-C	I-C	I-C	O	B-C	I-C	O	O	B-C	I-C	I-C	O	O	O
+f7	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	O	O	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f8	O	O	O	O	O	O	O	O	O	O	B-f1A	O	B-f1C	I-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	O
+f9	O	O	O	O	O	O	O	O	O	O	B-f1A	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	O
+f10	O	O	O	O	O	O	O	O	O	O	B-f1A	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	O
+f11	O	O	O	O	O	O	O	O	O	O	B-f1A	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	B-f2P	I-f2P	O
+f12	O	O	O	O	O	O	O	O	O	O	B-f1A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	O	O	O	O	O	B-f2P	I-f2P	O
+f13	O	O	O	O	O	O	O	O	O	O	B-f1A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	O
+===== 12064555 stmt5 =====
+WORD	After	controlling	for	age	,	number	of	cigarettes	smoked	per	day	,	alcohol	drinking	,	frequency	of	regular	exercise	,	job	demands	,	and	social	support	at	work	by	the	partial	correlation	coefficients	,	numbers	of	memory	T	,	total	CD4+	T	,	and	total	T	lymphocytes	were	positively	correlated	with	job	control	.
+POSTAG	IN	VBG	IN	NN	,	NN	IN	NNS	VBN	IN	NN	,	NN	NN	,	NN	IN	JJ	NN	,	NN	NNS	,	CC	JJ	NN	IN	NN	IN	DT	JJ	NN	NNS	,	NNS	IN	NN	NNP	,	JJ	NNP	NNP	,	CC	JJ	NNP	VBZ	VBD	RB	VBN	IN	NN	NN	.
+CAP	O	O	O	B-C	O	B-A	O	B-C	O	O	B-C	O	B-P	I-P	O	B-A	O	B-C	I-C	O	B-P	I-P	O	O	B-C	I-C	O	B-C	O	O	B-P	I-P	I-P	O	B-A	O	B-C	I-C	O	B-C	I-C	I-C	O	O	B-C	I-C	O	O	O	O	O	B-P	I-P	O
+f14	O	O	O	O	O	B-f1A	O	B-f1C	I-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O
+f15	O	O	O	O	O	B-f1A	O	O	O	O	O	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O
+f16	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1A	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O
+f17	O	O	O	O	O	B-f1A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O
+f18	O	O	O	O	O	B-f1A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O
+f19	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1A	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O
+f20	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1A	O	O	O	O	B-f1C	I-f1C	I-f1C	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O
+f21	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1A	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O
+c6	B-c2P	I-c2P	I-c2P	B-c3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c7	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	O	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 12064555 stmt6 =====
+WORD	Neither	job	demands	nor	social	support	at	work	showed	significant	correlations	with	lymphocyte	subpopulations	.
+POSTAG	DT	NN	NNS	CC	JJ	NN	IN	NN	VBD	JJ	NNS	IN	JJ	NNS	.
+CAP	O	B-P	I-P	O	B-C	I-C	O	B-C	O	B-C	I-C	O	B-C	I-C	O
+f22	O	B-f1C	I-f1C	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	B-f3C	B-f3A	O
+f23	O	O	O	O	B-f1C	I-f1C	O	O	B-f2P	I-f2P	I-f2P	I-f2P	B-f3C	B-f3A	O
+c8	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O
+c9	O	O	O	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O
+c10	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3A	O	O	O	O	O	O	O
+===== 12064555 stmt7 =====
+WORD	It	is	suggested	that	lower	job	control	is	associated	with	a	decrease	in	the	number	of	CD4+	CD45RO+	T	lymphocytes	in	male	middle-aged	workers	.
+POSTAG	PRP	VBZ	VBN	IN	JJR	NN	NN	VBZ	VBN	IN	DT	NN	IN	DT	NN	IN	NNP	NNP	NNP	VBZ	IN	JJ	JJ	NNS	.
+CAP	O	O	O	O	O	B-P	I-P	O	O	O	O	B-A	O	O	B-A	O	B-C	I-C	I-C	O	O	B-P	I-P	I-P	O
+f24	O	B-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f25	O	O	O	O	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	O	B-f3A	O	O	O	O	O	O	O	O	O	O	O	O	O
+c11	O	O	O	O	O	O	O	O	O	O	O	B-c1A	B-c2P	O	B-c3A	O	B-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O
+c12	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O
+===== 15498271 stmt1 =====
+WORD	[	The	significance	of	cell	cycle	distribution	and	expression	of	cell	cycle	regulatory	proteins	in	t	lymphocytes	in	patients	with	acute	asthma	attack]	.
+POSTAG	(	DT	NN	IN	NN	NN	NN	CC	NN	IN	NN	NN	JJ	NNS	IN	NN	NNS	IN	NNS	IN	JJ	NN	)	.
+CAP	O	O	B-A	O	B-C	I-C	I-C	O	B-A	O	B-C	I-C	I-C	I-C	O	B-C	I-C	O	B-C	O	B-P	I-P	O	O
+c1	O	O	B-c1A	O	B-c1C	I-c1C	I-c1C	O	O	O	O	O	O	O	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O
+c2	O	O	O	O	O	O	O	O	B-c1A	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O
+c3	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	O	O	O	O	O
+c4	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O
+===== 15498271 stmt2 =====
+WORD	To	explore	the	molecular	regulatory	mechanisms	of	excessive	T	lymphocyte	activation	and	proliferation	in	patients	with	asthma	attack	by	studying	the	cell	cycle	distribution	and	the	expression	of	cell	cycle	regulatory	proteins	in	peripheral	blood	Tlymphocytes	.
+POSTAG	TO	VB	DT	JJ	JJ	NN	IN	JJ	NNP	NN	NN	CC	NN	IN	NNS	IN	JJ	NN	IN	VBG	DT	NN	NN	NN	CC	DT	NN	IN	NN	NN	JJ	NNS	IN	JJ	NN	NNS	.
+CAP	O	O	O	B-P	I-P	I-P	O	O	B-C	I-C	I-C	O	B-C	O	B-C	O	B-P	I-P	O	O	O	B-C	I-C	I-C	O	O	B-A	O	B-C	I-C	I-C	I-C	O	B-A	I-A	B-P	O
+f1	B-f2P	I-f2P	O	B-f3A	I-f3A	I-f3A	O	B-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f2	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c5	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c6	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	O	O	B-c2P	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c7	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	I-c2P	I-c2P	O	B-c3A	I-c3A	I-c3A	O	O	O	O	B-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O
+c8	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	I-c2P	I-c2P	O	O	O	O	O	O	B-c3A	O	B-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O
+c9	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O
+===== 15498271 stmt3 =====
+WORD	DNA	of	T	lymphocytes	from	30	patients	with	asthma	attack	and	20	normal	subjects	was	stained	with	propidium	iodide	,	and	the	cell	cycle	distribution	was	analyzed	by	flow	cytometry	.
+POSTAG	NN	IN	NNP	NNS	IN	CD	NNS	IN	JJ	NN	CC	CD	JJ	NNS	VBD	VBN	IN	NN	NN	,	CC	DT	NN	NN	NN	VBD	VBN	IN	JJ	NN	.
+CAP	B-C	O	B-C	I-C	O	O	B-C	O	B-P	I-P	O	O	B-C	I-C	O	O	O	B-C	I-C	O	O	O	B-C	I-C	I-C	O	O	O	B-C	I-C	O
+f3	B-f1A	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O
+f4	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O
+c10	B-c1A	O	B-c1C	I-c1C	B-c2P	B-c3A	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c11	O	O	O	O	O	B-c1A	B-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c12	O	O	O	O	O	B-c1A	B-c1C	B-c2P	O	O	O	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 15498271 stmt4 =====
+WORD	By	indirect	immunofluorescence	,	the	expressions	of	P27kipl	,	cyclin	E	,	cyclin	A	,	and	cyclin	B	in	T	lymphocytes	were	measured	by	flow	cytometry	.
+POSTAG	IN	JJ	NN	,	DT	NNS	IN	NNP	,	NN	NNP	,	NN	NNP	,	CC	NN	NNP	IN	NNP	NNS	VBD	VBN	IN	JJ	NN	.
+CAP	O	B-P	I-P	O	O	B-A	O	B-C	O	B-C	I-C	O	B-C	I-C	O	O	B-P	I-P	O	B-C	I-C	O	O	O	B-C	I-C	O
+f5	B-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f6	O	O	O	O	O	B-f1A	O	B-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O
+f7	O	O	O	O	O	B-f1A	O	O	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O
+f8	O	O	O	O	O	B-f1A	O	O	O	O	O	O	B-f1C	I-f1C	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O
+f9	O	O	O	O	O	B-f1A	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	O	O	O	B-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O
+c13	O	O	O	O	O	B-c1A	O	B-c1C	O	O	O	O	O	O	O	O	O	O	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O
+c14	O	O	O	O	O	B-c1A	O	O	O	B-c1C	I-c1C	O	O	O	O	O	O	O	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O
+c15	O	O	O	O	O	B-c1A	O	O	O	O	O	O	B-c1C	I-c1C	O	O	O	O	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O
+c16	O	O	O	O	O	B-c1A	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O
+===== 15498271 stmt5 =====
+WORD	The	difference	between	patients	with	asthma	attack	and	normal	subjects	wasanalyzed	.
+POSTAG	DT	NN	IN	NNS	IN	JJ	NN	CC	JJ	NNS	VBN	.
+CAP	O	B-C	O	B-C	O	B-P	I-P	O	B-C	I-C	O	O
+f10	O	B-f1A	O	O	O	O	O	O	O	O	B-f2P	O
+c17	O	B-c1A	B-c2P	B-c3C	O	O	O	O	O	O	O	O
+c18	O	B-c1A	B-c2P	O	O	O	O	O	B-c3C	I-c3C	O	O
+c19	O	O	O	B-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O	O
+===== 15498271 stmt6 =====
+WORD	The	percentage	of	T	lymphocytes	in	the	S	phase	and	S	+	G(2)	/	M	phase	was
+POSTAG	DT	NN	IN	NNP	NNS	IN	DT	NNP	NN	CC	NNP	NNP	NNP	NNP	NNP	NN	VBD
+CAP	O	B-C	O	B-C	I-C	O	O	B-P	I-P	O	B-P	I-P	I-P	I-P	I-P	I-P	O
+f11	O	B-f1A	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	B-f2P
+c20	O	B-c1A	O	B-c1C	I-c1C	B-c2P	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O
+c21	O	B-c1A	O	B-c1C	I-c1C	B-c2P	O	O	O	O	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O
+===== 15498271 stmt7 =====
+WORD	The	percentage	of	T	lymphocytes	in	the	G(0)	/	G(1)	phase	in	the	asthma	group	was
+POSTAG	DT	NN	IN	NNP	NNS	IN	DT	NNP	NNP	NNP	NN	IN	DT	NN	NN	VBD
+CAP	O	B-A	O	B-C	I-C	O	O	B-C	I-C	I-C	I-C	O	O	B-P	I-P	O
+f12	O	B-f1A	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	B-f2P
+c22	O	B-c1A	O	B-c1C	I-c1C	B-c2P	O	B-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O
+c23	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	O	B-c3C	I-c3C	O
+===== 15498271 stmt8 =====
+WORD	The	expression	of	P27kipl	in	T	lymphocytes	of	the	asthma	group
+POSTAG	DT	NN	IN	NNP	IN	NNP	NNS	IN	DT	NN	NN
+CAP	O	B-A	O	B-C	O	B-C	I-C	O	O	B-P	I-P
+c24	O	B-c1A	O	B-c1C	B-c2P	B-c3A	I-c3A	O	O	B-c3C	I-c3C
+===== 15498271 stmt9 =====
+WORD	The	expression	of	cyclin	E	,	cyclin	A	,	and	cyclin	B	in	T	lymphocytes	of	the	asthma	group	[	(25	+/-	24)%	,	.
+POSTAG	DT	NN	IN	NN	NNP	,	NN	NNP	,	CC	NN	NNP	IN	NNP	NNS	IN	DT	NN	NN	(	NNP	JJ	CD	,	.
+CAP	O	B-A	O	B-C	I-C	O	B-C	I-C	O	O	B-P	I-P	O	B-C	I-C	O	O	B-P	I-P	O	O	O	O	O	O
+c25	O	B-c1A	O	B-c1C	I-c1C	O	O	O	O	O	O	O	B-c2P	B-c3A	I-c3A	O	O	B-c3C	I-c3C	O	O	O	O	O	O
+c26	O	B-c1A	O	O	O	O	B-c1C	I-c1C	O	O	O	O	B-c2P	B-c3A	I-c3A	O	O	B-c3C	I-c3C	O	O	O	O	O	O
+c27	O	B-c1A	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3A	I-c3A	O	O	B-c3C	I-c3C	O	O	O	O	O	O
+===== 15498271 stmt10 =====
+WORD	The	abnormal	expression	of	CCRP	in	T	lymphocytes	was	related	to	the	excessive	activation	and	proliferation	of	T	lymphocytes	in	patients	with	asthma	attack	.
+POSTAG	DT	JJ	NN	IN	NNP	IN	NNP	NNS	VBD	VBN	TO	DT	JJ	NN	CC	NN	IN	NNP	NNS	IN	NNS	IN	JJ	NN	.
+CAP	O	B-A	I-A	O	B-C	O	B-A	I-A	O	O	O	O	B-P	I-P	O	B-A	O	B-A	I-A	O	B-C	O	B-P	I-P	O
+f13	O	B-f1A	I-f1A	O	B-f1C	O	O	O	O	O	O	O	B-f3A	I-f3A	O	O	O	B-f3C	I-f3C	O	O	O	O	O	O
+f14	O	B-f1A	I-f1A	O	B-f1C	O	O	O	O	O	O	O	O	O	O	B-f3A	O	B-f3C	I-f3C	O	O	O	O	O	O
+c28	O	B-c1A	I-c1A	O	B-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c29	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	I-c1A	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	O	O	O	O
+c30	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	B-c1C	I-c1C	B-c2P	B-c3C	O	O	O	O
+c31	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	B-c3C	I-c3C	O
+===== 15498271 stmt11 =====
+WORD	A	new	approach	to	asthma	therapy	may	be	developed	with	CCRP	as	a	regulatory	target	.
+POSTAG	DT	JJ	NN	TO	JJ	NN	MD	VB	VBN	IN	NNP	IN	DT	JJ	NN	.
+CAP	O	B-P	I-P	O	B-C	I-C	O	O	O	O	B-C	O	O	B-P	I-P	O
+f15	O	B-f1C	I-f1C	O	O	O	B-f2P	I-f2P	I-f2P	O	B-f3C	O	O	O	O	O
+c32	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O
+c33	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	O	B-c3C	I-c3C	O
+===== 15498306 stmt1 =====
+WORD	[	Effects	of	escharectomy	during	burn	shock	stage	on	the	mRNA	expression	of	iFN-gamma	and	iL-4	in	spleen	t	lymphocytes	in	rats	after	thermal	injury]	.
+POSTAG	(	NNS	IN	NN	IN	NN	NN	NN	IN	DT	JJ	NN	IN	JJ	CC	JJ	IN	JJ	NN	NNS	IN	NNS	IN	JJ	)	.
+CAP	O	B-A	O	B-C	O	B-P	I-P	I-P	O	O	B-C	I-C	O	O	O	O	O	O	B-A	I-A	O	B-C	O	O	O	O
+c1	O	B-c1A	O	B-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c2	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	O	B-c3A	I-c3A	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O
+c3	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	O	O	O	O	O	O	O	O	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O
+c4	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	B-c3C	O	O	O	O
+c5	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	B-c3C	I-c3C	O
+===== 15498306 stmt2 =====
+WORD	To	determine	the	serum	level	and	mRNA	expression	of	type-1/type-2	cytokines	of	T	lymphocytes	in	spleens	of	rats	after	thermal	injury	and	to	investigate	the	effects	of	escharectomy	during	burn	shock	stage	on	IFN-gamma	andIL-4	.
+POSTAG	TO	VB	DT	JJ	NN	CC	JJ	NN	IN	JJ	NNS	IN	NNP	NNS	IN	NNS	IN	NNS	IN	JJ	NN	CC	TO	VB	DT	NNS	IN	NN	IN	NN	NN	NN	IN	NNP	NN	.
+CAP	O	O	O	B-A	I-A	O	B-A	I-A	O	B-A	I-A	O	B-C	I-C	O	B-A	O	B-C	O	B-P	I-P	O	O	O	O	B-A	O	B-C	O	B-P	I-P	I-P	O	B-P	I-P	O
+f1	B-f2P	I-f2P	O	B-f3A	I-f3A	O	O	O	O	B-f3C	I-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f2	B-f2P	I-f2P	O	O	O	O	B-f3A	I-f3A	O	B-f3C	I-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f3	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	O	B-f3A	O	B-f3C	O	O	O	O	O	O	O	O
+c6	O	O	O	B-c1A	I-c1A	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	I-c1C	B-c2P	B-c3A	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c7	O	O	O	O	O	O	B-c1A	I-c1A	O	B-c1C	I-c1C	I-c1C	I-c1C	I-c1C	B-c2P	B-c3A	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c8	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	B-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c9	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	B-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O
+c10	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	B-c3C	I-c3C	O
+===== 15498306 stmt3 =====
+WORD	One	hundred	and	sixty	male	Wistar	rats	were	randomized	into	four	groups	.
+POSTAG	CD	CD	CC	VB	NN	NNP	NNS	VBD	VBN	IN	CD	NNS	.
+CAP	O	O	O	O	B-P	I-P	I-P	O	O	O	O	B-C	O
+f4	B-f1A	I-f1A	I-f1A	I-f1A	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	B-f3A	B-f3C	O
+===== 15498306 stmt4 =====
+WORD	In	group	A	,	animals	were	not	subjected	to	escharectomy	.
+POSTAG	IN	NN	NNP	,	NNS	VBD	RB	VBN	TO	VB	.
+CAP	O	B-C	I-C	O	B-C	O	O	O	O	O	O
+f5	O	O	O	O	B-f1C	B-f2P	I-f2P	I-f2P	I-f2P	B-f3C	O
+c11	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O
+===== 15498306 stmt5 =====
+WORD	In	groups	B	,	C	and	D	,	escharectomy	and	skin	allograft	were	performed	at	8	,	24	,	96	hours	postburn	respectively	.
+POSTAG	IN	NNS	NNP	,	NNP	CC	NNP	,	NN	CC	NN	NN	VBD	VBN	IN	CD	,	CD	,	CD	NNS	VBP	RB	.
+CAP	O	B-C	I-C	O	O	O	O	O	B-C	O	B-C	I-C	O	O	O	O	O	O	O	O	B-C	O	O	O
+f6	O	O	O	O	O	O	O	O	B-f1C	O	O	O	B-f2P	I-f2P	I-f2P	O	O	O	O	O	O	B-f3C	O	O
+f7	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	O	O	O	O	O	O	B-f3C	O	O
+c12	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c13	B-c2P	O	O	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c14	B-c2P	O	O	O	O	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 15498306 stmt6 =====
+WORD	At	4	,	12	,	24	,	48	,	96	,	120	and	168	hours	PB	,	animals	were	killed	and	blood	and	spleens	samples	were	harvested	.
+POSTAG	IN	CD	,	CD	,	CD	,	CD	,	CD	,	CD	CC	CD	NNS	NNP	,	NNS	VBD	VBN	CC	NN	CC	NNS	NNS	VBD	VBN	.
+CAP	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-P	I-P	O	B-C	O	O	O	B-C	O	B-P	I-P	O	O	O
+f8	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	B-f2P	I-f2P	O	O	O	O	O	O	O	O
+f9	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	O	O	O	B-f2P	I-f2P	O
+f10	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	O
+c15	B-c2P	B-c3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c16	B-c2P	O	O	B-c3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c17	B-c2P	O	O	O	O	B-c3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c18	B-c2P	O	O	O	O	O	O	B-c3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c19	B-c2P	O	O	O	O	O	O	O	O	B-c3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c20	B-c2P	O	O	O	O	O	O	O	O	O	O	B-c3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c21	B-c2P	O	O	O	O	O	O	O	O	O	O	O	O	B-c3A	I-c3A	I-c3A	O	O	O	O	O	O	O	O	O	O	O	O
+===== 15498306 stmt7 =====
+WORD	ELISA	was	applied	to	determine	the	concentration	of	IFN-gamma	and	IL-4	in	serum	.
+POSTAG	NNP	VBD	VBN	TO	VB	DT	NN	IN	NNP	CC	NNP	IN	NN	.
+CAP	B-C	O	O	O	O	O	B-A	O	B-C	O	B-C	O	B-C	O
+f11	B-f1C	B-f2P	I-f2P	I-f2P	O	O	B-f3A	O	B-f3C	O	O	O	O	O
+f12	B-f1C	B-f2P	I-f2P	I-f2P	O	O	B-f3A	O	O	O	B-f3C	I-f3C	I-f3C	O
+===== 15498306 stmt8 =====
+WORD	The	expression	pattern	of	IFN-gamma	and	IL-4	were	observed	at	mRNA	level	in	T	lymphocytes	isolated	from	spleen	byRT-PCR	.
+POSTAG	DT	NN	NN	IN	NNP	CC	NNP	VBD	VBN	IN	JJ	NN	IN	NNP	NNS	VBD	IN	JJ	NN	.
+CAP	O	B-A	I-A	O	B-C	O	B-C	O	O	O	B-P	I-P	O	B-C	I-C	O	O	B-P	I-P	O
+f13	O	B-f1A	I-f1A	O	B-f1C	O	O	B-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O
+c22	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O	O
+c23	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	I-c2P	B-c3C	I-c3C	O
+===== 15498306 stmt9 =====
+WORD	The	serum	level	of	IFN-gamma	and	IL-4	rose	rapidly	and	significantly	after	scald	injury	,	expression	of	IFN-gamma	and	IL-4	mRNA	in	rats'	T	lymphocyte	were	also	up-regulated	spontaneously	.
+POSTAG	DT	JJ	NN	IN	NNP	CC	NNP	VBD	RB	CC	RB	IN	JJ	NN	,	NN	IN	NNP	CC	NNP	NN	IN	NN	NNP	NN	VBD	RB	JJ	RB	.
+CAP	O	B-A	I-A	O	B-C	O	B-C	O	O	O	O	O	B-P	I-P	O	B-A	O	B-C	O	B-C	I-C	O	B-P	B-C	I-C	O	O	O	O	O
+f14	O	B-f1A	I-f1A	O	B-f1C	O	O	B-f2P	I-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f15	O	B-f1A	I-f1A	O	O	O	B-f1C	B-f2P	I-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f16	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1A	O	B-f1C	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	O
+f17	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1A	O	O	O	B-f1C	I-f1C	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	O
+c24	O	O	O	O	O	O	O	O	O	O	O	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c25	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	B-c1C	O	O	O	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O
+c26	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O
+===== 15498306 stmt10 =====
+WORD	The	serum	level	of	IFN-gamma	and	its	mRNA	expression	began	to	rise	within	4	hours	PB	,	peaking	at	24	hours	PB	.
+POSTAG	DT	JJ	NN	IN	NNP	CC	PRP$	JJ	NN	VBD	TO	VB	IN	CD	NNS	NNP	,	VBG	IN	CD	NNS	NNP	.
+CAP	O	B-A	I-A	O	B-C	O	O	B-A	I-A	O	O	O	O	O	B-P	I-P	O	O	O	O	B-P	I-P	O
+f18	O	B-f1A	I-f1A	O	B-f1C	O	O	O	O	B-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O
+f19	O	B-f1A	I-f1A	O	B-f1C	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	B-f3A	I-f3A	B-f3C	O
+f20	O	O	O	O	B-f1C	O	O	B-f1A	I-f1A	B-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O
+c27	O	O	O	O	O	O	O	O	O	O	O	O	B-c2P	B-c3A	I-c3A	B-c3C	O	O	O	O	O	O	O
+===== 15498306 stmt11 =====
+WORD	Whereas	IL-4	and	its	mRNA	expression	showed	a	persistent	elevation	.
+POSTAG	IN	NNP	CC	PRP$	NN	NN	VBD	DT	JJ	NN	.
+CAP	O	B-C	O	O	B-C	I-C	O	O	B-P	I-P	O
+f21	O	B-f1C	O	O	B-f1A	I-f1A	B-f2P	O	B-f3C	I-f3C	O
+f22	O	B-f1C	O	O	O	O	B-f2P	O	B-f3C	I-f3C	O
+===== 15498306 stmt12 =====
+WORD	Thereby	leading	to	a	dominant	tendency	of	Th2	cytokine	response	on	7	d	PB	.
+POSTAG	RB	VBG	TO	DT	JJ	NN	IN	NNP	NN	NN	IN	CD	NN	NNP	.
+CAP	O	O	O	O	B-A	I-A	O	B-C	I-C	I-C	O	O	B-P	I-P	O
+f23	B-f2P	I-f2P	I-f2P	O	B-f3A	I-f3A	O	B-f3C	I-f3C	I-f3C	O	O	O	O	O
+c28	O	O	O	O	B-c1A	I-c1A	O	B-c1C	I-c1C	I-c1C	B-c2P	B-c3A	I-c3A	B-c3C	O
+===== 15498306 stmt13 =====
+WORD	In	group	A	all	above	parameters	revealed	most	obvious	changes	compared	with	controls	,	then	ranked	in	group	D	,	B	andC	.
+POSTAG	IN	NN	NNP	DT	IN	NNS	VBD	RBS	JJ	NNS	VBN	IN	NNS	,	RB	VBD	IN	NN	NNP	,	NNP	NN	.
+CAP	O	B-C	I-C	O	O	B-C	O	O	B-P	I-P	O	O	B-C	O	O	O	O	B-C	I-C	O	B-P	I-P	O
+f24	O	O	O	O	O	B-f1C	B-f2P	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+f25	O	O	O	O	O	B-f1C	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O
+f26	O	O	O	O	O	B-f1C	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	O	O	O	B-f3C	I-f3C	O
+c29	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 15498306 stmt14 =====
+WORD	escharectomy	during	burn	shock	stage	is	helpful	to	decrease	the	harmful	over	expression	of	Th2-type	lymphocyte	after	severe	thermal	injury	.
+POSTAG	NN	IN	NN	NN	NN	VBZ	JJ	TO	VB	DT	NN	IN	NN	IN	NNP	NN	IN	JJ	JJ	NN	.
+CAP	B-C	O	B-P	I-P	I-P	O	O	O	O	O	B-P	O	B-A	O	B-C	I-C	O	B-P	I-P	I-P	O
+f27	B-f1C	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	O	B-f3A	I-f3A	I-f3A	O	B-f3C	I-f3C	O	O	O	O	O
+c30	B-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c31	O	O	O	O	O	O	O	O	O	O	B-c1A	I-c1A	I-c1A	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O
+===== 15472922 stmt1 =====
+WORD	Cytokine	secretion	from	mononuclear	cells	cultured	in	vitro	with	starch-based	polymers	and	poly-L-lactide	.
+POSTAG	NNP	NN	IN	JJ	NNS	VBN	IN	NN	IN	JJ	NNS	CC	NN	.
+CAP	B-P	I-P	O	B-C	I-C	O	O	B-P	O	B-C	I-C	O	B-P	O
+c1	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O
+c2	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	I-c1C	B-c2P	B-c3C	I-c3C	O	O	O
+c3	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	I-c1C	B-c2P	O	O	O	B-c3C	O
+===== 15472922 stmt2 =====
+WORD	The	cytokine	network	is	one	of	the	major	controlling	systems	of	the	inflammatory	process	,	driving	the	magnitude	and	duration	of	the	host	response	against	invading	microorganisms	,	foreign	materials	,	or	altered	internal	stimuli	.
+POSTAG	DT	NN	NN	VBZ	CD	IN	DT	JJ	VBG	NNS	IN	DT	JJ	NN	,	VBG	DT	NN	CC	NN	IN	DT	NN	NN	IN	VBG	NNS	,	JJ	NNS	,	CC	VBD	JJ	NNS	.
+CAP	O	B-P	I-P	O	O	O	O	O	O	B-P	O	O	B-C	I-C	O	O	O	B-C	O	B-P	O	O	B-C	I-C	O	O	B-C	O	B-P	I-P	O	O	O	B-P	I-P	O
+f1	O	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	O	B-f3A	I-f3A	I-f3A	O	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f2	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	O	B-f3A	O	O	O	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O
+f3	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	O	O	O	B-f3A	O	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O
+c4	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O
+c5	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	O	O	O	B-c1C	I-c1C	B-c2P	O	O	O	B-c3C	I-c3C	O	O	O	O	O	O
+c6	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	O	O	O	B-c1C	I-c1C	B-c2P	O	O	O	O	O	O	O	B-c3C	I-c3C	I-c3C	O
+c7	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O
+c8	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	O	B-c1C	I-c1C	B-c2P	O	O	O	B-c3C	I-c3C	O	O	O	O	O	O
+c9	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	O	B-c1C	I-c1C	B-c2P	O	O	O	O	O	O	O	B-c3C	I-c3C	I-c3C	O
+===== 15472922 stmt3 =====
+WORD	Pro-	and	antiinflammatory	cytokines	were	quantified	after	in	vitro	culture	of	a	mixed	population	of	monocytes/macrophages	and	lymphocytes	with	biodegradable	polymers	.
+POSTAG	NNP	CC	JJ	NNS	VBD	VBN	IN	IN	JJ	NN	IN	DT	JJ	NN	IN	NNS	CC	VBZ	IN	JJ	NNS	.
+CAP	B-P	O	B-C	I-C	O	O	O	O	B-P	I-P	O	O	B-A	I-A	O	B-C	O	O	O	B-P	I-P	O
+f4	B-f1C	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	B-f3A	I-f3A	O	O	B-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O
+f5	B-f1C	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	B-f3A	I-f3A	O	O	O	O	O	O	O	B-f3C	O	O	O	O
+c10	O	O	O	O	O	O	O	O	B-c1A	I-c1A	O	O	B-c1C	I-c1C	I-c1C	I-c1C	O	O	B-c2P	B-c3C	I-c3C	O
+c11	O	O	O	O	O	O	O	O	B-c1A	I-c1A	O	O	O	O	O	O	O	B-c1C	B-c2P	B-c3C	I-c3C	O
+===== 15472922 stmt4 =====
+WORD	Different	blends	of	starch-based	polymers	and	their	composites	filled	with	hydroxyapatite	were	studied	and	compared	with	poly-L-lactide	.
+POSTAG	NNP	NNS	IN	JJ	NNS	CC	PRP$	NNS	VBN	IN	NN	VBD	VBN	CC	VBN	IN	NN	.
+CAP	B-A	I-A	O	B-C	I-C	O	O	B-P	O	O	B-P	O	O	O	O	O	B-P	O
+f6	B-f1A	I-f1A	O	B-f1C	I-f1C	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	B-f3C	O
+f7	O	O	O	B-f1C	I-f1C	O	O	B-f1A	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	B-f3C	O
+c12	O	O	O	B-c1C	I-c1C	O	O	B-c1A	B-c2P	I-c2P	B-c3C	O	O	O	O	O	O	O
+===== 15472922 stmt5 =====
+WORD	Interleukin	(IL)-1beta	,	IL-6	,	and	tumour	necrosis	factor-alpha	were	investigated	as	the	markers	of	immunological	reactivity	because	they	are	known	to	act	at	the	early	stages	of	injury/invasion	.
+POSTAG	NNP	NN	,	NNP	,	CC	JJ	NN	NN	VBD	VBN	IN	DT	NNS	IN	JJ	NN	IN	PRP	VBP	VBN	TO	VB	IN	DT	JJ	NNS	IN	NN	.
+CAP	B-P	I-P	O	B-C	O	O	B-C	I-C	I-C	O	O	O	O	B-A	O	B-C	I-C	O	O	O	O	O	O	O	O	B-A	I-A	O	B-C	O
+f8	B-f1C	I-f1C	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O	B-f3A	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+f9	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O	B-f3A	I-f3A	O	B-f3C	O
+f10	O	O	O	B-f1C	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O	B-f3A	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+f11	O	O	O	B-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O	B-f3A	I-f3A	O	B-f3C	O
+f12	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	O	B-f3A	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+f13	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O	B-f3A	I-f3A	O	B-f3C	O
+===== 15472922 stmt6 =====
+WORD	Interferon-gamma	,	recognized	as	a	proinflammatory	cytokine	,	although	not	present	during	early	responses	was	also	investigated	.
+POSTAG	NNP	,	VBN	IN	DT	NN	NN	,	IN	RB	JJ	IN	JJ	NNS	VBD	RB	VBN	.
+CAP	B-C	O	O	O	O	B-P	I-P	O	O	O	O	O	B-P	I-P	O	O	O	O
+f14	B-f1C	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O
+f15	B-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O
+c13	B-c1C	O	B-c2P	I-c2P	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O
+===== 15472922 stmt7 =====
+WORD	Contrarily	,	IL-4	derived	from	T	lymphocytes	,	was	investigated	because	it	is	an	immunoregulator	that	counteracts	some	aspects	of	inflammation	.
+POSTAG	RB	,	NNP	VBD	IN	NNP	NNS	,	VBD	VBN	IN	PRP	VBZ	DT	NN	WDT	VBZ	DT	NNS	IN	NN	.
+CAP	O	O	B-C	O	O	B-C	I-C	O	O	O	O	O	O	O	B-P	O	O	O	B-A	O	B-C	O
+f16	O	O	B-f1C	O	O	O	O	O	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O
+f17	O	O	B-f1C	O	O	O	O	O	O	O	O	O	B-f2P	O	B-f3C	O	O	O	O	O	O	O
+c14	O	O	B-c1C	B-c2P	I-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c15	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	O	B-c2P	O	B-c3A	O	B-c3C	O
+===== 15472922 stmt8 =====
+WORD	T	lymphocyte	activation	was	also	determined	by	quantifying	IL-2	.
+POSTAG	NNP	JJ	NN	VBD	RB	VBN	IN	VBG	NNP	.
+CAP	B-C	I-C	I-C	O	O	O	O	O	B-C	O
+f18	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	B-f3C	O
+===== 15472922 stmt9 =====
+WORD	The	results	support	the	hypothesis	that	different	biodegradable	polymers	can	affect	mononuclear	cell	activation	and	the	production	of	several	cytokines	associated	with	the	inflammatory	process	.
+POSTAG	DT	NNS	VBD	DT	NN	WDT	JJ	JJ	NNS	MD	VB	JJ	NN	NN	CC	DT	NN	IN	JJ	NNS	VBN	IN	DT	JJ	NN	.
+CAP	O	B-C	O	O	B-P	O	B-P	I-P	I-P	O	O	B-C	I-C	B-A	O	O	B-A	O	B-C	I-C	O	O	O	B-C	I-C	O
+f19	O	B-f1A	B-f2P	I-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f20	O	O	O	O	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O
+f21	O	O	O	O	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	O	O	O	O	O	B-f3A	O	O	B-f3C	O	O	O	O	O	O
+c16	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	O	B-c1C	B-c2P	I-c2P	O	B-c3C	I-c3C	O
+===== 15472922 stmt10 =====
+WORD	No	IL-2	or	interferon-gamma	was	found	in	the	culture	supernatants	after	3	,	7	,	and	14	days	in	the	presence	of	any	of	the	materials	.
+POSTAG	DT	NNP	CC	NN	VBD	VBN	IN	DT	NN	NNS	IN	CD	,	CD	,	CC	CD	NNS	IN	DT	NN	IN	DT	IN	DT	NNS	.
+CAP	O	B-C	O	B-C	O	O	O	O	B-C	I-C	O	O	O	O	O	O	O	B-C	O	O	B-A	O	O	O	O	B-C	O
+f22	O	B-f1C	O	O	B-f2P	I-f2P	I-f2P	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f23	O	O	O	B-f1C	B-f2P	I-f2P	I-f2P	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c17	B-c2P	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c18	B-c2P	O	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c19	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c20	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	O	O	B-c3A	O	O	O	O	O	O	O	O	O	O	O	O	O
+c21	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	O	O	O	O	O	B-c3A	I-c3A	O	O	O	O	O	O	O	O	O
+c22	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	I-c1A	B-c2P	O	B-c3A	O	O	O	O	B-c3C	O
+===== 15472922 stmt11 =====
+WORD	IL-6	was	detected	in	the	highest	amounts	,	for	all	the	conditions	,	followed	by	tumour	necrosis	factor-alpha	.
+POSTAG	NNP	VBD	VBN	IN	DT	JJS	NNS	,	IN	PDT	DT	NNS	,	VBN	IN	JJ	NN	NN	.
+CAP	B-C	O	O	O	O	O	B-A	O	O	O	O	B-C	O	O	O	B-C	I-C	I-C	O
+f24	B-f1C	B-f2P	I-f2P	I-f2P	O	B-f3A	I-f3A	O	O	O	O	O	O	O	O	O	O	O	O
+c23	B-c1C	O	O	O	O	O	O	O	O	O	O	O	O	B-c2P	I-c2P	B-c3C	I-c3C	I-c3C	O
+===== 15472922 stmt12 =====
+WORD	IL-1beta	was	produced	in	very	low	amounts	,	being	undetectable	with	some	of	the	starch-based	materials	.
+POSTAG	NNP	VBD	VBN	IN	RB	JJ	NNS	,	VBG	JJ	IN	DT	IN	DT	JJ	NNS	.
+CAP	B-C	O	O	O	O	B-C	I-C	O	O	O	O	O	O	O	B-P	I-P	O
+f25	B-f1C	B-f2P	I-f2P	I-f2P	B-f3A	I-f3A	I-f3A	O	O	O	O	O	O	O	O	O	O
+f26	B-f1C	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O	O	O	B-f3C	I-f3C	O
+===== 15472922 stmt13 =====
+WORD	IL-4	was	the	only	cytokine	that	did	not	demonstrate	any	significant	difference	within	this	group	of	materials	.
+POSTAG	NNP	VBD	DT	JJ	NN	WDT	VBD	RB	VB	DT	JJ	NN	IN	DT	NN	IN	NNS	.
+CAP	B-C	O	O	B-P	I-P	O	O	O	O	O	B-P	I-P	O	O	B-A	O	B-C	O
+f27	B-f1C	B-f2P	O	O	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+c24	O	O	O	O	B-c1C	O	B-c2P	I-c2P	I-c2P	I-c2P	B-c3A	I-c3A	O	O	O	O	O	O
+c25	O	O	O	O	O	O	O	O	O	O	B-c1A	I-c1A	B-c2P	O	O	O	B-c3C	O
+===== 15472922 stmt14 =====
+WORD	starch-based	polymers	and	composites	induced	lower	production	of	proinflammatory	cytokines	in	comparison	to	poly-L-lactide	.
+POSTAG	JJ	NNS	CC	NNS	VBD	JJR	NN	IN	JJ	NNS	IN	NN	TO	NN	.
+CAP	B-C	I-C	O	B-P	O	O	B-A	O	B-C	I-C	O	B-P	O	B-P	O
+f28	B-f1C	I-f1C	O	O	B-f2P	B-f3A	I-f3A	O	B-f3C	I-f3C	O	O	O	O	O
+c26	O	O	O	O	O	B-c1A	I-c1A	O	B-c1C	I-c1C	B-c2P	I-c2P	I-c2P	B-c3C	O
+===== 23890451 stmt1 =====
+WORD	Aggregatibacter	actinomycetemcomitans	lipopolysaccharide	stimulated	epithelial	cells	produce	interleukin-15	that	regulates	t	cell	activation	.
+POSTAG	NNP	NNS	RB	VBD	JJ	NNS	VBP	JJ	IN	VBZ	RB	JJ	NN	.
+CAP	B-P	I-P	O	O	B-C	I-C	O	O	O	O	O	B-P	I-P	O
+f1	B-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	B-f2P	B-f3C	O	O	O	O	O	O
+c1	O	O	O	O	O	O	O	B-c1C	O	B-c2P	B-c3C	I-c3C	B-c3A	O
+===== 23890451 stmt2 =====
+WORD	Oral	epithelial	cells	act	not	only	as	mechanical	barriers	but	also	as	immunological	barriers	by	producing	various	mediators	such	as	cytokines	.
+POSTAG	JJ	JJ	NNS	NN	RB	RB	IN	JJ	NNS	CC	RB	RB	JJ	NNS	IN	VBG	JJ	NNS	JJ	IN	NNS	.
+CAP	O	B-A	I-A	B-A	O	O	O	B-P	I-P	O	O	O	B-P	I-P	O	O	B-C	I-C	O	O	B-C	O
+f2	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+f3	B-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	B-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O
+c2	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c2P	I-c2P	B-c3C	I-c3C	O	O	O	O
+c3	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c2P	I-c2P	O	O	O	O	B-c3C	O
+===== 23890451 stmt3 =====
+WORD	Since	,	in	periodontal	disease	,	limited	information	is	available	regarding	the	role	of	oral	epithelial	cell-derived	cytokines	on	T	cell	activation	,	we	investigated	the	responses	of	human	T	cells	to	cytokines	in	KB	cells	that	had	been	stimulated	with	Aggregatibacter	actinomycetemcomitans	lipopolysaccharide(LPS)	.
+POSTAG	IN	,	IN	JJ	NN	,	JJ	NN	VBZ	JJ	VBG	DT	NN	IN	JJ	JJ	JJ	NNS	IN	NNP	NN	NN	,	PRP	VBD	DT	NNS	IN	JJ	NNP	NNS	TO	NNS	IN	NNP	NNS	WDT	VBD	VBN	VBN	IN	NNP	NNS	VBP	.
+CAP	O	O	O	B-C	I-C	O	B-P	I-P	O	O	O	O	B-A	O	B-C	I-C	I-C	I-C	O	B-C	I-C	I-C	O	O	O	O	B-A	O	B-C	I-C	I-C	O	B-C	O	B-C	I-C	O	O	O	O	O	B-P	I-P	O	O
+f4	O	O	O	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	O	B-f3A	O	B-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f5	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	O	B-f3A	O	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f6	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	O	B-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	I-f3C	O
+c4	O	O	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c5	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c6	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O
+===== 23890451 stmt4 =====
+WORD	To	evaluate	T	cell	activation	in	response	to	the	culture	supernatant	of	KB	cells	,	we	examined	cell	proliferation	and	interferon	gamma	production	,	which	is	closely	related	to	periodontal	disease	,	in	Jurkat	cells	.
+POSTAG	TO	VB	NNP	NN	NN	IN	NN	TO	DT	NN	NN	IN	NNP	NNS	,	PRP	VBD	NN	NN	CC	NN	NN	NN	,	WDT	VBZ	RB	VBN	TO	JJ	NN	,	IN	NNP	NNS	.
+CAP	O	O	B-C	I-C	I-C	O	B-C	O	O	B-A	I-A	O	B-C	I-C	O	O	O	B-C	I-C	O	B-C	I-C	I-C	O	O	O	O	O	O	B-C	I-C	O	O	B-C	I-C	O
+f7	B-f2P	I-f2P	B-f3C	I-f3C	B-f3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f8	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	B-f3C	I-f3C	I-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+c7	O	O	B-c1C	I-c1C	B-c1A	B-c2P	I-c2P	I-c2P	O	B-c3A	I-c3A	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c8	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	I-c1C	I-c1C	O	O	B-c2P	I-c2P	I-c2P	I-c2P	B-c3C	I-c3C	O	O	O	O	O
+c9	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c2P	B-c3C	I-c3C	O
+===== 23890451 stmt5 =====
+WORD	Culture	supernatant	of	LPS-stimulated	KB	cells	enhanced	cell	proliferation	and	IFN-gamma	production	in	Jurkat	cells	.
+POSTAG	NNP	NN	IN	JJ	NNP	NNS	VBD	NN	NN	CC	JJ	NN	IN	NNP	NNS	.
+CAP	B-A	I-A	O	B-C	I-C	I-C	O	B-C	I-C	O	B-P	I-P	O	B-C	I-C	O
+f9	B-f1A	I-f1A	O	B-f1C	I-f1C	I-f1C	B-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O
+f10	B-f1A	I-f1A	O	B-f1C	I-f1C	I-f1C	B-f2P	O	O	O	B-f3C	I-f3C	O	O	O	O
+c10	O	O	O	O	O	O	O	B-c1C	I-c1C	O	O	O	B-c2P	B-c3C	I-c3C	O
+c11	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	O
+===== 23890451 stmt6 =====
+WORD	To	determine	the	active	component	within	the	culture	supernatant	,	the	production	of	epithelial	cell-derived	cytokines	,	interleukin-12	,	IL-15	and	IL-18	,	in	LPS-stimulated	KB	cells	wasanalysed	.
+POSTAG	TO	VB	DT	JJ	NN	IN	DT	NN	NN	,	DT	NN	IN	JJ	JJ	NNS	,	NN	,	NNP	CC	NNP	,	IN	JJ	NNP	NNS	VBD	.
+CAP	O	O	O	B-P	I-P	O	O	B-A	I-A	O	O	B-A	O	B-C	I-C	I-C	O	B-C	O	B-C	O	B-C	O	O	B-C	I-C	I-C	O	O
+f11	B-f2P	I-f2P	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f12	O	O	O	O	O	O	O	O	O	O	O	B-f1A	O	B-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	B-f2P	O
+f13	O	O	O	O	O	O	O	O	O	O	O	B-f1A	O	O	O	O	O	B-f1C	O	O	O	O	O	O	O	O	O	B-f2P	O
+f14	O	O	O	O	O	O	O	O	O	O	O	B-f1A	O	O	O	O	O	O	O	B-f1C	O	O	O	O	O	O	O	B-f2P	O
+f15	O	O	O	O	O	O	O	O	O	O	O	B-f1A	O	O	O	O	O	O	O	O	O	B-f1C	O	O	O	O	O	B-f2P	O
+c12	O	O	O	B-c1C	I-c1C	B-c2P	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c13	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c2P	B-c3C	I-c3C	I-c3C	O	O
+===== 23890451 stmt7 =====
+WORD	IL-15	,	but	not	IL-18	,	was	significantly	increased	in	the	culture	supernatant	of	LPS-stimulated	KB	cells	.
+POSTAG	NNP	,	CC	RB	NNP	,	VBD	RB	VBN	IN	DT	NN	NN	IN	JJ	NNP	NNS	.
+CAP	B-C	O	O	O	B-C	O	O	O	O	O	O	B-A	I-A	O	B-C	I-C	I-C	O
+f16	B-f1C	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O
+c14	B-c1C	O	O	O	O	O	O	O	O	B-c2P	O	B-c3A	I-c3A	O	B-c3C	I-c3C	I-c3C	O
+c15	O	O	O	B-c2P	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 23890451 stmt8 =====
+WORD	Moreover	,	additional	anti-IL-15	neutralizing	antibody	abolished	culture	supernatant-induced	IFN-gamma	expression	in	Jurkatcells	.
+POSTAG	RB	,	JJ	NN	VBG	NN	JJ	NN	JJ	JJ	NN	IN	NNP	.
+CAP	O	O	B-P	I-P	O	B-P	I-P	I-P	I-P	I-P	I-P	O	B-C	O
+f17	O	O	O	O	O	O	B-f2P	B-f3C	I-f3C	I-f3C	I-f3C	O	O	O
+c16	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	B-c3C	O
+===== 23890451 stmt9 =====
+WORD	These	results	suggest	that	periodontal	pathogens	induce	the	production	of	IL-15	from	epithelial	cells	,	and	leading	the	activation	of	T	cells	in	periodontal	lesions	.
+POSTAG	DT	NNS	VBP	IN	JJ	NNS	VBP	DT	NN	IN	NNP	IN	JJ	NNS	,	CC	VBG	DT	NN	IN	NNP	NNS	IN	JJ	NNS	.
+CAP	O	B-C	O	O	B-P	I-P	O	O	B-A	O	B-C	O	B-C	I-C	O	O	O	O	B-A	O	B-C	I-C	O	B-P	I-P	O
+f18	O	B-f1A	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f19	O	O	O	O	B-f1C	I-f1C	B-f2P	O	B-f3A	O	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f20	O	O	O	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	B-f2P	O	B-f3A	O	B-f3C	I-f3C	O	O	O	O
+c17	O	O	O	O	O	O	O	O	B-c1A	O	B-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O
+c18	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	O
+#end

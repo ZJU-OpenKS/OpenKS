@@ -1,0 +1,123 @@
+# 11895154	fatty#0 acids#1 and#2 lymphocyte#3 functions#4 .#5 
+
+c1:[fatty_acids#0,NIL#-1,NIL]
+c2:[lymphocyte_functions#3,NIL#-1,NIL]
+stmt1 = c1 c2
+
+# 11895154	the#0 immune#1 system#2 acts#3 to#4 protect#5 the#6 host#7 against#8 pathogenic#9 invaders#10 .#11 
+
+f1:[immune_system#1,acts_to_protect#3,host#7]
+f2:[immune_system#1,against#8,pathogenic_invaders#9]
+stmt2 = f1 f2
+
+# 11895154	however#0 ,#1 components#2 of#3 the#4 immune#5 system#6 can#7 become#8 dysregulated#9 such#10 that#11 their#12 activities#13 are#14 directed#15 against#16 host#17 tissues#18 ,#19 so#20 causing#21 damage#22 .#23 
+
+f3:[{components#2:activities#13},are_directed_against#14,host_tissues#17]
+f4:[{components#2:activities#13},causing#21,damage#22]
+f5:[{immune_system#5:components#2},can_become_dysregulated#7,NIL]
+stmt3 = f3 f4 f5
+
+# 11895154	lymphocytes#0 are#1 involved#2 in#3 both#4 the#5 beneficial#6 and#7 detrimental#8 effects#9 of#10 the#11 immune#12 system#13 .#14 
+
+f6:[lymphocytes#0,are_involved_in#1,{immune_system#12:beneficial_and_detrimental_effects#6}]
+stmt4 = f6
+
+# 11895154	both#0 the#1 level#2 of#3 fat#4 and#5 the#6 types#7 of#8 fatty#9 acid#10 present#11 in#12 the#13 diet#14 can#15 affect#16 lymphocyte#17 functions#18 .#19 
+
+f7:[{fat#4:level#2},can_affect#15,lymphocyte_functions#17]
+f8:[{fatty_acid#9:types#7},can_affect#15,lymphocyte_functions#17]
+c3:[{fat#4:level#2},present_in#11,diet#14]
+c4:[{fatty_acid#9:types#7},present_in#11,diet#14]
+stmt5 = f7 f8 c3 c4
+
+# 11895154	the#0 fatty#1 acid#2 composition#3 of#4 lymphocytes#5 ,#6 and#7 other#8 immune#9 cells#10 ,#11 is#12 altered#13 according#14 to#15 the#16 fatty#17 acid#18 composition#19 of#20 the#21 diet#22 and#23 this#24 alters#25 the#26 capacity#27 of#28 those#29 cells#30 to#31 produce#32 eicosanoids#33 ,#34 such#35 as#36 prostaglandin#37 e2#38 ,#39 which#40 are#41 involved#42 in#43 immunoregulation#44 .#45 
+
+f9:[{lymphocytes#5:fatty_acid_composition#1},is_altered_according_to#12,{diet#22:fatty_acid_composition#17}]
+f10:[immune_cells#9,is_altered_according_to#12,{diet#22:fatty_acid_composition#17}]
+f11:[NIL,alters#25,{cells#30:capacity#27}]
+f12:[NIL,to_produce#31,eicosanoids#33]
+f13:[eicosanoids#33,such_as#35,prostaglandin_e2#37]
+c5:[eicosanoids#33,are_involved_in#41,immunoregulation#44]
+stmt6 = f9 f10 f11 f12 f13 c5
+
+# 11895154	a#0 high#1 fat#2 diet#3 can#4 impair#5 lymphocyte#6 function#7 .#8 
+
+f14:[high_fat_diet#1,can_impair#4,lymphocyte_function#6]
+stmt7 = f14
+
+# 11895154	cell#0 culture#1 and#2 animal#3 feeding#4 studies#5 indicate#6 that#7 oleic#8 ,#9 linoleic#10 ,#11 conjugated#12 linoleic#13 ,#14 gamma-linolenic#15 ,#16 dihomo-gamma-linolenic#17 ,#18 arachidonic#19 ,#20 alpha-linolenic#21 ,#22 eicosapentaenoic#23 and#24 docosahexaenoic#25 acids#26 can#27 all#28 influence#29 lymphocyte#30 proliferation#31 ,#32 the#33 production#34 of#35 cytokines#36 by#37 lymphocytes#38 ,#39 and#40 natural#41 killer#42 cell#43 activity#44 .#45 
+
+f15:[cell_culture#0,indicate_that#6,NIL]
+f16:[animal_feeding_studies#3,indicate_that#6,NIL]
+f17:[oleic#8,influence#29,lymphocyte_proliferation#30]
+f18:[oleic#8,influence#29,{cytokines#36:production#34}]
+f19:[oleic#8,influence#29,natural_killer_cell_activity#41]
+f20:[linoleic#10,influence#29,lymphocyte_proliferation#30]
+f21:[linoleic#10,influence#29,{cytokines#36:production#34}]
+f22:[linoleic#10,influence#29,natural_killer_cell_activity#41]
+f23:[conjugated_linoleic#12,influence#29,lymphocyte_proliferation#30]
+f24:[conjugated_linoleic#12,influence#29,{cytokines#36:production#34}]
+f25:[conjugated_linoleic#12,influence#29,natural_killer_cell_activity#41]
+f26:[gamma-linolenic#15,influence#29,lymphocyte_proliferation#30]
+f27:[gamma-linolenic#15,influence#29,{cytokines#36:production#34}]
+f28:[gamma-linolenic#15,influence#29,natural_killer_cell_activity#41]
+f29:[dihomo-gamma-linolenic#17,influence#29,lymphocyte_proliferation#30]
+f30:[dihomo-gamma-linolenic#17,influence#29,{cytokines#36:production#34}]
+f31:[dihomo-gamma-linolenic#17,influence#29,natural_killer_cell_activity#41]
+f32:[arachidonic#19,influence#29,lymphocyte_proliferation#30]
+f33:[arachidonic#19,influence#29,{cytokines#36:production#34}]
+f34:[arachidonic#19,influence#29,natural_killer_cell_activity#41]
+f35:[alpha-linolenic#21,influence#29,lymphocyte_proliferation#30]
+f36:[alpha-linolenic#21,influence#29,{cytokines#36:production#34}]
+f37:[alpha-linolenic#21,influence#29,natural_killer_cell_activity#41]
+f38:[eicosapentaenoic#23,influence#29,lymphocyte_proliferation#30]
+f39:[eicosapentaenoic#23,influence#29,{cytokines#36:production#34}]
+f40:[eicosapentaenoic#23,influence#29,natural_killer_cell_activity#41]
+f41:[docosahexaenoic_acids#25,influence#29,lymphocyte_proliferation#30]
+f42:[docosahexaenoic_acids#25,influence#29,{cytokines#36:production#34}]
+f43:[docosahexaenoic_acids#25,influence#29,natural_killer_cell_activity#41]
+c6:[{cytokines#36:production#34},by#37,lymphocytes#38]
+stmt8 = f15 f16 f17 f18 f19 f20 f21 f22 f23 f24 f25 f26 f27 f28 f29 f30 f31 f32 f33 f34 f35 f36 f37 f38 f39 f40 f41 f42 f43 c6
+
+# 11895154	high#0 intakes#1 of#2 some#3 of#4 these#5 fatty#6 acids#7 are#8 necessary#9 to#10 induce#11 these#12 effects#13 .#14 
+
+f44:[{fatty_acids#6:high_intakes#0},are_necessary_to_induce#8,{NIL#-1:effects#13}]
+stmt9 = f44
+
+# 11895154	among#0 these#1 fatty#2 acids#3 the#4 long#5 chain#6 n-3#7 fatty#8 acids#9 ,#10 especially#11 eicosapentaenoic#12 acid#13 ,#14 appear#15 to#16 be#17 the#18 most#19 potent#20 when#21 included#22 in#23 the#24 human#25 diet#26 .#27 
+
+f45:[long_chain_n-3_fatty_acids#5,appear_to_be_the_most_potent#15,NIL]
+f46:[eicosapentaenoic_acid#12,appear_to_be_the_most_potent#15,NIL]
+c7:[NIL,among#0,fatty_acids#2]
+c8:[eicosapentaenoic_acid#12,included_in#22,human_diet#25]
+stmt10 = f45 f46 c7 c8
+
+# 11895154	although#0 not#1 all#2 studies#3 agree#4 ,#5 it#6 appears#7 that#8 fish#9 oil#10 ,#11 which#12 contains#13 eicosapentaenoic#14 acid#15 ,#16 down#17 regulates#18 the#19 t-helper#20 1-type#21 response#22 which#23 is#24 associated#25 with#26 chronic#27 inflammatory#28 disease#29 .#30 
+
+f47:[{NIL#-1:studies#3},appears_that#7,NIL]
+f48:[fish_oil#9,down_regulates#17,t-helper_1-type_response#20]
+c9:[fish_oil#9,contains#13,eicosapentaenoic_acid#14]
+c10:[t-helper_1-type_response#20,is_associated_with#24,chronic_inflammatory_disease#27]
+stmt11 = f47 f48 c9 c10
+
+# 11895154	there#0 is#1 evidence#2 for#3 beneficial#4 effects#5 of#6 fish#7 oil#8 in#9 such#10 diseases#11 ,#12 this#13 evidence#14 is#15 strongest#16 for#17 rheumatoid#18 arthritis#19 .#20 
+
+f49:[{NIL#-1:evidence#14},is_strongest_for#15,{rheumatoid_arthritis#18:beneficial_effects#4}]
+c11:[{NIL#-1:evidence#2},for#3,{fish_oil#7:beneficial_effects#4}]
+c12:[{fish_oil#7:beneficial_effects#4},in#9,{diseases#11:beneficial_effects#4}]
+stmt12 = f49 c11 c12
+
+# 11895154	since#0 n-3#1 fatty#2 acids#3 also#4 antagonise#5 the#6 production#7 of#8 inflammatory#9 eicosanoid#10 mediators#11 from#12 arachidonic#13 acid#14 ,#15 there#16 is#17 potential#18 for#19 benefit#20 in#21 asthma#22 and#23 related#24 diseases#25 .#26 
+
+f50:[n-3_fatty_acids#1,antagonise#5,{inflammatory_eicosanoid_mediators#9:production#7}]
+f51:[NIL,is_potential_for_benefit_in#17,asthma#22]
+f52:[NIL,is_potential_for_benefit_in#17,related_diseases#24]
+c13:[{inflammatory_eicosanoid_mediators#9:production#7},from#12,arachidonic_acid#13]
+stmt13 = f50 f51 f52 c13
+
+# 11895154	recent#0 evidence#1 indicates#2 that#3 fish#4 oil#5 may#6 be#7 of#8 benefit#9 in#10 some#11 asthmatics#12 but#13 not#14 others#15 .#16 
+
+f53:[{NIL#-1:recent_evidence#0},indicates_that#2,NIL]
+f54:[fish_oil#4,may_be_of_benefit_in#6,asthmatics#12]
+stmt14 = f53 f54
+

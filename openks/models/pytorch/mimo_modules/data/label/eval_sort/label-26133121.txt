@@ -1,0 +1,119 @@
+# 26133121	An#0 act#1 of#2 balance#3 between#4 adaptive#5 and#6 maladaptive#7 immunity#8 in#9 depression#10 ,#11 a#12 role#13 for#14 t#15 lymphocytes#16 .#17 
+
+c1:[{balance#3:act#1},between#4,adaptive#5]
+c2:[{balance#3:act#1},between#4,maladaptive_immunity#7]
+c3:[{balance#3:act#1},a_role_for#12,t_lymphocytes#15]
+c4:[maladaptive_immunity#7,in#9,depression#10]
+stmt1 = c1 c2 c3 c4
+
+# 26133121	Historically#0 the#1 monoaminergic#2 neurotransmitter#3 system#4 ,#5 in#6 particular#7 the#8 serotonergic#9 system#10 ,#11 was#12 seen#13 as#14 being#15 responsible#16 for#17 the#18 pathophysiology#19 of#20 major#21 depressive#22 disorder#23 .#24 
+
+f1:[monoaminergic_neurotransmitter_system#2,was_seen_as_being_responsible_for#12,{major_depressive_disorder#21:pathophysiology#19}]
+f2:[serotonergic_system#9,was_seen_as_being_responsible_for#12,{major_depressive_disorder#21:pathophysiology#19}]
+stmt2 = f1 f2
+
+# 26133121	With#0 the#1 advent#2 of#3 psychoneuroimmunology#4 an#5 important#6 role#7 of#8 the#9 immune#10 system#11 in#12 the#13 interface#14 between#15 the#16 central#17 nervous#18 systems#19 and#20 peripheral#21 organ#22 systems#23 has#24 emerged#25 .#26 
+
+f3:[{immune_system#10:important_role#6},has_emerged#24,NIL]
+c5:[NIL,with#0,{psychoneuroimmunology#4:advent#2}]
+c6:[{immune_system#10:important_role#6},in#12,interface#14]
+c7:[interface#14,between#15,central_nervous_systems#17]
+c8:[interface#14,between#15,peripheral_organ_systems#21]
+stmt3 = f3 c5 c6 c7 c8
+
+# 26133121	In#0 addition#1 to#2 the#3 well-characterised#4 neurobiological#5 activities#6 of#7 cytokines#8 ,#9 T#10 cell#11 function#12 in#13 the#14 context#15 of#16 depression#17 has#18 been#19 neglected#20 so#21 far#22 .#23 
+
+f4:[t_cell_function#10,has_been_neglected#18,NIL]
+c9:[NIL,in_addition_to#0,{cytokines#8:well-characterised_neurobiological_activities#4}]
+c10:[t_cell_function#10,in#13,{depression#17:context#15}]
+stmt4 = f4 c9 c10
+
+# 26133121	In#0 this#1 review#2 we#3 will#4 investigate#5 the#6 biological#7 roles#8 of#9 T#10 cells#11 in#12 depression#13 .#14 
+
+f5:[NIL,will_investigate#4,{t_cells#10:biological_roles#7}]
+c11:[NIL,in#0,{NIL#-1:review#2}]
+c12:[{t_cells#10:biological_roles#7},in#12,depression#13]
+stmt5 = f5 c11 c12
+
+#26133121	Originally#0 it#1 was#2 thought#3 that#4 the#5 adaptive#6 immune#7 arm#8 including#9 T#10 lymphocytes#11 was#12 excluded#13 from#14 the#15 CNS#16 .#17 
+
+f6:[NIL,it_was_thought_that#1,NIL]
+f7:[adaptive_immune_arm#6,was_excluded_from#12,cns#16]
+c13:[adaptive_immune_arm#6,including#9,t_lymphocytes#10]
+stmt6 = f6 f7 c13
+
+# 26133121	It#0 is#1 now#2 clear#3 that#4 peripheral#5 naive#6 T#7 cells#8 not#9 only#10 carry#11 out#12 continuous#13 surveillance#14 within#15 the#16 brain#17 but#18 also#19 maintain#20 neural#21 plasticity#22 .#23
+
+f8:[NIL,it_is_now_clear_that#0,NIL]
+f9:[peripheral_naive_t_cells#5,not_only_carry_out#9,continuous_surveillance#13]
+f10:[peripheral_naive_t_cells#5,also_maintain#19,neural_plasticity#21]
+c14:[continuous_surveillance#13,within#15,brain#17]
+stmt7 = f8 f9 f10 c14
+
+# 26133121	Furthermore#0 animal#1 studies#2 demonstrate#3 that#4 regulatory#5 T#6 lymphocytes#7 can#8 provide#9 protection#10 against#11 maladaptive#12 behavioural#13 responses#14 associated#15 with#16 depression#17 .#18 
+
+f11:[animal_studies#1,demonstrate_that#3,NIL]
+f12:[regulatory_t_lymphocytes#5,can_provide#8,{NIL#-1:protection#10}]
+c15:[{NIL#-1:protection#10},against#11,maladaptive_behavioural_responses#12]
+c16:[maladaptive_behavioural_responses#12,associated_with#15,depression#17]
+stmt8 = f11 f12 c15 c16
+
+# 26133121	Psychogenic#0 stress#1 as#2 a#3 major#4 inducer#5 of#6 depression#7 can#8 lead#9 to#10 transient#11 trafficking#12 of#13 T#14 lymphocytes#15 into#16 the#17 brain#18 stimulating#19 the#20 secretion#21 of#22 certain#23 neurotrophic#24 factors#25 and#26 cytokines#27 .#28 
+
+f13:[psychogenic_stress#0,can_lead_to#8,{t_lymphocytes#14:transient_trafficking#11}]
+c17:[psychogenic_stress#0,as#2,{depression#7:major_inducer#4}]
+c18:[{t_lymphocytes#14:transient_trafficking#11},into#16,{certain_neurotrophic_factors#23:brain_stimulating_the_secretion#18}]
+c19:[{t_lymphocytes#14:transient_trafficking#11},into#16,{cytokines#27:brain_stimulating_the_secretion#18}]
+stmt9 = f13 c17 c18 c19
+
+# 26133121	The#0 separate#1 and#2 combined#3 mechanism#4 of#5 CD4#6 and#7 CD8#8 T#9 cell#10 activation#11 is#12 likely#13 to#14 determine#15 the#16 response#17 pattern#18 of#19 CNS#20 specific#21 neurokines#22 and#23 neurotrophins#24 .#25 
+
+f14:[{cd4#6:separate_and_combined_mechanism#1},is_likely_to_determine#12,{cns_specific_neurokines#20:response_pattern#17}]
+f15:[{cd4#6:separate_and_combined_mechanism#1},is_likely_to_determine#12,{neurotrophins#24:response_pattern#17}]
+f16:[{cd8_t_cell_activation#8:separate_and_combined_mechanism#1},is_likely_to_determine#12,{cns_specific_neurokines#20:response_pattern#17}]
+f17:[{cd8_t_cell_activation#8:separate_and_combined_mechanism#1},is_likely_to_determine#12,{neurotrophins#24:response_pattern#17}]
+stmt10 = f14 f15 f16 f17
+
+# 26133121	Under#0 chronic#1 stress-induced#2 neuroinflammatory#3 conditions#4 associated#5 with#6 depression#7 ,#8 T#9 cell#10 responses#11 may#12 become#13 maladaptive#14 and#15 can#16 be#17 involved#18 in#19 neurodegeneration#20 .#21 
+
+f18:[t_cell_responses#9,may_become_maladaptive#12,NIL]
+f19:[t_cell_responses#9,can_be_involved_in#16,neurodegeneration#20]
+c20:[chronic_stress-induced_neuroinflammatory_conditions#1,associated_with#5,depression#7]
+stmt11 = f18 f19 c20
+
+# 26133121	Additionally#0 ,#1 intracellular#2 adhesion#3 and#4 MHC#5 molecule#6 expression#7 as#8 well#9 as#10 glucocorticoid#11 receptor#12 expression#13 within#14 the#15 brain#16 may#17 play#18 a#19 role#20 in#21 determining#22 T#23 lymphocyte#24 functionality#25 in#26 depression#27 .#28 
+
+f20:[intracellular_adhesion#2,may_play#17,{NIL#-1:role#20}]
+f21:[mhc_molecule_expression#5,may_play#17,{NIL#-1:role#20}]
+f22:[glucocorticoid_receptor_expression#11,may_play#17,{NIL#-1:role#20}]
+c21:[intracellular_adhesion#2,within#14,brain#16]
+c22:[mhc_molecule_expression#5,within#14,brain#16]
+c23:[glucocorticoid_receptor_expression#11,within#14,brain#16]
+c24:[{NIL#-1:role#20},determining#22,t_lymphocyte_functionality#23]
+c25:[t_lymphocyte_functionality#23,in#26,depression#27]
+stmt12 = f20 f21 f22 c21 c22 c23 c24 c25
+
+# 26133121	Taken#0 together#1 ,#2 T#3 lymphocyte#4 mechanisms#5 ,#6 which#7 confer#8 susceptibility#9 or#10 resilience#11 to#12 MDD#13 ,#14 are#15 not#16 yet#17 fully#18 understood#19 .#20 
+
+f23:[t_lymphocyte_mechanisms#3,are_not_yet_fully_understood#15,NIL]
+c26:[t_lymphocyte_mechanisms#3,confer_susceptibility_or_resilience_to#8,mdd#13]
+stmt13 = f23 c26
+
+# 26133121	Further#0 insight#1 into#2 the#3 cellular#4 and#5 molecular#6 mechanisms#7 which#8 balance#9 the#10 adaptive#11 and#12 maladaptive#13 roles#14 of#15 T#16 lymphocytes#17 may#18 provide#19 a#20 better#21 understanding#22 of#23 both#24 the#25 neuro-#26 degenerative#27 and#28 -regenerative#29 repair#30 functions#31 as#32 present#33 within#34 the#35 neuroimmune#36 network#37 during#38 depression#39 .#40 
+
+f24:[{cellular_and_molecular_mechanisms#4:further_insight#0},may_provide#18,{neuro-_degenerative#26:better_understanding#21}]
+f25:[{cellular_and_molecular_mechanisms#4:further_insight#0},may_provide#18,{-regenerative_repair_functions#29:better_understanding#21}]
+c27:[{cellular_and_molecular_mechanisms#4:further_insight#0},balance#9,{t_lymphocytes#16:adaptive#11}]
+c28:[{cellular_and_molecular_mechanisms#4:further_insight#0},balance#9,{t_lymphocytes#16:maladaptive_roles#13}]
+c29:[neuro-_degenerative#26,as_present_within#32,neuroimmune_network#36]
+c30:[-regenerative_repair_functions#29,as_present_within#32,neuroimmune_network#36]
+c31:[NIL,during#38,depression#39]
+stmt14 = f24 f25 c27 c28 c29 c30 c31
+
+# 26133121	Furthermore#0 T#1 cells#2 may#3 be#4 important#5 players#6 in#7 restoration#8 of#9 normal#10 behaviour#11 and#12 immune#13 cell#14 homeostasis#15 in#16 depression#17 .#18 
+
+f26:[t_cells#1,may_be#3,{NIL#-1:important_players#5}]
+c32:[{NIL#-1:important_players#5},in#7,{normal_behaviour#10:restoration#8}]
+c33:[{NIL#-1:important_players#5},in#7,immune_cell_homeostasis#13]
+c34:[immune_cell_homeostasis#13,in#16,depression#17]
+stmt15 = f26 c32 c33 c34

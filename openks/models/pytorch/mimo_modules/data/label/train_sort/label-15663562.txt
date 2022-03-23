@@ -1,0 +1,103 @@
+# 15663562	biological#0 effects#1 of#2 montelukast#3 ,#4 a#5 cysteinyl-leukotriene#6 receptor-antagonist#7 ,#8 on#9 t#10 lymphocytes#11 .#12
+
+f1:[{montelukast#3:biological_effects#0},NIL#-1,cysteinyl-leukotriene_receptor-antagonist#6]
+c1:[{montelukast#3:biological_effects#0},on#9,t_lymphocytes#10]
+stmt1 = f1 c1
+
+# 15663562	montelukast#0 ,#1 a#2 cysteinyl-leukotriene#3 receptor#4 antagonist#5 ,#6 has#7 anti-inflammatory#8 activity#9 in#10 the#11 treatment#12 of#13 allergic#14 diseases#15 .#16
+
+f2:[montelukast#0,NIL#-1,cysteinyl-leukotriene_receptor_antagonist#3]
+f3:[montelukast#0,has#7,anti-inflammatory_activity#8]
+c2:[anti-inflammatory_activity#8,in#10,{allergic_diseases#14:treatment#12}]
+stmt2 = f2 f3 c2
+
+# 15663562	if#0 this#1 effect#2 is#3 due#4 only#5 to#6 blocking#7 leukotrienes#8 or#9 also#10 owing#11 to#12 inhibiting#13 proliferation#14 and#15 survival#16 of#17 inflammatory#18 cells#19 ,#20 is#21 actuallyunknown#22 .#23
+
+f4:[{NIL#-1:effect#2},is_due_only_to#3,blocking_leukotrienes#7]
+f5:[{NIL#-1:effect#2},owing_to#11,{inflammatory_cells#18:inhibiting_proliferation#13}]
+f6:[{NIL#-1:effect#2},owing_to#11,{inflammatory_cells#18:survival#16}]
+f7:[NIL,is_actuallyunknown#21,NIL]
+stmt3 = f4 f5 f6 f7
+
+# 15663562	testing#0 the#1 hypothesis#2 that#3 mnt#4 could#5 influence#6 t#7 lymphocyte#8 functional#9 behaviour#10 invitro#11 .#12
+
+f8:[NIL,testing_the_hypothesis_that#0,NIL]
+f9:[mnt#4,could_influence#5,t_lymphocyte_functional_behaviour_invitro#7]
+stmt4 = f8 f9
+
+# 15663562	normal#0 t#1 lymphocytes#2 were#3 analysed#4 for#5 surface#6 expression#7 of#8 cys-ltr(1)#9 and#10 cys-ltr(2)#11 by#12 means#13 of#14 monoclonal#15 antibodies#16 ,#17 in#18 the#19 resting#20 state#21 and#22 after#23 activation#24 with#25 t#26 helper#27 type#28 2#29 cytokine#30 or#31 t#32 cell#33 receptor#34 stimulation#35 .#36
+
+f10:[normal_t_lymphocytes#0,were_analysed_for#3,{cys-ltr(1)#9:surface_expression#6}]
+f11:[normal_t_lymphocytes#0,were_analysed_for#3,{cys-ltr(2)#11:surface_expression#6}]
+c3:[{cys-ltr(2)#11:surface_expression#6},by_means_of#12,monoclonal_antibodies#15]
+c4:[NIL,in#18,resting_state#20]
+c5:[NIL,after#23,activation#24]
+c6:[activation#24,with#25,t_helper_type_2_cytokine#26]
+c7:[activation#24,with#25,t_cell_receptor_stimulation#32]
+stmt5 = f10 f11 c3 c4 c5 c6 c7
+
+# 15663562	proliferative#0 activity#1 ,#2 as#3 well#4 as#5 il-4#6 andifn-gamma#7 production#8 ,#9 were#10 simultaneously#11 determined#12 in#13 samples#14 exposed#15 to#16 molar#17 concentrations#18 of#19 mnt#20 from#21 10(-8)#22 to#23 10(-5)#24 .#25
+
+f12:[proliferative_activity#0,were_simultaneously_determined_in#10,{NIL#-1:samples#14}]
+f13:[il-4_andifn-gamma_production#6,were_simultaneously_determined_in#10,samples#14]
+c8:[{NIL#-1:samples#14},exposed_to#15,{mnt_from_10(-8)_to_10(-5)#20:molar_concentrations#17}]
+stmt6 = f12 f13 c8
+
+# 15663562	programmed#0 cell#1 death#2 in#3 cultured#4 samples#5 was#6 evaluated#7 by#8 means#9 of#10 propidium#11 iodide#12 and#13 fluorescein#14 isothiocyanate-conjugated#15 anti-annexin#16 v#17 mab#18 staining#19 .#20
+
+f14:[programmed_cell_death#0,was_evaluated_by_means_of#6,propidium_iodide#11]
+f15:[programmed_cell_death#0,was_evaluated_by_means_of#6,fluorescein_isothiocyanate-conjugated_anti-annexin_v_mab_staining#14]
+c9:[programmed_cell_death#0,in#3,cultured_samples#4]
+stmt7 = f14 f15 c9
+
+# 15663562	the#0 complementary#1 dna#2 microarray#3 technique#4 was#5 adopted#6 to#7 identify#8 gene#9 products#10 involved#11 in#12 apoptosisinduction#13 .#14
+
+f16:[complementary_dna_microarray_technique#1,was_adopted_to_identify#5,gene_products#9]
+c10:[gene_products#9,involved_in#11,apoptosisinduction#13]
+stmt8 = f16 c10
+
+# 15663562	resting#0 t#1 cells#2 expressed#3 low#4 levels#5 of#6 cys-ltr#7 .#8
+
+f17:[NIL,resting#0,t_cells#1]
+c11:[t_cells#1,expressed#3,{cys-ltr#7:low_levels#4}]
+stmt9 = f17 c11
+
+# 15663562	upon#0 anti-cd3#1 mab#2 activation#3 ,#4 a#5 progressive#6 increase#7 in#8 cys-ltr(1)#9 and#10 -ltr(2)#11 expression#12 was#13 observed#14 .#15
+
+f18:[{cys-ltr(1)_and_-ltr(2)_expression#9:progressive_increase#6},was_observed#13,NIL]
+c12:[NIL,upon#0,anti-cd3_mab_activation#1]
+stmt10 = f18 c12
+
+# 15663562	exposure#0 to#1 mnt#2 reduced#3 proliferative#4 response#5 to#6 tcr#7 engagement#8 ,#9 increased#10 ifn-gamma#11 production#12 and#13 led#14 to#15 apoptosis#16 at#17 minimal#18 concentrations#19 of#20 10(-6)#21 m#22 .#23
+
+f19:[{NIL#-1:exposure#0},reduced#3,{tcr_engagement#7:proliferative_response#4}]
+f20:[{NIL#-1:exposure#0},increased#10,ifn-gamma_production#11]
+f21:[{NIL#-1:exposure#0},led_to#14,apoptosis#16]
+c13:[{NIL#-1:exposure#0},to#1,mnt#2]
+c14:[apoptosis#16,at#17,{10(-6)_m#21:minimal_concentrations#18}]
+stmt11 = f19 f20 f21 c13 c14
+
+# 15663562	a#0 progressive#1 loss#2 in#3 bad#4 and#5 b#6 cell#7 lymphoma/leukaemia-2#8 activities#9 ,#10 and#11 an#12 increase#13 in#14 the#15 expression#16 of#17 cd27#18 ,#19 traf3#20 ,#21 trail#22 ,#23 p53#24 and#25 fas#26 genes#27 were#28 alsoobserved#29 .#30
+
+f22:[{bad_and_b_cell_lymphoma/leukaemia-2_activities#4:progressive_loss#1},were_alsoobserved#28,NIL]
+f23:[{NIL#-1:increase#13},were_alsoobserved#28,NIL]
+c15:[{NIL#-1:increase#13},in#14,{cd27#18:expression#16}]
+c16:[{NIL#-1:increase#13},in#14,{traf3#20:expression#16}]
+c17:[{NIL#-1:increase#13},in#14,{trail#22:expression#16}]
+c18:[{NIL#-1:increase#13},in#14,{p53#24:expression#16}]
+c19:[{NIL#-1:increase#13},in#14,{fas_genes#26:expression#16}]
+stmt12 = f22 f23 c15 c16 c17 c18 c19
+
+# 15663562	biological#0 effects#1 of#2 mnt#3 delineate#4 a#5 complex#6 picture#7 of#8 gene#9 activation#10 and#11 repression#12 ,#13 probably#14 induced#15 by#16 cys-ltr#17 blockade#18 .#19
+
+f24:[{mnt#3:biological_effects#0},delineate#4,{gene_activation#9:complex_picture#6}]
+c20:[{mnt#3:biological_effects#0},delineate#4,{repression#12:complex_picture#6}]
+c21:[NIL,probably_induced_by#14,cys-ltr_blockade#17]
+stmt13 = f24 c20 c21
+
+# 15663562	the#0 induction#1 of#2 apoptosis#3 in#4 allergen-specific#5 t#6 cell#7 population#8 ,#9 as#10 a#11 final#12 result#13 ,#14 appears#15 fundamental#16 in#17 the#18 treatment#19 of#20 asthma#21 .#22
+
+f25:[{apoptosis#3:induction#1},appears_fundamental_in#15,{asthma#21:treatment#19}]
+c22:[{apoptosis#3:induction#1},in#4,allergen-specific_t_cell_population#5]
+stmt14 = f25 c22
+
