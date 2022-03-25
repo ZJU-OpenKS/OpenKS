@@ -253,6 +253,20 @@ class KGC2LearnModel(OpenKSModel):
 	def run(self, *args):
 		return NotImplemented
 
+  
+class RelationExtractionModel(OpenKSModel):
+    def __init__(self):
+        super().__init__()
+
+    def data_reader(self, *args):
+        return NotImplemented
+
+    def evaluate(self, *args):
+        return NotImplemented
+
+    def run(self):
+        return NotImplemented 
+ 
 
 class HypernymDiscoveryModel(OpenKSModel):
     def __init__(self):

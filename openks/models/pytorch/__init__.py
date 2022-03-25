@@ -15,5 +15,6 @@ from .kgc2_modules import *
 from .kg_learn_dist import *
 # from .gen_modules import *
 from .kg_learn_dist import *
+from .ke_relext import *
 from .dataloader import *
 
