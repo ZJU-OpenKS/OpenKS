@@ -13,8 +13,17 @@ from .ke_modules import *
 from .kgc1_modules import *
 from .kgc2_modules import *
 from .kg_learn_dist import *
+
+from .kg_learn_dist import *
+
+# from .visual_entity_learn import *
+from .visual_relation_learn import *
+from .hoi_learn import *
+
+
 # from .gen_modules import *
 from .kg_learn_dist import *
 from .ke_relext import *
+
 from .dataloader import *
 

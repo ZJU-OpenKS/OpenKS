@@ -149,6 +149,9 @@ celerybeat-schedule
 .project
 .pydevproject
 
+# vim
+*.swp
+
 # mkdocs documentation
 /site
 
@@ -161,6 +164,9 @@ dmypy.json
 .pyre/
 
 logs/
+
+# Pytorch Models
+*.pth
 
 # IDE configure
 .vscode/

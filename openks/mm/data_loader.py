@@ -21,6 +21,6 @@ class GlobDataLoader(DataLoader):
 
     def __call__(self, graph: MMGraph) -> MMGraph:
         for file_name in self.root_dir.glob(self.pattern):
-            graph.add_entity(ImageEntity(file_name=file_name))
+            graph.add_entity(ImageEntity(file_name=str(file_name)))
 
         return graph

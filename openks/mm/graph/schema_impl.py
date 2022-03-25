@@ -1,3 +1,5 @@
+from typing import Optional
+
 from PIL import Image
 
 from .schema import Entity, Relation
@@ -41,8 +43,22 @@ class ImageViewEntity(Entity):
     x1: int
     y1: int
 
-    def __init__(self, image: ImageEntity, x0: int, y0: int, x1: int, y1: int):
-        super().__init__(image_id=image.id, x0=x0, y0=y0, x1=x1, y1=y1)
+    label: Optional[str] = None
+    score: Optional[float] = None
+
+    def __init__(
+        self,
+        image: ImageEntity,
+        x0: int,
+        y0: int,
+        x1: int,
+        y1: int,
+        label: Optional[str] = None,
+        score: Optional[float] = None,
+    ):
+        super().__init__(
+            image_id=image.id, x0=x0, y0=y0, x1=x1, y1=y1, label=label, score=score
+        )
 
         self._src_image = image
 
@@ -63,4 +79,16 @@ class SemanticallySimilar(Relation):
     _concept = "semantically_similar"
 
     # properties
+    score: float
+
+
+class HasEntity(Relation):
+    _concept = "has_entity"
+
+
+class Interact(Relation):
+    _concept = "interact"
+
+    # properties
+    predicate: str
     score: float

@@ -1,15 +1,18 @@
 import copy
 from collections import defaultdict
 from inspect import isfunction
-from typing import Any, Dict, Iterable
+from typing import Any, Dict, Iterable, Tuple, Union
 from uuid import uuid4
+
+GenericAlias = type(Dict)
+NoneType = type(None)
 
 
 class SchemaMetaclass(type):
     schemas = {}
 
     @staticmethod
-    def get_attr_from_bases(key, attrs, bases):
+    def _get_attr_from_bases(key, attrs, bases):
         value = attrs.pop(key, None)
         if value is None:
             key = key[1:]
@@ -28,27 +31,35 @@ class SchemaMetaclass(type):
         if _id in mcs.schemas:
             return mcs.schemas.get(_id)
 
-        _type = mcs.get_attr_from_bases("_type", attrs, bases)
-        _concept = mcs.get_attr_from_bases("_concept", attrs, bases)
+        _type = mcs._get_attr_from_bases("_type", attrs, bases)
+        _arguments = mcs._get_attr_from_bases("_arguments", attrs, bases)
+        _concept = mcs._get_attr_from_bases("_concept", attrs, bases)
         # TODO: infer parent from bases
-        _parent = mcs.get_attr_from_bases("_parent", attrs, bases)
-        is_abstract = any(k is None for k in [_type, _concept])
-        _members = mcs.get_attr_from_bases("_members", attrs, bases)
+        _parent = mcs._get_attr_from_bases("_parent", attrs, bases)
+        is_abstract = any(k is None for k in [_type, _arguments, _concept])
+        _members = mcs._get_attr_from_bases("_members", attrs, bases)
 
-        # TODO: collect annotations from bases
+        # Collect properties from bases
+        properties = {}
+        for base in reversed(bases):
+            if hasattr(base, "__schema__"):
+                properties.update(base.__schema__["properties"])
         annotations = attrs.get("__annotations__", {})
-        properties = {
-            k: {
-                "name": k,
-                "range": v.__name__,
+        properties.update(
+            {
+                k: {
+                    "name": k,
+                    "range": _get_class_name(v),
+                }
+                for k, v in annotations.items()
+                if not k.startswith("_") and not isfunction(v)
             }
-            for k, v in annotations.items()
-            if not k.startswith("_") and not isfunction(v)
-        }
+        )
 
         attrs["__schema__"] = {
             "id": _id,
             "type": _type,
+            "arguments": _arguments,
             "concept": _concept,
             "parent": _parent,
             "members": _members,
@@ -65,7 +76,17 @@ class SchemaMetaclass(type):
         # Hook __init__
         assert hasattr(cls, "__schema__") and not cls.__schema__["is_abstract"]
 
-        # TODO: validation
+        # Validation and parse from str
+        num_arguments = len(cls.__schema__["arguments"])
+        args = args[:num_arguments] + tuple(
+            _validate_and_parse(arg, schema)
+            for arg, schema in zip(args[num_arguments:], cls.__schema__["properties"])
+        )
+        kwargs = {
+            k: _validate_and_parse(v, cls.__schema__["properties"][k])
+            for k, v in kwargs.items()
+            if k not in cls.__schema__["arguments"]
+        }
         return super().__call__(*args, **kwargs)
 
 
@@ -79,6 +100,8 @@ class Schema(dict, metaclass=SchemaMetaclass):
             )
 
     def __setattr__(self, key, value):
+        if key in self.__schema__["properties"]:
+            value = _validate_and_parse(value, self.__schema__["properties"][key])
         self[key] = value
 
     @classmethod
@@ -94,18 +117,17 @@ class Schema(dict, metaclass=SchemaMetaclass):
     def dump(self):
         raise NotImplementedError
 
+    def properties(self) -> Iterable[Tuple[str, Any]]:
+        for key in self.__schema__["properties"].keys():
+            yield key, self[key] if key in self else None
+
     def __str__(self) -> str:
-        # TODO: format as per schema
         return "{}({})".format(
             self.__class__.__name__,
             ", ".join(
                 [f"_type={self.__schema__['type'].__repr__()}"]
                 + [f"_concept={self.__schema__['concept'].__repr__()}"]
-                + [
-                    f"{k}={v.__repr__()}"
-                    for k, v in self.items()
-                    if not k.startswith("_")
-                ]
+                + [f"{k}={v.__repr__()}" for k, v in self.properties()]
             ),
         )
 
@@ -114,9 +136,9 @@ class Schema(dict, metaclass=SchemaMetaclass):
 
 class Entity(Schema):
     _type = "entity"
+    _arguments = ("id",)
 
     def __init__(self, *properties, **kw_properties):
-        # TODO: validation
         all_properties = {
             k: v for k, v in zip(self.__schema__["properties"].keys(), properties)
         }
@@ -124,16 +146,15 @@ class Entity(Schema):
         super().__init__(id=str(uuid4()), **all_properties)
 
     def dump(self):
-        # TODO: dump as per the schema
-        properties = [v for k, v in self.items() if k != "id" and not k.startswith("_")]
-        return self.id, self.__schema__["concept"], *properties
+        properties = tuple(v for k, v in self.properties() if k != "id")
+        return (self.id, self.__schema__["concept"]) + properties
 
 
 class Relation(Schema):
     _type = "relation"
+    _arguments = ("subject", "object")
 
     def __init__(self, subject: Entity, object: Entity, *properties, **kw_properties):
-        # TODO: validation
         all_properties = {
             k: v for k, v in zip(self.__schema__["properties"].keys(), properties)
         }
@@ -141,13 +162,14 @@ class Relation(Schema):
         super().__init__(subject=subject, object=object, **all_properties)
 
     def dump(self):
-        # TODO: dump as per the schema
-        properties = [
-            v
-            for k, v in self.items()
-            if k not in ["subject", "object"] and not k.startswith("_")
-        ]
-        return self.subject.id, self.__schema__["concept"], self.object.id, *properties
+        properties = tuple(
+            v for k, v in self.properties() if k not in ["subject", "object"]
+        )
+        return (
+            self.subject.id,
+            self.__schema__["concept"],
+            self.object.id,
+        ) + properties
 
 
 class SchemaSet:
@@ -202,3 +224,46 @@ def load_schema(schema: Dict[str, Any]):
 
 def load_schemas(schemas: Iterable[Dict[str, Any]]):
     return map(load_schema, schemas)
+
+
+def _validate_and_parse(value, schema):
+    if value is None:
+        return value
+
+    tp = type(value)
+    if "range" not in schema:
+        return value
+
+    schema_range = schema["range"]
+    if tp.__name__ == schema_range:
+        return value
+    elif tp is str:
+        if schema_range in ["int", "float"]:
+            return tp(value)
+        elif schema_range == "bool":
+            return value in ["True", "true"]
+        else:
+            return value
+    else:
+        raise TypeError(f"Unexpected value type: {tp}. {schema_range} is expected.")
+
+
+def _get_class_name(tp) -> str:
+    if isinstance(tp, GenericAlias):
+        origin = tp.__origin__
+        if origin is Union:
+            internal_types = tp.__args__
+            if len(internal_types) == 2 and (
+                internal_types[0] is NoneType or internal_types[1] is NoneType
+            ):
+                # Optional[T]
+                internal_type = (
+                    internal_types[0]
+                    if internal_types[0] is not NoneType
+                    else internal_types[1]
+                )
+                return _get_class_name(internal_type)
+    elif hasattr(tp, "__name__"):
+        return tp.__name__
+
+    raise NotImplementedError(tp)
