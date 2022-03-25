@@ -79,6 +79,16 @@ class TorchModel(nn.Module, Register):
 				p.grad = torch.from_numpy(g)
 
 
+class KGC1TorchModel(nn.Module, Register):
+	def __init__(self, **kwargs):
+		super(KGC1TorchModel, self).__init__()
+
+
+class KGC2TorchModel(nn.Module, Register):
+	def __init__(self, **kwargs):
+		super(KGC2TorchModel, self).__init__()
+
+
 class TorchDataset(data.Dataset):
 	def __init__(self, samples):
 		self.samples = samples
@@ -186,7 +196,126 @@ class RecModel(OpenKSModel):
 	def run(self, *args):
 		return NotImplemented
 
+class KGC1LearnModel(OpenKSModel):
+	''' Base class for knowledge graph compensation learning trainer '''
+	def __init__(self, name: str = 'model-name', graph: MTG = None, args: List = None):
+		self.name = name
+		self.graph = graph
 
+	def parse_args(self):
+		return NotImplemented
+
+	def triples_reader(self, *args):
+		return NotImplemented
+
+	def triples_generator(self, *args):
+		return NotImplemented
+
+	def evaluate(self, *args):
+		return NotImplemented
+
+	def load_model(self, *args):
+		return NotImplemented
+
+	def save_model(self, *args):
+		return NotImplemented
+
+	def run(self, *args):
+		return NotImplemented
+
+
+class KGC2LearnModel(OpenKSModel):
+	''' Base class for knowledge graph compensation learning trainer '''
+	def __init__(self, name: str = 'model-name', graph: MTG = None, args: List = None):
+		self.name = name
+		self.graph = graph
+
+	def parse_args(self):
+		return NotImplemented
+
+	def triples_reader(self, *args):
+		return NotImplemented
+
+	def triples_generator(self, *args):
+		return NotImplemented
+
+	def evaluate(self, *args):
+		return NotImplemented
+
+	def load_model(self, *args):
+		return NotImplemented
+
+	def save_model(self, *args):
+		return NotImplemented
+
+	def run(self, *args):
+		return NotImplemented
+
+
+class NerModel(OpenKSModel):
+	''' Base class for ner trainer '''
+	def __init__(self, name: str = 'model-name', args: List = None):
+		self.name = name
+
+	def data_reader(self, *args):
+		return NotImplemented
+
+	def evaluate(self, *args):
+		return NotImplemented
+
+	def load_model(self, *args):
+		return NotImplemented
+
+	def save_model(self, *args):
+		return NotImplemented
+
+	def run(self, *args):
+		return NotImplemented
+
+
+class Relation_ExtractionModel(OpenKSModel):
+	''' Base class for relation extraction trainer '''
+	def __init__(self, name: str = 'model-name', args: List = None):
+		self.name = name
+
+	def data_reader(self, *args):
+		return NotImplemented
+
+	def evaluate(self, *args):
+		return NotImplemented
+
+	def load_model(self, *args):
+		return NotImplemented
+
+	def save_model(self, *args):
+		return NotImplemented
+
+	def run(self, *args):
+		return NotImplemented
+
+  
+class HypernymDiscoveryModel(OpenKSModel):
+    def __init__(self):
+        super().__init__()
+
+    def data_reader(self, *args):
+        return NotImplemented
+
+    def evaluate(self, *args):
+        return NotImplemented
+
+    def run(self):
+        return NotImplemented
+
+
+class HypernymExtractModel(OpenKSModel):
+    def __init__(self):
+        super().__init__()
+
+    def entity2hyper_lst(self, *args):
+        return NotImplemented
+      
+      
 class VisualConstructionModel(OpenKSModel):
 	''' 
 	Base class for visual part of multimedia knowledge graph building trainer, 

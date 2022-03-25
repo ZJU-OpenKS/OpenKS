@@ -34,7 +34,7 @@ args = {
 platform = 'PyTorch'
 # executor = 'KGLearn'
 executor = 'KGLearn-dist'
-model = 'TransE'
+model = 'TransE-dist'
 print("根据配置，使用 {} 框架，{} 类型的 {} 模型。".format(platform, executor, model))
 print("-----------------------------------------------")
 # 模型训练

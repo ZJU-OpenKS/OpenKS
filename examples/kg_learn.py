@@ -13,10 +13,10 @@ def parse_args(args=None):
 		usage='train.py [<args>] [-h | --help]'
 	)
 	parser.add_argument('--model', default='TransE', type=str)
-	parser.add_argument('--dataset', default='FB15k', type=str)
+	parser.add_argument('--dataset', default='FB-simple', type=str)
 	parser.add_argument('-d', '--hidden_dim', default=1000, type=int)
-	parser.add_argument('--max_steps', default=150000, type=int)
-	parser.add_argument('-ef', '--eval_freq', default=10000, type=int)
+	parser.add_argument('--epoch', default=150, type=int)
+	parser.add_argument('-ef', '--eval_freq', default=50, type=int)
 	parser.add_argument('--test_batch_size', default=16, type=int, help='valid/test batch size')
 	parser.add_argument('-nrs', '--random_split', action='store_false', default=True)
 	parser.add_argument('--split_ratio', default=0.05, type=float)
@@ -52,9 +52,9 @@ OpenKSModel.list_modules()
 
 # 算法模型选择配置
 args = {
-	'gpu': True,
+	'gpu': False,
 	'learning_rate': 0.0001,
-	'epoch': 1024,
+	'epoch': 150,
 	'batch_size': 1024, 
 	'optimizer': 'adam',
 	'margin': 4.0,
@@ -82,10 +82,11 @@ model = 'TransE'
 model = args_from_parse.model
 args['model_name'] = model
 args['hidden_size'] = args_from_parse.hidden_dim
-args['max_steps'] = args_from_parse.max_steps
+args['epoch'] = args_from_parse.epoch
 args['eval_freq'] = args_from_parse.eval_freq
-args['model_dir'] = 'models/'+model+'_'+dataset_name+'_'+str(args['random_seed'])
+args['model_dir'] = 'models/' + model + '_' + dataset_name + '_' + str(args['random_seed'])
 args['save_path'] = args['model_dir']
+args['market_path'] = 'openks/market/trained_models/' + model + '_' + dataset_name + '.onnx'
 args['double_entity_embedding'] = args_from_parse.double_entity_embedding
 args['double_relation_embedding'] = args_from_parse.double_relation_embedding
 args['random_split'] = args_from_parse.random_split
