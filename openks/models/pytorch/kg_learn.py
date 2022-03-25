@@ -19,7 +19,6 @@ from .dataloader import TrainDataset, TestDataset
 from .dataloader import BidirectionalOneShotIterator
 import json
 
-import pdb
 
 logger = logging.getLogger(__name__)
 
@@ -104,6 +103,18 @@ class KGLearnTorch(KGLearnModel):
 		best_score = checkpoint['best_score']
 		logging.info('load best-valid-score model at step %d: %f' % (init_step-1, best_score))
 		return init_step, current_learning_rate, warm_up_steps, best_score
+
+	def model_to_onnx(self, model, mode='single'):
+		input_head = torch.index_select(model.entity_embedding, 0, torch.tensor([0]))
+		input_rel = torch.index_select(model.relation_embedding, 0, torch.tensor([0]))
+		input_tail = torch.index_select(model.entity_embedding, 0, torch.tensor([1]))
+		input_head = input_head[None, :]
+		input_rel = input_rel[None, :]
+		input_tail = input_tail[None, :]
+		input = (input_head, input_rel, input_tail, mode)
+		input_names = ['head_input', 'relation_input', 'tail_input']
+		output_names = ['score']
+		torch.onnx.export(model, input, self.args['market_path'], verbose=True, input_names=input_names, output_names=output_names)
 
 	def save_model(self, model, optimizer, save_variable_list):
 		'''
@@ -209,7 +220,7 @@ class KGLearnTorch(KGLearnModel):
 		opt = optimizer_available[self.args['optimizer']](model.parameters(), lr=current_learning_rate)
 
 		if self.args['warm_up_steps'] is None:
-			warm_up_steps = self.args['max_steps'] // 2
+			warm_up_steps = self.args['epoch'] // 2
 		else:
 			warm_up_steps = self.args['warm_up_steps']
 
@@ -222,7 +233,7 @@ class KGLearnTorch(KGLearnModel):
 		# for epoch in range(start_epoch, self.args['epoch'] + 1):
 		logging.info('learning_rate = %d' % current_learning_rate)
 		training_logs = []
-		for step in range(init_step, self.args['max_steps']+1):
+		for step in range(init_step, self.args['epoch']+1):
 			log = self.train_step(model, opt, train_iterator, self.args)
 			training_logs.append(log)
 			if step >= warm_up_steps:
@@ -251,10 +262,11 @@ class KGLearnTorch(KGLearnModel):
 						'warm_up_steps': warm_up_steps,
 						'best_score': best_score
 					}
-					self.save_model(model, opt, save_variable_list)
+					# self.save_model(model, opt, save_variable_list)
+					self.model_to_onnx(model)
 
 		# load saved model and test
-		self.load_model(model, opt)
+		# self.load_model(model, opt)
 		model = model.to(device)
 
 		if self.args['do_valid']:
