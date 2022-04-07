@@ -1,0 +1,109 @@
+# 15472922	cytokine#0 secretion#1 from#2 mononuclear#3 cells#4 cultured#5 in#6 vitro#7 with#8 starch-based#9 polymers#10 and#11 poly-l-lactide#12 .#13 
+
+c1:[cytokine_secretion#0,from#2,mononuclear_cells_cultured_in_vitro#3]
+c2:[mononuclear_cells_cultured_in_vitro#3,with#8,starch-based_polymers#9]
+c3:[mononuclear_cells_cultured_in_vitro#3,with#8,poly-l-lactide#12]
+stmt1 = c1 c2 c3
+
+# 15472922	the#0 cytokine#1 network#2 is#3 one#4 of#5 the#6 major#7 controlling#8 systems#9 of#10 the#11 inflammatory#12 process#13 ,#14 driving#15 the#16 magnitude#17 and#18 duration#19 of#20 the#21 host#22 response#23 against#24 invading#25 microorganisms#26 ,#27 foreign#28 materials#29 ,#30 or#31 altered#32 internal#33 stimuli#34 .#35 
+
+f1:[cytokine_network#1,is_one_of#3,{inflammatory_process#12:major_controlling_systems#7}]
+f2:[cytokine_network#1,driving#15,{host_response#22:magnitude#17}]
+f3:[cytokine_network#1,driving#15,{host_response#22:duration#19}]
+c4:[{host_response#22:magnitude#17},against#24,invading_microorganisms#25]
+c5:[{host_response#22:magnitude#17},against#24,foreign_materials#28]
+c6:[{host_response#22:magnitude#17},against#24,altered_internal_stimuli#32]
+c7:[{host_response#22:duration#19},against#24,invading_microorganisms#25]
+c8:[{host_response#22:duration#19},against#24,foreign_materials#28]
+c9:[{host_response#22:duration#19},against#24,altered_internal_stimuli#32]
+stmt2 = f1 f2 f3 c4 c5 c6 c7 c8 c9
+
+# 15472922	pro-#0 and#1 antiinflammatory#2 cytokines#3 were#4 quantified#5 after#6 in#7 vitro#8 culture#9 of#10 a#11 mixed#12 population#13 of#14 monocytes/macrophages#15 and#16 lymphocytes#17 with#18 biodegradable#19 polymers#20 .#21 
+
+f4:[pro-#0,were_quantified_after_in#4,{mixed_population_of_monocytes/macrophages#12:vitro_culture#8}]
+f5:[pro-#0,were_quantified_after_in#4,{lymphocytes#17:vitro_culture#8}]
+c10:[{mixed_population_of_monocytes/macrophages#12:vitro_culture#8},with#18,biodegradable_polymers#19]
+c11:[{lymphocytes#17:vitro_culture#8},with#18,biodegradable_polymers#19]
+stmt3 = f4 f5 c10 c11
+
+# 15472922	different#0 blends#1 of#2 starch-based#3 polymers#4 and#5 their#6 composites#7 filled#8 with#9 hydroxyapatite#10 were#11 studied#12 and#13 compared#14 with#15 poly-l-lactide#16 .#17 
+
+f6:[{starch-based_polymers#3:different_blends#0},were_studied_and_compared_with#11,poly-l-lactide#16]
+f7:[{starch-based_polymers#3:composites#7},were_studied_and_compared_with#11,poly-l-lactide#16]
+c12:[{starch-based_polymers#3:composites#7},filled_with#8,hydroxyapatite#10]
+stmt4 = f6 f7 c12
+
+# 15472922	interleukin#0 (il)-1beta#1 ,#2 il-6#3 ,#4 and#5 tumour#6 necrosis#7 factor-alpha#8 were#9 investigated#10 as#11 the#12 markers#13 of#14 immunological#15 reactivity#16 because#17 they#18 are#19 known#20 to#21 act#22 at#23 the#24 early#25 stages#26 of#27 injury/invasion#28 .#29 
+
+f8:[interleukin_(il)-1beta#0,were_investigated_as#9,{immunological_reactivity#15:markers#13}]
+f9:[interleukin_(il)-1beta#0,are_known_to_act_at#19,{injury/invasion#28:early_stages#25}]
+f10:[il-6#3,were_investigated_as#9,{immunological_reactivity#15:markers#13}]
+f11:[il-6#3,are_known_to_act_at#19,{injury/invasion#28:early_stages#25}]
+f12:[tumour_necrosis_factor-alpha#6,were_investigated_as#9,{immunological_reactivity#15:markers#13}]
+f13:[tumour_necrosis_factor-alpha#6,are_known_to_act_at#19,{injury/invasion#28:early_stages#25}]
+stmt5 = f8 f9 f10 f11 f12 f13
+
+# 15472922	interferon-gamma#0 ,#1 recognized#2 as#3 a#4 proinflammatory#5 cytokine#6 ,#7 although#8 not#9 present#10 during#11 early#12 responses#13 was#14 also#15 investigated#16 .#17 
+
+f14:[interferon-gamma#0,not_present_during#9,early_responses#12]
+f15:[interferon-gamma#0,was_also_investigated#14,NIL]
+c13:[interferon-gamma#0,recognized_as#2,proinflammatory_cytokine#5]
+stmt6 = f14 f15 c13
+
+# 15472922	contrarily#0 ,#1 il-4#2 derived#3 from#4 t#5 lymphocytes#6 ,#7 was#8 investigated#9 because#10 it#11 is#12 an#13 immunoregulator#14 that#15 counteracts#16 some#17 aspects#18 of#19 inflammation#20 .#21 
+
+f16:[il-4#2,was_investigated#8,NIL]
+f17:[il-4#2,is#12,immunoregulator#14]
+c14:[il-4#2,derived_from#3,t_lymphocytes#5]
+c15:[immunoregulator#14,counteracts#16,{inflammation#20:aspects#18}]
+stmt7 = f16 f17 c14 c15
+
+# 15472922	t#0 lymphocyte#1 activation#2 was#3 also#4 determined#5 by#6 quantifying#7 il-2#8 .#9 
+
+f18:[t_lymphocyte_activation#0,was_also_determined_by_quantifying#3,il-2#8]
+stmt8 = f18
+
+# 15472922	the#0 results#1 support#2 the#3 hypothesis#4 that#5 different#6 biodegradable#7 polymers#8 can#9 affect#10 mononuclear#11 cell#12 activation#13 and#14 the#15 production#16 of#17 several#18 cytokines#19 associated#20 with#21 the#22 inflammatory#23 process#24 .#25 
+
+f19:[{NIL#-1:results#1},support_the_hypothesis_that#2,NIL]
+f20:[biodegradable_polymers#7,can_affect#9,mononuclear_cell_activation#11]
+f21:[biodegradable_polymers#7,can_affect#9,{cytokines#19:production#16}]
+c16:[{cytokines#19:production#16},associated_with#20,inflammatory_process#23]
+stmt9 = f19 f20 f21 c16
+
+# 15472922	no#0 il-2#1 or#2 interferon-gamma#3 was#4 found#5 in#6 the#7 culture#8 supernatants#9 after#10 3#11 ,#12 7#13 ,#14 and#15 14#16 days#17 in#18 the#19 presence#20 of#21 any#22 of#23 the#24 materials#25 .#26 
+
+f22:[il-2#1,was_found_in#4,culture_supernatants#8]
+f23:[interferon-gamma#3,was_found_in#4,culture_supernatants#8]
+c17:[NIL,no#0,il-2#1]
+c18:[NIL,no#0,interferon-gamma#3]
+c19:[culture_supernatants#8,after#10,{NIL#-1:3#11}]
+c20:[culture_supernatants#8,after#10,{NIL#-1:7#13}]
+c21:[culture_supernatants#8,after#10,{NIL#-1:14_days#16}]
+c22:[{NIL#-1:14_days#16},in#18,{materials#25:presence#20}]
+stmt10 = f22 f23 c17 c18 c19 c20 c21 c22
+
+# 15472922	il-6#0 was#1 detected#2 in#3 the#4 highest#5 amounts#6 ,#7 for#8 all#9 the#10 conditions#11 ,#12 followed#13 by#14 tumour#15 necrosis#16 factor-alpha#17 .#18 
+
+f24:[il-6#0,was_detected_in#1,{NIL#-1:highest_amounts#5}]
+c23:[il-6#0,followed_by#13,tumour_necrosis_factor-alpha#15]
+stmt11 = f24 c23
+
+# 15472922	il-1beta#0 was#1 produced#2 in#3 very#4 low#5 amounts#6 ,#7 being#8 undetectable#9 with#10 some#11 of#12 the#13 starch-based#14 materials#15 .#16 
+
+f25:[il-1beta#0,was_produced_in#1,{NIL#-1:very_low_amounts#4}]
+f26:[il-1beta#0,being_undetectable_with#8,starch-based_materials#14]
+stmt12 = f25 f26
+
+# 15472922	il-4#0 was#1 the#2 only#3 cytokine#4 that#5 did#6 not#7 demonstrate#8 any#9 significant#10 difference#11 within#12 this#13 group#14 of#15 materials#16 .#17 
+
+f27:[il-4#0,was#1,cytokine#4]
+c24:[cytokine#4,did_not_demonstrate_any#6,{NIL#-1:significant_difference#10}]
+c25:[{NIL#-1:significant_difference#10},within#12,materials#16]
+stmt13 = f27 c24 c25
+
+# 15472922	starch-based#0 polymers#1 and#2 composites#3 induced#4 lower#5 production#6 of#7 proinflammatory#8 cytokines#9 in#10 comparison#11 to#12 poly-l-lactide#13 .#14 
+
+f28:[starch-based_polymers#0,induced#4,{proinflammatory_cytokines#8:lower_production#5}]
+c26:[{proinflammatory_cytokines#8:lower_production#5},in_comparison_to#10,poly-l-lactide#13]
+stmt14 = f28 c26

@@ -1,0 +1,96 @@
+# 11922564	synergistic#0 inhibitory#1 effect#2 of#3 cyclosporin#4 a#5 and#6 vitamin#7 d#8 derivatives#9 on#10 t-lymphocyte#11 proliferation#12 in#13 active#14 ulcerative#15 colitis#16 .#17 
+
+c1:[{cyclosporin_a#4:synergistic_inhibitory_effect#0},on#10,t-lymphocyte_proliferation#11]
+c2:[{vitamin_d_derivatives#7:synergistic_inhibitory_effect#0},on#10,t-lymphocyte_proliferation#11]
+c3:[t-lymphocyte_proliferation#11,in#13,active_ulcerative_colitis#14]
+stmt1 = c1 c2 c3
+
+# 11922564	1@25-dihydroxyvitamin#0 d3#1 [#2 1@25(oh)2d3#3 ]#4 ,#5 the#6 hormonal#7 active#8 form#9 of#10 vitamin#11 d3#12 ,#13 could#14 represent#15 a#16 potentially#17 therapeutic#18 agent#19 in#20 autoimmune#21 diseases#22 .#23 
+
+f1:[1@25-dihydroxyvitamin_d3_[_1@25(oh)2d3_]#0,NIL#-1,{vitamin_d3#11:hormonal_active_form#7}]
+f2:[1@25-dihydroxyvitamin_d3_[_1@25(oh)2d3_]#0,could_represent#14,therapeutic_agent#18]
+c4:[therapeutic_agent#18,in#20,autoimmune_diseases#21]
+stmt2 = f1 f2 c4
+
+# 11922564	cyclosporin#0 a#1 shows#2 immunoregulatory#3 properties#4 ,#5 which#6 ,#7 in#8 many#9 respects#10 ,#11 seem#12 to#13 be#14 similar#15 to#16 those#17 of#18 1@25(oh)2d3#19 .#20 
+
+f3:[cyclosporin_a#0,shows#2,immunoregulatory_properties#3]
+c5:[immunoregulatory_properties#3,seem_to_be_similar_to#12,1@25(oh)2d3#19]
+stmt3 = f3 c5
+
+# 11922564	our#0 aim#1 was#2 to#3 investigate#4 the#5 possible#6 synergistic#7 effect#8 exerted#9 by#10 csa#11 in#12 combination#13 with#14 1@25(oh)2d3#15 or#16 its#17 nonhypercalcemic#18 analogues#19 ,#20 eb#21 1089#22 and#23 kh#24 1060#25 ,#26 on#27 the#28 proliferative#29 response#30 of#31 t#32 lymphocytes#33 obtained#34 from#35 active#36 ulcerative#37 colitispatients#38 .#39 
+
+f4:[{NIL#-1:aim#1},was_to_investigate#2,possible_synergistic_effect#6]
+c6:[possible_synergistic_effect#6,exerted_by#9,csa#11]
+c7:[csa#11,in_combination_with#12,{1@25(oh)2d3#15:nonhypercalcemic_analogues#18}]
+c8:[csa#11,in_combination_with#12,eb_1089#21]
+c9:[csa#11,in_combination_with#12,kh_1060#24]
+c10:[NIL,on#27,{t_lymphocytes#32:proliferative_response#29}]
+c11:[{t_lymphocytes#32:proliferative_response#29},obtained_from#34,active_ulcerative_colitispatients#36]
+stmt4 = f4 c6 c7 c8 c9 c10 c11
+
+# 11922564	the#0 t#1 lymphocyte-enriched#2 population#3 was#4 treated#5 with#6 phytohemagglutinin#7 and#8 csa#9 alone#10 or#11 in#12 association#13 with#14 1@25(oh)2d3#15 or#16 eb#17 1089#18 or#19 kh#20 1060#21 .#22 
+
+f5:[t_lymphocyte-enriched_population#1,was_treated_with#4,phytohemagglutinin#7]
+f6:[t_lymphocyte-enriched_population#1,was_treated_with#4,csa#9]
+c12:[csa#9,alone_or_in_association_with#10,1@25(oh)2d3#15]
+c13:[csa#9,alone_or_in_association_with#10,eb_1089#17]
+c14:[csa#9,alone_or_in_association_with#10,kh_1060#20]
+stmt5 = f5 f6 c12 c13 c14
+
+# 11922564	cell#0 proliferation#1 was#2 determined#3 by#4 [3h]thymidine#5 incorporation#6 and#7 analyzed#8 on#9 day#10 5#11 ofculture#12 .#13 
+
+f7:[cell_proliferation#0,was_determined_by#2,[3h]thymidine_incorporation#5]
+f8:[cell_proliferation#0,analyzed_on#8,day_5_ofculture#10]
+stmt6 = f7 f8
+
+# 11922564	after#0 incubation#1 with#2 csa#3 ,#4 t#5 lymphocyte#6 proliferation#7 was#8 significantly#9 inhibited#10 in#11 comparison#12 with#13 the#14 vehicle-treated#15 cultures#16 .#17 
+
+f9:[t_lymphocyte_proliferation#5,was_significantly_inhibited#8,NIL]
+c15:[NIL,after_incubation_with#0,csa#3]
+c16:[t_lymphocyte_proliferation#5,in_comparison_with#11,vehicle-treated_cultures#15]
+stmt7 = f9 c15 c16
+
+# 11922564	however#0 ,#1 t#2 lymphocytes#3 from#4 ulcerative#5 colitis#6 patients#7 were#8 significantly#9 more#10 sensitive#11 to#12 csa#13 than#14 those#15 from#16 healthy#17 controls#18 .#19 
+
+f10:[t_lymphocytes#2,were_significantly_more_sensitive_to#8,csa#13]
+c17:[t_lymphocytes#2,from#4,ulcerative_colitis_patients#5]
+c18:[csa#13,than_those_from#14,healthy_controls#17]
+stmt8 = f10 c17 c18
+
+# 11922564	the#0 inhibition#1 in#2 t#3 lymphocyte#4 proliferation#5 ,#6 after#7 treatment#8 of#9 the#10 cultures#11 with#12 csa#13 associated#14 with#15 either#16 1@25(oh)2d3#17 or#18 eb#19 1089#20 or#21 kh#22 1060#23 ,#24 was#25 synergistic#26 at#27 well-definedconcentrations#28 .#29 
+
+f11:[{t_lymphocyte_proliferation#3:inhibition#1},was_synergistic_at#25,well-definedconcentrations#28]
+c19:[NIL,after#7,{cultures#11:treatment#8}]
+c20:[{cultures#11:treatment#8},with#12,csa#13]
+c21:[csa#13,associated_with#14,1@25(oh)2d3#17]
+c22:[csa#13,associated_with#14,eb_1089#19]
+c23:[csa#13,associated_with#14,kh_1060#22]
+stmt9 = f11 c19 c20 c21 c22 c23
+
+# 11922564	taking#0 into#1 account#2 the#3 lowest#4 csa#5 dose#6 ,#7 the#8 highest#9 synergistic#10 inhibition#11 in#12 the#13 proliferation#14 of#15 t#16 lymphocytes#17 prepared#18 from#19 ulcerative#20 colitis#21 patients#22 was#23 found#24 combining#25 csa#26 and#27 10#28 nm#29 of#30 1@25(oh)2d3#31 or#32 10#33 nm#34 of#35 eb#36 1089#37 or#38 kh#39 1060#40 at#41 the#42 three#43 concentrations#44 .#45 
+
+f12:[highest_synergistic_inhibition#9,was_found_combining#23,csa#26]
+f13:[highest_synergistic_inhibition#9,was_found_combining#23,{1@25(oh)2d3#31:10_nm#28}]
+f14:[highest_synergistic_inhibition#9,was_found_combining#23,{eb_1089#36:10_nm#33}]
+f15:[highest_synergistic_inhibition#9,was_found_combining#23,{kh_1060#39:10_nm#33}]
+c24:[NIL,taking_into_account#0,lowest_csa_dose#4]
+c25:[highest_synergistic_inhibition#9,in#12,{t_lymphocytes#16:proliferation#14}]
+c26:[{t_lymphocytes#16:proliferation#14},prepared_from#18,ulcerative_colitis_patients#20]
+c27:[csa#26,at#41,{concentrations#44:three#43}]
+c28:[{1@25(oh)2d3#31:10_nm#28},at#41,{concentrations#44:three#43}]
+c29:[{eb_1089#36:10_nm#33},at#41,{concentrations#44:three#43}]
+c30:[{kh_1060#39:10_nm#33},at#41,{concentrations#44:three#43}]
+stmt10 = f12 f13 f14 f15 c24 c25 c26 c27 c28 c29 c30
+
+# 11922564	the#0 results#1 obtained#2 ,#3 associating#4 the#5 lowest#6 csa#7 dose#8 and#9 the#10 lowest#11 kh#12 1060#13 concentration#14 ,#15 may#16 suggest#17 an#18 alternative#19 therapeutic#20 approach#21 in#22 these#23 patients#24 ,#25 reducing#26 the#27 dose#28 ,#29 and#30 consequently#31 the#32 toxicity#33 ,#34 of#35 csa#36 .#37
+
+f16:[{NIL#-1:results#1},may_suggest#16,alternative_therapeutic_approach#19]
+f17:[{NIL#-1:results#1},reducing#26,{csa#36:dose#28}]
+f18:[{NIL#-1:results#1},reducing#26,{csa#36:toxicity#33}]
+c31:[{NIL#-1:results#1},obtained#2,NIL]
+c32:[{NIL#-1:results#1},associating#4,lowest_csa_dose#6]
+c33:[{NIL#-1:results#1},associating#4,lowest_kh_1060_concentration#11]
+c34:[alternative_therapeutic_approach#19,in#22,patients#24]
+stmt11 = f16 f17 f18 c31 c32 c33 c34
+

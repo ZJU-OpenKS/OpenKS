@@ -1,0 +1,65 @@
+# 12064555	association#0 of#1 low#2 job#3 control#4 with#5 a#6 decrease#7 in#8 memory#9 t#10 lymphocytes#11 in#12 japanese#13 middle-aged#14 male#15 workers#16 in#17 an#18 electric#19 power#20 plant#21 .#22 
+
+c1:[{low_job_control#2:association#0},with#5,{memory_t_lymphocytes#9:decrease#7}]
+c2:[{memory_t_lymphocytes#9:decrease#7},in#12,japanese_middle-aged_male_workers#13]
+c3:[japanese_middle-aged_male_workers#13,in#17,electric_power_plant#19]
+stmt1 = c1 c2 c3
+
+# 12064555	to#0 clarify#1 the#2 relationship#3 between#4 perceived#5 job#6 stress#7 and#8 lymphocyte#9 subpopulations#10 ,#11 a#12 cross-sectional#13 study#14 was#15 conducted#16 in#17 231#18 male#19 electric#20 power#21 plant#22 workers#23 .#24 
+
+f1:[NIL,to_clarify#0,{NIL#-1:relationship#3}]
+f2:[cross-sectional_study#13,was_conducted_in#15,231_male_electric_power_plant_workers#18]
+c4:[{NIL#-1:relationship#3},between#4,perceived_job_stress#5]
+c5:[{NIL#-1:relationship#3},between#4,lymphocyte_subpopulations#9]
+stmt2 = f1 f2 c4 c5
+
+# 12064555	job#0 stress#1 ,#2 i.e.#3 ,#4 job#5 control#6 ,#7 job#8 demands#9 ,#10 and#11 social#12 support#13 at#14 work#15 ,#16 was#17 assessed#18 by#19 means#20 of#21 the#22 japanese#23 version#24 of#25 the#26 job#27 content#28 questionnaire#29 .#30 
+
+f3:[job_stress#0,i.e.#3,job_control#5]
+f4:[job_stress#0,i.e.#3,job_demands#8]
+f5:[job_stress#0,i.e.#3,social_support_at_work#12]
+f6:[job_stress#0,was_assessed_by_means_of#17,{job_content_questionnaire#27:japanese_version#23}]
+stmt3 = f3 f4 f5 f6
+
+# 12064555	blood#0 samples#1 were#2 taken#3 from#4 all#5 the#6 workers#7 ,#8 and#9 numbers#10 of#11 cd4+#12 t#13 lymphocyte#14 subpopulations#15 ,#16 total#17 cd4+#18 t#19 ,#20 t#21 lymphocytes#22 ,#23 cd16cd56+#24 natural#25 killer#26 cells#27 ,#28 total#29 lymphocytes#30 ,#31 and#32 white#33 blood#34 cells#35 were#36 determined#37 .#38 
+
+f7:[blood_samples#0,were_taken_from#2,workers#7]
+f8:[{cd4+_t_lymphocyte_subpopulations#12:numbers#10},were_determined#36,NIL]
+f9:[{total_cd4+_t#17:numbers#10},were_determined#36,NIL]
+f10:[{t_lymphocytes#21:numbers#10},were_determined#36,NIL]
+f11:[{cd16cd56+_natural_killer_cells#24:numbers#10},were_determined#36,NIL]
+f12:[{total_lymphocytes#29:numbers#10},were_determined#36,NIL]
+f13:[{white_blood_cells#33:numbers#10},were_determined#36,NIL]
+stmt4 = f7 f8 f9 f10 f11 f12 f13
+
+# 12064555	after#0 controlling#1 for#2 age#3 ,#4 number#5 of#6 cigarettes#7 smoked#8 per#9 day#10 ,#11 alcohol#12 drinking#13 ,#14 frequency#15 of#16 regular#17 exercise#18 ,#19 job#20 demands#21 ,#22 and#23 social#24 support#25 at#26 work#27 by#28 the#29 partial#30 correlation#31 coefficients#32 ,#33 numbers#34 of#35 memory#36 t#37 ,#38 total#39 cd4+#40 t#41 ,#42 and#43 total#44 t#45 lymphocytes#46 were#47 positively#48 correlated#49 with#50 job#51 control#52 .#53 
+
+f14:[{cigarettes_smoked_per_day#7:number#5},were_positively_correlated_with#47,job_control#51]
+f15:[{alcohol_drinking#12:number#5},were_positively_correlated_with#47,job_control#51]
+f16:[{regular_exercise#17:frequency#15},were_positively_correlated_with#47,job_control#51]
+f17:[{job_demands#20:number#5},were_positively_correlated_with#47,job_control#51]
+f18:[{social_support_at_work#24:number#5},were_positively_correlated_with#47,job_control#51]
+f19:[{memory_t#36:numbers#34},were_positively_correlated_with#47,job_control#51]
+f20:[{total_cd4+_t#39:numbers#34},were_positively_correlated_with#47,job_control#51]
+f21:[{total_t_lymphocytes#44:numbers#34},were_positively_correlated_with#47,job_control#51]
+c6:[NIL,after_controlling_for#0,{NIL#-1:age#3}]
+c7:[social_support_at_work#24,by#28,partial_correlation_coefficients#30]
+stmt5 = f14 f15 f16 f17 f18 f19 f20 f21 c6 c7
+
+# 12064555	neither#0 job#1 demands#2 nor#3 social#4 support#5 at#6 work#7 showed#8 significant#9 correlations#10 with#11 lymphocyte#12 subpopulations#13 .#14 
+
+f22:[job_demands#1,showed_significant_correlations_with#8,{lymphocyte#12:subpopulations#13}]
+f23:[social_support#4,showed_significant_correlations_with#8,{lymphocyte#12:subpopulations#13}]
+c8:[NIL,neither#0,job_demands#1]
+c9:[NIL,nor#3,social_support#4]
+c10:[social_support#4,at#6,{NIL#-1:work#7}]
+stmt6 = f22 f23 c8 c9 c10
+
+# 12064555	it#0 is#1 suggested#2 that#3 lower#4 job#5 control#6 is#7 associated#8 with#9 a#10 decrease#11 in#12 the#13 number#14 of#15 cd4+#16 cd45ro+#17 t#18 lymphocytes#19 in#20 male#21 middle-aged#22 workers#23 .#24 
+
+f24:[NIL,is_suggested_that#1,NIL]
+f25:[lower_job_control#4,is_associated_with#7,{NIL#-1:decrease#11}]
+c11:[{NIL#-1:decrease#11},in#12,{cd4+_cd45ro+_t_lymphocytes#16:number#14}]
+c12:[{cd4+_cd45ro+_t_lymphocytes#16:number#14},in#20,male_middle-aged_workers#21]
+stmt7 = f24 f25 c11 c12
+

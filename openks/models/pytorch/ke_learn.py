@@ -9,7 +9,7 @@ import torch.nn as nn
 import torch.utils.data.dataset as Dataset
 from sklearn.model_selection import train_test_split
 from ..model import KELearnModel
-from .ke_modules.nero_modules import read, nero_run
+#from .ke_modules.nero_modules import read, nero_run
 
 @KELearnModel.register("KELearn", "PyTorch")
 class KELearnTorch(KELearnModel):

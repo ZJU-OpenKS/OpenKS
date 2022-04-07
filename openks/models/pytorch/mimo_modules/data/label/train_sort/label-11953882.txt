@@ -1,0 +1,73 @@
+# 11953882	cimetidine#0 modulates#1 the#2 antigen#3 presenting#4 capacity#5 of#6 dendritic#7 cells#8 from#9 colorectal#10 cancer#11 patients#12 .#13 
+
+f1:[cimetidine#0,modulates#1,antigen#3]
+f2:[cimetidine#0,presenting#4,{dendritic_cells#7:capacity#5}]
+c1:[{dendritic_cells#7:capacity#5},from#9,colorectal_cancer_patients#10]
+stmt1 = f1 f2 c1
+
+# 11953882	cimetidine#0 ,#1 a#2 h(2)#3 receptor#4 antagonist#5 ,#6 has#7 been#8 reported#9 to#10 improve#11 survival#12 in#13 gastrointestinal#14 cancer#15 patients#16 .#17 
+
+f3:[cimetidine#0,NIL#-1,h(2)_receptor_antagonist#3]
+f4:[cimetidine#0,has_been_reported_to_improve#7,{gastrointestinal_cancer_patients#14:survival#12}]
+f5:[h(2)_receptor_antagonist#3,has_been_reported_to_improve#7,{gastrointestinal_cancer_patients#14:survival#12}]
+stmt2 = f3 f4 f5
+
+# 11953882	these#0 effects#1 have#2 largely#3 been#4 attributed#5 to#6 the#7 enhancing#8 effects#9 of#10 cimetidine#11 on#12 the#13 host#14 's#15 antitumour#16 cell-mediated#17 immune#18 response#19 ,#20 such#21 as#22 inhibition#23 of#24 suppressor#25 t#26 lymphocyte#27 activity#28 ,#29 stimulation#30 of#31 natural#32 killer#33 cell#34 activity#35 and#36 increase#37 of#38 interleukin-2#39 production#40 from#41 helper#42 t#43 lymphocytes#44 .#45 
+
+f6:[{NIL#-1:effects#1},have_largely_been_attributed_to#2,{cimetidine#11:enhancing_effects#8}]
+f7:[{NIL#-1:effects#1},such_as#21,{suppressor_t_lymphocyte_activity#25:inhibition#23}]
+f8:[{NIL#-1:effects#1},such_as#21,{natural_killer_cell_activity#32:stimulation#30}]
+f9:[{NIL#-1:effects#1},such_as#21,{interleukin-2_production#39:increase#37}]
+c2:[{cimetidine#11:enhancing_effects#8},on#12,{host#14:antitumour_cell-mediated_immune_response#16}]
+c3:[{interleukin-2_production#39:increase#37},from#41,helper_t_lymphocytes#42]
+stmt3 = f6 f7 f8 f9 c2 c3
+
+# 11953882	we#0 conducted#1 an#2 in#3 vitro#4 study#5 on#6 the#7 effects#8 of#9 cimetidine#10 on#11 differentiation#12 and#13 antigen#14 presenting#15 capacity#16 of#17 monocyte-derived#18 dendritic#19 cells#20 from#21 advanced#22 colorectal#23 cancer#24 patients#25 and#26 normal#27 controls#28 .#29 
+
+f10:[NIL,conducted#1,in_vitro_study#3]
+c4:[in_vitro_study#3,on#6,{cimetidine#10:effects#8}]
+c5:[{cimetidine#10:effects#8},on#11,{monocyte-derived_dendritic_cells#18:differentiation#12}]
+c6:[{cimetidine#10:effects#8},on#11,{monocyte-derived_dendritic_cells#18:antigen_presenting_capacity#14}]
+c7:[{monocyte-derived_dendritic_cells#18:antigen_presenting_capacity#14},from#21,advanced_colorectal_cancer_patients#22]
+c8:[{monocyte-derived_dendritic_cells#18:antigen_presenting_capacity#14},from#21,normal_controls#27]
+stmt4 = f10 c4 c5 c6 c7 c8
+
+# 11953882	as#0 a#1 result#2 ,#3 an#4 investigation#5 of#6 expression#7 of#8 surface#9 molecules#10 associated#11 with#12 dendritic#13 cells#14 by#15 flow#16 cytometric#17 analyses#18 showed#19 that#20 cimetidine#21 had#22 no#23 enhancing#24 effect#25 on#26 differentiation#27 of#28 dendritic#29 cells#30 from#31 cancer#32 patients#33 and#34 normal#35 controls#36 .#37 
+
+f11:[{NIL#-1:investigation#5},showed_that#19,flow_cytometric_analyses#16]
+f12:[cimetidine#21,had_no_enhancing_effect_on#22,{dendritic_cells#29:differentiation#27}]
+c9:[NIL,as#0,{NIL#-1:result#2}]
+c10:[{NIL#-1:investigation#5},by#15,flow_cytometric_analyses#16]
+c11:[{surface_molecules#9:expression#7},associated_with#11,dendritic_cells#13]
+c12:[{dendritic_cells#29:differentiation#27},from#31,cancer_patients#32]
+c13:[{dendritic_cells#29:differentiation#27},from#31,normal_controls#35]
+stmt5 = f11 f12 c9 c10 c11 c12 c13
+
+# 11953882	an#0 investigation#1 of#2 [(3)h]thymidine#3 incorporation#4 by#5 allogeneic#6 mixed#7 lymphocyte#8 reactions#9 revealed#10 that#11 cimetidine#12 increased#13 the#14 antigen#15 presenting#16 capacity#17 of#18 dendritic#19 cells#20 from#21 both#22 materials#23 .#24 
+
+f13:[{[(3)h]thymidine_incorporation#3:investigation#1},revealed_that#10,NIL]
+f14:[cimetidine#12,increased#13,{dendritic_cells#19:antigen_presenting_capacity#15}]
+c14:[{[(3)h]thymidine_incorporation#3:investigation#1},by#5,allogeneic_mixed_lymphocyte_reactions#6]
+c15:[{dendritic_cells#19:antigen_presenting_capacity#15},from#21,materials#23]
+stmt6 = f13 f14 c14 c15
+
+# 11953882	moreover#0 ,#1 a#2 higher#3 antigen#4 presenting#5 capacity#6 was#7 observed#8 in#9 advanced#10 cancer#11 patients#12 compared#13 to#14 normal#15 controls#16 .#17 
+
+f15:[higher_antigen_presenting_capacity#3,was_observed_in#7,advanced_cancer_patients#10]
+c16:[advanced_cancer_patients#10,compared_to#13,normal_controls#15]
+stmt7 = f15 c16
+
+# 11953882	these#0 effects#1 might#2 be#3 mediated#4 via#5 specific#6 action#7 of#8 cimetidine#9 and#10 not#11 via#12 h(2)#13 receptors#14 because#15 famotidine#16 did#17 not#18 show#19 similar#20 effects#21 .#22 
+
+f16:[{NIL#-1:effects#1},might_be_mediated_via#2,{cimetidine#9:specific_action#6}]
+f17:[{NIL#-1:effects#1},not_via#11,h(2)_receptors#13]
+f18:[famotidine#16,did_not_show#17,{NIL#-1:similar_effects#20}]
+stmt8 = f16 f17 f18
+
+# 11953882	our#0 results#1 suggest#2 that#3 cimetidine#4 may#5 enhance#6 the#7 host#8 's#9 antitumour#10 cell-mediated#11 immunity#12 by#13 improving#14 the#15 suppressed#16 dendritic#17 cells#18 function#19 of#20 advanced#21 cancer#22 patients#23 .#24
+
+f19:[{NIL#-1:results#1},suggest_that#2,NIL]
+f20:[cimetidine#4,may_enhance#5,{host#8:antitumour_cell-mediated_immunity#10}]
+c17:[NIL,by_improving#13,{advanced_cancer_patients#21:suppressed_dendritic_cells_function#16}]
+stmt9 = f19 f20 c17
+

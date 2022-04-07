@@ -1,0 +1,59 @@
+# 15675505	hiv#0 and#1 children#2 ,#3 the#4 developing#5 immune#6 system#7 fights#8 back#9 .#10 
+
+c1:[hiv#0,NIL#-1,NIL]
+c2:[children#2,NIL#-1,NIL]
+c3:[developing_immune_system_fights_back#5,NIL#-1,NIL]
+stmt1 = c1 c2 c3
+
+# 15675505	children#0 infected#1 with#2 hiv#3 display#4 great#5 variability#6 in#7 their#8 clinical#9 outcome#10 and#11 rate#12 of#13 progression#14 to#15 aids#16 .#17 
+
+f1:[children#0,display#4,{clinical_outcome#9:great_variability#5}]
+f2:[children#0,display#4,{progression#14:rate#12}]
+c4:[children#0,infected_with#1,hiv#3]
+stmt2 = f1 f2 c4
+
+# 15675505	the#0 reasons#1 for#2 this#3 variability#4 are#5 largely#6 unknown#7 .#8 
+
+f3:[{variability#4:reasons#1},are_largely_unknown#5,NIL]
+stmt3 = f3
+
+# 15675505	increasing#0 evidence#1 from#2 adult#3 studies#4 suggests#5 that#6 the#7 cellular#8 immune#9 response#10 is#11 a#12 critical#13 determinant#14 of#15 viral#16 containment#17 ,#18 and#19 likely#20 accounts#21 for#22 much#23 of#24 the#25 observed#26 variability#27 in#28 clinical#29 progression#30 .#31 
+
+f4:[{adult_studies#3:increasing_evidence#0},suggests_that#5,NIL]
+f5:[cellular_immune_response#8,is#11,{viral_containment#16:critical_determinant#13}]
+f6:[cellular_immune_response#8,likely_accounts_for_much_of#20,observed_variability#26]
+c5:[observed_variability#26,in#28,clinical_progression#29]
+stmt4 = f4 f5 f6 c5
+
+# 15675505	detailed#0 studies#1 of#2 the#3 hiv-specific#4 immune#5 responses#6 generated#7 by#8 adults#9 with#10 long-term#11 nonprogressive#12 infection#13 have#14 revealed#15 elements#16 of#17 the#18 host#19 immune#20 response#21 that#22 correlate#23 with#24 effective#25 viral#26 control#27 .#28 
+
+f7:[{hiv-specific_immune_responses#4:detailed_studies#0},have_revealed#14,{host_immune_response#19:elements#16}]
+c6:[{hiv-specific_immune_responses#4:detailed_studies#0},generated_by#7,adults_with_long-term_nonprogressive_infection#9]
+c7:[{host_immune_response#19:elements#16},correlate_with#23,effective_viral_control#25]
+stmt5 = f7 c6 c7
+
+# 15675505	however#0 ,#1 much#2 less#3 is#4 known#5 about#6 the#7 hiv-specific#8 immune#9 responses#10 generated#11 by#12 perinatally#13 infected#14 children#15 .#16 
+
+f8:[NIL,much_less_is_known_about#2,hiv-specific_immune_responses#8]
+c8:[hiv-specific_immune_responses#8,generated_by#11,perinatally_infected_children#13]
+stmt6 = f8 c8
+
+# 15675505	recent#0 studies#1 have#2 revealed#3 that#4 elements#5 of#6 both#7 the#8 hiv-specific#9 cytotoxic#10 t#11 lymphocyte#12 response#13 and#14 the#15 t-helper#16 response#17 differ#18 between#19 adults#20 and#21 children#22 ,#23 and#24 these#25 differences#26 could#27 have#28 important#29 implications#30 for#31 the#32 ability#33 to#34 control#35 hiv#36 viraemia#37 .#38 
+
+f9:[{NIL#-1:recent_studies#0},have_revealed_that#2,NIL]
+f10:[{hiv-specific_cytotoxic_t_lymphocyte_response#9:elements#5},differ_between#18,adults#20]
+f11:[{hiv-specific_cytotoxic_t_lymphocyte_response#9:elements#5},differ_between#18,children#22]
+f12:[{t-helper_response#16:elements#5},differ_between#18,adults#20]
+f13:[{t-helper_response#16:elements#5},differ_between#18,children#22]
+f14:[{NIL#-1:differences#26},could_have_important_implications_for#27,{NIL#-1:ability#33}]
+c9:[{NIL#-1:differences#26},to_control#34,hiv_viraemia#36]
+stmt7 = f9 f10 f11 f12 f13 f14 c9
+
+# 15675505	identification#0 of#1 the#2 precise#3 correlates#4 of#5 viral#6 containment#7 in#8 children#9 could#10 provide#11 important#12 insights#13 into#14 the#15 pathogenesis#16 of#17 vertical#18 infection#19 ,#20 and#21 will#22 greatly#23 assist#24 the#25 rational#26 design#27 of#28 hiv#29 vaccines#30 and#31 immunotherapies#32 .#33 
+
+f15:[{NIL#-1:identification#0},could_provide_important_insights_into#10,{vertical_infection#18:pathogenesis#16}]
+f16:[{NIL#-1:identification#0},will_greatly_assist#22,{hiv_vaccines#29:rational_design#26}]
+f17:[{NIL#-1:identification#0},will_greatly_assist#22,{immunotherapies#32:rational_design#26}]
+c10:[{NIL#-1:identification#0},of#1,{viral_containment#6:precise_correlates#3}]
+c11:[{viral_containment#6:precise_correlates#3},in#8,children#9]
+stmt8 = f15 f16 f17 c10 c11
