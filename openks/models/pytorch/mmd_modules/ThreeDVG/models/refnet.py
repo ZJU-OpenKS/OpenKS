@@ -4,7 +4,7 @@ import numpy as np
 import sys
 import os
 
-sys.path.append(os.path.join(os.getcwd(), "lib"))  # HACK add the lib folder
+# sys.path.append(os.path.join(os.getcwd(), "lib"))  # HACK add the lib folder
 from ..models.backbone_module import Pointnet2Backbone
 from ..models.voting_module import VotingModule
 from ..models.proposal_module import ProposalModule

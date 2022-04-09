@@ -1,5 +1,5 @@
 import numpy as np
-from utils.pc_utils import bbox_corner_dist_measure
+from .pc_utils import bbox_corner_dist_measure
 
 # boxes are axis aigned 2D boxes of shape (n,5) in FLOAT numbers with (x1,y1,x2,y2,score)
 ''' Ref: https://www.pyimagesearch.com/2015/02/16/faster-non-maximum-suppression-python/

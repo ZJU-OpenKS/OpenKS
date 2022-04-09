@@ -14,7 +14,7 @@ from __future__ import (
 import torch
 from torch.autograd import Function
 import torch.nn as nn
-import pytorch_utils as pt_utils
+from . import pytorch_utils as pt_utils
 import sys
 
 try:

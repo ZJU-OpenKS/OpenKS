@@ -9,7 +9,6 @@ import numpy as np
 import sys
 import os
 
-sys.path.append(os.path.join(os.getcwd(), "lib"))  # HACK add the lib folder
 from ..utils.nn_distance import nn_distance, huber_loss
 from ..lib.ap_helper import parse_predictions
 from ..lib.loss import SoftmaxRankingLoss

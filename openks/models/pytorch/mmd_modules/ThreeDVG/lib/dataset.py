@@ -14,7 +14,6 @@ import multiprocessing as mp
 from torch.utils.data import Dataset
 import torch.multiprocessing
 torch.multiprocessing.set_sharing_strategy('file_system')
-sys.path.append(os.path.join(os.getcwd(), "lib")) # HACK add the lib folder
 from ..lib.config import CONF
 from ..utils.pc_utils import random_sampling, rotx, roty, rotz
 from ..data.scannet.model_util_scannet import rotate_aligned_boxes, ScannetDatasetConfig, rotate_aligned_boxes_along_axis

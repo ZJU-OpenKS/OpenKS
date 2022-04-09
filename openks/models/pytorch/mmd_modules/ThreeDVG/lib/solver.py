@@ -12,8 +12,6 @@ from tqdm import tqdm
 from tensorboardX import SummaryWriter
 from torch.optim.lr_scheduler import StepLR, MultiStepLR, CosineAnnealingLR
 
-
-sys.path.append(os.path.join(os.getcwd(), "lib")) # HACK add the lib folder
 from ..lib.config import CONF
 from ..lib.loss_helper import get_loss
 from ..lib.eval_helper import get_eval

@@ -23,7 +23,6 @@ from copy import deepcopy
 from plyfile import PlyData, PlyElement
 from shutil import copyfile
 
-sys.path.append(os.path.join(os.getcwd())) # HACK add the root folder
 from ..model import VisualConstructionModel
 
 from .mmd_modules.ThreeDJCG.data.scannet.model_util_scannet import ScannetDatasetConfig
