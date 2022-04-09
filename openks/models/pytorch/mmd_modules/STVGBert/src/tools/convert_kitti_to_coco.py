@@ -11,9 +11,9 @@ DEBUG = False
 # VAL_PATH = DATA_PATH + 'training/label_val/'
 import os
 SPLITS = ['3dop', 'subcnn'] 
-import _init_paths
-from utils.ddd_utils import compute_box_3d, project_to_image, alpha2rot_y
-from utils.ddd_utils import draw_box_3d, unproject_2d_to_3d
+# import _init_paths
+from ..stvglib.utils.ddd_utils import compute_box_3d, project_to_image, alpha2rot_y
+from ..stvglib.utils.ddd_utils import draw_box_3d, unproject_2d_to_3d
 
 '''
 #Values    Name      Description
