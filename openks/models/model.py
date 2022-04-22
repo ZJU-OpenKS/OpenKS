@@ -352,3 +352,12 @@ class openieModel(OpenKSModel):
 	def run(self, *args):
 		return NotImplemented
 		
+class BottleneckModel(OpenKSModel):
+	''' base model for bottleneck detection '''
+	def __init__(self, name: str = 'model-name', path: str = None):
+		self.name = name
+		self.path = name
+
+	def run(self):
+		return NotImplemented
+		
