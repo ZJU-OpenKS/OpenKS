@@ -5,7 +5,7 @@
 An abstract class for openks models to be trained with Paddle
 """
 import logging
-from typing import Tuple, List, Any
+from typing import Dict, Tuple, List, Any
 import torch
 import torch.nn as nn
 from torch.utils import data
@@ -360,4 +360,43 @@ class BottleneckModel(OpenKSModel):
 
 	def run(self):
 		return NotImplemented
-		
+
+class ExpertRecModel(OpenKSModel):
+	''' base model for expert recommendation '''
+	def __init__(self, data_path):
+		self.data_path = data_path
+		self.model = None
+
+	def preprocess_data(self):
+		return NotImplemented
+
+	def load_data_and_model(self):
+		return NotImplemented
+	
+	def train_expert(self):
+		return NotImplemented
+	
+	def train_team(self):
+		return NotImplemented
+	
+	def inference_expert(self):
+		return NotImplemented
+	
+	def inference_team(self):
+		return NotImplemented
+	
+	def evaluate(self):
+		return NotImplemented
+
+	def save_model(self, path):
+		return NotImplemented
+	
+	def get_n_params(self):
+		assert self.model is not None
+		pp=0
+		for p in list(self.model.parameters()):
+			nn=1
+			for s in list(p.size()):
+				nn = nn*s
+			pp += nn
+		return pp
