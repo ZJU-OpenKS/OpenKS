@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>Collaborative Research: SaTC: TTP: Medium: Intrusion-Tolerant Outsourced Storage for Cyber-Infrastructure</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>09/30/2023</AwardExpirationDate>
+<AwardTotalIntnAmount>585000.00</AwardTotalIntnAmount>
+<AwardAmount>508165</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>05050000</Code>
+<Directorate>
+<Abbreviation>CSE</Abbreviation>
+<LongName>Direct For Computer &amp; Info Scie &amp; Enginr</LongName>
+</Directorate>
+<Division>
+<Abbreviation>CNS</Abbreviation>
+<LongName>Division Of Computer and Network Systems</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Robert Beverly</SignBlockName>
+<PO_EMAI>rbeverly@nsf.gov</PO_EMAI>
+<PO_PHON>7032927068</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>This project addresses the general problem of protecting a user's private, potentially sensitive data, such as confidential documents, images, files and folders, in the event of the compromise of an online outsourced storage service on which the data is stored. Today, users typically authenticate to such services using a password and the service stores a one-way hash of this password. Given the weaknesses of passwords, storing password hashes allows for an offline password dictionary attack once the storage service is compromised, which exposes user's password and consequently also all her private data. To improve the secrecy of the outsourced private data, the project's main novelty lies in designing and developing an Intrusion-Tolerant Outsourced Storage (ITOS) system, which enables the user to distribute her data, and/or the cryptographic tokens which protect this data, among a set of trustees so that the password and private data remain protected even when a certain subset of the trustees have been compromised.&lt;br/&gt;&lt;br/&gt;Building upon our previous foundational work, this project investigates: (1) the design of provably secure and highly efficient protocols for ITOS, and (2) implementation, pilot deployment, evaluation and technology transfer of an ITOS system which builds upon these protocols, in line with its “transitioning to practice” theme. The proposed system can be transparently integrated with different storage systems including popular services like Google Drive, OneDrive or Dropbox. Moreover, ITOS can improve the authentication security for general web services. The resilient storage system architecture will offer an improved level of protection and accessibility to the data belonging to research scientists, students and staff at Universities as well as everyday computer users employing commercial storage services. The open-source library developed as part of the project will be of immense value in future research on building fault-tolerant systems. Further, the project’s research activities will be integrated with educational activities in the form of advanced curriculum development and student mentoring in the broad domains of Trustworthy Storage Systems, Secure Data Architectures and Data Assurance. Proactive involvement of high school and K-12 students and minority populations will help broaden the reach of the project. Regarding general application of strengthening web authentication security, the project team is also pursuing standardization activities by closely collaborating with Internet Research Task Force (IRTF) stakeholders with interest in these protocols.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>10/21/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>10/21/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.070</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2201465</AwardID>
+<Investigator>
+<FirstName>Nitesh</FirstName>
+<LastName>Saxena</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Nitesh Saxena</PI_FULL_NAME>
+<EmailAddress>nsaxena@tamu.edu</EmailAddress>
+<PI_PHON>9798452776</PI_PHON>
+<NSF_ID>000599351</NSF_ID>
+<StartDate>10/21/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>Texas A&amp;M Engineering Experiment Station</Name>
+<CityName>College Station</CityName>
+<ZipCode>778454645</ZipCode>
+<PhoneNumber>9798626777</PhoneNumber>
+<StreetAddress>400 Harvey Mitchell Pkwy S</StreetAddress>
+<StreetAddress2><![CDATA[Suite 300]]></StreetAddress2>
+<CountryName>United States</CountryName>
+<StateName>Texas</StateName>
+<StateCode>TX</StateCode>
+<CONGRESSDISTRICT>17</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>TX17</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>847205572</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>TEXAS A&amp;M ENGINEERING EXPERIMENT STATION</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>042915991</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[Texas A&M Engineering Experiment Station]]></Name>
+<CityName/>
+<StateCode>TX</StateCode>
+<ZipCode>778454375</ZipCode>
+<StreetAddress/>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>Texas</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>17</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>TX17</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>8060</Code>
+<Text>Secure &amp;Trustworthy Cyberspace</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>025Z</Code>
+<Text>SaTC: Secure and Trustworthy Cyberspace</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>7924</Code>
+<Text>MEDIUM PROJECT</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>9150</Code>
+<Text>EXP PROG TO STIM COMP RES</Text>
+</ProgramReference>
+<FUND_OBLG>2020~508165</FUND_OBLG>
+</Award>
+</rootTag>

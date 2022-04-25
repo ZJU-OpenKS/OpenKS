@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>Improving Engineering Student Engagement, Self-Efficacy, Diversity Awareness, and Retention using Visualization and Virtual/Augmented Reality Technologies</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>11/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>12/31/2026</AwardExpirationDate>
+<AwardTotalIntnAmount>1700000.00</AwardTotalIntnAmount>
+<AwardAmount>1700000</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>11040000</Code>
+<Directorate>
+<Abbreviation>EHR</Abbreviation>
+<LongName>Direct For Education and Human Resources</LongName>
+</Directorate>
+<Division>
+<Abbreviation>DUE</Abbreviation>
+<LongName>Division Of Undergraduate Education</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>John Jackman</SignBlockName>
+<PO_EMAI>jjackman@nsf.gov</PO_EMAI>
+<PO_PHON>7032924816</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>This project serves the national interest by creating visualization and augmented/virtual reality (AR/VR) education modules in architectural engineering and construction (AEC) courses that will help improve students’ persistence in the program, self-confidence, and diversity awareness. Students will work on real world projects in teams using the visualization and interactive AR/VR modules. Social and technical interactions between students will be facilitated using virtual spaces that simulate physical meeting rooms in which students can share engineering artifacts. Student learning will be supported with an interactive building environment, interactive exercises in a 3D virtual environment, and embedded audio/videos that provide feedback on student design decisions. Students will visualize themselves as AEC professionals and increase their self-efficacy starting in K-12 or community college contexts as well as in the first year of their degree program. More advanced real-life engineering experiences will continue to reinforce self-efficacy and engagement in engineering throughout the AEC curriculum. This collaboration between a research-intensive institution, University of Nebraska-Lincoln, and an HBCU, Tennessee State University, will provide an opportunity for students to interact with other students from diverse backgrounds and produce valuable insights on the effectiveness of the education modules with different audiences. A virtual workshop series will be used to support the adoption of the modules by other AEC programs, other engineering disciplines, and high school teachers.&lt;br/&gt;&lt;br/&gt;Three education modules will be developed and implemented in courses at the collaborating institutions. An introductory module will be used for outreach to K-12 and community colleges to generate interest in AEC fields. The remaining modules will be used for first and second-year AEC students in existing courses. The design of the modules is informed by the Model of Domain Learning theoretical framework including its constructs of stages of learning and phases of interest. Modules will be developed with attention to the learning objectives of the courses and the level of AEC curriculum that is being targeted. The project seeks to answer the following overarching research questions: 1) How does a module impact students' engagement, self-efficacy, and diversity awareness? 2) How do enrollment, retention, and graduation rates change as modules are introduced into the curriculum? and 3) How do the findings to the first two questions vary by institution?  Each module will provide the basis for a multi-case study where the institutional context defines each case. Rich case descriptions and cross-case analysis will guide improvements to the module, highlight module transferability barriers and affordances, and enable interpretation of findings based on data from survey instruments and interviews. This project will advance knowledge about the impact of AR/VR-based learning modules in STEM teaching and learning. The NSF IUSE: EHR Program supports research and development projects to improve the effectiveness of STEM education for all students. Through the Engaged Student Learning track, the program supports the creation, exploration, and implementation of promising practices and tools.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>11/10/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/10/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.076</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2202290</AwardID>
+<Investigator>
+<FirstName>Ece</FirstName>
+<LastName>Erdogmus</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Ece Erdogmus</PI_FULL_NAME>
+<EmailAddress>eskourup3@gatech.edu</EmailAddress>
+<PI_PHON>4048945780</PI_PHON>
+<NSF_ID>000218331</NSF_ID>
+<StartDate>11/10/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>Georgia Tech Research Corporation</Name>
+<CityName>Atlanta</CityName>
+<ZipCode>303320420</ZipCode>
+<PhoneNumber>4048944819</PhoneNumber>
+<StreetAddress>Office of Sponsored Programs</StreetAddress>
+<StreetAddress2/>
+<CountryName>United States</CountryName>
+<StateName>Georgia</StateName>
+<StateCode>GA</StateCode>
+<CONGRESSDISTRICT>05</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>GA05</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>097394084</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>GEORGIA TECH RESEARCH CORPORATION</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>097394084</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name/>
+<CityName/>
+<StateCode/>
+<ZipCode/>
+<StreetAddress/>
+<CountryCode/>
+<CountryName>RI REQUIRED</CountryName>
+<StateName>RI REQUIRED</StateName>
+<CountryFlag>0</CountryFlag>
+<CONGRESSDISTRICT/>
+<CONGRESS_DISTRICT_PERF>""</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>1594</Code>
+<Text>Hist Black Colleges and Univ</Text>
+</ProgramElement>
+<ProgramElement>
+<Code>1998</Code>
+<Text>IUSE</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>8209</Code>
+<Text>Improv Undergrad STEM Ed(IUSE)</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>8244</Code>
+<Text>EHR CL Opportunities (NSF 14-302)</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>9150</Code>
+<Text>EXP PROG TO STIM COMP RES</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>9178</Code>
+<Text>UNDERGRADUATE EDUCATION</Text>
+</ProgramReference>
+<FUND_OBLG>2021~1700000</FUND_OBLG>
+</Award>
+</rootTag>

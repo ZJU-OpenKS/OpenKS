@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>WoU-MMA: Studying Extreme Particle Accelerators with VERITAS and CTA</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>10/31/2023</AwardExpirationDate>
+<AwardTotalIntnAmount>797262.00</AwardTotalIntnAmount>
+<AwardAmount>726779</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>03010000</Code>
+<Directorate>
+<Abbreviation>MPS</Abbreviation>
+<LongName>Direct For Mathematical &amp; Physical Scien</LongName>
+</Directorate>
+<Division>
+<Abbreviation>PHY</Abbreviation>
+<LongName>Division Of Physics</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Darren Grant</SignBlockName>
+<PO_EMAI>dgrant@nsf.gov</PO_EMAI>
+<PO_PHON>7032928977</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>Gamma-ray astronomy impacts a broad range of key science questions, including indirect dark matter detection, tests of fundamental physical laws, cosmological studies, the jet physics associated with active galactic nuclei, gamma-ray bursts, and micro-quasars, and galactic particle acceleration.  This award supports the gamma-ray group at Columbia University and Nevis Labs to focus specifically on: (1) operating and optimizing the prototype Schwarzschild-Couder Telescope (pSCT); (2) coordinating deployment of advanced analysis and simulations development work for the imaging atmospheric Cherenkov telescope array VERITAS; (3) studying the physics of central engines, their environments, and relativistic jets; (4) understanding the acceleration and propagation of Galactic cosmic rays; and (5) seeking out further time-domain opportunities for VERITAS and in preparation for the next generation Cherenkov Telescope Array, CTA.  The mixture of fundamentally important questions and extreme physical environments makes this field fascinating to the public.  The Columbia and Barnard groups share that excitement via public lectures, and mentoring area high school students.  They also provide vital research experiences to their undergraduates.&lt;br/&gt;&lt;br/&gt;These questions cut across high-energy astrophysics, cosmology, and particle physics, studying the nature of dark matter, the sources of the highest-energy cosmic rays, the interactions of matter in the most extreme environments, and the cosmic history of star formation.  This project includes integrating pSCT into the VERITAS array, and extending the advanced shower reconstruction and background discrimination methods to low energy, short-time-scale exposures for GRBs and for large-zenith-angle observations of transients and the Galactic Center (GC).  VERITAS, being in southern Arizona, is ideally sited to follow up events from LIGO/Virgo and IceCube, and to study multi-TeV emission from the GC.  The planned analysis developments benefit all VERITAS science, but will be especially impactful for multi-messenger astronomy and the physics of the GC.  As the international community works towards CTA, currently undergoing critical optimization, demonstrating the pSCT's performance will maximize the impact of CTA on particle astrophysics in the years to come.  This project advances the goals of the NSF Windows on the Universe Big Idea.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>10/22/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>10/22/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.049</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2200857</AwardID>
+<Investigator>
+<FirstName>Brian</FirstName>
+<LastName>Humensky</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Brian Humensky</PI_FULL_NAME>
+<EmailAddress>humensky@nevis.columbia.edu</EmailAddress>
+<PI_PHON>9145912807</PI_PHON>
+<NSF_ID>000574712</NSF_ID>
+<StartDate>10/22/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>University of Maryland, College Park</Name>
+<CityName>College Park</CityName>
+<ZipCode>207425141</ZipCode>
+<PhoneNumber>3014056269</PhoneNumber>
+<StreetAddress>3112 LEE BLDG 7809 Regents Drive</StreetAddress>
+<StreetAddress2/>
+<CountryName>United States</CountryName>
+<StateName>Maryland</StateName>
+<StateCode>MD</StateCode>
+<CONGRESSDISTRICT>05</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>MD05</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>790934285</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>UNIVERSITY OF MARYLAND, COLLEGE PARK</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>003256088</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name/>
+<CityName/>
+<StateCode/>
+<ZipCode/>
+<StreetAddress/>
+<CountryCode/>
+<CountryName>RI REQUIRED</CountryName>
+<StateName>RI REQUIRED</StateName>
+<CountryFlag>0</CountryFlag>
+<CONGRESSDISTRICT/>
+<CONGRESS_DISTRICT_PERF>""</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>107Y</Code>
+<Text>WoU-Windows on the Universe: T</Text>
+</ProgramElement>
+<ProgramElement>
+<Code>1643</Code>
+<Text>Particle Astrophysics/Cosmic P</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>069Z</Code>
+<Text>Windows on the Universe (WoU)</Text>
+</ProgramReference>
+<FUND_OBLG>2020~726779</FUND_OBLG>
+</Award>
+</rootTag>

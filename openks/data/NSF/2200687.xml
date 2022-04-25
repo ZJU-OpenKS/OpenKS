@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>Intergovernmental Personnel Act (IPA) Assignment</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/12/2021</AwardEffectiveDate>
+<AwardExpirationDate>10/11/2022</AwardExpirationDate>
+<AwardTotalIntnAmount>386899.00</AwardTotalIntnAmount>
+<AwardAmount>386899</AwardAmount>
+<AwardInstrument>
+<Value>Intergovernmental Personnel Award</Value>
+</AwardInstrument>
+<Organization>
+<Code>03020000</Code>
+<Directorate>
+<Abbreviation>MPS</Abbreviation>
+<LongName>Direct For Mathematical &amp; Physical Scien</LongName>
+</Directorate>
+<Division>
+<Abbreviation>AST</Abbreviation>
+<LongName>Division Of Astronomical Sciences</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>James Neff</SignBlockName>
+<PO_EMAI>jneff@nsf.gov</PO_EMAI>
+<PO_PHON>7032922475</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration/>
+<MinAmdLetterDate>10/12/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>10/12/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.049</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2200687</AwardID>
+<Investigator>
+<FirstName>Debra</FirstName>
+<LastName>Fischer</LastName>
+<PI_MID_INIT>A</PI_MID_INIT>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Debra A Fischer</PI_FULL_NAME>
+<EmailAddress>debra.fischer@yale.edu</EmailAddress>
+<PI_PHON>2034321613</PI_PHON>
+<NSF_ID>000389421</NSF_ID>
+<StartDate>10/12/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>Yale University</Name>
+<CityName>New Haven</CityName>
+<ZipCode>065208327</ZipCode>
+<PhoneNumber>2037854689</PhoneNumber>
+<StreetAddress>Office of Sponsored Projects</StreetAddress>
+<StreetAddress2><![CDATA[P.O. Box 208327]]></StreetAddress2>
+<CountryName>United States</CountryName>
+<StateName>Connecticut</StateName>
+<StateCode>CT</StateCode>
+<CONGRESSDISTRICT>03</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>CT03</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>043207562</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>YALE UNIVERSITY</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>043207562</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name/>
+<CityName/>
+<StateCode/>
+<ZipCode/>
+<StreetAddress/>
+<CountryCode/>
+<CountryName>RI REQUIRED</CountryName>
+<StateName>RI REQUIRED</StateName>
+<CountryFlag>0</CountryFlag>
+<CONGRESSDISTRICT/>
+<CONGRESS_DISTRICT_PERF>""</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>9199</Code>
+<Text>Unallocated Program Costs</Text>
+</ProgramElement>
+<FUND_OBLG>2022~386899</FUND_OBLG>
+</Award>
+</rootTag>

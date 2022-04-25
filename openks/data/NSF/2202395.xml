@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>CRII: III: Informative Bayesian Learning and Data Gathering Through Expert-Acquired Data</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>06/30/2022</AwardExpirationDate>
+<AwardTotalIntnAmount>175000.00</AwardTotalIntnAmount>
+<AwardAmount>168471</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>05020000</Code>
+<Directorate>
+<Abbreviation>CSE</Abbreviation>
+<LongName>Direct For Computer &amp; Info Scie &amp; Enginr</LongName>
+</Directorate>
+<Division>
+<Abbreviation>IIS</Abbreviation>
+<LongName>Div Of Information &amp; Intelligent Systems</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Sylvia Spengler</SignBlockName>
+<PO_EMAI>sspengle@nsf.gov</PO_EMAI>
+<PO_PHON>7032927347</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>Data in many practical problems are acquired according to the decisions or actions made by users or experts to achieve specific goals. For instance, genomics and metagenomics data reflect the policy in the mind of biologists during the intervention process, and data from cyber-physical systems are impacted by the actions/decisions made by experts/engineers to control/stabilize a system. The dynamics, complexity, scale and uncertainty of many practical systems or phenomena necessitate the maximum extraction of information carried by data for accurate learning/modeling process. The innovation of this project resides in the fact that it enables optimal incorporation of the user information during the learning process, as well as learning from multiple data acquired by non-similar users/experts. &lt;br/&gt;&lt;br/&gt;This project will advance the state of the art in learning and data gathering processes, and contribute to the science base of machine learning, control/learning theory and Bayesian statistics. Original contributions are expected in: 1) Informative Bayesian Learning through Experts’ Data for allowing maximum extraction of information from experts’ data for dynamics or policy learning; 2) Multi-Fidelity Bayesian Optimization framework for efficient learning of very large systems with possibly huge amount of uncertainty; 3) Multiple-Expert Bayesian Learning for efficient incorporation of multiple experts’ data during the learning process; and 4) Near Optimal Bayesian Deep Reinforcement Learning Data Gathering for acquiring the most informative data. The applicability to practical systems will be the key feature of the proposed frameworks in this project due to their rigorous statistically-oriented nature that enables risk-based, efficient, real-time and scalable learning and decision making.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>11/09/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/09/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.070</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2202395</AwardID>
+<Investigator>
+<FirstName>Mahdi</FirstName>
+<LastName>Imani</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Mahdi Imani</PI_FULL_NAME>
+<EmailAddress>m.imani@northeastern.edu</EmailAddress>
+<PI_PHON>9797399662</PI_PHON>
+<NSF_ID>000805193</NSF_ID>
+<StartDate>11/09/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>Northeastern University</Name>
+<CityName>BOSTON</CityName>
+<ZipCode>021155005</ZipCode>
+<PhoneNumber>6173733004</PhoneNumber>
+<StreetAddress>360 HUNTINGTON AVE</StreetAddress>
+<StreetAddress2><![CDATA[177-500]]></StreetAddress2>
+<CountryName>United States</CountryName>
+<StateName>Massachusetts</StateName>
+<StateCode>MA</StateCode>
+<CONGRESSDISTRICT>07</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>MA07</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>001423631</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>NORTHEASTERN UNIVERSITY</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>001423631</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[Northeastern University]]></Name>
+<CityName>Boston</CityName>
+<StateCode>MA</StateCode>
+<ZipCode>021155005</ZipCode>
+<StreetAddress><![CDATA[360 Hungtinton Ave]]></StreetAddress>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>Massachusetts</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>07</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>MA07</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>7364</Code>
+<Text>Info Integration &amp; Informatics</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>7364</Code>
+<Text>INFO INTEGRATION &amp; INFORMATICS</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>8228</Code>
+<Text>CISE Resrch Initiatn Initiatve</Text>
+</ProgramReference>
+<FUND_OBLG>2020~168471</FUND_OBLG>
+</Award>
+</rootTag>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>Colloid dynamics in porous media induced by fluid flow and solute transport</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>10/31/2022</AwardExpirationDate>
+<AwardTotalIntnAmount>320238.00</AwardTotalIntnAmount>
+<AwardAmount>125977</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>07020000</Code>
+<Directorate>
+<Abbreviation>ENG</Abbreviation>
+<LongName>Directorate For Engineering</LongName>
+</Directorate>
+<Division>
+<Abbreviation>CBET</Abbreviation>
+<LongName>Div Of Chem, Bioeng, Env, &amp; Transp Sys</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>William Olbricht</SignBlockName>
+<PO_EMAI>wolbrich@nsf.gov</PO_EMAI>
+<PO_PHON>7032924842</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>The goal of this proposal is to identify how the motion of colloidal particles in a porous medium is affected by fluid flow and the presence of dissolved solutes in the fluid.  Variations in solute concentrations can influence the motion of the colloidal particles through a random network of pores or channels.  This project will use microfluidic experiments to explore the mechanisms by which solute concentration gradients affect the motion of colloidal particles, which can lead to accumulation of the particles and blockage of certain channels within the porous matrix. The results of this research will be directly relevant to important industrial and naturally-occurring processes such as chemical enhanced oil recovery (EOR).  Chemical EOR processes, including surfactant flooding, polymer flooding, and low-salinity water flooding, have significantly enhanced production from oil reservoirs in the US.  EOR often involves flow of colloidal suspensions through a porous subsurface containing variations in chemical concentrations of various solutes. The non-uniform chemical environment in the porous medium may cause the colloidal particles to undergo a strong directed motion, which may lead to unexpected colloid dynamics and may influence EOR performance and efficiency.&lt;br/&gt;&lt;br/&gt;The two aims of the project are to characterize quantitatively colloid diffusiophoresis in flow junctions and to investigate diffusiophoresis and Marangoni propulsion of oil drops in porous media for chemical EOR processes. The project will include experimental studies of the solute-gradient-induced colloid motion for various parameters. Microfluidic tools will be used to precisely control experimental conditions, and fluorescence microscopy combined with 3D high-speed imaging will be used to measure colloid motion. The experiments will mimic realistic conditions for chemical EOR processes so that results elucidate effects of solute transport on the motion of hard and soft colloids in random porous media. Numerical simulations and reduced-order analytical models will complement the experimental observations and provide further insights into the solute-gradient-induced colloid dynamics. The combination of microfluidics experiments and numerical modeling provides a compelling opportunity for interdisciplinary research and education in transport phenomena. The research activities will be integrated into an educational effort directed toward engineering students as well as an outreach effort aimed at encouraging under-represented minority students, especially native Hawaiians and Pacific Islanders, to study microfluidics and transport phenomena.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>10/28/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>10/28/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.041</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2200882</AwardID>
+<Investigator>
+<FirstName>Sangwoo</FirstName>
+<LastName>Shin</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Sangwoo Shin</PI_FULL_NAME>
+<EmailAddress>sangwoos@buffalo.edu</EmailAddress>
+<PI_PHON>7166455914</PI_PHON>
+<NSF_ID>000759728</NSF_ID>
+<StartDate>10/28/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>SUNY at Buffalo</Name>
+<CityName>Buffalo</CityName>
+<ZipCode>142282567</ZipCode>
+<PhoneNumber>7166452634</PhoneNumber>
+<StreetAddress>520 Lee Entrance</StreetAddress>
+<StreetAddress2><![CDATA[Suite 211]]></StreetAddress2>
+<CountryName>United States</CountryName>
+<StateName>New York</StateName>
+<StateCode>NY</StateCode>
+<CONGRESSDISTRICT>26</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>NY26</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>038633251</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>RESEARCH FOUNDATION FOR THE STATE UNIVERSITY OF NEW YORK, THE</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>020657151</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[SUNY at Buffalo]]></Name>
+<CityName>Buffalo</CityName>
+<StateCode>NY</StateCode>
+<ZipCode>142282567</ZipCode>
+<StreetAddress/>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>New York</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>26</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>NY26</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>1415</Code>
+<Text>PMP-Particul&amp;MultiphaseProcess</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>9150</Code>
+<Text>EXP PROG TO STIM COMP RES</Text>
+</ProgramReference>
+<FUND_OBLG>2019~125977</FUND_OBLG>
+</Award>
+</rootTag>

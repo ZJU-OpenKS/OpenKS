@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>Patterns and Bifurcations in Multiple Timescale Dynamical Systems</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>11/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>07/31/2022</AwardExpirationDate>
+<AwardTotalIntnAmount>90837.00</AwardTotalIntnAmount>
+<AwardAmount>14430</AwardAmount>
+<AwardInstrument>
+<Value>Continuing Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>03040000</Code>
+<Directorate>
+<Abbreviation>MPS</Abbreviation>
+<LongName>Direct For Mathematical &amp; Physical Scien</LongName>
+</Directorate>
+<Division>
+<Abbreviation>DMS</Abbreviation>
+<LongName>Division Of Mathematical Sciences</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Pedro Embid</SignBlockName>
+<PO_EMAI>pembid@nsf.gov</PO_EMAI>
+<PO_PHON>7032924859</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>The project aims to further the theoretical understanding of the behavior of natural systems that have multiple scales, meaning that the system separates into components which operate on slower or faster timescales or over shorter or longer distances.  Scale separation occurs ubiquitously in nature and is tied to a variety of phenomena; important examples from mathematical ecology and biology include the formation of vegetation patterns in water-limited ecosystems, the propagation of impulses along nerve fibers, and periodic bursting rhythms in neurons.  Mathematically, these systems are frequently modeled by dynamical systems in the form of singularly perturbed ordinary, partial, or lattice differential equations.  This project contributes to the theory of singular perturbations through the development of broadly applicable techniques to study these phenomena, their robustness under variation in model parameters, and their stability to perturbation.  Part of the project includes research experience opportunities for undergraduate students.&lt;br/&gt;&lt;br/&gt;The specific research goals are organized into three parts inspired by the different application areas.  The common thread through these applications is that they are conceptually described by singularly perturbed differential equations where a delicate interplay occurs between local singular bifurcation phenomena and the global behavior of solutions.  The first part concerns the formation and resilience of vegetation stripe patterns on sloped terrain in semiarid regions.  This process is modeled by reaction-diffusion-advection equations, and the focus is on existence and stability analysis of patterns in the limit when the advection dominates.  The second part is concerned with periodic traveling waves in lattice differential equations that model impulse propagation in myelinated nerve fibers, of which the spatially discrete FitzHugh-Nagumo equation is a prototypical example.  This necessitates the extension of techniques used in the study of ordinary differential equations where loss of normal hyperbolicity occurs to the infinite dimensional setting of lattice differential equations.  The third part is concerned with spike-adding transitions between bursting solutions in models of neuroendocrine cells.  The construction of these transitions involves accounting for both hyperbolic and nonhyperbolic dynamics and linking local and global behavior of solutions, providing a framework in which complex bifurcations can be understood in other systems.  The project goals require extensions to existing theoretical methods in the areas of geometric singular perturbation theory, geometric desingularization, and homoclinic/heteroclinic bifurcation theory.  Part of the project includes research experience opportunities for undergraduate students.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>11/10/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/10/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.049</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2204758</AwardID>
+<Investigator>
+<FirstName>Paul</FirstName>
+<LastName>Carter</LastName>
+<PI_MID_INIT>A</PI_MID_INIT>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Paul A Carter</PI_FULL_NAME>
+<EmailAddress>pcarter@umn.edu</EmailAddress>
+<PI_PHON>7036182247</PI_PHON>
+<NSF_ID>000706463</NSF_ID>
+<StartDate>11/10/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>University of California-Irvine</Name>
+<CityName>Irvine</CityName>
+<ZipCode>926977600</ZipCode>
+<PhoneNumber>9498247295</PhoneNumber>
+<StreetAddress>160 Aldrich Hall</StreetAddress>
+<StreetAddress2/>
+<CountryName>United States</CountryName>
+<StateName>California</StateName>
+<StateCode>CA</StateCode>
+<CONGRESSDISTRICT/>
+<CONGRESS_DISTRICT_ORG/>
+<ORG_DUNS_NUM>046705849</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>UNIVERSITY OF CALIFORNIA, IRVINE</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>071549000</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[University of California-Irvine]]></Name>
+<CityName/>
+<StateCode>CA</StateCode>
+<ZipCode>926974675</ZipCode>
+<StreetAddress/>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>California</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>45</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF/>
+</Performance_Institution>
+<ProgramElement>
+<Code>1266</Code>
+<Text>APPLIED MATHEMATICS</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>9251</Code>
+<Text>REU SUPP-Res Exp for Ugrd Supp</Text>
+</ProgramReference>
+<FUND_OBLG>2020~14430</FUND_OBLG>
+</Award>
+</rootTag>

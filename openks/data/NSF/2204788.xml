@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>Dynamics and Stability of Nonlinear Waves</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>07/31/2022</AwardExpirationDate>
+<AwardTotalIntnAmount>231127.00</AwardTotalIntnAmount>
+<AwardAmount>142427</AwardAmount>
+<AwardInstrument>
+<Value>Continuing Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>03040000</Code>
+<Directorate>
+<Abbreviation>MPS</Abbreviation>
+<LongName>Direct For Mathematical &amp; Physical Scien</LongName>
+</Directorate>
+<Division>
+<Abbreviation>DMS</Abbreviation>
+<LongName>Division Of Mathematical Sciences</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Pedro Embid</SignBlockName>
+<PO_EMAI>pembid@nsf.gov</PO_EMAI>
+<PO_PHON>7032924859</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>Many physical processes are best described mathematically in terms of mathematical models that involve (partial differential) equations governing the interactions and dynamics of characteristic physical quantities, such as amplitude, voltage, or concentration to name a few.  Very often, one observes a group-like behavior, which is attributed to the existence and persistence of the so-called wave solutions of these mathematical models. The identification of such solutions and their stability (or instability) properties is of enormous importance in contemporary technological applications. On the other hand, precise information about instability and abnormal behavior (such as blow ups) provides valuable information about validity and applicability of mathematical models themselves. &lt;br/&gt;&lt;br/&gt;This research is aimed at providing new mathematical tools to study non-linear dispersive equations, which are mathematical models for water wave dynamics, magnetization of materials, propagation of light in optical devices and related phenomena of quantum mechanics, to name a few. In particular, the principal investigator (PI) aims obtaining precise, quantitative information about the long-time behavior of such systems. In addition, the PI will be actively engaged in the training of the new generation of scientists, who will need to have the technical expertise in several areas to meet the challenges in the analysis and computation of cutting-edge physical systems and their modeling.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>11/10/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/10/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.049</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2204788</AwardID>
+<Investigator>
+<FirstName>Atanas</FirstName>
+<LastName>Stefanov</LastName>
+<PI_MID_INIT>G</PI_MID_INIT>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Atanas G Stefanov</PI_FULL_NAME>
+<EmailAddress>stefanov@uab.edu</EmailAddress>
+<PI_PHON>2059348551</PI_PHON>
+<NSF_ID>000397065</NSF_ID>
+<StartDate>11/10/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>University of Alabama at Birmingham</Name>
+<CityName>Birmingham</CityName>
+<ZipCode>352940111</ZipCode>
+<PhoneNumber>2059345266</PhoneNumber>
+<StreetAddress>1720 2nd Avenue South</StreetAddress>
+<StreetAddress2><![CDATA[AB 1170]]></StreetAddress2>
+<CountryName>United States</CountryName>
+<StateName>Alabama</StateName>
+<StateCode>AL</StateCode>
+<CONGRESSDISTRICT/>
+<CONGRESS_DISTRICT_ORG/>
+<ORG_DUNS_NUM>063690705</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>UNIVERSITY OF ALABAMA AT BIRMINGHAM</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>808245794</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[University of Alabama at Birmingham]]></Name>
+<CityName>Birmingham</CityName>
+<StateCode>AL</StateCode>
+<ZipCode>352940001</ZipCode>
+<StreetAddress><![CDATA[1402 10th Avenue South]]></StreetAddress>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>Alabama</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>07</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF/>
+</Performance_Institution>
+<ProgramElement>
+<Code>1266</Code>
+<Text>APPLIED MATHEMATICS</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>9150</Code>
+<Text>EXP PROG TO STIM COMP RES</Text>
+</ProgramReference>
+<FUND_OBLG>2019~66266</FUND_OBLG>
+<FUND_OBLG>2021~76161</FUND_OBLG>
+</Award>
+</rootTag>

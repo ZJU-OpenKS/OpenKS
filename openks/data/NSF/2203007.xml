@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>Dynamics in Random Media: from Homogenization to Stochasticity</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>05/31/2022</AwardExpirationDate>
+<AwardTotalIntnAmount>220305.00</AwardTotalIntnAmount>
+<AwardAmount>88316</AwardAmount>
+<AwardInstrument>
+<Value>Continuing Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>03040000</Code>
+<Directorate>
+<Abbreviation>MPS</Abbreviation>
+<LongName>Direct For Mathematical &amp; Physical Scien</LongName>
+</Directorate>
+<Division>
+<Abbreviation>DMS</Abbreviation>
+<LongName>Division Of Mathematical Sciences</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Pedro Embid</SignBlockName>
+<PO_EMAI>pembid@nsf.gov</PO_EMAI>
+<PO_PHON>7032924859</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>This research is devoted to understanding the effects of random perturbations on behavior of complex systems. Stochasticity abounds in physics, applied science and engineering, ranging from statistical mechanics, atmospheric science, materials engineering, oceanography and so on. There are typically various temporal or spatial scales involved in the system, and to understand the propagation of stochasticity through these scales and to control its overall impact is of crucial importance for many applications such as exploration geophysics, materials design, meteorology and weather forecasting. The main mathematical tool to model such multi-scale dynamical systems involving stochasticity is through partial differential equations (PDE) with rough random coefficients. The project aims at deriving simplified effective models of those PDE with rough random coefficients and exhibiting some general features of the mechanism of stochasticity propagation through complicated systems. &lt;br/&gt;&lt;br/&gt;The proposed research is in the areas of stochastic homogenization, wave in random media, and stochastic PDE. The principle investigator plans to study (i) the random fluctuations in stochastic homogenization; (ii) the effective models of wave propagation in random media; (iii) the convergence to stochastic PDE beyond the homogenization regime and the statistical properties of some singular stochastic PDE. The study will involve tools from analysis, probability and numerical methods. The educational program includes the training of graduate and undergraduate students at the intersection of probability, analysis, and applications, and the goal is to introduce students the analytic and probabilistic tools which are indispensable for both the research and the STEM-related career development.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>10/27/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>10/27/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.049</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2203007</AwardID>
+<Investigator>
+<FirstName>Yu</FirstName>
+<LastName>Gu</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Yu Gu</PI_FULL_NAME>
+<EmailAddress>ygu7@umd.edu</EmailAddress>
+<PI_PHON>3014055109</PI_PHON>
+<NSF_ID>000682355</NSF_ID>
+<StartDate>10/27/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>University of Maryland, College Park</Name>
+<CityName>College Park</CityName>
+<ZipCode>207425141</ZipCode>
+<PhoneNumber>3014056269</PhoneNumber>
+<StreetAddress>3112 LEE BLDG 7809 Regents Drive</StreetAddress>
+<StreetAddress2/>
+<CountryName>United States</CountryName>
+<StateName>Maryland</StateName>
+<StateCode>MD</StateCode>
+<CONGRESSDISTRICT>05</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>MD05</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>790934285</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>UNIVERSITY OF MARYLAND, COLLEGE PARK</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>003256088</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[University of Maryland, College Park]]></Name>
+<CityName>College Park</CityName>
+<StateCode>MD</StateCode>
+<ZipCode>207421800</ZipCode>
+<StreetAddress><![CDATA[4176 Campus Drive - William E. K]]></StreetAddress>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>Maryland</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>05</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>MD05</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>1266</Code>
+<Text>APPLIED MATHEMATICS</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>9251</Code>
+<Text>REU SUPP-Res Exp for Ugrd Supp</Text>
+</ProgramReference>
+<FUND_OBLG>2020~14319</FUND_OBLG>
+<FUND_OBLG>2021~73997</FUND_OBLG>
+</Award>
+</rootTag>
