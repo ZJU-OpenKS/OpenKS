@@ -50,7 +50,7 @@ def parse_args():
 def main():
     args = parse_args()
     OpenKSModel.list_modules()
-    model: ExpertRecModel = OpenKSModel.get_module("PyTorch", "HGTExpertRec")("openks/data/nsf_dblp_kg/nsfkg", args)
+    model: ExpertRecModel = OpenKSModel.get_module("PyTorch", "HGTExpertRec")("openks/data/nsf_dblp_kg/nsfkg/", args)
     model.preprocess_data()
     model.load_data_and_model()
     logger.info('Training HGT with #param: %d' % model.get_n_params())

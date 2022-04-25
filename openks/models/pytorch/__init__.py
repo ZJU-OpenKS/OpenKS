@@ -31,3 +31,4 @@ from .mimo_modules import *
 from .mimo_learn import *
 
 from .dataloader import *
+from .hgt_expert_rec import HGTExpertRec
