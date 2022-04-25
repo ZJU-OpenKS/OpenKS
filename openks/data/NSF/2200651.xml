@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>Collaborative Research: Non-Conventional Etching and MOCVD Regrowth for Beta-GaO/AlGaO 3D HEMTs</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>07/31/2022</AwardExpirationDate>
+<AwardTotalIntnAmount>248503.00</AwardTotalIntnAmount>
+<AwardAmount>206837</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>07010000</Code>
+<Directorate>
+<Abbreviation>ENG</Abbreviation>
+<LongName>Directorate For Engineering</LongName>
+</Directorate>
+<Division>
+<Abbreviation>ECCS</Abbreviation>
+<LongName>Div Of Electrical, Commun &amp; Cyber Sys</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Lawrence Goldberg</SignBlockName>
+<PO_EMAI>lgoldber@nsf.gov</PO_EMAI>
+<PO_PHON>7032928339</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>Gallium oxide represents a promising semiconductor material for electronic devices concerning size scaling and performance enhancement especially for applications in high voltage, high temperature, and high frequency components. Both materials development and device fabrication based on this new semiconductor material is still at its infancy. This project explores the material growth and device processing to achieve a highly scalable radio frequency device with performance beyond the current device technology based on other semiconductor materials such as silicon, gallium nitride or silicon carbide. This project seeks to address the rising challenges in the etching and material growth process due to the complex atomic structure of this oxide semiconductor. Understanding of the fundamental etching mechanisms and materials growth process is critical to fully utilize the advantages offered by this emerging material system. A successful execution of this research is expected to provide a knowledge foundation to electronics industry with positive impacts on the US economy. The research is integrated with educational activities and outreach to benefit the broader community. The proposed education plans focus on integration of research and education, curriculum development, and student training. The results obtained from the proposed research will provide inspiring teaching materials and laboratory projects, to provide training of our next generation workforce for embracing emerging technologies. This project trains two graduate students in the areas of advanced semiconductor materials synthesis, material characterization, and device design and fabrication. The principal investigators (PIs) are strongly committed to promoting the participation of underrepresented groups including women in science and engineering, by creating an inclusive environment, active mentoring, and leading by examples.  The proposed outreach activities focus on high school girls and teachers. Both PIs will continue to actively lead or be involved in existing education and outreach programs including the NSF Research Experience for Undergraduates (REU) and Research Experience for Teachers (RET) programs, local and IEEE Women in Engineering programs.&lt;br/&gt;&lt;br/&gt;Gallium oxide (Ga2O3; GaO), with high breakdown field strength, represents an emerging ultrawide bandgap semiconductor beyond silicon carbide and gallium nitride. The goal of the proposed research is to demonstrate a three-dimensional (3D) GaO/AlGaO high electron mobility transistor (HEMT) using a 3D channel formed by a non-conventional damage-free anisotropic etching technique (meta-assisted chemical etch; MacEtch) followed by metalorganic chemical vapor deposition (MOCVD) epitaxial regrowth of AlGaO. The scope of the research includes: i) realizing high aspect ratio Ga2O3 3D channel structures using the non-destructive MacEtch technology; ii) developing MOCVD growth, doping, and regrowth of AlGaO on the MacEtch-produced non-planar Ga2O3 structures; iii) characterizing the MacEtched Ga2O3 surfaces and the regrown GaO/AlGaO hetero-interfaces chemically, structurally, optically, and electrically; and iv) demonstrating GaO/AlGaO HEMTs with non-planar 3D channels. The proposed GaO/AlGaO HEMT structure, with the non-planar 3D topology and the complex monoclinic crystal structure, provides a unique platform to explore the crystal orientation dependent etching, growth rate, AlGaO composition, GaO/AlGaO interface defects, and dopant/impurity incorporation. The intellectual significance of the project will establish fundamental understanding of the carrier generation and mass transport properties in MacEtch of Ga2O3 as a function of metal catalyst pattern and its alignment with surface orientation, crystal doping concentration, and ultra-violet light illumination wavelength and intensity, as well as the etching mechanism for wide bandgap oxide semiconductors in general.  Surface and interface characterization will provide insights in the contributing and limiting factors in vacancy and other defects related traps and establish control process for different device architecture requirements. Beyond the proposed program, the platform and innovative concepts to be explored can also be used for many other types of devices for size scaling and performance enhancement, including optoelectronics devices such as solar blind ultraviolet (UV) detectors and high temperature flame sensors.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>11/01/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/01/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.041</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2200651</AwardID>
+<Investigator>
+<FirstName>Xiuling</FirstName>
+<LastName>Li</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Xiuling Li</PI_FULL_NAME>
+<EmailAddress>xiuling@uiuc.edu</EmailAddress>
+<PI_PHON>2172656354</PI_PHON>
+<NSF_ID>000487125</NSF_ID>
+<StartDate>11/01/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>University of Texas at Austin</Name>
+<CityName>Austin</CityName>
+<ZipCode>787595316</ZipCode>
+<PhoneNumber>5124716424</PhoneNumber>
+<StreetAddress>3925 W Braker Lane, Ste 3.340</StreetAddress>
+<StreetAddress2/>
+<CountryName>United States</CountryName>
+<StateName>Texas</StateName>
+<StateCode>TX</StateCode>
+<CONGRESSDISTRICT>10</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>TX10</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>170230239</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>UNIVERSITY OF TEXAS AT AUSTIN</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>042000273</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[University of Texas at Austin]]></Name>
+<CityName>Austin</CityName>
+<StateCode>TX</StateCode>
+<ZipCode>787595316</ZipCode>
+<StreetAddress><![CDATA[3925 W Braker Lane]]></StreetAddress>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>Texas</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>10</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>TX10</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>1517</Code>
+<Text>EPMD-ElectrnPhoton&amp;MagnDevices</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>100E</Code>
+<Text>Novel devices &amp; vacuum electronics</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>9102</Code>
+<Text>WOMEN, MINORITY, DISABLED, NEC</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>9251</Code>
+<Text>REU SUPP-Res Exp for Ugrd Supp</Text>
+</ProgramReference>
+<FUND_OBLG>2018~190837</FUND_OBLG>
+<FUND_OBLG>2020~16000</FUND_OBLG>
+</Award>
+</rootTag>

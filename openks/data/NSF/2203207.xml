@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>Statistical Modelling and Inference for Next-Generation Functional Data</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>07/31/2022</AwardExpirationDate>
+<AwardTotalIntnAmount>124999.00</AwardTotalIntnAmount>
+<AwardAmount>107317</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>03040000</Code>
+<Directorate>
+<Abbreviation>MPS</Abbreviation>
+<LongName>Direct For Mathematical &amp; Physical Scien</LongName>
+</Directorate>
+<Division>
+<Abbreviation>DMS</Abbreviation>
+<LongName>Division Of Mathematical Sciences</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Gabor Szekely</SignBlockName>
+<PO_EMAI>gszekely@nsf.gov</PO_EMAI>
+<PO_PHON>7032928869</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>With the rapid growth of modern technology, many large-scale imaging studies have been or are being conducted to collect massive datasets with large volumes of imaging data, thus boosting the investigation of "next-generation functional data". These enormous collections of imaging data contain interesting information and valuable knowledge, which has raised the demand for further advancement in functional data analytic approaches. Although functional data analysis (FDA) has gained widespread popularity in recent years, enhancing the capability of next-generation FDA remains a long-standing challenge. This research targets integrating state-of-the-art statistical modeling devices with modern computational and inferential techniques to develop a set of flexible and intelligent statistical tools to enable learning and discovery from next-generation functional data. The efficacy of the tools developed in this research will be tested by neuroimaging studies. The proposed methods and theory are also applicable to a broader range of fields that require modeling and analysis of images and other complex data types collected over space and/or time, such as geography, environmental science and remote sensing studies. The graduate student support will be used for day-to-day research activities, including parts of the theory/methodology developments and data analysis. &lt;br/&gt;&lt;br/&gt;This research will enrich the methods for dealing with functional data observed from complex data objects (high-dimensional, correlated images or shapes), which commonly arise in imaging studies, such as, health/medical imaging or remote sensing imaging. The PI aims to address some challenging research problems in analyzing next-generation functional data by: (1) innovating a statistically sound framework to extract useful information from large-scale longitudinal imaging studies; (2) developing flexible and intelligent statistical models to delineate the association between massive imaging data and covariates of interest and to characterize and visualize the spatial variability of the imaging data; and (3) developing efficient, scalable algorithms with high-performance statistical software packages to meet the challenges posed by dynamic imaging studies. In particular, the proposed research involves four projects. Project 1 provides a unifying approach to characterize the varying association between imaging responses with a set of explanatory variables. Project 2 focuses on the interface between high-dimensional and next-generation functional data to address several fundamental bottlenecks in large-scale imaging genetics studies. Projects 3 and 4 deal with longitudinal/dynamic imaging studies, and a comprehensive functional regression framework to analyze repeated functional responses from these studies will be developed.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>10/29/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>10/29/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.049</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2203207</AwardID>
+<Investigator>
+<FirstName>Lily</FirstName>
+<LastName>Wang</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Lily Wang</PI_FULL_NAME>
+<EmailAddress>lilywang@iastate.edu</EmailAddress>
+<PI_PHON>5152942617</PI_PHON>
+<NSF_ID>000514493</NSF_ID>
+<StartDate>10/29/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>George Mason University</Name>
+<CityName>FAIRFAX</CityName>
+<ZipCode>220304422</ZipCode>
+<PhoneNumber>7039932295</PhoneNumber>
+<StreetAddress>4400 UNIVERSITY DR</StreetAddress>
+<StreetAddress2/>
+<CountryName>United States</CountryName>
+<StateName>Virginia</StateName>
+<StateCode>VA</StateCode>
+<CONGRESSDISTRICT>11</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>VA11</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>077817450</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>GEORGE MASON UNIVERSITY</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>077817450</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[George Mason University]]></Name>
+<CityName>FAIRFAX</CityName>
+<StateCode>VA</StateCode>
+<ZipCode>220304422</ZipCode>
+<StreetAddress><![CDATA[4400 UNIVERSITY DR]]></StreetAddress>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>Virginia</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>11</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>VA11</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>1269</Code>
+<Text>STATISTICS</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>102Z</Code>
+<Text>COVID-Disproportionate Impcts Inst-Indiv</Text>
+</ProgramReference>
+<FUND_OBLG>2019~67047</FUND_OBLG>
+<FUND_OBLG>2021~40270</FUND_OBLG>
+</Award>
+</rootTag>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>FY 2022 CIGIE Training Institute</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>11/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>10/01/2022</AwardExpirationDate>
+<AwardTotalIntnAmount>4000.00</AwardTotalIntnAmount>
+<AwardAmount>4000</AwardAmount>
+<AwardInstrument>
+<Value>Contract Interagency Agreement</Value>
+</AwardInstrument>
+<Organization>
+<Code>00020000</Code>
+<Directorate>
+<Abbreviation/>
+<LongName/>
+</Directorate>
+<Division>
+<Abbreviation>OIG</Abbreviation>
+<LongName>Office Of Inspector General</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>shiji thomas</SignBlockName>
+<PO_EMAI>ssthomas@nsf.gov</PO_EMAI>
+<PO_PHON>7032924569</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration/>
+<MinAmdLetterDate>11/02/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/02/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM/>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2202789</AwardID>
+<Investigator>
+<FirstName>Douglas</FirstName>
+<LastName>Holt</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Douglas Holt</PI_FULL_NAME>
+<EmailAddress>Douglas.Holt@cigie.gov</EmailAddress>
+<PI_PHON>2022922575</PI_PHON>
+<NSF_ID>000736291</NSF_ID>
+<StartDate>11/02/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>COUNSIL OF THE INSPECTORS GENERAL ON INTEGRITY &amp; EFFICIENCY</Name>
+<CityName>Washington</CityName>
+<ZipCode>202500000</ZipCode>
+<PhoneNumber/>
+<StreetAddress>1400 Independence Avenue</StreetAddress>
+<StreetAddress2><![CDATA[Room 117W, Jamie Bldg]]></StreetAddress2>
+<CountryName>United States</CountryName>
+<StateName>District of Columbia</StateName>
+<StateCode>DC</StateCode>
+<CONGRESSDISTRICT/>
+<CONGRESS_DISTRICT_ORG/>
+<ORG_DUNS_NUM>831805630</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME/>
+<ORG_PRNT_DUNS_NUM/>
+</Institution>
+<Performance_Institution>
+<Name/>
+<CityName/>
+<StateCode/>
+<ZipCode/>
+<StreetAddress/>
+<CountryCode/>
+<CountryName>RI REQUIRED</CountryName>
+<StateName>RI REQUIRED</StateName>
+<CountryFlag>0</CountryFlag>
+<CONGRESSDISTRICT/>
+<CONGRESS_DISTRICT_PERF/>
+</Performance_Institution>
+<ProgramElement>
+<Code>0608</Code>
+<Text/>
+</ProgramElement>
+<ProgramReference>
+<Code>0000</Code>
+<Text>UNASSIGNED</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>OTHR</Code>
+<Text>OTHER RESEARCH OR EDUCATION</Text>
+</ProgramReference>
+<FUND_OBLG>2022~4000</FUND_OBLG>
+</Award>
+</rootTag>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>CyberTraining: CIC: CyberTraining for Students and Technologies from Generation Z</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>12/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>10/31/2022</AwardExpirationDate>
+<AwardTotalIntnAmount>492283.00</AwardTotalIntnAmount>
+<AwardAmount>105683</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>05090000</Code>
+<Directorate>
+<Abbreviation>CSE</Abbreviation>
+<LongName>Direct For Computer &amp; Info Scie &amp; Enginr</LongName>
+</Directorate>
+<Division>
+<Abbreviation>OAC</Abbreviation>
+<LongName>Office of Advanced Cyberinfrastructure (OAC)</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Alan Sussman</SignBlockName>
+<PO_EMAI>alasussm@nsf.gov</PO_EMAI>
+<PO_PHON>7032927563</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>Information technology is playing a dramatically increasing role in society, industry, and research. This includes design and use of large databases, simulations and artificial intelligence applications hosted on clouds and supercomputers with convergent technologies. Correspondingly, there is an increasing need for research workforce job skills in these and related areas. This project takes freshly created Indiana University Engineering course material on this cyberinfrastructure and adapts it for training with an emphasis on the needs of under-represented communities. The techniques of the successful open source software movement are used to create sustainable communities around the course curriculum and software. The project is creating new technologies to enable this for today's generation of students. Skills in core cloud computing, big data, supercomputing and artificial intelligence are exemplified by applications in the life science and nanotechnology areas. This project enables the future research workforce to contribute effectively using advanced cyberinfrastructure, promoting the progress of science and advancing the national health, prosperity, and welfare, which serves the national interest, as stated by NSF's mission. &lt;br/&gt;&lt;br/&gt;The future economic progress and research leadership of the U.S. is dependent on having a research workforce that is capable of making use of advanced cyberinfrastructure (CI) resources as articulated by the National Strategic Computing Initiative (NSCI). This requires a curriculum that changes and integrates modern concepts and practices for the new generation of students aiming at a "data-enabled computational science and engineering" expertise. This project takes what Indiana University has learned from a brand new four-year undergraduate engineering curriculum designed ab initio and taught so far to its first two undergraduate classes, and invests it into developing active training modules. The innovative curriculum integrates big data, simulations, clouds and high performance computing systems presented in a uniform framework. The course material is customized for communities of cyberinfrastructure researchers nucleated, built, and sustained via the dynamic use of GitHub and enhanced by innovative tools to build a novel learning management system optimized for cyberinfrastructure-intensive classes. The project modules include Cloud Computing, Big Data Applications and Analytics, Networking, High-Performance Computing, Artificial Intelligence/Machine Learning, and Information Visualization. There are residential sessions, with a call for participants, and purely online courses and these have both "teach the student" and "teach the teacher" modes; the latter enables easy spread of the classes. Hands-on learning with research projects built around the class material is fully supported. The project offers CyberTraining with all of the popular approaches used by the Apache Software Foundation, including Meetups and Hackathons. Modules for domain scientists and engineers, e.g., the cyberinfrastructure users that exploit advanced CI methods for research in nanoengineering and bioengineering are included. Both students and teachers contribute to the course improving the text, the software, including a unique set of examples and the project aims to show that one can build both learning and sustainability communities by using the proven techniques of the open source software community. The project uses proactive measures to enhance the involvement of under-represented communities in its activities.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>11/05/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/05/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.070</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2200409</AwardID>
+<Investigator>
+<FirstName>Geoffrey</FirstName>
+<LastName>Fox</LastName>
+<PI_MID_INIT>C</PI_MID_INIT>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Geoffrey C Fox</PI_FULL_NAME>
+<EmailAddress>gcfexchange@gmail.com</EmailAddress>
+<PI_PHON>8122194643</PI_PHON>
+<NSF_ID>000231257</NSF_ID>
+<StartDate>11/05/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>University of Virginia Main Campus</Name>
+<CityName>CHARLOTTESVILLE</CityName>
+<ZipCode>229044195</ZipCode>
+<PhoneNumber>4349244270</PhoneNumber>
+<StreetAddress>P.O.  BOX 400195</StreetAddress>
+<StreetAddress2/>
+<CountryName>United States</CountryName>
+<StateName>Virginia</StateName>
+<StateCode>VA</StateCode>
+<CONGRESSDISTRICT>05</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>VA05</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>065391526</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>RECTOR &amp; VISITORS OF THE UNIVERSITY OF VIRGINIA</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>065391526</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[University of Virginia Main Campus]]></Name>
+<CityName>CHARLOTTESVILLE</CityName>
+<StateCode>VA</StateCode>
+<ZipCode>229044195</ZipCode>
+<StreetAddress><![CDATA[P.O. BOX 400195]]></StreetAddress>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>Virginia</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>05</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>VA05</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>044Y</Code>
+<Text>CyberTraining - Training-based</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>026Z</Code>
+<Text>NSCI: National Strategic Computing Initi</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>062Z</Code>
+<Text>Harnessing the Data Revolution</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>7361</Code>
+<Text>EDUCATION AND WORKFORCE</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>9102</Code>
+<Text>WOMEN, MINORITY, DISABLED, NEC</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>9179</Code>
+<Text>GRADUATE INVOLVEMENT</Text>
+</ProgramReference>
+<FUND_OBLG>2018~105683</FUND_OBLG>
+</Award>
+</rootTag>

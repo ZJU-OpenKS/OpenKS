@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>CAREER: Stable and Scalable Estimation of the Intrinsic Geometry of Multiway Data</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>06/30/2023</AwardExpirationDate>
+<AwardTotalIntnAmount>400000.00</AwardTotalIntnAmount>
+<AwardAmount>101716</AwardAmount>
+<AwardInstrument>
+<Value>Continuing Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>03040000</Code>
+<Directorate>
+<Abbreviation>MPS</Abbreviation>
+<LongName>Direct For Mathematical &amp; Physical Scien</LongName>
+</Directorate>
+<Division>
+<Abbreviation>DMS</Abbreviation>
+<LongName>Division Of Mathematical Sciences</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Gabor Szekely</SignBlockName>
+<PO_EMAI>gszekely@nsf.gov</PO_EMAI>
+<PO_PHON>7032928869</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>Two important challenges of the proposed work are in high-throughput bioinformatics studies and neuroscience studies, which generate data typical of research aligned with two recent White House Initiatives, namely the Precision Medicine and BRAIN Initiatives respectively. Both initiatives are investing heavily in generating high-resolution data, which once analyzed properly, can yield insights that will pave the foundations of advanced treatments for genetic and nervous system disorders. To fully maximize the potential impact of collecting such data, this proposal develops a new framework for identifying complicated underlying patterns in multiway arrays. Specifically, the project fills a gap in nonparametric estimation of low-dimensional structure and geometry in big and noisy data arrays. The PI plans to develop a training program based on applications of the proposed research to recruit and retain talented high school, undergraduate, and graduate students from underrepresented minority (URM) groups for potential careers as innovative data scientists. &lt;br/&gt;&lt;br/&gt;Modern data matrices present two challenges to their analyses: (1) they are transposable in the sense that both their rows and columns are often of interest and may contain non-trivial dependencies among them, and (2) they may be very large. The first challenge has only partially been addressed by existing biclustering or co-clustering methods. These methods can identify only very simple coupled structures that organize the rows and columns. In order to flexibly model and extract more complicated patterns in large data matrices, in which both rows and columns are high-dimensional, one requires a new co-manifold learning framework that can discover a wider range of intrinsic geometries of the rows and columns. To meet the first challenge, this project develops a framework for performing joint nonlinear dimension reduction on the rows and columns.  The proposed methods construct multiscale distances that are invariant to row and column permutations, equipping practitioners with a means to estimate the intrinsic organization of the rows and columns of a data matrix without prior information on any row or column orderings. To meet the second challenge, this project formulates the key computations as optimization problems that admit distributed parallel algorithms with nearly linear speed-up. The framework also generalizes naturally to the higher-order generalization of matrices, multiway arrays or tensors. Finally, the estimated intrinsic geometries possess stability guarantees, namely small perturbations in the data due to noise or adjustments to input parameters cannot lead to disproportionately large variations in the estimated intrinsic geometry. The proposed procedures have the potential to enable practitioners to extract complicated patterns stably from massive data tensors with non-trivial dependencies along their modes or axes.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>11/01/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/01/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.049</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2201136</AwardID>
+<Investigator>
+<FirstName>Eric</FirstName>
+<LastName>Chi</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Eric Chi</PI_FULL_NAME>
+<EmailAddress>echi@rice.edu</EmailAddress>
+<PI_PHON>9195152444</PI_PHON>
+<NSF_ID>000700763</NSF_ID>
+<StartDate>11/01/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>William Marsh Rice University</Name>
+<CityName>Houston</CityName>
+<ZipCode>770051827</ZipCode>
+<PhoneNumber>7133484820</PhoneNumber>
+<StreetAddress>6100 MAIN ST</StreetAddress>
+<StreetAddress2/>
+<CountryName>United States</CountryName>
+<StateName>Texas</StateName>
+<StateCode>TX</StateCode>
+<CONGRESSDISTRICT>02</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>TX02</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>050299031</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>WILLIAM MARSH RICE UNIVERSITY</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>050299031</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[William Marsh Rice University]]></Name>
+<CityName/>
+<StateCode>TX</StateCode>
+<ZipCode>770051827</ZipCode>
+<StreetAddress/>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>Texas</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>02</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>TX02</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>1269</Code>
+<Text>STATISTICS</Text>
+</ProgramElement>
+<ProgramElement>
+<Code>8048</Code>
+<Text>Division Co-Funding: CAREER</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>1045</Code>
+<Text>CAREER-Faculty Erly Career Dev</Text>
+</ProgramReference>
+<FUND_OBLG>2020~20296</FUND_OBLG>
+<FUND_OBLG>2021~81419</FUND_OBLG>
+</Award>
+</rootTag>

@@ -14,3 +14,4 @@ from .gat import *
 from .graph_encoder import *
 from .criterions import *
 from .TransE_dist import *
+from .attn_interaction import *
