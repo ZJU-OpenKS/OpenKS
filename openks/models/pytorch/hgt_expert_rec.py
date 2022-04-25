@@ -253,12 +253,12 @@ class HGTExpertRec(ExpertRecModel):
             pickle.dump(train_projects_text_emb, f)
 
     def load_data_and_model(self):
-        index_path = self.data_path + 'data/index.pkl'
-        dgl_data_path = self.data_path + 'data/dgl_data.pkl'
-        emb_data_path = self.data_path + 'data/projects_text_emb.pkl'
-        train_data_path = self.data_path + 'data/train_dataset.pkl'
-        valid_data_path = self.data_path + 'data/train_dataset.pkl'
-        test_data_path = self.data_path + 'data/train_dataset.pkl'
+        index_path = self.data_path + '/index.pkl'
+        dgl_data_path = self.data_path + '/dgl_data.pkl'
+        emb_data_path = self.data_path + '/projects_text_emb.pkl'
+        train_data_path = self.data_path + '/train_dataset.pkl'
+        valid_data_path = self.data_path + '/train_dataset.pkl'
+        test_data_path = self.data_path + '/train_dataset.pkl'
         with open(index_path, 'rb') as f:
             project2index = pickle.load(f)
             index2project = pickle.load(f)
