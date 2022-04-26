@@ -72,8 +72,6 @@ class NSFDataset(Dataset):
         for node_type in nodes_subgraph.keys():
             nodes_sampled[node_type] = torch.LongTensor(list(nodes_subgraph[node_type]))
         sub_g = self.G.subgraph(nodes_sampled)
-        # print(sub_g.ndata[dgl.NID])
-        # print(sub_g.nodes['project'].data['id'])
 
         return sub_g
 
@@ -353,7 +351,7 @@ class HGTExpertRec(ExpertRecModel):
 
         # eval(model, args, valid_data_loader)
         for epoch in np.arange(self.args.n_epoch) + 1:
-            print('Start epoch: ', epoch)
+            logger.info('Start epoch: ', epoch)
             self.model.train()
             for step, batch_data in tqdm(enumerate(self.train_data_loader), total = n):
                 project_id, sub_g, similar_id, pos_person, neg_person_list = batch_data
@@ -387,19 +385,19 @@ class HGTExpertRec(ExpertRecModel):
                 optimizer.step()
             scheduler.step()
             mean_p, mean_r, mean_h, mean_ndcg = eval(self.model, self.args, self.valid_data_loader)
-            print(f'Valid:\tprecision@{self.args.topk}:{mean_p:.6f}, recall@{self.args.topk}:{mean_r:.6f}, '
+            logger.info(f'Valid:\tprecision@{self.args.topk}:{mean_p:.6f}, recall@{self.args.topk}:{mean_r:.6f}, '
                   f'hr@{self.args.topk}:{mean_h:.6f}, ndcg@{self.args.topk}:{mean_ndcg:.6f}')
             if mean_ndcg > best_ndcg:
                 best_epoch = epoch
                 best_ndcg = mean_ndcg
                 self.model.save(self.args.save)
-                print('Model save for higher ndcg %f in %s' % (best_ndcg, self.args.save))
+                logger.info('Model save for higher ndcg %f in %s' % (best_ndcg, self.args.save))
             if epoch - best_epoch >= self.args.patience:
-                print('Stop training after %i epochs without improvement on validation.' % self.args.patience)
+                logger.info('Stop training after %i epochs without improvement on validation.' % self.args.patience)
                 break
         self.model.load(self.args.save)
         mean_p, mean_r, mean_h, mean_ndcg = eval(self.model, self.args, self.test_data_loader)
-        print(f'Test:\tprecision@{self.args.topk}:{mean_p:.6f}, recall@{self.args.topk}:{mean_r:.6f}, '
+        logger.info(f'Test:\tprecision@{self.args.topk}:{mean_p:.6f}, recall@{self.args.topk}:{mean_r:.6f}, '
               f'hr@{self.args.topk}:{mean_h:.6f}, ndcg@{self.args.topk}:{mean_ndcg:.6f}')
 	
     def train_team(self):
@@ -459,7 +457,7 @@ class HGTExpertRec(ExpertRecModel):
                     eval_ndcg.append(ndcg_at_k)
                     eval_len.append(1)
                 if (step % self.args.log_step == 0) and step > 0:
-                    print('Valid epoch:[{}/{} ({:.0f}%)]\t Recall: {:.6f}, AvgRecall: {:.6f}'.format(
+                    logger.info('Valid epoch:[{}/{} ({:.0f}%)]\t Recall: {:.6f}, AvgRecall: {:.6f}'.format(
                         step, len(self.eval_data_loader),
                         100. * step / len(self.eval_data_loader),
                         r_at_k, np.mean(eval_r)
