@@ -378,8 +378,6 @@ class HGTExpertRec(ExpertRecModel):
 
                 pos_score = torch.sigmoid(torch.sum(cur_emb * pos_person_emb, -1))
                 neg_score = torch.sigmoid(torch.sum(cur_emb * neg_person_emb, -1))
-                # pos_score = torch.sigmoid(torch.sum(cur_emb * person_emb[pos_person], -1))
-                # neg_score = torch.sigmoid(torch.sum(cur_emb * person_emb[neg_person_list[0]], -1))
                 pos_loss = loss_fn(pos_score, pos_label)
                 neg_loss = loss_fn(neg_score, neg_label)
                 loss = pos_loss + neg_loss
