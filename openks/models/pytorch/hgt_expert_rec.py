@@ -2,14 +2,13 @@ import dgl
 import torch.nn as nn
 import pickle
 import numpy as np
-import argparse
 from .kg_modules.hgt import *
 from torch.utils.data import DataLoader
 from torch.utils.data import Dataset
 from torch.utils.data.dataloader import default_collate
 from tqdm import tqdm
 from .kg_modules.metrics import *
-from ..model import ExpertRecModel, KGLearnModel
+from ..model import ExpertRecModel
 from collections import defaultdict
 from typing import Dict
 import pickle
@@ -308,7 +307,7 @@ class HGTExpertRec(ExpertRecModel):
             dataset=NSFDataset(self.G, train_data, train_projects_text_emb, self.args),
             batch_size=self.args.batch_size,
             shuffle=False,
-            num_workers=0,
+            num_workers=8,
             collate_fn=graph_collate,
             pin_memory=True
         )
@@ -316,7 +315,7 @@ class HGTExpertRec(ExpertRecModel):
             dataset=NSFDataset(self.G, valid_data, train_projects_text_emb, self.args),
             batch_size=self.args.batch_size,
             shuffle=False,
-            num_workers=0,
+            num_workers=8,
             collate_fn=graph_collate,
             pin_memory=True
         )
@@ -324,7 +323,7 @@ class HGTExpertRec(ExpertRecModel):
             dataset=NSFDataset(self.G, test_data, train_projects_text_emb, self.args),
             batch_size=self.args.batch_size,
             shuffle=False,
-            num_workers=0,
+            num_workers=8,
             collate_fn=graph_collate,
             pin_memory=True
         )
@@ -348,7 +347,7 @@ class HGTExpertRec(ExpertRecModel):
 
         # eval(model, args, valid_data_loader)
         for epoch in np.arange(self.args.n_epoch) + 1:
-            logger.info('Start epoch: ', epoch)
+            logger.info('Start epoch: %d' % epoch)
             self.model.train()
             for step, batch_data in tqdm(enumerate(self.train_data_loader), total = n):
                 project_id, sub_g, similar_id, pos_person, neg_person_list = batch_data
