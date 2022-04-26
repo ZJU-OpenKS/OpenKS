@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>EAGER: A Vertical Wind Tunnel for Determination of Scavenging Efficacy and Hydrometeor Physics</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>02/01/2022</AwardEffectiveDate>
+<AwardExpirationDate>01/31/2024</AwardExpirationDate>
+<AwardTotalIntnAmount>275000.00</AwardTotalIntnAmount>
+<AwardAmount>275000</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>06020100</Code>
+<Directorate>
+<Abbreviation>GEO</Abbreviation>
+<LongName>Directorate For Geosciences</LongName>
+</Directorate>
+<Division>
+<Abbreviation>AGS</Abbreviation>
+<LongName>Div Atmospheric &amp; Geospace Sciences</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Chungu Lu</SignBlockName>
+<PO_EMAI>clu@nsf.gov</PO_EMAI>
+<PO_PHON>7032927110</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>Below-cloud scavenging by raindrops plays a critical role in removing natural and anthropogenic aerosols, those which contribute to climate change, from the atmosphere. However, scavenging of aerosols by rainfall events remains the most uncertain constituent in climate models, largely due to current experimental limitations to provide direct evidence of aerosol collection by falling raindrops. This project will construct a vertical wind tunnel capable of levitating water drops while exposing the drops to a wide range of aerosol types. Integrated into the wind tunnel will be modern aerosol generation and characterization equipment that permits the precise delivery of aerosols to the drop. The experimental facility will have the ability of measuring aerosol collection by a drop of prescribed size for a large range of aerosol sizes, while the drop resides in the tunnel. The experimental facility will deliver atmospherically relevant flow conditions to the drop by controlling temperature and humidity, and levitate drops in calm and turbulent wind conditions. High-speed cameras will capture the shape and oscillation of drops in simulated free fall as drops collect particles, grow, and evaporate. The establishment of such a facility will foster greater cooperation between US-based atmospheric scientists and the international community, the future exchange of students, and be a platform for STEM outreach to local high school students. &lt;br/&gt;&lt;br/&gt;Building a Z-type vertical wind tunnel capable of direct scavenging measurements will transform how atmospheric scientists approach fundamental experimental efforts in raindrop and scavenging physics. There are very few problems of the importance to atmospheric science and as poorly constrained as aerosol scavenging. This project is an effort to create a facility that can unravel longstanding questions in impaction scavenging, particularly for particles within the Greenfield Gap. Mono- and polydisperse aerosols will be delivered to drops levitating in sheath flow, created by upstream laminarizers. Turbulence will be introduced by placing small bodies upstream of the drop. Flow internal and external to the drop will be visualized by laser illumination of particles and high-speed cameras. Validation experiments of drop physics will be compared with those performed at the Mainz vertical wind tunnel at project inception, and scavenging validation data compared to measurements garnered from existing, limited data in literature. A vertical wind tunnel provides the ability to study a number of other atmospheric problems dealing with falling objects such as chemical species absorption in free fall, melting of snowflakes and graupels, riming, and drop coalescence and breakup.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>11/02/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/02/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.050</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2201828</AwardID>
+<Investigator>
+<FirstName>Andrew</FirstName>
+<LastName>Dickerson</LastName>
+<PI_MID_INIT>K</PI_MID_INIT>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Andrew K Dickerson</PI_FULL_NAME>
+<EmailAddress>ad@utk.edu</EmailAddress>
+<PI_PHON>7703280705</PI_PHON>
+<NSF_ID>000721326</NSF_ID>
+<StartDate>11/02/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>University of Tennessee Knoxville</Name>
+<CityName>Knoxville</CityName>
+<ZipCode>379163801</ZipCode>
+<PhoneNumber>8659743466</PhoneNumber>
+<StreetAddress>1331 CIR PARK DR</StreetAddress>
+<StreetAddress2/>
+<CountryName>United States</CountryName>
+<StateName>Tennessee</StateName>
+<StateCode>TN</StateCode>
+<CONGRESSDISTRICT>02</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>TN02</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>003387891</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>UNIVERSITY OF TENNESSEE</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>003387891</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[University of Tennessee Knoxville]]></Name>
+<CityName/>
+<StateCode>TN</StateCode>
+<ZipCode>379960003</ZipCode>
+<StreetAddress/>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>Tennessee</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>02</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>TN02</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>1525</Code>
+<Text>Physical &amp; Dynamic Meteorology</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>7916</Code>
+<Text>EAGER</Text>
+</ProgramReference>
+<FUND_OBLG>2022~275000</FUND_OBLG>
+</Award>
+</rootTag>

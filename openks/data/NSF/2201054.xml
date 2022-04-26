@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>Collaborative Research: Dynamic Thermal Radiation Control using Crumpled 2D-Xene Materials for Wearable Devices</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>08/31/2022</AwardExpirationDate>
+<AwardTotalIntnAmount>250000.00</AwardTotalIntnAmount>
+<AwardAmount>218547</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>07010000</Code>
+<Directorate>
+<Abbreviation>ENG</Abbreviation>
+<LongName>Directorate For Engineering</LongName>
+</Directorate>
+<Division>
+<Abbreviation>ECCS</Abbreviation>
+<LongName>Div Of Electrical, Commun &amp; Cyber Sys</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Lawrence Goldberg</SignBlockName>
+<PO_EMAI>lgoldber@nsf.gov</PO_EMAI>
+<PO_PHON>7032928339</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>Nontechnical:&lt;br/&gt;&lt;br/&gt;Wearable devices pose unique challenges for thermal management. The cooling or heating system must be flexible and able to adapt to changing conditions. For example, direct sunlight can have a strong heating effect. Conventional cooling or heating systems for thermal radiation control, however, are based on rigid structures and cannot adapt to changing conditions. Thermal radiation control for wearable devices requires a novel mechanism to selectively and dynamically modulate light absorption and infrared emission. There are many examples in nature that can change color or regulate body temperature using surface structures. Inspired by unique examples in nature such as desert ants and chameleons, the PIs will create a selective emitter and integrate it with a stretchable polymer substrate to enable dynamic thermal radiation control. The concept is based on a controllable variation in the morphology of two-dimensional (2D) materials such as graphene and phosphorene. These materials, called 2D-Xenes, are a novel platform to control thermal radiation in a reversible manner. The research will lead to a better understanding of relationships morphology, spectral emissivity, and temperature in 2D materials. In turn, the work will breakthroughs in thermal management of wearable devices. The PIs will integrate research and teaching and establish an outreach program that will spark the scientific interest of K-12 students, underrepresented students, and veterans. The PIs will also organize collaborative outreach events across the participating institutions. Joint workshops will expose students to state-of-the-art research and education opportunities in the PIs' respective laboratories.&lt;br/&gt;&lt;br/&gt;Technical:&lt;br/&gt;&lt;br/&gt;Over the past several decades, advances in our knowledge of controlling electricity and light has made revolutionary progress in the field of electronics and photonics, but our knowledge of controlling heat has made relatively little progress. The PIs aim to add significant contributions to the scientific community by presenting novel material designs of thermal radiation control and identifying novel mechanisms of dynamic thermal radiation control for wearable devices. The main objectives of this project are to establish a fundamental understanding of relationships between microscale-to-nanoscale morphology, spectral emissivity, and temperature using 2D-Xene materials such as graphene and phosphorene and to enable dynamic thermal radiation control for wearable devices. The PIs will combine complementary expertise in nanomechanics and thermal sciences to demonstrate unique morphology control in 2D-Xene materials via mechanical-straining-induced crumpling and investigate the effects of varying crumpling levels in thermal properties through computational and experimental approaches. The major hypothesis of the proposed research is that strain-induced morphology variations in crumpled 2D-Xene materials lead to selective changes in the emissivity spectrum and to significant changes in temperature for wearable devices. The controllable strain-induced morphology variation in the proposed material design allows quantitative experimental investigations, which will reveal characteristics of morphology-dependent emissivity, and emissivity-dependent temperature. The project will elucidate solar absorption and infrared emission phenomena in crumpled 2D-Xene materials via rigorous coupled-wave analysis and finite-difference time-domain computations. The project will identify the limits of thermal radiation control and present viable pathways of thermal management for wearable devices. For instance, strains induced by a wrist movement can change the morphology of the 2D-Xene material and the 2D-Xene material-based selective emitter will provide dynamic thermal radiation control. Through this work, the project will explain how artificial periodicities created by crumpled 2D-Xene materials lead to emissivity and temperature modulations and enable predictive modeling for wearable devices.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>11/01/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/01/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.041</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2201054</AwardID>
+<Investigator>
+<FirstName>SungWoo</FirstName>
+<LastName>Nam</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>SungWoo Nam</PI_FULL_NAME>
+<EmailAddress>sungwoo.nam@uci.edu</EmailAddress>
+<PI_PHON>9498240998</PI_PHON>
+<NSF_ID>000626719</NSF_ID>
+<StartDate>11/01/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>University of California-Irvine</Name>
+<CityName>Irvine</CityName>
+<ZipCode>926977600</ZipCode>
+<PhoneNumber>9498247295</PhoneNumber>
+<StreetAddress>160 Aldrich Hall</StreetAddress>
+<StreetAddress2/>
+<CountryName>United States</CountryName>
+<StateName>California</StateName>
+<StateCode>CA</StateCode>
+<CONGRESSDISTRICT/>
+<CONGRESS_DISTRICT_ORG/>
+<ORG_DUNS_NUM>046705849</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>UNIVERSITY OF CALIFORNIA, IRVINE</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>071549000</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[University of California-Irvine]]></Name>
+<CityName>Irvine</CityName>
+<StateCode>CA</StateCode>
+<ZipCode>926973975</ZipCode>
+<StreetAddress><![CDATA[2102 Engineering Gateway Buildin]]></StreetAddress>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>California</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>45</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF/>
+</Performance_Institution>
+<ProgramElement>
+<Code>1517</Code>
+<Text>EPMD-ElectrnPhoton&amp;MagnDevices</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>100E</Code>
+<Text>Novel devices &amp; vacuum electronics</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>116E</Code>
+<Text>RESEARCH EXP FOR UNDERGRADS</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>9251</Code>
+<Text>REU SUPP-Res Exp for Ugrd Supp</Text>
+</ProgramReference>
+<FUND_OBLG>2019~210547</FUND_OBLG>
+<FUND_OBLG>2020~8000</FUND_OBLG>
+</Award>
+</rootTag>

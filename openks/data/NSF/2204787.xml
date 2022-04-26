@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>Model Theory and Definable Additive Combinatorics</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>11/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>07/31/2022</AwardExpirationDate>
+<AwardTotalIntnAmount>109074.00</AwardTotalIntnAmount>
+<AwardAmount>68180</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>03040000</Code>
+<Directorate>
+<Abbreviation>MPS</Abbreviation>
+<LongName>Direct For Mathematical &amp; Physical Scien</LongName>
+</Directorate>
+<Division>
+<Abbreviation>DMS</Abbreviation>
+<LongName>Division Of Mathematical Sciences</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Tomek Bartoszynski</SignBlockName>
+<PO_EMAI>tbartosz@nsf.gov</PO_EMAI>
+<PO_PHON>7032924885</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>The research in this project concerns a branch of mathematical logic called model theory, which studies mathematical structures at the linguistic level, and classifies structures according the complexity of their behavior with respect to a fixed choice of mathematical language. The tools for testing whether a mathematical structures is suitable for classification are various hypotheses called "dividing lines", which forbid some fixed pattern in the behavior of a structure. A main focus of this project is one such dividing line called VC-dimension, which originated in machine learning, and uses ideas from graph theory to measure randomness in mathematical objects. In model theory, this notion emerged in the study of so-called "NIP theories". Conant will apply this model theoretic framework to questions in group theory, from both the discrete and topological perspectives, and also in the newer field of arithmetic combinatorics, which is a fusion of algebra, analysis, and discrete math. &lt;br/&gt;&lt;br/&gt;A large part of past research in model theory has focused on structures which exhibit tameness at the global level, in the sense that every definable relation in the structure omits a combinatorial configuration of some fixed type. This research focuses on the local level, in which one analyzes a single tame relation inside an otherwise complicated structure. A major aim is to develop an algebraic theory of NIP formulas in arbitrary groups, which continues prior research of Conant and Pillay in the case of pseudofinite groups. A second aim is to extend this work on pseudofinite groups outside of the NIP environment. This setting is suitable for applications to arithmetic combinatorics in finite groups, for example previous research of Conant, Pillay, and Terry on tame arithmetic regularity. In the proposed research, Conant will use Lie theory and representation theory to develop arithmetic regularity in the pseudofinite setting without extra tameness assumptions. The goal is to give a model theoretic account of arithmetic regularity results of Green and Tao, and extend these results to non-commutative groups.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>11/09/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/09/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.049</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2204787</AwardID>
+<Investigator>
+<FirstName>Gabriel</FirstName>
+<LastName>Conant</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Gabriel Conant</PI_FULL_NAME>
+<EmailAddress>gconant@nd.edu</EmailAddress>
+<PI_PHON/>
+<NSF_ID>000731735</NSF_ID>
+<StartDate>11/09/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>Ohio State University</Name>
+<CityName>Columbus</CityName>
+<ZipCode>432101016</ZipCode>
+<PhoneNumber>6146888735</PhoneNumber>
+<StreetAddress>Office of Sponsored Programs</StreetAddress>
+<StreetAddress2><![CDATA[1960 Kenny Road]]></StreetAddress2>
+<CountryName>United States</CountryName>
+<StateName>Ohio</StateName>
+<StateCode>OH</StateCode>
+<CONGRESSDISTRICT>03</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>OH03</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>832127323</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>OHIO STATE UNIVERSITY, THE</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>001964634</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[Ohio State University]]></Name>
+<CityName>Colombus</CityName>
+<StateCode>OH</StateCode>
+<ZipCode>432101016</ZipCode>
+<StreetAddress/>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>Ohio</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>03</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>OH03</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>1268</Code>
+<Text>FOUNDATIONS</Text>
+</ProgramElement>
+<FUND_OBLG>2019~68180</FUND_OBLG>
+</Award>
+</rootTag>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>CICI: UCSS: Building a Community of Practice for Supporting Regulated Research</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>12/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>12/31/2024</AwardExpirationDate>
+<AwardTotalIntnAmount>499781.00</AwardTotalIntnAmount>
+<AwardAmount>499781</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>05090000</Code>
+<Directorate>
+<Abbreviation>CSE</Abbreviation>
+<LongName>Direct For Computer &amp; Info Scie &amp; Enginr</LongName>
+</Directorate>
+<Division>
+<Abbreviation>OAC</Abbreviation>
+<LongName>Office of Advanced Cyberinfrastructure (OAC)</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Robert Beverly</SignBlockName>
+<PO_EMAI>rbeverly@nsf.gov</PO_EMAI>
+<PO_PHON>7032927068</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>The daily news clearly shows the increasing threat to safety and privacy of data, personal as well as intellectual property. The Department of Defense modified the DFARS clause to mandate that NIST 800-171 be followed for data classified and marked as CUI in 2017. The next evolution of this program is called Cybersecurity Maturity Model Certification CMMC. Other agencies, for example, Department of Education, have indicated that they are considering following a similar path to safeguard data. While these requirements improve the consistency of data handling between agencies and contractors and grantees, it leaves academic institutions to figure out how to meet such requirements in a cost-effective way that fits the research and education mission of the institution. Most institutions, agencies, and companies act in isolation with one-off contract language to address data security and safeguarding concerns. The Regulated Research Community of Practice (RRCoP) builds a network of people able to help each other in implementing an affordable but effective cybersecurity and compliance program at academic institutions. Even though cybersecurity has a clear and uniform goal of protecting data, a onesize solution does not fit all academic institutions.&lt;br/&gt;&lt;br/&gt;Through this project, RRCoP accomplishes 1) Developing cybersecurity training resources that share validated and diverse best-practices. 2) Establishing a leadership training and development program accelerating availability of distributed university resources 3) Developing representation through strategic partnerships with industry and government entities. By supporting this community with development of a community strategic roadmap, regular discussions and workshops, and a repository of generalized and specific resources for handling regulated research programs RRCoP lowers the barrier to entry for institutions handling new regulations.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>11/01/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/01/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.070</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2201028</AwardID>
+<Investigator>
+<FirstName>Carolyn</FirstName>
+<LastName>Ellis</LastName>
+<PI_MID_INIT>A</PI_MID_INIT>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Carolyn A Ellis</PI_FULL_NAME>
+<EmailAddress>carolynEllis@ucsd.edu</EmailAddress>
+<PI_PHON>7654099191</PI_PHON>
+<NSF_ID>000809572</NSF_ID>
+<StartDate>11/01/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>University of California-San Diego</Name>
+<CityName>La Jolla</CityName>
+<ZipCode>920930934</ZipCode>
+<PhoneNumber>8585344896</PhoneNumber>
+<StreetAddress>Office of Contract &amp; Grant Admin</StreetAddress>
+<StreetAddress2><![CDATA[9500 Gilman Drive, 0934]]></StreetAddress2>
+<CountryName>United States</CountryName>
+<StateName>California</StateName>
+<StateCode>CA</StateCode>
+<CONGRESSDISTRICT>49</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>CA49</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>804355790</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>UNIVERSITY OF CALIFORNIA, SAN DIEGO</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>071549000</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[University of California-San Diego]]></Name>
+<CityName>La Jolla</CityName>
+<StateCode>CA</StateCode>
+<ZipCode>920930934</ZipCode>
+<StreetAddress><![CDATA[9500 Gilman Drive]]></StreetAddress>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>California</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>49</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>CA49</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>8027</Code>
+<Text>Cybersecurity Innovation</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>7923</Code>
+<Text>SMALL PROJECT</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>8027</Code>
+<Text>Cyber Secur - Cyberinfrastruc</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>9102</Code>
+<Text>WOMEN, MINORITY, DISABLED, NEC</Text>
+</ProgramReference>
+<FUND_OBLG>2021~499781</FUND_OBLG>
+</Award>
+</rootTag>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>Collaborative Research: SHF: Medium: Ensuring Safety and Liveness of Modern Systems through Dynamic Temporal Analysis</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>12/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>09/30/2024</AwardExpirationDate>
+<AwardTotalIntnAmount>399879.00</AwardTotalIntnAmount>
+<AwardAmount>247349</AwardAmount>
+<AwardInstrument>
+<Value>Continuing Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>05010000</Code>
+<Directorate>
+<Abbreviation>CSE</Abbreviation>
+<LongName>Direct For Computer &amp; Info Scie &amp; Enginr</LongName>
+</Directorate>
+<Division>
+<Abbreviation>CCF</Abbreviation>
+<LongName>Division of Computing and Communication Foundations</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Anindya Banerjee</SignBlockName>
+<PO_EMAI>abanerje@nsf.gov</PO_EMAI>
+<PO_PHON>7032927885</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>Reactive/interactive systems such as web applications and servers, real-time video streaming software, and IoT platforms are deeply embedded into all aspects of the modern world. Many program-analysis techniques and tools have been created to analyze important temporal properties of these systems that span both safety ("nothing bad will happen") and liveness ("something good eventually happens"). Unfortunately, modern static analyses are still limited in handling complex program semantics that often appear in many real-world applications: they support only simple properties, produce false positives, or do not scale to large programs. Recent dynamic or "data-driven" approaches address several shortcomings of static analyses to analyze more complex program properties more efficiently, yet sometimes yield incorrect results. The project's novelties are the theoretical and practical integration of static and dynamic approaches to analyze, localize, and repair temporal aspects of reactive/interactive systems. The project's impacts are the development of new theories and algorithms, giving rise to advanced methods for ensuring the safety/liveness of today's reactive/interactive software.&lt;br/&gt;&lt;br/&gt;Today's software involves complex non-linear behavior, heap manipulations, and higher-order features. The project's use of dynamic analysis enables inference of expressive properties of these programs, while the use of static verification allows for validation of those inferred properties. Furthermore, static verification and dynamic learning mutually inform and bolster the power of each other, allowing for safety/liveness analyses, and even for the localization of faults and synthesis of repairs for temporal defects. The methods being developed are embodied in a growing collection of automated tools to be released publicly. The results of the research are used to develop new courses, senior design projects, and an interactive Jupyter book in programming languages and software engineering. The project broadens participation through several initiatives, aimed at middle/high school students and undergraduate students from underrepresented groups in the investigators' local communities.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>10/27/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>10/27/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.070</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2200621</AwardID>
+<Investigator>
+<FirstName>ThanhVu</FirstName>
+<LastName>Nguyen</LastName>
+<PI_MID_INIT>H</PI_MID_INIT>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>ThanhVu H Nguyen</PI_FULL_NAME>
+<EmailAddress>tvn@gmu.edu</EmailAddress>
+<PI_PHON>7177563431</PI_PHON>
+<NSF_ID>000728688</NSF_ID>
+<StartDate>10/27/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>George Mason University</Name>
+<CityName>FAIRFAX</CityName>
+<ZipCode>220304422</ZipCode>
+<PhoneNumber>7039932295</PhoneNumber>
+<StreetAddress>4400 UNIVERSITY DR</StreetAddress>
+<StreetAddress2/>
+<CountryName>United States</CountryName>
+<StateName>Virginia</StateName>
+<StateCode>VA</StateCode>
+<CONGRESSDISTRICT>11</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>VA11</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>077817450</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>GEORGE MASON UNIVERSITY</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>077817450</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[George Mason University]]></Name>
+<CityName>Fairfax</CityName>
+<StateCode>VA</StateCode>
+<ZipCode>220304422</ZipCode>
+<StreetAddress><![CDATA[4400 University Dr]]></StreetAddress>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>Virginia</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>11</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>VA11</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>7798</Code>
+<Text>Software &amp; Hardware Foundation</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>7924</Code>
+<Text>MEDIUM PROJECT</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>7943</Code>
+<Text>PROGRAMMING LANGUAGES</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>9150</Code>
+<Text>EXP PROG TO STIM COMP RES</Text>
+</ProgramReference>
+<FUND_OBLG>2021~247349</FUND_OBLG>
+</Award>
+</rootTag>

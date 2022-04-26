@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>Modulation of Metalloprotein Activities through Fine-tuning Reduction Potentials</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>11/15/2021</AwardEffectiveDate>
+<AwardExpirationDate>09/30/2025</AwardExpirationDate>
+<AwardTotalIntnAmount>561000.00</AwardTotalIntnAmount>
+<AwardAmount>561000</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>03090000</Code>
+<Directorate>
+<Abbreviation>MPS</Abbreviation>
+<LongName>Direct For Mathematical &amp; Physical Scien</LongName>
+</Directorate>
+<Division>
+<Abbreviation>CHE</Abbreviation>
+<LongName>Division Of Chemistry</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Catalina Achim</SignBlockName>
+<PO_EMAI>cachim@nsf.gov</PO_EMAI>
+<PO_PHON>7032922048</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>With the support of the Chemistry of Life Processes (CLP) Program in the Chemistry Division, Dr. Yi Lu from the University of Illinois at Urbana-Champaign plans to modulate metalloprotein activities through fine-tuning reduction potentials. In the process, the research will contribute to the fundamental understanding of how to tune reduction potentials and correlate it with functional properties. Many chemical and biological processes involve redox reactions, whose efficiency is largely defined by reduction potentials. In Nature, each metalloprotein covers a certain reduction potential range required for its function. A systematic understanding of common factors that affect the reduction potential of different metalloproteins across the entire range of physiological reduction potentials remains elusive. To address this limitation, the Lu group plans to engineer the protein azurin to vary the reduction potential of the copper site to address the question of how tuning reduction potentials can modulate enzymatic functions, knowledge that would be applicable to many biological and chemical systems. Dr. Lu will integrate research with education through developing lecture and lab modules for undergraduate and graduate courses that incorporate multidisciplinary research results. The PI will focus on recruiting students from groups underrepresented in STEM (science, technology, engineering and mathematics) to participate in the research through outreach activities and on creating and maintaining a diverse, equitable, and inclusive culture to allow the recruits to thrive in learning and research. &lt;br/&gt;&lt;br/&gt;This project builds on the previous success in Dr. Lu’s lab in tuning the reduction potential of the type 1 copper center in azurin to span a 2 V physiological Eº´ range with minimal perturbation of the primary coordination sphere.  It focuses on the engineering secondary coordination sphere interactions, including hydrogen bonding (H-bonding) and hydrophobicity to modulate metalloprotein activities, including (1) the S-nitrosylation reactivity of a Cu site and stepwise nitrosylation of a nonheme Fe site in an engineered azurin, (2) the oxygen reduction activity of the T1Cu center in a small laccase, and (3) changing the reduction potential of an Fe-S cluster incorporated into azurin. The pursuit of these objectives is expected to result in deeper insights into how reduction potentials of metalloproteins can be tuned and how the functions of metalloproteins can be expanded beyond electron transfer. The new knowledge could serve as a strong basis for the design of metalloproteins and metal complexes with predictable reduction potentials that can be used in applications such as solar energy conversion, fuel cells, and small molecule activation.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>11/09/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/09/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.049</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2201279</AwardID>
+<Investigator>
+<FirstName>Yi</FirstName>
+<LastName>Lu</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Yi Lu</PI_FULL_NAME>
+<EmailAddress>yi-lu@illinois.edu</EmailAddress>
+<PI_PHON>2173332619</PI_PHON>
+<NSF_ID>000445840</NSF_ID>
+<StartDate>11/09/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>University of Texas at Austin</Name>
+<CityName>Austin</CityName>
+<ZipCode>787595316</ZipCode>
+<PhoneNumber>5124716424</PhoneNumber>
+<StreetAddress>3925 W Braker Lane, Ste 3.340</StreetAddress>
+<StreetAddress2/>
+<CountryName>United States</CountryName>
+<StateName>Texas</StateName>
+<StateCode>TX</StateCode>
+<CONGRESSDISTRICT>10</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>TX10</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>170230239</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>UNIVERSITY OF TEXAS AT AUSTIN</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>042000273</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[University of Texas at Austin]]></Name>
+<CityName>Austin</CityName>
+<StateCode>TX</StateCode>
+<ZipCode>787121224</ZipCode>
+<StreetAddress><![CDATA[105 E 24th St]]></StreetAddress>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>Texas</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>25</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>TX25</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>6883</Code>
+<Text>Chemistry of Life Processes</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>8038</Code>
+<Text>Biotechnology</Text>
+</ProgramReference>
+<FUND_OBLG>2021~561000</FUND_OBLG>
+</Award>
+</rootTag>
