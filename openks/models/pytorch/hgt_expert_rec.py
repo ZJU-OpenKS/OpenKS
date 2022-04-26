@@ -347,29 +347,32 @@ class HGTExpertRec(ExpertRecModel):
         best_epoch = -1
         n = len(self.train_data_loader)
         loss_fn = nn.BCELoss().to(self.device)
-        optimizer = torch.optim.SGD(self.model.parameters(), lr=self.args.lr)
+
+        optimizer = torch.optim.Adam(self.model.parameters(), lr=self.args.lr)
         scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=self.args.decay_step, gamma=self.args.decay)
-        pos_label = torch.ones(self.args.batch_size).to(self.device)
-        neg_label = torch.zeros(self.args.batch_size).to(self.device)
+
         # eval(model, args, valid_data_loader)
         for epoch in np.arange(self.args.n_epoch) + 1:
             print('Start epoch: ', epoch)
             self.model.train()
             for step, batch_data in tqdm(enumerate(self.train_data_loader), total = n):
                 project_id, sub_g, similar_id, pos_person, neg_person_list = batch_data
+                batch_size = project_id.shape[0]
+                pos_label = torch.ones(batch_size).to(self.device)
+                neg_label = torch.zeros(batch_size).to(self.device)
                 sub_g = sub_g.to(self.device)
                 project_emb, person_emb = self.model(sub_g, 'project', 'person')
-                cur_emb = torch.zeros(self.args.batch_size, self.args.n_dim).to(self.device)
-                for i in range(self.args.batch_size):
+                cur_emb = torch.zeros(batch_size, self.args.n_dim).to(self.device)
+                for i in range(batch_size):
                     for j in range(self.args.max_project):
                         cur_emb[i] += project_emb[similar_id[i][j].item()]
                 cur_emb /= self.args.max_project
                 pos_person_emb = []
-                for i in range(self.args.batch_size):
+                for i in range(batch_size):
                     pos_person_emb.append(person_emb[pos_person[i].item()])
                 pos_person_emb = torch.stack(pos_person_emb)
                 neg_person_emb = []
-                for i in range(self.args.batch_size):
+                for i in range(batch_size):
                     neg_person_emb.append(person_emb[neg_person_list[i][0].item()])
                 neg_person_emb = torch.stack(neg_person_emb)
 
@@ -385,9 +388,9 @@ class HGTExpertRec(ExpertRecModel):
                 torch.nn.utils.clip_grad_norm_(self.model.parameters(), self.args.clip)
                 optimizer.step()
             scheduler.step()
-            mean_p, mean_r, mean_h, mean_ndcg = self.evaluate(self.model, self.args, self.valid_data_loader)
-            print(f'Valid:\tprecision_c@{self.args.topk}:{mean_p:.6f}, recall_c@{self.args.topk}:{mean_r:.6f}, '
-                  f'hr_c@{self.args.topk}:{mean_h:.6f}, ndcg_c@{self.args.topk}:{mean_ndcg:.6f}')
+            mean_p, mean_r, mean_h, mean_ndcg = eval(self.model, self.args, self.valid_data_loader)
+            print(f'Valid:\tprecision@{self.args.topk}:{mean_p:.6f}, recall@{self.args.topk}:{mean_r:.6f}, '
+                  f'hr@{self.args.topk}:{mean_h:.6f}, ndcg@{self.args.topk}:{mean_ndcg:.6f}')
             if mean_ndcg > best_ndcg:
                 best_epoch = epoch
                 best_ndcg = mean_ndcg
@@ -397,9 +400,9 @@ class HGTExpertRec(ExpertRecModel):
                 print('Stop training after %i epochs without improvement on validation.' % self.args.patience)
                 break
         self.model.load(self.args.save)
-        mean_p, mean_r, mean_h, mean_ndcg = self.evaluate(self.model, self.args, self.test_data_loader)
-        print(f'Test:\tprecision_c@{self.args.topk}:{mean_p:.6f}, recall_c@{self.args.topk}:{mean_r:.6f}, '
-              f'hr_c@{self.args.topk}:{mean_h:.6f}, ndcg_c@{self.args.topk}:{mean_ndcg:.6f}')
+        mean_p, mean_r, mean_h, mean_ndcg = eval(self.model, self.args, self.test_data_loader)
+        print(f'Test:\tprecision@{self.args.topk}:{mean_p:.6f}, recall@{self.args.topk}:{mean_r:.6f}, '
+              f'hr@{self.args.topk}:{mean_h:.6f}, ndcg@{self.args.topk}:{mean_ndcg:.6f}')
 	
     def train_team(self):
         return NotImplemented
@@ -422,11 +425,11 @@ class HGTExpertRec(ExpertRecModel):
             for step, batch_data in tqdm(enumerate(self.eval_data_loader), total = n):
                 project_id, sub_g, similar_id, pos_person, neg_person_list = batch_data
                 sub_g = sub_g.to(self.device)
-
+                batch_size = project_id.shape[0]
                 project_emb, person_emb = self.model(sub_g, 'project', 'person')
 
-                cur_emb = torch.zeros(self.args.batch_size, self.args.n_dim).to(self.device)
-                for i in range(self.args.batch_size):
+                cur_emb = torch.zeros(batch_size, self.args.n_dim).to(self.device)
+                for i in range(batch_size):
                     for j in range(self.args.max_project):
                         cur_emb[i] += project_emb[similar_id[i][j].item()]
                 cur_emb /= self.args.max_project
@@ -437,7 +440,7 @@ class HGTExpertRec(ExpertRecModel):
                 cur_emb = cur_emb.unsqueeze(1)
 
                 eval_person_emb = []
-                for i in range(self.args.batch_size):
+                for i in range(batch_size):
                     temp =[]
                     for j in range(person_list.size(1)):
                         temp.append(person_emb[person_list[i][j].item()])
@@ -447,16 +450,16 @@ class HGTExpertRec(ExpertRecModel):
 
                 score = torch.sigmoid(torch.sum(cur_emb * eval_person_emb, -1))
                 pred_person_index = torch.topk(score, self.args.topk)[1].tolist()
-
-                p_at_k = getP(pred_person_index, [0])
-                r_at_k = getR(pred_person_index, [0])
-                h_at_k = getHitRatio(pred_person_index, [0])
-                ndcg_at_k = getNDCG(pred_person_index, [0])
-                eval_p.append(p_at_k)
-                eval_r.append(r_at_k)
-                eval_h.append(h_at_k)
-                eval_ndcg.append(ndcg_at_k)
-                eval_len.append(1)
+                for i in range(batch_size):
+                    p_at_k = getP(pred_person_index[i], [0])
+                    r_at_k = getR(pred_person_index[i], [0])
+                    h_at_k = getHitRatio(pred_person_index[i], [0])
+                    ndcg_at_k = getNDCG(pred_person_index[i], [0])
+                    eval_p.append(p_at_k)
+                    eval_r.append(r_at_k)
+                    eval_h.append(h_at_k)
+                    eval_ndcg.append(ndcg_at_k)
+                    eval_len.append(1)
                 if (step % self.args.log_step == 0) and step > 0:
                     print('Valid epoch:[{}/{} ({:.0f}%)]\t Recall: {:.6f}, AvgRecall: {:.6f}'.format(
                         step, len(self.eval_data_loader),
