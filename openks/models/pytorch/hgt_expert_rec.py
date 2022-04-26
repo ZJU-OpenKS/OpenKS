@@ -1,4 +1,3 @@
-from asyncio.log import logger
 import dgl
 import torch.nn as nn
 import pickle
@@ -16,6 +15,8 @@ from typing import Dict
 import pickle
 import json
 import os
+import logging
+logger = logging.getLogger(__name__)
 
 
 def graph_collate(batch):
@@ -93,7 +94,6 @@ class NSFDataset(Dataset):
     def __len__(self):
         return len(self.data)
         # return 100
-
 
 
 @ExpertRecModel.register("HGTExpertRec", "PyTorch")

@@ -60,10 +60,10 @@ def main():
     logger.info('Training HGT with #param: %d' % model.get_n_params())
     model.train_expert()
     model.evaluate()
-    model.inference_expert()
+    # model.inference_expert()
 
-    model.train_team()
-    model.inference_team()
+    # model.train_team()
+    # model.inference_team()
 
 
 if __name__ == "__main__":
