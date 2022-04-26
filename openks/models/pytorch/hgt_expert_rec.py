@@ -40,8 +40,6 @@ class NSFDataset(Dataset):
     def Calculate_Similarity(self, project_text_emb):
         score = np.sum(project_text_emb * self.proj_text_emb, axis=1)
         indices = np.argpartition(score, -self.args.max_project)
-        #top_n
-        # similar_id = np.array(list(self.proj_text_id[indices[-self.args.max_project:]]))
         similar_id = self.proj_text_id[indices[-self.args.max_project:]]
         return similar_id
 
@@ -91,7 +89,6 @@ class NSFDataset(Dataset):
 
     def __len__(self):
         return len(self.data)
-        # return 100
 
 
 @ExpertRecModel.register("HGTExpertRec", "PyTorch")
