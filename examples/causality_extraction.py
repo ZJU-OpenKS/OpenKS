@@ -7,12 +7,13 @@ from openks.models import OpenKSModel
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--task_type", type=str, default='trigger', help="task type.[trigger or argument]")
-parser.add_argument("--num_epoch", type=int, default=10, help="Number of epoches for fine-tuning.")
-parser.add_argument("--learning_rate", type=float, default=5e-5, help="Learning rate used to train with warmup.")
+parser.add_argument("--num_epoch", type=int, default=50, help="Number of epoches for fine-tuning.")
+parser.add_argument("--learning_rate", type=float, default=1e-5, help="Learning rate used to train with warmup.")
 parser.add_argument("--train_data", type=str, default='../openks/data/data_for_causality_extraction/train-corpus.json', help="train data")
 parser.add_argument("--test_data", type=str, default='../openks/data/data_for_causality_extraction/test-corpus.json', help="test data")
 
+parser.add_argument("--predict_save_path", type=str, default='../openks/data/data_for_causality_extraction/predict.json', help="predict data save path")
+parser.add_argument("--predict_data", type=str, default='../openks/data/data_for_causality_extraction/test-corpus.json', help="predict data")
 parser.add_argument("--MLP_save_path", type=str, default='checkpoints/MLP', help="predict data")
 parser.add_argument("--weight_decay", type=float, default=0.01, help="Weight decay rate for L2 regularizer.")
 parser.add_argument("--warmup_proportion", type=float, default=0.1,

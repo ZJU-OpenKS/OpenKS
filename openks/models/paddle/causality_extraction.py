@@ -119,8 +119,8 @@ def predict_data_dealer(path):
     corpus = [json.loads(line.strip()) for line in open(path, 'r', encoding='utf-8').readlines()]
     text_list = []
     for item in corpus:
-        text = item['text']
-    text_list.append(text)
+        text = item['words']
+        text_list.append(text)
     return text_list
 
 def MLP_data_dealer(path):
@@ -132,6 +132,27 @@ def MLP_data_dealer(path):
         causality_pair_list.append(item['causal_triples'])
         text_list.append(text)
     return text_list, causality_pair_list
+
+def MLP_pred_line_data_generator(text, causality_pair, model, tokenizer):
+    pred_data_list = []
+    count = 0
+    if len(causality_pair) == 0:
+        return []
+    vec = tokenizer.encode([t.lower() for t in text])['input_ids']
+    vec2 = paddle.to_tensor([vec], dtype='int64')
+    bert_emb = model(vec2)
+    cause_span_list = []
+    effect_span_list = []
+    count += 1
+    for item in causality_pair:
+        cause_span_list.append(item[0])
+        effect_span_list.append(item[1])
+        c_span = bert_emb[0][:, item[0][0] + 1:item[0][1] + 1, :]
+        e_span = bert_emb[0][:, item[1][0] + 1:item[1][1] + 1, :]
+        C_vector = paddle.mean(c_span, axis=1)
+        E_vector = paddle.mean(e_span, axis=1)
+        pred_data_list.append(paddle.concat(x=[C_vector, E_vector], axis=1).tolist())
+    return pred_data_list
 
 def MLP_data_generator(text_list, causality_pair_list, model, tokenizer):
     positive_example = []
@@ -168,10 +189,12 @@ def MLP_data_generator(text_list, causality_pair_list, model, tokenizer):
                         if C_item == item[0] and E_item == item[1]:
                             flag = False
                     if flag:
+                        print((C_item,E_item))
+                        print(causality_pair)
                         negativa_example.append(paddle.concat(x=[C_vec, E_vec], axis=1).tolist())
                         if len(negativa_example) > 2 * len(positive_example):
                             break
-
+        print(count)
     return positive_example, negativa_example
 
 
@@ -368,6 +391,97 @@ def do_train(args):
     if rank == 0:
         paddle.save(model.state_dict(), '{}/final.pdparams'.format(args.checkpoints))
 
+def do_predict(args):
+
+    paddle.set_device(args.device)
+    tokenizer = ErnieTokenizer.from_pretrained("ernie-1.0")
+    causality_dict = schema_loader()
+    label_map = causality_dict
+    pretrained_model_path = os.path.join(args.init_ckpt, "Erine/best.pdparams")
+    MLP_path = os.path.join(args.init_ckpt, "MLP")
+
+    model = ErnieForTokenClassification.from_pretrained("ernie-1.0", num_classes=len(label_map))
+    id2label = {val: key for key, val in label_map.items()}
+    no_entity_label = "O"
+    ignore_label = len(label_map)
+
+    MLP_model = MLP_Model()
+
+
+    print("============model loading==========")
+    if not pretrained_model_path or not os.path.isfile(pretrained_model_path):
+        raise Exception("init checkpoints {} not exist".format(pretrained_model_path))
+    else:
+        state_dict = paddle.load(pretrained_model_path)
+        model.set_dict(state_dict)
+        print("Loaded parameters from %s" % pretrained_model_path)
+
+    if not MLP_path or not os.path.isdir(MLP_path):
+        raise Exception("init checkpoints {} not exist".format(MLP_path))
+    else:
+        MLP_state = paddle.load(os.path.join(MLP_path, 'final.pdparams'))
+        MLP_model.set_dict(MLP_state)
+    MLP_model.eval()
+    bert_model = BertModel.from_pretrained("bert-base-uncased")
+    bert_tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
+
+    # load data from predict file
+    pred_data = args.predict_data
+
+    sentences = predict_data_dealer(pred_data)
+    encoded_inputs_list = []
+    for sent in sentences:
+        input_ids, token_type_ids, seq_len = convert_example_to_feature([sent, []], tokenizer,
+                    max_seq_len=args.max_seq_len, is_test=True)
+        encoded_inputs_list.append((input_ids, token_type_ids, seq_len))
+
+    batchify_fn = lambda samples, fn=Tuple(
+        Pad(axis=0, pad_val=tokenizer.vocab[tokenizer.pad_token], dtype='int32'), # input_ids
+        Pad(axis=0, pad_val=tokenizer.vocab[tokenizer.pad_token], dtype='int32'), # token_type_ids
+        Stack(dtype='int64') # sequence lens
+    ): fn(samples)
+    # Seperates data into some batches.
+    batch_encoded_inputs = [encoded_inputs_list[i: i + args.batch_size]
+                            for i in range(0, len(encoded_inputs_list), args.batch_size)]
+
+    batch_sentence = [sentences[i: i + args.batch_size]
+                            for i in range(0, len(encoded_inputs_list), args.batch_size)]
+    results = []
+    print("============start predict==========")
+    model.eval()
+    for batch, sentence_batch in zip(batch_encoded_inputs, batch_sentence):
+        input_ids, token_type_ids, seq_lens = batchify_fn(batch)
+        input_ids = paddle.to_tensor(input_ids)
+        token_type_ids = paddle.to_tensor(token_type_ids)
+        logits = model(input_ids, token_type_ids)
+        probs = F.softmax(logits, axis=-1)
+        probs_ids = paddle.argmax(probs, -1).numpy()
+        probs = probs.numpy()
+        for p_list, p_ids, seq_len, sentence in zip(probs.tolist(), probs_ids.tolist(), seq_lens.tolist(), sentence_batch):
+            prob_one = [p_list[index][pid] for index, pid in enumerate(p_ids[1: seq_len - 1])]
+            label_one = [id2label[pid] for pid in p_ids[1: seq_len - 1]]
+            temp_list = pred2formot(label_one, sentence)
+            pred_causality_pair_list = []
+            possible_causality_pair_list = []
+            for i in range(0, len(temp_list)):
+                for j in range(i + 1, len(temp_list)):
+                    if (temp_list[i][0] == 'C' and (temp_list[j][0] =='E' or temp_list[j][0] == 'Emb')) or ((temp_list[i][0] == 'C' or temp_list[i][0] == 'Emb')and temp_list[j][0] == 'E'):
+                        possible_causality_pair_list.append(
+                            [[temp_list[i][1],temp_list[i][2]],[temp_list[j][1],temp_list[j][2]]])
+                    if (temp_list[i][0] == 'E' and (temp_list[j][0] == 'C' or temp_list[j][0] == 'Emb')) or (
+                            (temp_list[i][0] == 'E' or temp_list[i][0] == 'Emb') and temp_list[j][0] == 'C'):
+                        possible_causality_pair_list.append(
+                            [[temp_list[j][1], temp_list[j][2]], [temp_list[i][1], temp_list[i][2]]])
+            pred_pair_data_list = MLP_pred_line_data_generator(sentence, possible_causality_pair_list, bert_model, bert_tokenizer)
+            for m in range(0, len(pred_pair_data_list)):
+                if_cause = MLP_model(paddle.to_tensor(pred_pair_data_list[m]))
+                if int(paddle.argmax(if_cause, axis=1)) == 1:
+                    pred_causality_pair_list.append(possible_causality_pair_list[m])
+            results.append({"words": list(sentence), "causal_triples": pred_causality_pair_list})
+    with open(args.predict_save_path, 'w') as pred_ouput_file:
+        for item in results:
+            pred_ouput_file.write(json.dumps(item) + '\n')
+
 
 @Causality_ExtractionModel.register("Causality_Extraction","Paddle")
 class Causality_ExtractionPaddle(Causality_ExtractionModel):
@@ -379,4 +493,7 @@ class Causality_ExtractionPaddle(Causality_ExtractionModel):
 
     def run(self):
         do_train(self.args)
+
+    def pred(self):
+        do_predict(self.args)
 
