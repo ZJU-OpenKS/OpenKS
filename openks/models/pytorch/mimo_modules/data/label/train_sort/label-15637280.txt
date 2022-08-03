@@ -1,0 +1,43 @@
+# 15637280	requirement#0 of#1 voltage-gated#2 calcium#3 channel#4 beta4#5 subunit#6 for#7 t#8 lymphocyte#9 functions#10 .#11
+
+c1:[{voltage-gated_calcium_channel_beta4_subunit#2:requirement#0},for#7,t_lymphocyte_functions#8]
+stmt1 = c1
+
+# 15637280	calcium#0 is#1 known#2 to#3 play#4 vital#5 roles#6 in#7 diverse#8 physiological#9 processes#10 ,#11 and#12 it#13 is#14 known#15 that#16 voltage-gated#17 calcium#18 channels#19 mediate#20 calcium#21 influx#22 in#23 excitable#24 cells#25 .#26
+
+f1:[calcium#0,is_known_to_play#1,vital_roles#5]
+f2:[voltage-gated_calcium_channels#17,mediate#20,calcium_influx#21]
+c2:[vital_roles#5,in#7,diverse_physiological_processes#8]
+c3:[calcium_influx#21,in#23,excitable_cells#24]
+stmt2 = f1 f2 c2 c3
+
+# 15637280	however#0 ,#1 no#2 consensus#3 exists#4 on#5 the#6 molecular#7 identity#8 of#9 the#10 calcium#11 channels#12 present#13 in#14 nonexcitable#15 cells#16 such#17 as#18 t#19 lymphocytes#20 .#21
+
+f3:[consensus#3,exists_on#4,{calcium_channels_present#11:molecular_identity#7}]
+c4:[NIL,no#2,consensus#3]
+c5:[{calcium_channels_present#11:molecular_identity#7},in#14,nonexcitable_cells#15]
+c6:[{calcium_channels_present#11:molecular_identity#7},in#14,t_lymphocytes#19]
+stmt3 = f3 c4 c5 c6
+
+# 15637280	here#0 ,#1 we#2 demonstrate#3 that#4 t#5 lymphocytes#6 express#7 both#8 regulatory#9 beta4#10 and#11 poreforming#12 cav1#13 alpha1#14 subunits#15 of#16 cav#17 channels#18 .#19
+
+f4:[NIL,demonstrate_that#3,NIL]
+f5:[t_lymphocytes#5,express#7,regulatory_beta4#9]
+f6:[t_lymphocytes#5,express#7,{cav_channels#17:poreforming_cav1_alpha1_subunits#12}]
+stmt4 = f4 f5 f6
+
+# 15637280	cav#0 beta4-mutant#1 t#2 lymphocytes#3 fail#4 to#5 acquire#6 normal#7 functions#8 and#9 display#10 impairment#11 in#12 the#13 calcium#14 response#15 ,#16 activation#17 of#18 the#19 transcription#20 factor#21 nfat#22 ,#23 and#24 cytokine#25 production#26 .#27
+
+f7:[cav_beta4-mutant_t_lymphocytes#0,fail_to_acquire#4,normal_functions#7]
+f8:[cav_beta4-mutant_t_lymphocytes#0,display_impairment_in#10,calcium_response#14]
+f9:[cav_beta4-mutant_t_lymphocytes#0,display_impairment_in#10,{transcription_factor_nfat#20:activation#17}]
+f10:[cav_beta4-mutant_t_lymphocytes#0,display_impairment_in#10,cytokine_production#25]
+stmt5 = f7 f8 f9 f10
+
+# 15637280	although#0 cav1#1 channels#2 of#3 lymphocytes#4 retain#5 their#6 voltage#7 dependency#8 ,#9 t#10 cell#11 receptor#12 stimulation#13 dramatically#14 increases#15 channel#16 opening#17 ,#18 providing#19 a#20 new#21 mechanism#22 for#23 calcium#24 entry#25 in#26 lymphocytes#27 .#28
+
+f11:[{lymphocytes#4:cav1_channels#1},retain#5,{lymphocytes#4:voltage_dependency#7}]
+f12:[t_cell_receptor_stimulation#10,dramatically_increases#14,channel_opening#16]
+f13:[t_cell_receptor_stimulation#10,providing_a_new_mechanism_for#19,calcium_entry#24]
+c7:[calcium_entry#24,in#26,lymphocytes#27]
+stmt6 = f11 f12 f13 c7

@@ -1,0 +1,88 @@
+# 15542189	cationic#0 microparticles#1 are#2 a#3 potent#4 delivery#5 system#6 for#7 a#8 hcv#9 dna#10 vaccine#11 .#12 
+
+f1:[cationic_microparticles#0,are#2,potent_delivery_system#4]
+c1:[potent_delivery_system#4,for#7,hcv_dna_vaccine#9]
+stmt1 = f1 c1
+
+# 15542189	we#0 initially#1 evaluated#2 in#3 mice#4 the#5 ability#6 of#7 naked#8 dna#9 encoding#10 intracellular#11 forms#12 of#13 the#14 e1e2#15 envelope#16 proteins#17 from#18 hcv#19 to#20 induce#21 antibody#22 responses#23 and#24 compared#25 the#26 responses#27 induced#28 with#29 the#30 same#31 plasmid#32 adsorbed#33 onto#34 cationic#35 poly#36 microparticles#37 .#38
+
+f2:[NIL,evaluated#2,{naked_dna#8:ability#6}]
+f3:[NIL,to_induce#20,antibody_responses#22]
+f4:[NIL,compared#25,{NIL#-1:responses#27}]
+c2:[NIL,in#3,mice#4]
+c3:[{naked_dna#8:ability#6},encoding#10,{e1e2_envelope_proteins#15:intracellular_forms#11}]
+c4:[{e1e2_envelope_proteins#15:intracellular_forms#11},from#18,hcv#19]
+c5:[{NIL#-1:responses#27},induced_with#28,plasmid#32]
+c6:[plasmid#32,adsorbed_onto#33,cationic_poly_microparticles#35]
+stmt2 = f2 f3 f4 c2 c3 c4 c5 c6
+
+# 15542189	although#0 naked#1 dna#2 was#3 only#4 able#5 to#6 induce#7 detectable#8 responses#9 at#10 the#11 100#12 microg#13 dose#14 level#15 ,#16 making#17 this#18 approach#19 impractical#20 for#21 evaluation#22 in#23 larger#24 animals#25 ,#26 plg/dna#27 induced#28 detectable#29 responses#30 at#31 10#32 microg#33 .#34 
+
+f5:[naked_dna#1,was_only_able_to_induce#3,detectable_responses#8]
+f6:[naked_dna#1,making_this_approach_impractical_for#17,{larger_animals#24:evaluation#22}]
+f7:[plg/dna#27,induced#28,detectable_responses#29]
+c7:[detectable_responses#8,at#10,100_microg_dose_level#12]
+c8:[detectable_responses#29,at#31,10_microg#32]
+stmt3 = f5 f6 f7 c7 c8
+
+# 15542189	in#0 addition#1 ,#2 the#3 plg/dna#4 microparticles#5 induced#6 significantly#7 enhanced#8 responses#9 to#10 naked#11 dna#12 when#13 compared#14 at#15 the#16 same#17 dose#18 level#19 .#20
+
+f8:[plg/dna_microparticles#4,induced_significantly_enhanced_responses_to#6,naked_dna#11]
+c9:[NIL,compared_at#14,same_dose_level#17]
+stmt4 = f8 c9
+
+# 15542189	remarkably#0 ,#1 plg/dna#2 induced#3 comparable#4 responses#5 to#6 recombinant#7 e1e2#8 protein#9 adjuvanted#10 with#11 the#12 emulsion#13 mf59#14 .#15 
+
+f9:[plg/dna#2,induced_comparable_responses_to#3,recombinant_e1e2_protein#7]
+c10:[recombinant_e1e2_protein#7,adjuvanted_with#10,emulsion_mf59#13]
+stmt5 = f9 c10
+
+# 15542189	furthermore#0 ,#1 plg/dna#2 effectively#3 primed#4 for#5 a#6 booster#7 response#8 with#9 protein#10 immunization#11 ,#12 while#13 naked#14 dna#15 did#16 not#17 .#18 
+
+f10:[plg/dna#2,effectively_primed_for#3,booster_response#7]
+f11:[naked_dna#14,did_not#16,NIL]
+c11:[booster_response#7,with#9,protein_immunization#10]
+stmt6 = f10 f11 c11
+
+# 15542189	therefore#0 ,#1 plg/dna#2 was#3 selected#4 for#5 further#6 evaluation#7 in#8 a#9 non-human#10 primate#11 model#12 .#13 
+
+f12:[plg/dna#2,was_selected_for#3,{non-human_primate_model#10:evaluation#7}]
+stmt7 = f12
+
+# 15542189	in#0 a#1 study#2 in#3 rhesus#4 macaques#5 ,#6 plg/dna#7 induced#8 seroconversion#9 in#10 3/3#11 animals#12 following#13 three#14 immunizations#15 .#16 
+
+f13:[plg/dna#7,induced#8,seroconversion#9]
+c12:[NIL,in#0,{rhesus_macaques#4:study#2}]
+c13:[seroconversion#9,in#10,{animals#12:3/3#11}]
+c14:[{animals#12:3/3#11},following#13,{immunizations#15:three#14}]
+stmt8 = f13 c12 c13 c14
+
+# 15542189	although#0 the#1 antibody#2 responses#3 appeared#4 lower#5 than#6 those#7 induced#8 with#9 recombinant#10 protein#11 adjuvanted#12 with#13 mf59#14 ,#15 following#16 a#17 fourth#18 dose#19 ,#20 plg/dna#21 and#22 protein#23 induced#24 comparable#25 responses#26 .#27 
+
+f14:[antibody_responses#2,appeared_lower_than#4,those#7]
+f15:[antibody_responses#2,following#16,fourth_dose#18]
+f16:[plg/dna#21,induced#24,comparable_responses#25]
+f17:[protein#23,induced#24,comparable_responses#25]
+c15:[those#7,induced_with#8,recombinant_protein#10]
+c16:[recombinant_protein#10,adjuvanted_with#12,mf59#14]
+stmt9 = f14 f15 f16 f17 c15 c16
+
+# 15542189	however#0 ,#1 a#2 single#3 booster#4 dose#5 of#6 recombinant#7 protein#8 administered#9 to#10 the#11 animals#12 previously#13 immunized#14 with#15 plg/dna#16 induced#17 much#18 higher#19 responses#20 .#21 
+
+f18:[{recombinant_protein#7:single_booster_dose#3},induced_much_higher_responses#17,NIL]
+c17:[{recombinant_protein#7:single_booster_dose#3},administered_to#9,animals#12]
+c18:[animals#12,previously_immunized_with#13,plg/dna#16]
+stmt10 = f18 c17 c18
+
+# 15542189	in#0 addition#1 ,#2 one#3 of#4 three#5 animals#6 immunized#7 with#8 plg/dna#9 showed#10 a#11 cytotoxic#12 t#13 lymphocyte#14 response#15 in#16 peripheral#17 blood#18 lymphocytes#19 .#20 
+
+f19:[animals#6,showed#10,cytotoxic_t_lymphocyte_response#12]
+c19:[animals#6,immunized_with#7,plg/dna#9]
+c20:[cytotoxic_t_lymphocyte_response#12,in#16,peripheral_blood_lymphocytes#17]
+stmt11 = f19 c19 c20
+
+# 15542189	in#0 conclusion#1 ,#2 cationic#3 plg#4 microparticles#5 with#6 adsorbed#7 hcv#8 dna#9 generates#10 potent#11 immune#12 responses#13 .#14 
+
+f20:[cationic_plg_microparticles#3,generates#10,potent_immune_responses#11]
+c21:[cationic_plg_microparticles#3,with#6,adsorbed_hcv_dna#7]
+stmt12 = f20 c21

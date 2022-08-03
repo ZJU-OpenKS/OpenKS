@@ -1,0 +1,69 @@
+# 15621307	equine#0 herpesvirus-1#1 infection#2 induces#3 ifn-gamma#4 production#5 by#6 equine#7 t#8 lymphocyte#9 subsets#10 .#11 
+
+f1:[equine_herpesvirus-1_infection#0,induces#3,ifn-gamma_production#4]
+c1:[ifn-gamma_production#4,by#6,equine_t_lymphocyte_subsets#7]
+stmt1 = f1 c1
+
+# 15621307	a#0 commercial#1 bovine#2 ifn-gamma-specific#3 monoclonal#4 antibody#5 was#6 used#7 to#8 measure#9 antigen-specific#10 ifn-gamma#11 production#12 by#13 equine#14 lymphocytes#15 .#16 
+
+f2:[commercial_bovine_ifn-gamma-specific_monoclonal_antibody#1,was_used_to_measure#6,antigen-specific_ifn-gamma_production#10]
+c2:[antigen-specific_ifn-gamma_production#10,by#13,equine_lymphocytes#14]
+stmt2 = f2 c2
+
+# 15621307	paired#0 pbmc#1 samples#2 were#3 collected#4 from#5 six#6 ponies#7 prior#8 to#9 and#10 10#11 days#12 after#13 challenge#14 infection#15 with#16 equine#17 herpesvirus-1#18 .#19 
+
+f3:[paired_pbmc_samples#0,were_collected_from#3,{ponies#7:six#6}]
+c3:[{ponies#7:six#6},prior_to_and_10_days_after#8,challenge_infection#14]
+c4:[challenge_infection#14,with#16,equine_herpesvirus-1#17]
+stmt3 = f3 c3 c4
+
+# 15621307	each#0 sample#1 was#2 stimulated#3 in#4 vitro#5 with#6 ehv-1#7 ,#8 virus-free#9 medium#10 ,#11 or#12 pma#13 and#14 ionomycin#15 ,#16 and#17 labelled#18 with#19 monoclonal#20 antibodies#21 specific#22 for#23 various#24 equine#25 lymphocyte#26 subset#27 markers#28 .#29 
+
+f4:[sample#1,was_stimulated#2,in_vitro#4]
+f5:[sample#1,labelled_with#18,monoclonal_antibodies#20]
+c5:[in_vitro#4,with#6,ehv-1#7]
+c6:[in_vitro#4,with#6,virus-free_medium#9]
+c7:[in_vitro#4,with#6,pma#13]
+c8:[in_vitro#4,with#6,ionomycin#15]
+c9:[monoclonal_antibodies#20,specific_for#22,various_equine_lymphocyte_subset_markers#24]
+stmt4 = f4 f5 c5 c6 c7 c8 c9
+
+# 15621307	following#0 fixation#1 ,#2 intracellular#3 ifn-gamma#4 was#5 detected#6 using#7 a#8 fitc-conjugated#9 bovine#10 ifn-gamma-specific#11 monoclonal#12 antibody#13 .#14
+
+f6:[intracellular_ifn-gamma#3,was_detected_using#5,fitc-conjugated_bovine_ifn-gamma-specific_monoclonal_antibody#9]
+c10:[NIL,following#0,fixation#1]
+stmt5 = f6 c10
+
+# 15621307	in#0 vitro#1 restimulation#2 of#3 pbmc#4 with#5 ehv-1#6 induced#7 ifn-gamma#8 production#9 by#10 a#11 significantly#12 higher#13 percentage#14 of#15 total#16 (cd5(+))#17 t#18 lymphocytes#19 ,#20 and#21 cd4(+)#22 and#23 cd8(+)#24 t#25 lymphocyte#26 subsets#27 among#28 post-ehv-1#29 infection#30 pbmc#31 samples#32 compared#33 to#34 pre-infection#35 samples#36 .#37
+
+f7:[{pbmc#4:in_vitro_restimulation#0},induced#7,ifn-gamma_production#8]
+c11:[{pbmc#4:in_vitro_restimulation#0},with#5,ehv-1#6]
+c12:[ifn-gamma_production#8,by_a_significantly_higher#10,{total_(cd5(+))_t_lymphocytes#16:percentage#14}]
+c13:[ifn-gamma_production#8,by_a_significantly_higher#10,{cd4(+)#22:percentage#14}]
+c14:[ifn-gamma_production#8,by_a_significantly_higher#10,{cd8(+)_t_lymphocyte_subsets#24:percentage#14}]
+c15:[{cd8(+)_t_lymphocyte_subsets#24:percentage#14},among#28,{post-ehv-1_infection_pbmc_samples#29:percentage#14}]
+c16:[{post-ehv-1_infection_pbmc_samples#29:percentage#14},compared_to#33,{post-ehv-1_infection_pbmc_samples#29:percentage#14}]
+stmt6 = f7 c11 c12 c13 c14 c15 c16
+
+# 15621307	this#0 response#1 was#2 associated#3 with#4 an#5 increase#6 in#7 virus-specific#8 ctl#9 activity#10 ,#11 a#12 critical#13 immune#14 effector#15 for#16 the#17 control#18 of#19 ehv-1#20 infection#21 and#22 disease#23 .#24
+
+f8:[{NIL#-1:response#1},was_associated_with#2,{virus-specific_ctl_activity#8:increase#6}]
+f9:[{NIL#-1:response#1},was_associated_with#2,critical_immune_effector#13]
+c17:[critical_immune_effector#13,for#16,{ehv-1_infection#20:control#18}]
+c18:[critical_immune_effector#13,for#16,{disease#23:control#18}]
+stmt7 = f8 f9 c17 c18
+
+# 15621307	no#0 significant#1 increase#2 in#3 ifn-gamma#4 production#5 by#6 b#7 lymphocytes#8 was#9 observed#10 .#11
+
+f10:[{ifn-gamma_production#4:significant_increase#1},was_observed#9,NIL]
+c19:[NIL,no#0,{ifn-gamma_production#4:significant_increase#1}]
+c20:[{ifn-gamma_production#4:significant_increase#1},by#6,b_lymphocytes#7]
+stmt8 = f10 c19 c20
+
+# 15621307	these#0 data#1 demonstrate#2 that#3 ehv-1#4 challenge#5 infection#6 of#7 ponies#8 results#9 in#10 increased#11 production#12 of#13 ifn-gamma#14 by#15 virus-specific#16 t#17 lymphocytes#18 ,#19 and#20 that#21 this#22 response#23 can#24 be#25 quantitated#26 using#27 flow#28 cytometry#29 .#30
+
+f11:[{NIL#-1:data#1},demonstrate_that#2,NIL]
+f12:[{ponies#8:ehv-1_challenge_infection#4},results_in#9,{ifn-gamma#14:increased_production#11}]
+c21:[{ifn-gamma#14:increased_production#11},by#15,virus-specific_t_lymphocytes#16]
+c22:[{NIL#-1:response#23},can_be_quantitated_using#24,flow_cytometry#28]
+stmt9 = f11 f12 c21 c22

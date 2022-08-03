@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>Sensitive Compartmented Information Facility - IAA</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/21/2021</AwardEffectiveDate>
+<AwardExpirationDate>10/21/2022</AwardExpirationDate>
+<AwardTotalIntnAmount>21000.00</AwardTotalIntnAmount>
+<AwardAmount>21000</AwardAmount>
+<AwardInstrument>
+<Value>Contract Interagency Agreement</Value>
+</AwardInstrument>
+<Organization>
+<Code>02060000</Code>
+<Directorate>
+<Abbreviation>IRM</Abbreviation>
+<LongName>Office Of Information &amp; Resource Mgmt</LongName>
+</Directorate>
+<Division>
+<Abbreviation>DAS</Abbreviation>
+<LongName>Division Of Administrative Services</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Antonio Bermudez</SignBlockName>
+<PO_EMAI>abermude@nsf.gov</PO_EMAI>
+<PO_PHON>7032927844</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration/>
+<MinAmdLetterDate>11/09/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/09/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM/>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2202176</AwardID>
+<Investigator>
+<FirstName>Jerene</FirstName>
+<LastName>Shaheed</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Jerene Shaheed</PI_FULL_NAME>
+<EmailAddress/>
+<PI_PHON>7032927562</PI_PHON>
+<NSF_ID>000697291</NSF_ID>
+<StartDate>11/09/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>Department of Labor</Name>
+<CityName>Washington</CityName>
+<ZipCode>20210</ZipCode>
+<PhoneNumber/>
+<StreetAddress/>
+<StreetAddress2/>
+<CountryName>United States</CountryName>
+<StateName>District of Columbia</StateName>
+<StateCode>DC</StateCode>
+<CONGRESSDISTRICT>00</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>DC00</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>003255627</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>LABOR, DEPARTMENT OF</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>161906193</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name/>
+<CityName/>
+<StateCode/>
+<ZipCode/>
+<StreetAddress/>
+<CountryCode/>
+<CountryName>RI REQUIRED</CountryName>
+<StateName>RI REQUIRED</StateName>
+<CountryFlag>0</CountryFlag>
+<CONGRESSDISTRICT/>
+<CONGRESS_DISTRICT_PERF>""</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>0601</Code>
+<Text/>
+</ProgramElement>
+<FUND_OBLG>2022~21000</FUND_OBLG>
+</Award>
+</rootTag>

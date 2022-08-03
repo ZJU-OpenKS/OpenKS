@@ -1,0 +1,87 @@
+# 11726654	nuclear#0 receptor#1 peroxisome#2 proliferator-activated#3 receptor#4 alpha#5 is#6 expressed#7 in#8 resting#9 murine#10 lymphocytes.#11 the#12 pparalpha#13 in#14 t#15 and#16 b#17 lymphocytes#18 is#19 both#20 transactivation#21 and#22 transrepression#23 competent#24 .#25 
+
+f1:[nuclear_receptor_peroxisome_proliferator-activated_receptor_alpha#0,is_expressed_in#6,resting_murine_lymphocytes#9]
+f2:[pparalpha#13,is#19,transactivation#21]
+f3:[pparalpha#13,is#19,transrepression_competent#23]
+c1:[pparalpha#13,in#14,t#15]
+c2:[pparalpha#13,in#14,b_lymphocytes#17]
+stmt1 = f1 f2 f3 c1 c2
+
+# 11726654	peroxisome#0 proliferator-activated#1 receptors#2 are#3 transcription#4 factors#5 that#6 belong#7 to#8 the#9 nuclear#10 hormone#11 receptor#12 superfamily#13 .#14
+
+f4:[peroxisome_proliferator-activated_receptors#0,are#3,transcription_factors#4]
+c3:[transcription_factors#4,belong_to#7,nuclear_hormone_receptor_superfamily#10]
+stmt2 = f4 c3
+
+# 11726654	pparalpha#0 and#1 ppargamma#2 ligands#3 have#4 been#5 demonstrated#6 to#7 exert#8 anti-inflammatory#9 activities#10 in#11 macrophages#12 by#13 repressing#14 the#15 activities#16 of#17 several#18 transcription#19 factors#20 .#21
+
+f5:[pparalpha#0,been_demonstrated_to_exert#5,anti-inflammatory_activities#9]
+f6:[ppargamma_ligands#2,exert#8,anti-inflammatory_activities#9]
+c4:[anti-inflammatory_activities#9,in#11,macrophages#12]
+c5:[macrophages#12,by_repressing#13,{transcription_factors#19:activities#16}]
+stmt3 = f5 f6 c4 c5
+
+# 11726654	ppargamma#0 is#1 expressed#2 in#3 t#4 lymphocytes#5 and#6 may#7 play#8 a#9 role#10 in#11 cytokine#12 production#13 ,#14 cellular#15 proliferation#16 ,#17 and#18 susceptibility#19 to#20 apoptosis#21 .#22 
+
+f7:[ppargamma#0,is_expressed_in#1,t_lymphocytes#4]
+f8:[ppargamma#0,may_play_a_role_in#7,cytokine_production#12]
+f9:[ppargamma#0,may_play_a_role_in#7,cellular_proliferation#15]
+f10:[ppargamma#0,may_play_a_role_in#7,susceptibility#19]
+c6:[susceptibility#19,to#20,apoptosis#21]
+stmt4 = f7 f8 f9 f10 c6
+
+# 11726654	herein#0 ,#1 we#2 demonstrate#3 that#4 t#5 and#6 b#7 lymphocytes#8 constitutively#9 express#10 pparalpha#11 .#12
+
+f11:[NIL,demonstrate_that#3,NIL]
+f12:[t#5,constitutively_express#9,pparalpha#11]
+f13:[b_lymphocytes#7,constitutively_express#9,pparalpha#11]
+stmt5 = f11 f12 f13
+
+# 11726654	pparalpha#0 represents#1 the#2 predominant#3 isoform#4 expressed#5 in#6 lymphocytes#7 ,#8 whereas#9 ppargamma#10 dominates#11 in#12 all#13 cell#14 types#15 of#16 the#17 myeloid#18 lineage#19 .#20 
+
+f14:[pparalpha#0,represents#1,predominant_isoform#3]
+f15:[ppargamma#10,dominates_in#11,{myeloid_lineage#18:cell_types#14}]
+c7:[predominant_isoform#3,expressed_in#5,lymphocytes#7]
+stmt6 = f14 f15 c7
+
+# 11726654	pparalpha#0 expression#1 was#2 down-regulated#3 following#4 t-cell#5 activation#6 while#7 ppargamma#8 expression#9 increased#10 under#11 the#12 same#13 activating#14 conditions#15 .#16 
+
+f16:[pparalpha_expression#0,was_down-regulated_following#2,t-cell_activation#5]
+f17:[ppargamma_expression#8,increased_under_the_same#10,activating_conditions#14]
+stmt7 = f16 f17
+
+# 11726654	pparalpha#0 expression#1 in#2 t#3 cells#4 may#5 be#6 regulated#7 by#8 microenvironmental#9 factors#10 ,#11 because#12 peyer#13 's#14 patch#15 t#16 cells#17 expressed#18 far#19 greater#20 levels#21 of#22 pparalpha#23 than#24 t#25 cells#26 isolated#27 from#28 peripheral#29 lymphoid#30 organs#31 .#32 
+
+f18:[pparalpha_expression#0,may_be_regulated_by#5,microenvironmental_factors#9]
+f19:[{peyer#13:patch_t_cells#15},expressed#18,{pparalpha#23:far_greater_levels#19}]
+c8:[pparalpha_expression#0,in#2,t_cells#3]
+c9:[{pparalpha#23:far_greater_levels#19},than#24,t_cells#25]
+c10:[t_cells#25,isolated_from#27,peripheral_lymphoid_organs#29]
+stmt8 = f18 f19 c8 c9 c10
+
+# 11726654	exposure#0 to#1 specific#2 ligand#3 determined#4 that#5 pparalpha#6 in#7 lymphocytes#8 can#9 effectively#10 transactivate#11 a#12 peroxisome#13 proliferator#14 response#15 element#16 reporter#17 construct#18 .#19 
+
+f20:[{NIL#-1:exposure#0},determined_that#4,NIL]
+f21:[pparalpha#6,can_effectively_transactivate#9,peroxisome_proliferator_response_element_reporter_construct#13]
+c11:[{NIL#-1:exposure#0},to#1,specific_ligand#2]
+c12:[pparalpha#6,in#7,lymphocytes#8]
+stmt9 = f20 f21 c11 c12
+
+# 11726654	pparalpha#0 's#1 ability#2 to#3 regulate#4 endogenous#5 genes#6 ,#7 however#8 ,#9 required#10 treatment#11 with#12 histone#13 deacetylase#14 inhibitors#15 .#16 
+
+f22:[{pparalpha#0:ability#2},required_treatment_with#10,histone_deacetylase_inhibitors#13]
+c13:[{pparalpha#0:ability#2},to_regulate#3,endogenous_genes#5]
+stmt10 = f22 c13
+
+# 11726654	finally#0 ,#1 ligand#2 activation#3 of#4 lymphocyte#5 pparalpha#6 antagonized#7 nf-kappab#8 .#9 
+
+f23:[{lymphocyte_pparalpha#5:ligand_activation#2},antagonized#7,nf-kappab#8]
+stmt11 = f23
+
+# 11726654	our#0 observation#1 that#2 a#3 functional#4 pparalpha#5 exists#6 within#7 t#8 cells#9 and#10 b#11 lymphocytes#12 suggests#13 an#14 expanding#15 role#16 for#17 this#18 nuclear#19 receptor#20 in#21 cells#22 of#23 the#24 immune#25 system#26 .#27 
+
+f24:[{NIL#-1:observation#1},suggests_an_expanding_role_for#13,nuclear_receptor#19]
+f25:[functional_pparalpha#4,exists_within#6,t_cells#8]
+f26:[functional_pparalpha#4,exists_within#6,b_lymphocytes#11]
+c14:[nuclear_receptor#19,in#21,{immune_system#25:cells#22}]
+stmt12 = f24 f25 f26 c14

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>EAGER: Impacts of Fundamental Understanding of Atmospheric Energetics and Non-local Eddies on Frontier Atmospheric Research</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>11/15/2021</AwardEffectiveDate>
+<AwardExpirationDate>10/31/2023</AwardExpirationDate>
+<AwardTotalIntnAmount>274673.00</AwardTotalIntnAmount>
+<AwardAmount>274673</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>06020100</Code>
+<Directorate>
+<Abbreviation>GEO</Abbreviation>
+<LongName>Directorate For Geosciences</LongName>
+</Directorate>
+<Division>
+<Abbreviation>AGS</Abbreviation>
+<LongName>Div Atmospheric &amp; Geospace Sciences</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>David Verardo</SignBlockName>
+<PO_EMAI>dverardo@nsf.gov</PO_EMAI>
+<PO_PHON>7032924695</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>This project is supported under the auspices of the EArly Concept Grant For Exploratory Research (EAGER) program. The project generally seeks to investigate two outstanding fundamental issues at the frontier of atmospheric science: 1) understanding atmospheric energetics; and 2) understanding the dominant role of non-local eddies in energy and momentum transfers across scales of atmospheric motions. The research strategy combines theoretical investigation, observational analyses, and modeling in an effort to better inform theoretical aspects of atmospheric processes that are validated by observations and confirmed by numerical models.&lt;br/&gt;&lt;br/&gt;The researcher will pursue two specific objectives for the project. The first objective aims to constrain atmospheric energetics under the influence of diabatic heating and cooling by analyzing existing field observations with a focus on non-hydrostatic energy transfer. The second objective seeks to develop a one-dimensional model based on energy conservation laws and physically-based surface conditions for capturing non-local eddies in energy and momentum transfers.  It is suggested to achieve this objective without parameterizing turbulent mixing and investigating impacts of non-hydrostatic energy transfer on atmospheric dynamics and thermodynamics with validation using boundary-layer field observations over a range of atmospheric instabilities through the diurnal cycle.&lt;br/&gt;&lt;br/&gt;The potential Broader Impacts include challenging scientific orthodoxy and seeking to better understand fundamental atmospheric physics that governs atmospheric dynamics and thermodynamics. This is critical to addressing a range of atmospheric phenomena strongly influenced by diabatic heating and cooling such as convective systems (hurricanes, tropical cycles, tornado genesis) and stable boundary layers when non-hydrostatic energy transfer is potentially strong.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>11/03/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/03/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.050</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2203248</AwardID>
+<Investigator>
+<FirstName>Jielun</FirstName>
+<LastName>Sun</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Jielun Sun</PI_FULL_NAME>
+<EmailAddress>jielun@nwra.com</EmailAddress>
+<PI_PHON>3034159701</PI_PHON>
+<NSF_ID>000113452</NSF_ID>
+<StartDate>11/03/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>NorthWest Research Associates, Incorporated</Name>
+<CityName>Redmond</CityName>
+<ZipCode>980525164</ZipCode>
+<PhoneNumber>4255569055</PhoneNumber>
+<StreetAddress>4118 148th Ave NE</StreetAddress>
+<StreetAddress2/>
+<CountryName>United States</CountryName>
+<StateName>Washington</StateName>
+<StateCode>WA</StateCode>
+<CONGRESSDISTRICT>01</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>WA01</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>151471349</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>NORTHWEST RESEARCH ASSOCIATES, INC.</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>151471349</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[NorthWest Research Associates, Incorporated]]></Name>
+<CityName>Redmond</CityName>
+<StateCode>WA</StateCode>
+<ZipCode>980525164</ZipCode>
+<StreetAddress><![CDATA[4118 148th Ave NE]]></StreetAddress>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>Washington</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>01</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>WA01</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>1525</Code>
+<Text>Physical &amp; Dynamic Meteorology</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>4444</Code>
+<Text>INTERDISCIPLINARY PROPOSALS</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>7916</Code>
+<Text>EAGER</Text>
+</ProgramReference>
+<FUND_OBLG>2022~274673</FUND_OBLG>
+</Award>
+</rootTag>

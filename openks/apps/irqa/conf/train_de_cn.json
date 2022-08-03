@@ -1,0 +1,9 @@
+{
+  "batch_size": 8,
+  "train_set": "openks/apps/irqa/data/dual.train", 
+  "save_model_path": "./output/",
+  "save_steps": 1000,
+  "epoch": 2, 
+  "learning_rate": 2e-5,
+  "log_folder": "./log"
+}

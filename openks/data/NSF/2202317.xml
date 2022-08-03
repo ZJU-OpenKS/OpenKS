@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>SaTC: CORE: Medium: Collaborative: Hardening Off-the-Shelf Software Against Side Channel Attacks</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>09/30/2024</AwardExpirationDate>
+<AwardTotalIntnAmount>600000.00</AwardTotalIntnAmount>
+<AwardAmount>314324</AwardAmount>
+<AwardInstrument>
+<Value>Continuing Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>05050000</Code>
+<Directorate>
+<Abbreviation>CSE</Abbreviation>
+<LongName>Direct For Computer &amp; Info Scie &amp; Enginr</LongName>
+</Directorate>
+<Division>
+<Abbreviation>CNS</Abbreviation>
+<LongName>Division Of Computer and Network Systems</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Daniela Oliveira</SignBlockName>
+<PO_EMAI>doliveir@nsf.gov</PO_EMAI>
+<PO_PHON>7032924352</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>Side channel attacks study leakage due to timing variation in software execution, resulting from contention for hardware resources. By analyzing these variations, an attacker can obtain additional information and use it to deduce the victim’s secrets. As proven by Spectre and Meltdown, these side channel attacks pose a severe threat to the security of nearly all computing devices. Given that side channel protection often requires hardware redesign, something must be done in the interim to secure existing software on currently deployed hardware.  This project studies transformations on existing software in an attempt to harden it against side channel attacks. &lt;br/&gt;&lt;br/&gt;The project consists of three main tasks. In Task 1, the project will attempt to reverse engineer various hardware structures in the processor so as to determine where attacks might occur. Next, in Task 2, the project will use the data from Task 1 to design transformations that will protect leaky software against side channels. Finally, Task 3 will develop methods to confirm that the outputs of Task 2 are indeed side channel free. While typical analysis of side channel leakage requires manual effort, Task 3 aims to develop automated tools for leakage detection, avoiding the need for manual analysis.&lt;br/&gt;&lt;br/&gt;Hardware is the ultimate root of trust, the correctness of which is the foundation to the security of all software. However, unlike software, hardware security has received much less attention, from both academic and industry. Until new and secure hardware becomes available, the proposed project aims to protect existing software deployed on leaky hardware. While the project cannot hope to eliminate all leakage, it does aim to harden existing software, making leakage harder to exploit. Tools and methodologies developed by this project will be used to design safer hardware, as well as help mitigate leakage in existing software. &lt;br/&gt;&lt;br/&gt;The project will retain all data, simulators, and code produced in a central GIT repository which will be publicly available at github.com.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>10/21/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>10/21/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.070</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2202317</AwardID>
+<Investigator>
+<FirstName>Daniel</FirstName>
+<LastName>Genkin</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Daniel Genkin</PI_FULL_NAME>
+<EmailAddress>genkin@gatech.edu</EmailAddress>
+<PI_PHON>2679167939</PI_PHON>
+<NSF_ID>000810682</NSF_ID>
+<StartDate>10/21/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>Georgia Tech Research Corporation</Name>
+<CityName>Atlanta</CityName>
+<ZipCode>303320420</ZipCode>
+<PhoneNumber>4048944819</PhoneNumber>
+<StreetAddress>Office of Sponsored Programs</StreetAddress>
+<StreetAddress2/>
+<CountryName>United States</CountryName>
+<StateName>Georgia</StateName>
+<StateCode>GA</StateCode>
+<CONGRESSDISTRICT>05</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>GA05</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>097394084</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>GEORGIA TECH RESEARCH CORPORATION</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>097394084</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[Georgia Institute of Technology]]></Name>
+<CityName>Atlanta</CityName>
+<StateCode>GA</StateCode>
+<ZipCode>303320002</ZipCode>
+<StreetAddress><![CDATA[225 North Avenue NW]]></StreetAddress>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>Georgia</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>05</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>GA05</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>8060</Code>
+<Text>Secure &amp;Trustworthy Cyberspace</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>025Z</Code>
+<Text>SaTC: Secure and Trustworthy Cyberspace</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>7924</Code>
+<Text>MEDIUM PROJECT</Text>
+</ProgramReference>
+<FUND_OBLG>2020~148796</FUND_OBLG>
+<FUND_OBLG>2021~165528</FUND_OBLG>
+</Award>
+</rootTag>

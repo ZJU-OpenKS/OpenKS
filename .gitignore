@@ -173,3 +173,4 @@ logs/
 .idea/
 .ipynb_checkpoints
 /openks/data/FB15k-237/entities.dict
+openks/data/nsf_dblp_kg/nsfkg

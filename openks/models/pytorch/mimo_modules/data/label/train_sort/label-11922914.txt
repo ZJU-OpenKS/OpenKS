@@ -1,0 +1,88 @@
+# 11922914	oxidant#0 stress#1 mechanism#2 of#3 homocysteine#4 potentiating#5 con#6 a-induced#7 proliferation#8 in#9 murine#10 splenic#11 t#12 lymphocytes#13 .#14 
+
+c1:[{homocysteine#4:oxidant_stress_mechanism#0},potentiating#5,con_a-induced_proliferation#6]
+c2:[con_a-induced_proliferation#6,in#9,murine_splenic_t_lymphocytes#10]
+stmt1 = c1 c2
+
+# 11922914	an#0 elevated#1 plasma#2 homocysteine#3 level#4 is#5 considered#6 an#7 independent#8 risk#9 factor#10 for#11 atherosclerosis#12 .#13 
+
+f1:[elevated_plasma_homocysteine_level#1,is_considered#5,{atherosclerosis#12:independent_risk_factor#8}]
+stmt2 = f1
+
+# 11922914	however#0 ,#1 the#2 mechanisms#3 by#4 which#5 hyperhomocysteinemia#6 induces#7 atherosclerosis#8 are#9 only#10 partially#11 understood#12 .#13 
+
+f2:[mechanisms#3,are_only_partially_understood#9,NIL]
+f3:[hyperhomocysteinemia#6,induces#7,atherosclerosis#8]
+c3:[NIL,by#4,mechanisms#3]
+stmt3 = f2 f3 c3
+
+# 11922914	the#0 effect#1 of#2 hcy#3 on#4 t#5 lymphocyte#6 proliferation#7 and#8 its#9 mechanisms#10 were#11 examined#12 in#13 normal#14 and#15 hyperhomocysteinemia#16 apoe-knockoutmice#17 .#18 
+
+f4:[{hcy#3:effect#1},were_examined_in#11,normal_and_hyperhomocysteinemia_apoe-knockoutmice#14]
+f5:[{hcy#3:mechanisms#10},were_examined_in#11,normal_and_hyperhomocysteinemia_apoe-knockoutmice#14]
+c4:[{hcy#3:effect#1},on#4,t_lymphocyte_proliferation#5]
+stmt4 = f4 f5 c4
+
+# 11922914	the#0 mouse#1 splenic#2 t-cells#3 were#4 treated#5 with#6 hcy#7 ,#8 related#9 compounds#10 and/or#11 antioxidants#12 in#13 the#14 presence#15 or#16 absence#17 of#18 concanavalin#19 a#20 .#21 
+
+f6:[mouse_splenic_t-cells#1,were_treated_with#4,hcy#7]
+f7:[mouse_splenic_t-cells#1,were_treated_with#4,related_compounds#9]
+f8:[mouse_splenic_t-cells#1,were_treated_with#4,antioxidants#12]
+c5:[antioxidants#12,in#13,{concanavalin_a#19:presence#15}]
+c6:[antioxidants#12,in#13,{concanavalin_a#19:absence#17}]
+stmt5 = f6 f7 f8 c5 c6
+
+# 11922914	dna#0 synthesis#1 ,#2 cell#3 apoptosis#4 ,#5 interleukin-2#6 level#7 and#8 production#9 of#10 reactive#11 oxygen#12 species#13 weremeasured#14 .#15 
+
+f9:[dna_synthesis#0,weremeasured#14,NIL]
+f10:[cell_apoptosis#3,weremeasured#14,NIL]
+f11:[interleukin-2_level#6,weremeasured#14,NIL]
+f12:[{reactive_oxygen_species#11:production#9},weremeasured#14,NIL]
+stmt6 = f9 f10 f11 f12
+
+# 11922914	hcy#0 and#1 related#2 compounds#3 with#4 thiol#5 ,#6 such#7 as#8 cysteine#9 and#10 glutathione#11 significantly#12 potentiated#13 con#14 a-induced#15 proliferation#16 and#17 partially#18 inhibited#19 apoptosis#20 in#21 t#22 lymphocytes#23 ,#24 but#25 it#26 had#27 no#28 direct#29 effect#30 on#31 resting#32 t#33 lymphocyte#34 .#35 
+
+f13:[hcy#0,significantly_potentiated#12,con_a-induced_proliferation#14]
+f14:[hcy#0,partially_inhibited_apoptosis_in#18,t_lymphocytes#22]
+f15:[hcy#0,had_no#27,{NIL#-1:direct_effect#29}]
+f16:[related_compounds#2,significantly_potentiated#12,con_a-induced_proliferation#14]
+f17:[related_compounds#2,partially_inhibited_apoptosis_in#18,t_lymphocytes#22]
+f18:[related_compounds#2,had_no#27,{NIL#-1:direct_effect#29}]
+f19:[thiol#5,such_as#7,cysteine#9]
+f20:[thiol#5,such_as#7,glutathione#11]
+c7:[related_compounds#2,with#4,thiol#5]
+c8:[{NIL#-1:direct_effect#29},on_resting#31,t_lymphocyte#33]
+stmt7 = f13 f14 f15 f16 f17 f18 f19 f20 c7 c8
+
+# 11922914	apoe-knockout#0 mice#1 with#2 hyperhomocysteinemia#3 had#4 a#5 significant#6 promotion#7 of#8 t-cell#9 proliferation#10 in#11 response#12 to#13 con#14 a#15 .#16 
+
+f21:[apoe-knockout_mice#0,had#4,{t-cell_proliferation#9:significant_promotion#6}]
+c9:[apoe-knockout_mice#0,with#2,hyperhomocysteinemia#3]
+c10:[{t-cell_proliferation#9:significant_promotion#6},in_response_to#11,con_a#14]
+stmt8 = f21 c9 c10
+
+# 11922914	hcy#0 also#1 increased#2 the#3 intracellular#4 ros#5 .#6 
+
+f22:[hcy#0,increased#2,intracellular_ros#4]
+stmt9 = f22
+
+# 11922914	radical#0 scavengers#1 reduced#2 hcyeffect#3 .#4 
+
+f23:[radical_scavengers#0,reduced#2,hcyeffect#3]
+stmt10 = f23
+
+# 11922914	these#0 data#1 indicate#2 that#3 ros#4 generated#5 by#6 thiol#7 of#8 hcy#9 auto-oxidation#10 are#11 involved#12 in#13 hcy#14 effect#15 on#16 con#17 a-induced#18 t#19 lymphocyte#20 proliferation#21 .#22 
+
+f24:[{NIL#-1:data#1},indicate_that#2,NIL]
+f25:[ros#4,are_involved_in#11,{hcy#14:effect#15}]
+c11:[ros#4,generated_by#5,{hcy_auto-oxidation#9:thiol#7}]
+c12:[{hcy#14:effect#15},on#16,{con_a-induced_t_lymphocyte#17:proliferation#21}]
+stmt11 = f24 f25 c11 c12
+
+# 11922914	these#0 findings#1 suggest#2 a#3 novel#4 mechanism#5 may#6 be#7 involved#8 in#9 chronic#10 inflammatory#11 progression#12 of#13 atherosclerosis#14 with#15 hyperhomocysteinemia#16 .#17 
+
+f26:[{NIL#-1:findings#1},suggest#2,NIL]
+f27:[novel_mechanism#4,may_be_involved_in#6,{atherosclerosis#14:chronic_inflammatory_progression#10}]
+c13:[{atherosclerosis#14:chronic_inflammatory_progression#10},with#15,hyperhomocysteinemia#16]
+stmt12 = f26 f27 c13
+

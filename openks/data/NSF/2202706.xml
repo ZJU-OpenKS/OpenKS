@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>FW-HTF-RL: Testing a Responsible Innovation Approach for Integrating Precision Agriculture (PA) Technologies with Future Farm Workers and   W ork</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>09/30/2024</AwardExpirationDate>
+<AwardTotalIntnAmount>2997792.00</AwardTotalIntnAmount>
+<AwardAmount>2663616</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>05050000</Code>
+<Directorate>
+<Abbreviation>CSE</Abbreviation>
+<LongName>Direct For Computer &amp; Info Scie &amp; Enginr</LongName>
+</Directorate>
+<Division>
+<Abbreviation>CNS</Abbreviation>
+<LongName>Division Of Computer and Network Systems</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>David Corman</SignBlockName>
+<PO_EMAI>dcorman@nsf.gov</PO_EMAI>
+<PO_PHON>7032928754</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>This Future of Work at the Human-Technology Frontier (FW-HTF) project will advance the fundamental understanding of building stronger human-machine networks in agriculture through the development and testing of socially and ethically desirable precision agriculture technologies and workforce augmentation approaches. Precision agriculture employs data-based agricultural technologies and practices and localized farm data to generate site-specific farm recommendations that can improve farm productivity and environmental sustainability. To unlock this potential of precision agriculture, educators and scientists are eager to train the future farm workforce. To embrace any training, farm workers need to believe they can trust the information they will get from these technologies and there needs to be a clear and understandable path to converting data to usable information. This project will use real farms in South Dakota and Vermont as living laboratories for developing and testing new precision agriculture tools (intelligent decision support system), sensor driven performance-based incentives for implementation of sustainable agriculture practices, and workforce training initiatives that can enhance farm workers’ trust and confidence in precision agriculture tools. The living laboratory approach will involve farm workers as users, co-producers, and co-evaluators of precision agriculture tools. This interactive technological development process has the potential to increase farmworkers’ trust in precision agriculture tools, enhance the training processes, increase farmers’ adoption of these tools, improve farm productivity, and on and off-farm environmental sustainability. Positive spillover from this project will also accelerate the transition of co-designed and co-evaluated artificial intelligence innovations in agriculture into many other economic sectors.&lt;br/&gt;&lt;br/&gt;This project will use a living laboratory approach to: (1) Develop, deploy, create algorithms, and test the ability to convert data collected from hyperspectral and multispectral sensors, field monitors, and in-situ nutrient sensors into useable information for farm workers through an Artificial Intelligence-based integrative decision support system; (2) Pilot an on-farm, sensor-driven performance-based payment for ecosystem services mechanism; and, (3) Implement principles of responsible innovation to draw policy-relevant insights that can strengthen human-machine networks in agriculture. The living laboratory approach taken by this interdisciplinary project team will: (1) Advance foundational understanding of responsible innovation for trustworthy artificial intelligence in agriculture; e.g. under what conditions of innovation, policy, and workforce training do farm workers come to trust recommendations made by intelligent decision support systems; (2) Develop and test innovative intelligent decision support system to integrate big data from heterogeneous sources and scales, e.g. unmanned aerial vehicles and in situ sensors; (3) Test the development and integration of novel low-cost nano-scale sensors for measuring soil and water phosphorus and nitrogen in the living laboratory farms, and (4) Help evolve new areas of ecologically responsible farming; e.g. how sensor-based payment for ecosystem services mechanism can revolutionize design of sustainable human-environment-technology partnerships. Through educational and outreach programs, this project will train 15 interdisciplinary PhD students and immerse more than 100 undergraduate students, 48 farmers, and stakeholders from public, private, and non-profit organizations in the living laboratories. This research builds on the successful precision agriculture research initiatives at South Dakota State University and University of Vermont and envisions the development of new approaches in modeling this complex socio-technical system for the purpose of successfully and responsibly transitioning agricultural workers for digital transformations in farm work in South Dakota and Vermont, and eventually rest of the nation.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>11/09/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/09/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.041, 47.070</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2202706</AwardID>
+<Investigator>
+<FirstName>Maaz</FirstName>
+<LastName>Gardezi</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Maaz Gardezi</PI_FULL_NAME>
+<EmailAddress>maaz@vt.edu</EmailAddress>
+<PI_PHON>5402312765</PI_PHON>
+<NSF_ID>000761104</NSF_ID>
+<StartDate>11/09/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>Virginia Polytechnic Institute and State University</Name>
+<CityName>BLACKSBURG</CityName>
+<ZipCode>240610001</ZipCode>
+<PhoneNumber>5402315281</PhoneNumber>
+<StreetAddress>Sponsored Programs 0170</StreetAddress>
+<StreetAddress2><![CDATA[300 Turner Street NW, Suite 4200]]></StreetAddress2>
+<CountryName>United States</CountryName>
+<StateName>Virginia</StateName>
+<StateCode>VA</StateCode>
+<CONGRESSDISTRICT>09</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>VA09</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>003137015</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>VIRGINIA POLYTECHNIC INSTITUTE AND STATE UNIVERSITY</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>003137015</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[Virginia Polytechnic Institute and State University]]></Name>
+<CityName/>
+<StateCode>VA</StateCode>
+<ZipCode>240610001</ZipCode>
+<StreetAddress/>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>Virginia</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>09</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>VA09</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>103Y</Code>
+<Text>FW-HTF Futr Wrk Hum-Tech Frntr</Text>
+</ProgramElement>
+<ProgramElement>
+<Code>1714</Code>
+<Text>Special Projects - CNS</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>063Z</Code>
+<Text>FW-HTF Futr Wrk Hum-Tech Frntr</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>9150</Code>
+<Text>EXP PROG TO STIM COMP RES</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>9178</Code>
+<Text>UNDERGRADUATE EDUCATION</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>9251</Code>
+<Text>REU SUPP-Res Exp for Ugrd Supp</Text>
+</ProgramReference>
+<FUND_OBLG>2020~2647616</FUND_OBLG>
+<FUND_OBLG>2021~16000</FUND_OBLG>
+</Award>
+</rootTag>

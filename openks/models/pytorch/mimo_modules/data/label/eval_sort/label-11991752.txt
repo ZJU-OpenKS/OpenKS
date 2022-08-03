@@ -1,0 +1,132 @@
+# 11991752	significant#0 antitumor#1 effects#2 obtained#3 by#4 autologous#5 tumor#6 cell#7 vaccine#8 engineered#9 to#10 secrete#11 interleukin#12 (il)-12#13 and#14 il-18#15 by#16 means#17 of#18 the#19 ebv/lipoplex#20 .#21
+
+c1:[significant_antitumor_effects#0,obtained_by#3,autologous_tumor_cell_vaccine#5]
+c2:[autologous_tumor_cell_vaccine#5,engineered_to#9,secrete_interleukin_(il)-12#11]
+c3:[autologous_tumor_cell_vaccine#5,engineered_to#9,il-18#15]
+c4:[NIL,by_means_of#16,ebv/lipoplex#20]
+stmt1 = c1 c2 c3 c4
+
+# 11991752	the#0 ebv/lipoplex#1 is#2 a#3 nonviral#4 gene#5 delivery#6 system#7 composed#8 of#9 a#10 cationic#11 lipid#12 and#13 epstein-barr#14 virus#15 (ebv)-based#16 plasmid#17 vector#18 that#19 carries#20 the#21 ebv#22 orip#23 and#24 ebv#25 nuclear#26 antigen#27 1#28 gene#29 .#30 
+
+f1:[ebv/lipoplex#1,is#2,nonviral_gene_delivery_system#4]
+c5:[nonviral_gene_delivery_system#4,composed_of#8,cationic_lipid#11]
+c6:[nonviral_gene_delivery_system#4,composed_of#8,epstein-barr_virus_(ebv)-based_plasmid_vector#14]
+c7:[epstein-barr_virus_(ebv)-based_plasmid_vector#14,carries#20,ebv_orip#22]
+c8:[epstein-barr_virus_(ebv)-based_plasmid_vector#14,carries#20,ebv_nuclear_antigen_1_gene#25]
+stmt2 = f1 c5 c6 c7 c8
+
+# 11991752	because#0 the#1 ebna1#2 supports#3 retention#4 ,#5 nuclear#6 localization#7 ,#8 and#9 transcriptional#10 upregulation#11 of#12 the#13 orip-bearing#14 plasmid#15 ,#16 cells#17 transfected#18 with#19 the#20 ebv/lipoplex#21 express#22 the#23 transgene#24 at#25 a#26 very#27 high#28 level#29 .#30 
+
+f2:[ebna1#2,supports#3,retention#4]
+f3:[ebna1#2,supports#3,nuclear_localization#6]
+f4:[ebna1#2,supports#3,{orip-bearing_plasmid#14:transcriptional_upregulation#10}]
+f5:[cells#17,express#22,transgene#24]
+c9:[cells#17,transfected_with#18,ebv/lipoplex#21]
+c10:[transgene#24,at#25,very_high_level#27]
+stmt3 = f2 f3 f4 f5 c9 c10
+
+# 11991752	we#0 hypothesized#1 that#2 tumor#3 cells#4 genetically#5 manipulated#6 with#7 the#8 ebv/lipoplex#9 may#10 be#11 used#12 as#13 a#14 tumor#15 vaccine#16 without#17 drug#18 selection#19 ,#20 strongly#21 contributing#22 to#23 immunotherapy#24 of#25 patients#26 with#27 malignancies#28 .#29 
+
+f6:[NIL,hypothesized_that#1,NIL]
+f7:[tumor_cells#3,may_be_used_as#10,tumor_vaccine#15]
+f8:[tumor_cells#3,strongly_contributing_to#21,{patients#26:immunotherapy#24}]
+c11:[tumor_cells#3,genetically_manipulated_with#5,ebv/lipoplex#9]
+c12:[tumor_vaccine#15,without#17,drug_selection#18]
+c13:[{patients#26:immunotherapy#24},with#27,malignancies#28]
+stmt4 = f6 f7 f8 c11 c12 c13
+
+# 11991752	the#0 cytokines#1 interleukin#2 (il)-12#3 and#4 il-18#5 exert#6 a#7 variety#8 of#9 immune-regulatory#10 functions#11 including#12 interferon#13 (ifn)-gamma#14 production#15 and#16 cytotoxic#17 t#18 lymphocyte#19 and#20 natural#21 killer#22 activation#23 .#24 
+
+f9:[cytokines_interleukin#1,exert#6,immune-regulatory_functions#10]
+f10:[(il)-12#3,exert#6,immune-regulatory_functions#10]
+f11:[il-18#5,exert#6,immune-regulatory_functions#10]
+c14:[immune-regulatory_functions#10,including#12,{interferon_(ifn)-gamma#13:production#15}]
+c15:[immune-regulatory_functions#10,including#12,cytotoxic_t_lymphocyte#17]
+c16:[immune-regulatory_functions#10,including#12,{natural_killer#21:activation#23}]
+stmt5 = f9 f10 f11 c14 c15 c16
+
+# 11991752	here#0 ,#1 we#2 investigated#3 the#4 possible#5 therapeutic#6 effects#7 of#8 an#9 autologous#10 tumor#11 cell#12 vaccine#13 in#14 the#15 b16#16 melanoma#17 model#18 .#19 
+
+f12:[NIL,investigated#3,{autologous_tumor_cell_vaccine#10:possible_therapeutic_effects#5}]
+c17:[{autologous_tumor_cell_vaccine#10:possible_therapeutic_effects#5},in#14,b16_melanoma_model#16]
+stmt6 = f12 c17
+
+# 11991752	the#0 vaccine#1 was#2 engineered#3 to#4 secrete#5 il-12#6 and#7 il-18#8 by#9 means#10 of#11 the#12 ebv/lipoplex#13 .#14 
+
+f13:[vaccine#1,was_engineered_to#2,secrete_il-12#5]
+f14:[vaccine#1,was_engineered_to#2,il-18#8]
+c18:[il-18#8,by_means_of#9,ebv/lipoplex#13]
+stmt7 = f13 f14 c18
+
+# 11991752	b16#0 cells#1 were#2 subcutaneously#3 implanted#4 into#5 syngenic#6 mice#7 followed#8 by#9 repetitive#10 immunization#11 with#12 irradiated#13 b16#14 cells#15 that#16 had#17 been#18 transfected#19 3#20 days#21 earlier#22 by#23 tfl2-3#24 ,#25 a#26 novel#27 cationic#28 lipid#29 ,#30 with#31 ebv-plasmid#32 vectors#33 encoding#34 il-12#35 and/or#36 il-18#37 genes#38 .#39 
+
+f15:[b16_cells#0,were_subcutaneously_implanted_into#2,syngenic_mice#6]
+f16:[tfl2-3#24,NIL#-1,novel_cationic_lipid#27]
+c19:[syngenic_mice#6,followed_by#8,repetitive_immunization#10]
+c20:[repetitive_immunization#10,with#12,irradiated_b16_cells#13]
+c21:[irradiated_b16_cells#13,had_been_transfected_3_days_earlier_by#17,tfl2-3#24]
+c22:[tfl2-3#24,with#31,ebv-plasmid_vectors#32]
+c23:[tfl2-3#24,encoding#34,il-12#35]
+c24:[tfl2-3#24,encoding#34,il-18_genes#37]
+stmt8 = f15 f16 c19 c20 c21 c22 c23 c24
+
+# 11991752	the#0 mice#1 vaccinated#2 with#3 b16/mil-12#4 underwent#5 strong#6 tumor#7 suppression#8 accompanied#9 by#10 a#11 high#12 ifn-gamma#13 production#14 .#15 
+
+f17:[mice#1,underwent#5,strong_tumor_suppression#6]
+c25:[mice#1,vaccinated_with#2,b16/mil-12#4]
+c26:[strong_tumor_suppression#6,accompanied_by#9,{high_ifn-gamma#12:production#14}]
+stmt9 = f17 c25 c26
+
+# 11991752	both#0 ctl#1 and#2 nk#3 activities#4 were#5 significantly#6 elevated#7 in#8 these#9 mice#10 .#11 
+
+f18:[{ctl#1:activities#4},were_significantly_elevated_in#5,mice#10]
+f19:[{nk#3:activities#4},were_significantly_elevated_in#5,mice#10]
+stmt10 = f18 f19
+
+# 11991752	when#0 the#1 tumor#2 cell#3 vaccine#4 was#5 prepared#6 by#7 means#8 of#9 conventional#10 plasmid#11 vectors#12 combined#13 with#14 the#15 same#16 cationic#17 lipid#18 ,#19 the#20 therapeutic#21 outcome#22 was#23 not#24 as#25 good#26 ,#27 suggesting#28 the#29 superiority#30 of#31 the#32 ebv-based#33 plasmid#34 in#35 engineering#36 these#37 types#38 of#39 tumor#40 vaccines#41 .#42 
+
+f20:[therapeutic_outcome#21,was_not_as_good#23,NIL]
+f21:[therapeutic_outcome#21,suggesting#28,NIL]
+f22:[{ebv-based_plasmid#33:superiority#30},engineering#36,tumor_vaccines#40]
+c27:[tumor_cell_vaccine#2,was_prepared_by_means_of#5,conventional_plasmid_vectors#10]
+c28:[conventional_plasmid_vectors#10,combined_with#13,same_cationic_lipid#16]
+stmt11 = f20 f21 f22 c27 c28
+
+# 11991752	vaccination#0 with#1 b16/mil-18#2 was#3 not#4 effective#5 in#6 suppressing#7 tumors#8 ,#9 whereas#10 b16/mil-12+mil-18#11 showed#12 comparable#13 antitumor#14 therapeutic#15 validity#16 as#17 b16/mil-12#18 did#19 .#20 
+
+f23:[vaccination#0,was_not_effective_in_suppressing#3,tumors#8]
+f24:[{b16/mil-12+mil-18#11:antitumor_therapeutic_validity#14},showed#12,antitumor_therapeutic_validity#14]
+c29:[vaccination#0,with#1,b16/mil-18#2]
+c30:[antitumor_therapeutic_validity#14,as_b16/mil-12_did#17,NIL]
+stmt12 = f23 f24 c29 c30
+
+# 11991752	when#0 ifn-gamma#1 mutant#2 mice#3 were#4 treated#5 ,#6 b16/mil-12#7 vaccine#8 did#9 not#10 show#11 any#12 therapeutic#13 activity#14 ,#15 suggesting#16 the#17 necessity#18 of#19 ifn-gamma#20 in#21 the#22 anti-melanoma#23 immune#24 responses#25 .#26 
+
+f25:[b16/mil-12_vaccine#7,did_not_show#9,therapeutic_activity#13]
+f26:[{ifn-gamma#20:necessity#18},in#21,anti-melanoma_immune_responses#23]
+c31:[ifn-gamma_mutant_mice#1,were_treated#4,NIL]
+stmt13 = f25 f26 c31
+
+# 11991752	in#0 contrast#1 ,#2 the#3 antitumor#4 effect#5 was#6 not#7 affected#8 by#9 nk#10 depletion#11 in#12 mice#13 that#14 received#15 repetitive#16 injections#17 with#18 anti-asialo#19 gm1#20 antibody#21 .#22 
+
+f27:[antitumor_effect#4,was_not_affected_by#6,{nk#10:depletion#11}]
+c32:[{nk#10:depletion#11},in#12,mice#13]
+c33:[mice#13,received#15,repetitive_injections#16]
+c34:[repetitive_injections#16,with#18,anti-asialo_gm1_antibody#19]
+stmt14 = f27 c32 c33 c34
+
+# 11991752	furthermore#0 ,#1 vaccination#2 with#3 b16/mil-12#4 significantly#5 suppressed#6 pulmonary#7 metastases#8 in#9 mice#10 that#11 had#12 been#13 intravenously#14 injected#15 with#16 parental#17 b16#18 .#19 
+
+f28:[vaccination#2,significantly_suppressed#5,pulmonary_metastases#7]
+c35:[vaccination#2,with#3,b16/mil-12#4]
+c36:[pulmonary_metastases#7,in#9,mice#10]
+c37:[mice#10,had_been_intravenously_injected_with#12,parental_b16#17]
+stmt15 = f28 c35 c36 c37
+
+# 11991752	our#0 results#1 suggest#2 that#3 the#4 ebv/lipoplex#5 is#6 quite#7 useful#8 in#9 generating#10 an#11 autologous#12 tumor#13 cell#14 vaccine#15 and#16 that#17 il-12#18 is#19 an#20 important#21 component#22 of#23 the#24 vaccine#25 .#26 
+
+f29:[{NIL#-1:results#1},suggest_that#2,NIL]
+f30:[ebv/lipoplex#5,is_quite_useful_in_generating#6,autologous_tumor_cell_vaccine#12]
+f31:[il-12#18,is#19,{vaccine#25:important_component#21}]
+stmt16 = f29 f30 f31
+

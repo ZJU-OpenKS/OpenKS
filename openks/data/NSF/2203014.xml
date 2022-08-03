@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>CAREER: Partial Differential Equation and Randomness</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>08/31/2026</AwardExpirationDate>
+<AwardTotalIntnAmount>430000.00</AwardTotalIntnAmount>
+<AwardAmount>20209</AwardAmount>
+<AwardInstrument>
+<Value>Continuing Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>03040000</Code>
+<Directorate>
+<Abbreviation>MPS</Abbreviation>
+<LongName>Direct For Mathematical &amp; Physical Scien</LongName>
+</Directorate>
+<Division>
+<Abbreviation>DMS</Abbreviation>
+<LongName>Division Of Mathematical Sciences</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Pedro Embid</SignBlockName>
+<PO_EMAI>pembid@nsf.gov</PO_EMAI>
+<PO_PHON>7032924859</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>This research aims at carrying out mathematical studies of some dynamics in heterogeneous environments, such as crystal deposition, spreading of pollutants in inhomogeneous flows, and sound propagation in the ocean. Partial differential equations (PDEs) serve as the principal mathematical tool to model such phenomena, and to account for lack of information or model uncertainty it is natural to add randomness to the equations. A ubiquitous feature of such problems is a wide range of temporal and spatial scales, extending all the way up to the scale of observational interest. As numerical simulations are practically impossible on the microscopic scale, a simplified and effective description of the physical quantities, such as the surface height, the density of pollutants, and the wave intensity, is extremely desirable for these problems. The goal of the project is to study the relevant random PDEs, and to lay down mathematical foundations for simplified effective models in various approximation regimes. Organic part of this project is the educational program that is integrated with research. The educational program includes a sustained training of graduate and undergraduate students at the intersection of probability theory, analysis, and applications, through designing advanced courses, supervising undergraduate research, and organizing workshops for early career researchers. The goal is to introduce students to the analytic and probabilistic tools that are indispensable for both academic research and engineering applications.&lt;br/&gt; &lt;br/&gt;The focus of this project is in the areas of stochastic PDEs, diffusion in random environment, and wave propagation in random media. By combining tools, such as asymptotic expansions, functional inequalities and stochastic analysis, the principal investigator will study (i) nonlinear stochastic PDEs modeling interface growth; (ii) behavior of directed polymers in random environment; (iii) effective models of wave propagation in random media. One of principal themes of the project is to analyze the dependence of observables on the random perturbations, and to understand the interplay between the nonlinearity and the randomness.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>11/04/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/04/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.049</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2203014</AwardID>
+<Investigator>
+<FirstName>Yu</FirstName>
+<LastName>Gu</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Yu Gu</PI_FULL_NAME>
+<EmailAddress>ygu7@umd.edu</EmailAddress>
+<PI_PHON>3014055109</PI_PHON>
+<NSF_ID>000682355</NSF_ID>
+<StartDate>11/04/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>University of Maryland, College Park</Name>
+<CityName>College Park</CityName>
+<ZipCode>207425141</ZipCode>
+<PhoneNumber>3014056269</PhoneNumber>
+<StreetAddress>3112 LEE BLDG 7809 Regents Drive</StreetAddress>
+<StreetAddress2/>
+<CountryName>United States</CountryName>
+<StateName>Maryland</StateName>
+<StateCode>MD</StateCode>
+<CONGRESSDISTRICT>05</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>MD05</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>790934285</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>UNIVERSITY OF MARYLAND, COLLEGE PARK</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>003256088</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[University of Maryland, College Park]]></Name>
+<CityName>College Park</CityName>
+<StateCode>MD</StateCode>
+<ZipCode>207421800</ZipCode>
+<StreetAddress><![CDATA[4176 Campus Drive - William E. K]]></StreetAddress>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>Maryland</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>05</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>MD05</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>1266</Code>
+<Text>APPLIED MATHEMATICS</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>1045</Code>
+<Text>CAREER-Faculty Erly Career Dev</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>9251</Code>
+<Text>REU SUPP-Res Exp for Ugrd Supp</Text>
+</ProgramReference>
+<FUND_OBLG>2021~20209</FUND_OBLG>
+</Award>
+</rootTag>
