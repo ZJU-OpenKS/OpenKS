@@ -12,12 +12,12 @@ import time
 from progress.bar import Bar
 import torch
 
-from external.nms import soft_nms
-from opts import opts
-from logger import Logger
-from utils.utils import AverageMeter
-from datasets.dataset_factory import dataset_factory
-from detectors.detector_factory import detector_factory
+from .stvglib.external.nms import soft_nms
+from .stvglib.opts import opts
+from .stvglib.logger import Logger
+from .stvglib.utils.utils import AverageMeter
+from .stvglib.datasets.dataset_factory import dataset_factory
+from .stvglib.detectors.detector_factory import detector_factory
 import pickle
 
 no_question_list = [5, 42, 100, 122, 151, 201, 207, 219, 234, 246, 274, 284, 310, 357, 360, 375, 376, 383, 384, 440, 461, 464, 466, 469, 488, 513, 514, 528, 556, 557, 558, 569, 589, 608, 612, 618, 672, 689, 690, 767, 801, 811, 819, 932, 933, 934, 951, 952, 994, 1031, 1114, 1119, 1139, 1140, 1152, 1158, 1204, 1210, 1242, 1243, 1244, 1250, 1255, 1263, 1271, 1296, 1313, 1314, 1322, 1337, 1338, 1339, 1360, 1370, 1477, 1491, 1535, 1547, 1589, 1607, 1671, 1685, 1689, 1731, 1741, 1748, 1778, 1779, 1780, 1781, 1782, 1787, 1791, 1800, 1814, 1861, 1890, 1901, 1902, 1947, 1948, 1954, 1974, 1975, 1976, 1977, 1997, 2059, 2072, 2077, 2147, 2166, 2174, 2175, 2176, 2258, 2265, 2301, 2305, 2372, 2418, 2446, 2469, 2470, 2471, 2472, 2473, 2474, 2475, 2476, 2483, 2501, 2502, 2503, 2586, 2592, 2625, 2626, 2627, 2659, 2681, 2696, 2700, 2733, 2754, 2757, 2776, 2783, 2797, 2810, 2811, 2813, 2816, 2841, 2905, 2964, 2989, 3002, 3027, 3028, 3029, 3030, 3116, 3173, 3183, 3191, 3195, 3244, 3248, 3262, 3271, 3291, 3293, 3306, 3334, 3340, 3358, 3417, 3422, 3457, 3458, 3470, 3471, 3472, 3480, 3490, 3526, 3539, 3568, 3572, 3666, 3741, 3787, 3817, 3829, 3841, 3890, 3938, 3939, 3940, 3984, 4004, 4006, 4056, 4097, 4104, 4111, 4127, 4141, 4164, 4182, 4188, 4231, 4248, 4314, 4315, 4316, 4317, 4318, 4383, 4446, 4513, 4594]
