@@ -9,8 +9,8 @@ from typing import Tuple, List, Any
 import torch
 import torch.nn as nn
 from torch.utils import data
-import paddle.fluid as fluid
-from paddle.fluid import Variable
+#import paddle.fluid as fluid
+#from paddle.fluid import Variable
 from ..common.register import Register
 from ..abstract.mtg import MTG
 from ..abstract.mmd import MMD

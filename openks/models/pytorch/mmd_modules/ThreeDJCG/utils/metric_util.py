@@ -8,8 +8,6 @@ Author: Or Litany and Charles R. Qi
 import os
 import sys
 import torch
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(BASE_DIR)
 
 import numpy as np
 

@@ -54,7 +54,7 @@ def voc_ap(rec, prec, use_07_metric=False):
 import os
 import sys
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-from utils.metric_util import calc_iou # axis-aligned 3D box IoU
+from .metric_util import calc_iou # axis-aligned 3D box IoU
 def get_iou(bb1, bb2):
     """ Compute IoU of two bounding boxes.
         ** Define your bod IoU function HERE **
@@ -63,7 +63,7 @@ def get_iou(bb1, bb2):
     iou3d = calc_iou(bb1, bb2)
     return iou3d
 
-from utils.box_util import box3d_iou
+from .box_util import box3d_iou
 def get_iou_obb(bb1,bb2):
     iou3d = box3d_iou(bb1,bb2)
     return iou3d

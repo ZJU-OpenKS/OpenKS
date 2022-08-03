@@ -1,6 +1,5 @@
 # from openks.loaders import loader_config, SourceType, FileType, Loader
 import sys
-sys.path.append("..")
 from openks.models import OpenKSModel
 
 # 列出已加载模型

@@ -15,7 +15,7 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 from torch import nn, Tensor
-from transformer.attention import MultiHeadAttention as MyMultiHeadAttention
+from ..transformer.attention import MultiHeadAttention as MyMultiHeadAttention
 
 
 # copy from proposal codes TODO!

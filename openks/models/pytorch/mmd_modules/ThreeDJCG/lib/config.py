@@ -22,9 +22,9 @@ CONF.PATH.LIB = os.path.join(CONF.PATH.BASE, "lib")
 CONF.PATH.MODELS = os.path.join(CONF.PATH.BASE, "models")
 CONF.PATH.UTILS = os.path.join(CONF.PATH.BASE, "utils")
 
-# append to syspath
-for _, path in CONF.PATH.items():
-    sys.path.append(path)
+# # append to syspath
+# for _, path in CONF.PATH.items():
+#     sys.path.append(path)
 
 # scannet data
 CONF.PATH.SCANNET_SCANS = os.path.join(CONF.PATH.SCANNET, "scans")

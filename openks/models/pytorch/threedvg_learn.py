@@ -21,7 +21,6 @@ from datetime import datetime
 from copy import deepcopy
 from plyfile import PlyData, PlyElement
 
-sys.path.append(os.path.join(os.getcwd())) # HACK add the root folder
 from ..model import VisualConstructionModel
 
 from .mmd_modules.ThreeDVG.data.scannet.model_util_scannet import ScannetDatasetConfig

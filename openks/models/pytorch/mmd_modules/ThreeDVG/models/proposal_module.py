@@ -9,12 +9,12 @@ import torch.nn.functional as F
 import numpy as np
 import os
 import sys
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-ROOT_DIR = os.path.dirname(BASE_DIR)
-sys.path.append(os.path.join(ROOT_DIR, 'pointnet2'))
-sys.path.append(BASE_DIR)  # DETR
+# BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# ROOT_DIR = os.path.dirname(BASE_DIR)
+# sys.path.append(os.path.join(ROOT_DIR, 'pointnet2'))
+# sys.path.append(BASE_DIR)  # DETR
 
-from pointnet2_modules import PointnetSAModuleVotes
+from ..lib.pointnet2.pointnet2_modules import PointnetSAModuleVotes
 from easydict import EasyDict
 from ..models.detr.detr3d import DETR3D
 from ..models.detr.transformer3D import decode_scores_boxes

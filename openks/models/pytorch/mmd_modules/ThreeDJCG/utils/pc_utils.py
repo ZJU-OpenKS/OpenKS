@@ -7,8 +7,6 @@ Author: Charles R. Qi and Or Litany
 
 import os
 import sys
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(BASE_DIR)
 
 # Point cloud IO
 import numpy as np
