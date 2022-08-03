@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>Unilateral Action and the Presidency</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>11/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>11/30/2023</AwardExpirationDate>
+<AwardTotalIntnAmount>336325.00</AwardTotalIntnAmount>
+<AwardAmount>256655</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>04050000</Code>
+<Directorate>
+<Abbreviation>SBE</Abbreviation>
+<LongName>Direct For Social, Behav &amp; Economic Scie</LongName>
+</Directorate>
+<Division>
+<Abbreviation>SES</Abbreviation>
+<LongName>Divn Of Social and Economic Sciences</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Jan Leighley</SignBlockName>
+<PO_EMAI>jleighle@nsf.gov</PO_EMAI>
+<PO_PHON>7032922686</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>The evolution of the office of the presidency is among the most important institutional developments in American political history.  However, surprisingly little is known about how presidential policymaking activity has varied with these developments. While comprehensive information about legislative enactments passed by Congress and opinions issued by the Supreme Court is readily available, no comparable database exists for the initiatives undertaken by presidents. This project remedies this omission by constructing and analyzing a new database of presidential directives issued between 1789 and the present. The database provides a comprehensive description of presidential behavior across American history and facilitates a new research agenda that more fully incorporates the presidency into studies of public policymaking. Using these data, the investigator develops and tests a theoretical framework to explain how and for what purposes presidents engage in policymaking making activity and explore its variation across time and political context. The findings provide new insight into historical patterns of presidential activity. &lt;br/&gt;&lt;br/&gt;This project studies the historical development of the American presidency by creating a new database of presidential directives from 1789 to the present. Though presidents since George Washington have made use of unilateral powers, existing scholarship focuses mostly on the modern era and on executive orders to the exclusion of other unilateral tools. The primary goal of the project is to understand how presidents historically have used unilateral directives to supervise the executive branch and create new policy outcomes. It will produce a database that characterizes the content of nearly 100,000 directives and is linked to other publicly available databases on American political institutions. Using these data, the investigator examines how and for what purpose presidents have issued unilateral directives and link patterns of presidential behavior to institutional developments in Congress and the bureaucracy. The database will be made publicly available to facilitate additional theoretical and empirical scholarship about the presidency and its role in the American political system.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>10/21/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>10/21/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.075</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2200611</AwardID>
+<Investigator>
+<FirstName>Jon</FirstName>
+<LastName>Rogowski</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Jon Rogowski</PI_FULL_NAME>
+<EmailAddress>jrogowski@uchicago.edu</EmailAddress>
+<PI_PHON>7737026708</PI_PHON>
+<NSF_ID>000742163</NSF_ID>
+<StartDate>10/21/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>University of Chicago</Name>
+<CityName>Chicago</CityName>
+<ZipCode>606372612</ZipCode>
+<PhoneNumber>7737028669</PhoneNumber>
+<StreetAddress>6054 South Drexel Avenue</StreetAddress>
+<StreetAddress2><![CDATA[Suite 300]]></StreetAddress2>
+<CountryName>United States</CountryName>
+<StateName>Illinois</StateName>
+<StateCode>IL</StateCode>
+<CONGRESSDISTRICT>01</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>IL01</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>005421136</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>UNIVERSITY OF CHICAGO, THE</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>005421136</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[University of Chicago]]></Name>
+<CityName/>
+<StateCode>IL</StateCode>
+<ZipCode>606372612</ZipCode>
+<StreetAddress/>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>Illinois</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>01</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>IL01</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>120Y</Code>
+<Text>AIB-Acctble Institutions&amp;Behav</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>9178</Code>
+<Text>UNDERGRADUATE EDUCATION</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>9179</Code>
+<Text>GRADUATE INVOLVEMENT</Text>
+</ProgramReference>
+<FUND_OBLG>2020~256655</FUND_OBLG>
+</Award>
+</rootTag>

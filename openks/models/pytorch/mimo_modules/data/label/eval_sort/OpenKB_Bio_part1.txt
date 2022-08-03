@@ -1,0 +1,1178 @@
+# 11726654	nuclear#0 receptor#1 peroxisome#2 proliferator-activated#3 receptor#4 alpha#5 is#6 expressed#7 in#8 resting#9 murine#10 lymphocytes.#11 the#12 pparalpha#13 in#14 t#15 and#16 b#17 lymphocytes#18 is#19 both#20 transactivation#21 and#22 transrepression#23 competent#24 .#25 
+
+f1:[nuclear_receptor_peroxisome_proliferator-activated_receptor_alpha#0,is_expressed_in#6,resting_murine_lymphocytes#9]
+f2:[pparalpha#13,is#19,transactivation#21]
+f3:[pparalpha#13,is#19,transrepression_competent#23]
+c1:[pparalpha#13,in#14,t#15]
+c2:[pparalpha#13,in#14,b_lymphocytes#17]
+stmt1 = f1 f2 f3 c1 c2
+
+# 11726654	peroxisome#0 proliferator-activated#1 receptors#2 are#3 transcription#4 factors#5 that#6 belong#7 to#8 the#9 nuclear#10 hormone#11 receptor#12 superfamily#13 .#14
+
+f4:[peroxisome_proliferator-activated_receptors#0,are#3,transcription_factors#4]
+c3:[transcription_factors#4,belong_to#7,nuclear_hormone_receptor_superfamily#10]
+stmt2 = f4 c3
+
+# 11726654	pparalpha#0 and#1 ppargamma#2 ligands#3 have#4 been#5 demonstrated#6 to#7 exert#8 anti-inflammatory#9 activities#10 in#11 macrophages#12 by#13 repressing#14 the#15 activities#16 of#17 several#18 transcription#19 factors#20 .#21
+
+f5:[pparalpha#0,been_demonstrated_to_exert#5,anti-inflammatory_activities#9]
+f6:[ppargamma_ligands#2,exert#8,anti-inflammatory_activities#9]
+c4:[anti-inflammatory_activities#9,in#11,macrophages#12]
+c5:[macrophages#12,by_repressing#13,{transcription_factors#19:activities#16}]
+stmt3 = f5 f6 c4 c5
+
+# 11726654	ppargamma#0 is#1 expressed#2 in#3 t#4 lymphocytes#5 and#6 may#7 play#8 a#9 role#10 in#11 cytokine#12 production#13 ,#14 cellular#15 proliferation#16 ,#17 and#18 susceptibility#19 to#20 apoptosis#21 .#22 
+
+f7:[ppargamma#0,is_expressed_in#1,t_lymphocytes#4]
+f8:[ppargamma#0,may_play_a_role_in#7,cytokine_production#12]
+f9:[ppargamma#0,may_play_a_role_in#7,cellular_proliferation#15]
+f10:[ppargamma#0,may_play_a_role_in#7,susceptibility#19]
+c6:[susceptibility#19,to#20,apoptosis#21]
+stmt4 = f7 f8 f9 f10 c6
+
+# 11726654	herein#0 ,#1 we#2 demonstrate#3 that#4 t#5 and#6 b#7 lymphocytes#8 constitutively#9 express#10 pparalpha#11 .#12
+
+f11:[NIL,demonstrate_that#3,NIL]
+f12:[t#5,constitutively_express#9,pparalpha#11]
+f13:[b_lymphocytes#7,constitutively_express#9,pparalpha#11]
+stmt5 = f11 f12 f13
+
+# 11726654	pparalpha#0 represents#1 the#2 predominant#3 isoform#4 expressed#5 in#6 lymphocytes#7 ,#8 whereas#9 ppargamma#10 dominates#11 in#12 all#13 cell#14 types#15 of#16 the#17 myeloid#18 lineage#19 .#20 
+
+f14:[pparalpha#0,represents#1,predominant_isoform#3]
+f15:[ppargamma#10,dominates_in#11,{myeloid_lineage#18:cell_types#14}]
+c7:[predominant_isoform#3,expressed_in#5,lymphocytes#7]
+stmt6 = f14 f15 c7
+
+# 11726654	pparalpha#0 expression#1 was#2 down-regulated#3 following#4 t-cell#5 activation#6 while#7 ppargamma#8 expression#9 increased#10 under#11 the#12 same#13 activating#14 conditions#15 .#16 
+
+f16:[pparalpha_expression#0,was_down-regulated_following#2,t-cell_activation#5]
+f17:[ppargamma_expression#8,increased_under_the_same#10,activating_conditions#14]
+stmt7 = f16 f17
+
+# 11726654	pparalpha#0 expression#1 in#2 t#3 cells#4 may#5 be#6 regulated#7 by#8 microenvironmental#9 factors#10 ,#11 because#12 peyer#13 's#14 patch#15 t#16 cells#17 expressed#18 far#19 greater#20 levels#21 of#22 pparalpha#23 than#24 t#25 cells#26 isolated#27 from#28 peripheral#29 lymphoid#30 organs#31 .#32 
+
+f18:[pparalpha_expression#0,may_be_regulated_by#5,microenvironmental_factors#9]
+f19:[{peyer#13:patch_t_cells#15},expressed#18,{pparalpha#23:far_greater_levels#19}]
+c8:[pparalpha_expression#0,in#2,t_cells#3]
+c9:[{pparalpha#23:far_greater_levels#19},than#24,t_cells#25]
+c10:[t_cells#25,isolated_from#27,peripheral_lymphoid_organs#29]
+stmt8 = f18 f19 c8 c9 c10
+
+# 11726654	exposure#0 to#1 specific#2 ligand#3 determined#4 that#5 pparalpha#6 in#7 lymphocytes#8 can#9 effectively#10 transactivate#11 a#12 peroxisome#13 proliferator#14 response#15 element#16 reporter#17 construct#18 .#19 
+
+f20:[{NIL#-1:exposure#0},determined_that#4,NIL]
+f21:[pparalpha#6,can_effectively_transactivate#9,peroxisome_proliferator_response_element_reporter_construct#13]
+c11:[{NIL#-1:exposure#0},to#1,specific_ligand#2]
+c12:[pparalpha#6,in#7,lymphocytes#8]
+stmt9 = f20 f21 c11 c12
+
+# 11726654	pparalpha#0 's#1 ability#2 to#3 regulate#4 endogenous#5 genes#6 ,#7 however#8 ,#9 required#10 treatment#11 with#12 histone#13 deacetylase#14 inhibitors#15 .#16 
+
+f22:[{pparalpha#0:ability#2},required_treatment_with#10,histone_deacetylase_inhibitors#13]
+c13:[{pparalpha#0:ability#2},to_regulate#3,endogenous_genes#5]
+stmt10 = f22 c13
+
+# 11726654	finally#0 ,#1 ligand#2 activation#3 of#4 lymphocyte#5 pparalpha#6 antagonized#7 nf-kappab#8 .#9 
+
+f23:[{lymphocyte_pparalpha#5:ligand_activation#2},antagonized#7,nf-kappab#8]
+stmt11 = f23
+
+# 11726654	our#0 observation#1 that#2 a#3 functional#4 pparalpha#5 exists#6 within#7 t#8 cells#9 and#10 b#11 lymphocytes#12 suggests#13 an#14 expanding#15 role#16 for#17 this#18 nuclear#19 receptor#20 in#21 cells#22 of#23 the#24 immune#25 system#26 .#27 
+
+f24:[{NIL#-1:observation#1},suggests_an_expanding_role_for#13,nuclear_receptor#19]
+f25:[functional_pparalpha#4,exists_within#6,t_cells#8]
+f26:[functional_pparalpha#4,exists_within#6,b_lymphocytes#11]
+c14:[nuclear_receptor#19,in#21,{immune_system#25:cells#22}]
+stmt12 = f24 f25 f26 c14
+# 11934839	ppar#0 activators#1 as#2 antiinflammatory#3 mediators#4 in#5 human#6 t#7 lymphocytes#8 ,#9 implications#10 for#11 atherosclerosis#12 and#13 transplantation-associated#14 arteriosclerosis#15 .#16 
+
+c1:[ppar_activators#0,as#2,antiinflammatory_mediators#3]
+c2:[ppar_activators#0,in#5,human_t_lymphocytes#6]
+c3:[implications#10,for#11,atherosclerosis#12]
+c4:[implications#10,for#11,transplantation-associated_arteriosclerosis#14]
+stmt1 = c1 c2 c3 c4
+
+# 11934839	activation#0 of#1 t#2 lymphocytes#3 and#4 their#5 ensuing#6 elaboration#7 of#8 proinflammatory#9 cytokines#10 ,#11 such#12 as#13 interferon#14 (ifn)-gamma#15 ,#16 represent#17 a#18 critical#19 step#20 in#21 atherogenesis#22 and#23 arteriosclerosis#24 .#25 
+
+f1:[{t_lymphocytes#2:activation#0},represent#17,{atherogenesis#22:critical_step#19}]
+f2:[{t_lymphocytes#2:activation#0},represent#17,{arteriosclerosis#24:critical_step#19}]
+f3:[{proinflammatory_cytokines#9:ensuing_elaboration#6},represent#17,{atherogenesis#22:critical_step#19}]
+f4:[{proinflammatory_cytokines#9:ensuing_elaboration#6},represent#17,{arteriosclerosis#24:critical_step#19}]
+f5:[interferon_(ifn)-gamma#14,represent#17,{atherogenesis#22:critical_step#19}]
+f6:[interferon_(ifn)-gamma#14,represent#17,{arteriosclerosis#24:critical_step#19}]
+c5:[{proinflammatory_cytokines#9:ensuing_elaboration#6},such_as#12,interferon_(ifn)-gamma#14]
+stmt2 = f1 f2 f3 f4 f5 f6 c5
+
+# 11934839	ifngamma#0 pathways#1 also#2 appear#3 integral#4 to#5 the#6 development#7 of#8 transplantation-associated#9 arteriosclerosis#10 ,#11 limiting#12 long-term#13 cardiac#14 allograft#15 survival#16 .#17 
+
+f7:[ifngamma_pathways#0,also_appear_integral_to#2,{transplantation-associated_arteriosclerosis#9:development#7}]
+c6:[NIL,limiting#12,long-term_cardiac_allograft_survival#13]
+stmt3 = f7 c6
+
+# 11934839	although#0 disruption#1 of#2 these#3 ifngamma#4 signaling#5 pathways#6 limits#7 atherosclerosis#8 and#9 tx-aa#10 in#11 animals#12 ,#13 little#14 is#15 known#16 about#17 inhibitory#18 regulation#19 of#20 proinflammatory#21 cytokine#22 production#23 in#24 humans#25 .#26 
+
+f8:[{ifngamma_signaling_pathways#4:disruption#1},limits#7,atherosclerosis#8]
+f9:[{ifngamma_signaling_pathways#4:disruption#1},limits#7,tx-aa#10]
+f10:[NIL,little_is_known_about#14,{proinflammatory_cytokine_production#21:inhibitory_regulation#18}]
+c7:[atherosclerosis#8,in#11,animals#12]
+c8:[tx-aa#10,in#11,animals#12]
+c9:[{proinflammatory_cytokine_production#21:inhibitory_regulation#18},in#24,humans#25]
+stmt4 = f8 f9 f10 c7 c8 c9
+
+# 11934839	the#0 present#1 study#2 investigated#3 whether#4 activators#5 of#6 peroxisome#7 proliferator-activated#8 receptor#9 (ppar)alpha#10 and#11 ppargamma#12 ,#13 with#14 their#15 known#16 antiinflammatory#17 effects#18 ,#19 might#20 regulate#21 the#22 expression#23 of#24 proinflammatory#25 cytokines#26 in#27 human#28 cd4-positive#29 t#30 cells#31 .#32 
+
+f11:[{NIL#-1:present_study#1},investigated_whether#3,NIL]
+f12:[{peroxisome_proliferator-activated_receptor_(ppar)alpha#7:activators#5},might_regulate#20,{proinflammatory_cytokines#25:expression#23}]
+f13:[{ppargamma#12:activators#5},might_regulate#20,{proinflammatory_cytokines#25:expression#23}]
+c10:[{peroxisome_proliferator-activated_receptor_(ppar)alpha#7:activators#5},with#14,antiinflammatory_effects#17]
+c11:[{ppargamma#12:activators#5},with#14,antiinflammatory_effects#17]
+c12:[{proinflammatory_cytokines#25:expression#23},in#27,human_cd4-positive_t_cells#28]
+stmt5 = f11 f12 f13 c10 c11 c12
+
+# 11934839	isolated#0 human#1 cd4-positive#2 t#3 cells#4 express#5 pparalpha#6 and#7 ppargamma#8 mrna#9 and#10 protein#11 .#12 
+
+f14:[isolated_human_cd4-positive_t_cells#0,express#5,pparalpha#6]
+f15:[isolated_human_cd4-positive_t_cells#0,express#5,ppargamma_mrna#8]
+f16:[isolated_human_cd4-positive_t_cells#0,express#5,protein#11]
+stmt6 = f14 f15 f16
+
+# 11934839	activation#0 of#1 cd4-positive#2 t#3 cells#4 by#5 anti-cd3#6 monoclonal#7 antibodies#8 significantly#9 increased#10 ifngamma#11 protein#12 secretion#13 from#14 0#15 to#16 504+/-168#17 pg/ml#18 ,#19 as#20 determined#21 by#22 elisa#23 .#24 
+
+f17:[{cd4-positive_t_cells#2:activation#0},significantly_increased#9,ifngamma_protein_secretion#11]
+c13:[{cd4-positive_t_cells#2:activation#0},by#5,anti-cd3_monoclonal_antibodies#6]
+c14:[ifngamma_protein_secretion#11,from#14,0_to_504+/-168_pg/ml#15]
+c15:[NIL,as_determined_by#20,elisa#23]
+stmt7 = f17 c13 c14 c15
+
+# 11934839	pretreatment#0 of#1 cells#2 with#3 well-established#4 pparalpha#5 or#6 ppargamma#7 activators#8 reduced#9 anti-cd3-induced#10 ifngamma#11 secretion#12 in#13 a#14 concentration-dependent#15 manner#16 .#17
+
+f18:[{cells#2:pretreatment#0},reduced#9,anti-cd3-induced_ifngamma_secretion#10]
+c16:[{cells#2:pretreatment#0},with#3,well-established_pparalpha#4]
+c17:[{cells#2:pretreatment#0},with#3,ppargamma_activators#7]
+c18:[anti-cd3-induced_ifngamma_secretion#10,in#13,concentration-dependent_manner#15]
+stmt8 = f18 c16 c17 c18
+
+# 11934839	ppar#0 activators#1 also#2 inhibited#3 tnfalpha#4 and#5 interleukin-2#6 protein#7 expression#8 .#9
+
+f19:[ppar_activators#0,inhibited#3,tnfalpha#4]
+f20:[ppar_activators#0,inhibited#3,interleukin-2_protein_expression#6]
+stmt9 = f19 f20
+
+# 11934839	in#0 addition#1 ,#2 ppar#3 activators#4 markedly#5 reduced#6 cytokine#7 mrna#8 expression#9 in#10 these#11 cells#12 .#13 
+
+f21:[ppar_activators#3,markedly_reduced#5,cytokine_mrna_expression#7]
+c19:[cytokine_mrna_expression#7,in#10,cells#12]
+stmt10 = f21 c19
+
+# 11934839	such#0 antiinflammatory#1 actions#2 were#3 also#4 evident#5 in#6 cell-cell#7 interactions#8 with#9 medium#10 conditioned#11 by#12 ppar#13 activator-treated#14 t#15 cells#16 attenuating#17 human#18 monocyte#19 cd64#20 expression#21 and#22 human#23 endothelial#24 cell#25 major#26 histocompatibility#27 complex#28 class#29 ii#30 induction#31 .#32 
+
+f22:[antiinflammatory_actions#1,were_also_evident_in#3,cell-cell_interactions#7]
+c20:[medium#10,conditioned_by#11,ppar_activator-treated_t_cells_attenuating_human_monocyte_cd64_expression#13]
+c21:[medium#10,conditioned_by#11,human_endothelial_cell_major_histocompatibility_complex_class_ii_induction#23]
+stmt11 = f22 c20 c21
+
+# 11934839	thus#0 ,#1 activation#2 of#3 pparalpha#4 and#5 ppargamma#6 in#7 human#8 cd4-positive#9 t#10 cells#11 limits#12 the#13 expression#14 of#15 proinflammatory#16 cytokines#17 ,#18 such#19 as#20 ifngamma#21 ,#22 yielding#23 potential#24 therapeutic#25 benefits#26 in#27 pathological#28 processes#29 ,#30 such#31 as#32 atherosclerosis#33 and#34 tx-aa#35 .#36 
+
+f23:[{pparalpha#4:activation#2},limits#12,{proinflammatory_cytokines#16:expression#14}]
+f24:[{pparalpha#4:activation#2},yielding#23,potential_therapeutic_benefits#24]
+f25:[{ppargamma#6:activation#2},limits#12,{proinflammatory_cytokines#16:expression#14}]
+f26:[{ppargamma#6:activation#2},yielding#23,potential_therapeutic_benefits#24]
+f27:[{proinflammatory_cytokines#16:expression#14},such_as#19,ifngamma#21]
+f28:[potential_therapeutic_benefits#24,such_as#31,atherosclerosis#33]
+f29:[potential_therapeutic_benefits#24,such_as#31,tx-aa#35]
+c22:[{pparalpha#4:activation#2},in#7,human_cd4-positive_t_cells#8]
+c23:[{ppargamma#6:activation#2},in#7,human_cd4-positive_t_cells#8]
+c24:[potential_therapeutic_benefits#24,in#27,pathological_processes#28]
+stmt12 = f23 f24 f25 f26 f27 f28 f29 c22 c23 c24
+# 11991752	significant#0 antitumor#1 effects#2 obtained#3 by#4 autologous#5 tumor#6 cell#7 vaccine#8 engineered#9 to#10 secrete#11 interleukin#12 (il)-12#13 and#14 il-18#15 by#16 means#17 of#18 the#19 ebv/lipoplex#20 .#21
+
+c1:[significant_antitumor_effects#0,obtained_by#3,autologous_tumor_cell_vaccine#5]
+c2:[autologous_tumor_cell_vaccine#5,engineered_to#9,secrete_interleukin_(il)-12#11]
+c3:[autologous_tumor_cell_vaccine#5,engineered_to#9,il-18#15]
+c4:[NIL,by_means_of#16,ebv/lipoplex#20]
+stmt1 = c1 c2 c3 c4
+
+# 11991752	the#0 ebv/lipoplex#1 is#2 a#3 nonviral#4 gene#5 delivery#6 system#7 composed#8 of#9 a#10 cationic#11 lipid#12 and#13 epstein-barr#14 virus#15 (ebv)-based#16 plasmid#17 vector#18 that#19 carries#20 the#21 ebv#22 orip#23 and#24 ebv#25 nuclear#26 antigen#27 1#28 gene#29 .#30 
+
+f1:[ebv/lipoplex#1,is#2,nonviral_gene_delivery_system#4]
+c5:[nonviral_gene_delivery_system#4,composed_of#8,cationic_lipid#11]
+c6:[nonviral_gene_delivery_system#4,composed_of#8,epstein-barr_virus_(ebv)-based_plasmid_vector#14]
+c7:[epstein-barr_virus_(ebv)-based_plasmid_vector#14,carries#20,ebv_orip#22]
+c8:[epstein-barr_virus_(ebv)-based_plasmid_vector#14,carries#20,ebv_nuclear_antigen_1_gene#25]
+stmt2 = f1 c5 c6 c7 c8
+
+# 11991752	because#0 the#1 ebna1#2 supports#3 retention#4 ,#5 nuclear#6 localization#7 ,#8 and#9 transcriptional#10 upregulation#11 of#12 the#13 orip-bearing#14 plasmid#15 ,#16 cells#17 transfected#18 with#19 the#20 ebv/lipoplex#21 express#22 the#23 transgene#24 at#25 a#26 very#27 high#28 level#29 .#30 
+
+f2:[ebna1#2,supports#3,retention#4]
+f3:[ebna1#2,supports#3,nuclear_localization#6]
+f4:[ebna1#2,supports#3,{orip-bearing_plasmid#14:transcriptional_upregulation#10}]
+f5:[cells#17,express#22,transgene#24]
+c9:[cells#17,transfected_with#18,ebv/lipoplex#21]
+c10:[transgene#24,at#25,very_high_level#27]
+stmt3 = f2 f3 f4 f5 c9 c10
+
+# 11991752	we#0 hypothesized#1 that#2 tumor#3 cells#4 genetically#5 manipulated#6 with#7 the#8 ebv/lipoplex#9 may#10 be#11 used#12 as#13 a#14 tumor#15 vaccine#16 without#17 drug#18 selection#19 ,#20 strongly#21 contributing#22 to#23 immunotherapy#24 of#25 patients#26 with#27 malignancies#28 .#29 
+
+f6:[NIL,hypothesized_that#1,NIL]
+f7:[tumor_cells#3,may_be_used_as#10,tumor_vaccine#15]
+f8:[tumor_cells#3,strongly_contributing_to#21,{patients#26:immunotherapy#24}]
+c11:[tumor_cells#3,genetically_manipulated_with#5,ebv/lipoplex#9]
+c12:[tumor_vaccine#15,without#17,drug_selection#18]
+c13:[{patients#26:immunotherapy#24},with#27,malignancies#28]
+stmt4 = f6 f7 f8 c11 c12 c13
+
+# 11991752	the#0 cytokines#1 interleukin#2 (il)-12#3 and#4 il-18#5 exert#6 a#7 variety#8 of#9 immune-regulatory#10 functions#11 including#12 interferon#13 (ifn)-gamma#14 production#15 and#16 cytotoxic#17 t#18 lymphocyte#19 and#20 natural#21 killer#22 activation#23 .#24 
+
+f9:[cytokines_interleukin#1,exert#6,immune-regulatory_functions#10]
+f10:[(il)-12#3,exert#6,immune-regulatory_functions#10]
+f11:[il-18#5,exert#6,immune-regulatory_functions#10]
+c14:[immune-regulatory_functions#10,including#12,{interferon_(ifn)-gamma#13:production#15}]
+c15:[immune-regulatory_functions#10,including#12,cytotoxic_t_lymphocyte#17]
+c16:[immune-regulatory_functions#10,including#12,{natural_killer#21:activation#23}]
+stmt5 = f9 f10 f11 c14 c15 c16
+
+# 11991752	here#0 ,#1 we#2 investigated#3 the#4 possible#5 therapeutic#6 effects#7 of#8 an#9 autologous#10 tumor#11 cell#12 vaccine#13 in#14 the#15 b16#16 melanoma#17 model#18 .#19 
+
+f12:[NIL,investigated#3,{autologous_tumor_cell_vaccine#10:possible_therapeutic_effects#5}]
+c17:[{autologous_tumor_cell_vaccine#10:possible_therapeutic_effects#5},in#14,b16_melanoma_model#16]
+stmt6 = f12 c17
+
+# 11991752	the#0 vaccine#1 was#2 engineered#3 to#4 secrete#5 il-12#6 and#7 il-18#8 by#9 means#10 of#11 the#12 ebv/lipoplex#13 .#14 
+
+f13:[vaccine#1,was_engineered_to#2,secrete_il-12#5]
+f14:[vaccine#1,was_engineered_to#2,il-18#8]
+c18:[il-18#8,by_means_of#9,ebv/lipoplex#13]
+stmt7 = f13 f14 c18
+
+# 11991752	b16#0 cells#1 were#2 subcutaneously#3 implanted#4 into#5 syngenic#6 mice#7 followed#8 by#9 repetitive#10 immunization#11 with#12 irradiated#13 b16#14 cells#15 that#16 had#17 been#18 transfected#19 3#20 days#21 earlier#22 by#23 tfl2-3#24 ,#25 a#26 novel#27 cationic#28 lipid#29 ,#30 with#31 ebv-plasmid#32 vectors#33 encoding#34 il-12#35 and/or#36 il-18#37 genes#38 .#39 
+
+f15:[b16_cells#0,were_subcutaneously_implanted_into#2,syngenic_mice#6]
+f16:[tfl2-3#24,NIL#-1,novel_cationic_lipid#27]
+c19:[syngenic_mice#6,followed_by#8,repetitive_immunization#10]
+c20:[repetitive_immunization#10,with#12,irradiated_b16_cells#13]
+c21:[irradiated_b16_cells#13,had_been_transfected_3_days_earlier_by#17,tfl2-3#24]
+c22:[tfl2-3#24,with#31,ebv-plasmid_vectors#32]
+c23:[tfl2-3#24,encoding#34,il-12#35]
+c24:[tfl2-3#24,encoding#34,il-18_genes#37]
+stmt8 = f15 f16 c19 c20 c21 c22 c23 c24
+
+# 11991752	the#0 mice#1 vaccinated#2 with#3 b16/mil-12#4 underwent#5 strong#6 tumor#7 suppression#8 accompanied#9 by#10 a#11 high#12 ifn-gamma#13 production#14 .#15 
+
+f17:[mice#1,underwent#5,strong_tumor_suppression#6]
+c25:[mice#1,vaccinated_with#2,b16/mil-12#4]
+c26:[strong_tumor_suppression#6,accompanied_by#9,{high_ifn-gamma#12:production#14}]
+stmt9 = f17 c25 c26
+
+# 11991752	both#0 ctl#1 and#2 nk#3 activities#4 were#5 significantly#6 elevated#7 in#8 these#9 mice#10 .#11 
+
+f18:[{ctl#1:activities#4},were_significantly_elevated_in#5,mice#10]
+f19:[{nk#3:activities#4},were_significantly_elevated_in#5,mice#10]
+stmt10 = f18 f19
+
+# 11991752	when#0 the#1 tumor#2 cell#3 vaccine#4 was#5 prepared#6 by#7 means#8 of#9 conventional#10 plasmid#11 vectors#12 combined#13 with#14 the#15 same#16 cationic#17 lipid#18 ,#19 the#20 therapeutic#21 outcome#22 was#23 not#24 as#25 good#26 ,#27 suggesting#28 the#29 superiority#30 of#31 the#32 ebv-based#33 plasmid#34 in#35 engineering#36 these#37 types#38 of#39 tumor#40 vaccines#41 .#42 
+
+f20:[therapeutic_outcome#21,was_not_as_good#23,NIL]
+f21:[therapeutic_outcome#21,suggesting#28,NIL]
+f22:[{ebv-based_plasmid#33:superiority#30},engineering#36,tumor_vaccines#40]
+c27:[tumor_cell_vaccine#2,was_prepared_by_means_of#5,conventional_plasmid_vectors#10]
+c28:[conventional_plasmid_vectors#10,combined_with#13,same_cationic_lipid#16]
+stmt11 = f20 f21 f22 c27 c28
+
+# 11991752	vaccination#0 with#1 b16/mil-18#2 was#3 not#4 effective#5 in#6 suppressing#7 tumors#8 ,#9 whereas#10 b16/mil-12+mil-18#11 showed#12 comparable#13 antitumor#14 therapeutic#15 validity#16 as#17 b16/mil-12#18 did#19 .#20 
+
+f23:[vaccination#0,was_not_effective_in_suppressing#3,tumors#8]
+f24:[{b16/mil-12+mil-18#11:antitumor_therapeutic_validity#14},showed#12,antitumor_therapeutic_validity#14]
+c29:[vaccination#0,with#1,b16/mil-18#2]
+c30:[antitumor_therapeutic_validity#14,as_b16/mil-12_did#17,NIL]
+stmt12 = f23 f24 c29 c30
+
+# 11991752	when#0 ifn-gamma#1 mutant#2 mice#3 were#4 treated#5 ,#6 b16/mil-12#7 vaccine#8 did#9 not#10 show#11 any#12 therapeutic#13 activity#14 ,#15 suggesting#16 the#17 necessity#18 of#19 ifn-gamma#20 in#21 the#22 anti-melanoma#23 immune#24 responses#25 .#26 
+
+f25:[b16/mil-12_vaccine#7,did_not_show#9,therapeutic_activity#13]
+f26:[{ifn-gamma#20:necessity#18},in#21,anti-melanoma_immune_responses#23]
+c31:[ifn-gamma_mutant_mice#1,were_treated#4,NIL]
+stmt13 = f25 f26 c31
+
+# 11991752	in#0 contrast#1 ,#2 the#3 antitumor#4 effect#5 was#6 not#7 affected#8 by#9 nk#10 depletion#11 in#12 mice#13 that#14 received#15 repetitive#16 injections#17 with#18 anti-asialo#19 gm1#20 antibody#21 .#22 
+
+f27:[antitumor_effect#4,was_not_affected_by#6,{nk#10:depletion#11}]
+c32:[{nk#10:depletion#11},in#12,mice#13]
+c33:[mice#13,received#15,repetitive_injections#16]
+c34:[repetitive_injections#16,with#18,anti-asialo_gm1_antibody#19]
+stmt14 = f27 c32 c33 c34
+
+# 11991752	furthermore#0 ,#1 vaccination#2 with#3 b16/mil-12#4 significantly#5 suppressed#6 pulmonary#7 metastases#8 in#9 mice#10 that#11 had#12 been#13 intravenously#14 injected#15 with#16 parental#17 b16#18 .#19 
+
+f28:[vaccination#2,significantly_suppressed#5,pulmonary_metastases#7]
+c35:[vaccination#2,with#3,b16/mil-12#4]
+c36:[pulmonary_metastases#7,in#9,mice#10]
+c37:[mice#10,had_been_intravenously_injected_with#12,parental_b16#17]
+stmt15 = f28 c35 c36 c37
+
+# 11991752	our#0 results#1 suggest#2 that#3 the#4 ebv/lipoplex#5 is#6 quite#7 useful#8 in#9 generating#10 an#11 autologous#12 tumor#13 cell#14 vaccine#15 and#16 that#17 il-12#18 is#19 an#20 important#21 component#22 of#23 the#24 vaccine#25 .#26 
+
+f29:[{NIL#-1:results#1},suggest_that#2,NIL]
+f30:[ebv/lipoplex#5,is_quite_useful_in_generating#6,autologous_tumor_cell_vaccine#12]
+f31:[il-12#18,is#19,{vaccine#25:important_component#21}]
+stmt16 = f29 f30 f31
+
+# 12027387	calcium#0 influx#1 into#2 dendrites#3 of#4 the#5 leech#6 retzius#7 neuron#8 evoked#9 by#10 5-hydroxytryptamine#11 .#12 
+
+c1:[calcium_influx#0,into#2,{leech_retzius_neuron#6:dendrites#3}]
+c2:[{leech_retzius_neuron#6:dendrites#3},evoked_by#9,5-hydroxytryptamine#11]
+stmt1 = c1 c2
+
+# 12027387	5-hydroxytryptamine#0 is#1 a#2 ubiquitous#3 neurotransmitter#4 and#5 neuromodulator#6 that#7 affects#8 neural#9 circuits#10 and#11 behaviours#12 in#13 vertebrates#14 and#15 invertebrates#16 .#17 
+
+f1:[5-hydroxytryptamine#0,is#1,ubiquitous_neurotransmitter#3]
+f2:[5-hydroxytryptamine#0,is#1,neuromodulator#6]
+c3:[neuromodulator#6,affects#8,neural_circuits#9]
+c4:[neuromodulator#6,affects#8,behaviours#12]
+c5:[behaviours#12,in#13,vertebrates#14]
+c6:[behaviours#12,in#13,invertebrates#16]
+stmt2 = f1 f2 c3 c4 c5 c6
+
+# 12027387	in#0 the#1 present#2 study#3 ,#4 we#5 have#6 investigated#7 5-ht-induced#8 ca(2+)#9 transients#10 in#11 subcellular#12 compartments#13 of#14 retzius#15 neurons#16 in#17 the#18 leech#19 central#20 nervous#21 system#22 using#23 confocal#24 laser#25 scanning#26 microscopy#27 ,#28 and#29 studied#30 the#31 effect#32 of#33 5-ht#34 on#35 the#36 electrical#37 coupling#38 between#39 the#40 retzius#41 neurons#42 .#43 
+
+f3:[NIL,have_investigated#6,5-ht-induced_ca(2+)_transients#8]
+f4:[NIL,studied#30,{5-ht#34:effect#32}]
+c7:[NIL,in#0,{NIL#-1:present_study#2}]
+c8:[5-ht-induced_ca(2+)_transients#8,in#11,{retzius_neurons#15:subcellular_compartments#12}]
+c9:[5-ht-induced_ca(2+)_transients#8,in#17,leech_central_nervous_system#19]
+c10:[leech_central_nervous_system#19,using#23,confocal_laser_scanning_microscopy#24]
+c11:[{5-ht#34:effect#32},on#35,electrical_coupling#37]
+c12:[electrical_coupling#37,between#39,retzius_neurons#41]
+stmt3 = f3 f4 c7 c8 c9 c10 c11 c12
+
+# 12027387	bath#0 application#1 of#2 5-ht#3 induced#4 a#5 ca(2+)#6 transient#7 in#8 axon#9 ,#10 dendrites#11 and#12 cell#13 body#14 of#15 the#16 retzius#17 neuron#18 .#19 
+
+f5:[{5-ht#3:bath_application#0},induced#4,ca(2+)_transient#6]
+f6:[{5-ht#3:bath_application#0},induced#4,dendrites#11]
+f7:[{5-ht#3:bath_application#0},induced#4,{retzius_neuron#17:cell_body#13}]
+c13:[ca(2+)_transient#6,in#8,axon#9]
+stmt4 = f5 f6 f7 c13
+
+# 12027387	this#0 ca(2+)#1 transient#2 was#3 significantly#4 faster#5 and#6 larger#7 in#8 dendrites#9 than#10 in#11 axon#12 and#13 cell#14 body#15 ,#16 and#17 was#18 half-maximal#19 at#20 a#21 5-ht#22 concentration#23 of#24 5-12mm#25 .#26 
+
+f8:[ca(2+)_transient#1,was_significantly_faster_and_larger_in#3,dendrites#9]
+f9:[ca(2+)_transient#1,was_half-maximal_at#18,{5-ht_concentration#22:5-12mm#25}]
+c14:[dendrites#9,than#10,axon#12]
+c15:[dendrites#9,than#10,cell_body#14]
+stmt5 = f8 f9 c14 c15
+
+# 12027387	the#0 ca(2+)#1 transient#2 was#3 suppressed#4 in#5 the#6 absence#7 of#8 extracellular#9 ca(2+)#10 and#11 by#12 methysergide#13 ,#14 a#15 non-specific#16 antagonist#17 of#18 metabotropic#19 5-ht#20 receptors#21 ,#22 and#23 was#24 strongly#25 reduced#26 by#27 bath#28 application#29 of#30 the#31 ca(2+)#32 channel#33 blocker#34 co(2+)#35 .#36 
+
+f10:[ca(2+)_transient#1,was_suppressed_in#3,{extracellular_ca(2+)#9:absence#7}]
+f11:[ca(2+)_transient#1,was_strongly_reduced_by#24,{ca(2+)_channel_blocker_co(2+)#32:bath_application#28}]
+f12:[methysergide#13,NIL#-1,{metabotropic_5-ht_receptors#19:non-specific_antagonist#16}]
+c16:[ca(2+)_transient#1,by#12,methysergide#13]
+stmt6 = f10 f11 f12 c16
+ 
+# 12027387	injection#0 of#1 the#2 non-hydrolysable#3 gtp#4 analogue#5 gtpgammas#6 increased#7 and#8 prolonged#9 the#10 dendritic#11 5-ht-induced#12 ca(2+)#13 transient#14 .#15 
+
+f13:[{non-hydrolysable_gtp_analogue_gtpgammas#3:injection#0},increased#7,dendritic_5-ht-induced_ca(2+)_transient#11]
+f14:[{non-hydrolysable_gtp_analogue_gtpgammas#3:injection#0},prolonged#9,dendritic_5-ht-induced_ca(2+)_transient#11]
+stmt7 = f13 f14
+
+# 12027387	the#0 non-selective#1 protein#2 kinase#3 inhibitor#4 h7#5 and#6 the#7 adenylate#8 cyclase#9 inhibitor#10 sq22536#11 did#12 not#13 affect#14 the#15 ca(2+)#16 transient#17 ,#18 and#19 the#20 membrane-permeable#21 camp#22 analogue#23 dibutyryl-camp#24 did#25 not#26 mimic#27 the#28 effect#29 of#30 5-ht#31 application#32 .#33 
+
+f15:[non-selective_protein_kinase_inhibitor_h7#1,did_not_affect#12,ca(2+)_transient#16]
+f16:[adenylate_cyclase_inhibitor_sq22536#8,did_not_affect#12,ca(2+)_transient#16]
+f17:[membrane-permeable_camp_analogue_dibutyryl-camp#21,did_not_mimic#25,{5-ht_application#31:effect#29}]
+stmt8 = f15 f16 f17
+
+# 12027387	5-ht#0 reduced#1 the#2 apparent#3 electrical#4 coupling#5 between#6 the#7 two#8 retzius#9 neurons#10 ,#11 whereas#12 suppression#13 of#14 the#15 ca(2+)#16 influx#17 by#18 removal#19 of#20 external#21 ca(2+)#22 improved#23 the#24 transmission#25 of#26 action#27 potentials#28 at#29 the#30 electrical#31 synapses#32 which#33 are#34 located#35 between#36 the#37 dendrites#38 of#39 the#40 adjacent#41 retzius#42 neurons#43 .#44 
+
+f18:[5-ht#0,reduced#1,apparent_electrical_coupling#3]
+f19:[{ca(2+)_influx#16:suppression#13},improved#23,{action_potentials#27:transmission#25}]
+c17:[apparent_electrical_coupling#3,between#6,retzius_neurons#9]
+c18:[{ca(2+)_influx#16:suppression#13},by#18,{external_ca(2+)#21:removal#19}]
+c19:[{action_potentials#27:transmission#25},at#29,electrical_synapses#31]
+c20:[electrical_synapses#31,are_located_between#34,{adjacent_retzius_neurons#41:dendrites#38}]
+stmt9 = f18 f19 c17 c18 c19 c20
+
+# 12027387	the#0 results#1 indicate#2 that#3 5-ht#4 induces#5 a#6 ca(2+)#7 influx#8 through#9 calcium#10 channels#11 located#12 primarily#13 in#14 the#15 dendrites#16 ,#17 and#18 presumably#19 activated#20 by#21 a#22 g#23 protein-coupled#24 5-ht#25 receptor#26 .#27 
+
+f20:[{NIL#-1:results#1},indicate_that#2,NIL]
+f21:[5-ht#4,induces#5,ca(2+)_influx#7]
+c21:[ca(2+)_influx#7,through#9,calcium_channels#10]
+c22:[calcium_channels#10,located_primarily_in#12,dendrites#16]
+c23:[calcium_channels#10,presumably_activated_by#19,g_protein-coupled_5-ht_receptor#23]
+stmt10 = f20 f21 c21 c22 c23
+
+# 12027387	the#0 dendritic#1 ca(2+)#2 increase#3 appears#4 to#5 modulate#6 the#7 excitability#8 of#9 ,#10 and#11 the#12 synchronization#13 between#14 ,#15 the#16 two#17 retzius#18 neurons#19 .#20
+
+f22:[dendritic_ca(2+)_increase#1,appears_to_modulate#4,{NIL#-1:excitability#8}]
+f23:[dendritic_ca(2+)_increase#1,appears_to_modulate#4,synchronization#13]
+c24:[synchronization#13,between#14,{retzius_neurons#18:two#17}]
+stmt11 = f22 f23 c24
+
+# 12064555	association#0 of#1 low#2 job#3 control#4 with#5 a#6 decrease#7 in#8 memory#9 t#10 lymphocytes#11 in#12 japanese#13 middle-aged#14 male#15 workers#16 in#17 an#18 electric#19 power#20 plant#21 .#22 
+
+c1:[{low_job_control#2:association#0},with#5,{memory_t_lymphocytes#9:decrease#7}]
+c2:[{memory_t_lymphocytes#9:decrease#7},in#12,japanese_middle-aged_male_workers#13]
+c3:[japanese_middle-aged_male_workers#13,in#17,electric_power_plant#19]
+stmt1 = c1 c2 c3
+
+# 12064555	to#0 clarify#1 the#2 relationship#3 between#4 perceived#5 job#6 stress#7 and#8 lymphocyte#9 subpopulations#10 ,#11 a#12 cross-sectional#13 study#14 was#15 conducted#16 in#17 231#18 male#19 electric#20 power#21 plant#22 workers#23 .#24 
+
+f1:[NIL,to_clarify#0,{NIL#-1:relationship#3}]
+f2:[cross-sectional_study#13,was_conducted_in#15,231_male_electric_power_plant_workers#18]
+c4:[{NIL#-1:relationship#3},between#4,perceived_job_stress#5]
+c5:[{NIL#-1:relationship#3},between#4,lymphocyte_subpopulations#9]
+stmt2 = f1 f2 c4 c5
+
+# 12064555	job#0 stress#1 ,#2 i.e.#3 ,#4 job#5 control#6 ,#7 job#8 demands#9 ,#10 and#11 social#12 support#13 at#14 work#15 ,#16 was#17 assessed#18 by#19 means#20 of#21 the#22 japanese#23 version#24 of#25 the#26 job#27 content#28 questionnaire#29 .#30 
+
+f3:[job_stress#0,i.e.#3,job_control#5]
+f4:[job_stress#0,i.e.#3,job_demands#8]
+f5:[job_stress#0,i.e.#3,social_support_at_work#12]
+f6:[job_stress#0,was_assessed_by_means_of#17,{job_content_questionnaire#27:japanese_version#23}]
+stmt3 = f3 f4 f5 f6
+
+# 12064555	blood#0 samples#1 were#2 taken#3 from#4 all#5 the#6 workers#7 ,#8 and#9 numbers#10 of#11 cd4+#12 t#13 lymphocyte#14 subpopulations#15 ,#16 total#17 cd4+#18 t#19 ,#20 t#21 lymphocytes#22 ,#23 cd16cd56+#24 natural#25 killer#26 cells#27 ,#28 total#29 lymphocytes#30 ,#31 and#32 white#33 blood#34 cells#35 were#36 determined#37 .#38 
+
+f7:[blood_samples#0,were_taken_from#2,workers#7]
+f8:[{cd4+_t_lymphocyte_subpopulations#12:numbers#10},were_determined#36,NIL]
+f9:[{total_cd4+_t#17:numbers#10},were_determined#36,NIL]
+f10:[{t_lymphocytes#21:numbers#10},were_determined#36,NIL]
+f11:[{cd16cd56+_natural_killer_cells#24:numbers#10},were_determined#36,NIL]
+f12:[{total_lymphocytes#29:numbers#10},were_determined#36,NIL]
+f13:[{white_blood_cells#33:numbers#10},were_determined#36,NIL]
+stmt4 = f7 f8 f9 f10 f11 f12 f13
+
+# 12064555	after#0 controlling#1 for#2 age#3 ,#4 number#5 of#6 cigarettes#7 smoked#8 per#9 day#10 ,#11 alcohol#12 drinking#13 ,#14 frequency#15 of#16 regular#17 exercise#18 ,#19 job#20 demands#21 ,#22 and#23 social#24 support#25 at#26 work#27 by#28 the#29 partial#30 correlation#31 coefficients#32 ,#33 numbers#34 of#35 memory#36 t#37 ,#38 total#39 cd4+#40 t#41 ,#42 and#43 total#44 t#45 lymphocytes#46 were#47 positively#48 correlated#49 with#50 job#51 control#52 .#53 
+
+f14:[{cigarettes_smoked_per_day#7:number#5},were_positively_correlated_with#47,job_control#51]
+f15:[{alcohol_drinking#12:number#5},were_positively_correlated_with#47,job_control#51]
+f16:[{regular_exercise#17:frequency#15},were_positively_correlated_with#47,job_control#51]
+f17:[{job_demands#20:number#5},were_positively_correlated_with#47,job_control#51]
+f18:[{social_support_at_work#24:number#5},were_positively_correlated_with#47,job_control#51]
+f19:[{memory_t#36:numbers#34},were_positively_correlated_with#47,job_control#51]
+f20:[{total_cd4+_t#39:numbers#34},were_positively_correlated_with#47,job_control#51]
+f21:[{total_t_lymphocytes#44:numbers#34},were_positively_correlated_with#47,job_control#51]
+c6:[NIL,after_controlling_for#0,{NIL#-1:age#3}]
+c7:[social_support_at_work#24,by#28,partial_correlation_coefficients#30]
+stmt5 = f14 f15 f16 f17 f18 f19 f20 f21 c6 c7
+
+# 12064555	neither#0 job#1 demands#2 nor#3 social#4 support#5 at#6 work#7 showed#8 significant#9 correlations#10 with#11 lymphocyte#12 subpopulations#13 .#14 
+
+f22:[job_demands#1,showed_significant_correlations_with#8,{lymphocyte#12:subpopulations#13}]
+f23:[social_support#4,showed_significant_correlations_with#8,{lymphocyte#12:subpopulations#13}]
+c8:[NIL,neither#0,job_demands#1]
+c9:[NIL,nor#3,social_support#4]
+c10:[social_support#4,at#6,{NIL#-1:work#7}]
+stmt6 = f22 f23 c8 c9 c10
+
+# 12064555	it#0 is#1 suggested#2 that#3 lower#4 job#5 control#6 is#7 associated#8 with#9 a#10 decrease#11 in#12 the#13 number#14 of#15 cd4+#16 cd45ro+#17 t#18 lymphocytes#19 in#20 male#21 middle-aged#22 workers#23 .#24 
+
+f24:[NIL,is_suggested_that#1,NIL]
+f25:[lower_job_control#4,is_associated_with#7,{NIL#-1:decrease#11}]
+c11:[{NIL#-1:decrease#11},in#12,{cd4+_cd45ro+_t_lymphocytes#16:number#14}]
+c12:[{cd4+_cd45ro+_t_lymphocytes#16:number#14},in#20,male_middle-aged_workers#21]
+stmt7 = f24 f25 c11 c12
+
+# 15472922	cytokine#0 secretion#1 from#2 mononuclear#3 cells#4 cultured#5 in#6 vitro#7 with#8 starch-based#9 polymers#10 and#11 poly-l-lactide#12 .#13 
+
+c1:[cytokine_secretion#0,from#2,mononuclear_cells_cultured_in_vitro#3]
+c2:[mononuclear_cells_cultured_in_vitro#3,with#8,starch-based_polymers#9]
+c3:[mononuclear_cells_cultured_in_vitro#3,with#8,poly-l-lactide#12]
+stmt1 = c1 c2 c3
+
+# 15472922	the#0 cytokine#1 network#2 is#3 one#4 of#5 the#6 major#7 controlling#8 systems#9 of#10 the#11 inflammatory#12 process#13 ,#14 driving#15 the#16 magnitude#17 and#18 duration#19 of#20 the#21 host#22 response#23 against#24 invading#25 microorganisms#26 ,#27 foreign#28 materials#29 ,#30 or#31 altered#32 internal#33 stimuli#34 .#35 
+
+f1:[cytokine_network#1,is_one_of#3,{inflammatory_process#12:major_controlling_systems#7}]
+f2:[cytokine_network#1,driving#15,{host_response#22:magnitude#17}]
+f3:[cytokine_network#1,driving#15,{host_response#22:duration#19}]
+c4:[{host_response#22:magnitude#17},against#24,invading_microorganisms#25]
+c5:[{host_response#22:magnitude#17},against#24,foreign_materials#28]
+c6:[{host_response#22:magnitude#17},against#24,altered_internal_stimuli#32]
+c7:[{host_response#22:duration#19},against#24,invading_microorganisms#25]
+c8:[{host_response#22:duration#19},against#24,foreign_materials#28]
+c9:[{host_response#22:duration#19},against#24,altered_internal_stimuli#32]
+stmt2 = f1 f2 f3 c4 c5 c6 c7 c8 c9
+
+# 15472922	pro-#0 and#1 antiinflammatory#2 cytokines#3 were#4 quantified#5 after#6 in#7 vitro#8 culture#9 of#10 a#11 mixed#12 population#13 of#14 monocytes/macrophages#15 and#16 lymphocytes#17 with#18 biodegradable#19 polymers#20 .#21 
+
+f4:[pro-#0,were_quantified_after_in#4,{mixed_population_of_monocytes/macrophages#12:vitro_culture#8}]
+f5:[pro-#0,were_quantified_after_in#4,{lymphocytes#17:vitro_culture#8}]
+c10:[{mixed_population_of_monocytes/macrophages#12:vitro_culture#8},with#18,biodegradable_polymers#19]
+c11:[{lymphocytes#17:vitro_culture#8},with#18,biodegradable_polymers#19]
+stmt3 = f4 f5 c10 c11
+
+# 15472922	different#0 blends#1 of#2 starch-based#3 polymers#4 and#5 their#6 composites#7 filled#8 with#9 hydroxyapatite#10 were#11 studied#12 and#13 compared#14 with#15 poly-l-lactide#16 .#17 
+
+f6:[{starch-based_polymers#3:different_blends#0},were_studied_and_compared_with#11,poly-l-lactide#16]
+f7:[{starch-based_polymers#3:composites#7},were_studied_and_compared_with#11,poly-l-lactide#16]
+c12:[{starch-based_polymers#3:composites#7},filled_with#8,hydroxyapatite#10]
+stmt4 = f6 f7 c12
+
+# 15472922	interleukin#0 (il)-1beta#1 ,#2 il-6#3 ,#4 and#5 tumour#6 necrosis#7 factor-alpha#8 were#9 investigated#10 as#11 the#12 markers#13 of#14 immunological#15 reactivity#16 because#17 they#18 are#19 known#20 to#21 act#22 at#23 the#24 early#25 stages#26 of#27 injury/invasion#28 .#29 
+
+f8:[interleukin_(il)-1beta#0,were_investigated_as#9,{immunological_reactivity#15:markers#13}]
+f9:[interleukin_(il)-1beta#0,are_known_to_act_at#19,{injury/invasion#28:early_stages#25}]
+f10:[il-6#3,were_investigated_as#9,{immunological_reactivity#15:markers#13}]
+f11:[il-6#3,are_known_to_act_at#19,{injury/invasion#28:early_stages#25}]
+f12:[tumour_necrosis_factor-alpha#6,were_investigated_as#9,{immunological_reactivity#15:markers#13}]
+f13:[tumour_necrosis_factor-alpha#6,are_known_to_act_at#19,{injury/invasion#28:early_stages#25}]
+stmt5 = f8 f9 f10 f11 f12 f13
+
+# 15472922	interferon-gamma#0 ,#1 recognized#2 as#3 a#4 proinflammatory#5 cytokine#6 ,#7 although#8 not#9 present#10 during#11 early#12 responses#13 was#14 also#15 investigated#16 .#17 
+
+f14:[interferon-gamma#0,not_present_during#9,early_responses#12]
+f15:[interferon-gamma#0,was_also_investigated#14,NIL]
+c13:[interferon-gamma#0,recognized_as#2,proinflammatory_cytokine#5]
+stmt6 = f14 f15 c13
+
+# 15472922	contrarily#0 ,#1 il-4#2 derived#3 from#4 t#5 lymphocytes#6 ,#7 was#8 investigated#9 because#10 it#11 is#12 an#13 immunoregulator#14 that#15 counteracts#16 some#17 aspects#18 of#19 inflammation#20 .#21 
+
+f16:[il-4#2,was_investigated#8,NIL]
+f17:[il-4#2,is#12,immunoregulator#14]
+c14:[il-4#2,derived_from#3,t_lymphocytes#5]
+c15:[immunoregulator#14,counteracts#16,{inflammation#20:aspects#18}]
+stmt7 = f16 f17 c14 c15
+
+# 15472922	t#0 lymphocyte#1 activation#2 was#3 also#4 determined#5 by#6 quantifying#7 il-2#8 .#9 
+
+f18:[t_lymphocyte_activation#0,was_also_determined_by_quantifying#3,il-2#8]
+stmt8 = f18
+
+# 15472922	the#0 results#1 support#2 the#3 hypothesis#4 that#5 different#6 biodegradable#7 polymers#8 can#9 affect#10 mononuclear#11 cell#12 activation#13 and#14 the#15 production#16 of#17 several#18 cytokines#19 associated#20 with#21 the#22 inflammatory#23 process#24 .#25 
+
+f19:[{NIL#-1:results#1},support_the_hypothesis_that#2,NIL]
+f20:[biodegradable_polymers#7,can_affect#9,mononuclear_cell_activation#11]
+f21:[biodegradable_polymers#7,can_affect#9,{cytokines#19:production#16}]
+c16:[{cytokines#19:production#16},associated_with#20,inflammatory_process#23]
+stmt9 = f19 f20 f21 c16
+
+# 15472922	no#0 il-2#1 or#2 interferon-gamma#3 was#4 found#5 in#6 the#7 culture#8 supernatants#9 after#10 3#11 ,#12 7#13 ,#14 and#15 14#16 days#17 in#18 the#19 presence#20 of#21 any#22 of#23 the#24 materials#25 .#26 
+
+f22:[il-2#1,was_found_in#4,culture_supernatants#8]
+f23:[interferon-gamma#3,was_found_in#4,culture_supernatants#8]
+c17:[NIL,no#0,il-2#1]
+c18:[NIL,no#0,interferon-gamma#3]
+c19:[culture_supernatants#8,after#10,{NIL#-1:3#11}]
+c20:[culture_supernatants#8,after#10,{NIL#-1:7#13}]
+c21:[culture_supernatants#8,after#10,{NIL#-1:14_days#16}]
+c22:[{NIL#-1:14_days#16},in#18,{materials#25:presence#20}]
+stmt10 = f22 f23 c17 c18 c19 c20 c21 c22
+
+# 15472922	il-6#0 was#1 detected#2 in#3 the#4 highest#5 amounts#6 ,#7 for#8 all#9 the#10 conditions#11 ,#12 followed#13 by#14 tumour#15 necrosis#16 factor-alpha#17 .#18 
+
+f24:[il-6#0,was_detected_in#1,{NIL#-1:highest_amounts#5}]
+c23:[il-6#0,followed_by#13,tumour_necrosis_factor-alpha#15]
+stmt11 = f24 c23
+
+# 15472922	il-1beta#0 was#1 produced#2 in#3 very#4 low#5 amounts#6 ,#7 being#8 undetectable#9 with#10 some#11 of#12 the#13 starch-based#14 materials#15 .#16 
+
+f25:[il-1beta#0,was_produced_in#1,{NIL#-1:very_low_amounts#4}]
+f26:[il-1beta#0,being_undetectable_with#8,starch-based_materials#14]
+stmt12 = f25 f26
+
+# 15472922	il-4#0 was#1 the#2 only#3 cytokine#4 that#5 did#6 not#7 demonstrate#8 any#9 significant#10 difference#11 within#12 this#13 group#14 of#15 materials#16 .#17 
+
+f27:[il-4#0,was#1,cytokine#4]
+c24:[cytokine#4,did_not_demonstrate_any#6,{NIL#-1:significant_difference#10}]
+c25:[{NIL#-1:significant_difference#10},within#12,materials#16]
+stmt13 = f27 c24 c25
+
+# 15472922	starch-based#0 polymers#1 and#2 composites#3 induced#4 lower#5 production#6 of#7 proinflammatory#8 cytokines#9 in#10 comparison#11 to#12 poly-l-lactide#13 .#14 
+
+f28:[starch-based_polymers#0,induced#4,{proinflammatory_cytokines#8:lower_production#5}]
+c26:[{proinflammatory_cytokines#8:lower_production#5},in_comparison_to#10,poly-l-lactide#13]
+stmt14 = f28 c26
+# 15498271	[#0 the#1 significance#2 of#3 cell#4 cycle#5 distribution#6 and#7 expression#8 of#9 cell#10 cycle#11 regulatory#12 proteins#13 in#14 t#15 lymphocytes#16 in#17 patients#18 with#19 acute#20 asthma#21 attack]#22 .#23 
+
+c1:[{cell_cycle_distribution#4:significance#2},in#14,t_lymphocytes#15]
+c2:[{cell_cycle_regulatory_proteins#10:expression#8},in#14,t_lymphocytes#15]
+c3:[t_lymphocytes#15,in#17,patients#18]
+c4:[patients#18,with#19,acute_asthma_attack]#20]
+stmt1 = c1 c2 c3 c4
+
+# 15498271	to#0 explore#1 the#2 molecular#3 regulatory#4 mechanisms#5 of#6 excessive#7 t#8 lymphocyte#9 activation#10 and#11 proliferation#12 in#13 patients#14 with#15 asthma#16 attack#17 by#18 studying#19 the#20 cell#21 cycle#22 distribution#23 and#24 the#25 expression#26 of#27 cell#28 cycle#29 regulatory#30 proteins#31 in#32 peripheral#33 blood#34 tlymphocytes#35 .#36 
+
+f1:[NIL,to_explore#0,{excessive_t_lymphocyte_activation#7:molecular_regulatory_mechanisms#3}]
+f2:[NIL,to_explore#0,proliferation#12]
+c5:[proliferation#12,in#13,patients#14]
+c6:[proliferation#12,with#15,asthma#16]
+c7:[asthma#16,attack_by_studying#17,{cell_cycle_regulatory_proteins#28:cell_cycle_distribution#21}]
+c8:[asthma#16,attack_by_studying#17,{cell_cycle_regulatory_proteins#28:expression#26}]
+c9:[{cell_cycle_regulatory_proteins#28:expression#26},in#32,peripheral_blood_tlymphocytes#33]
+stmt2 = f1 f2 c5 c6 c7 c8 c9
+
+# 15498271	dna#0 of#1 t#2 lymphocytes#3 from#4 30#5 patients#6 with#7 asthma#8 attack#9 and#10 20#11 normal#12 subjects#13 was#14 stained#15 with#16 propidium#17 iodide#18 ,#19 and#20 the#21 cell#22 cycle#23 distribution#24 was#25 analyzed#26 by#27 flow#28 cytometry#29 .#30 
+
+f3:[{t_lymphocytes#2:dna#0},was_stained_with#14,propidium_iodide#17]
+f4:[cell_cycle_distribution#22,was_analyzed_by#25,flow_cytometry#28]
+c10:[{t_lymphocytes#2:dna#0},from#4,{patients#6:30#5}]
+c11:[{patients#6:30#5},with#7,asthma_attack#8]
+c12:[{patients#6:30#5},with#7,normal_subjects#12]
+stmt3 = f3 f4 c10 c11 c12
+
+# 15498271	by#0 indirect#1 immunofluorescence#2 ,#3 the#4 expressions#5 of#6 p27kipl#7 ,#8 cyclin#9 e#10 ,#11 cyclin#12 a#13 ,#14 and#15 cyclin#16 b#17 in#18 t#19 lymphocytes#20 were#21 measured#22 by#23 flow#24 cytometry#25 .#26 
+
+f5:[NIL,by#0,indirect_immunofluorescence#1]
+f6:[{p27kipl#7:expressions#5},were_measured_by#21,flow_cytometry#24]
+f7:[{cyclin_e#9:expressions#5},were_measured_by#21,flow_cytometry#24]
+f8:[{cyclin_a#12:expressions#5},were_measured_by#21,flow_cytometry#24]
+f9:[{cyclin_b#16:expressions#5},were_measured_by#21,flow_cytometry#24]
+c13:[{p27kipl#7:expressions#5},in#18,t_lymphocytes#19]
+c14:[{cyclin_e#9:expressions#5},in#18,t_lymphocytes#19]
+c15:[{cyclin_a#12:expressions#5},in#18,t_lymphocytes#19]
+c16:[{cyclin_b#16:expressions#5},in#18,t_lymphocytes#19]
+stmt4 = f5 f6 f7 f8 f9 c13 c14 c15 c16
+
+# 15498271	the#0 difference#1 between#2 patients#3 with#4 asthma#5 attack#6 and#7 normal#8 subjects#9 wasanalyzed#10 .#11 
+
+f10:[{NIL#-1:difference#1},wasanalyzed#10,NIL]
+c17:[{NIL#-1:difference#1},between#2,patients#3]
+c18:[{NIL#-1:difference#1},between#2,normal_subjects#8]
+c19:[patients#3,with#4,asthma_attack#5]
+stmt5 = f10 c17 c18 c19
+
+# 15498271	the#0 percentage#1 of#2 t#3 lymphocytes#4 in#5 the#6 s#7 phase#8 and#9 s#10 +#11 g(2)#12 /#13 m#14 phase#15 was#16 
+
+f11:[{t_lymphocytes#3:percentage#1},was#16,NIL]
+c20:[{t_lymphocytes#3:percentage#1},in#5,s_phase#7]
+c21:[{t_lymphocytes#3:percentage#1},in#5,s_+_g(2)_/_m_phase#10]
+stmt6 = f11 c20 c21
+
+# 15498271	the#0 percentage#1 of#2 t#3 lymphocytes#4 in#5 the#6 g(0)#7 /#8 g(1)#9 phase#10 in#11 the#12 asthma#13 group#14 was#15 
+
+f12:[{t_lymphocytes#3:percentage#1},was#15,NIL]
+c22:[{t_lymphocytes#3:percentage#1},in#5,g(0)_/_g(1)_phase#7]
+c23:[g(0)_/_g(1)_phase#7,in#11,asthma_group#13]
+stmt7 = f12 c22 c23
+
+# 15498271	the#0 expression#1 of#2 p27kipl#3 in#4 t#5 lymphocytes#6 of#7 the#8 asthma#9 group#10 
+
+c24:[{p27kipl#3:expression#1},in#4,{asthma_group#9:t_lymphocytes#5}]
+stmt8 = c24
+
+# 15498271	the#0 expression#1 of#2 cyclin#3 e#4 ,#5 cyclin#6 a#7 ,#8 and#9 cyclin#10 b#11 in#12 t#13 lymphocytes#14 of#15 the#16 asthma#17 group#18 [#19 (25#20 +/-#21 24)%#22 ,#23 .#24 
+
+c25:[{cyclin_e#3:expression#1},in#12,{asthma_group#17:t_lymphocytes#13}]
+c26:[{cyclin_a#6:expression#1},in#12,{asthma_group#17:t_lymphocytes#13}]
+c27:[{cyclin_b#10:expression#1},in#12,{asthma_group#17:t_lymphocytes#13}]
+stmt9 = c25 c26 c27
+
+# 15498271	the#0 abnormal#1 expression#2 of#3 ccrp#4 in#5 t#6 lymphocytes#7 was#8 related#9 to#10 the#11 excessive#12 activation#13 and#14 proliferation#15 of#16 t#17 lymphocytes#18 in#19 patients#20 with#21 asthma#22 attack#23 .#24 
+
+f13:[{ccrp#4:abnormal_expression#1},was_related_to_#8,{t_lymphocytes#17:excessive_activation#12}]
+f14:[{ccrp#4:abnormal_expression#1},was_related_to_#8,{t_lymphocytes#17:proliferation#15}]
+c28:[{ccrp#4:abnormal_expression#1},in#5,t_lymphocytes#6]
+c29:[{t_lymphocytes#17:excessive_activation#12},in#19,patients#20]
+c30:[{t_lymphocytes#17:proliferation#15},in#19,patients#20]
+c31:[patients#20,with#21,asthma_attack#22]
+stmt10 = f13 f14 c28 c29 c30 c31
+
+# 15498271	a#0 new#1 approach#2 to#3 asthma#4 therapy#5 may#6 be#7 developed#8 with#9 ccrp#10 as#11 a#12 regulatory#13 target#14 .#15
+
+f15:[new_approach#1,may_be_developed#6,ccrp#10]
+c32:[new_approach#1,to#3,asthma_therapy#4]
+c33:[ccrp#10,as#11,regulatory_target#13]
+stmt11 = f15 c32 c33
+# 15498306	[#0 effects#1 of#2 escharectomy#3 during#4 burn#5 shock#6 stage#7 on#8 the#9 mrna#10 expression#11 of#12 ifn-gamma#13 and#14 il-4#15 in#16 spleen#17 t#18 lymphocytes#19 in#20 rats#21 after#22 thermal#23 injury]#24 .#25 
+
+c1:[{escharectomy#3:effects#1},during#4,burn_shock_stage#5]
+c2:[burn_shock_stage#5,on#8,{ifn-gamma#13:mrna_expression#10}]
+c3:[burn_shock_stage#5,on#8,spleen_t_lymphocytes#17]
+c4:[spleen_t_lymphocytes#17,in#20,rats#21]
+c5:[rats#21,after#22,thermal_injury]#23]
+stmt1 = c1 c2 c3 c4 c5
+
+# 15498306	to#0 determine#1 the#2 serum#3 level#4 and#5 mrna#6 expression#7 of#8 type-1/type-2#9 cytokines#10 of#11 t#12 lymphocytes#13 in#14 spleens#15 of#16 rats#17 after#18 thermal#19 injury#20 and#21 to#22 investigate#23 the#24 effects#25 of#26 escharectomy#27 during#28 burn#29 shock#30 stage#31 on#32 ifn-gamma#33 andil-4#34 .#35 
+
+f1:[NIL,to_determine#0,{type-1/type-2_cytokines_of_t_lymphocytes#9:serum_level#3}]
+f2:[NIL,to_determine#0,{type-1/type-2_cytokines_of_t_lymphocytes#9:mrna_expression#6}]
+f3:[NIL,to_investigate#22,{escharectomy#27:effects#25}]
+c6:[{type-1/type-2_cytokines_of_t_lymphocytes#9:serum_level#3},in#14,{rats#17:spleens#15}]
+c7:[{type-1/type-2_cytokines_of_t_lymphocytes#9:mrna_expression#6},in#14,{rats#17:spleens#15}]
+c8:[{rats#17:spleens#15},after#18,thermal_injury#19]
+c9:[{escharectomy#27:effects#25},during#28,burn_shock_stage#29]
+c10:[burn_shock_stage#29,on#32,ifn-gamma_andil-4#33]
+stmt2 = f1 f2 f3 c6 c7 c8 c9 c10
+
+# 15498306	one#0 hundred#1 and#2 sixty#3 male#4 wistar#5 rats#6 were#7 randomized#8 into#9 four#10 groups#11 .#12
+
+f4:[{male_wistar_rats#4:one_hundred_and_sixty#0},were_randomized_into#7,{groups#11:four#10}]
+stmt3 = f4
+
+# 15498306	in#0 group#1 a#2 ,#3 animals#4 were#5 not#6 subjected#7 to#8 escharectomy#9 .#10 
+
+f5:[animals#4,were_not_subjected_to#5,escharectomy#9]
+c11:[NIL,in#0,group_a#1]
+stmt4 = f5 c11
+
+# 15498306	in#0 groups#1 b#2 ,#3 c#4 and#5 d#6 ,#7 escharectomy#8 and#9 skin#10 allograft#11 were#12 performed#13 at#14 8#15 ,#16 24#17 ,#18 96#19 hours#20 postburn#21 respectively#22 .#23 
+
+f6:[escharectomy#8,were_performed_at#12,postburn#21]
+f7:[skin_allograft#10,were_performed_at#12,postburn#21]
+c12:[NIL,in#0,groups_b#1]
+c13:[NIL,in#0,c#4]
+c14:[NIL,in#0,d#6]
+stmt5 = f6 f7 c12 c13 c14
+
+# 15498306	at#0 4#1 ,#2 12#3 ,#4 24#5 ,#6 48#7 ,#8 96#9 ,#10 120#11 and#12 168#13 hours#14 pb#15 ,#16 animals#17 were#18 killed#19 and#20 blood#21 and#22 spleens#23 samples#24 were#25 harvested#26 .#27 
+
+f8:[animals#17,were_killed#18,NIL]
+f9:[blood#21,were_harvested#25,NIL]
+f10:[spleens_samples#23,were_harvested#25,NIL]
+c15:[NIL,at#0,{NIL#-1:4#1}]
+c16:[NIL,at#0,{NIL#-1:12#3}]
+c17:[NIL,at#0,{NIL#-1:24#5}]
+c18:[NIL,at#0,{NIL#-1:48#7}]
+c19:[NIL,at#0,{NIL#-1:96#9}]
+c20:[NIL,at#0,{NIL#-1:120#11}]
+c21:[NIL,at#0,{NIL#-1:168_hours_pb#13}]
+stmt6 = f8 f9 f10 c15 c16 c17 c18 c19 c20 c21
+
+# 15498306	elisa#0 was#1 applied#2 to#3 determine#4 the#5 concentration#6 of#7 ifn-gamma#8 and#9 il-4#10 in#11 serum#12 .#13 
+
+f11:[elisa#0,was_applied_to#1,{ifn-gamma#8:concentration#6}]
+f12:[elisa#0,was_applied_to#1,{il-4_in_serum#10:concentration#6}]
+stmt7 = f11 f12
+
+# 15498306	the#0 expression#1 pattern#2 of#3 ifn-gamma#4 and#5 il-4#6 were#7 observed#8 at#9 mrna#10 level#11 in#12 t#13 lymphocytes#14 isolated#15 from#16 spleen#17 byrt-pcr#18 .#19 
+
+f13:[{ifn-gamma#4:expression_pattern#1},were_observed_at#7,mrna_level#10]
+c22:[mrna_level#10,in#12,t_lymphocytes#13]
+c23:[t_lymphocytes#13,isolated_from#15,spleen_byrt-pcr#17]
+stmt8 = f13 c22 c23
+
+# 15498306	the#0 serum#1 level#2 of#3 ifn-gamma#4 and#5 il-4#6 rose#7 rapidly#8 and#9 significantly#10 after#11 scald#12 injury#13 ,#14 expression#15 of#16 ifn-gamma#17 and#18 il-4#19 mrna#20 in#21 rats'#22 t#23 lymphocyte#24 were#25 also#26 up-regulated#27 spontaneously#28 .#29 
+
+f14:[{ifn-gamma#4:serum_level#1},rose_rapidly_and_significantly#7,NIL]
+f15:[{il-4#6:serum_level#1},rose_rapidly_and_significantly#7,NIL]
+f16:[{ifn-gamma#17:expression#15},were_also_up-regulated_spontaneously#25,NIL]
+f17:[{il-4_mrna#19:expression#15},were_also_up-regulated_spontaneously#25,NIL]
+c24:[NIL,after#11,scald_injury#12]
+c25:[{ifn-gamma#17:expression#15},in#21,rats'_t_lymphocyte#22]
+c26:[{il-4_mrna#19:expression#15},in#21,rats'_t_lymphocyte#22]
+stmt9 = f14 f15 f16 f17 c24 c25 c26
+
+# 15498306	the#0 serum#1 level#2 of#3 ifn-gamma#4 and#5 its#6 mrna#7 expression#8 began#9 to#10 rise#11 within#12 4#13 hours#14 pb#15 ,#16 peaking#17 at#18 24#19 hours#20 pb#21 .#22 
+
+f18:[{ifn-gamma#4:serum_level#1},began_to_rise#9,NIL]
+f19:[{ifn-gamma#4:serum_level#1},peaking_at#17,{pb#21:24_hours#19}]
+f20:[{ifn-gamma#4:mrna_expression#7},began_to_rise#9,NIL]
+c27:[NIL,within#12,{pb#15:4_hours#13}]
+stmt10 = f18 f19 f20 c27
+
+# 15498306	whereas#0 il-4#1 and#2 its#3 mrna#4 expression#5 showed#6 a#7 persistent#8 elevation#9 .#10 
+
+f21:[{il-4#1:mrna_expression#4},showed#6,persistent_elevation#8]
+f22:[il-4#1,showed#6,persistent_elevation#8]
+stmt11 = f21 f22
+
+# 15498306	thereby#0 leading#1 to#2 a#3 dominant#4 tendency#5 of#6 th2#7 cytokine#8 response#9 on#10 7#11 d#12 pb#13 .#14 
+
+f23:[NIL,thereby_leading_to#0,{th2_cytokine_response#7:dominant_tendency#4}]
+c28:[{th2_cytokine_response#7:dominant_tendency#4},on#10,{pb#13:7_d#11}]
+stmt12 = f23 c28
+
+# 15498306	in#0 group#1 a#2 all#3 above#4 parameters#5 revealed#6 most#7 obvious#8 changes#9 compared#10 with#11 controls#12 ,#13 then#14 ranked#15 in#16 group#17 d#18 ,#19 b#20 andc#21 .#22 
+
+f24:[parameters#5,revealed#6,obvious_changes#8]
+f25:[parameters#5,ranked_in#15,group_d#17]
+f26:[parameters#5,ranked_in#15,b_andc#20]
+c29:[NIL,in#0,group_a#1]
+stmt13 = f24 f25 f26 c29
+
+# 15498306	escharectomy#0 during#1 burn#2 shock#3 stage#4 is#5 helpful#6 to#7 decrease#8 the#9 harmful#10 over#11 expression#12 of#13 th2-type#14 lymphocyte#15 after#16 severe#17 thermal#18 injury#19 .#20 
+
+f27:[escharectomy#0,is_helpful_to_decrease#5,{th2-type_lymphocyte#14:harmful_over_expression#10}]
+c30:[escharectomy#0,during#1,burn_shock_stage#2]
+c31:[{th2-type_lymphocyte#14:harmful_over_expression#10},after#16,severe_thermal_injury#17]
+stmt14 = f27 c30 c31
+# n1:[interferon_gamma_production,as,ifn-gamma_production]
+# n2:[jurkat_cells,as,jurkatcells]
+
+# h1:[various_mediators,contain,cytokines]
+# h2:[kb_cells,contain,lps-stimulated_kb_cells]
+
+# 23890451	Aggregatibacter#0 actinomycetemcomitans#1 lipopolysaccharide#2 stimulated#3 epithelial#4 cells#5 produce#6 interleukin-15#7 that#8 regulates#9 t#10 cell#11 activation#12 .#13 
+
+f1:[aggregatibacter_actinomycetemcomitans_lipopolysaccharide_stimulated_epithelial_cells#0,produce#6,interleukin-15#7]
+c1:[interleukin-15#7,regulates#9,{t_cell#10:activation#12}]
+stmt1 = f1 c1
+
+# 23890451	Oral#0 epithelial#1 cells#2 act#3 not#4 only#5 as#6 mechanical#7 barriers#8 but#9 also#10 as#11 immunological#12 barriers#13 by#14 producing#15 various#16 mediators#17 such#18 as#19 cytokines#20 .#21 
+
+f2:[oral_epithelial_cells#0,act_not_only_as#3,mechanical_barriers#7]
+f3:[oral_epithelial_cells#0,also_as#10,immunological_barriers#12]
+c2:[NIL,by_producing#14,various_mediators#16]
+c3:[NIL,by_producing#14,cytokines#20]
+stmt2 = f2 f3 c2 c3
+
+# 23890451	Since#0 ,#1 in#2 periodontal#3 disease#4 ,#5 limited#6 information#7 is#8 available#9 regarding#10 the#11 role#12 of#13 oral#14 epithelial#15 cell-derived#16 cytokines#17 on#18 T#19 cell#20 activation#21 ,#22 we#23 investigated#24 the#25 responses#26 of#27 human#28 T#29 cells#30 to#31 cytokines#32 in#33 KB#34 cells#35 that#36 had#37 been#38 stimulated#39 with#40 Aggregatibacter#41 actinomycetemcomitans#42 lipopolysaccharide(LPS)#43 .#44 
+
+f4:[limited_information#6,is_available_regarding#8,{oral_epithelial_cell-derived_cytokines#14:role#12}]
+f5:[NIL,investigated#24,{human_t_cells#28:responses#26}]
+f6:[kb_cells#34,had_been_stimulated_with#37,aggregatibacter_actinomycetemcomitans_lipopolysaccharide(lps)#41]
+c4:[NIL,in#2,periodontal_disease#3]
+c5:[oral_epithelial_cell-derived_cytokines#14,on#18,t_cell_activation#19]
+c6:[cytokines#32,in#33,kb_cells#34]
+stmt3 = f4 f5 f6 c4 c5 c6
+
+# 23890451	To#0 evaluate#1 T#2 cell#3 activation#4 in#5 response#6 to#7 the#8 culture#9 supernatant#10 of#11 KB#12 cells#13 ,#14 we#15 examined#16 cell#17 proliferation#18 and#19 interferon#20 gamma#21 production#22 ,#23 which#24 is#25 closely#26 related#27 to#28 periodontal#29 disease#30 ,#31 in#32 Jurkat#33 cells#34 .#35 
+
+f7:[NIL,to_evaluate#0,{t_cell#2:activation#4}]
+f8:[NIL,examined#16,cell_proliferation_and_interferon_gamma_production#17]
+c7:[{t_cell#2:activation#4},in_response_to#5,{kb_cells#12:culture_supernatant#9}]
+c8:[cell_proliferation_and_interferon_gamma_production#17,is_closely_related_to#25,periodontal_disease#29]
+c9:[NIL,in#32,jurkat_cells#33]
+stmt4 = f7 f8 c7 c8 c9
+
+# 23890451	Culture#0 supernatant#1 of#2 LPS-stimulated#3 KB#4 cells#5 enhanced#6 cell#7 proliferation#8 and#9 IFN-gamma#10 production#11 in#12 Jurkat#13 cells#14 .#15 
+
+f9:[{lps-stimulated_kb_cells#3:culture_supernatant#0},enhanced#6,cell_proliferation#7]
+f10:[{lps-stimulated_kb_cells#3:culture_supernatant#0},enhanced#6,ifn-gamma_production#10]
+c10:[cell_proliferation#7,in#12,jurkat_cells#13]
+c11:[ifn-gamma_production#10,in#12,jurkat_cells#13]
+stmt5 = f9 f10 c10 c11
+
+# 23890451	To#0 determine#1 the#2 active#3 component#4 within#5 the#6 culture#7 supernatant#8 ,#9 the#10 production#11 of#12 epithelial#13 cell-derived#14 cytokines#15 ,#16 interleukin-12#17 ,#18 IL-15#19 and#20 IL-18#21 ,#22 in#23 LPS-stimulated#24 KB#25 cells#26 wasanalysed#27 .#28 
+
+f11:[NIL,to_determine#0,active_component#3]
+f12:[{epithelial_cell-derived_cytokines#13:production#11},wasanalysed#27,NIL]
+f13:[{interleukin-12#17:production#11},wasanalysed#27,NIL]
+f14:[{il-15#19:production#11},wasanalysed#27,NIL]
+f15:[{il-18#21:production#11},wasanalysed#27,NIL]
+c12:[active_component#3,within#5,culture_supernatant#7]
+c13:[NIL,in#23,lps-stimulated_kb_cells#24]
+stmt6 = f11 f12 f13 f14 f15 c12 c13
+
+# 23890451	IL-15#0 ,#1 but#2 not#3 IL-18#4 ,#5 was#6 significantly#7 increased#8 in#9 the#10 culture#11 supernatant#12 of#13 LPS-stimulated#14 KB#15 cells#16 .#17 
+
+f16:[il-15#0,was_significantly_increased#6,NIL#-1]
+c14:[il-15#0,in#9,{lps-stimulated_kb_cells#14:culture_supernatant#11}]
+c15:[NIL,not#3,il-18#4]
+stmt7 = f16 c14 c15
+
+# 23890451	Moreover#0 ,#1 additional#2 anti-IL-15#3 neutralizing#4 antibody#5 abolished#6 culture#7 supernatant-induced#8 IFN-gamma#9 expression#10 in#11 Jurkatcells#12 .#13 
+
+f17:[additional_anti-IL-15_neutralizing_antibody#2,abolished#6,culture_supernatant-induced_ifn-gamma_expression#7]
+c16:[culture_supernatant-induced_ifn-gamma_expression#7,in#11,jurkatcells#12]
+stmt8 = f17 c16
+
+# 23890451	These#0 results#1 suggest#2 that#3 periodontal#4 pathogens#5 induce#6 the#7 production#8 of#9 IL-15#10 from#11 epithelial#12 cells#13 ,#14 and#15 leading#16 the#17 activation#18 of#19 T#20 cells#21 in#22 periodontal#23 lesions#24 .#25 
+
+f18:[{NIL#-1:results#1},suggest_that#2,NIL]
+f19:[periodontal_pathogens#4,induce#6,{il-15#10:production#8}]
+f20:[periodontal_pathogens#4,leading#16,{t_cells#20:activation#18}]
+c17:[{il-15#10:production#8},from#11,epithelial_cells#12]
+c18:[{t_cells#20:activation#18},in#22,periodontal_lesions#23]
+stmt9 = f18 f19 f20 c17 c18
+# n1:[trpv5,as,calcium_channels_trpv5]
+# n2:[trpv6,as,trpv6_channels]
+# n3:[trpv5/v6,as,calcium_channels_trpv5/v6]
+# n4:[trpv5/v6,as,trpv5/v6_channels]
+# n5:[jurkat_t_cells,as,human_leukemia_jurkat_t_cells]
+# n6:[jurkat_t_cells,as,jurkat_cells]
+
+# h1:[different_cell_types,contain,lymphocytes]
+# h2:[lymphocytes,contain,t_lymphocyte]
+# h3:[external_stimuli,contain,low-ph_stressor]
+# h4:[external_stimuli,contain,high-ph_stressor]
+# h5:[extracellular_ph,contain,extracellular_acidic_ph]
+# h6:[trpv5/v6,contain,trpv5]
+# h7:[trpv5/v6,contain,trpv6]
+# h8:[early_endocytosis_marker,contain,eea1]
+
+# 26096460	trpv5/v6#0 channels#1 mediate#2 ca(2+)#3 influx#4 in#5 jurkat#6 t#7 cells#8 under#9 the#10 control#11 of#12 extracellular#13 ph#14 .#15
+
+f1:[trpv5/v6_channels#0,mediate#2,ca(2+)_influx#3]
+c1:[ca(2+)_influx#3,in#5,jurkat_t_cells#6]
+c2:[jurkat_t_cells#6,under#9,{extracellular_ph#13:control#11}]
+stmt1 = f1 c1 c2
+
+# 26096460	regulation#0 of#1 cytoplasmic#2 free#3 calcium#4 concentration#5 [#6 ca(2+)#7 ]i#8 is#9 a#10 key#11 factor#12 for#13 the#14 maintenance#15 of#16 cellular#17 homeostasis#18 in#19 different#20 cell#21 types#22 ,#23 including#24 lymphocytes#25 .#26 
+
+f2:[{cytoplasmic_free_calcium_concentration#2:regulation#0},is_a_key_factor_for#9,{cellular_homeostasis#17:maintenance#15}]
+c3:[{cellular_homeostasis#17:maintenance#15},in#19,lymphocytes#25]
+stmt2 = f2 c3
+
+# 26096460	during#0 t#1 lymphocyte#2 activation#3 as#4 well#5 as#6 production#7 of#8 cytokines#9 ,#10 sustained#11 ca(2+)#12 influx#13 is#14 essential#15 ,#16 however#17 it#18 remains#19 unclear#20 how#21 this#22 influx#23 is#24 regulated#25 .#26 
+
+f3:[sustained_ca(2+)_influx#11,is_essential#14,NIL]
+c4:[NIL,during#0,t_lymphocyte_activation#1]
+c5:[NIL,during#0,{cytokines#9:production#7}]
+stmt3 = f3 c4 c5
+
+# 26096460	previously#0 ,#1 we#2 reported#3 the#4 expression#5 and#6 functional#7 activity#8 of#9 calcium#10 channels#11 trpv5#12 and#13 trpv6#14 in#15 human#16 leukemia#17 jurkat#18 t#19 cells#20 .#21 
+
+f4:[NIL,reported#3,{calcium_channels_trpv5#10:expression#5}]
+f5:[NIL,reported#3,{calcium_channels_trpv5#10:functional_activity#7}]
+f6:[NIL,reported#3,{trpv6#14:expression#5}]
+f7:[NIL,reported#3,{trpv6#14:functional_activity#7}]
+c6:[calcium_channels_trpv5#10,in#15,human_leukemia_jurkat_t_cells#16]
+c7:[trpv6#14,in#15,human_leukemia_jurkat_t_cells#16]
+stmt4 = f4 f5 f6 f7 c6 c7
+
+# 26096460	in#0 this#1 study#2 ,#3 using#4 single#5 channel#6 recordings#7 ,#8 we#9 found#10 that#11 activity#12 of#13 calcium#14 channels#15 trpv5/v6#16 in#17 jurkat#18 t#19 cells#20 is#21 subject#22 to#23 strong#24 control#25 of#26 external#27 stimuli#28 such#29 as#30 a#31 low-#32 or#33 high-ph#34 stressor#35 .#36 
+
+f8:[NIL,found_that#10,NIL]
+f9:[{calcium_channels_trpv5/v6#14:activity#12},is_subject_to#21,{external_stimuli#27:strong_control#24}]
+f10:[{calcium_channels_trpv5/v6#14:activity#12},is_subject_to#21,{low-_or_high-ph_stressor#32:strong_control#24}]
+c8:[NIL,in#0,{NIL#-1:study#2}]
+c9:[NIL,using#4,single_channel_recordings#5]
+c10:[{calcium_channels_trpv5/v6#14:activity#12},in#17,jurkat_t_cells#18]
+stmt5 = f8 f9 f10 c8 c9 c10
+
+# 26096460	we#0 showed#1 that#2 extracellular#3 acidic#4 ph#5 reduces#6 the#7 activity#8 of#9 trpv5/v6#10 channels#11 ,#12 whereas#13 alkaline#14 ph#15 increases#16 the#17 activity#18 of#19 trpv5/v6#20 channels#21 in#22 jurkat#23 t#24 cells#25 .#26 
+
+f11:[NIL,showed_that#1,NIL]
+f12:[extracellular_acidic_ph#3,reduces#6,{trpv5/v6_channels#10:activity#8}]
+f13:[alkaline_ph#14,increases#16,{trpv5/v6_channels#20:activity#18}]
+c11:[{trpv5/v6_channels#20:activity#18},in#22,jurkat_t_cells#23]
+stmt6 = f11 f12 f13 c11
+
+# 26096460	using#0 calcium#1 imaging#2 ,#3 we#4 found#5 that#6 ca(2+)#7 influx#8 in#9 jurkat#10 t#11 cells#12 displayed#13 sensitivity#14 to#15 extracellular#16 ph#17 ,#18 similar#19 to#20 that#21 shown#22 for#23 the#24 calcium#25 channels#26 trpv5/v6#27 .#28 
+
+f14:[NIL,found_that#5,NIL]
+f15:[ca(2+)_influx#7,displayed_sensitivity_to#13,extracellular_ph#16]
+c12:[NIL,using#0,calcium_imaging#1]
+c13:[ca(2+)_influx#7,in#9,jurkat_t_cells#10]
+c14:[NIL,similar_to_that_shown_for#19,calcium_channels_trpv5/v6#25]
+stmt7 = f14 f15 c12 c13 c14
+
+# 26096460	double#0 immunostaining#1 of#2 jurkat#3 cells#4 revealed#5 that#6 trpv5#7 and#8 trpv6#9 channels#10 colocalize#11 with#12 clathrin#13 and#14 the#15 early#16 endocytosis#17 marker#18 ,#19 eea1#20 .#21 
+
+f16:[trpv5#7,colocalize_with#11,clathrin#13]
+f17:[trpv5#7,colocalize_with#11,early_endocytosis_marker#16]
+f18:[trpv5#7,colocalize_with#11,eea1#20]
+f19:[trpv6_channels#9,colocalize_with#11,clathrin#13]
+f20:[trpv6_channels#9,colocalize_with#11,early_endocytosis_marker#16]
+f21:[trpv6_channels#9,colocalize_with#11,eea1#20]
+c15:[{jurkat_cells#3:double_immunostaining#0},revealed_that#5,NIL#-1]
+stmt8 = f16 f17 f18 f19 f20 f21 c15
+
+# 26096460	moreover#0 ,#1 we#2 demonstrated#3 that#4 a#5 specific#6 inhibitor#7 of#8 clathrin-dependent#9 endocytosis#10 ,#11 dynasore#12 ,#13 blocked#14 trpv5/v6#15 activity#16 and#17 ca(2+)#18 influx#19 into#20 jurkat#21 cells#22 .#23 
+
+f22:[NIL,demonstrated_that#3,NIL]
+f23:[{clathrin-dependent_endocytosis#9:specific_inhibitor#6},blocked#14,{trpv5/v6#15:activity#16}]
+f24:[{clathrin-dependent_endocytosis#9:specific_inhibitor#6},blocked#14,ca(2+)_influx#18]
+f25:[dynasore#12,blocked#14,{trpv5/v6#15:activity#16}]
+f26:[dynasore#12,blocked#14,ca(2+)_influx#18]
+c16:[{trpv5/v6#15:activity#16},into#20,jurkat_cells#21]
+c17:[ca(2+)_influx#18,into#20,jurkat_cells#21]
+stmt9 = f22 f23 f24 f25 f26 c16 c17
+
+# 26096460	overall#0 ,#1 our#2 findings#3 indicate#4 that#5 strong#6 environmental#7 cues#8 may#9 affect#10 the#11 intracellular#12 calcium#13 level#14 in#15 jurkat#16 cells#17 by#18 influencing#19 the#20 traffic#21 of#22 trpv5/v6#23 channels#24 in#25 lymphocytes#26 .#27 
+
+f27:[{NIL#-1:findings#3},indicate_that#4,NIL]
+f28:[strong_environmental_cues#6,may_affect#9,intracellular_calcium_level#12]
+c18:[intracellular_calcium_level#12,in#15,jurkat_cells#16]
+c19:[NIL,by_influencing#18,{trpv5/v6_channels#23:traffic#21}]
+c20:[{trpv5/v6_channels#23:traffic#21},in#25,lymphocytes#26]
+stmt10 = f27 f28 c18 c19 c20
+
+#26096460	this#0 article#1 is#2 protected#3 by#4 copyright#5 .#6 
+
+f29:[article#1,is_protected_by#2,copyright#5]
+stmt11 = f29
+
+#26096460	all#0 rights#1 reserved#2 .#3 
+
+c21:[{NIL#-1:rights#1},reserved#2,NIL]
+stmt12 = c21
+# 26118933	Immunization#0 of#1 sea#2 bream#3 juveniles#4 against#5 photobacterium#6 damselae#7 subsp.#8 piscicida#9 by#10 short#11 bath#12 ,#13 effect#14 on#15 some#16 pro-inflammatory#17 molecules#18 and#19 the#20 mx#21 gene#22 expression#23 .#24 
+
+c1:[{sea_bream_juveniles#2:immunization#0},against#5,photobacterium_damselae_subsp._piscicida#6]
+c2:[{NIL#-1:effect#14},on#15,pro-inflammatory_molecules#17]
+c3:[{NIL#-1:effect#14},on#15,mx_gene_expression#21]
+stmt1 = c1 c2 c3
+
+# 26118933	Cytokines#0 are#1 a#2 family#3 of#4 proteins#5 derived#6 from#7 macrophages#8 ,#9 lymphocytes#10 ,#11 granulocytes#12 ,#13 mast#14 cells#15 and#16 epithelial#17 cells#18 and#19 can#20 be#21 divided#22 into#23 interferons#24 ,#25 Interleukins#26 and#27 Tumor#28 Necrosis#29 factors#30 among#31 others#32 .#33 
+
+f1:[cytokines#0,are#1,{proteins#5:family#3}]
+f2:[cytokines#0,can_be_divided_into#20,interferons#24]
+f3:[cytokines#0,can_be_divided_into#20,interleukins#26]
+f4:[cytokines#0,can_be_divided_into#20,tumor_necrosis_factors#28]
+c4:[proteins#5,derived_from#6,macrophages#8]
+c5:[proteins#5,derived_from#6,lymphocytes#10]
+c6:[proteins#5,derived_from#6,granulocytes#12]
+c7:[proteins#5,derived_from#6,mast_cells#14]
+c8:[proteins#5,derived_from#6,epithelial_cells#17]
+c9:[tumor_necrosis_factors#28,among_others#31,NIL]
+stmt2 = f1 f2 f3 f4 c4 c5 c6 c7 c8 c9
+
+# 26118933	The#0 presence#1 of#2 cytokines#3 in#4 a#5 wide#6 number#7 of#8 fish#9 species#10 has#11 been#12 proved#13 and#14 several#15 molecules#16 types#17 have#18 been#19 already#20 cloned#21 and#22 sequenced#23 .#24 
+
+f5:[{cytokines#3:presence#1},has_been_proved#11,NIL]
+f6:[molecules_types#16,have_been_already_cloned#18,NIL]
+f7:[molecules_types#16,sequenced#23,NIL]
+c10:[{cytokines#3:presence#1},in#4,fish_species#9]
+stmt3 = f5 f6 f7 c10
+
+# 26118933	In#0 this#1 work#2 some#3 proinflamatory#4 molecules#5 and#6 Mx#7 gene#8 were#9 detected#10 in#11 the#12 liver#13 of#14 vaccinated#15 sea#16 bream#17 juveniles#18 with#19 an#20 average#21 body#22 weight#23 of#24 5#25 g#26 .#27 
+
+f8:[proinflamatory_molecules#4,were_detected_in#9,{vaccinated_sea_bream_juveniles#15:liver#13}]
+f9:[mx_gene#7,were_detected_in#9,{vaccinated_sea_bream_juveniles#15:liver#13}]
+c11:[average_body_weight#21,of#24,5_g#25]
+stmt4 = f8 f9 c11
+
+# 26118933	The#0 method#1 of#2 immunization#3 was#4 by#5 short#6 bath#7 and#8 three#9 different#10 bacterins#11 against#12 the#13 marine#14 pathogen#15 Photobacterium#16 damselae#17 subsp.#18 piscicida#19 were#20 designed#21 and#22 used#23 to#24 immunize#25 fish#26 .#27 
+
+f10:[{immunization#3:method#1},was_by#4,short_bath#6]
+f11:[bacterins#11,were_designed#20,NIL]
+f12:[bacterins#11,used_to_immunize#23,fish#26]
+c12:[bacterins#11,against#12,marine_pathogen_photobacterium_damselae_subsp._piscicida#14]
+stmt5 = f10 f11 f12 c12
+
+# 26118933	Five#0 genes#1 encoding#2 for#3 five#4 different#5 molecules#6 were#7 analyzed#8 by#9 real#10 time#11 PCR#12 ,#13 IL-1#14 beta#15 ,#16 IL#17 Ir-2#18 ,#19 Cox-2#20 ,#21 Mx#22 and#23 TNFalpha#24 .#25 
+
+f13:[genes#1,were_analyzed_by#7,real_time_pcr#10]
+f14:[genes#1,were_analyzed_by#7,il-1_beta#14]
+f15:[genes#1,were_analyzed_by#7,il_ir-2#17]
+f16:[genes#1,were_analyzed_by#7,cox-2#20]
+f17:[genes#1,were_analyzed_by#7,mx#22]
+f18:[genes#1,were_analyzed_by#7,tnfalpha#24]
+c13:[genes#1,encoding_for#2,molecules#6]
+stmt6 = f13 f14 f15 f16 f17 f18 c13
+
+# 26118933	Gene#0 expression#1 was#2 quantified#3 along#4 four#5 days#6 after#7 fish#8 immunization#9 and#10 results#11 were#12 compared#13 among#14 groups#15 .#16 
+
+f19:[gene_expression#0,was_quantified_along#2,{NIL#-1:four_days#5}]
+c14:[fish_immunization#8,were_compared_among#12,groups#15]
+stmt7 = f19 c14
+
+# 26118933	Results#0 show#1 that#2 the#3 heat-inactivated#4 vaccine#5 stimulates#6 the#7 up-regulation#8 of#9 IL-1#10 beta#11 ,#12 IL#13 Ir-2#14 ,#15 Cox-2#16 and#17 TNFalpha#18 genes#19 whereas#20 the#21 UV-light#22 inactivated#23 vaccine#24 was#25 the#26 unique#27 vaccine#28 which#29 stimulates#30 the#31 expression#32 of#33 Mx#34 gene#35 .#36 
+
+f20:[{NIL#-1:results#0},show_that#1,NIL]
+f21:[heat-inactivated_vaccine#4,stimulates#6,{il-1_beta#10:up-regulation#8}]
+f22:[heat-inactivated_vaccine#4,stimulates#6,{il_ir-2#13:up-regulation#8}]
+f23:[heat-inactivated_vaccine#4,stimulates#6,{cox-2#16:up-regulation#8}]
+f24:[heat-inactivated_vaccine#4,stimulates#6,{tnfalpha_genes#18:up-regulation#8}]
+f25:[uv-light_inactivated_vaccine#22,was#25,unique_vaccine#27]
+c15:[unique_vaccine#27,stimulates#30,{mx_gene#34:expression#32}]
+stmt8 = f20 f21 f22 f23 f24 f25 c15
+
+# 26118933	The#0 present#1 is#2 a#3 novel#4 study#5 that#6 shows#7 by#8 the#9 first#10 time#11 the#12 effect#13 of#14 the#15 inactivation#16 process#17 of#18 vaccines#19 on#20 the#21 expression#22 levels#23 of#24 genes#25 involved#26 in#27 the#28 defense#29 against#30 Photobacterium#31 damselae#32 subsp#33 piscicida#34 .#35 
+
+f26:[{NIL#-1:novel_study#4},shows_by_the_first_time#7,{NIL#-1:effect#13}]
+c16:[{NIL#-1:effect#13},of#14,{vaccines#19:inactivation_process#16}]
+c17:[{vaccines#19:inactivation_process#16},on#20,{genes#25:expression_levels#22}]
+c18:[{genes#25:expression_levels#22},involved_in_defense_against#26,photobacterium_damselae_subsp_piscicida#31]
+stmt9 = f26 c16 c17 c18
+# 26133121	An#0 act#1 of#2 balance#3 between#4 adaptive#5 and#6 maladaptive#7 immunity#8 in#9 depression#10 ,#11 a#12 role#13 for#14 t#15 lymphocytes#16 .#17 
+
+c1:[{balance#3:act#1},between#4,adaptive#5]
+c2:[{balance#3:act#1},between#4,maladaptive_immunity#7]
+c3:[{balance#3:act#1},a_role_for#12,t_lymphocytes#15]
+c4:[maladaptive_immunity#7,in#9,depression#10]
+stmt1 = c1 c2 c3 c4
+
+# 26133121	Historically#0 the#1 monoaminergic#2 neurotransmitter#3 system#4 ,#5 in#6 particular#7 the#8 serotonergic#9 system#10 ,#11 was#12 seen#13 as#14 being#15 responsible#16 for#17 the#18 pathophysiology#19 of#20 major#21 depressive#22 disorder#23 .#24 
+
+f1:[monoaminergic_neurotransmitter_system#2,was_seen_as_being_responsible_for#12,{major_depressive_disorder#21:pathophysiology#19}]
+f2:[serotonergic_system#9,was_seen_as_being_responsible_for#12,{major_depressive_disorder#21:pathophysiology#19}]
+stmt2 = f1 f2
+
+# 26133121	With#0 the#1 advent#2 of#3 psychoneuroimmunology#4 an#5 important#6 role#7 of#8 the#9 immune#10 system#11 in#12 the#13 interface#14 between#15 the#16 central#17 nervous#18 systems#19 and#20 peripheral#21 organ#22 systems#23 has#24 emerged#25 .#26 
+
+f3:[{immune_system#10:important_role#6},has_emerged#24,NIL]
+c5:[NIL,with#0,{psychoneuroimmunology#4:advent#2}]
+c6:[{immune_system#10:important_role#6},in#12,interface#14]
+c7:[interface#14,between#15,central_nervous_systems#17]
+c8:[interface#14,between#15,peripheral_organ_systems#21]
+stmt3 = f3 c5 c6 c7 c8
+
+# 26133121	In#0 addition#1 to#2 the#3 well-characterised#4 neurobiological#5 activities#6 of#7 cytokines#8 ,#9 T#10 cell#11 function#12 in#13 the#14 context#15 of#16 depression#17 has#18 been#19 neglected#20 so#21 far#22 .#23 
+
+f4:[t_cell_function#10,has_been_neglected#18,NIL]
+c9:[NIL,in_addition_to#0,{cytokines#8:well-characterised_neurobiological_activities#4}]
+c10:[t_cell_function#10,in#13,{depression#17:context#15}]
+stmt4 = f4 c9 c10
+
+# 26133121	In#0 this#1 review#2 we#3 will#4 investigate#5 the#6 biological#7 roles#8 of#9 T#10 cells#11 in#12 depression#13 .#14 
+
+f5:[NIL,will_investigate#4,{t_cells#10:biological_roles#7}]
+c11:[NIL,in#0,{NIL#-1:review#2}]
+c12:[{t_cells#10:biological_roles#7},in#12,depression#13]
+stmt5 = f5 c11 c12
+
+#26133121	Originally#0 it#1 was#2 thought#3 that#4 the#5 adaptive#6 immune#7 arm#8 including#9 T#10 lymphocytes#11 was#12 excluded#13 from#14 the#15 CNS#16 .#17 
+
+f6:[NIL,it_was_thought_that#1,NIL]
+f7:[adaptive_immune_arm#6,was_excluded_from#12,cns#16]
+c13:[adaptive_immune_arm#6,including#9,t_lymphocytes#10]
+stmt6 = f6 f7 c13
+
+# 26133121	It#0 is#1 now#2 clear#3 that#4 peripheral#5 naive#6 T#7 cells#8 not#9 only#10 carry#11 out#12 continuous#13 surveillance#14 within#15 the#16 brain#17 but#18 also#19 maintain#20 neural#21 plasticity#22 .#23
+
+f8:[NIL,it_is_now_clear_that#0,NIL]
+f9:[peripheral_naive_t_cells#5,not_only_carry_out#9,continuous_surveillance#13]
+f10:[peripheral_naive_t_cells#5,also_maintain#19,neural_plasticity#21]
+c14:[continuous_surveillance#13,within#15,brain#17]
+stmt7 = f8 f9 f10 c14
+
+# 26133121	Furthermore#0 animal#1 studies#2 demonstrate#3 that#4 regulatory#5 T#6 lymphocytes#7 can#8 provide#9 protection#10 against#11 maladaptive#12 behavioural#13 responses#14 associated#15 with#16 depression#17 .#18 
+
+f11:[animal_studies#1,demonstrate_that#3,NIL]
+f12:[regulatory_t_lymphocytes#5,can_provide#8,{NIL#-1:protection#10}]
+c15:[{NIL#-1:protection#10},against#11,maladaptive_behavioural_responses#12]
+c16:[maladaptive_behavioural_responses#12,associated_with#15,depression#17]
+stmt8 = f11 f12 c15 c16
+
+# 26133121	Psychogenic#0 stress#1 as#2 a#3 major#4 inducer#5 of#6 depression#7 can#8 lead#9 to#10 transient#11 trafficking#12 of#13 T#14 lymphocytes#15 into#16 the#17 brain#18 stimulating#19 the#20 secretion#21 of#22 certain#23 neurotrophic#24 factors#25 and#26 cytokines#27 .#28 
+
+f13:[psychogenic_stress#0,can_lead_to#8,{t_lymphocytes#14:transient_trafficking#11}]
+c17:[psychogenic_stress#0,as#2,{depression#7:major_inducer#4}]
+c18:[{t_lymphocytes#14:transient_trafficking#11},into#16,{certain_neurotrophic_factors#23:brain_stimulating_the_secretion#18}]
+c19:[{t_lymphocytes#14:transient_trafficking#11},into#16,{cytokines#27:brain_stimulating_the_secretion#18}]
+stmt9 = f13 c17 c18 c19
+
+# 26133121	The#0 separate#1 and#2 combined#3 mechanism#4 of#5 CD4#6 and#7 CD8#8 T#9 cell#10 activation#11 is#12 likely#13 to#14 determine#15 the#16 response#17 pattern#18 of#19 CNS#20 specific#21 neurokines#22 and#23 neurotrophins#24 .#25 
+
+f14:[{cd4#6:separate_and_combined_mechanism#1},is_likely_to_determine#12,{cns_specific_neurokines#20:response_pattern#17}]
+f15:[{cd4#6:separate_and_combined_mechanism#1},is_likely_to_determine#12,{neurotrophins#24:response_pattern#17}]
+f16:[{cd8_t_cell_activation#8:separate_and_combined_mechanism#1},is_likely_to_determine#12,{cns_specific_neurokines#20:response_pattern#17}]
+f17:[{cd8_t_cell_activation#8:separate_and_combined_mechanism#1},is_likely_to_determine#12,{neurotrophins#24:response_pattern#17}]
+stmt10 = f14 f15 f16 f17
+
+# 26133121	Under#0 chronic#1 stress-induced#2 neuroinflammatory#3 conditions#4 associated#5 with#6 depression#7 ,#8 T#9 cell#10 responses#11 may#12 become#13 maladaptive#14 and#15 can#16 be#17 involved#18 in#19 neurodegeneration#20 .#21 
+
+f18:[t_cell_responses#9,may_become_maladaptive#12,NIL]
+f19:[t_cell_responses#9,can_be_involved_in#16,neurodegeneration#20]
+c20:[chronic_stress-induced_neuroinflammatory_conditions#1,associated_with#5,depression#7]
+stmt11 = f18 f19 c20
+
+# 26133121	Additionally#0 ,#1 intracellular#2 adhesion#3 and#4 MHC#5 molecule#6 expression#7 as#8 well#9 as#10 glucocorticoid#11 receptor#12 expression#13 within#14 the#15 brain#16 may#17 play#18 a#19 role#20 in#21 determining#22 T#23 lymphocyte#24 functionality#25 in#26 depression#27 .#28 
+
+f20:[intracellular_adhesion#2,may_play#17,{NIL#-1:role#20}]
+f21:[mhc_molecule_expression#5,may_play#17,{NIL#-1:role#20}]
+f22:[glucocorticoid_receptor_expression#11,may_play#17,{NIL#-1:role#20}]
+c21:[intracellular_adhesion#2,within#14,brain#16]
+c22:[mhc_molecule_expression#5,within#14,brain#16]
+c23:[glucocorticoid_receptor_expression#11,within#14,brain#16]
+c24:[{NIL#-1:role#20},determining#22,t_lymphocyte_functionality#23]
+c25:[t_lymphocyte_functionality#23,in#26,depression#27]
+stmt12 = f20 f21 f22 c21 c22 c23 c24 c25
+
+# 26133121	Taken#0 together#1 ,#2 T#3 lymphocyte#4 mechanisms#5 ,#6 which#7 confer#8 susceptibility#9 or#10 resilience#11 to#12 MDD#13 ,#14 are#15 not#16 yet#17 fully#18 understood#19 .#20 
+
+f23:[t_lymphocyte_mechanisms#3,are_not_yet_fully_understood#15,NIL]
+c26:[t_lymphocyte_mechanisms#3,confer_susceptibility_or_resilience_to#8,mdd#13]
+stmt13 = f23 c26
+
+# 26133121	Further#0 insight#1 into#2 the#3 cellular#4 and#5 molecular#6 mechanisms#7 which#8 balance#9 the#10 adaptive#11 and#12 maladaptive#13 roles#14 of#15 T#16 lymphocytes#17 may#18 provide#19 a#20 better#21 understanding#22 of#23 both#24 the#25 neuro-#26 degenerative#27 and#28 -regenerative#29 repair#30 functions#31 as#32 present#33 within#34 the#35 neuroimmune#36 network#37 during#38 depression#39 .#40 
+
+f24:[{cellular_and_molecular_mechanisms#4:further_insight#0},may_provide#18,{neuro-_degenerative#26:better_understanding#21}]
+f25:[{cellular_and_molecular_mechanisms#4:further_insight#0},may_provide#18,{-regenerative_repair_functions#29:better_understanding#21}]
+c27:[{cellular_and_molecular_mechanisms#4:further_insight#0},balance#9,{t_lymphocytes#16:adaptive#11}]
+c28:[{cellular_and_molecular_mechanisms#4:further_insight#0},balance#9,{t_lymphocytes#16:maladaptive_roles#13}]
+c29:[neuro-_degenerative#26,as_present_within#32,neuroimmune_network#36]
+c30:[-regenerative_repair_functions#29,as_present_within#32,neuroimmune_network#36]
+c31:[NIL,during#38,depression#39]
+stmt14 = f24 f25 c27 c28 c29 c30 c31
+
+# 26133121	Furthermore#0 T#1 cells#2 may#3 be#4 important#5 players#6 in#7 restoration#8 of#9 normal#10 behaviour#11 and#12 immune#13 cell#14 homeostasis#15 in#16 depression#17 .#18 
+
+f26:[t_cells#1,may_be#3,{NIL#-1:important_players#5}]
+c32:[{NIL#-1:important_players#5},in#7,{normal_behaviour#10:restoration#8}]
+c33:[{NIL#-1:important_players#5},in#7,immune_cell_homeostasis#13]
+c34:[immune_cell_homeostasis#13,in#16,depression#17]
+stmt15 = f26 c32 c33 c34

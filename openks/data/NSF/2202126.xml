@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>CPS: Medium: Collaborative Research: Demand Response &amp; Workload Management for Data Centers with Increased Renewable Penetration</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>08/31/2022</AwardExpirationDate>
+<AwardTotalIntnAmount>499999.00</AwardTotalIntnAmount>
+<AwardAmount>215805</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>07010000</Code>
+<Directorate>
+<Abbreviation>ENG</Abbreviation>
+<LongName>Directorate For Engineering</LongName>
+</Directorate>
+<Division>
+<Abbreviation>ECCS</Abbreviation>
+<LongName>Div Of Electrical, Commun &amp; Cyber Sys</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Lawrence Goldberg</SignBlockName>
+<PO_EMAI>lgoldber@nsf.gov</PO_EMAI>
+<PO_PHON>7032928339</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>The confluence of two powerful global trends, (1) the rapid growth of cloud computing and data centers with skyrocketing energy consumption, and (2) the accelerating penetration of renewable energy sources, is creating both severe challenges and tremendous opportunities. The fast growing renewable generation puts forth great operational challenges since they will cause large, frequent, and random fluctuations in supply. Data centers, on the other hand, offer large flexible loads in the grid. Leveraging this flexibility, this project will develop fundamental theories and algorithms for sustainable data centers with a dual goal of improving data center energy efficiency and accelerating the integration of renewables in the grid via data center demand response (DR) and workload management.  Specifically, the research findings will shed light on data center demand response while maintaining their performance, which will help data centers to decide how to participate in power market programs. Further, the success of data center demand response will help increase renewable energy integration and reduce the carbon footprint of data centers, contributing to global sustainability. The PIs will leverage fruitful collaboration to eventually bring the research to bear on ongoing industry standardization and development efforts. The PIs teach courses spanning networks, games, smart grid and optimization, and are strongly committed to promoting diversity by providing research opportunities to underrepresented students.  &lt;br/&gt;&lt;br/&gt;Built on the PIs expertise on data centers and the smart grid, this project takes an interdisciplinary approach to develop fundamental theories and algorithms for sustainable data centers. The research tasks are organized under two well-coordinated thrusts, namely agile data center DR and adaptive workload management. The strategies and decisions of data center DR will be made based on the workload management algorithms that balance quality of service and energy efficiency and determine the supply functions. The workload management algorithms will optimize quality of service under the electric load constraints imposed by DR accordingly. This project will make three unique contributions: (1) new market programs with strategic participation of data centers in DR, instead of passive price takers, (2) fundamental understanding of the impacts of power network constraints on data center DR and new distributed algorithms for solving optimal power flow with stochastic renewable supplies, and (3) high-performance dynamic server provisioning and load balancing algorithms for large scale data centers under time-varying and stochastic electric load constraints and on-site renewable generation.</AbstractNarration>
+<MinAmdLetterDate>11/02/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/02/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.041</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2202126</AwardID>
+<Investigator>
+<FirstName>Junshan</FirstName>
+<LastName>Zhang</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Junshan Zhang</PI_FULL_NAME>
+<EmailAddress>junshan.zhang@asu.edu</EmailAddress>
+<PI_PHON>4807277389</PI_PHON>
+<NSF_ID>000261350</NSF_ID>
+<StartDate>11/02/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>University of California-Davis</Name>
+<CityName>Davis</CityName>
+<ZipCode>956186134</ZipCode>
+<PhoneNumber>5307547700</PhoneNumber>
+<StreetAddress>OR/Sponsored Programs</StreetAddress>
+<StreetAddress2><![CDATA[1850 Research Park Dr., Ste 300]]></StreetAddress2>
+<CountryName>United States</CountryName>
+<StateName>California</StateName>
+<StateCode>CA</StateCode>
+<CONGRESSDISTRICT>03</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>CA03</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>047120084</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>UNIVERSITY OF CALIFORNIA, DAVIS</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>071549000</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[University of California-Davis OR/Sponsored Programs]]></Name>
+<CityName>Davis</CityName>
+<StateCode>CA</StateCode>
+<ZipCode>956186134</ZipCode>
+<StreetAddress><![CDATA[1850 Research Park Dr.]]></StreetAddress>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>California</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>03</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>CA03</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>7918</Code>
+<Text>CPS-Cyber-Physical Systems</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>7918</Code>
+<Text>CYBER-PHYSICAL SYSTEMS (CPS)</Text>
+</ProgramReference>
+<FUND_OBLG>2017~215805</FUND_OBLG>
+</Award>
+</rootTag>

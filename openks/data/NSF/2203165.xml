@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>EAGER: Coronas, Hydrogen Oxides, and Ozone Produced in the Atmosphere by Trees under Thunderstorms and by High Voltage Electrical Power Transmission Lines</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>01/01/2022</AwardEffectiveDate>
+<AwardExpirationDate>12/31/2023</AwardExpirationDate>
+<AwardTotalIntnAmount>294554.00</AwardTotalIntnAmount>
+<AwardAmount>294554</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>06020100</Code>
+<Directorate>
+<Abbreviation>GEO</Abbreviation>
+<LongName>Directorate For Geosciences</LongName>
+</Directorate>
+<Division>
+<Abbreviation>AGS</Abbreviation>
+<LongName>Div Atmospheric &amp; Geospace Sciences</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Sylvia Edgerton</SignBlockName>
+<PO_EMAI>sedgerto@nsf.gov</PO_EMAI>
+<PO_PHON>7032928522</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>This EAGER project is focused on an investigation of the potential for atmospheric corona to generate atmospheric oxidants, such as hydroxyl (OH), hydroperoxyl (HO2), and ozone (O3). Coronas occur frequently in the atmosphere near sources of enhanced electric fields, such as high voltage electrical power transmission lines (HVTLs) and thunderstorms. Trees under nearby thunderstorms are a potentially important source of coronas and thus atmospheric oxidants. Atmospheric oxidants can affect the lifetime of air pollutants and greenhouse gases, thereby influencing air quality and climate change. This research could lead to a new understanding of global atmospheric oxidation and its past and future trends.&lt;br/&gt;&lt;br/&gt;The main questions that this research will address are: (1) How many coronas (producing OH, HO2, and O3) are generated as a thunderstorm passes over a forest? (2) How many branches on a tree and what fraction of trees in a forest under a thunderstorm produce coronas? (3) How do coronas vary on each branch with time and environmental conditions? (4) How many coronas (producing OH, HO2, and O3) are generated on high voltage transmission lines (HVTLs) of different voltages (50 kV to 500 kV typical) for different environmental conditions? &lt;br/&gt;&lt;br/&gt;This project meets the qualification for an EAGER award due to its nature as a high-risk, high-reward project. These will be the first measurements that define the amounts and the distributions of coronas and corona-generated OH and HO2 by HVTLs and on trees during thunderstorms. It is possible that there may be no or very little detectable coronas on trees during thunderstorms. In addition, there are several optical, mechanical, electronic, and operational design issues that must be resolved before successful measurements can be made. However, preliminary data suggest a significant probability that this research will be successful in providing key information about corona emissions related to thunderstorms and HVTLs that may lead to important new knowledge about the oxidative capacity of the atmosphere.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>11/04/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/04/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.050</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2203165</AwardID>
+<Investigator>
+<FirstName>William</FirstName>
+<LastName>Brune</LastName>
+<PI_MID_INIT>H</PI_MID_INIT>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>William H Brune</PI_FULL_NAME>
+<EmailAddress>whb2@psu.edu</EmailAddress>
+<PI_PHON>8148653286</PI_PHON>
+<NSF_ID>000366301</NSF_ID>
+<StartDate>11/04/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>Pennsylvania State Univ University Park</Name>
+<CityName>University Park</CityName>
+<ZipCode>168021503</ZipCode>
+<PhoneNumber>8148651372</PhoneNumber>
+<StreetAddress>201 Old Main</StreetAddress>
+<StreetAddress2/>
+<CountryName>United States</CountryName>
+<StateName>Pennsylvania</StateName>
+<StateCode>PA</StateCode>
+<CONGRESSDISTRICT>12</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>PA12</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>003403953</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>PENNSYLVANIA STATE UNIVERSITY, THE</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>003403953</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[Pennsylvania State Univ University Park]]></Name>
+<CityName>University Park</CityName>
+<StateCode>PA</StateCode>
+<ZipCode>168021503</ZipCode>
+<StreetAddress><![CDATA[201 Old Main]]></StreetAddress>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>Pennsylvania</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>12</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>PA12</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>1524</Code>
+<Text>Atmospheric Chemistry</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>7916</Code>
+<Text>EAGER</Text>
+</ProgramReference>
+<FUND_OBLG>2022~294554</FUND_OBLG>
+</Award>
+</rootTag>

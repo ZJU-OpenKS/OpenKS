@@ -1,0 +1,95 @@
+# h1:[mitochondrial_membrane_integrity,contain,heat_shock_proteins]
+# h2:[mitochondrial_membrane_integrity,contain,prohibitin]
+# h3:[mitochondrial_membrane_integrity,contain,nucleophosmin]
+# h4:[nf-kappab-dependent_anti-apoptotic_proteins,contain,bcl2]
+# h5:[nf-kappab-dependent_anti-apoptotic_proteins,contain,c-flips]
+# h6:[nf-kappab-dependent_anti-apoptotic_proteins,contain,xiap]
+# h7:[nf-kappab-dependent_anti-apoptotic_proteins,contain,c-iap2]
+# h8:[second_exon,contain,nf-kappab-related_motif_eskkkve]
+
+# 23364796	The#0 presence#1 of#2 hIV-1#3 tat#4 protein#5 second#6 exon#7 delays#8 fas#9 protein-mediated#10 apoptosis#11 in#12 cD4+#13 t#14 lymphocytes#15 ,#16 a#17 potential#18 mechanism#19 for#20 persistent#21 viral#22 production#23 .#24 
+
+f1:[{hiv-1_tat_protein_second_exon#3:presence#1},delays#8,fas_protein-mediated_apoptosis#9]
+f2:[{hiv-1_tat_protein_second_exon#3:presence#1},delays#8,{persistent_viral_production#21:potential_mechanism#18}]
+c1:[fas_protein-mediated_apoptosis#9,in#12,cd4+_t_lymphocytes#13]
+stmt1 = f1 f2 c1
+
+# 23364796	HIV-1#0 replication#1 is#2 efficiently#3 controlled#4 by#5 the#6 regulator#7 protein#8 Tat#9 and#10 codified#11 by#12 two#13 exons#14 ,#15 although#16 the#17 first#18 exon#19 is#20 sufficient#21 for#22 this#23 process#24 .#25 
+
+f3:[hiv-1_replication#0,is_efficiently_controlled_by#2,regulator_protein_tat#7]
+f4:[hiv-1_replication#0,codified_by#11,two_exons#13]
+f5:[first_exon#18,is_sufficient_for#20,{NIL#-1:process#24}]
+stmt2 = f3 f4 f5
+
+# 23364796	Tat#0 can#1 be#2 released#3 to#4 the#5 extracellular#6 medium#7 ,#8 acting#9 asa#10 soluble#11 pro-apoptotic#12 factor#13 in#14 neighboring#15 cells#16 .#17 
+
+f6:[tat#0,be_released_to#2,extracellular_medium#6]
+f7:[tat#0,acting_asa#9,soluble_pro-apoptotic_factor#11]
+c2:[soluble_pro-apoptotic_factor#11,in#14,neighboring_cells#15]
+stmt3 = f6 f7 c2
+
+# 23364796	However#0 ,#1 HIV-1-infected#2 CD4(+)#3 T#4 lymphocytes#5 show#6 a#7 higher#8 resistance#9 to#10 apoptosis#11 .#12 
+
+f8:[hiv-1-infected_cd4(+)_t_lymphocytes#2,show_a_higher_resistance_to#6,apoptosis#11]
+stmt4 = f8
+
+# 23364796	We#0 observed#1 that#2 the#3 intracellular#4 expression#5 of#6 Tat#7 delayed#8 FasL-mediated#9 apoptosis#10 in#11 both#12 peripheral#13 blood#14 lymphocytes#15 and#16 Jurkat#17 cells#18 ,#19 as#20 it#21 is#22 an#23 essential#24 pathway#25 to#26 control#27 T#28 cell#29 homeostasis#30 during#31 immune#32 activation#33 .#34 
+
+f9:[NIL,observed_that#1,NIL]
+f10:[{tat#7:intracellular_expression#4},delayed#8,fasl-mediated_apoptosis#9]
+f11:[{tat#7:intracellular_expression#4},is_essential_pathway_to_control#22,t_cell_homeostasis#28]
+c3:[fasl-mediated_apoptosis#9,in#11,peripheral_blood_lymphocytes#13]
+c4:[fasl-mediated_apoptosis#9,in#11,jurkat_cells#17]
+c5:[t_cell_homeostasis#28,during#31,immune_activation#32]
+stmt5 = f9 f10 f11 c3 c4 c5
+
+# 23364796	Jurkat-Tat#0 cells#1 showed#2 impairment#3 in#4 the#5 activation#6 of#7 caspase-8#8 ,#9 deficient#10 release#11 of#12 mitochondrial#13 cytochrome#14 c#15 ,#16 and#17 delayed#18 activation#19 of#20 both#21 caspase-9#22 and#23 -3#24 .#25 
+
+f12:[jurkat-tat_cells#0,showed_impairment_in#2,{caspase-8#8:activation#6}]
+f13:[jurkat-tat_cells#0,showed_impairment_in#2,{mitochondrial_cytochrome_c#13:deficient_release#10}]
+f14:[jurkat-tat_cells#0,showed_impairment_in#2,{caspase-9#22:delayed_activation#18}]
+f15:[jurkat-tat_cells#0,showed_impairment_in#2,{-3#24:delayed_activation#18}]
+stmt6 = f12 f13 f14 f15
+
+# 23364796	This#0 protection#1 was#2 due#3 to#4 a#5 profound#6 deregulation#7 of#8 proteins#9 that#10 stabilized#11 the#12 mitochondrial#13 membrane#14 integrity#15 ,#16 such#17 as#18 heat#19 shock#20 proteins#21 ,#22 prohibitin#23 ,#24 or#25 nucleophosmin#26 ,#27 as#28 well#29 as#30 to#31 the#32 up-regulation#33 of#34 NF-kappaB-dependent#35 anti-apoptotic#36 proteins#37 ,#38 such#39 as#40 BCL2#41 ,#42 c-FLIPS#43 ,#44 XIAP#45 ,#46 and#47 C-IAP2#48 .#49 
+
+f16:[protection#1,was_due_to#2,{proteins#9:profound_deregulation#6}]
+f17:[protection#1,as_well_as_to#28,{nf-kappab-dependent_anti-apoptotic_proteins#35:up-regulation#33}]
+f18:[protection#1,as_well_as_to#28,bcl2#41]
+f19:[protection#1,as_well_as_to#28,c-flips#43]
+f20:[protection#1,as_well_as_to#28,xiap#45]
+f21:[protection#1,as_well_as_to#28,c-iap2#48]
+c6:[proteins#9,stabilized#11,mitochondrial_membrane_integrity#13]
+c7:[proteins#9,stabilized#11,heat_shock_proteins#19]
+c8:[proteins#9,stabilized#11,prohibitin#23]
+c9:[proteins#9,stabilized#11,nucleophosmin#26]
+stmt7 = f16 f17 f18 f19 f20 f21 c6 c7 c8 c9
+
+# 23364796	These#0 effects#1 were#2 observed#3 in#4 Jurkat#5 expressing#6 full-length#7 Tat#8 but#9 not#10 in#11 Jurkat#12 expressing#13 the#14 first#15 exon#16 of#17 Tat#18 ,#19 proving#20 that#21 the#22 second#23 exon#24 ,#25 and#26 particularly#27 the#28 NF-kappaB-related#29 motif#30 ESKKKVE#31 ,#32 was#33 necessary#34 for#35 Tat-mediated#36 protection#37 against#38 FasL#39 apoptosis#40 .#41 
+
+f22:[{NIL#-1:effects#1},were_observed_in#2,jurkat#5]
+f23:[{NIL#-1:effects#1},not_in#10,jurkat#12]
+f24:[second_exon#23,was_necessary_for#33,tat-mediated_protection#36]
+f25:[nf-kappab-related_motif_eskkkve#29,was_necessary_for#33,tat-mediated_protection#36]
+c10:[jurkat#5,expressing#6,full-length_tat#7]
+c11:[jurkat#12,expressing#6,{tat#18:first_exon#15}]
+c12:[tat-mediated_protection#36,against#38,fasl_apoptosis#39]
+stmt8 = f22 f23 f24 f25 c10 c11 c12
+
+# 23364796	Accordingly#0 ,#1 the#2 protection#3 exerted#4 by#5 Tat#6 was#7 independent#8 of#9 its#10 function#11 as#12 a#13 regulator#14 of#15 both#16 viral#17 transcription#18 and#19 elongation#20 .#21 
+
+f26:[protection#3,was_independent_of#7,{protection#3:function#11}]
+f27:[protection#3,as#12,{viral_transcription#17:regulator#14}]
+f28:[protection#3,as#12,{elongation#20:regulator#14}]
+c13:[protection#3,exerted_by#4,tat#6]
+stmt9 = f26 f27 f28 c13
+
+# 23364796	Moreover#0 ,#1 these#2 data#3 proved#4 that#5 HIV-1#6 could#7 have#8 developed#9 strategies#10 to#11 delay#12 FasL-mediated#13 apoptosis#14 in#15 infected#16 CD4(+)#17 T#18 lymphocytes#19 through#20 the#21 expression#22 of#23 Tat#24 ,#25 thus#26 favoring#27 the#28 persistent#29 replication#30 of#31 HIV-1#32 in#33 infected#34 T#35 cells#36 .#37 
+
+f29:[{NIL#-1:data#3},proved_that#4,NIL]
+f30:[hiv-1#6,could_have_developed_strategies_to_delay#7,fasl-mediated_apoptosis#13]
+f31:[hiv-1#6,favoring#27,{hiv-1#32:persistent_replication#29}]
+c14:[fasl-mediated_apoptosis#13,in#15,infected_cd4(+)_t_lymphocytes#16]
+c15:[infected_cd4(+)_t_lymphocytes#16,through#20,{tat#24:expression#22}]
+c16:[{hiv-1#32:persistent_replication#29},in#33,infected_t_cells#34]
+stmt10 = f29 f30 f31 c14 c15 c16

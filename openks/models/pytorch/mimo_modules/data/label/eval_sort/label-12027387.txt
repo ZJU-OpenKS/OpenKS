@@ -1,0 +1,91 @@
+# 12027387	calcium#0 influx#1 into#2 dendrites#3 of#4 the#5 leech#6 retzius#7 neuron#8 evoked#9 by#10 5-hydroxytryptamine#11 .#12 
+
+c1:[calcium_influx#0,into#2,{leech_retzius_neuron#6:dendrites#3}]
+c2:[{leech_retzius_neuron#6:dendrites#3},evoked_by#9,5-hydroxytryptamine#11]
+stmt1 = c1 c2
+
+# 12027387	5-hydroxytryptamine#0 is#1 a#2 ubiquitous#3 neurotransmitter#4 and#5 neuromodulator#6 that#7 affects#8 neural#9 circuits#10 and#11 behaviours#12 in#13 vertebrates#14 and#15 invertebrates#16 .#17 
+
+f1:[5-hydroxytryptamine#0,is#1,ubiquitous_neurotransmitter#3]
+f2:[5-hydroxytryptamine#0,is#1,neuromodulator#6]
+c3:[neuromodulator#6,affects#8,neural_circuits#9]
+c4:[neuromodulator#6,affects#8,behaviours#12]
+c5:[behaviours#12,in#13,vertebrates#14]
+c6:[behaviours#12,in#13,invertebrates#16]
+stmt2 = f1 f2 c3 c4 c5 c6
+
+# 12027387	in#0 the#1 present#2 study#3 ,#4 we#5 have#6 investigated#7 5-ht-induced#8 ca(2+)#9 transients#10 in#11 subcellular#12 compartments#13 of#14 retzius#15 neurons#16 in#17 the#18 leech#19 central#20 nervous#21 system#22 using#23 confocal#24 laser#25 scanning#26 microscopy#27 ,#28 and#29 studied#30 the#31 effect#32 of#33 5-ht#34 on#35 the#36 electrical#37 coupling#38 between#39 the#40 retzius#41 neurons#42 .#43 
+
+f3:[NIL,have_investigated#6,5-ht-induced_ca(2+)_transients#8]
+f4:[NIL,studied#30,{5-ht#34:effect#32}]
+c7:[NIL,in#0,{NIL#-1:present_study#2}]
+c8:[5-ht-induced_ca(2+)_transients#8,in#11,{retzius_neurons#15:subcellular_compartments#12}]
+c9:[5-ht-induced_ca(2+)_transients#8,in#17,leech_central_nervous_system#19]
+c10:[leech_central_nervous_system#19,using#23,confocal_laser_scanning_microscopy#24]
+c11:[{5-ht#34:effect#32},on#35,electrical_coupling#37]
+c12:[electrical_coupling#37,between#39,retzius_neurons#41]
+stmt3 = f3 f4 c7 c8 c9 c10 c11 c12
+
+# 12027387	bath#0 application#1 of#2 5-ht#3 induced#4 a#5 ca(2+)#6 transient#7 in#8 axon#9 ,#10 dendrites#11 and#12 cell#13 body#14 of#15 the#16 retzius#17 neuron#18 .#19 
+
+f5:[{5-ht#3:bath_application#0},induced#4,ca(2+)_transient#6]
+f6:[{5-ht#3:bath_application#0},induced#4,dendrites#11]
+f7:[{5-ht#3:bath_application#0},induced#4,{retzius_neuron#17:cell_body#13}]
+c13:[ca(2+)_transient#6,in#8,axon#9]
+stmt4 = f5 f6 f7 c13
+
+# 12027387	this#0 ca(2+)#1 transient#2 was#3 significantly#4 faster#5 and#6 larger#7 in#8 dendrites#9 than#10 in#11 axon#12 and#13 cell#14 body#15 ,#16 and#17 was#18 half-maximal#19 at#20 a#21 5-ht#22 concentration#23 of#24 5-12mm#25 .#26 
+
+f8:[ca(2+)_transient#1,was_significantly_faster_and_larger_in#3,dendrites#9]
+f9:[ca(2+)_transient#1,was_half-maximal_at#18,{5-ht_concentration#22:5-12mm#25}]
+c14:[dendrites#9,than#10,axon#12]
+c15:[dendrites#9,than#10,cell_body#14]
+stmt5 = f8 f9 c14 c15
+
+# 12027387	the#0 ca(2+)#1 transient#2 was#3 suppressed#4 in#5 the#6 absence#7 of#8 extracellular#9 ca(2+)#10 and#11 by#12 methysergide#13 ,#14 a#15 non-specific#16 antagonist#17 of#18 metabotropic#19 5-ht#20 receptors#21 ,#22 and#23 was#24 strongly#25 reduced#26 by#27 bath#28 application#29 of#30 the#31 ca(2+)#32 channel#33 blocker#34 co(2+)#35 .#36 
+
+f10:[ca(2+)_transient#1,was_suppressed_in#3,{extracellular_ca(2+)#9:absence#7}]
+f11:[ca(2+)_transient#1,was_strongly_reduced_by#24,{ca(2+)_channel_blocker_co(2+)#32:bath_application#28}]
+f12:[methysergide#13,NIL#-1,{metabotropic_5-ht_receptors#19:non-specific_antagonist#16}]
+c16:[ca(2+)_transient#1,by#12,methysergide#13]
+stmt6 = f10 f11 f12 c16
+ 
+# 12027387	injection#0 of#1 the#2 non-hydrolysable#3 gtp#4 analogue#5 gtpgammas#6 increased#7 and#8 prolonged#9 the#10 dendritic#11 5-ht-induced#12 ca(2+)#13 transient#14 .#15 
+
+f13:[{non-hydrolysable_gtp_analogue_gtpgammas#3:injection#0},increased#7,dendritic_5-ht-induced_ca(2+)_transient#11]
+f14:[{non-hydrolysable_gtp_analogue_gtpgammas#3:injection#0},prolonged#9,dendritic_5-ht-induced_ca(2+)_transient#11]
+stmt7 = f13 f14
+
+# 12027387	the#0 non-selective#1 protein#2 kinase#3 inhibitor#4 h7#5 and#6 the#7 adenylate#8 cyclase#9 inhibitor#10 sq22536#11 did#12 not#13 affect#14 the#15 ca(2+)#16 transient#17 ,#18 and#19 the#20 membrane-permeable#21 camp#22 analogue#23 dibutyryl-camp#24 did#25 not#26 mimic#27 the#28 effect#29 of#30 5-ht#31 application#32 .#33 
+
+f15:[non-selective_protein_kinase_inhibitor_h7#1,did_not_affect#12,ca(2+)_transient#16]
+f16:[adenylate_cyclase_inhibitor_sq22536#8,did_not_affect#12,ca(2+)_transient#16]
+f17:[membrane-permeable_camp_analogue_dibutyryl-camp#21,did_not_mimic#25,{5-ht_application#31:effect#29}]
+stmt8 = f15 f16 f17
+
+# 12027387	5-ht#0 reduced#1 the#2 apparent#3 electrical#4 coupling#5 between#6 the#7 two#8 retzius#9 neurons#10 ,#11 whereas#12 suppression#13 of#14 the#15 ca(2+)#16 influx#17 by#18 removal#19 of#20 external#21 ca(2+)#22 improved#23 the#24 transmission#25 of#26 action#27 potentials#28 at#29 the#30 electrical#31 synapses#32 which#33 are#34 located#35 between#36 the#37 dendrites#38 of#39 the#40 adjacent#41 retzius#42 neurons#43 .#44 
+
+f18:[5-ht#0,reduced#1,apparent_electrical_coupling#3]
+f19:[{ca(2+)_influx#16:suppression#13},improved#23,{action_potentials#27:transmission#25}]
+c17:[apparent_electrical_coupling#3,between#6,retzius_neurons#9]
+c18:[{ca(2+)_influx#16:suppression#13},by#18,{external_ca(2+)#21:removal#19}]
+c19:[{action_potentials#27:transmission#25},at#29,electrical_synapses#31]
+c20:[electrical_synapses#31,are_located_between#34,{adjacent_retzius_neurons#41:dendrites#38}]
+stmt9 = f18 f19 c17 c18 c19 c20
+
+# 12027387	the#0 results#1 indicate#2 that#3 5-ht#4 induces#5 a#6 ca(2+)#7 influx#8 through#9 calcium#10 channels#11 located#12 primarily#13 in#14 the#15 dendrites#16 ,#17 and#18 presumably#19 activated#20 by#21 a#22 g#23 protein-coupled#24 5-ht#25 receptor#26 .#27 
+
+f20:[{NIL#-1:results#1},indicate_that#2,NIL]
+f21:[5-ht#4,induces#5,ca(2+)_influx#7]
+c21:[ca(2+)_influx#7,through#9,calcium_channels#10]
+c22:[calcium_channels#10,located_primarily_in#12,dendrites#16]
+c23:[calcium_channels#10,presumably_activated_by#19,g_protein-coupled_5-ht_receptor#23]
+stmt10 = f20 f21 c21 c22 c23
+
+# 12027387	the#0 dendritic#1 ca(2+)#2 increase#3 appears#4 to#5 modulate#6 the#7 excitability#8 of#9 ,#10 and#11 the#12 synchronization#13 between#14 ,#15 the#16 two#17 retzius#18 neurons#19 .#20
+
+f22:[dendritic_ca(2+)_increase#1,appears_to_modulate#4,{NIL#-1:excitability#8}]
+f23:[dendritic_ca(2+)_increase#1,appears_to_modulate#4,synchronization#13]
+c24:[synchronization#13,between#14,{retzius_neurons#18:two#17}]
+stmt11 = f22 f23 c24
+

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>Collaborative Research: Extreme-scale Ready High-order Methods for Astrophysical and Laboratory Turbulence</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>11/15/2021</AwardEffectiveDate>
+<AwardExpirationDate>03/31/2024</AwardExpirationDate>
+<AwardTotalIntnAmount>61366.00</AwardTotalIntnAmount>
+<AwardAmount>49904</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>03020000</Code>
+<Directorate>
+<Abbreviation>MPS</Abbreviation>
+<LongName>Direct For Mathematical &amp; Physical Scien</LongName>
+</Directorate>
+<Division>
+<Abbreviation>AST</Abbreviation>
+<LongName>Division Of Astronomical Sciences</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Nigel Sharp</SignBlockName>
+<PO_EMAI>nsharp@nsf.gov</PO_EMAI>
+<PO_PHON>7032924905</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>Astrophysical phenomena inherently involve multi-physics and multi-scales that are nonlinearly coupled.  The mathematical accuracy and efficiency of the computational tools used to test theoretical models hugely impact the scientific outcomes.  The astrophysics community has thus long focused on developing computationally accurate numerical algorithms that give improved solution accuracy, stability, and efficiency.  This project tackles the challenge of developing new approaches to address these problems, and incorporating these methods in the FLASH community code in order to reach a large audience in the astrophysics community.  The work lies at the nexus of applied and computational mathematics, statistical Gaussian Process (GP) data predictions, and astrophysics.  Involvement in NSF-supported outreach will help to educate under-represented community college students in computational astrophysics.  Training young scientists in astrophysical and laboratory turbulence using validated simulations also helps to meet a critical national need.&lt;br/&gt;&lt;br/&gt;This study will develop high-order accurate, novel algorithms with only modest complexity, using a new high-order GP spatial reconstruction approach and a novel single-step high-order temporal integration method.  This powerful predictive tool will run on massively parallel high-performance architectures.  The study involves, firstly, using the novel GP approach to overcome the second-order bottleneck in most finite-volume shock-capturing astrophysics codes.  The GP algorithms provide a simple mathematical framework for computing highly accurate volume-averaged versus pointwise quantities, and multidimensional spatial reconstructions.  The second important development is an efficient high-order temporal integration method in adaptive mesh refinement grid configurations.  This requires a single-step time update at a single quadrature point per cell face, which will provide the most efficient algorithmic framework in extreme-scale parallel simulations.  Finally, comparing simulation results based on solution accuracy, errors, and computational performance for key astrophysical flow problems, including astrophysical and laboratory turbulence, will demonstrate the impact and benefit of these advances.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>11/05/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/05/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.049</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2204668</AwardID>
+<Investigator>
+<FirstName>Petros</FirstName>
+<LastName>Tzeferacos</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Petros Tzeferacos</PI_FULL_NAME>
+<EmailAddress>p.tzeferacos@rochester.edu</EmailAddress>
+<PI_PHON>5852756751</PI_PHON>
+<NSF_ID>000656470</NSF_ID>
+<StartDate>11/05/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>University of Rochester</Name>
+<CityName>Rochester</CityName>
+<ZipCode>146270140</ZipCode>
+<PhoneNumber>5852754031</PhoneNumber>
+<StreetAddress>518 HYLAN, RC BOX 270140</StreetAddress>
+<StreetAddress2/>
+<CountryName>United States</CountryName>
+<StateName>New York</StateName>
+<StateCode>NY</StateCode>
+<CONGRESSDISTRICT>25</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>NY25</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>041294109</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>UNIVERSITY OF ROCHESTER</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>041294109</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[University of Rochester]]></Name>
+<CityName>Rochester</CityName>
+<StateCode>NY</StateCode>
+<ZipCode>146270171</ZipCode>
+<StreetAddress><![CDATA[370 Bausch & Lomb]]></StreetAddress>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>New York</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>25</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>NY25</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>1217</Code>
+<Text>EXTRAGALACTIC ASTRON &amp; COSMOLO</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>1206</Code>
+<Text>THEORETICAL &amp; COMPUTATIONAL ASTROPHYSICS</Text>
+</ProgramReference>
+<FUND_OBLG>2019~49904</FUND_OBLG>
+</Award>
+</rootTag>

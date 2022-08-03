@@ -1,0 +1,91 @@
+# 15498271	[#0 the#1 significance#2 of#3 cell#4 cycle#5 distribution#6 and#7 expression#8 of#9 cell#10 cycle#11 regulatory#12 proteins#13 in#14 t#15 lymphocytes#16 in#17 patients#18 with#19 acute#20 asthma#21 attack]#22 .#23 
+
+c1:[{cell_cycle_distribution#4:significance#2},in#14,t_lymphocytes#15]
+c2:[{cell_cycle_regulatory_proteins#10:expression#8},in#14,t_lymphocytes#15]
+c3:[t_lymphocytes#15,in#17,patients#18]
+c4:[patients#18,with#19,acute_asthma_attack]#20]
+stmt1 = c1 c2 c3 c4
+
+# 15498271	to#0 explore#1 the#2 molecular#3 regulatory#4 mechanisms#5 of#6 excessive#7 t#8 lymphocyte#9 activation#10 and#11 proliferation#12 in#13 patients#14 with#15 asthma#16 attack#17 by#18 studying#19 the#20 cell#21 cycle#22 distribution#23 and#24 the#25 expression#26 of#27 cell#28 cycle#29 regulatory#30 proteins#31 in#32 peripheral#33 blood#34 tlymphocytes#35 .#36 
+
+f1:[NIL,to_explore#0,{excessive_t_lymphocyte_activation#7:molecular_regulatory_mechanisms#3}]
+f2:[NIL,to_explore#0,proliferation#12]
+c5:[proliferation#12,in#13,patients#14]
+c6:[proliferation#12,with#15,asthma#16]
+c7:[asthma#16,attack_by_studying#17,{cell_cycle_regulatory_proteins#28:cell_cycle_distribution#21}]
+c8:[asthma#16,attack_by_studying#17,{cell_cycle_regulatory_proteins#28:expression#26}]
+c9:[{cell_cycle_regulatory_proteins#28:expression#26},in#32,peripheral_blood_tlymphocytes#33]
+stmt2 = f1 f2 c5 c6 c7 c8 c9
+
+# 15498271	dna#0 of#1 t#2 lymphocytes#3 from#4 30#5 patients#6 with#7 asthma#8 attack#9 and#10 20#11 normal#12 subjects#13 was#14 stained#15 with#16 propidium#17 iodide#18 ,#19 and#20 the#21 cell#22 cycle#23 distribution#24 was#25 analyzed#26 by#27 flow#28 cytometry#29 .#30 
+
+f3:[{t_lymphocytes#2:dna#0},was_stained_with#14,propidium_iodide#17]
+f4:[cell_cycle_distribution#22,was_analyzed_by#25,flow_cytometry#28]
+c10:[{t_lymphocytes#2:dna#0},from#4,{patients#6:30#5}]
+c11:[{patients#6:30#5},with#7,asthma_attack#8]
+c12:[{patients#6:30#5},with#7,normal_subjects#12]
+stmt3 = f3 f4 c10 c11 c12
+
+# 15498271	by#0 indirect#1 immunofluorescence#2 ,#3 the#4 expressions#5 of#6 p27kipl#7 ,#8 cyclin#9 e#10 ,#11 cyclin#12 a#13 ,#14 and#15 cyclin#16 b#17 in#18 t#19 lymphocytes#20 were#21 measured#22 by#23 flow#24 cytometry#25 .#26 
+
+f5:[NIL,by#0,indirect_immunofluorescence#1]
+f6:[{p27kipl#7:expressions#5},were_measured_by#21,flow_cytometry#24]
+f7:[{cyclin_e#9:expressions#5},were_measured_by#21,flow_cytometry#24]
+f8:[{cyclin_a#12:expressions#5},were_measured_by#21,flow_cytometry#24]
+f9:[{cyclin_b#16:expressions#5},were_measured_by#21,flow_cytometry#24]
+c13:[{p27kipl#7:expressions#5},in#18,t_lymphocytes#19]
+c14:[{cyclin_e#9:expressions#5},in#18,t_lymphocytes#19]
+c15:[{cyclin_a#12:expressions#5},in#18,t_lymphocytes#19]
+c16:[{cyclin_b#16:expressions#5},in#18,t_lymphocytes#19]
+stmt4 = f5 f6 f7 f8 f9 c13 c14 c15 c16
+
+# 15498271	the#0 difference#1 between#2 patients#3 with#4 asthma#5 attack#6 and#7 normal#8 subjects#9 wasanalyzed#10 .#11 
+
+f10:[{NIL#-1:difference#1},wasanalyzed#10,NIL]
+c17:[{NIL#-1:difference#1},between#2,patients#3]
+c18:[{NIL#-1:difference#1},between#2,normal_subjects#8]
+c19:[patients#3,with#4,asthma_attack#5]
+stmt5 = f10 c17 c18 c19
+
+# 15498271	the#0 percentage#1 of#2 t#3 lymphocytes#4 in#5 the#6 s#7 phase#8 and#9 s#10 +#11 g(2)#12 /#13 m#14 phase#15 was#16 
+
+f11:[{t_lymphocytes#3:percentage#1},was#16,NIL]
+c20:[{t_lymphocytes#3:percentage#1},in#5,s_phase#7]
+c21:[{t_lymphocytes#3:percentage#1},in#5,s_+_g(2)_/_m_phase#10]
+stmt6 = f11 c20 c21
+
+# 15498271	the#0 percentage#1 of#2 t#3 lymphocytes#4 in#5 the#6 g(0)#7 /#8 g(1)#9 phase#10 in#11 the#12 asthma#13 group#14 was#15 
+
+f12:[{t_lymphocytes#3:percentage#1},was#15,NIL]
+c22:[{t_lymphocytes#3:percentage#1},in#5,g(0)_/_g(1)_phase#7]
+c23:[g(0)_/_g(1)_phase#7,in#11,asthma_group#13]
+stmt7 = f12 c22 c23
+
+# 15498271	the#0 expression#1 of#2 p27kipl#3 in#4 t#5 lymphocytes#6 of#7 the#8 asthma#9 group#10 
+
+c24:[{p27kipl#3:expression#1},in#4,{asthma_group#9:t_lymphocytes#5}]
+stmt8 = c24
+
+# 15498271	the#0 expression#1 of#2 cyclin#3 e#4 ,#5 cyclin#6 a#7 ,#8 and#9 cyclin#10 b#11 in#12 t#13 lymphocytes#14 of#15 the#16 asthma#17 group#18 [#19 (25#20 +/-#21 24)%#22 ,#23 .#24 
+
+c25:[{cyclin_e#3:expression#1},in#12,{asthma_group#17:t_lymphocytes#13}]
+c26:[{cyclin_a#6:expression#1},in#12,{asthma_group#17:t_lymphocytes#13}]
+c27:[{cyclin_b#10:expression#1},in#12,{asthma_group#17:t_lymphocytes#13}]
+stmt9 = c25 c26 c27
+
+# 15498271	the#0 abnormal#1 expression#2 of#3 ccrp#4 in#5 t#6 lymphocytes#7 was#8 related#9 to#10 the#11 excessive#12 activation#13 and#14 proliferation#15 of#16 t#17 lymphocytes#18 in#19 patients#20 with#21 asthma#22 attack#23 .#24 
+
+f13:[{ccrp#4:abnormal_expression#1},was_related_to_#8,{t_lymphocytes#17:excessive_activation#12}]
+f14:[{ccrp#4:abnormal_expression#1},was_related_to_#8,{t_lymphocytes#17:proliferation#15}]
+c28:[{ccrp#4:abnormal_expression#1},in#5,t_lymphocytes#6]
+c29:[{t_lymphocytes#17:excessive_activation#12},in#19,patients#20]
+c30:[{t_lymphocytes#17:proliferation#15},in#19,patients#20]
+c31:[patients#20,with#21,asthma_attack#22]
+stmt10 = f13 f14 c28 c29 c30 c31
+
+# 15498271	a#0 new#1 approach#2 to#3 asthma#4 therapy#5 may#6 be#7 developed#8 with#9 ccrp#10 as#11 a#12 regulatory#13 target#14 .#15
+
+f15:[new_approach#1,may_be_developed#6,ccrp#10]
+c32:[new_approach#1,to#3,asthma_therapy#4]
+c33:[ccrp#10,as#11,regulatory_target#13]
+stmt11 = f15 c32 c33

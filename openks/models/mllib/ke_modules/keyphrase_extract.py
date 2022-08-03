@@ -13,6 +13,7 @@ import copy
 
 from ...model import MLModel
 from .topic_similarity_rank import SimilarityRank
+from .utils import embedding_update
 
 DIR = os.path.dirname(__file__)
 logging.basicConfig(level=logging.INFO)
@@ -242,6 +243,9 @@ class TopicRake(MLModel):
     '''
     def __init__(self, args):
         self.rake = Rake(args)
+        if args['use_finetune']:
+            if not os.path.exists(args['finetuned']):
+                embedding_update.update_word_embedding(args)
         self.similarRank = SimilarityRank(args)
         self.rank_alg = args['rank']
         self.params = args['params']

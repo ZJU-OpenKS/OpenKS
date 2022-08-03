@@ -17,13 +17,25 @@ class TransE(TorchModel):
 		self.hidden_size = kwargs['hidden_size']
 		self.margin = kwargs['margin']
 		self.norm = 1
-		self.epsilon = kwargs['epsilon']
-		self.gamma = kwargs['gamma']
+		if 'epsilon' in kwargs:
+			self.epsilon = kwargs['epsilon']
+		else:
+			self.epsilon = 2.0
+		if 'gamma' in kwargs:
+			self.gamma = kwargs['gamma']
+		else:
+			self.gamma = 24.0
+		if 'double_entity_embedding' in kwargs and 'double_relation_embedding' in kwargs:
+			self.double_entity_embedding = kwargs['double_entity_embedding']
+			self.double_relation_embedding = kwargs['double_relation_embedding']
+		else:
+			self.double_entity_embedding = False
+			self.double_relation_embedding = False
 
 		self.uniform_range = (self.epsilon + self.gamma) / self.hidden_size
 
-		self.entity_dim = self.hidden_size * 2 if kwargs['double_entity_embedding'] else self.hidden_size
-		self.relation_dim = self.hidden_size * 2 if kwargs['double_relation_embedding'] else self.hidden_size
+		self.entity_dim = self.hidden_size * 2 if self.double_entity_embedding else self.hidden_size
+		self.relation_dim = self.hidden_size * 2 if self.double_relation_embedding else self.hidden_size
 
 		self.entity_embedding = nn.Parameter(torch.zeros(self.num_entity, self.entity_dim))
 		nn.init.uniform_(

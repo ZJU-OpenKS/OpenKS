@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>National Credit Union Administration - IAA</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/14/2021</AwardEffectiveDate>
+<AwardExpirationDate>10/14/2022</AwardExpirationDate>
+<AwardTotalIntnAmount>23936.00</AwardTotalIntnAmount>
+<AwardAmount>23936</AwardAmount>
+<AwardInstrument>
+<Value>Contract Interagency Agreement</Value>
+</AwardInstrument>
+<Organization>
+<Code>02060000</Code>
+<Directorate>
+<Abbreviation>IRM</Abbreviation>
+<LongName>Office Of Information &amp; Resource Mgmt</LongName>
+</Directorate>
+<Division>
+<Abbreviation>DAS</Abbreviation>
+<LongName>Division Of Administrative Services</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Antonio Bermudez</SignBlockName>
+<PO_EMAI>abermude@nsf.gov</PO_EMAI>
+<PO_PHON>7032927844</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration/>
+<MinAmdLetterDate>11/09/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/09/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM/>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2202164</AwardID>
+<Investigator>
+<FirstName>Jerene</FirstName>
+<LastName>Shaheed</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Jerene Shaheed</PI_FULL_NAME>
+<EmailAddress/>
+<PI_PHON>7032927562</PI_PHON>
+<NSF_ID>000697291</NSF_ID>
+<StartDate>11/09/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>National Credit Union Administration</Name>
+<CityName>Alexandria</CityName>
+<ZipCode>223143428</ZipCode>
+<PhoneNumber/>
+<StreetAddress>1775 Duke Street</StreetAddress>
+<StreetAddress2/>
+<CountryName>United States</CountryName>
+<StateName>Virginia</StateName>
+<StateCode>VA</StateCode>
+<CONGRESSDISTRICT>08</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>VA08</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>111111111</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME/>
+<ORG_PRNT_DUNS_NUM/>
+</Institution>
+<Performance_Institution>
+<Name/>
+<CityName/>
+<StateCode/>
+<ZipCode/>
+<StreetAddress/>
+<CountryCode/>
+<CountryName>RI REQUIRED</CountryName>
+<StateName>RI REQUIRED</StateName>
+<CountryFlag>0</CountryFlag>
+<CONGRESSDISTRICT/>
+<CONGRESS_DISTRICT_PERF>""</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>0601</Code>
+<Text/>
+</ProgramElement>
+<FUND_OBLG>2022~23936</FUND_OBLG>
+</Award>
+</rootTag>

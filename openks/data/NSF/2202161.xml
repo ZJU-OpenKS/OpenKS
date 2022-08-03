@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>III: Medium: Collaborative Research: Self-Supervised Recommender System Learning with Application Specific Adaption</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/15/2021</AwardEffectiveDate>
+<AwardExpirationDate>09/30/2025</AwardExpirationDate>
+<AwardTotalIntnAmount>600000.00</AwardTotalIntnAmount>
+<AwardAmount>600000</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>05020000</Code>
+<Directorate>
+<Abbreviation>CSE</Abbreviation>
+<LongName>Direct For Computer &amp; Info Scie &amp; Enginr</LongName>
+</Directorate>
+<Division>
+<Abbreviation>IIS</Abbreviation>
+<LongName>Div Of Information &amp; Intelligent Systems</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Sylvia Spengler</SignBlockName>
+<PO_EMAI>sspengle@nsf.gov</PO_EMAI>
+<PO_PHON>7032927347</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>In the era of big data, to effectively help people get their desired information, recommender systems are widely adopted by various online platforms. Recommender systems aim to provide users with high-quality recommendation services. In addition to e-commerce, other potential applications include precision medicine to recommend targeted patient treatment, friend recommendation in online social networks, decision support, e-learning, etc. However, various data quality problems and model learning challenges will create great obstacles for recommender system deployments in the real world. To address these challenges, this project explores to develop new techniques for learning recommender systems that don’t rely on supervision information like manual label or annotation, which can be costly to obtain. This is referred to as the recommender system self-supervised learning, which provides a promising learning paradigm that can discover the supervision signals from the data itself without the need of costly manual annotation. As an effective technique, self-supervised learning will enable recommender systems to work well in a variety of challenging application scenarios to provide people with high-quality and fair recommendation services for almost all the existing online platforms mentioned above. This project focuses on developing a general recommender system framework with self-supervised learning, and investigating its various extensions. &lt;br/&gt;&lt;br/&gt;This project will develop unified and extensible principles, methods, and technologies for recommender system learning, and study the general applicability and benefit of recommender system self-supervised learning. The recommender system tasks studied in this project are extremely challenging due to many reasons: (1) lack of supervision information, which renders many existing recommendation models to be ineffective; (2) inherent data biases, which can lead to unfair treatment to the minority user groups; (3) the cold-start problem, which concerns on the issue of inferences for subjects with little collected information; and (4) recommender system dynamics, which reflects the changing characteristics or behaviors of the users. This project will these challenges on learning representations for recommender systems with a novel and extensible graph neural network model. Based on the state-of-the-art self-supervised learning techniques, e.g., data augmentation which aims to significantly increase the diversity of data available for training models without actually collecting new data, and contrastive learning which intends to learn succinct data representations such that similar samples stay close to each other, while dissimilar ones are far apart, the proposed model can be pre-trained with self-supervised learning, which will be further transferred to address the problems studied in this project via effective fine-tuning. Specifically, this project will focus on studying four main tasks: (1) fairness-oriented recommender systems pre-training and fine-tuning, (2) cold-start recommender system learning via data augmentation; (3) inter-platform recommender system contrastive learning; and (4) lifelong dynamic recommender system learning via self-supervised model tuning. In terms of broader impacts, besides the recommendation tasks as investigated in this project, advances in such research studies have transformative potentials for fundamental development in reforming the current and future AI model fairness, trustworthiness, and lifelong learning studies in broad applications.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>10/26/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>10/26/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.070</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2202161</AwardID>
+<Investigator>
+<FirstName>Jiawei</FirstName>
+<LastName>Zhang</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Jiawei Zhang</PI_FULL_NAME>
+<EmailAddress>jiwzhang@ucdavis.edu</EmailAddress>
+<PI_PHON>5307527004</PI_PHON>
+<NSF_ID>000755347</NSF_ID>
+<StartDate>10/26/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>University of California-Davis</Name>
+<CityName>Davis</CityName>
+<ZipCode>956186134</ZipCode>
+<PhoneNumber>5307547700</PhoneNumber>
+<StreetAddress>OR/Sponsored Programs</StreetAddress>
+<StreetAddress2><![CDATA[1850 Research Park Dr., Ste 300]]></StreetAddress2>
+<CountryName>United States</CountryName>
+<StateName>California</StateName>
+<StateCode>CA</StateCode>
+<CONGRESSDISTRICT>03</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>CA03</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>047120084</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>UNIVERSITY OF CALIFORNIA, DAVIS</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>071549000</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[University of California-Davis]]></Name>
+<CityName/>
+<StateCode>CA</StateCode>
+<ZipCode>956186134</ZipCode>
+<StreetAddress/>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>California</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>03</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>CA03</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>7364</Code>
+<Text>Info Integration &amp; Informatics</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>7364</Code>
+<Text>INFO INTEGRATION &amp; INFORMATICS</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>7924</Code>
+<Text>MEDIUM PROJECT</Text>
+</ProgramReference>
+<FUND_OBLG>2021~600000</FUND_OBLG>
+</Award>
+</rootTag>

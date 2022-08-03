@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>Deeper Understanding of Factors that Fine-tune Redox Potentials of Metalloproteins</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>05/31/2022</AwardExpirationDate>
+<AwardTotalIntnAmount>680000.00</AwardTotalIntnAmount>
+<AwardAmount>29317</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>03090000</Code>
+<Directorate>
+<Abbreviation>MPS</Abbreviation>
+<LongName>Direct For Mathematical &amp; Physical Scien</LongName>
+</Directorate>
+<Division>
+<Abbreviation>CHE</Abbreviation>
+<LongName>Division Of Chemistry</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Pui Ho</SignBlockName>
+<PO_EMAI>puiho@nsf.gov</PO_EMAI>
+<PO_PHON>7032920000</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>With this award, the Chemistry of Life Processes Program in the Chemistry Division is funding Dr. Yi Lu from the University of Illinois at Urbana-Champaign (UIUC) to investigate the factors that fine-tune the energies of metal-containing proteins (metalloproteins). Many chemical and biological processes involve  reactions where electrons are transferred from one molecule to another.  Nature is known to use metalloproteins to control these electron transfers so that they occur within specific pairs of molecules. This research synthesizes mimics of biological metalloproteins that have use in very specific electron transfers. These metalloproteins are also used in catalytic processes involved in solar energy conversion and fuel cells. The research projects educate graduate and undergraduate students as the next generation of scientists. The knowledge and skills acquired from multiple fields are preparing students to tackle difficult problems facing science and society. The Yi group includes students from diverse demographics. The UIUC campus infrastructure is enhanced by developing lecture and lab modules to integrate the multidisciplinary research results of the project into graduate and undergraduate courses.&lt;br/&gt;&lt;br/&gt;This project seeks an enhanced quantitative understanding of the factors that fine-tune metalloprotein redox potentials (Eº´) and applies the knowledge gained to design systems with modulated functional properties.  Many studies have identified which factors are important for tuning the Eº´. Much less information is available on how these features quantitatively contribute to Eº´ tuning.  To achieve this goal, unnatural amino acids are engineered in both primary and secondary coordination spheres of the metal to isolate one factor (e.g., steric) from another (e.g., electronic). In this approach, Eº´ tuning becomes more predictable and quantitative. Previously, Professor Yi's lab demonstrated that tuning of a type 1 copper azurin is sufficient to span the entire 2 volt physiological range. In order to advance knowledge beyond cupredoxins, loop-directed mutagenesis is used to incorporate a type 1 copper center into ephrin-B2, a protein that does not contain a redox center. Redox tuning and secondary coordination effects through mutations are used to control reversible Sulfur-nitrosylation catalyzed by a red copper azurin. The success of the project is assessed by a) the range of Eº´ achieved through natural and unnatural amino acid incorporation; b) the predictability of Eº´ resulting from mutations; and c) the degree of control achieved in reversible NO binding.</AbstractNarration>
+<MinAmdLetterDate>10/22/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>10/22/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.049</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2201259</AwardID>
+<Investigator>
+<FirstName>Yi</FirstName>
+<LastName>Lu</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Yi Lu</PI_FULL_NAME>
+<EmailAddress>yi-lu@illinois.edu</EmailAddress>
+<PI_PHON>2173332619</PI_PHON>
+<NSF_ID>000445840</NSF_ID>
+<StartDate>10/22/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>University of Texas at Austin</Name>
+<CityName>Austin</CityName>
+<ZipCode>787595316</ZipCode>
+<PhoneNumber>5124716424</PhoneNumber>
+<StreetAddress>3925 W Braker Lane, Ste 3.340</StreetAddress>
+<StreetAddress2/>
+<CountryName>United States</CountryName>
+<StateName>Texas</StateName>
+<StateCode>TX</StateCode>
+<CONGRESSDISTRICT>10</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>TX10</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>170230239</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>UNIVERSITY OF TEXAS AT AUSTIN</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>042000273</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[University of Texas at Austin]]></Name>
+<CityName>Austin</CityName>
+<StateCode>TX</StateCode>
+<ZipCode>787121224</ZipCode>
+<StreetAddress><![CDATA[105 E 24th A5300]]></StreetAddress>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>Texas</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>25</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>TX25</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>6883</Code>
+<Text>Chemistry of Life Processes</Text>
+</ProgramElement>
+<FUND_OBLG>2017~29317</FUND_OBLG>
+</Award>
+</rootTag>

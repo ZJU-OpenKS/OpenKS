@@ -1,0 +1,81 @@
+# 15969102	[#0 construction#1 of#2 human#3 mage-3#4 dna#5 vaccine#6 and#7 its#8 immune#9 effects#10 observed#11 in#12 vivo]#13 .#14
+
+c1:[{human_mage-3_dna_vaccine#3:construction#1},NIL#-1,NIL]
+c2:[{human_mage-3_dna_vaccine#3:immune_effects#9},observed_in#11,vivo]#13]
+stmt1 = c1 c2
+
+# 15969102	to#0 investigate#1 the#2 antitumor#3 immune#4 responses#5 induced#6 by#7 mage-3#8 dna#9 vaccine#10 ,#11 the#12 recombinant#13 mammalian#14 expression#15 plasmid#16 pcdna3.1/mage-3#17 was#18 constructed#19 by#20 ligating#21 mage-3#22 gene#23 ,#24 which#25 was#26 amplified#27 by#28 rt-pcr#29 ,#30 and#31 the#32 pcd-na3.1#33 +#34 vector#35 .#36
+
+f1:[NIL,to_investigate#0,antitumor_immune_responses#3]
+f2:[recombinant_mammalian_expression_plasmid_pcdna3.1/mage-3#13,was_constructed_by#18,ligating_mage-3_gene#21]
+c3:[antitumor_immune_responses#3,induced_by#6,mage-3_dna_vaccine#8]
+c4:[ligating_mage-3_gene#21,was_amplified_by#26,rt-pcr#29]
+c5:[ligating_mage-3_gene#21,was_amplified_by#26,pcd-na3.1_+_vector#33]
+stmt2 = f1 f2 c3 c4 c5
+
+# 15969102	the#0 recombinant#1 plasmids#2 were#3 transfected#4 into#5 b16#6 cells#7 by#8 liposome#9 ,#10 the#11 expression#12 of#13 mage-3#14 was#15 checked#16 by#17 rt-pcr#18 ,#19 immunocytochemistry#20 and#21 western#22 blot#23 .#24
+
+f3:[recombinant_plasmids#1,were_transfected_into#3,b16_cells#6]
+f4:[{mage-3#14:expression#12},was_checked_by#15,rt-pcr#18]
+f5:[{mage-3#14:expression#12},was_checked_by#15,immunocytochemistry#20]
+f6:[{mage-3#14:expression#12},was_checked_by#15,western_blot#22]
+c6:[b16_cells#6,by#8,liposome#9]
+stmt3 = f3 f4 f5 f6 c6
+
+# 15969102	then#0 ,#1 100#2 ug#3 recombinant#4 plasmids#5 were#6 injected#7 intramuscularly#8 per#9 c57bl/6#10 mouse#11 on#12 0#13 ,#14 10#15 and#16 20#17 days#18 ,#19 with#20 pcdna3.1#21 +#22 plasmid#23 and#24 pbs#25 as#26 controls#27 .#28
+
+f7:[{recombinant_plasmids#4:100_ug#2},were_injected_intramuscularly#6,c57bl/6_mouse#10]
+c7:[NIL,on#12,{NIL#-1:0#13}]
+c8:[NIL,on#12,{NIL#-1:10#15}]
+c9:[NIL,on#12,{NIL#-1:20_days#17}]
+c10:[pcdna3.1_+_plasmid#21,as#26,{NIL#-1:controls#27}]
+c11:[pbs#25,as#26,{NIL#-1:controls#27}]
+stmt4 = f7 c7 c8 c9 c10 c11
+
+# 15969102	splenocytes#0 ctls#1 ,#2 the#3 level#4 of#5 antibodies#6 against#7 mage-3#8 the#9 changes#10 of#11 the#12 t#13 lymphocyte#14 subsets#15 and#16 the#17 levels#18 of#19 cytokines#20 were#21 checked#22 after#23 3#24 times#25 immunization#26 .#27
+
+f8:[splenocytes_ctls#0,were_checked_after#21,3_times_immunization#24]
+f9:[{antibodies#6:level#4},were_checked_after#21,3_times_immunization#24]
+f10:[{t_lymphocyte_subsets#13:changes#10},were_checked_after#21,3_times_immunization#24]
+f11:[{cytokines#20:levels#18},were_checked_after#21,3_times_immunization#24]
+c12:[{antibodies#6:level#4},against#7,mage-3#8]
+stmt5 = f8 f9 f10 f11 c12
+
+# 15969102	as#0 a#1 result#2 ,#3 the#4 mice#5 immunized#6 with#7 pcdna3.1/mage-3#8 plasmid#9 can#10 produce#11 mage-3#12 specific#13 immune#14 response#15 .#16
+
+f12:[mice_immunized#5,can_produce#10,mage-3_specific_immune_response#12]
+c13:[NIL,as#0,{NIL#-1:result#2}]
+c14:[mice_immunized#5,with#7,pcdna3.1/mage-3_plasmid#8]
+stmt6 = f12 c13 c14
+
+# 15969102	the#0 ctls#1 kill#2 activities#3 against#4 b16/mage-3#5 cells#6 was#7 51.08#8 +/-#9 7.41%#10 ,#11 and#12 had#13 significant#14 difference#15 compared#16 with#17 that#18 of#19 pcdna3.1#20 +#21 group#22 and#23 pbs#24 group#25 .#26
+
+f13:[ctls_kill_activities#1,was#7,51.08_+/-_7.41%#8]
+f14:[ctls_kill_activities#1,had_significant_difference#13,NIL]
+c15:[ctls_kill_activities#1,against#4,b16/mage-3_cells#5]
+c16:[NIL,compared_with#16,pcdna3.1_+_group#20]
+c17:[NIL,compared_with#16,pbs_group#24]
+stmt7 = f13 f14 c15 c16 c17
+
+# 15969102	the#0 titre#1 of#2 antibody#3 against#4 mage-3#5 was#6 1#7 ,#8 while#9 controls#10 were#11 negtive#12 .#13
+
+f15:[{antibody#3:titre#1},was#6,{NIL#-1:1#7}]
+f16:[{NIL#-1:controls#10},were_negtive#11,NIL]
+c18:[{antibody#3:titre#1},against#4,mage-3#5]
+stmt8 = f15 f16 c18
+
+# 15969102	the#0 number#1 of#2 cd4#3 +#4 cd8#5 +#6 and#7 the#8 levels#9 of#10 ifn-gamma#11 il-2#12 increased#13 significantly#14 after#15 immunization#16 with#17 pcdna3.1/mage-3#18 plasmid#19 as#20 compared#21 with#22 those#23 of#24 control#25 groups#26 .#27
+
+f17:[{cd4_+_cd8_+#3:number#1},increased_significantly_after#13,immunization#16]
+f18:[{ifn-gamma_il-2#11:levels#9},increased_significantly_after#13,immunization#16]
+c19:[immunization#16,with#17,pcdna3.1/mage-3_plasmid#18]
+c20:[pcdna3.1/mage-3_plasmid#18,compared_with#21,control_groups#25]
+stmt9 = f17 f18 c19 c20
+
+# 15969102	it#0 is#1 concluded#2 that#3 the#4 pcdna3.1-mage-3#5 dna#6 vaccine#7 are#8 able#9 to#10 induce#11 both#12 cellular#13 and#14 humoral#15 immune#16 responses#17 in#18 vivo#19 .#20
+
+f19:[NIL,it_is_concluded_that#0,NIL]
+f20:[pcdna3.1-mage-3_dna_vaccine#5,are_able_to_induce#8,cellular#13]
+f21:[pcdna3.1-mage-3_dna_vaccine#5,are_able_to_induce#8,humoral_immune_responses#15]
+c21:[humoral_immune_responses#15,in#18,vivo#19]
+stmt10 = f19 f20 f21 c21

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>CAREER: Inference for High-Dimensional Structures via Subspace Learning: Statistics, Computation, and Beyond</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>06/30/2025</AwardExpirationDate>
+<AwardTotalIntnAmount>400000.00</AwardTotalIntnAmount>
+<AwardAmount>69881</AwardAmount>
+<AwardInstrument>
+<Value>Continuing Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>03040000</Code>
+<Directorate>
+<Abbreviation>MPS</Abbreviation>
+<LongName>Direct For Mathematical &amp; Physical Scien</LongName>
+</Directorate>
+<Division>
+<Abbreviation>DMS</Abbreviation>
+<LongName>Division Of Mathematical Sciences</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Gabor Szekely</SignBlockName>
+<PO_EMAI>gszekely@nsf.gov</PO_EMAI>
+<PO_PHON>7032928869</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>High-dimensional arrays commonly arise from modern scientific and technological research and have been a central topic in modern statistics and data science. Some areas such as genetics, microbiome studies, brain imaging, hyperspectral imaging, etc., yield a large amount of high-dimensional array data; while in some other areas, data can be recast into high-dimensional array form to facilitate analysis. In these situations, the target parameter is often high-dimensional/high-order, but the important information may lie in dimension-reduced subspaces induced by various structural conditions. How to efficiently exploit these subspaces poses significant statistical and computational challenges. This project aims to address these challenges from a perspective of subspace learning. By taking into account dimension-reduced and low-order subspaces, the PI aims to address a series of statistical and machine learning questions by developing new methodologies and theories with statistical and computational advantages. &lt;br/&gt;&lt;br/&gt;This project will progress along three major directions: (i) fast estimation and inference for high-dimensional arrays via important subspace sketching; (ii) high-order clustering with theoretical guarantees; (iii) ultrahigh-order tensor singular value decomposition via a tensor-train parameterization. The research will be applicable to a variety of topics involving high-dimensional matrix and tensor data, such as genetics and genomes, reinforcement learning, neuroimaging analysis, material science, recommender design, etc. The PI will also develop user-friendly software packages for the new algorithms and make them available for public use. The PI is committed to training students, especially those from groups underrepresented in STEM, through involvement in the research project.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>11/04/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/04/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.049</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2203741</AwardID>
+<Investigator>
+<FirstName>Anru</FirstName>
+<LastName>Zhang</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Anru Zhang</PI_FULL_NAME>
+<EmailAddress>anru.zhang@duke.edu</EmailAddress>
+<PI_PHON>9196814563</PI_PHON>
+<NSF_ID>000730207</NSF_ID>
+<StartDate>11/04/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>Duke University</Name>
+<CityName>Durham</CityName>
+<ZipCode>277054010</ZipCode>
+<PhoneNumber>9196843030</PhoneNumber>
+<StreetAddress>2200 W. Main St, Suite 710</StreetAddress>
+<StreetAddress2><![CDATA[Erwin Square]]></StreetAddress2>
+<CountryName>United States</CountryName>
+<StateName>North Carolina</StateName>
+<StateCode>NC</StateCode>
+<CONGRESSDISTRICT>04</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>NC04</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>044387793</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>DUKE UNIVERSITY</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>044387793</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[Duke University]]></Name>
+<CityName>Durham</CityName>
+<StateCode>NC</StateCode>
+<ZipCode>277054010</ZipCode>
+<StreetAddress><![CDATA[2200 W. Main St]]></StreetAddress>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>North Carolina</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>04</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>NC04</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>1269</Code>
+<Text>STATISTICS</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>1045</Code>
+<Text>CAREER-Faculty Erly Career Dev</Text>
+</ProgramReference>
+<FUND_OBLG>2021~69881</FUND_OBLG>
+</Award>
+</rootTag>

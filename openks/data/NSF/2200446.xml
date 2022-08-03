@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>SaTC: STARSS: Small: IoT Circuit Locking, Obfuscation &amp; Authentication Kernel (CLOAK), A Compilable Architecture for Secure IoT Device Production, Testing, Activation &amp; Ope</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>09/30/2022</AwardExpirationDate>
+<AwardTotalIntnAmount>300000.00</AwardTotalIntnAmount>
+<AwardAmount>111647</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>05050000</Code>
+<Directorate>
+<Abbreviation>CSE</Abbreviation>
+<LongName>Direct For Computer &amp; Info Scie &amp; Enginr</LongName>
+</Directorate>
+<Division>
+<Abbreviation>CNS</Abbreviation>
+<LongName>Division Of Computer and Network Systems</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Daniela Oliveira</SignBlockName>
+<PO_EMAI>doliveir@nsf.gov</PO_EMAI>
+<PO_PHON>7032924352</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>Autonomy, control and actuation opportunities offered by a colossal deployment of Internet of Things (IoT) open the door to a revolution in the way we live and interact with our environment. However, widespread adoption of IoT comes with the danger of its misuse for malicious purposes, threatening the loss of privacy, property, and life. The scope and reach of potential IoT security threat grows as fast as the number and reach of IoT devices. Hence, protecting the hardware of IoT cannot be left as an afterthought. This project aims to improve the security of the IoT devices throughout their manufacturing and operational lifespan.&lt;br/&gt;&lt;br/&gt;To secure the IoT devices throughout their manufacturing and operational lifespan, this proposal introduces IoT CLOAK - IoT Circuit Locking, Obfuscation &amp; Authentication Kernel. CLOAK is a compilable, universal and lightweight architecture for secure production, testing, cloud activation &amp; operation of IoT devices. The major goals of this project include: (1) building an open-source compiler to synthesize any netlist into CLOAK-protected and CLOAK-obfuscated netlist; (2) making the obfuscation-key a truly moving target that changes from activation to activation; (3) removing the need to store keys on the IoT devices or on the cloud by generating it on demand on the cloud; (4) exploring lightweight cryptography, and its side channel vulnerabilities, to secure the IoT-Cloud communication; (5) addressing the challenge of safe readout of PUF signature from IoT device; (6) investigating ultra-lightweight PUF and TRNG solutions; (7) investigating the functional testing of the CLOAK-protected chips in untrusted facilities and (8) developing cloud-based CLOAK-management services capable of configuring, managing, unlocking, licensing, and authenticating CLOAK-protected IoT devices.</AbstractNarration>
+<MinAmdLetterDate>10/21/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>10/21/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.070</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2200446</AwardID>
+<Investigator>
+<FirstName>Avesta</FirstName>
+<LastName>Sasan</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Avesta Sasan</PI_FULL_NAME>
+<EmailAddress>asasan@ucdavis.edu</EmailAddress>
+<PI_PHON>5307521443</PI_PHON>
+<NSF_ID>000711431</NSF_ID>
+<StartDate>10/21/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>University of California-Davis</Name>
+<CityName>Davis</CityName>
+<ZipCode>956186134</ZipCode>
+<PhoneNumber>5307547700</PhoneNumber>
+<StreetAddress>OR/Sponsored Programs</StreetAddress>
+<StreetAddress2><![CDATA[1850 Research Park Dr., Ste 300]]></StreetAddress2>
+<CountryName>United States</CountryName>
+<StateName>California</StateName>
+<StateCode>CA</StateCode>
+<CONGRESSDISTRICT>03</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>CA03</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>047120084</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>UNIVERSITY OF CALIFORNIA, DAVIS</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>071549000</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[University of California-Davis]]></Name>
+<CityName>Davis</CityName>
+<StateCode>CA</StateCode>
+<ZipCode>956186134</ZipCode>
+<StreetAddress><![CDATA[1850 Research Park Dr.]]></StreetAddress>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>California</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>03</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>CA03</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>8060</Code>
+<Text>Secure &amp;Trustworthy Cyberspace</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>021Z</Code>
+<Text>Industry Partnerships</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>025Z</Code>
+<Text>SaTC: Secure and Trustworthy Cyberspace</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>7434</Code>
+<Text>CNCI</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>7923</Code>
+<Text>SMALL PROJECT</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>8225</Code>
+<Text>SaTC Special Projects</Text>
+</ProgramReference>
+<FUND_OBLG>2017~111647</FUND_OBLG>
+</Award>
+</rootTag>

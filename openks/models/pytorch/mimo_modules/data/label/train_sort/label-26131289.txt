@@ -1,0 +1,86 @@
+# 26131289	Comparison#0 of#1 peripheral#2 blood#3 t#4 lymphocyte#5 immune#6 function#7 among#8 venous#9 thromboembolism#10 patients#11 with#12 and#13 without#14 infection#15 and#16 patients#17 with#18 simple#19 infection#20 .#21 
+
+c1:[{peripheral_blood_t_lymphocyte_immune_function#2:comparison#0},among#8,venous_thromboembolism_patients#9]
+c2:[{peripheral_blood_t_lymphocyte_immune_function#2:comparison#0},among#8,patients#17]
+c3:[venous_thromboembolism_patients#9,with_and_without#12,infection#15]
+c4:[patients#17,with#18,simple_infection#19]
+stmt1 = c1 c2 c3 c4
+
+# 26131289	To#0 investigate#1 the#2 differences#3 of#4 T#5 lymphocyte#6 subgroups#7 and#8 high-sensitivity#9 C#10 reactive#11 protein#12 levels#13 among#14 patients#15 with#16 venous#17 thromboembolism#18 ,#19 VTE#20 patients#21 with#22 infection#23 ,#24 simple#25 infection#26 patients#27 and#28 the#29 normal#30 controls.289#31 patients#32 were#33 enrolled#34 in#35 this#36 study#37 and#38 divided#39 into#40 control#41 group#42 ,#43 VTE#44 group#45 ,#46 VTE#47 with#48 infection#49 group#50 and#51 simple#52 infectiongroup#53 .#54 
+
+f1:[NIL,to_investigate#0,{t_lymphocyte_subgroups#5:differences#3}]
+f2:[NIL,to_investigate#0,{high-sensitivity_c_reactive_protein_levels#9:differences#3}]
+f3:[{t_lymphocyte_subgroups#5:differences#3},among#14,patients#15]
+f4:[{high-sensitivity_c_reactive_protein_levels#9:differences#3},among#14,patients#15]
+f5:[vte_patients#20,were_enrolled_in#33,{NIL#-1:this_study#36}]
+f6:[vte_patients#20,divided_into#39,control_group#41]
+f7:[vte_patients#20,divided_into#39,vte_group#44]
+f8:[vte_patients#20,divided_into#39,vte_with_infection_group#47]
+f9:[vte_patients#20,divided_into#39,simple_infectiongroup#52]
+f10:[simple_infection_patients#25,were_enrolled_in#33,{NIL#-1:this_study#36}]
+f11:[simple_infection_patients#25,divided_into#39,control_group#41]
+f12:[simple_infection_patients#25,divided_into#39,vte_group#44]
+f13:[simple_infection_patients#25,divided_into#39,vte_with_infection_group#47]
+f14:[simple_infection_patients#25,divided_into#39,simple_infectiongroup#52]
+f15:[normal_controls.289_patients#30,were_enrolled_in#33,{NIL#-1:this_study#36}]
+f16:[normal_controls.289_patients#30,divided_into#39,control_group#41]
+f17:[normal_controls.289_patients#30,divided_into#39,vte_group#44]
+f18:[normal_controls.289_patients#30,divided_into#39,simple_infectiongroup#52]
+c5:[patients#15,with#16,venous_thromboembolism#17]
+c6:[vte_patients#20,with#22,infection#23]
+stmt2 = f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 c5 c6
+
+# 26131289	Compared#0 with#1 the#2 control#3 group#4 ,#5 the#6 serum#7 levels#8 of#9 CD3(+)#10 ,#11 CD4(+)#12 ,#13 CD8(+)#14 T#15 lymphocytes#16 significantly#17 decreased#18 and#19 CD4(+)#20 /#21 CD8(+)#22 ratio#23 significantly#24 increased#25 in#26 simple#27 infection#28 group#29 ,#30 CD3(+)#31 and#32 CD8(+)#33 T#34 lymphocytes#35 significantly#36 decreased#37 and#38 CD4(+)#39 /#40 CD8(+)#41 ratio#42 significantly#43 increased#44 in#45 VTE#46 and#47 VTE#48 with#49 infection#50 group#51 ,#52 the#53 proportion#54 of#55 declined#56 CD3(+)#57 and#58 CD8(+)#59 T#60 lymphocytes#61 increased#62 ,#63 and#64 the#65 proportion#66 of#67 increased#68 CD4(+)#69 /#70 CD8(+)#71 ratio#72 statistically#73 elevated#74 in#75 three#76 disease#77 groups#78 .#79 
+
+f19:[{cd3(+)#10:serum_levels#7},significantly_decreased#17,NIL]
+f20:[{cd4(+)#12:serum_levels#7},significantly_decreased#17,NIL]
+f21:[{cd8(+)_t_lymphocytes#14:serum_levels#7},significantly_decreased#17,NIL]
+f22:[cd4(+)_/_cd8(+)_ratio#20,significantly_increased_in#24,simple_infection_group#27]
+f23:[cd3(+)#31,significantly_decreased#36,NIL]
+f24:[cd8(+)_t_lymphocytes#33,significantly_decreased#36,NIL]
+f25:[cd4(+)_/_cd8(+)_ratio#39,significantly_increased_in#43,vte#46]
+f26:[cd4(+)_/_cd8(+)_ratio#39,significantly_increased_in#43,vte_with_infection_group#48]
+f27:[{declined_cd3(+)#56:proportion#54},increased#62,NIL]
+f28:[{cd8(+)_t_lymphocytes#59:proportion#54},increased#62,NIL]
+f29:[{increased_cd4(+)_/_cd8(+)_ratio#68:proportion#66},statistically_elevated_in#73,three_disease_groups#76]
+c7:[NIL,compared_with#0,control_group#3]
+stmt3 = f19 f20 f21 f22 f23 f24 f25 f26 f27 f28 f29 c7
+
+# 26131289	As#0 an#1 important#2 inflammatory#3 factor#4 ,#5 all#6 HsCRP#7 levels#8 in#9 three#10 disease#11 groups#12 significantly#13 increased#14 when#15 compared#16 with#17 the#18 controlgroup#19 .#20 
+
+f30:[hscrp_levels#7,significantly_increased#13,NIL]
+c8:[NIL,as#0,inflammatory_factor#3]
+c9:[hscrp_levels#7,in#9,{disease_groups#11:three#10}]
+c10:[{disease_groups#11:three#10},compared_with#16,controlgroup#19]
+stmt4 = f30 c8 c9 c10
+
+# 26131289	Immune#0 dysfunction#1 exists#2 in#3 both#4 of#5 VTE#6 and#7 infection#8 patients#9 ,#10 while#11 VTE#12 patients#13 tend#14 to#15 be#16 accompanied#17 with#18 infections#19 .#20 
+
+f31:[immune_dysfunction#0,exists_in#2,vte#6]
+f32:[immune_dysfunction#0,exists_in#2,infection_patients#8]
+f33:[vte_patients#12,tend_to_be_accompanied_with#14,infections#19]
+stmt5 = f31 f32 f33
+
+# 26131289	The#0 changes#1 of#2 T#3 lymphocyte#4 subgroups#5 in#6 VTE#7 patients#8 ,#9 who#10 were#11 independent#12 from#13 infection#14 ,#15 could#16 cause#17 T#18 lymphocyte#19 immune#20 dysfunction#21 ,#22 suggesting#23 that#24 there#25 were#26 abnormalities#27 of#28 T#29 lymphocyte#30 immune#31 function#32 in#33 VTE#34 itself#35 .#36 
+
+f34:[{t_lymphocyte_subgroups#3:changes#1},could_cause#16,t_lymphocyte_immune_dysfunction#18]
+f35:[{t_lymphocyte_subgroups#3:changes#1},suggesting#23,{t_lymphocyte_immune_function#29:abnormalities#27}]
+f36:[{t_lymphocyte_immune_function#29:abnormalities#27},in#33,vte#34]
+c11:[{t_lymphocyte_subgroups#3:changes#1},in#6,vte_patients#7]
+c12:[vte_patients#7,were_independent_from#11,infection#14]
+stmt6 = f34 f35 f36 c11 c12
+
+# 26131289	The#0 overall#1 T#2 lymphocyte#3 functions#4 of#5 recognizing#6 antigens#7 and#8 transducing#9 activation#10 signals#11 decline#12 in#13 VTE#14 patients#15 .#16 
+
+f37:[{t_lymphocyte#2:functions#4},decline_in#12,vte_patients#14]
+c13:[{t_lymphocyte#2:functions#4},recognizing#6,antigens#7]
+c14:[{t_lymphocyte#2:functions#4},transducing#9,activation_signals#10]
+stmt7 = f37 c13 c14
+
+# 26131289	Besides#0 ,#1 the#2 function#3 of#4 T#5 lymphocyte#6 of#7 directly#8 killing#9 virus#10 microbes#11 declines#12 significantly#13 and#14 the#15 inflammatory#16 mechanisms#17 are#18 involved#19 in#20 the#21 occurrence#22 and#23 development#24 of#25 venous#26 thrombosis#27 .#28 
+
+f38:[{t_lymphocyte#5:function#3},declines_significantly#12,NIL]
+f39:[inflammatory_mechanisms#16,are_involved_in#18,{venous_thrombosis#26:occurrence#22}]
+f40:[inflammatory_mechanisms#16,are_involved_in#18,{venous_thrombosis#26:development#24}]
+c15:[{t_lymphocyte#5:function#3},directly_killing#8,virus_microbes#10]
+stmt8 = f38 f39 f40 c15

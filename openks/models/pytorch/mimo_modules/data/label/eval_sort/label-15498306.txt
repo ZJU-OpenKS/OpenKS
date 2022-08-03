@@ -1,0 +1,113 @@
+# 15498306	[#0 effects#1 of#2 escharectomy#3 during#4 burn#5 shock#6 stage#7 on#8 the#9 mrna#10 expression#11 of#12 ifn-gamma#13 and#14 il-4#15 in#16 spleen#17 t#18 lymphocytes#19 in#20 rats#21 after#22 thermal#23 injury]#24 .#25 
+
+c1:[{escharectomy#3:effects#1},during#4,burn_shock_stage#5]
+c2:[burn_shock_stage#5,on#8,{ifn-gamma#13:mrna_expression#10}]
+c3:[burn_shock_stage#5,on#8,spleen_t_lymphocytes#17]
+c4:[spleen_t_lymphocytes#17,in#20,rats#21]
+c5:[rats#21,after#22,thermal_injury]#23]
+stmt1 = c1 c2 c3 c4 c5
+
+# 15498306	to#0 determine#1 the#2 serum#3 level#4 and#5 mrna#6 expression#7 of#8 type-1/type-2#9 cytokines#10 of#11 t#12 lymphocytes#13 in#14 spleens#15 of#16 rats#17 after#18 thermal#19 injury#20 and#21 to#22 investigate#23 the#24 effects#25 of#26 escharectomy#27 during#28 burn#29 shock#30 stage#31 on#32 ifn-gamma#33 andil-4#34 .#35 
+
+f1:[NIL,to_determine#0,{type-1/type-2_cytokines_of_t_lymphocytes#9:serum_level#3}]
+f2:[NIL,to_determine#0,{type-1/type-2_cytokines_of_t_lymphocytes#9:mrna_expression#6}]
+f3:[NIL,to_investigate#22,{escharectomy#27:effects#25}]
+c6:[{type-1/type-2_cytokines_of_t_lymphocytes#9:serum_level#3},in#14,{rats#17:spleens#15}]
+c7:[{type-1/type-2_cytokines_of_t_lymphocytes#9:mrna_expression#6},in#14,{rats#17:spleens#15}]
+c8:[{rats#17:spleens#15},after#18,thermal_injury#19]
+c9:[{escharectomy#27:effects#25},during#28,burn_shock_stage#29]
+c10:[burn_shock_stage#29,on#32,ifn-gamma_andil-4#33]
+stmt2 = f1 f2 f3 c6 c7 c8 c9 c10
+
+# 15498306	one#0 hundred#1 and#2 sixty#3 male#4 wistar#5 rats#6 were#7 randomized#8 into#9 four#10 groups#11 .#12
+
+f4:[{male_wistar_rats#4:one_hundred_and_sixty#0},were_randomized_into#7,{groups#11:four#10}]
+stmt3 = f4
+
+# 15498306	in#0 group#1 a#2 ,#3 animals#4 were#5 not#6 subjected#7 to#8 escharectomy#9 .#10 
+
+f5:[animals#4,were_not_subjected_to#5,escharectomy#9]
+c11:[NIL,in#0,group_a#1]
+stmt4 = f5 c11
+
+# 15498306	in#0 groups#1 b#2 ,#3 c#4 and#5 d#6 ,#7 escharectomy#8 and#9 skin#10 allograft#11 were#12 performed#13 at#14 8#15 ,#16 24#17 ,#18 96#19 hours#20 postburn#21 respectively#22 .#23 
+
+f6:[escharectomy#8,were_performed_at#12,postburn#21]
+f7:[skin_allograft#10,were_performed_at#12,postburn#21]
+c12:[NIL,in#0,groups_b#1]
+c13:[NIL,in#0,c#4]
+c14:[NIL,in#0,d#6]
+stmt5 = f6 f7 c12 c13 c14
+
+# 15498306	at#0 4#1 ,#2 12#3 ,#4 24#5 ,#6 48#7 ,#8 96#9 ,#10 120#11 and#12 168#13 hours#14 pb#15 ,#16 animals#17 were#18 killed#19 and#20 blood#21 and#22 spleens#23 samples#24 were#25 harvested#26 .#27 
+
+f8:[animals#17,were_killed#18,NIL]
+f9:[blood#21,were_harvested#25,NIL]
+f10:[spleens_samples#23,were_harvested#25,NIL]
+c15:[NIL,at#0,{NIL#-1:4#1}]
+c16:[NIL,at#0,{NIL#-1:12#3}]
+c17:[NIL,at#0,{NIL#-1:24#5}]
+c18:[NIL,at#0,{NIL#-1:48#7}]
+c19:[NIL,at#0,{NIL#-1:96#9}]
+c20:[NIL,at#0,{NIL#-1:120#11}]
+c21:[NIL,at#0,{NIL#-1:168_hours_pb#13}]
+stmt6 = f8 f9 f10 c15 c16 c17 c18 c19 c20 c21
+
+# 15498306	elisa#0 was#1 applied#2 to#3 determine#4 the#5 concentration#6 of#7 ifn-gamma#8 and#9 il-4#10 in#11 serum#12 .#13 
+
+f11:[elisa#0,was_applied_to#1,{ifn-gamma#8:concentration#6}]
+f12:[elisa#0,was_applied_to#1,{il-4_in_serum#10:concentration#6}]
+stmt7 = f11 f12
+
+# 15498306	the#0 expression#1 pattern#2 of#3 ifn-gamma#4 and#5 il-4#6 were#7 observed#8 at#9 mrna#10 level#11 in#12 t#13 lymphocytes#14 isolated#15 from#16 spleen#17 byrt-pcr#18 .#19 
+
+f13:[{ifn-gamma#4:expression_pattern#1},were_observed_at#7,mrna_level#10]
+c22:[mrna_level#10,in#12,t_lymphocytes#13]
+c23:[t_lymphocytes#13,isolated_from#15,spleen_byrt-pcr#17]
+stmt8 = f13 c22 c23
+
+# 15498306	the#0 serum#1 level#2 of#3 ifn-gamma#4 and#5 il-4#6 rose#7 rapidly#8 and#9 significantly#10 after#11 scald#12 injury#13 ,#14 expression#15 of#16 ifn-gamma#17 and#18 il-4#19 mrna#20 in#21 rats'#22 t#23 lymphocyte#24 were#25 also#26 up-regulated#27 spontaneously#28 .#29 
+
+f14:[{ifn-gamma#4:serum_level#1},rose_rapidly_and_significantly#7,NIL]
+f15:[{il-4#6:serum_level#1},rose_rapidly_and_significantly#7,NIL]
+f16:[{ifn-gamma#17:expression#15},were_also_up-regulated_spontaneously#25,NIL]
+f17:[{il-4_mrna#19:expression#15},were_also_up-regulated_spontaneously#25,NIL]
+c24:[NIL,after#11,scald_injury#12]
+c25:[{ifn-gamma#17:expression#15},in#21,rats'_t_lymphocyte#22]
+c26:[{il-4_mrna#19:expression#15},in#21,rats'_t_lymphocyte#22]
+stmt9 = f14 f15 f16 f17 c24 c25 c26
+
+# 15498306	the#0 serum#1 level#2 of#3 ifn-gamma#4 and#5 its#6 mrna#7 expression#8 began#9 to#10 rise#11 within#12 4#13 hours#14 pb#15 ,#16 peaking#17 at#18 24#19 hours#20 pb#21 .#22 
+
+f18:[{ifn-gamma#4:serum_level#1},began_to_rise#9,NIL]
+f19:[{ifn-gamma#4:serum_level#1},peaking_at#17,{pb#21:24_hours#19}]
+f20:[{ifn-gamma#4:mrna_expression#7},began_to_rise#9,NIL]
+c27:[NIL,within#12,{pb#15:4_hours#13}]
+stmt10 = f18 f19 f20 c27
+
+# 15498306	whereas#0 il-4#1 and#2 its#3 mrna#4 expression#5 showed#6 a#7 persistent#8 elevation#9 .#10 
+
+f21:[{il-4#1:mrna_expression#4},showed#6,persistent_elevation#8]
+f22:[il-4#1,showed#6,persistent_elevation#8]
+stmt11 = f21 f22
+
+# 15498306	thereby#0 leading#1 to#2 a#3 dominant#4 tendency#5 of#6 th2#7 cytokine#8 response#9 on#10 7#11 d#12 pb#13 .#14 
+
+f23:[NIL,thereby_leading_to#0,{th2_cytokine_response#7:dominant_tendency#4}]
+c28:[{th2_cytokine_response#7:dominant_tendency#4},on#10,{pb#13:7_d#11}]
+stmt12 = f23 c28
+
+# 15498306	in#0 group#1 a#2 all#3 above#4 parameters#5 revealed#6 most#7 obvious#8 changes#9 compared#10 with#11 controls#12 ,#13 then#14 ranked#15 in#16 group#17 d#18 ,#19 b#20 andc#21 .#22 
+
+f24:[parameters#5,revealed#6,obvious_changes#8]
+f25:[parameters#5,ranked_in#15,group_d#17]
+f26:[parameters#5,ranked_in#15,b_andc#20]
+c29:[NIL,in#0,group_a#1]
+stmt13 = f24 f25 f26 c29
+
+# 15498306	escharectomy#0 during#1 burn#2 shock#3 stage#4 is#5 helpful#6 to#7 decrease#8 the#9 harmful#10 over#11 expression#12 of#13 th2-type#14 lymphocyte#15 after#16 severe#17 thermal#18 injury#19 .#20 
+
+f27:[escharectomy#0,is_helpful_to_decrease#5,{th2-type_lymphocyte#14:harmful_over_expression#10}]
+c30:[escharectomy#0,during#1,burn_shock_stage#2]
+c31:[{th2-type_lymphocyte#14:harmful_over_expression#10},after#16,severe_thermal_injury#17]
+stmt14 = f27 c30 c31

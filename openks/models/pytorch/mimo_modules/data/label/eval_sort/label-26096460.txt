@@ -1,0 +1,113 @@
+# n1:[trpv5,as,calcium_channels_trpv5]
+# n2:[trpv6,as,trpv6_channels]
+# n3:[trpv5/v6,as,calcium_channels_trpv5/v6]
+# n4:[trpv5/v6,as,trpv5/v6_channels]
+# n5:[jurkat_t_cells,as,human_leukemia_jurkat_t_cells]
+# n6:[jurkat_t_cells,as,jurkat_cells]
+
+# h1:[different_cell_types,contain,lymphocytes]
+# h2:[lymphocytes,contain,t_lymphocyte]
+# h3:[external_stimuli,contain,low-ph_stressor]
+# h4:[external_stimuli,contain,high-ph_stressor]
+# h5:[extracellular_ph,contain,extracellular_acidic_ph]
+# h6:[trpv5/v6,contain,trpv5]
+# h7:[trpv5/v6,contain,trpv6]
+# h8:[early_endocytosis_marker,contain,eea1]
+
+# 26096460	trpv5/v6#0 channels#1 mediate#2 ca(2+)#3 influx#4 in#5 jurkat#6 t#7 cells#8 under#9 the#10 control#11 of#12 extracellular#13 ph#14 .#15
+
+f1:[trpv5/v6_channels#0,mediate#2,ca(2+)_influx#3]
+c1:[ca(2+)_influx#3,in#5,jurkat_t_cells#6]
+c2:[jurkat_t_cells#6,under#9,{extracellular_ph#13:control#11}]
+stmt1 = f1 c1 c2
+
+# 26096460	regulation#0 of#1 cytoplasmic#2 free#3 calcium#4 concentration#5 [#6 ca(2+)#7 ]i#8 is#9 a#10 key#11 factor#12 for#13 the#14 maintenance#15 of#16 cellular#17 homeostasis#18 in#19 different#20 cell#21 types#22 ,#23 including#24 lymphocytes#25 .#26 
+
+f2:[{cytoplasmic_free_calcium_concentration#2:regulation#0},is_a_key_factor_for#9,{cellular_homeostasis#17:maintenance#15}]
+c3:[{cellular_homeostasis#17:maintenance#15},in#19,lymphocytes#25]
+stmt2 = f2 c3
+
+# 26096460	during#0 t#1 lymphocyte#2 activation#3 as#4 well#5 as#6 production#7 of#8 cytokines#9 ,#10 sustained#11 ca(2+)#12 influx#13 is#14 essential#15 ,#16 however#17 it#18 remains#19 unclear#20 how#21 this#22 influx#23 is#24 regulated#25 .#26 
+
+f3:[sustained_ca(2+)_influx#11,is_essential#14,NIL]
+c4:[NIL,during#0,t_lymphocyte_activation#1]
+c5:[NIL,during#0,{cytokines#9:production#7}]
+stmt3 = f3 c4 c5
+
+# 26096460	previously#0 ,#1 we#2 reported#3 the#4 expression#5 and#6 functional#7 activity#8 of#9 calcium#10 channels#11 trpv5#12 and#13 trpv6#14 in#15 human#16 leukemia#17 jurkat#18 t#19 cells#20 .#21 
+
+f4:[NIL,reported#3,{calcium_channels_trpv5#10:expression#5}]
+f5:[NIL,reported#3,{calcium_channels_trpv5#10:functional_activity#7}]
+f6:[NIL,reported#3,{trpv6#14:expression#5}]
+f7:[NIL,reported#3,{trpv6#14:functional_activity#7}]
+c6:[calcium_channels_trpv5#10,in#15,human_leukemia_jurkat_t_cells#16]
+c7:[trpv6#14,in#15,human_leukemia_jurkat_t_cells#16]
+stmt4 = f4 f5 f6 f7 c6 c7
+
+# 26096460	in#0 this#1 study#2 ,#3 using#4 single#5 channel#6 recordings#7 ,#8 we#9 found#10 that#11 activity#12 of#13 calcium#14 channels#15 trpv5/v6#16 in#17 jurkat#18 t#19 cells#20 is#21 subject#22 to#23 strong#24 control#25 of#26 external#27 stimuli#28 such#29 as#30 a#31 low-#32 or#33 high-ph#34 stressor#35 .#36 
+
+f8:[NIL,found_that#10,NIL]
+f9:[{calcium_channels_trpv5/v6#14:activity#12},is_subject_to#21,{external_stimuli#27:strong_control#24}]
+f10:[{calcium_channels_trpv5/v6#14:activity#12},is_subject_to#21,{low-_or_high-ph_stressor#32:strong_control#24}]
+c8:[NIL,in#0,{NIL#-1:study#2}]
+c9:[NIL,using#4,single_channel_recordings#5]
+c10:[{calcium_channels_trpv5/v6#14:activity#12},in#17,jurkat_t_cells#18]
+stmt5 = f8 f9 f10 c8 c9 c10
+
+# 26096460	we#0 showed#1 that#2 extracellular#3 acidic#4 ph#5 reduces#6 the#7 activity#8 of#9 trpv5/v6#10 channels#11 ,#12 whereas#13 alkaline#14 ph#15 increases#16 the#17 activity#18 of#19 trpv5/v6#20 channels#21 in#22 jurkat#23 t#24 cells#25 .#26 
+
+f11:[NIL,showed_that#1,NIL]
+f12:[extracellular_acidic_ph#3,reduces#6,{trpv5/v6_channels#10:activity#8}]
+f13:[alkaline_ph#14,increases#16,{trpv5/v6_channels#20:activity#18}]
+c11:[{trpv5/v6_channels#20:activity#18},in#22,jurkat_t_cells#23]
+stmt6 = f11 f12 f13 c11
+
+# 26096460	using#0 calcium#1 imaging#2 ,#3 we#4 found#5 that#6 ca(2+)#7 influx#8 in#9 jurkat#10 t#11 cells#12 displayed#13 sensitivity#14 to#15 extracellular#16 ph#17 ,#18 similar#19 to#20 that#21 shown#22 for#23 the#24 calcium#25 channels#26 trpv5/v6#27 .#28 
+
+f14:[NIL,found_that#5,NIL]
+f15:[ca(2+)_influx#7,displayed_sensitivity_to#13,extracellular_ph#16]
+c12:[NIL,using#0,calcium_imaging#1]
+c13:[ca(2+)_influx#7,in#9,jurkat_t_cells#10]
+c14:[NIL,similar_to_that_shown_for#19,calcium_channels_trpv5/v6#25]
+stmt7 = f14 f15 c12 c13 c14
+
+# 26096460	double#0 immunostaining#1 of#2 jurkat#3 cells#4 revealed#5 that#6 trpv5#7 and#8 trpv6#9 channels#10 colocalize#11 with#12 clathrin#13 and#14 the#15 early#16 endocytosis#17 marker#18 ,#19 eea1#20 .#21 
+
+f16:[trpv5#7,colocalize_with#11,clathrin#13]
+f17:[trpv5#7,colocalize_with#11,early_endocytosis_marker#16]
+f18:[trpv5#7,colocalize_with#11,eea1#20]
+f19:[trpv6_channels#9,colocalize_with#11,clathrin#13]
+f20:[trpv6_channels#9,colocalize_with#11,early_endocytosis_marker#16]
+f21:[trpv6_channels#9,colocalize_with#11,eea1#20]
+c15:[{jurkat_cells#3:double_immunostaining#0},revealed_that#5,NIL#-1]
+stmt8 = f16 f17 f18 f19 f20 f21 c15
+
+# 26096460	moreover#0 ,#1 we#2 demonstrated#3 that#4 a#5 specific#6 inhibitor#7 of#8 clathrin-dependent#9 endocytosis#10 ,#11 dynasore#12 ,#13 blocked#14 trpv5/v6#15 activity#16 and#17 ca(2+)#18 influx#19 into#20 jurkat#21 cells#22 .#23 
+
+f22:[NIL,demonstrated_that#3,NIL]
+f23:[{clathrin-dependent_endocytosis#9:specific_inhibitor#6},blocked#14,{trpv5/v6#15:activity#16}]
+f24:[{clathrin-dependent_endocytosis#9:specific_inhibitor#6},blocked#14,ca(2+)_influx#18]
+f25:[dynasore#12,blocked#14,{trpv5/v6#15:activity#16}]
+f26:[dynasore#12,blocked#14,ca(2+)_influx#18]
+c16:[{trpv5/v6#15:activity#16},into#20,jurkat_cells#21]
+c17:[ca(2+)_influx#18,into#20,jurkat_cells#21]
+stmt9 = f22 f23 f24 f25 f26 c16 c17
+
+# 26096460	overall#0 ,#1 our#2 findings#3 indicate#4 that#5 strong#6 environmental#7 cues#8 may#9 affect#10 the#11 intracellular#12 calcium#13 level#14 in#15 jurkat#16 cells#17 by#18 influencing#19 the#20 traffic#21 of#22 trpv5/v6#23 channels#24 in#25 lymphocytes#26 .#27 
+
+f27:[{NIL#-1:findings#3},indicate_that#4,NIL]
+f28:[strong_environmental_cues#6,may_affect#9,intracellular_calcium_level#12]
+c18:[intracellular_calcium_level#12,in#15,jurkat_cells#16]
+c19:[NIL,by_influencing#18,{trpv5/v6_channels#23:traffic#21}]
+c20:[{trpv5/v6_channels#23:traffic#21},in#25,lymphocytes#26]
+stmt10 = f27 f28 c18 c19 c20
+
+#26096460	this#0 article#1 is#2 protected#3 by#4 copyright#5 .#6 
+
+f29:[article#1,is_protected_by#2,copyright#5]
+stmt11 = f29
+
+#26096460	all#0 rights#1 reserved#2 .#3 
+
+c21:[{NIL#-1:rights#1},reserved#2,NIL]
+stmt12 = c21

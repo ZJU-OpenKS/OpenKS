@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>A Spatiotemporal Investigation of Heat Wave Dynamics</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>05/31/2023</AwardExpirationDate>
+<AwardTotalIntnAmount>340528.00</AwardTotalIntnAmount>
+<AwardAmount>135988</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>04040000</Code>
+<Directorate>
+<Abbreviation>SBE</Abbreviation>
+<LongName>Direct For Social, Behav &amp; Economic Scie</LongName>
+</Directorate>
+<Division>
+<Abbreviation>BCS</Abbreviation>
+<LongName>Division Of Behavioral and Cognitive Sci</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Scott Freundschuh</SignBlockName>
+<PO_EMAI>sfreunds@nsf.gov</PO_EMAI>
+<PO_PHON>7032927076</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>This project will analyze changes in the spatial and temporal patterns of heat waves and explore relationships between their size and physical variables, such as soil moisture and land cover, with the goal of developing predictive models of heat wave occurrence.  Extreme heat is the most common weather-related cause of death. A better understanding of heat wave size, intensity and drivers of these characteristics will enhance public safety by identifying where and under what conditions heat waves are likely to be larger and/or more intense, so that public health interventions such as warnings, education, and staging of cooling/hydration stations, etc. can be planned. Novel integration of methods from climatology and landscape ecology will allow for development of a spatial database of heat waves that can be used to answer questions, such as how climate and land-surface change impacts heat wave size and intensity. Broader impacts of the project include implications for public health, urban planning, and disaster management and preparedness as well as land management and policy. Through workshops with heat-health stakeholders the project will promote dissemination of results and their translation into recommendations for public health and emergency management. The project has education and outreach activities designed to promote the inclusion of underrepresented groups and foster increased minority participation in geography and related STEM fields.&lt;br/&gt;&lt;br/&gt;This project will address the critical need to improve the spatial and temporal modeling of heat waves. Spatial analysis techniques from the fields of geography, landscape ecology, and climatology will be combined to examine the spatiotemporal evolution of heat waves. Heat waves will be tracked daily using a novel combination of simple geometric concepts, formalized as shape metrics, and a clustering algorithm. Regions within heat waves where conditions are expected to pose a significant risk to human and environmental health will be a key focus. Using statistical models and the concept of critical climate periods these regions will be linked to geophysical variables including atmospheric and land surface variables that influence surface air temperature and humidity. The two main research questions are: (1) what changes can be observed in spatiotemporal characteristics of heat waves, such as size and shape? and (2) what are the relationships among statistical characteristics of heat waves (frequency, magnitude, duration), spatial characteristics of heat waves (size, shape, connectivity), and geophysical variables?  The overarching goal of the project is to develop models to predict these heat wave characteristics. This research project will focus on heat waves in the continental United States, with implications for managing heat wave impacts globally.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>10/28/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>10/28/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.050, 47.075</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2203235</AwardID>
+<Investigator>
+<FirstName>David</FirstName>
+<LastName>Keellings</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>David Keellings</PI_FULL_NAME>
+<EmailAddress>nessie@ufl.edu</EmailAddress>
+<PI_PHON>3523923516</PI_PHON>
+<NSF_ID>000630871</NSF_ID>
+<StartDate>10/28/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>University of Florida</Name>
+<CityName>GAINESVILLE</CityName>
+<ZipCode>326112002</ZipCode>
+<PhoneNumber>3523923516</PhoneNumber>
+<StreetAddress>1 UNIVERSITY OF FLORIDA</StreetAddress>
+<StreetAddress2/>
+<CountryName>United States</CountryName>
+<StateName>Florida</StateName>
+<StateCode>FL</StateCode>
+<CONGRESSDISTRICT>03</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>FL03</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>969663814</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>UNIVERSITY OF FLORIDA</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>159621697</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[University of Florida]]></Name>
+<CityName/>
+<StateCode>FL</StateCode>
+<ZipCode>326112002</ZipCode>
+<StreetAddress/>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>Florida</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>03</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>FL03</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>1352</Code>
+<Text>Geography and Spatial Sciences</Text>
+</ProgramElement>
+<ProgramElement>
+<Code>1525</Code>
+<Text>Physical &amp; Dynamic Meteorology</Text>
+</ProgramElement>
+<ProgramElement>
+<Code>5740</Code>
+<Text>Climate &amp; Large-Scale Dynamics</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>1303</Code>
+<Text>CLIMATE MODELING &amp; PREDICTION</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>1352</Code>
+<Text>GEOGRAPHY AND SPATIAL SCIENCES</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>1525</Code>
+<Text>PHYSICAL &amp; DYNAMIC METEOROLOGY</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>4444</Code>
+<Text>INTERDISCIPLINARY PROPOSALS</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>5740</Code>
+<Text>CLIMATE &amp; LARGE-SCALE DYNAMICS</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>9150</Code>
+<Text>EXP PROG TO STIM COMP RES</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>9178</Code>
+<Text>UNDERGRADUATE EDUCATION</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>9179</Code>
+<Text>GRADUATE INVOLVEMENT</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>9278</Code>
+<Text>HUMAN DIMENSIONS OF GLOBAL CHANGE</Text>
+</ProgramReference>
+<FUND_OBLG>2019~135988</FUND_OBLG>
+</Award>
+</rootTag>

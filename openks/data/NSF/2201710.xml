@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>CAREER: Teaching Machines to Recognize Complex Visual Concepts in Images through Compositionality</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>11/30/2026</AwardExpirationDate>
+<AwardTotalIntnAmount>499760.00</AwardTotalIntnAmount>
+<AwardAmount>149760</AwardAmount>
+<AwardInstrument>
+<Value>Continuing Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>05020000</Code>
+<Directorate>
+<Abbreviation>CSE</Abbreviation>
+<LongName>Direct For Computer &amp; Info Scie &amp; Enginr</LongName>
+</Directorate>
+<Division>
+<Abbreviation>IIS</Abbreviation>
+<LongName>Div Of Information &amp; Intelligent Systems</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Jie Yang</SignBlockName>
+<PO_EMAI>jyang@nsf.gov</PO_EMAI>
+<PO_PHON>7032924768</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>Modern computational systems for image recognition can be taught to detect objects among large sets of categories. However, in order to teach machines to recognize every new category, human operators need to annotate a large number of images with categorical labels. In practice many applications require a custom set of categories. For instance, a visual recognition model for detecting different types of furniture for an e-commerce application might require very specific categories such as ‘rocking chair’, ‘swivel chair’, ‘accent chair’, or ‘swivel accent chair’. Even an expert domain user that has a good idea in mind for what should be the visual characteristics that are important to recognize in each type of chair, would have to teach the system through annotating images individually. The goal of this project is to enable richer modes of interaction where ‘machine teachers’ would be able to guide the image recognition through direct feedback on the types of visual characteristics that are important for each new category. To this end we plan to exploit principles of compositionality where new categories can be defined based on basic concepts that are easier to recognize. The project will integrate research with the education and involve undergraduate students from underrepresented groups in the research.&lt;br/&gt;&lt;br/&gt;This project will devise new models that learn to recognize visual concepts compositionally by first discovering and then learning to recognize visual primitives that are shared across many classes. This process will also be tailored to maximize the utility in an environment where a user can guide the model through natural interactions including the use of language and direct manipulation through a visual interface. The project will be 1) developing methods to compositionally and interactively learn from textual descriptions 2) proposing methods to automatically discover primitives that are composable across categories, and 3) proposing models that can support interactions even after deployment. These three research aims will be complemented by a comprehensive evaluation plan, a public platform that exposes our methods in an interactive environment, and broadening participation activities. This research effort will bring novel designs in visual recognition models that offer people more expressive ways for guiding them and training them.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>11/09/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/09/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.070</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2201710</AwardID>
+<Investigator>
+<FirstName>Vicente</FirstName>
+<LastName>Ordonez</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Vicente Ordonez</PI_FULL_NAME>
+<EmailAddress>vo2m@virginia.edu</EmailAddress>
+<PI_PHON>4349822225</PI_PHON>
+<NSF_ID>000727654</NSF_ID>
+<StartDate>11/09/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>William Marsh Rice University</Name>
+<CityName>Houston</CityName>
+<ZipCode>770051827</ZipCode>
+<PhoneNumber>7133484820</PhoneNumber>
+<StreetAddress>6100 MAIN ST</StreetAddress>
+<StreetAddress2/>
+<CountryName>United States</CountryName>
+<StateName>Texas</StateName>
+<StateCode>TX</StateCode>
+<CONGRESSDISTRICT>02</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>TX02</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>050299031</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>WILLIAM MARSH RICE UNIVERSITY</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>050299031</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[William Marsh Rice University]]></Name>
+<CityName/>
+<StateCode>TX</StateCode>
+<ZipCode>770051827</ZipCode>
+<StreetAddress/>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>Texas</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>02</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>TX02</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>7495</Code>
+<Text>Robust Intelligence</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>1045</Code>
+<Text>CAREER-Faculty Erly Career Dev</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>7495</Code>
+<Text>ROBUST INTELLIGENCE</Text>
+</ProgramReference>
+<FUND_OBLG>2021~149760</FUND_OBLG>
+</Award>
+</rootTag>

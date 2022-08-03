@@ -1,0 +1,61 @@
+# 11985482	the#0 role#1 of#2 immune#3 reconstitution#4 in#5 cytomegalovirus#6 infection#7 .#8 
+
+c1:[{immune_reconstitution#3:role#1},in#5,cytomegalovirus_infection#6]
+stmt1 = c1
+
+# 11985482	cytomegalovirus#0 causes#1 high#2 morbidity#3 and#4 mortality#5 in#6 immunocompromised#7 patients#8 .#9 
+
+f1:[cytomegalovirus#0,causes#1,high_morbidity#2]
+f2:[cytomegalovirus#0,causes#1,mortality#5]
+c2:[high_morbidity#2,in#6,immunocompromised_patients#7]
+c3:[mortality#5,in#6,immunocompromised_patients#7]
+stmt2 = f1 f2 c2 c3
+
+# 11985482	the#0 host#1 immune#2 response#3 to#4 cmv#5 comprises#6 specific#7 and#8 nonspecific#9 cellular#10 and#11 humoral#12 responses#13 ,#14 but#15 current#16 knowledge#17 supports#18 a#19 protective#20 role#21 only#22 for#23 cell-mediated#24 immune#25 responses#26 .#27 
+
+f3:[host_immune_response#1,comprises#6,specific_and_nonspecific_cellular#7]
+f4:[host_immune_response#1,comprises#6,humoral_responses#12]
+f5:[current_knowledge#16,supports#18,protective_role#20]
+c4:[host_immune_response#1,to#4,cmv#5]
+c5:[current_knowledge#16,for#23,cell-mediated_immune_responses#24]
+stmt3 = f3 f4 f5 c4 c5
+
+# 11985482	although#0 complete#1 cmv#2 eradication#3 is#4 unusual#5 even#6 in#7 immunocompetent#8 hosts#9 ,#10 its#11 morbidity#12 can#13 be#14 limited#15 by#16 cmv-specific#17 cd8+#18 cytotoxic#19 lymphocytes#20 supported#21 by#22 cd4+-mediated#23 t#24 lymphocyte#25 helper#26 activity#27 .#28 
+
+f6:[complete_cmv_eradication#1,is_unusual_even_in#4,immunocompetent_hosts#8]
+f7:[{complete_cmv_eradication#1:morbidity#12},can_be_limited_by#13,cmv-specific_cd8+_cytotoxic_lymphocytes#17]
+c6:[cmv-specific_cd8+_cytotoxic_lymphocytes#17,supported_by#21,cd4+-mediated_t_lymphocyte_helper_activity#23]
+stmt4 = f6 f7 c6
+
+# 11985482	in#0 patients#1 with#2 congenital#3 or#4 acquired#5 deficiencies#6 of#7 cell-mediated#8 immunity#9 ,#10 recovery#11 of#12 cd4+#13 lymphocyte#14 numbers#15 and/or#16 function#17 coincides#18 with#19 cessation#20 of#21 cmv-associated#22 morbidity#23 .#24 
+
+f8:[{cd4+_lymphocyte_numbers_and/or_function#13:recovery#11},coincides_with#18,{cmv-associated_morbidity#22:cessation#20}]
+c7:[NIL,in#0,patients#1]
+c8:[patients#1,with#2,congenital#3]
+c9:[patients#1,acquired#5,{cell-mediated_immunity#8:deficiencies#6}]
+stmt5 = f8 c7 c8 c9
+
+# 11985482	however#0 ,#1 an#2 immunological#3 test#4 that#5 can#6 predict#7 protection#8 against#9 cmv#10 disease#11 across#12 different#13 types#14 of#15 high-risk#16 patients#17 is#18 not#19 yet#20 available#21 .#22 
+
+f9:[immunological_test#3,is_not_yet_available#18,NIL]
+c10:[immunological_test#3,can_predict#6,protection#8]
+c11:[protection#8,against#9,cmv_disease#10]
+c12:[cmv_disease#10,across#12,{high-risk_patients#16:different_types#13}]
+stmt6 = f9 c10 c11 c12
+
+# 11985482	in#0 recent#1 years#2 ,#3 the#4 introduction#5 of#6 antivirals#7 active#8 against#9 cmv#10 has#11 improved#12 the#13 outcome#14 of#15 cmv#16 disease#17 .#18 
+
+f10:[{antivirals_active#7:introduction#5},has_improved#11,{cmv_disease#16:outcome#14}]
+c13:[NIL,in#0,{NIL#-1:recent_years#1}]
+c14:[{antivirals_active#7:introduction#5},against#9,cmv#10]
+stmt7 = f10 c13 c14
+
+# 11985482	in#0 addition#1 ,#2 there#3 is#4 a#5 continuous#6 effort#7 to#8 develop#9 cmv-specific#10 immune-based#11 therapies#12 including#13 vaccines#14 and#15 immune#16 modulators#17 such#18 as#19 cytokines#20 ,#21 which#22 may#23 be#24 of#25 supplemental#26 benefit#27 in#28 the#29 control#30 of#31 cmv#32 disease#33 .#34 
+
+f11:[{NIL#-1:effort#7},to_develop#8,cmv-specific_immune-based_therapies#10]
+f12:[immune_modulators#16,such_as#18,cytokines#20]
+c15:[cmv-specific_immune-based_therapies#10,including#13,vaccines#14]
+c16:[cmv-specific_immune-based_therapies#10,including#13,immune_modulators#16]
+c17:[immune_modulators#16,may_be_of_supplemental_benefit_in#23,{cmv_disease#32:control#30}]
+stmt8 = f11 f12 c15 c16 c17
+

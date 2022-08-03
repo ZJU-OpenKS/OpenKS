@@ -1,0 +1,11 @@
+O 0
+B-c1C 1
+B-c2P 2
+B-c3C 3
+B-c1A 4
+B-c3A 5
+I-c1C 6
+I-c2P 7
+I-c3C 8
+I-c1A 9
+I-c3A 10

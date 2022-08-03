@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>CRII: NeTS: Rethinking Flow Control for Cloud Data Center Networks</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>04/30/2022</AwardExpirationDate>
+<AwardTotalIntnAmount>175000.00</AwardTotalIntnAmount>
+<AwardAmount>114833</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>05050000</Code>
+<Directorate>
+<Abbreviation>CSE</Abbreviation>
+<LongName>Direct For Computer &amp; Info Scie &amp; Enginr</LongName>
+</Directorate>
+<Division>
+<Abbreviation>CNS</Abbreviation>
+<LongName>Division Of Computer and Network Systems</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Darleen Fisher</SignBlockName>
+<PO_EMAI>dlfisher@nsf.gov</PO_EMAI>
+<PO_PHON>7032928950</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>Data loss is a significant problem in today's data center networks.  Popular websites like Google, Amazon, and Facebook are built on top of data center applications that generate responses to incoming requests from end-users on the Internet.  In these applications, the work required to generate a response is distributed across a large number of servers (computers).  Unfortunately, these communication patterns lead to frequent events of data loss in the network.  Because data loss in the network must be recovered through retransmissions, it can dramatically increase communication latency (the time delay required for information to travel across a network).  This can ultimately translate into a loss of revenue for these companies.  Similarly, data loss is also a limiting factor on the adoption of new technologies like Remote Direct Memory Access (RDMA).  RDMA is important because it can reduce latency and increase throughput, and this can improve the performance of data center applications.  However, despite its benefits, RDMA is not seeing widespread adoption because RDMA Network Interface Cards (NICs) fail to perform well when there is data loss in the network.&lt;br/&gt;&lt;br/&gt;The goal of our proposed research is twofold: 1) to reduce application latency, and 2) to enable important new technologies like RDMA.  This project will accomplish its goals through the design of a new flow control protocol, namely a protocol that prevents the network from dropping data.  The plan is to create a problem-free lossless network that does not drop data due to congestion and is also guaranteed to provide better or equal performance to an equivalent network that does drop data. Specifically, this project seeks to develop: new protocols for rapidly detecting and then communicating per-flow congestion information between switches and Network Interface Cards (NICs); novel algorithms for approximating per-flow queuing on currently available programmable networking hardware; and new techniques for building lossless overlay networks to support legacy devices.  The software from this project will be made broadly available for public reuse, and the researcher plans to integrate the proposed research into courses at the University of Illinois at Chicago.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>10/27/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>10/27/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.070</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2200783</AwardID>
+<Investigator>
+<FirstName>Brent</FirstName>
+<LastName>Stephens</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Brent Stephens</PI_FULL_NAME>
+<EmailAddress>brent@cs.utah.edu</EmailAddress>
+<PI_PHON>8015818224</PI_PHON>
+<NSF_ID>000781448</NSF_ID>
+<StartDate>10/27/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>University of Utah</Name>
+<CityName>SALT LAKE CITY</CityName>
+<ZipCode>841128930</ZipCode>
+<PhoneNumber>8015816903</PhoneNumber>
+<StreetAddress>75 S 2000 E</StreetAddress>
+<StreetAddress2><![CDATA[Second Floor]]></StreetAddress2>
+<CountryName>United States</CountryName>
+<StateName>Utah</StateName>
+<StateCode>UT</StateCode>
+<CONGRESSDISTRICT>02</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>UT02</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>009095365</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>UNIVERSITY OF UTAH, THE</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>009095365</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[University of Utah]]></Name>
+<CityName/>
+<StateCode>UT</StateCode>
+<ZipCode>841128930</ZipCode>
+<StreetAddress/>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>Utah</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>02</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>UT02</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>026Y</Code>
+<Text>CRII CISE Research Initiation</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>7363</Code>
+<Text>RES IN NETWORKING TECH &amp; SYS</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>8228</Code>
+<Text>CISE Resrch Initiatn Initiatve</Text>
+</ProgramReference>
+<FUND_OBLG>2019~114833</FUND_OBLG>
+</Award>
+</rootTag>

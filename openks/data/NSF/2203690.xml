@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>Ecological Change in a Mammalian Community in Extreme Southern Patagonia</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>10/31/2022</AwardExpirationDate>
+<AwardTotalIntnAmount>220314.00</AwardTotalIntnAmount>
+<AwardAmount>152758</AwardAmount>
+<AwardInstrument>
+<Value>Continuing Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>04040000</Code>
+<Directorate>
+<Abbreviation>SBE</Abbreviation>
+<LongName>Direct For Social, Behav &amp; Economic Scie</LongName>
+</Directorate>
+<Division>
+<Abbreviation>BCS</Abbreviation>
+<LongName>Division Of Behavioral and Cognitive Sci</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Rebecca Ferrell</SignBlockName>
+<PO_EMAI>rferrell@nsf.gov</PO_EMAI>
+<PO_PHON>7032927850</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>This interdisciplinary research effort among biological anthropologists, vertebrate paleontologists, and geologists, will study how mammals adapted to their changing environment during the Miocene epoch (23-5.3 million years ago). The extraordinary preservation of primate and sloth fossils from the Mid-Miocene Santa Cruz Formation allows investigation of diet, body size, locomotor patterns, and community ecology before and after a peak in global temperature. Today, these groups in South America are primarily herbivorous and wholly tree-dwelling; they are also vulnerable to habitat destruction and shifts in weather patterns because they depend on warm, wet forests. Understanding how these groups adapted to major climatic shifts in the past will advance scientific knowledge about the effects of ecological change on vulnerable mammalian groups more generally. The project also will foster international collaborations and support graduate student training, public science outreach, and K-12 science outreach including the development of teaching kits. &lt;br/&gt;&lt;br/&gt;This project will focus on primates and sloths living before and after a major spike in global temperature (Mid Miocene Climatic Optimum). Previously, most of the work on the Santa Cruz Formation of Argentina has focused on the rich field sites of the (older) Lower Member of the formation. This project provides an opportunity to study the younger sites of the Upper Member, which coincide with the temperature maximum. Previous ecological reconstructions suggested that the habitats of the Lower Member were warmer, wetter, more closed forests and that those of the Upper Member were open woodland. However, new dating of the fossil sites suggests that global temperature was higher during the time of the Upper Member, casting doubt on these earlier ecological reconstructions. This project will focus on gathering new fossil samples from known Upper Member localities and on finding new localities. It will also include new geological research to improve correlations across localities and it will include an in-depth analysis of plant remains to help with ecological reconstruction. Mammalian comparisons between members will focus on three key aspects of sloth and primate biology: body mass reconstruction, dietary inference, and locomotor inference. Evidence for differences in these aspects of biology will consist of the size and morphology of teeth and long bones. Researchers will use cutting-edge techniques to quantify tooth wear and topography as well as long bone dimensions and cross-sectional properties.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>11/03/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/03/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.075</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2203690</AwardID>
+<Investigator>
+<FirstName>Jonathan</FirstName>
+<LastName>Perry</LastName>
+<PI_MID_INIT>M</PI_MID_INIT>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Jonathan M Perry</PI_FULL_NAME>
+<EmailAddress>jperry31@jhmi.edu</EmailAddress>
+<PI_PHON>4109557034</PI_PHON>
+<NSF_ID>000254720</NSF_ID>
+<StartDate>11/03/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>Western University of Health Sciences</Name>
+<CityName>Pomona</CityName>
+<ZipCode>917661854</ZipCode>
+<PhoneNumber>9094697040</PhoneNumber>
+<StreetAddress>309 E. 2nd Street</StreetAddress>
+<StreetAddress2><![CDATA[College Plaza]]></StreetAddress2>
+<CountryName>United States</CountryName>
+<StateName>California</StateName>
+<StateCode>CA</StateCode>
+<CONGRESSDISTRICT>35</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>CA35</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>093373694</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>WESTERN UNIVERSITY OF HEALTH SCIENCES</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>093373694</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[Western University of Health Sciences]]></Name>
+<CityName>Pomona</CityName>
+<StateCode>CA</StateCode>
+<ZipCode>917661854</ZipCode>
+<StreetAddress><![CDATA[309 E. 2nd Street]]></StreetAddress>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>California</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>35</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>CA35</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>1392</Code>
+<Text>Biological Anthropology</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>1392</Code>
+<Text>Biological Anthropology</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>9179</Code>
+<Text>GRADUATE INVOLVEMENT</Text>
+</ProgramReference>
+<FUND_OBLG>2018~14410</FUND_OBLG>
+<FUND_OBLG>2019~138348</FUND_OBLG>
+</Award>
+</rootTag>

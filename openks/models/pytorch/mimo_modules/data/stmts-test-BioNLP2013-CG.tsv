@@ -1,0 +1,771 @@
+===== 123456 stmt1 =====
+WORD	Positron	emission	tomography	in	a	case	of	intracranial	hemangiopericytoma	.
+POSTAG	NNP	NN	NN	IN	DT	NN	IN	JJ	NN	.
+CAP	O	O	O	O	O	O	O	B-C	I-C	O
+c1	B-c1C	I-c1C	I-c1C	B-c2P	I-c2P	I-c2P	I-c2P	B-c3C	I-c3C	O
+===== 123456 stmt2 =====
+WORD	Due	to	the	low	prevalence	of	hemangiopericytomas	(	HPCs	)	,	data	on	the	biophysiological	characteristics	of	this	tumor	are	rare	.
+POSTAG	JJ	TO	DT	JJ	NN	IN	NN	(	NNP	)	,	NNS	IN	DT	JJ	NNS	IN	DT	NN	VBP	JJ	.
+CAP	O	O	O	O	O	O	B-C	O	B-C	O	O	O	O	O	O	O	O	O	B-C	O	O	O
+f1	O	O	O	O	O	O	O	O	O	O	O	B-f1A	O	O	O	O	O	O	O	B-f2P	I-f2P	O
+c2	B-c2P	I-c2P	O	B-c3A	I-c3A	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c3	B-c2P	I-c2P	O	B-c3A	I-c3A	O	O	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+c4	O	O	O	O	O	O	O	O	O	O	O	B-c1A	B-c2P	O	B-c3A	I-c3A	O	O	B-c3C	O	O	O
+===== 123456 stmt3 =====
+WORD	Positron	emission	tomography	(	PET	)	demonstrated	a	sixfold	increased	uptake	of	[	11C	]	methionine	and	hyperperfusion	in	the	HPC	,	whereas	glucose	utilization	was	decreased	in	this	area	.
+POSTAG	NNP	NN	NN	(	NNP	)	VBD	DT	NN	VBD	NN	IN	$	CD	NNP	NN	CC	NN	IN	DT	NNP	,	IN	JJ	NN	VBD	VBN	IN	DT	NN	.
+CAP	O	O	O	O	O	O	O	O	O	O	O	O	B-C	I-C	I-C	I-C	O	O	O	O	B-C	O	O	B-C	O	O	O	O	O	O	O
+f2	B-f1C	I-f1C	I-f1C	O	O	O	B-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f3	O	O	O	O	O	O	O	O	B-f1C	B-f2P	B-f3A	O	B-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f4	O	O	O	O	O	O	O	O	B-f1C	B-f2P	B-f3A	O	O	O	O	O	O	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+f5	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	O	B-f3A	O
+c5	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	O	B-c3C	O	O	O	O	O	O	O	O	O	O
+===== 123456 stmt4 =====
+WORD	This	low	glucose	utilization	is	in	contrast	to	the	high	[	11C	]	methionine	uptake	and	the	malignancy	of	these	tumors	.
+POSTAG	DT	JJ	JJ	NN	VBZ	IN	NN	TO	DT	JJ	NN	CD	JJ	NN	NN	CC	DT	NN	IN	DT	NNS	.
+CAP	O	O	B-C	O	O	O	O	O	O	O	B-C	I-C	I-C	I-C	O	O	O	O	O	O	B-C	O
+f6	O	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	O	B-f3A	I-f3A	I-f3A	I-f3A	I-f3A	I-f3A	O	O	O	O	O	B-f3C	O
+f7	O	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	B-f3A	O	O	B-f3C	O
+===== 123456 stmt5 =====
+WORD	The	characteristics	of	HPCs	in	PET	described	herein	for	the	first	time	offer	additional	diagnostic	criteria	and	may	help	especially	to	differentiate	these	tumors	from	meningiomas	.
+POSTAG	DT	NNS	IN	NNP	IN	NNP	VBD	NN	IN	DT	JJ	NN	VBP	JJ	JJ	NNS	CC	MD	VB	RB	TO	VB	DT	NNS	IN	NN	.
+CAP	O	O	O	B-C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-C	O	B-C	O
+f8	O	B-f1A	O	B-f1C	O	O	O	O	O	O	O	O	B-f2P	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O
+f9	O	B-f1A	O	B-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O	B-f3C	O	O	O
+c6	O	O	O	B-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c7	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	B-c3C	O
+===== 123456 stmt6 =====
+WORD	Thyrotropin	receptor	:	a	role	for	thyroid	tumourigenesis	?
+POSTAG	NNP	NN	:	DT	NN	IN	JJ	NN	.
+CAP	B-C	I-C	O	O	O	O	B-C	O	O
+f10	B-f1C	I-f1C	O	B-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O
+===== 123456 stmt7 =====
+WORD	Human	thyroid	tumours	represent	an	example	of	the	interplay	of	genetic	and	non	genetic	carcinogenesis	.
+POSTAG	NNP	NN	NN	VBP	DT	NN	IN	DT	NN	IN	JJ	CC	JJ	JJ	NN	.
+CAP	B-C	B-C	I-C	O	O	O	O	O	O	O	O	O	O	O	O	O
+f11	B-f1C	I-f1C	I-f1C	B-f2P	O	O	O	O	B-f3A	O	B-f3C	O	O	O	O	O
+f12	B-f1C	I-f1C	I-f1C	B-f2P	O	O	O	O	B-f3A	O	O	O	B-f3C	I-f3C	I-f3C	O
+===== 123456 stmt8 =====
+WORD	Recently	,	genetic	abnormalities	in	the	elements	of	the	Thyrotropin	receptor	(	TSH	-	R	)	dependent	cAMP	regulatory	cascade	have	been	found	to	be	involved	both	in	benign	and	malignant	thyroid	tumours	.
+POSTAG	RB	,	JJ	NNS	IN	DT	NNS	IN	DT	NNP	NN	(	NNP	:	NN	)	NN	NN	JJ	NN	VBP	VBN	VBN	TO	VB	VBN	DT	IN	NN	CC	JJ	NN	NN	.
+CAP	O	O	O	O	O	O	O	O	O	B-C	I-C	O	B-C	I-C	I-C	O	O	B-C	O	O	O	O	O	O	O	O	O	O	B-C	O	B-C	I-C	I-C	O
+f13	O	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	B-f3C	O	O	O	O	O
+f14	O	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O	O	B-f3C	I-f3C	I-f3C	O
+c8	O	O	B-c1C	I-c1C	B-c2P	O	B-c3A	O	O	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 123456 stmt9 =====
+WORD	The	presence	of	activating	mutations	has	been	demonstrated	in	the	TSH	-	R	gene	as	well	as	in	the	Gs	alpha	protein	gene	in	thyroid	toxic	adenoma	resulting	in	the	constitutive	activation	of	the	cAMP	pathway	and	it	has	been	hypothesised	that	these	genetic	alterations	may	play	a	causative	role	in	the	disease	.
+POSTAG	DT	NN	IN	VBG	NNS	VBZ	VBN	VBN	IN	DT	NNP	:	NN	NN	RB	RB	IN	IN	DT	NNP	NN	NN	NN	IN	JJ	NN	NN	VBG	IN	DT	JJ	NN	IN	DT	NN	NN	CC	PRP	VBZ	VBN	VBN	IN	DT	JJ	NNS	MD	VB	DT	JJ	NN	IN	DT	NN	.
+CAP	O	O	O	O	O	O	O	O	O	O	B-C	I-C	I-C	O	O	O	O	O	O	B-C	I-C	I-C	O	O	B-C	I-C	I-C	O	O	O	O	O	O	O	B-C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f15	O	B-f1A	O	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	O	B-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f16	O	B-f1A	O	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	B-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f17	O	B-f1A	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	O	B-f3A	I-f3A	O	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f18	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O
+f19	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	O	B-f3C	I-f3C	O	O	O	O
+c9	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c10	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	O	B-c3C	O
+===== 123456 stmt10 =====
+WORD	However	,	recent	observations	suggest	more	caution	in	accepting	such	a	hypothesis	.
+POSTAG	RB	,	JJ	NNS	VBP	JJR	NN	IN	VBG	PDT	DT	NN	.
+CAP	O	O	O	O	O	O	O	O	O	O	O	O	O
+f20	O	O	B-f1A	I-f1A	B-f2P	O	O	O	O	O	O	O	O
+f21	O	O	B-f1A	I-f1A	O	O	B-f1C	B-f2P	I-f2P	O	O	B-f3A	O
+===== 123456 stmt11 =====
+WORD	The	presence	of	activating	TSH	-	R	mutations	has	also	been	demonstrated	in	differentiated	thyroid	carcinomas	.
+POSTAG	DT	NN	IN	VBG	NNP	:	NN	NNS	VBZ	RB	VBN	VBN	IN	JJ	NN	NN	.
+CAP	O	O	O	O	B-C	I-C	I-C	O	O	O	O	O	O	O	B-C	I-C	O
+f22	O	B-f1A	O	B-f1C	I-f1C	I-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	I-f3C	O
+===== 123456 stmt12 =====
+WORD	At	present	,	the	percentage	of	such	a	modification	is	low	,	unless	referred	to	selected	series	of	tumours	.
+POSTAG	IN	JJ	,	DT	NN	IN	PDT	DT	NN	VBZ	JJ	,	IN	VBN	TO	VBN	NN	IN	NNS	.
+CAP	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-C	O
+f23	O	O	O	O	B-f1A	O	O	O	B-f1C	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O
+c11	O	O	O	O	O	O	O	O	O	O	O	O	B-c2P	I-c2P	I-c2P	O	O	O	B-c3C	O
+===== 123456 stmt13 =====
+WORD	Activating	mutations	of	the	TSH	-	R	gene	have	been	detected	in	a	group	of	differentiated	carcinomas	with	high	basal	adenylyl	cyclase	activity	,	and	in	a	few	cases	of	hyperfunctioning	thyroid	carcinoma	.
+POSTAG	VBG	NNS	IN	DT	NNP	:	NN	NN	VBP	VBN	VBN	IN	DT	NN	IN	VBN	NN	IN	JJ	NN	JJ	NN	NN	,	CC	IN	DT	JJ	NNS	IN	VBG	JJ	NN	.
+CAP	O	O	O	O	B-C	I-C	I-C	O	O	O	O	O	O	O	O	O	B-C	O	O	O	B-C	I-C	O	O	O	O	O	O	O	O	O	B-C	I-C	O
+f24	B-f1A	I-f1A	O	O	B-f1C	I-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	O	O	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f25	B-f1A	I-f1A	O	O	B-f1C	I-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f3C	I-f3C	I-f3C	O
+c12	B-c1A	I-c1A	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O
+===== 123456 stmt14 =====
+WORD	However	,	the	role	of	the	TSH	-	R	-	related	cAMP	pathway	alterations	in	thyroid	transformation	remains	to	be	elucidated	.
+POSTAG	RB	,	DT	NN	IN	DT	NNP	:	NNP	:	JJ	NN	NN	NNS	IN	JJ	NN	VBZ	TO	VB	VBN	.
+CAP	O	O	O	O	O	O	B-C	I-C	I-C	I-C	O	B-C	O	O	O	B-C	O	O	O	O	O	O
+f26	O	O	O	B-f1A	O	O	B-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	O
+c13	O	O	O	B-c1A	O	O	B-c1C	I-c1C	I-c1C	I-c1C	I-c1C	I-c1C	I-c1C	I-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O	O
+===== 123456 stmt15 =====
+WORD	In	this	review	,	the	role	of	TSH	-	R	gene	alterations	in	benign	and	malignant	thyroid	neoplasia	is	examined	.
+POSTAG	IN	DT	NN	,	DT	NN	IN	NNP	:	NNP	NN	NNS	IN	NN	CC	JJ	NN	NN	VBZ	VBN	.
+CAP	O	O	O	O	O	O	O	B-C	I-C	I-C	O	O	O	B-C	O	B-C	I-C	I-C	O	O	O
+f27	O	O	O	O	O	B-f1A	O	B-f1C	I-f1C	I-f1C	I-f1C	I-f1C	O	O	O	O	O	O	B-f2P	I-f2P	O
+c14	O	O	O	O	O	B-c1A	O	B-c1C	I-c1C	I-c1C	I-c1C	I-c1C	B-c2P	B-c3C	O	O	O	O	O	O	O
+c15	O	O	O	O	O	B-c1A	O	B-c1C	I-c1C	I-c1C	I-c1C	I-c1C	B-c2P	O	O	B-c3C	I-c3C	I-c3C	O	O	O
+===== 123456 stmt16 =====
+WORD	Cooccurrence	of	reduced	expression	of	alpha	-	catenin	and	overexpression	of	p53	is	a	predictor	of	lymph	node	metastasis	in	early	gastric	cancer	.
+POSTAG	NN	IN	JJ	NN	IN	JJ	:	NN	CC	NN	IN	NN	VBZ	DT	NN	IN	JJ	JJ	NN	IN	JJ	JJ	NN	.
+CAP	O	O	O	O	O	B-C	I-C	I-C	O	O	O	B-C	O	O	O	O	B-C	I-C	O	O	O	B-C	I-C	O
+f28	O	O	B-f1A	I-f1A	O	B-f1C	I-f1C	I-f1C	O	O	O	O	B-f2P	O	B-f3A	O	B-f3C	I-f3C	I-f3C	O	O	O	O	O
+f29	O	O	O	O	O	O	O	O	O	B-f1A	O	B-f1C	B-f2P	O	B-f3A	O	B-f3C	I-f3C	I-f3C	O	O	O	O	O
+c16	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c3A	O	B-c1C	I-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O
+===== 123456 stmt17 =====
+WORD	BACKGROUND	AND	OBJECTIVES	:	Even	though	the	pathological	background	contributes	to	lymph	node	metastasis	,	the	biological	characteristics	of	tumors	have	also	gained	wide	attention	.
+POSTAG	NNP	CC	NNP	:	RB	IN	DT	JJ	NN	VBZ	TO	VB	JJ	NN	,	DT	JJ	NNS	IN	NNS	VBP	RB	VBN	JJ	NN	.
+CAP	O	O	O	O	O	O	O	O	O	O	O	B-C	I-C	O	O	O	O	O	O	B-C	O	O	O	O	O	O
+f30	O	O	O	O	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O
+c17	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	I-c1A	O	B-c1C	B-c2P	I-c2P	I-c2P	B-c3C	I-c3C	O
+===== 123456 stmt18 =====
+WORD	In	this	study	,	the	expression	of	the	cadherin	-	catenin	complex	and	p53	was	studied	in	early	gastric	cancer	.
+POSTAG	IN	DT	NN	,	DT	NN	IN	DT	NN	:	NN	NN	CC	NN	VBD	VBN	IN	JJ	JJ	NN	.
+CAP	O	O	O	O	O	O	O	O	B-C	O	B-C	O	O	B-C	O	O	O	O	B-C	I-C	O
+f31	O	O	O	O	O	B-f1A	O	O	B-f1C	I-f1C	I-f1C	I-f1C	O	O	B-f2P	I-f2P	I-f2P	B-f3C	I-f3C	I-f3C	O
+f32	O	O	O	O	O	B-f1A	O	O	O	O	O	O	O	B-f1C	B-f2P	I-f2P	I-f2P	B-f3C	I-f3C	I-f3C	O
+c18	B-c2P	O	B-c3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 123456 stmt19 =====
+WORD	Their	correlation	with	lymph	node	metastasis	and	the	predictability	of	lymph	node	metastases	,	by	combining	these	factors	,	were	also	discussed	.
+POSTAG	PRP$	NN	IN	JJ	JJ	NN	CC	DT	NN	IN	JJ	NN	NNS	,	IN	VBG	DT	NNS	,	VBD	RB	VBN	.
+CAP	O	O	O	B-C	I-C	O	O	O	O	O	B-C	I-C	O	O	O	O	O	O	O	O	O	O	O
+f33	O	B-f1A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O
+f34	O	O	O	O	O	O	O	O	B-f1A	O	B-f1C	I-f1C	I-f1C	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O
+c19	O	B-c1A	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c20	O	O	O	O	O	O	O	O	B-c1A	O	B-c1C	I-c1C	I-c1C	O	B-c2P	I-c2P	O	B-c3A	O	O	O	O	O
+===== 123456 stmt20 =====
+WORD	METHODS	:	One	hundred	and	one	specimens	obtained	from	surgery	were	studied	by	immunohistochemistry	using	monoclonal	anti	-	E	-	cadherin	,	anti	-	alpha	-	catenin	and	anti	-	p53	antibodies	.
+POSTAG	NN	:	CD	CD	CC	CD	NNS	VBN	IN	NN	VBD	VBN	IN	NN	VBG	JJ	NN	:	NNP	:	NN	,	SYM	:	NN	:	NN	CC	JJ	:	NN	NNS	.
+CAP	O	O	O	O	O	O	B-C	O	O	O	O	O	O	O	O	O	O	O	B-C	I-C	I-C	O	O	O	B-C	I-C	I-C	O	O	O	B-C	O	O
+f35	O	O	B-f3A	I-f3A	I-f3A	I-f3A	B-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f36	O	O	O	O	O	O	B-f1C	O	O	O	B-f2P	I-f2P	I-f2P	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c21	O	O	O	O	O	O	B-c1C	B-c2P	I-c2P	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c22	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O
+c23	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	O	O	O	O	O	O	O	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O
+c24	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c3C	I-c3C	I-c3C	I-c3C	O
+===== 123456 stmt21 =====
+WORD	RESULTS	:	Expression	of	E	-	cadherin	and	alpha	-	catenin	was	reduced	in	50	.	5	and	64	.	4	%	,	respectively	.
+POSTAG	NN	:	NN	IN	NNP	:	NN	CC	JJ	:	NN	VBD	VBN	IN	CD	.	CD	CC	CD	.	CD	NN	,	RB	.
+CAP	O	O	O	O	B-C	I-C	I-C	O	B-C	I-C	I-C	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f37	O	O	B-f1A	O	B-f1C	I-f1C	I-f1C	O	O	O	O	B-f2P	I-f2P	I-f2P	B-f3A	I-f3A	I-f3A	O	O	O	O	O	O	O	O
+f38	O	O	B-f1A	O	B-f1C	I-f1C	I-f1C	O	O	O	O	B-f2P	I-f2P	I-f2P	O	O	O	O	B-f3A	I-f3A	I-f3A	I-f3A	O	O	O
+f39	O	O	B-f1A	O	O	O	O	O	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	B-f3A	I-f3A	I-f3A	O	O	O	O	O	O	O	O
+f40	O	O	B-f1A	O	O	O	O	O	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	O	O	O	O	B-f3A	I-f3A	I-f3A	I-f3A	O	O	O
+===== 123456 stmt22 =====
+WORD	p53	protein	staining	was	positive	in	29	.	7	%	.
+POSTAG	NN	NN	NN	VBD	JJ	IN	CD	.	CD	NN	.
+CAP	B-C	O	O	O	O	O	O	O	O	O	O
+f41	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	B-f3A	I-f3A	I-f3A	I-f3A	O
+===== 123456 stmt23 =====
+WORD	There	was	a	significant	correlation	between	E	-	cadherin	and	alpha	-	catenin	expression	,	but	no	correlation	was	found	between	p53	expression	and	E	-	cadherin	or	alpha	-	catenin	expression	.
+POSTAG	EX	VBD	DT	JJ	NN	IN	NNP	:	NN	CC	JJ	:	NN	NN	,	CC	DT	NN	VBD	VBN	IN	NN	NN	CC	NNP	:	NN	CC	VB	:	NN	NN	.
+CAP	O	O	O	O	O	O	B-C	I-C	I-C	O	B-C	I-C	I-C	O	O	O	O	O	O	O	O	B-C	O	O	B-C	I-C	I-C	O	B-C	I-C	I-C	O	O
+f42	O	B-f2P	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f43	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f44	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	B-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O
+f45	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	B-f2P	I-f2P	I-f2P	O	O	O	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O
+f46	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	B-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	B-f3C	I-f3C	I-f3C	I-f3C	O
+c25	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c26	O	O	O	B-c1C	I-c1C	B-c2P	O	O	O	O	B-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 123456 stmt24 =====
+WORD	A	reduction	in	alpha	-	catenin	expression	and	p53	overexpression	correlated	to	lymph	node	metastases	,	respectively	.
+POSTAG	DT	NN	IN	JJ	:	NN	NN	CC	NN	NN	VBD	TO	VB	JJ	NNS	,	RB	.
+CAP	O	O	O	B-C	I-C	I-C	O	O	B-C	O	O	O	B-C	I-C	O	O	O	O
+f47	O	B-f1A	O	O	O	O	O	O	O	O	B-f2P	I-f2P	B-f3C	I-f3C	I-f3C	O	O	O
+c27	O	B-c1A	B-c2P	B-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O
+c28	O	B-c1A	B-c2P	O	O	O	O	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O
+===== 123456 stmt25 =====
+WORD	Multivariate	analysis	showed	that	cooccurrence	of	reduced	expression	of	alpha	-	catenin	and	overexpression	of	p53	was	an	independent	factor	indicating	lymph	node	metastases	.
+POSTAG	NNP	NN	VBD	IN	NN	IN	JJ	NN	IN	JJ	:	NN	CC	NN	IN	NN	VBD	DT	JJ	NN	VBG	JJ	JJ	NNS	.
+CAP	O	O	O	O	O	O	O	O	O	B-C	I-C	I-C	O	O	O	B-C	O	O	O	O	O	B-C	I-C	O	O
+f48	B-f1C	I-f1C	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f49	O	O	O	O	B-f1A	O	O	O	O	O	O	O	O	O	O	O	B-f2P	O	B-f3A	I-f3A	O	O	O	O	O
+c29	O	O	O	O	B-c1A	B-c2P	B-c3A	I-c3A	O	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+c30	O	O	O	O	B-c1A	B-c2P	O	O	O	O	O	O	O	B-c3A	O	B-c3C	O	O	O	O	O	O	O	O	O
+c31	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	I-c1A	B-c2P	B-c3C	I-c3C	I-c3C	O
+===== 123456 stmt26 =====
+WORD	CONCLUSION	:	A	study	of	both	alpha	-	catenin	and	p53	expression	may	be	helpful	to	predict	lymph	node	metastases	in	early	gastric	cancer	.
+POSTAG	NN	:	DT	NN	IN	DT	JJ	:	NN	CC	NN	NN	MD	VB	JJ	TO	VB	JJ	NN	NNS	IN	JJ	JJ	NN	.
+CAP	O	O	O	O	O	O	B-C	I-C	I-C	O	B-C	O	O	O	O	O	O	B-C	I-C	O	O	O	B-C	I-C	O
+f50	O	O	O	B-f1A	O	O	B-f1C	I-f1C	I-f1C	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	I-f3C	O	O	O	O	O
+f51	O	O	O	B-f1A	O	O	O	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	I-f3C	O	O	O	O	O
+c32	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O
+===== 123456 stmt27 =====
+WORD	Proto	-	oncogene	N	-	myc	promoter	is	down	regulated	by	the	Wilms	'	tumor	suppressor	gene	WT1	.
+POSTAG	NNP	:	NN	NNP	:	NN	NN	VBZ	RB	VBN	IN	DT	NNP	POS	NN	NN	NN	NNP	.
+CAP	O	O	O	B-C	I-C	I-C	O	O	O	O	O	O	B-C	I-C	I-C	O	O	B-C	O
+f52	B-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	O	B-f3C	I-f3C	I-f3C	I-f3C	I-f3C	I-f3C	O
+===== 123456 stmt28 =====
+WORD	The	Wilms	'	tumor	1	(	WT1	)	gene	is	a	tumor	suppressor	gene	that	encodes	a	zinc	-	finger	transcription	factor	.
+POSTAG	DT	NNP	POS	NN	CD	(	NNP	)	NN	VBZ	DT	NN	NN	NN	WDT	VBZ	DT	NN	:	NN	NN	NN	.
+CAP	O	B-C	I-C	I-C	I-C	O	B-C	O	O	O	O	B-C	O	O	O	O	O	B-C	O	O	O	O	O
+f53	O	B-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	B-f2P	O	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O
+c33	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	O	B-c2P	O	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O
+===== 123456 stmt29 =====
+WORD	WT1	represses	transcription	of	several	growth	factors	and	growth	factor	receptors	.
+POSTAG	NNP	VBZ	NN	IN	JJ	NN	NNS	CC	NN	NN	NNS	.
+CAP	B-C	O	O	O	O	O	O	O	O	O	O	O
+c34	B-c1A	I-c1A	I-c1A	O	O	B-c1C	I-c1C	O	O	O	O	O
+c35	B-c1A	I-c1A	I-c1A	O	O	O	O	O	B-c1C	I-c1C	I-c1C	O
+===== 123456 stmt30 =====
+WORD	The	N	-	myc	proto	-	oncogene	encodes	a	transcription	factor	which	regulates	cell	growth	and	differentiation	.
+POSTAG	DT	NNP	:	NN	NN	:	NN	VBZ	DT	NN	NN	WDT	VBZ	NN	NN	CC	NN	.
+CAP	O	B-C	I-C	I-C	O	O	O	O	O	O	O	O	O	B-C	O	O	O	O
+f54	O	B-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	B-f2P	O	B-f3C	I-f3C	O	O	O	O	O	O	O
+c36	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	O	B-c2P	B-c3C	I-c3C	O	O	O
+c37	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	O	B-c2P	O	O	O	B-c3C	O
+===== 123456 stmt31 =====
+WORD	N	-	myc	is	coexpressed	with	WT1	in	the	developing	kidney	and	is	overexpressed	in	many	Wilms	'	tumors	.
+POSTAG	NNP	:	NN	VBZ	VBN	IN	NNP	IN	DT	VBG	NN	CC	VBZ	VBN	IN	JJ	NNP	POS	NNS	.
+CAP	B-C	I-C	I-C	O	O	O	B-C	O	O	O	B-C	O	O	O	O	O	B-C	I-C	I-C	O
+f55	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+f56	B-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O	B-f3C	I-f3C	I-f3C	O
+c38	O	O	O	O	O	O	B-c1C	B-c2P	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O
+===== 123456 stmt32 =====
+WORD	Here	,	we	show	that	the	proto	-	oncogene	N	-	myc	promoter	was	down	-	regulated	by	WT1	in	transient	transfection	assays	.
+POSTAG	RB	,	PRP	VBP	IN	DT	NN	:	NN	NNP	:	NN	NN	VBD	RB	:	VBN	IN	NNP	IN	JJ	NN	NNS	.
+CAP	O	O	O	O	O	O	O	O	O	B-C	I-C	I-C	O	O	O	O	O	O	B-C	O	O	O	O	O
+f57	O	O	O	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f58	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	B-f3C	O	O	O	O	O
+c39	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O
+===== 123456 stmt33 =====
+WORD	However	,	mutant	WT1	(	R394W	)	which	has	a	mutation	in	the	DNA	binding	domain	could	not	repress	the	N	-	myc	promoter	.
+POSTAG	RB	,	JJ	NNP	(	NNP	)	WDT	VBZ	DT	NN	IN	DT	NN	NN	NN	MD	RB	VB	DT	NNP	:	NN	NN	.
+CAP	O	O	O	B-C	O	B-C	O	O	O	O	O	O	O	B-C	O	O	O	O	O	O	B-C	I-C	I-C	O	O
+f59	O	O	B-f1C	I-f1C	I-f1C	I-f1C	I-f1C	O	B-f2P	O	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f60	O	O	B-f1C	I-f1C	I-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O	B-f3C	I-f3C	I-f3C	I-f3C	O
+c40	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	O	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O
+===== 123456 stmt34 =====
+WORD	Electrophoretic	mobility	shift	assays	showed	that	the	oligonucleotides	containing	the	WT1	motifs	could	bind	recombinant	WT1	proteins	.
+POSTAG	JJ	NN	NN	NNS	VBD	IN	DT	NNS	VBG	DT	NNP	NNS	MD	VB	JJ	NNP	NNS	.
+CAP	O	O	O	O	O	O	O	O	O	O	B-C	O	O	O	O	B-C	O	O
+f61	B-f1C	I-f1C	I-f1C	I-f1C	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O
+f62	O	O	O	O	O	O	O	B-f1C	O	O	O	O	B-f2P	I-f2P	B-f3C	I-f3C	I-f3C	O
+c41	O	O	O	O	O	O	O	B-c1C	B-c2P	O	B-c3C	I-c3C	O	O	O	O	O	O
+===== 123456 stmt35 =====
+WORD	This	suggests	that	the	repression	of	the	N	-	myc	promoter	is	mediated	through	the	WT1	binding	sites	.
+POSTAG	DT	VBZ	IN	DT	NN	IN	DT	NNP	:	NN	NN	VBZ	VBN	IN	DT	NNP	NN	NNS	.
+CAP	O	O	O	O	O	O	O	B-C	I-C	I-C	O	O	O	O	O	B-C	O	O	O
+f63	O	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f64	O	O	O	O	B-f1A	O	O	B-f1C	I-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	O	B-f3C	I-f3C	I-f3C	O
+===== 123456 stmt36 =====
+WORD	This	finding	may	help	to	elucidate	the	relationship	of	WT1	and	N	-	myc	in	tumorigenesis	and	renal	development	.
+POSTAG	DT	NN	MD	VB	TO	VB	DT	NN	IN	NNP	CC	NNP	:	NN	IN	NN	CC	JJ	NN	.
+CAP	O	O	O	O	O	O	O	O	O	B-C	O	B-C	I-C	I-C	O	O	O	B-C	O	O
+f65	O	B-f1A	B-f2P	I-f2P	I-f2P	I-f2P	O	B-f3A	O	B-f3C	O	O	O	O	O	O	O	O	O	O
+f66	O	B-f1A	B-f2P	I-f2P	I-f2P	I-f2P	O	B-f3A	O	O	O	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O
+c42	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	B-c3C	O	O	O	O
+c43	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	O	O	B-c3C	I-c3C	O
+===== 123456 stmt37 =====
+WORD	Tumour	-	specific	distribution	of	BRCA1	promoter	region	methylation	supports	a	pathogenetic	role	in	breast	and	ovarian	cancer	.
+POSTAG	SYM	:	JJ	NN	IN	NNP	NN	NN	NN	VBZ	DT	JJ	NN	IN	NN	CC	JJ	NN	.
+CAP	B-C	O	O	O	O	B-C	O	O	O	O	O	O	O	O	B-C	O	B-C	I-C	O
+f67	B-f1A	I-f1A	I-f1A	I-f1A	O	B-f1C	I-f1C	I-f1C	I-f1C	B-f2P	O	B-f3C	I-f3C	O	O	O	O	O	O
+c44	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	O	O	O	O
+c45	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	O	O	B-c3C	I-c3C	O
+===== 123456 stmt38 =====
+WORD	The	role	of	BRCA1	in	sporadic	breast	and	ovarian	cancers	remains	elusive	.
+POSTAG	DT	NN	IN	NNP	IN	JJ	NN	CC	JJ	NNS	VBZ	JJ	.
+CAP	O	O	O	B-C	O	O	B-C	O	B-C	I-C	O	O	O
+f68	O	B-f1A	O	B-f1C	O	O	O	O	O	O	B-f2P	I-f2P	O
+f69	O	B-f1A	O	O	O	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	O
+===== 123456 stmt39 =====
+WORD	Direct	involvement	of	BRCA1	in	the	development	of	breast	and	ovarian	cancer	is	suggested	by	the	finding	that	the	BRCA1	promoter	region	CpG	island	is	methylated	in	a	proportion	of	breast	and	ovarian	cancers	.
+POSTAG	JJ	NN	IN	NNP	IN	DT	NN	IN	NN	CC	JJ	NN	VBZ	VBN	IN	DT	NN	IN	DT	NNP	NN	NN	NNP	NN	VBZ	VBN	IN	DT	NN	IN	NN	CC	JJ	NNS	.
+CAP	O	O	O	B-C	O	O	O	O	B-C	O	B-C	I-C	O	O	O	O	O	O	O	B-C	O	O	O	O	O	O	O	O	O	O	B-C	O	B-C	I-C	O
+f70	B-f1A	I-f1A	O	B-f1C	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O	B-f3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f71	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	O	B-f3A	O	B-f3C	O	O	O	O
+f72	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	O	B-f3A	O	O	O	B-f3C	I-f3C	O
+c46	B-c1A	I-c1A	O	B-c1C	B-c2P	O	B-c3A	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c47	B-c1A	I-c1A	O	B-c1C	B-c2P	O	B-c3A	O	O	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 123456 stmt40 =====
+WORD	The	aim	of	this	study	was	to	compare	the	incidence	of	BRCA1	promoter	region	methylation	in	tumours	in	which	loss	of	BRCA1	has	been	shown	to	play	a	role	in	pathogenesis	(	breast	and	ovarian	carcinomas	)	with	the	incidence	in	tumours	in	which	BRCA1	is	unlikely	to	play	a	role	in	pathogenesis	.
+POSTAG	DT	NN	IN	DT	NN	VBD	TO	VB	DT	NN	IN	NNP	NN	NN	NN	IN	NNS	IN	WDT	NN	IN	NNP	VBZ	VBN	VBN	TO	VB	DT	NN	IN	NN	(	NN	CC	JJ	NN	)	IN	DT	NN	IN	NNS	IN	WDT	NNP	VBZ	JJ	TO	VB	DT	NN	IN	NN	.
+CAP	O	O	O	O	O	O	O	O	O	O	O	B-C	O	O	O	O	B-C	O	O	O	O	B-C	O	O	O	O	O	O	O	O	O	O	B-C	O	B-C	I-C	O	O	O	O	O	B-C	O	O	B-C	O	O	O	O	O	O	O	O	O
+f73	O	B-f1A	O	O	B-f1C	B-f2P	I-f2P	I-f2P	O	B-f3A	O	B-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f74	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1A	O	B-f1C	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f75	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1A	O	B-f1C	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O	O	B-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f76	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	B-f3C	O
+c48	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c49	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c3C	B-c2P	O	B-c1A	O	B-c1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c50	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	O	O	O	O	O	O	B-c2P	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c51	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O
+c52	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c3C	B-c2P	O	B-c1C	O	O	O	O	O	O	O	O	O
+===== 123456 stmt41 =====
+WORD	Promoter	region	hypermethylation	was	significantly	more	common	(	P	<	0	.	008	)	in	breast	and	ovarian	cancer	(	6	/	38	tumours	methylated	)	than	in	colon	cancer	(	0	/	35	tumours	methylated	)	or	in	leukaemias	(	0	/	19	samples	methylated	)	.
+POSTAG	NNP	NN	NN	VBD	RB	JJR	JJ	(	NNP	VBZ	CD	.	CD	)	IN	NN	CC	JJ	NN	(	CD	RB	CD	NNS	VBD	)	IN	IN	NN	NN	(	CD	RB	CD	NNS	VBN	)	CC	IN	JJ	(	CD	RB	CD	NNS	VBN	)	.
+CAP	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-C	O	B-C	I-C	O	O	O	O	B-C	O	O	O	O	B-C	I-C	O	O	O	O	B-C	O	O	O	O	B-C	O	O	O	O	B-C	O	O	O
+f77	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f78	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c53	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	O	B-c2P	I-c2P	I-c2P	I-c2P	I-c2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c54	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	O	O	O	O	O	O	O	B-c2P	I-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c55	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	O	O	O	O	O	O	O	B-c2P	I-c2P	O	O	O	O	O	O	O	O	O	O	O	B-c3C	O	O	O	O	O	O	O	O
+c56	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	O	B-c2P	I-c2P	I-c2P	I-c2P	I-c2P	O	O	O	O	O	O	O	O	O	O	O	O
+c57	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	O	B-c2P	I-c2P	I-c2P	I-c2P	I-c2P	O	O
+===== 123456 stmt42 =====
+WORD	The	restriction	of	BRCA1	promoter	region	hypermethylation	to	breast	and	ovarian	cancer	is	consistent	with	a	pathogenetic	role	of	BRCA1	promoter	methylation	in	these	tumours	.
+POSTAG	DT	NN	IN	NNP	NN	NN	NN	TO	VB	CC	JJ	NN	VBZ	JJ	IN	DT	JJ	NN	IN	NNP	NN	NN	IN	DT	NNS	.
+CAP	O	O	O	B-C	O	O	O	O	B-C	O	B-C	I-C	O	O	O	O	O	O	O	B-C	O	O	O	O	B-C	O
+f79	O	B-f1A	O	B-f1C	I-f1C	I-f1C	I-f1C	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O	B-f3A	I-f3A	O	B-f3C	I-f3C	I-f3C	O	O	O	O
+c58	O	B-c1A	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c59	O	B-c1A	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	O	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c60	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	O	B-c3C	O
+===== 123456 stmt43 =====
+WORD	We	suggest	that	the	rarity	of	observed	BRCA1	mutations	in	sporadic	breast	and	ovarian	cancer	is	due	to	the	greater	likelihood	of	BRCA1	inactivation	by	non	-	mutational	mechanisms	such	as	methylation	.
+POSTAG	PRP	VBP	IN	DT	NN	IN	JJ	NNP	NNS	IN	JJ	NN	CC	JJ	NN	VBZ	JJ	TO	DT	JJR	NN	IN	NNP	NN	IN	JJ	:	JJ	NNS	JJ	IN	NN	.
+CAP	O	O	O	O	O	O	O	B-C	O	O	O	B-C	O	B-C	I-C	O	O	O	O	O	O	O	B-C	O	O	O	O	O	O	O	O	O	O
+f80	O	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f81	O	O	O	O	B-f1A	O	O	B-f1C	I-f1C	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O	O	B-f3A	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O
+f82	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	I-f1C	B-f2P	I-f2P	B-f3C	I-f3C
+c61	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c62	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	O	O	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c63	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O
+c64	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	O	O	O	O	O	O	O	O
+===== 123456 stmt44 =====
+WORD	Regulation	of	the	resident	chromosomal	copy	of	c	-	myc	by	c	-	Myb	is	involved	in	myeloid	leukemogenesis	.
+POSTAG	NN	IN	DT	NN	JJ	NN	IN	SYM	:	NN	IN	SYM	:	NN	VBZ	VBN	IN	JJ	NN	.
+CAP	O	O	O	O	B-C	O	O	B-C	I-C	I-C	O	B-C	I-C	I-C	O	O	O	B-C	O	O
+f83	B-f1A	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O
+c65	B-c1A	B-c2P	O	B-c3A	I-c3A	I-c3A	O	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O
+c66	O	O	O	B-c1A	I-c1A	I-c1A	O	B-c1C	I-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O
+===== 123456 stmt45 =====
+WORD	c	-	myb	is	a	frequent	target	of	retroviral	insertional	mutagenesis	in	murine	leukemia	virus	-	induced	myeloid	leukemia	.
+POSTAG	SYM	:	NN	VBZ	DT	JJ	NN	IN	JJ	JJ	NN	IN	NN	NN	NN	:	JJ	NN	NN	.
+CAP	B-C	I-C	I-C	O	O	O	O	O	B-C	O	O	O	B-C	I-C	I-C	O	O	B-C	I-C	O
+f84	B-f1C	I-f1C	I-f1C	B-f2P	O	B-f3A	I-f3A	O	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O
+c67	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O
+===== 123456 stmt46 =====
+WORD	Induction	of	the	leukemogenic	phenotype	is	generally	associated	with	inappropriate	expression	of	this	transcriptional	regulator	.
+POSTAG	NN	IN	DT	JJ	NN	VBZ	RB	VBN	IN	JJ	NN	IN	DT	JJ	NN	.
+CAP	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f85	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	B-f3A	I-f3A	O	O	B-f3C	I-f3C	O
+===== 123456 stmt47 =====
+WORD	Despite	intensive	investigations	,	the	target	genes	of	c	-	myb	that	are	specifically	involved	in	development	of	these	myeloid	lineage	neoplasms	are	still	unknown	.
+POSTAG	IN	JJ	NNS	,	DT	NN	NNS	IN	SYM	:	NN	WDT	VBP	RB	VBN	IN	NN	IN	DT	JJ	NN	NNS	VBP	RB	JJ	.
+CAP	O	O	O	O	O	O	O	O	B-C	I-C	I-C	O	O	O	O	O	O	O	O	B-C	O	B-C	O	O	O	O
+f86	O	O	O	O	O	B-f1A	I-f1A	O	B-f1C	I-f1C	I-f1C	O	B-f2P	I-f2P	I-f2P	I-f2P	B-f3A	O	O	B-f3C	I-f3C	I-f3C	O	O	O	O
+f87	O	B-f3C	I-f3C	O	O	B-f1A	I-f1A	O	B-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O
+c68	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 123456 stmt48 =====
+WORD	In	vitro	assays	have	indicated	that	c	-	myc	may	be	a	target	gene	of	c	-	Myb	;	however	,	regulation	of	the	resident	chromosomal	gene	has	not	yet	been	demonstrated	.
+POSTAG	IN	NN	NNS	VBP	VBN	IN	SYM	:	NN	MD	VB	DT	NN	NN	IN	SYM	:	NN	:	RB	,	NN	IN	DT	NN	JJ	NN	VBZ	RB	RB	VBN	VBN	.
+CAP	O	O	O	O	O	O	B-C	I-C	I-C	O	O	O	O	O	O	B-C	I-C	I-C	O	O	O	O	O	O	O	B-C	O	O	O	O	O	O	O
+f88	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f89	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	O	B-f3A	I-f3A	O	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f90	O	O	O	O	O	O	O	O	O	O	O	O	B-f3A	I-f3A	O	B-f3C	I-f3C	I-f3C	O	O	O	B-f1A	O	O	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O
+===== 123456 stmt49 =====
+WORD	To	address	this	question	further	,	we	analyzed	the	expression	of	c	-	myc	in	a	myeloblastic	cell	line	,	M1	,	expressing	a	conditionally	active	c	-	Myb	-	estrogen	receptor	fusion	protein	(	MybER	)	.
+POSTAG	TO	VB	DT	NN	RB	,	PRP	VBD	DT	NN	IN	SYM	:	NN	IN	DT	JJ	NN	NN	,	NNP	,	VBG	DT	RB	JJ	SYM	:	NNP	:	NN	NN	NN	NN	(	NNP	)	.
+CAP	O	O	O	O	O	O	O	O	O	O	O	B-C	I-C	I-C	O	O	B-C	I-C	I-C	O	B-C	O	O	O	O	O	B-C	I-C	I-C	I-C	I-C	I-C	O	O	O	B-C	O	O
+f91	B-f2P	I-f2P	O	B-f1A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f92	O	O	O	O	O	O	O	B-f2P	O	B-f3A	O	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f93	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	O	O	O	B-f3C	I-f3C	I-f3C	I-f3C	I-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O
+f94	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	O	O	O	O	O	O	O	O	O	O	O	O	B-f3C	O	O
+c69	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	O	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c70	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	O	O	O	O	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 123456 stmt50 =====
+WORD	Activation	of	MybER	both	prevented	the	growth	arrest	induced	by	interleukin	-	6	(	IL	-	6	)	and	rapidly	restored	c	-	myc	expression	in	nearly	terminal	differentiated	cells	that	had	been	exposed	to	IL	-	6	for	3	days	.
+POSTAG	NN	IN	NNP	DT	VBD	DT	NN	NN	VBN	IN	JJ	:	CD	(	NNP	:	CD	)	CC	RB	VBD	SYM	:	JJ	NN	IN	RB	JJ	JJ	NNS	WDT	VBD	VBN	VBN	TO	NNP	:	CD	IN	CD	NNS	.
+CAP	O	O	B-C	O	O	O	O	O	O	O	B-C	I-C	I-C	O	B-C	I-C	I-C	O	O	O	O	B-C	I-C	I-C	O	O	O	O	O	B-C	O	O	O	O	O	B-C	I-C	I-C	O	O	O	O
+f95	B-f1A	O	B-f1C	O	B-f2P	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f96	B-f1A	O	B-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	B-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c71	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	I-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c72	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	I-c2P	O	O	O	O	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c73	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	O	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O
+c74	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	O	B-c2P	I-c2P	I-c2P	I-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O
+c75	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	B-c3A	I-c3A	O
+===== 123456 stmt51 =====
+WORD	Restoration	occurred	in	the	presence	of	a	protein	synthesis	inhibitor	but	not	after	a	transcriptional	block	,	indicating	that	c	-	myc	is	a	direct	,	transcriptionally	regulated	target	of	c	-	Myb	.
+POSTAG	NN	VBD	IN	DT	NN	IN	DT	JJ	NN	NN	CC	RB	IN	DT	JJ	NN	,	VBG	IN	SYM	:	NN	VBZ	DT	JJ	,	RB	VBN	NN	IN	JJ	:	NN	.
+CAP	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-C	I-C	I-C	O	O	O	O	O	O	O	O	B-C	I-C	I-C	O
+f97	B-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f3C	I-f3C	O	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f98	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	B-f2P	O	O	O	O	B-f3A	I-f3A	O	B-f3C	I-f3C	I-f3C	O
+c76	B-c1C	B-c2P	I-c2P	O	B-c3A	O	O	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c77	B-c1C	O	O	O	O	O	O	O	O	O	O	B-c2P	I-c2P	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 123456 stmt52 =====
+WORD	c	-	myc	is	a	major	target	that	transduces	Myb	'	s	proliferative	signal	,	as	shown	by	the	ability	of	a	c	-	Myc	-	estrogen	receptor	fusion	protein	alone	to	also	reverse	growth	arrest	in	this	system	.
+POSTAG	SYM	:	NN	VBZ	DT	JJ	NN	WDT	VBZ	NNP	POS	NN	JJ	NN	,	IN	VBN	IN	DT	NN	IN	DT	JJ	:	NNP	:	NN	NN	NN	NN	RB	TO	RB	VB	NN	NN	IN	DT	NN	.
+CAP	B-C	I-C	I-C	O	O	O	O	O	O	B-C	O	O	O	O	O	O	O	O	O	O	O	O	B-C	I-C	I-C	I-C	I-C	I-C	O	O	O	O	O	O	O	O	O	O	O	O
+f99	B-f1C	I-f1C	I-f1C	B-f2P	O	B-f3A	I-f3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c78	O	O	O	O	O	B-c3A	I-c3A	O	B-c2P	O	O	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c79	O	O	O	O	O	B-c1A	I-c1A	O	O	O	O	O	O	O	O	O	B-c2P	I-c2P	O	B-c3A	O	O	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O
+c80	O	O	O	O	O	B-c1A	I-c1A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c2P	B-c3C	I-c3C	O	O	O	O
+c81	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	O	B-c3A	O
+===== 123456 stmt53 =====
+WORD	To	investigate	the	possibility	that	this	regulatory	connection	contributes	to	Myb	'	s	oncogenicity	,	we	expressed	a	dominant	negative	Myb	in	the	myeloid	leukemic	cell	line	RI	-	4	-	11	.
+POSTAG	TO	VB	DT	NN	IN	DT	JJ	NN	NNS	TO	NNP	POS	NN	NN	,	PRP	VBD	DT	JJ	JJ	NNP	IN	DT	JJ	JJ	NN	NN	NNP	:	CD	:	CD	.
+CAP	O	O	O	O	O	O	O	O	O	O	B-C	O	O	O	O	O	O	O	O	O	B-C	O	O	B-C	I-C	I-C	I-C	I-C	I-C	I-C	I-C	I-C	O
+f100	B-f2P	I-f2P	O	B-f3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f101	O	O	O	O	O	O	B-f1A	I-f1A	B-f2P	I-f2P	B-f3C	O	O	B-f3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f102	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f3A	O	O	B-f2P	O	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O
+c82	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c3A	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	O	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O
+===== 123456 stmt54 =====
+WORD	In	this	cell	line	,	c	-	myb	is	activated	by	insertional	mutagenesis	and	cannot	be	effectively	down	regulated	by	cytokine	.
+POSTAG	IN	DT	NN	NN	,	SYM	:	NN	VBZ	VBN	IN	JJ	NN	CC	NN	VB	RB	RB	VBN	IN	NN	.
+CAP	O	O	B-C	I-C	O	B-C	I-C	I-C	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f103	O	O	O	O	O	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O
+f104	O	O	O	O	O	B-f1C	I-f1C	I-f1C	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	B-f3C	O
+c83	B-c2P	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 123456 stmt55 =====
+WORD	Myb	'	s	ability	to	regulate	c	-	myc	'	s	expression	was	also	demonstrated	in	these	cells	,	showing	a	mechanism	through	which	the	proto	-	oncogene	c	-	myb	can	exert	its	oncogenic	potential	in	myeloid	lineage	hematopoietic	cells	.
+POSTAG	NNP	POS	NN	NN	TO	VB	SYM	:	NN	''	JJ	NN	VBD	RB	VBN	IN	DT	NNS	,	VBG	DT	NN	IN	WDT	DT	NN	:	NN	SYM	:	NN	MD	VB	PRP$	JJ	NN	IN	JJ	NN	JJ	NNS	.
+CAP	B-C	O	O	O	O	O	B-C	I-C	I-C	I-C	I-C	O	O	O	O	O	O	B-C	O	O	O	O	O	O	O	O	O	O	B-C	I-C	I-C	O	O	O	O	O	O	B-C	I-C	I-C	I-C	O
+f105	B-f1C	O	O	B-f1A	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	O	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f106	B-f1C	O	O	B-f1A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	O	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f107	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	B-f2P	I-f2P	O	B-f3C	I-f3C	O	O	O	O	O	O
+c84	B-c1C	O	O	B-c1A	B-c2P	I-c2P	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c85	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c3C	B-c2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c86	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	I-c3C	O
+===== 123456 stmt56 =====
+WORD	Adenovirus	-	mediated	gene	transfer	of	endostatin	in	vivo	results	in	high	level	of	transgene	expression	and	inhibition	of	tumor	growth	and	metastases	.
+POSTAG	NNP	:	VBD	NN	NN	IN	NN	IN	JJ	NNS	IN	JJ	NN	IN	JJ	NN	CC	NN	IN	NN	NN	CC	NNS	.
+CAP	B-C	O	O	O	O	O	B-C	O	O	O	O	O	O	O	O	O	O	O	O	B-C	O	O	O	O
+f108	B-f1A	I-f1A	I-f1A	I-f1A	I-f1A	O	B-f1C	O	O	B-f2P	I-f2P	B-f3A	I-f3A	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O
+f109	B-f1A	I-f1A	I-f1A	I-f1A	I-f1A	O	B-f1C	O	O	B-f2P	I-f2P	O	O	O	O	O	O	B-f3A	O	B-f3C	I-f3C	O	O	O
+f110	B-f1A	I-f1A	I-f1A	I-f1A	I-f1A	O	B-f1C	O	O	B-f2P	I-f2P	O	O	O	O	O	O	B-f3A	O	O	O	O	B-f3C	O
+c87	O	O	O	O	O	O	B-c1C	B-c2P	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 123456 stmt57 =====
+WORD	Inhibition	of	angiogenesis	has	been	shown	to	be	an	effective	strategy	in	cancer	therapy	in	mice	.
+POSTAG	NN	IN	NN	VBZ	VBN	VBN	TO	VB	DT	JJ	NN	IN	NN	NN	IN	NN	.
+CAP	O	O	O	O	O	O	O	O	O	O	O	O	B-C	O	O	B-C	O
+f111	B-f1A	O	B-f1C	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O	B-f3A	I-f3A	O	B-f3C	I-f3C	O	O	O
+c88	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	O
+===== 123456 stmt58 =====
+WORD	However	,	its	widespread	application	has	been	hampered	by	difficulties	in	the	large	-	scale	production	of	the	antiangiogenic	proteins	.
+POSTAG	RB	,	PRP$	JJ	NN	VBZ	VBN	VBN	IN	NNS	IN	DT	JJ	:	JJ	NN	IN	DT	JJ	NNS	.
+CAP	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f112	O	O	O	B-f1A	I-f1A	B-f2P	I-f2P	I-f2P	I-f2P	B-f3A	O	O	O	O	O	O	O	O	O	O	O
+c89	O	O	O	O	O	O	O	O	O	B-c1A	B-c2P	O	B-c3A	I-c3A	I-c3A	I-c3A	O	O	B-c3C	I-c3C	O
+===== 123456 stmt59 =====
+WORD	This	limitation	may	be	resolved	by	in	vivo	delivery	and	expression	of	the	antiangiogenic	genes	.
+POSTAG	DT	NN	MD	VB	VBN	IN	IN	JJ	NN	CC	NN	IN	DT	JJ	NNS	.
+CAP	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f113	O	B-f1A	B-f2P	I-f2P	I-f2P	I-f2P	B-f3A	I-f3A	I-f3A	O	O	O	O	B-f3C	I-f3C	O
+f114	O	B-f1A	B-f2P	I-f2P	I-f2P	I-f2P	O	O	O	O	B-f3A	O	O	B-f3C	I-f3C	O
+===== 123456 stmt60 =====
+WORD	We	have	constructed	a	recombinant	adenovirus	that	expresses	murine	endostatin	that	is	biologically	active	both	in	vitro	,	as	determined	in	endothelial	cell	proliferation	assays	,	and	in	vivo	,	by	suppression	of	angiogenesis	induced	by	vascular	endothelial	growth	factor	165	.
+POSTAG	PRP	VBP	VBN	DT	JJ	NN	WDT	VBZ	NN	NN	WDT	VBZ	RB	JJ	DT	IN	NN	,	IN	VBN	IN	JJ	NN	NN	NNS	,	CC	IN	NN	,	IN	NN	IN	NN	VBN	IN	JJ	JJ	NN	NN	CD	.
+CAP	O	O	O	O	O	B-C	O	O	B-C	B-C	O	O	O	O	O	O	O	O	O	O	O	B-C	I-C	O	O	O	O	O	O	O	O	O	O	O	O	O	B-C	I-C	I-C	I-C	I-C	O
+f115	O	B-f2P	I-f2P	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c90	O	O	O	O	B-c1C	I-c1C	O	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c91	O	O	O	O	O	O	O	O	B-c1C	I-c1C	O	B-c2P	I-c2P	I-c2P	I-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c92	O	O	O	O	O	O	O	O	B-c1C	I-c1C	O	B-c2P	I-c2P	I-c2P	I-c2P	O	O	O	O	O	O	O	O	O	O	O	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+c93	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	O	B-c2P	I-c2P	I-c2P	B-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c94	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	O	B-c2P	B-c3A	O	B-c3C	O	O	O	O	O	O	O	O
+c95	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	B-c1C	B-c2P	I-c2P	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O
+===== 123456 stmt61 =====
+WORD	Persistent	high	serum	levels	of	endostatin	(	605	-	1740	ng	/	ml	;	mean	,	936	ng	/	ml	)	were	achieved	after	systemic	administration	of	the	vector	to	nude	mice	,	which	resulted	in	significant	reduction	of	the	growth	rates	and	the	volumes	of	JC	breast	carcinoma	and	Lewis	lung	carcinoma	(	P	less	than	0	.	001	and	P	less	than	0	.	05	,	respectively	)	.
+POSTAG	JJ	JJ	NN	NNS	IN	NN	(	CD	:	CD	JJ	NNP	NN	:	CC	,	CD	JJ	NNP	NN	)	VBD	VBN	IN	JJ	NN	IN	DT	NN	TO	VB	NN	,	WDT	VBD	IN	JJ	NN	IN	DT	NN	NNS	CC	DT	NNS	IN	NNP	NN	NN	CC	NNP	NN	NN	(	NNP	JJR	IN	CD	.	CD	CC	NNP	JJR	IN	CD	.	CD	,	RB	)	.
+CAP	O	O	B-C	O	O	B-C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-C	I-C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-C	I-C	I-C	O	B-C	I-C	I-C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f116	B-f1A	I-f1A	I-f1A	I-f1A	O	B-f1C	O	B-f3A	I-f3A	I-f3A	I-f3A	I-f3A	I-f3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f117	B-f1A	I-f1A	I-f1A	I-f1A	O	B-f1C	O	O	O	O	O	O	O	O	O	O	B-f3A	I-f3A	I-f3A	I-f3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f118	B-f1A	I-f1A	I-f1A	I-f1A	O	B-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	B-f3A	I-f3A	O	O	B-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f119	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	B-f2P	I-f2P	B-f3A	I-f3A	I-f3A	O	O	O	O	O	O	O	O	O	O	O
+f120	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	B-f2P	I-f2P	B-f3A	I-f3A	I-f3A	O	O	O	O
+c96	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	I-c1A	O	O	B-c1C	I-c1C	I-c1C	I-c1C	O	O	B-c2P	I-c2P	B-c3A	I-c3A	O	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c97	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	I-c1A	O	O	B-c1C	I-c1C	I-c1C	I-c1C	O	O	B-c2P	I-c2P	B-c3A	I-c3A	O	O	O	O	O	O	O	O	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c98	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	I-c1A	O	O	B-c1C	I-c1C	I-c1C	I-c1C	O	O	B-c2P	I-c2P	B-c3A	I-c3A	O	O	O	O	O	O	O	O	O	O	O	O	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 123456 stmt62 =====
+WORD	In	addition	,	the	endostatin	vector	treatment	completely	prevented	the	formation	of	pulmonary	micrometastases	in	Lewis	lung	carcinoma	(	P	=	0	.	0001	)	.
+POSTAG	IN	NN	,	DT	NN	NN	NN	RB	VBD	DT	NN	IN	JJ	NNS	IN	NNP	NN	NN	(	NNP	VBZ	CD	.	CD	)	.
+CAP	O	O	O	O	B-C	O	O	O	O	O	O	O	B-C	I-C	O	B-C	I-C	I-C	O	O	O	O	O	O	O	O
+f121	O	O	O	O	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	O	B-f3A	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O
+c99	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O
+c100	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	B-c3A	I-c3A	I-c3A	O	O
+===== 123456 stmt63 =====
+WORD	Immunohistochemical	staining	of	the	tumors	demonstrated	a	decreased	number	of	blood	vessels	in	the	treatment	group	versus	the	controls	.
+POSTAG	JJ	NN	IN	DT	NNS	VBD	DT	JJ	NN	IN	NN	NNS	IN	DT	NN	NN	VBD	DT	NNS	.
+CAP	O	O	O	O	B-C	O	O	O	O	O	B-C	I-C	O	O	O	O	O	O	O	O
+f122	B-f1A	I-f1A	O	O	B-f1C	B-f2P	O	B-f3A	I-f3A	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O
+c101	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	O	B-c3C	I-c3C	O	O	O	O
+c102	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	O	B-c3C	O
+===== 123456 stmt64 =====
+WORD	In	conclusion	,	the	present	study	clearly	demonstrates	the	potential	of	vector	-	mediated	antiangiogenic	gene	therapy	as	a	component	in	cancer	therapy	.
+POSTAG	IN	NN	,	DT	JJ	NN	RB	VBZ	DT	NN	IN	NN	:	VBN	JJ	NN	NN	IN	DT	NN	IN	NN	NN	.
+CAP	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-C	O	O
+f123	O	O	O	O	B-f1A	I-f1A	B-f2P	I-f2P	O	B-f3A	O	B-f3C	I-f3C	I-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O
+c103	O	O	O	O	O	O	O	O	O	B-c1A	O	B-c1C	I-c1C	I-c1C	I-c1C	I-c1C	I-c1C	B-c2P	O	B-c3A	O	B-c3C	I-c3C	O
+===== 123456 stmt65 =====
+WORD	High	frequency	of	hypermethylation	at	the	14	-	3	-	3	sigma	locus	leads	to	gene	silencing	in	breast	cancer	.
+POSTAG	JJ	NN	IN	NN	IN	DT	CD	:	CD	:	CD	NN	NN	VBZ	TO	NN	VBG	IN	NN	NN	.
+CAP	O	O	O	O	O	O	B-C	I-C	I-C	I-C	I-C	I-C	O	O	O	O	O	O	B-C	I-C	O
+f124	B-f1A	I-f1A	O	B-f1C	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O
+c104	B-c1A	I-c1A	O	B-c1C	B-c2P	O	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O
+c105	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	O
+===== 123456 stmt66 =====
+WORD	Expression	of	14	-	3	-	3	final	sigma	(	final	sigma	)	is	induced	in	response	to	DNA	damage	,	and	causes	cells	to	arrest	in	G	(	2	)	.
+POSTAG	NN	IN	CD	:	CD	:	CD	JJ	NN	(	JJ	NN	)	VBZ	VBN	IN	NN	TO	NNP	NN	,	CC	VBZ	NNS	TO	VB	IN	NNP	(	CD	)	.
+CAP	O	O	B-C	I-C	I-C	I-C	I-C	I-C	I-C	O	B-C	I-C	O	O	O	O	O	O	B-C	O	O	O	O	B-C	O	O	O	O	O	O	O	O
+f125	B-f1A	O	B-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O
+f126	B-f1A	O	B-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	I-f3C	I-f3C	O
+f127	B-f1A	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O
+f128	B-f1A	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	I-f3C	I-f3C	O
+===== 123456 stmt67 =====
+WORD	By	SAGE	(	serial	analysis	of	gene	expression	)	analysis	,	we	identified	final	sigma	as	a	gene	whose	expression	is	7	-	fold	lower	in	breast	carcinoma	cells	than	in	normal	breast	epithelium	.
+POSTAG	IN	NNP	(	JJ	NN	IN	NN	NN	)	NN	,	PRP	VBD	JJ	NN	IN	DT	NN	WP$	NN	VBZ	CD	:	NN	RBR	IN	NN	NN	NNS	IN	IN	JJ	NN	NN	.
+CAP	O	O	O	O	O	O	O	O	O	O	O	O	O	B-C	I-C	O	O	O	O	O	O	O	O	O	O	O	B-C	I-C	I-C	O	O	O	B-C	I-C	O
+f129	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f130	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	O	B-f1A	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O
+c106	B-c2P	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c107	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c108	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	I-c2P	B-c3C	I-c3C	I-c3C	O
+===== 123456 stmt68 =====
+WORD	We	verified	this	finding	by	Northern	blot	analysis	.
+POSTAG	PRP	VBD	DT	NN	IN	NNP	NN	NN	.
+CAP	O	O	O	O	O	O	O	O	O
+f131	O	B-f2P	O	B-f3A	O	O	O	O	O
+c109	O	O	O	O	B-c2P	B-c3C	I-c3C	I-c3C	O
+===== 123456 stmt69 =====
+WORD	Remarkably	,	final	sigma	mRNA	was	undetectable	in	45	of	48	primary	breast	carcinomas	.
+POSTAG	RB	,	JJ	NN	NN	VBD	JJ	IN	CD	IN	CD	JJ	NN	NN	.
+CAP	O	O	B-C	I-C	O	O	O	O	O	O	O	O	B-C	I-C	O
+f132	O	O	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	B-f3A	O	B-f3C	I-f3C	I-f3C	I-f3C	O
+===== 123456 stmt70 =====
+WORD	Genetic	alterations	at	final	sigma	such	as	loss	of	heterozygosity	were	rare	(	1	/	20	informative	cases	)	,	and	no	mutations	were	detected	(	0	/	34	)	.
+POSTAG	JJ	NNS	IN	JJ	NN	JJ	IN	NN	IN	NN	VBD	JJ	(	CD	RB	CD	JJ	NNS	)	,	CC	DT	NNS	VBD	VBN	(	CD	RB	CD	)	.
+CAP	O	O	O	B-C	I-C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f133	B-f1C	I-f1C	O	O	O	O	O	O	O	O	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f134	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	B-f2P	I-f2P	O	O	O	O	O	O
+c110	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c111	B-c1C	I-c1C	B-c2P	O	O	O	O	B-c3A	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c112	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c2P	B-c3C	O	O	O	O	O	O	O	O
+===== 123456 stmt71 =====
+WORD	On	the	other	hand	,	hypermethylation	of	CpG	islands	in	the	final	sigma	gene	was	detected	in	91	%	(	75	/	82	)	of	breast	tumors	and	was	associated	with	lack	of	gene	expression	.
+POSTAG	IN	DT	JJ	NN	,	NN	IN	NNP	NNS	IN	DT	JJ	NN	NN	VBD	VBN	IN	CD	NN	(	CD	RB	CD	)	IN	NN	NNS	CC	VBD	VBN	IN	NN	IN	NN	NN	.
+CAP	O	O	O	O	O	O	O	O	O	O	O	B-C	I-C	O	O	O	O	O	O	O	O	O	O	O	O	B-C	I-C	O	O	O	O	O	O	O	O	O
+f135	O	O	O	O	O	B-f1A	O	B-f1C	I-f1C	O	O	O	O	O	B-f2P	I-f2P	I-f2P	B-f3A	I-f3A	I-f3A	I-f3A	I-f3A	I-f3A	I-f3A	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O
+f136	O	O	O	O	O	B-f1A	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	B-f3A	O	B-f3C	I-f3C	O
+c113	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	O	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 123456 stmt72 =====
+WORD	Hypermethylation	of	final	sigma	is	functionally	important	,	because	treatment	of	final	sigma	-	non	-	expressing	breast	cancer	cell	lines	with	the	drug	5	-	aza	-	2	'	-	deoxycytidine	resulted	in	demethylation	of	the	gene	and	synthesis	of	final	sigma	mRNA	.
+POSTAG	NN	IN	JJ	NN	VBZ	RB	JJ	,	IN	NN	IN	JJ	NN	:	CC	:	VBG	NN	NN	NN	NNS	IN	DT	NN	CD	:	NN	:	CD	''	:	NN	VBD	IN	NN	IN	DT	NN	CC	NN	IN	JJ	NN	NN	.
+CAP	O	O	B-C	I-C	O	O	O	O	O	O	O	B-C	I-C	O	O	O	O	B-C	I-C	I-C	I-C	O	O	O	B-C	I-C	I-C	I-C	I-C	I-C	I-C	I-C	O	O	O	O	O	O	O	O	O	B-C	I-C	O	O
+f137	B-f1A	O	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f138	O	O	O	O	O	O	O	O	O	B-f1A	O	B-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	B-f3A	O	O	B-f3C	O	O	O	O	O	O	O
+f139	O	O	O	O	O	O	O	O	O	B-f1A	O	B-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	O	O	O	O	O	B-f3A	O	B-f3C	I-f3C	I-f3C	O
+c114	O	O	O	O	O	O	O	O	O	B-c1A	O	B-c1C	I-c1C	I-c1C	I-c1C	I-c1C	I-c1C	I-c1C	I-c1C	I-c1C	I-c1C	B-c2P	O	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 123456 stmt73 =====
+WORD	Breast	cancer	cells	lacking	final	sigma	expression	showed	increased	number	of	chromosomal	breaks	and	gaps	when	exposed	to	gamma	-	irradiation	.
+POSTAG	NNP	NN	NNS	VBG	JJ	NN	NN	VBD	JJ	NN	IN	JJ	NNS	CC	NNS	WRB	VBN	TO	VB	:	NN	.
+CAP	B-C	I-C	I-C	O	B-C	I-C	O	O	O	O	O	B-C	O	O	O	O	O	O	O	O	O	O
+f140	B-f1C	I-f1C	I-f1C	O	O	O	O	B-f2P	B-f3A	I-f3A	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O
+f141	B-f1C	I-f1C	I-f1C	O	O	O	O	B-f2P	B-f3A	I-f3A	O	O	O	O	B-f3C	O	O	O	O	O	O	O
+c115	B-c1C	I-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c116	B-c1C	I-c1C	I-c1C	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c2P	I-c2P	B-c3C	I-c3C	I-c3C	O
+===== 123456 stmt74 =====
+WORD	Therefore	,	it	is	possible	that	loss	of	final	sigma	expression	contributes	to	malignant	transformation	by	impairing	the	G	(	2	)	cell	cycle	checkpoint	function	,	thus	allowing	an	accumulation	of	genetic	defects	.
+POSTAG	RB	,	PRP	VBZ	JJ	IN	NN	IN	JJ	NN	NN	VBZ	TO	VB	NN	IN	VBG	DT	NNP	(	CD	)	NN	NN	NN	NN	,	RB	VBG	DT	NN	IN	JJ	NNS	.
+CAP	O	O	O	O	O	O	O	O	B-C	I-C	O	O	O	O	O	O	O	O	O	O	O	O	B-C	O	O	O	O	O	O	O	O	O	O	O	O
+f142	O	O	B-f2P	I-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f143	O	O	O	O	O	O	B-f1A	O	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f144	O	O	O	O	O	O	B-f1A	O	B-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	O	B-f3A	O	B-f3C	I-f3C	O
+c117	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c2P	I-c2P	O	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O
+===== 123456 stmt75 =====
+WORD	Hypermethylation	and	loss	of	final	sigma	expression	are	the	most	consistent	molecular	alterations	in	breast	cancer	identified	so	far	.
+POSTAG	NN	CC	NN	IN	JJ	NN	NN	VBP	DT	RBS	JJ	JJ	NNS	IN	NN	NN	VBN	RB	RB	.
+CAP	O	O	O	O	B-C	I-C	O	O	O	O	O	O	O	O	B-C	I-C	O	O	O	O
+f145	B-f1C	O	O	O	O	O	O	B-f2P	O	B-f3A	I-f3A	B-f3C	I-f3C	O	O	O	O	O	O	O
+f146	O	O	B-f1A	O	B-f1C	I-f1C	I-f1C	B-f2P	O	B-f3A	I-f3A	B-f3C	I-f3C	O	O	O	O	O	O	O
+c118	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	O	O	O	O
+c119	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c3C	I-c3C	B-c2P	I-c2P	I-c2P	O
+===== 123456 stmt76 =====
+WORD	Reduced	oncogenicity	of	p190	Bcr	/	Abl	F	-	actin	-	binding	domain	mutants	.
+POSTAG	NNP	NN	IN	NN	NNP	NNP	NNP	NNP	:	NN	:	NN	NN	NNS	.
+CAP	O	O	O	B-C	I-C	I-C	I-C	B-C	I-C	I-C	O	O	O	O	O
+c120	B-c1A	I-c1A	O	B-c1C	I-c1C	I-c1C	I-c1C	I-c1C	I-c1C	I-c1C	I-c1C	I-c1C	I-c1C	I-c1C	O
+===== 123456 stmt77 =====
+WORD	The	deregulated	Bcr	/	Abl	tyrosine	kinase	is	responsible	for	the	development	of	Philadelphia	(	Ph	)	-	positive	leukemia	in	humans	.
+POSTAG	DT	JJ	NNP	NNP	NNP	NN	NN	VBZ	JJ	IN	DT	NN	IN	NNP	(	NNP	)	:	JJ	NN	IN	NNS	.
+CAP	O	O	B-C	I-C	I-C	B-C	O	O	O	O	O	O	O	O	O	O	O	O	O	B-C	O	B-C	O
+f147	O	B-f1C	I-f1C	I-f1C	I-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	O	B-f3A	O	B-f3C	I-f3C	I-f3C	I-f3C	I-f3C	I-f3C	I-f3C	O	O	O
+c121	O	O	O	O	O	O	O	O	O	O	O	B-c3A	O	B-c1C	I-c1C	I-c1C	I-c1C	I-c1C	I-c1C	I-c1C	B-c2P	B-c3C	O
+===== 123456 stmt78 =====
+WORD	To	investigate	the	significance	of	the	C	-	terminal	Abl	actin	-	binding	domain	within	Bcr	/	Abl	p190	in	the	development	of	leukemia	/	lymphoma	in	vivo	,	mutant	p190	DNA	constructs	were	used	to	generate	transgenic	mice	.
+POSTAG	TO	VB	DT	NN	IN	DT	NNP	:	JJ	NNP	SYM	:	NN	NN	IN	NNP	NNP	NNP	NN	IN	DT	NN	IN	NN	NNP	NN	IN	NN	,	JJ	NN	NNP	NNS	VBD	VBN	TO	VB	JJ	NN	.
+CAP	O	O	O	O	O	O	O	O	O	B-C	B-C	O	O	O	O	B-C	I-C	I-C	I-C	O	O	O	O	B-C	O	B-C	O	O	O	O	B-C	B-C	O	O	O	O	O	B-C	I-C	O
+f148	B-f2P	I-f2P	O	B-f3A	O	O	B-f3C	I-f3C	I-f3C	I-f3C	I-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f149	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	O
+c122	O	O	O	B-c1A	O	O	B-c1C	I-c1C	I-c1C	I-c1C	I-c1C	I-c1C	I-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c123	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	O	B-c3A	O	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c124	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	B-c2P	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O
+===== 123456 stmt79 =====
+WORD	Eight	founder	and	progeny	mice	of	5	different	lines	were	monitored	for	leukemogenesis	.
+POSTAG	CD	NN	CC	JJ	NN	IN	CD	JJ	NNS	VBD	VBN	IN	NN	.
+CAP	O	O	O	O	B-C	O	O	O	O	O	O	O	O	O
+f150	B-f1A	B-f1C	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	B-f3C	O
+f151	O	O	O	B-f1A	I-f1A	O	O	B-f1C	I-f1C	B-f2P	I-f2P	I-f2P	B-f3C	O
+===== 123456 stmt80 =====
+WORD	Latency	was	markedly	increased	and	occurrence	decreased	in	the	p190	del	C	lines	as	compared	with	nonmutated	p190	BCR	/	ABL	transgenics	.
+POSTAG	NN	VBD	RB	JJ	CC	NN	VBN	IN	DT	NN	NN	NNP	NNS	IN	VBN	IN	JJ	NN	NNP	NNP	NNP	NNS	.
+CAP	O	O	O	O	O	O	O	O	O	B-C	O	O	B-C	O	O	O	O	B-C	I-C	I-C	I-C	B-C	O
+f152	B-f1A	B-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f153	O	O	O	O	O	B-f1A	B-f2P	I-f2P	O	B-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O
+c125	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	I-c2P	I-c2P	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O
+===== 123456 stmt81 =====
+WORD	Western	blot	analysis	of	involved	hematologic	tissues	of	the	p190	del	C	transgenics	with	end	-	stage	disease	showed	high	-	level	expression	of	the	transgene	and	tyrosine	phosphorylation	of	Cbl	and	Hef1	/	Cas	,	proteins	previously	shown	to	be	affected	by	Bcr	/	Abl	.
+POSTAG	JJ	NN	NN	IN	JJ	JJ	NNS	IN	DT	NN	NN	NNP	NNS	IN	NN	:	NN	NN	VBD	JJ	:	NN	NN	IN	DT	NN	CC	JJ	NN	IN	NNP	CC	NNP	NNP	NNP	,	VBZ	RB	VBN	TO	VB	VBN	IN	NNP	NNP	NNP	.
+CAP	O	O	O	O	O	B-C	I-C	O	O	B-C	O	O	B-C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-C	O	O	B-C	O	B-C	O	B-C	O	O	O	O	O	O	O	O	B-C	I-C	I-C	O
+f154	B-f1A	I-f1A	I-f1A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	B-f3A	I-f3A	I-f3A	I-f3A	O	O	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f155	B-f1A	I-f1A	I-f1A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	O	O	O	O	O	O	O	O	B-f3A	I-f3A	O	B-f3C	I-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O
+f156	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	I-f3C	O
+c126	B-c1A	I-c1A	I-c1A	B-c2P	B-c3A	I-c3A	I-c3A	O	O	B-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c127	B-c1A	I-c1A	I-c1A	O	O	O	O	O	O	O	O	O	O	B-c2P	B-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 123456 stmt82 =====
+WORD	These	results	show	that	the	actin	-	binding	domain	of	Abl	enhances	leukemia	development	but	does	not	appear	to	be	an	absolute	requirement	for	leukemogenesis	.
+POSTAG	DT	NNS	VBP	IN	DT	NN	:	NN	NN	IN	NNP	NNS	NN	NN	CC	VBZ	RB	VB	TO	VB	DT	JJ	NN	IN	NN	.
+CAP	O	O	O	O	O	B-C	O	O	O	O	B-C	O	B-C	O	O	O	O	O	O	O	O	O	O	O	O	O
+f157	O	B-f1A	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f158	O	O	O	O	O	B-f1A	I-f1A	I-f1A	I-f1A	O	B-f1C	B-f2P	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O
+f159	O	O	O	O	O	B-f1A	I-f1A	I-f1A	I-f1A	O	B-f1C	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O	B-f3A	I-f3A	O	B-f3C	O
+===== 123456 stmt83 =====
+WORD	Building	the	vertebrate	vasculature	:	research	is	going	swimmingly	.
+POSTAG	VBG	DT	NN	NN	:	NN	VBZ	VBG	RB	.
+CAP	O	O	O	B-C	O	O	O	O	O	O
+f160	B-f2P	O	B-f3C	I-f3C	O	O	O	O	O	O
+f161	O	O	O	O	O	B-f1A	B-f2P	I-f2P	I-f2P	O
+===== 123456 stmt84 =====
+WORD	The	vertebrate	vasculature	develops	in	remarkably	similar	fashion	in	all	vertebrates	.
+POSTAG	DT	JJ	NN	VBZ	IN	RB	JJ	NN	IN	DT	NNS	.
+CAP	O	O	B-C	O	O	O	O	O	O	O	O	O
+f162	O	B-f1C	I-f1C	B-f2P	I-f2P	B-f3A	I-f3A	I-f3A	O	O	B-f3C	O
+===== 123456 stmt85 =====
+WORD	A	cohort	of	unspecified	mesodermal	cells	differentiates	into	primitive	endothelial	cells	,	which	migrate	to	and	occupy	positions	within	the	stereotypical	blueprint	of	the	primitive	vasculature	.
+POSTAG	DT	NN	IN	JJ	JJ	NNS	VBZ	IN	JJ	JJ	NNS	,	WDT	VBP	TO	CC	JJ	NNS	IN	DT	JJ	NN	IN	DT	JJ	NN	.
+CAP	O	O	O	O	B-C	I-C	O	O	O	B-C	I-C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-C	O
+f163	O	B-f1A	O	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c128	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	O	O	B-c2P	I-c2P	O	O	B-c3A	O	O	O	O	O	O	O	O	O
+c129	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	O	O	O	O	O	B-c2P	B-c3A	O	O	O	O	O	O	O	O	O
+c130	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	O	O	O	O	O	O	O	B-c2P	O	B-c3A	I-c3A	O	O	B-c3C	I-c3C	O
+===== 123456 stmt86 =====
+WORD	Once	in	position	,	these	cells	coalesce	and	form	cords	,	which	lumenize	and	become	ensheathed	by	supporting	pericytes	and	smooth	muscle	cells	.
+POSTAG	RB	IN	NN	,	DT	NNS	NN	CC	NN	NNS	,	WDT	VBP	CC	VBP	VBN	IN	VBG	NNS	CC	JJ	NN	NNS	.
+CAP	O	O	O	O	O	B-C	O	O	O	B-C	O	O	O	O	O	O	O	O	B-C	O	B-C	I-C	I-C	O
+f164	O	O	O	O	O	B-f1C	B-f2P	O	O	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f165	O	O	O	O	O	B-f1C	O	O	B-f2P	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c131	B-c2P	I-c2P	I-c2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c132	O	O	O	O	O	O	O	O	O	B-c1C	O	O	B-c2P	O	O	O	O	O	O	O	O	O	O	O
+c133	O	O	O	O	O	O	O	O	O	B-c1C	O	O	O	O	B-c2P	I-c2P	O	O	O	O	O	O	O	O
+c134	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c2P	I-c2P	B-c3C	O	O	O	O	O
+c135	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c2P	I-c2P	O	O	B-c3C	I-c3C	I-c3C	O
+===== 123456 stmt87 =====
+WORD	This	primitive	vascular	network	is	extensively	remodeled	in	some	places	,	and	expanded	by	sprouting	in	others	.
+POSTAG	DT	JJ	NN	NN	VBZ	RB	VBN	IN	DT	NNS	,	CC	VBN	IN	VBG	IN	NNS	.
+CAP	O	O	B-C	I-C	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f166	O	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	O	B-f3A	O	O	O	O	O	O	O	O
+f167	O	B-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	B-f3A	O
+===== 123456 stmt88 =====
+WORD	Various	studies	using	the	mouse	,	quail	/	chick	,	and	frog	have	uncovered	a	number	of	signals	that	guide	these	complex	processes	but	many	gaps	still	exist	in	our	understanding	of	the	mechanisms	by	which	the	embryonic	vasculature	is	built	.
+POSTAG	JJ	NNS	VBG	DT	NN	,	NN	NNP	NN	,	CC	NNS	VBP	VBN	DT	NN	IN	NNS	WDT	VBP	DT	JJ	NNS	CC	JJ	NNS	RB	VBP	IN	PRP$	NN	IN	DT	NNS	IN	WDT	DT	JJ	NN	VBZ	VBN	.
+CAP	O	O	O	O	B-C	O	B-C	O	B-C	O	O	B-C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-C	I-C	O	O	O
+f168	B-f1A	I-f1A	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	O	O	O	B-f3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f169	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1A	B-f2P	I-f2P	I-f2P	O	B-f3A	O	O	B-f3C	O	O	O	O	O	O	O	O
+f170	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	B-f2P	I-f2P	O
+c136	B-c1A	I-c1A	B-c2P	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c137	B-c1A	I-c1A	B-c2P	O	O	O	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c138	B-c1A	I-c1A	B-c2P	O	O	O	O	O	O	O	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c139	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1A	O	B-c2P	O	B-c3A	I-c3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c140	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c3C	B-c2P	O	O	O	O	O	O	O
+===== 123456 stmt89 =====
+WORD	Because	many	questions	will	require	in	vivo	studies	to	be	properly	addressed	,	the	zebrafish	,	with	its	unique	accessibility	to	analysis	by	combined	embryological	,	molecular	,	and	genetic	methods	,	should	prove	invaluable	in	identifying	new	molecules	involved	in	blood	vessel	development	and	integrating	pathways	that	influence	embryonic	blood	vessel	formation	.
+POSTAG	IN	JJ	NNS	MD	VB	IN	JJ	NNS	TO	VB	RB	VBN	,	DT	NN	,	IN	PRP$	JJ	NN	TO	NN	IN	JJ	JJ	,	JJ	,	CC	JJ	NNS	,	MD	VB	JJ	IN	VBG	JJ	NNS	VBN	IN	NN	NN	NN	CC	NN	NNS	WDT	VBP	JJ	NN	NN	NN	.
+CAP	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-C	O	O	O	O	O	O	O	O	O	B-C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-C	I-C	O	O	O	O	O	O	B-C	I-C	I-C	O	O
+f171	O	O	B-f1A	B-f2P	I-f2P	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f172	O	O	O	O	O	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f173	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	O	O	O	B-f1A	I-f1A	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f174	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f175	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f1C	I-f1C	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c141	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	O	O	O	B-c1A	I-c1A	B-c2P	I-c2P	I-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c142	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	B-c2P	I-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O
+c143	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	O	O	O	O	O	O	B-c2P	B-c3C	O	O	O	O	O	O	O
+c144	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	O	B-c2P	B-c3C	I-c3C	I-c3C	I-c3C	O
+===== 123456 stmt90 =====
+WORD	[	Interleukin	-	18	and	new	drugs	.	Protective	effect	against	tumor	growth	and	infections	]	.
+POSTAG	NN	NNP	:	CD	CC	JJ	NNS	.	JJ	NN	IN	NN	NN	CC	NNS	VBP	.
+CAP	O	B-C	I-C	I-C	O	O	O	O	O	O	O	B-C	O	O	O	O	O
+c145	O	B-c1C	I-c1C	I-c1C	O	O	O	O	O	O	O	O	O	O	O	O	O
+c146	O	O	O	O	O	O	B-c1C	O	O	O	O	O	O	O	O	O	O
+c147	O	O	O	O	O	O	O	O	B-c1A	I-c1A	B-c2P	B-c3C	I-c3C	O	O	O	O
+c148	O	O	O	O	O	O	O	O	B-c1A	I-c1A	B-c2P	O	O	O	B-c3C	O	O
+===== 123456 stmt91 =====
+WORD	IL	-	18	,	originally	identified	as	interferon	-	gamma	inducing	factor	(	IGIF	)	,	is	related	to	the	IL	-	1	family	in	terms	of	its	structure	as	well	as	its	processing	,	receptor	,	signal	transduction	pathway	and	pro	-	inflammatory	properties	.
+POSTAG	NNP	:	CD	,	RB	VBN	IN	NN	:	NN	VBG	NN	(	NNP	)	,	VBZ	VBN	TO	DT	NNP	:	CD	NN	IN	NNS	IN	PRP$	NN	RB	RB	IN	PRP$	NN	,	NN	,	JJ	NN	NN	CC	JJ	:	NN	NNS	.
+CAP	B-C	I-C	I-C	O	O	O	O	B-C	I-C	I-C	I-C	I-C	O	B-C	O	O	O	O	O	O	B-C	I-C	I-C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f176	B-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O	B-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	B-f3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f177	B-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O	B-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	B-f3A	O	O	O	O	O	O	O	O	O	O	O	O
+f178	B-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O	B-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	B-f3A	O	O	O	O	O	O	O	O	O	O
+f179	B-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O
+f180	B-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f3C	I-f3C	I-f3C	I-f3C	O
+c149	B-c1C	I-c1C	I-c1C	O	B-c2P	I-c2P	I-c2P	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c150	B-c1C	I-c1C	I-c1C	O	B-c2P	I-c2P	I-c2P	O	O	O	O	O	O	B-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+===== 123456 stmt92 =====
+WORD	IL	-	18	is	also	functionally	related	to	IL	-	12	,	as	it	induces	the	production	of	Th1	cytokines	and	participates	in	cell	-	mediated	immune	cytotoxicity	.
+POSTAG	NNP	:	CD	VBZ	RB	RB	VBN	TO	NNP	:	CD	,	IN	PRP	VBZ	DT	NN	IN	NNP	NNS	CC	NNS	IN	NN	:	VBN	JJ	NN	.
+CAP	B-C	I-C	I-C	O	O	O	O	O	B-C	I-C	I-C	O	O	O	O	O	O	O	B-C	O	O	O	O	B-C	O	O	O	O	O
+f181	B-f1C	I-f1C	I-f1C	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f182	B-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	B-f2P	O	B-f3A	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O
+f183	B-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	B-f3C	I-f3C	I-f3C	I-f3C	I-f3C	O
+===== 123456 stmt93 =====
+WORD	A	summary	is	made	of	recent	advances	in	the	understanding	of	IL	-	18	structure	,	processing	,	receptor	expression	and	immunoregulatory	functions	.
+POSTAG	DT	NN	VBZ	VBN	IN	JJ	NNS	IN	DT	NN	IN	NNP	:	CD	NN	,	NN	,	NN	NN	CC	JJ	NNS	.
+CAP	O	O	O	O	O	O	O	O	O	O	O	B-C	I-C	I-C	O	O	O	O	O	O	O	O	O	O
+f184	O	B-f1A	B-f2P	I-f2P	I-f2P	B-f3A	I-f3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c151	O	O	O	O	O	B-c1A	I-c1A	B-c2P	O	B-c3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c152	O	O	O	O	O	O	O	O	O	B-c1A	B-c2P	B-c3C	I-c3C	I-c3C	B-c3A	O	O	O	O	O	O	O	O	O
+c153	O	O	O	O	O	O	O	O	O	B-c1A	B-c2P	B-c3C	I-c3C	I-c3C	O	O	B-c3A	O	O	O	O	O	O	O
+c154	O	O	O	O	O	O	O	O	O	B-c1A	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	B-c3A	I-c3A	O	O	O	O
+c155	O	O	O	O	O	O	O	O	O	B-c1A	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	B-c3A	I-c3A	O
+===== 123456 stmt94 =====
+WORD	It	focuses	on	the	role	of	IL	-	18	modulation	in	tumours	,	infections	and	autoimmune	and	inflammatory	diseases	.
+POSTAG	PRP	VBZ	IN	DT	NN	IN	NNP	:	CD	NN	IN	NNS	,	NNS	CC	NN	CC	NN	NNS	.
+CAP	O	O	O	O	O	O	B-C	I-C	I-C	O	O	B-C	O	O	O	O	O	O	O	O
+f185	B-f2P	I-f2P	I-f2P	O	B-f3A	O	B-f3C	I-f3C	I-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O
+c156	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	B-c3C	O	O	O	O	O	O	O	O
+c157	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	O	O	B-c3C	O	O	O	O	O	O
+c158	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	O	O	O	O	B-c3C	O	O	O	O
+c159	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	B-c2P	O	O	O	O	O	O	B-c3C	I-c3C	O
+===== 123456 stmt95 =====
+WORD	A	small	peptide	derived	from	Flt	-	1	(	VEGFR	-	1	)	functions	as	an	angiogenic	inhibitor	.
+POSTAG	DT	JJ	NN	VBN	IN	NNP	:	CD	(	NNP	:	CD	)	NNS	IN	DT	JJ	NN	.
+CAP	O	O	O	O	O	B-C	I-C	I-C	O	B-C	I-C	I-C	O	O	O	O	O	O	O
+c160	O	O	B-c1C	B-c2P	I-c2P	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O
+c161	O	O	B-c1C	O	O	O	O	O	O	O	O	O	O	O	B-c2P	O	B-c3C	I-c3C	O
+===== 123456 stmt96 =====
+WORD	Vascular	endothelial	growth	factor	(	VEGF	)	is	an	angiogenic	stimulator	which	functions	through	two	endothelial	specific	tyrosine	kinase	receptors	,	Flt	-	1	and	Flk	-	1	.
+POSTAG	JJ	JJ	NN	NN	(	NNP	)	VBZ	DT	JJ	NN	WDT	NNS	IN	CD	JJ	JJ	NN	NN	NNS	,	NNP	:	CD	CC	NNP	:	CD	.
+CAP	B-C	I-C	I-C	I-C	O	B-C	O	O	O	O	O	O	O	O	O	B-C	O	O	O	O	O	B-C	I-C	I-C	O	B-C	I-C	I-C	O
+f186	B-f1C	I-f1C	I-f1C	I-f1C	O	O	O	B-f2P	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f187	O	O	O	O	O	B-f1C	O	B-f2P	O	B-f3C	I-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c162	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	O	B-c2P	I-c2P	B-c3A	B-c3C	I-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O
+c163	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	O	B-c2P	I-c2P	O	O	O	O	O	O	O	B-c3C	I-c3C	I-c3C	O	O	O	O	O
+c164	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	O	B-c2P	I-c2P	O	O	O	O	O	O	O	O	O	O	O	B-c3C	I-c3C	I-c3C	O
+===== 123456 stmt97 =====
+WORD	In	this	work	,	we	show	that	an	11	-	amino	acid	peptide	derived	from	the	second	immunoglobulin	-	like	domain	of	Flt	-	1	functions	as	an	angiogenic	inhibitor	in	chick	chorioallantoic	membrane	and	inhibited	VEGF	-	induced	vascular	permeability	in	Miles	'	assay	without	binding	to	VEGF	directly	.
+POSTAG	IN	DT	NN	,	PRP	VBP	IN	DT	CD	:	NN	JJ	RB	VBN	IN	DT	JJ	NN	:	IN	NN	IN	NNP	:	CD	NNS	IN	DT	JJ	NN	IN	JJ	NN	NN	CC	JJ	NNP	:	VBD	JJ	NN	IN	NNP	POS	NN	IN	VBG	TO	NNP	RB	.
+CAP	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-C	I-C	I-C	O	O	O	O	O	O	B-C	B-C	I-C	O	O	B-C	O	O	B-C	O	O	O	O	O	O	O	O	B-C	O	O
+f188	B-f2P	O	B-f3A	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f189	O	O	O	O	O	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f190	O	O	O	O	O	O	O	O	B-f1C	I-f1C	I-f1C	I-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	B-f3A	I-f3A	O	B-f3C	I-f3C	I-f3C	O	O	O	O	O	O
+c165	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	I-c1C	B-c2P	I-c2P	O	B-c3A	I-c3A	I-c3A	I-c3A	I-c3A	O	B-c3C	I-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c166	O	O	O	O	O	O	O	O	B-c1C	I-c1C	I-c1C	I-c1C	I-c1C	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c2P	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c167	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+c168	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	O	O	O	O	B-c3C	I-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O	O
+c169	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-c2P	I-c2P	I-c2P	B-c3C	O	O
+===== 123456 stmt98 =====
+WORD	Circular	dichroism	and	nuclear	magnetic	resonance	analyses	indicate	that	this	peptide	forms	a	stable	extended	structure	in	solution	,	presumably	beta	-	sheet	structure	and	is	most	likely	existing	as	a	dimer	.
+POSTAG	JJ	NN	CC	JJ	JJ	NN	NNS	VBP	IN	DT	NN	VBZ	DT	JJ	JJ	NN	IN	NN	,	RB	SYM	:	NN	NN	CC	VBZ	RBS	JJ	VBG	IN	DT	NN	.
+CAP	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f191	B-f1C	I-f1C	O	O	O	O	O	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f192	O	O	O	B-f1C	I-f1C	I-f1C	I-f1C	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f193	O	O	O	O	O	O	O	O	O	O	B-f1C	B-f2P	O	B-f3A	I-f3A	I-f3A	O	B-f3C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f194	O	O	O	O	O	O	O	O	O	O	B-f1C	B-f2P	O	O	O	O	O	B-f3C	O	O	B-f3A	I-f3A	I-f3A	I-f3A	O	O	O	O	O	O	O	O	O
+f195	O	O	O	O	O	O	O	O	O	O	B-f1C	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-f2P	I-f2P	I-f2P	I-f2P	I-f2P	O	B-f3C	O
+===== 123456 stmt99 =====
+WORD	Our	results	suggest	that	this	small	peptide	functions	as	an	angiogenic	inhibitor	by	inhibiting	VEGF	function	through	a	non	-	VEGF	binding	mechanism	.
+POSTAG	PRP$	NNS	VBP	IN	DT	JJ	NN	NNS	IN	DT	JJ	NN	IN	VBG	NNP	NN	IN	DT	JJ	:	NN	NN	NN	.
+CAP	O	O	O	O	O	O	O	O	O	O	O	O	O	O	B-C	O	O	O	O	O	B-C	O	O	O
+f196	O	B-f1A	B-f2P	I-f2P	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O	O
+f197	O	O	O	O	O	O	B-f1C	I-f1C	O	O	O	O	O	O	O	O	O	O	B-f3C	I-f3C	I-f3C	I-f3C	I-f3C	O
+c170	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	O	B-c3C	I-c3C	O	O	O	O	O	O	O	O	O	O	O	O
+c171	O	O	O	O	O	O	B-c1C	I-c1C	O	O	O	O	B-c2P	I-c2P	B-c3C	I-c3C	O	O	O	O	O	O	O	O
+===== 123456 stmt100 =====
+WORD	Coexpression	of	vascular	endothelial	growth	factor	and	p53	protein	in	squamous	cell	carcinoma	of	the	esophagus	.
+POSTAG	NN	IN	JJ	JJ	NN	NN	CC	NN	NN	IN	JJ	NN	NN	IN	DT	NN	.
+CAP	O	O	B-C	I-C	I-C	I-C	O	B-C	O	O	B-C	I-C	I-C	O	O	B-C	O
+c172	B-c1A	O	B-c1C	I-c1C	I-c1C	I-c1C	O	O	O	B-c2P	B-c3A	I-c3A	I-c3A	O	O	B-c3C	O
+c173	B-c1A	O	O	O	O	O	O	B-c1C	I-c1C	B-c2P	B-c3A	I-c3A	I-c3A	O	O	B-c3C	O
+#100	197	173

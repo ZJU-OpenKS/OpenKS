@@ -5,7 +5,7 @@
 An abstract class for openks models to be trained with Paddle
 """
 import logging
-from typing import Tuple, List, Any
+from typing import Dict, Tuple, List, Any
 import torch
 import torch.nn as nn
 from torch.utils import data
@@ -77,6 +77,16 @@ class TorchModel(nn.Module, Register):
 		for g, p in zip(gradients, self.parameters()):
 			if g is not None:
 				p.grad = torch.from_numpy(g)
+
+
+class KGC1TorchModel(nn.Module, Register):
+	def __init__(self, **kwargs):
+		super(KGC1TorchModel, self).__init__()
+
+
+class KGC2TorchModel(nn.Module, Register):
+	def __init__(self, **kwargs):
+		super(KGC2TorchModel, self).__init__()
 
 
 class TorchDataset(data.Dataset):
@@ -186,7 +196,127 @@ class RecModel(OpenKSModel):
 	def run(self, *args):
 		return NotImplemented
 
+class KGC1LearnModel(OpenKSModel):
+	''' Base class for knowledge graph compensation learning trainer '''
+	def __init__(self, name: str = 'model-name', graph: MTG = None, args: List = None):
+		self.name = name
+		self.graph = graph
 
+	def parse_args(self):
+		return NotImplemented
+
+	def triples_reader(self, *args):
+		return NotImplemented
+
+	def triples_generator(self, *args):
+		return NotImplemented
+
+	def evaluate(self, *args):
+		return NotImplemented
+
+	def load_model(self, *args):
+		return NotImplemented
+
+	def save_model(self, *args):
+		return NotImplemented
+
+	def run(self, *args):
+		return NotImplemented
+
+
+class KGC2LearnModel(OpenKSModel):
+	''' Base class for knowledge graph compensation learning trainer '''
+	def __init__(self, name: str = 'model-name', graph: MTG = None, args: List = None):
+		self.name = name
+		self.graph = graph
+
+	def parse_args(self):
+		return NotImplemented
+
+	def triples_reader(self, *args):
+		return NotImplemented
+
+	def triples_generator(self, *args):
+		return NotImplemented
+
+	def evaluate(self, *args):
+		return NotImplemented
+
+	def load_model(self, *args):
+		return NotImplemented
+
+	def save_model(self, *args):
+		return NotImplemented
+
+	def run(self, *args):
+		return NotImplemented
+
+
+
+class NerModel(OpenKSModel):
+	''' Base class for ner trainer '''
+	def __init__(self, name: str = 'model-name', args: List = None):
+		self.name = name
+
+	def data_reader(self, *args):
+		return NotImplemented
+
+	def evaluate(self, *args):
+		return NotImplemented
+
+	def load_model(self, *args):
+		return NotImplemented
+
+	def save_model(self, *args):
+		return NotImplemented
+
+	def run(self, *args):
+		return NotImplemented
+
+
+class Relation_ExtractionModel(OpenKSModel):
+	''' Base class for relation extraction trainer '''
+	def __init__(self, name: str = 'model-name', args: List = None):
+		self.name = name
+
+	def data_reader(self, *args):
+		return NotImplemented
+
+	def evaluate(self, *args):
+		return NotImplemented
+
+	def load_model(self, *args):
+		return NotImplemented
+
+	def save_model(self, *args):
+		return NotImplemented
+
+	def run(self, *args):
+		return NotImplemented
+
+  
+class HypernymDiscoveryModel(OpenKSModel):
+    def __init__(self):
+        super().__init__()
+
+    def data_reader(self, *args):
+        return NotImplemented
+
+    def evaluate(self, *args):
+        return NotImplemented
+
+    def run(self):
+        return NotImplemented
+
+
+class HypernymExtractModel(OpenKSModel):
+    def __init__(self):
+        super().__init__()
+
+    def entity2hyper_lst(self, *args):
+        return NotImplemented
+      
+      
 class VisualConstructionModel(OpenKSModel):
 	''' 
 	Base class for visual part of multimedia knowledge graph building trainer, 
@@ -213,3 +343,60 @@ class VisualConstructionModel(OpenKSModel):
 
 	def train(self, *args):
 		return NotImplemented
+
+class openieModel(OpenKSModel):
+	''' Joint Extraction of Fact and Condition Tuples '''
+	def __init__(self, name: str = 'model-name', args: List = None):
+		self.name = name
+
+	def run(self, *args):
+		return NotImplemented
+		
+class BottleneckModel(OpenKSModel):
+	''' base model for bottleneck detection '''
+	def __init__(self, name: str = 'model-name', path: str = None):
+		self.name = name
+		self.path = name
+
+	def run(self):
+		return NotImplemented
+
+class ExpertRecModel(OpenKSModel):
+	''' base model for expert recommendation '''
+	def __init__(self, data_path):
+		self.data_path = data_path
+		self.model = None
+
+	def preprocess_data(self):
+		return NotImplemented
+
+	def load_data_and_model(self):
+		return NotImplemented
+	
+	def train_expert(self):
+		return NotImplemented
+	
+	def train_team(self):
+		return NotImplemented
+	
+	def inference_expert(self):
+		return NotImplemented
+	
+	def inference_team(self):
+		return NotImplemented
+	
+	def evaluate(self):
+		return NotImplemented
+
+	def save_model(self, path):
+		return NotImplemented
+	
+	def get_n_params(self):
+		assert self.model is not None
+		pp=0
+		for p in list(self.model.parameters()):
+			nn=1
+			for s in list(p.size()):
+				nn = nn*s
+			pp += nn
+		return pp
