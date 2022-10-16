@@ -19,4 +19,4 @@ from .visual_relation_learn import *
 from .hoi_learn import *
 from .stvgbert_learn import *
 from .dataloader import *
-from .transreid_ums_learn import *
+from .person_relation_learn import *
