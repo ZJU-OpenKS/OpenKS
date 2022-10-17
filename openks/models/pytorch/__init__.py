@@ -38,3 +38,4 @@ from .mimo_learn import *
 
 from .dataloader import *
 from .hgt_expert_rec import HGTExpertRec
+from .person_relation_learn import *

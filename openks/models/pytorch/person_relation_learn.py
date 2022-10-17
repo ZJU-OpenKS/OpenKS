@@ -9,22 +9,22 @@ import argparse
 
 from ..model import VisualConstructionModel
 
-from .mmd_modules.TransReID_UMS.utils.logger import setup_logger
-from .mmd_modules.TransReID_UMS.datasets import make_dataloader
-from .mmd_modules.TransReID_UMS.model import make_model
-from .mmd_modules.TransReID_UMS.solver import make_optimizer
-from .mmd_modules.TransReID_UMS.solver.scheduler_factory import create_scheduler
-from .mmd_modules.TransReID_UMS.loss import make_loss
-from .mmd_modules.TransReID_UMS.processor import do_train, do_inference
+from .mmd_modules.Person_Relation.utils.logger import setup_logger
+from .mmd_modules.Person_Relation.datasets import make_dataloader
+from .mmd_modules.Person_Relation.model import make_model
+from .mmd_modules.Person_Relation.solver import make_optimizer
+from .mmd_modules.Person_Relation.solver.scheduler_factory import create_scheduler
+from .mmd_modules.Person_Relation.loss import make_loss
+from .mmd_modules.Person_Relation.processor import do_train, do_inference
 
 # from timm.scheduler import create_scheduler
-from .mmd_modules.TransReID_UMS.config import cfg
+from .mmd_modules.Person_Relation.config import cfg
 
 
-@VisualConstructionModel.register("TransReID_UMS", "PyTorch")
+@VisualConstructionModel.register("Person_Relation", "PyTorch")
 class VisualRelationTorch(VisualConstructionModel):
     # TODO distributed learning is not complete.
-    def __init__(self, name: str = 'pytorch-transreid_ums', use_distributed: bool = False, args = {"TransReID_UMS": True}):
+    def __init__(self, name: str = 'pytorch-person_relation', use_distributed: bool = False, args = {"Person_Relation": True}):
         self.name = name
         self.args = self.parse_args(args)
         print("args", self.args)
@@ -41,7 +41,7 @@ class VisualRelationTorch(VisualConstructionModel):
     def parse_args(self, args):
         parser = argparse.ArgumentParser(description="ReID Baseline Training")
         parser.add_argument(
-            "--config_file", default="/data5/caidaigang/model/OpenKS-3djcg/openks/models/pytorch/mmd_modules/TransReID_UMS/configs/MSMT17/vit_transreid_stride.yml", help="path to config file", type=str
+            "--config_file", default="/data5/caidaigang/model/OpenKS-3djcg/openks/models/pytorch/mmd_modules/Person_Relation/configs/MSMT17/vit_transreid_stride.yml", help="path to config file", type=str
         )
 
         parser.add_argument("opts", help="Modify config options using the command-line", default=None,
@@ -65,7 +65,7 @@ class VisualRelationTorch(VisualConstructionModel):
         if output_dir and not os.path.exists(output_dir):
             os.makedirs(output_dir)
 
-        logger = setup_logger("transreid", output_dir, if_train=False)
+        logger = setup_logger("person_relation", output_dir, if_train=False)
         logger.info(args)
 
         if args.config_file != "":
@@ -120,7 +120,7 @@ class VisualRelationTorch(VisualConstructionModel):
         if output_dir and not os.path.exists(output_dir):
             os.makedirs(output_dir)
 
-        logger = setup_logger("transreid", output_dir, if_train=True)
+        logger = setup_logger("person_relation", output_dir, if_train=True)
         logger.info("Saving model in the path :{}".format(cfg.OUTPUT_DIR))
         logger.info(args)
 

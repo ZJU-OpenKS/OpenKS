@@ -1,0 +1,31 @@
+cd /root/reId/models/TransReID-main
+
+python train.py --config_file configs/MSMT17/vit_transreid_stride.yml MODEL.DEVICE_ID "('2')"
+
+python train.py --config_file configs/OCC_Duke/vit_transreid_stride.yml MODEL.DEVICE_ID "('3')"
+
+python train.py --config_file configs/DukeMTMC/vit_transreid_stride.yml MODEL.DEVICE_ID "('4')"
+
+python train.py --config_file configs/Market/vit_transreid_stride.yml MODEL.DEVICE_ID "('1')"
+
+
+# DukeMTMC
+python test.py --config_file configs/DukeMTMC/vit_transreid_stride.yml MODEL.DEVICE_ID "('2')"  TEST.WEIGHT '../logs/duke_vit_transreid_stride/transformer_120.pth'
+# MSMT17
+python test.py --config_file configs/MSMT17/vit_transreid_stride.yml MODEL.DEVICE_ID "('5')" TEST.WEIGHT '../logs/msmt17_vit_transreid_stride/transformer_120.pth'
+# OCC_Duke
+python test.py --config_file configs/OCC_Duke/vit_transreid_stride.yml MODEL.DEVICE_ID "('4')" TEST.WEIGHT '../logs/occ_duke_vit_transreid_stride/transformer_120.pth'
+# Market
+python test.py --config_file configs/Market/vit_transreid_stride.yml MODEL.DEVICE_ID "('5')"  TEST.WEIGHT '../logs/market_vit_transreid_stride/transformer_120.pth'
+# VeRi
+python test.py --config_file configs/VeRi/vit_transreid_stride.yml MODEL.DEVICE_ID "('0')" TEST.WEIGHT '../logs/veri_vit_transreid_stride/transformer_120.pth'
+# VehicleID (We test 10 times and get the final average score to avoid randomness)
+python test.py --config_file configs/VehicleID/vit_transreid_stride.yml MODEL.DEVICE_ID "('0')" TEST.WEIGHT '../logs/vehicleID_vit_transreid_stride/transformer_120.pth'
+
+
+
+
+python convert_duke_to_occduke.py /root/reId/data/DukeMTMC-reID.zip 
+zip -r Occluded_Duke.zip ./*
+tar -zcvf /root/reId/data/Occluded-DukeMTMC-Dataset-master/Occluded_Duke.zip /root/reId/data/Occluded-DukeMTMC-Dataset-master/Occluded_Duke/
+apt-get install
