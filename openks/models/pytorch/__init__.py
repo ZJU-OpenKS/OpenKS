@@ -19,4 +19,5 @@ from .visual_relation_learn import *
 from .hoi_learn import *
 from .stvgbert_learn import *
 from .dataloader import *
+from .hgt_expert_rec import HGTExpertRec
 from .person_relation_learn import *
