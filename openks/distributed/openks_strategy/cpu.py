@@ -1,7 +1,7 @@
 # Copyright (c) 2021 OpenKS Authors, DCD Research Lab, Zhejiang University. 
 # All Rights Reserved.
 
-from ..openKS_strategy.base import _StrategyBase, _ExecuteConfig, _DistributeConfig
+from ..openks_strategy.base import _StrategyBase, _ExecuteConfig, _DistributeConfig
 
 
 class CPUStrategy(_StrategyBase):

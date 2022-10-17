@@ -1,0 +1,100 @@
+Positron emission tomography in a case of intracranial hemangiopericytoma .
+Due to the low prevalence of hemangiopericytomas ( HPCs ) , data on the biophysiological characteristics of this tumor are rare .
+Positron emission tomography ( PET ) demonstrated a sixfold increased uptake of [ 11C ] methionine and hyperperfusion in the HPC , whereas glucose utilization was decreased in this area .
+This low glucose utilization is in contrast to the high [ 11C ] methionine uptake and the malignancy of these tumors .
+The characteristics of HPCs in PET described herein for the first time offer additional diagnostic criteria and may help especially to differentiate these tumors from meningiomas .
+Thyrotropin receptor : a role for thyroid tumourigenesis ?
+Human thyroid tumours represent an example of the interplay of genetic and non genetic carcinogenesis .
+Recently , genetic abnormalities in the elements of the Thyrotropin receptor ( TSH - R ) dependent cAMP regulatory cascade have been found to be involved both in benign and malignant thyroid tumours .
+The presence of activating mutations has been demonstrated in the TSH - R gene as well as in the Gs alpha protein gene in thyroid toxic adenoma resulting in the constitutive activation of the cAMP pathway and it has been hypothesised that these genetic alterations may play a causative role in the disease .
+However , recent observations suggest more caution in accepting such a hypothesis .
+The presence of activating TSH - R mutations has also been demonstrated in differentiated thyroid carcinomas .
+At present , the percentage of such a modification is low , unless referred to selected series of tumours .
+Activating mutations of the TSH - R gene have been detected in a group of differentiated carcinomas with high basal adenylyl cyclase activity , and in a few cases of hyperfunctioning thyroid carcinoma .
+However , the role of the TSH - R - related cAMP pathway alterations in thyroid transformation remains to be elucidated .
+In this review , the role of TSH - R gene alterations in benign and malignant thyroid neoplasia is examined .
+Cooccurrence of reduced expression of alpha - catenin and overexpression of p53 is a predictor of lymph node metastasis in early gastric cancer .
+BACKGROUND AND OBJECTIVES : Even though the pathological background contributes to lymph node metastasis , the biological characteristics of tumors have also gained wide attention .
+In this study , the expression of the cadherin - catenin complex and p53 was studied in early gastric cancer .
+Their correlation with lymph node metastasis and the predictability of lymph node metastases , by combining these factors , were also discussed .
+METHODS : One hundred and one specimens obtained from surgery were studied by immunohistochemistry using monoclonal anti - E - cadherin , anti - alpha - catenin and anti - p53 antibodies .
+RESULTS : Expression of E - cadherin and alpha - catenin was reduced in 50 . 5 and 64 . 4 % , respectively .
+p53 protein staining was positive in 29 . 7 % .
+There was a significant correlation between E - cadherin and alpha - catenin expression , but no correlation was found between p53 expression and E - cadherin or alpha - catenin expression .
+A reduction in alpha - catenin expression and p53 overexpression correlated to lymph node metastases , respectively .
+Multivariate analysis showed that cooccurrence of reduced expression of alpha - catenin and overexpression of p53 was an independent factor indicating lymph node metastases .
+CONCLUSION : A study of both alpha - catenin and p53 expression may be helpful to predict lymph node metastases in early gastric cancer .
+Proto - oncogene N - myc promoter is down regulated by the Wilms ' tumor suppressor gene WT1 .
+The Wilms ' tumor 1 ( WT1 ) gene is a tumor suppressor gene that encodes a zinc - finger transcription factor .
+WT1 represses transcription of several growth factors and growth factor receptors .
+The N - myc proto - oncogene encodes a transcription factor which regulates cell growth and differentiation .
+N - myc is coexpressed with WT1 in the developing kidney and is overexpressed in many Wilms ' tumors .
+Here , we show that the proto - oncogene N - myc promoter was down - regulated by WT1 in transient transfection assays .
+However , mutant WT1 ( R394W ) which has a mutation in the DNA binding domain could not repress the N - myc promoter .
+Electrophoretic mobility shift assays showed that the oligonucleotides containing the WT1 motifs could bind recombinant WT1 proteins .
+This suggests that the repression of the N - myc promoter is mediated through the WT1 binding sites .
+This finding may help to elucidate the relationship of WT1 and N - myc in tumorigenesis and renal development .
+Tumour - specific distribution of BRCA1 promoter region methylation supports a pathogenetic role in breast and ovarian cancer .
+The role of BRCA1 in sporadic breast and ovarian cancers remains elusive .
+Direct involvement of BRCA1 in the development of breast and ovarian cancer is suggested by the finding that the BRCA1 promoter region CpG island is methylated in a proportion of breast and ovarian cancers .
+The aim of this study was to compare the incidence of BRCA1 promoter region methylation in tumours in which loss of BRCA1 has been shown to play a role in pathogenesis ( breast and ovarian carcinomas ) with the incidence in tumours in which BRCA1 is unlikely to play a role in pathogenesis .
+Promoter region hypermethylation was significantly more common ( P < 0 . 008 ) in breast and ovarian cancer ( 6 / 38 tumours methylated ) than in colon cancer ( 0 / 35 tumours methylated ) or in leukaemias ( 0 / 19 samples methylated ) .
+The restriction of BRCA1 promoter region hypermethylation to breast and ovarian cancer is consistent with a pathogenetic role of BRCA1 promoter methylation in these tumours .
+We suggest that the rarity of observed BRCA1 mutations in sporadic breast and ovarian cancer is due to the greater likelihood of BRCA1 inactivation by non - mutational mechanisms such as methylation .
+Regulation of the resident chromosomal copy of c - myc by c - Myb is involved in myeloid leukemogenesis .
+c - myb is a frequent target of retroviral insertional mutagenesis in murine leukemia virus - induced myeloid leukemia .
+Induction of the leukemogenic phenotype is generally associated with inappropriate expression of this transcriptional regulator .
+Despite intensive investigations , the target genes of c - myb that are specifically involved in development of these myeloid lineage neoplasms are still unknown .
+In vitro assays have indicated that c - myc may be a target gene of c - Myb ; however , regulation of the resident chromosomal gene has not yet been demonstrated .
+To address this question further , we analyzed the expression of c - myc in a myeloblastic cell line , M1 , expressing a conditionally active c - Myb - estrogen receptor fusion protein ( MybER ) .
+Activation of MybER both prevented the growth arrest induced by interleukin - 6 ( IL - 6 ) and rapidly restored c - myc expression in nearly terminal differentiated cells that had been exposed to IL - 6 for 3 days .
+Restoration occurred in the presence of a protein synthesis inhibitor but not after a transcriptional block , indicating that c - myc is a direct , transcriptionally regulated target of c - Myb .
+c - myc is a major target that transduces Myb ' s proliferative signal , as shown by the ability of a c - Myc - estrogen receptor fusion protein alone to also reverse growth arrest in this system .
+To investigate the possibility that this regulatory connection contributes to Myb ' s oncogenicity , we expressed a dominant negative Myb in the myeloid leukemic cell line RI - 4 - 11 .
+In this cell line , c - myb is activated by insertional mutagenesis and cannot be effectively down regulated by cytokine .
+Myb ' s ability to regulate c - myc ' s expression was also demonstrated in these cells , showing a mechanism through which the proto - oncogene c - myb can exert its oncogenic potential in myeloid lineage hematopoietic cells .
+Adenovirus - mediated gene transfer of endostatin in vivo results in high level of transgene expression and inhibition of tumor growth and metastases .
+Inhibition of angiogenesis has been shown to be an effective strategy in cancer therapy in mice .
+However , its widespread application has been hampered by difficulties in the large - scale production of the antiangiogenic proteins .
+This limitation may be resolved by in vivo delivery and expression of the antiangiogenic genes .
+We have constructed a recombinant adenovirus that expresses murine endostatin that is biologically active both in vitro , as determined in endothelial cell proliferation assays , and in vivo , by suppression of angiogenesis induced by vascular endothelial growth factor 165 .
+Persistent high serum levels of endostatin ( 605 - 1740 ng / ml ; mean , 936 ng / ml ) were achieved after systemic administration of the vector to nude mice , which resulted in significant reduction of the growth rates and the volumes of JC breast carcinoma and Lewis lung carcinoma ( P less than 0 . 001 and P less than 0 . 05 , respectively ) .
+In addition , the endostatin vector treatment completely prevented the formation of pulmonary micrometastases in Lewis lung carcinoma ( P = 0 . 0001 ) .
+Immunohistochemical staining of the tumors demonstrated a decreased number of blood vessels in the treatment group versus the controls .
+In conclusion , the present study clearly demonstrates the potential of vector - mediated antiangiogenic gene therapy as a component in cancer therapy .
+High frequency of hypermethylation at the 14 - 3 - 3 sigma locus leads to gene silencing in breast cancer .
+Expression of 14 - 3 - 3 final sigma ( final sigma ) is induced in response to DNA damage , and causes cells to arrest in G ( 2 ) .
+By SAGE ( serial analysis of gene expression ) analysis , we identified final sigma as a gene whose expression is 7 - fold lower in breast carcinoma cells than in normal breast epithelium .
+We verified this finding by Northern blot analysis .
+Remarkably , final sigma mRNA was undetectable in 45 of 48 primary breast carcinomas .
+Genetic alterations at final sigma such as loss of heterozygosity were rare ( 1 / 20 informative cases ) , and no mutations were detected ( 0 / 34 ) .
+On the other hand , hypermethylation of CpG islands in the final sigma gene was detected in 91 % ( 75 / 82 ) of breast tumors and was associated with lack of gene expression .
+Hypermethylation of final sigma is functionally important , because treatment of final sigma - non - expressing breast cancer cell lines with the drug 5 - aza - 2 ' - deoxycytidine resulted in demethylation of the gene and synthesis of final sigma mRNA .
+Breast cancer cells lacking final sigma expression showed increased number of chromosomal breaks and gaps when exposed to gamma - irradiation .
+Therefore , it is possible that loss of final sigma expression contributes to malignant transformation by impairing the G ( 2 ) cell cycle checkpoint function , thus allowing an accumulation of genetic defects .
+Hypermethylation and loss of final sigma expression are the most consistent molecular alterations in breast cancer identified so far .
+Reduced oncogenicity of p190 Bcr / Abl F - actin - binding domain mutants .
+The deregulated Bcr / Abl tyrosine kinase is responsible for the development of Philadelphia ( Ph ) - positive leukemia in humans .
+To investigate the significance of the C - terminal Abl actin - binding domain within Bcr / Abl p190 in the development of leukemia / lymphoma in vivo , mutant p190 DNA constructs were used to generate transgenic mice .
+Eight founder and progeny mice of 5 different lines were monitored for leukemogenesis .
+Latency was markedly increased and occurrence decreased in the p190 del C lines as compared with nonmutated p190 BCR / ABL transgenics .
+Western blot analysis of involved hematologic tissues of the p190 del C transgenics with end - stage disease showed high - level expression of the transgene and tyrosine phosphorylation of Cbl and Hef1 / Cas , proteins previously shown to be affected by Bcr / Abl .
+These results show that the actin - binding domain of Abl enhances leukemia development but does not appear to be an absolute requirement for leukemogenesis .
+Building the vertebrate vasculature : research is going swimmingly .
+The vertebrate vasculature develops in remarkably similar fashion in all vertebrates .
+A cohort of unspecified mesodermal cells differentiates into primitive endothelial cells , which migrate to and occupy positions within the stereotypical blueprint of the primitive vasculature .
+Once in position , these cells coalesce and form cords , which lumenize and become ensheathed by supporting pericytes and smooth muscle cells .
+This primitive vascular network is extensively remodeled in some places , and expanded by sprouting in others .
+Various studies using the mouse , quail / chick , and frog have uncovered a number of signals that guide these complex processes but many gaps still exist in our understanding of the mechanisms by which the embryonic vasculature is built .
+Because many questions will require in vivo studies to be properly addressed , the zebrafish , with its unique accessibility to analysis by combined embryological , molecular , and genetic methods , should prove invaluable in identifying new molecules involved in blood vessel development and integrating pathways that influence embryonic blood vessel formation .
+[ Interleukin - 18 and new drugs . Protective effect against tumor growth and infections ] .
+IL - 18 , originally identified as interferon - gamma inducing factor ( IGIF ) , is related to the IL - 1 family in terms of its structure as well as its processing , receptor , signal transduction pathway and pro - inflammatory properties .
+IL - 18 is also functionally related to IL - 12 , as it induces the production of Th1 cytokines and participates in cell - mediated immune cytotoxicity .
+A summary is made of recent advances in the understanding of IL - 18 structure , processing , receptor expression and immunoregulatory functions .
+It focuses on the role of IL - 18 modulation in tumours , infections and autoimmune and inflammatory diseases .
+A small peptide derived from Flt - 1 ( VEGFR - 1 ) functions as an angiogenic inhibitor .
+Vascular endothelial growth factor ( VEGF ) is an angiogenic stimulator which functions through two endothelial specific tyrosine kinase receptors , Flt - 1 and Flk - 1 .
+In this work , we show that an 11 - amino acid peptide derived from the second immunoglobulin - like domain of Flt - 1 functions as an angiogenic inhibitor in chick chorioallantoic membrane and inhibited VEGF - induced vascular permeability in Miles ' assay without binding to VEGF directly .
+Circular dichroism and nuclear magnetic resonance analyses indicate that this peptide forms a stable extended structure in solution , presumably beta - sheet structure and is most likely existing as a dimer .
+Our results suggest that this small peptide functions as an angiogenic inhibitor by inhibiting VEGF function through a non - VEGF binding mechanism .
+Coexpression of vascular endothelial growth factor and p53 protein in squamous cell carcinoma of the esophagus .

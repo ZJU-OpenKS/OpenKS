@@ -7,8 +7,8 @@ import _init_paths
 import os
 import cv2
 
-from opts import opts
-from detectors.detector_factory import detector_factory
+from .stvglib.opts import opts
+from .stvglib.detectors.detector_factory import detector_factory
 
 image_ext = ['jpg', 'jpeg', 'png', 'webp']
 video_ext = ['mp4', 'mov', 'avi', 'mkv']

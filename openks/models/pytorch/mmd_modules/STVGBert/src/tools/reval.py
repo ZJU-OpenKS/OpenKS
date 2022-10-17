@@ -14,11 +14,11 @@ from __future__ import division
 from __future__ import print_function
 
 import sys
-import os.path as osp
-sys.path.insert(0, osp.join(osp.dirname(__file__), 'voc_eval_lib'))
+# import os.path as osp
+# sys.path.insert(0, osp.join(osp.dirname(__file__), 'voc_eval_lib'))
 
-from model.test import apply_nms
-from datasets.pascal_voc import pascal_voc
+from .vocal_eval_lib.model.test import apply_nms
+from .vocal_eval_lib.datasets.pascal_voc import pascal_voc
 import pickle
 import os, argparse
 import numpy as np

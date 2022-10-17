@@ -1,0 +1,79 @@
+# 26118933	Immunization#0 of#1 sea#2 bream#3 juveniles#4 against#5 photobacterium#6 damselae#7 subsp.#8 piscicida#9 by#10 short#11 bath#12 ,#13 effect#14 on#15 some#16 pro-inflammatory#17 molecules#18 and#19 the#20 mx#21 gene#22 expression#23 .#24 
+
+c1:[{sea_bream_juveniles#2:immunization#0},against#5,photobacterium_damselae_subsp._piscicida#6]
+c2:[{NIL#-1:effect#14},on#15,pro-inflammatory_molecules#17]
+c3:[{NIL#-1:effect#14},on#15,mx_gene_expression#21]
+stmt1 = c1 c2 c3
+
+# 26118933	Cytokines#0 are#1 a#2 family#3 of#4 proteins#5 derived#6 from#7 macrophages#8 ,#9 lymphocytes#10 ,#11 granulocytes#12 ,#13 mast#14 cells#15 and#16 epithelial#17 cells#18 and#19 can#20 be#21 divided#22 into#23 interferons#24 ,#25 Interleukins#26 and#27 Tumor#28 Necrosis#29 factors#30 among#31 others#32 .#33 
+
+f1:[cytokines#0,are#1,{proteins#5:family#3}]
+f2:[cytokines#0,can_be_divided_into#20,interferons#24]
+f3:[cytokines#0,can_be_divided_into#20,interleukins#26]
+f4:[cytokines#0,can_be_divided_into#20,tumor_necrosis_factors#28]
+c4:[proteins#5,derived_from#6,macrophages#8]
+c5:[proteins#5,derived_from#6,lymphocytes#10]
+c6:[proteins#5,derived_from#6,granulocytes#12]
+c7:[proteins#5,derived_from#6,mast_cells#14]
+c8:[proteins#5,derived_from#6,epithelial_cells#17]
+c9:[tumor_necrosis_factors#28,among_others#31,NIL]
+stmt2 = f1 f2 f3 f4 c4 c5 c6 c7 c8 c9
+
+# 26118933	The#0 presence#1 of#2 cytokines#3 in#4 a#5 wide#6 number#7 of#8 fish#9 species#10 has#11 been#12 proved#13 and#14 several#15 molecules#16 types#17 have#18 been#19 already#20 cloned#21 and#22 sequenced#23 .#24 
+
+f5:[{cytokines#3:presence#1},has_been_proved#11,NIL]
+f6:[molecules_types#16,have_been_already_cloned#18,NIL]
+f7:[molecules_types#16,sequenced#23,NIL]
+c10:[{cytokines#3:presence#1},in#4,fish_species#9]
+stmt3 = f5 f6 f7 c10
+
+# 26118933	In#0 this#1 work#2 some#3 proinflamatory#4 molecules#5 and#6 Mx#7 gene#8 were#9 detected#10 in#11 the#12 liver#13 of#14 vaccinated#15 sea#16 bream#17 juveniles#18 with#19 an#20 average#21 body#22 weight#23 of#24 5#25 g#26 .#27 
+
+f8:[proinflamatory_molecules#4,were_detected_in#9,{vaccinated_sea_bream_juveniles#15:liver#13}]
+f9:[mx_gene#7,were_detected_in#9,{vaccinated_sea_bream_juveniles#15:liver#13}]
+c11:[average_body_weight#21,of#24,5_g#25]
+stmt4 = f8 f9 c11
+
+# 26118933	The#0 method#1 of#2 immunization#3 was#4 by#5 short#6 bath#7 and#8 three#9 different#10 bacterins#11 against#12 the#13 marine#14 pathogen#15 Photobacterium#16 damselae#17 subsp.#18 piscicida#19 were#20 designed#21 and#22 used#23 to#24 immunize#25 fish#26 .#27 
+
+f10:[{immunization#3:method#1},was_by#4,short_bath#6]
+f11:[bacterins#11,were_designed#20,NIL]
+f12:[bacterins#11,used_to_immunize#23,fish#26]
+c12:[bacterins#11,against#12,marine_pathogen_photobacterium_damselae_subsp._piscicida#14]
+stmt5 = f10 f11 f12 c12
+
+# 26118933	Five#0 genes#1 encoding#2 for#3 five#4 different#5 molecules#6 were#7 analyzed#8 by#9 real#10 time#11 PCR#12 ,#13 IL-1#14 beta#15 ,#16 IL#17 Ir-2#18 ,#19 Cox-2#20 ,#21 Mx#22 and#23 TNFalpha#24 .#25 
+
+f13:[genes#1,were_analyzed_by#7,real_time_pcr#10]
+f14:[genes#1,were_analyzed_by#7,il-1_beta#14]
+f15:[genes#1,were_analyzed_by#7,il_ir-2#17]
+f16:[genes#1,were_analyzed_by#7,cox-2#20]
+f17:[genes#1,were_analyzed_by#7,mx#22]
+f18:[genes#1,were_analyzed_by#7,tnfalpha#24]
+c13:[genes#1,encoding_for#2,molecules#6]
+stmt6 = f13 f14 f15 f16 f17 f18 c13
+
+# 26118933	Gene#0 expression#1 was#2 quantified#3 along#4 four#5 days#6 after#7 fish#8 immunization#9 and#10 results#11 were#12 compared#13 among#14 groups#15 .#16 
+
+f19:[gene_expression#0,was_quantified_along#2,{NIL#-1:four_days#5}]
+c14:[fish_immunization#8,were_compared_among#12,groups#15]
+stmt7 = f19 c14
+
+# 26118933	Results#0 show#1 that#2 the#3 heat-inactivated#4 vaccine#5 stimulates#6 the#7 up-regulation#8 of#9 IL-1#10 beta#11 ,#12 IL#13 Ir-2#14 ,#15 Cox-2#16 and#17 TNFalpha#18 genes#19 whereas#20 the#21 UV-light#22 inactivated#23 vaccine#24 was#25 the#26 unique#27 vaccine#28 which#29 stimulates#30 the#31 expression#32 of#33 Mx#34 gene#35 .#36 
+
+f20:[{NIL#-1:results#0},show_that#1,NIL]
+f21:[heat-inactivated_vaccine#4,stimulates#6,{il-1_beta#10:up-regulation#8}]
+f22:[heat-inactivated_vaccine#4,stimulates#6,{il_ir-2#13:up-regulation#8}]
+f23:[heat-inactivated_vaccine#4,stimulates#6,{cox-2#16:up-regulation#8}]
+f24:[heat-inactivated_vaccine#4,stimulates#6,{tnfalpha_genes#18:up-regulation#8}]
+f25:[uv-light_inactivated_vaccine#22,was#25,unique_vaccine#27]
+c15:[unique_vaccine#27,stimulates#30,{mx_gene#34:expression#32}]
+stmt8 = f20 f21 f22 f23 f24 f25 c15
+
+# 26118933	The#0 present#1 is#2 a#3 novel#4 study#5 that#6 shows#7 by#8 the#9 first#10 time#11 the#12 effect#13 of#14 the#15 inactivation#16 process#17 of#18 vaccines#19 on#20 the#21 expression#22 levels#23 of#24 genes#25 involved#26 in#27 the#28 defense#29 against#30 Photobacterium#31 damselae#32 subsp#33 piscicida#34 .#35 
+
+f26:[{NIL#-1:novel_study#4},shows_by_the_first_time#7,{NIL#-1:effect#13}]
+c16:[{NIL#-1:effect#13},of#14,{vaccines#19:inactivation_process#16}]
+c17:[{vaccines#19:inactivation_process#16},on#20,{genes#25:expression_levels#22}]
+c18:[{genes#25:expression_levels#22},involved_in_defense_against#26,photobacterium_damselae_subsp_piscicida#31]
+stmt9 = f26 c16 c17 c18

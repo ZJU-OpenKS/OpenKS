@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>EAGER: Archaeological Investigation of Site Form and Function during the Settlement Period</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>01/31/2023</AwardExpirationDate>
+<AwardTotalIntnAmount>197832.00</AwardTotalIntnAmount>
+<AwardAmount>197832</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>06090100</Code>
+<Directorate>
+<Abbreviation>GEO</Abbreviation>
+<LongName>Directorate For Geosciences</LongName>
+</Directorate>
+<Division>
+<Abbreviation>OPP</Abbreviation>
+<LongName>Office of Polar Programs (OPP)</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Erica Hill</SignBlockName>
+<PO_EMAI>erhill@nsf.gov</PO_EMAI>
+<PO_PHON>7032924521</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>Iceland, one of the last land masses explored by humans, was first settled in the late ninth century. Archaeologists have generally assumed that early settlement took the form of large, centralized farms, yet discovery of an increasing number of small, short-lived sites challenges this model. This EAGER project investigates one of the oldest and earliest small sites in North Iceland through coring and archaeological excavation. The objective is to determine the nature of human activity at the site and whether site inhabitants lived independent of wealthy farmsteads and pursued alternative subsistence strategies. The discovery of small, permanent habitations during the early settlement period would transform understanding of the process of initial landscape colonization, forcing archaeologists to rethink their assumptions about the nature of social organization, subsistence, and settlement patterns during landnám.&lt;br/&gt;&lt;br/&gt;Archaeological study of this early settlement-period site involves systematic coring to establish the preservation, extent and character of the cultural deposits. Open-air excavation follows with test trenching to expose the building identified during initial testing and to determine its form, size, and age. Collection and comprehensive analysis of artifacts, plant and animal remains, and soil samples complement study of the structure and provide insight into daily activities, subsistence, and length of habitation. This project will be conducted in association with a local museum, engaging community members in their own past. The project will also provide international fieldwork experience to U.S. university students and familiarize them with testing and excavation methods and with the STEM fields employed in archaeological research.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>10/24/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>10/24/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.078</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2202172</AwardID>
+<Investigator>
+<FirstName>Kathryn</FirstName>
+<LastName>Catlin</LastName>
+<PI_MID_INIT>A</PI_MID_INIT>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Kathryn A Catlin</PI_FULL_NAME>
+<EmailAddress>kcatlin@jsu.edu</EmailAddress>
+<PI_PHON>2567825232</PI_PHON>
+<NSF_ID>000680458</NSF_ID>
+<StartDate>10/24/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>Jacksonville State University</Name>
+<CityName>Jacksonville</CityName>
+<ZipCode>362651602</ZipCode>
+<PhoneNumber>2567828144</PhoneNumber>
+<StreetAddress>700 North Pelham Road</StreetAddress>
+<StreetAddress2><![CDATA[203 Angle Hall]]></StreetAddress2>
+<CountryName>United States</CountryName>
+<StateName>Alabama</StateName>
+<StateCode>AL</StateCode>
+<CONGRESSDISTRICT>03</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>AL03</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>079107165</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>JACKSONVILLE STATE UNIVERSITY (INC)</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>079107165</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[Jacksonville State University]]></Name>
+<CityName>Jacksonville</CityName>
+<StateCode>AL</StateCode>
+<ZipCode>362651602</ZipCode>
+<StreetAddress><![CDATA[700 North Pelham Road]]></StreetAddress>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>Alabama</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>03</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>AL03</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>5221</Code>
+<Text>ASSP-Arctic Social Science</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>1079</Code>
+<Text>ARCTIC RESEARCH</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>1391</Code>
+<Text>ARCHAEOLOGY</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>5221</Code>
+<Text>ARCTIC SOCIAL SCIENCES</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>7916</Code>
+<Text>EAGER</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>9150</Code>
+<Text>EXP PROG TO STIM COMP RES</Text>
+</ProgramReference>
+<FUND_OBLG>2020~197832</FUND_OBLG>
+</Award>
+</rootTag>

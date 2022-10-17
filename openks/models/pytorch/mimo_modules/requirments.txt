@@ -1,0 +1,9 @@
+requests 
+torch==1.2.0 
+gevent==1.4.0 
+sklearn
+nltk
+spacy==2.1.8
+pytorch_pretrained_bert==0.6.2
+gensim
+flask

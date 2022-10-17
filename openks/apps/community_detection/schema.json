@@ -1,0 +1,97 @@
+[
+	{
+		"type": "entity",
+		"concept": "person",
+		"properties": [
+			{
+				"name": "ID",
+				"range": "str"
+			},
+			{
+				"name": "type",
+				"range": "str"
+			},
+			{
+        		"name": "age",
+        		"range": "int"
+      		},
+      		{
+      		  	"name": "sex",
+      		  	"range": "int"
+      		},
+      		{
+      		  	"name": "native_place",
+      		  	"range": "str"
+      		},
+      		{
+      		  	"name": "birth_place",
+      		  	"range": "str"
+      		},
+      		{
+      		  	"name": "marital_status",
+      		  	"range": "str"
+      		},
+      		{
+      		  	"name": "education",
+      		  	"range": "str"
+      		},
+      		{
+      		  	"name": "occupation",
+      		  	"range": "str"
+      		},
+      		{
+      		  	"name": "relationship_with_household",
+      		  	"range": "str"
+      		},
+      		{
+      		  	"name": "household_registration_category",
+      		  	"range": "str"
+      		},
+      		{
+      		  	"name": "abnormal_record",
+      		  	"range": "str"
+      		}
+		]
+	},
+
+	{
+		"type": "relation",
+		"concept": "relation1",
+		"members": [
+			"person",
+			"person"
+		]
+	},
+	{
+		"type": "relation",
+		"concept": "relation2",
+		"members": [
+			"person",
+			"person"
+		]
+	},
+	{
+		"type": "relation",
+		"concept": "relation3",
+		"members": [
+			"person",
+			"person"
+		]
+	},
+	{
+		"type": "relation",
+		"concept": "relation4",
+		"members": [
+			"person",
+			"person"
+		]
+	},
+	{
+		"type": "relation",
+		"concept": "relation5",
+		"members": [
+			"person",
+			"person"
+		]
+	}
+]

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>4th International Conference on Microbiome Engineering (ICME)</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>11/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>10/31/2022</AwardExpirationDate>
+<AwardTotalIntnAmount>12525.00</AwardTotalIntnAmount>
+<AwardAmount>12525</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>08070000</Code>
+<Directorate>
+<Abbreviation>BIO</Abbreviation>
+<LongName>Direct For Biological Sciences</LongName>
+</Directorate>
+<Division>
+<Abbreviation>MCB</Abbreviation>
+<LongName>Div Of Molecular and Cellular Bioscience</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>David Rockcliffe</SignBlockName>
+<PO_EMAI>drockcli@nsf.gov</PO_EMAI>
+<PO_PHON>7032927123</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>Microbiomes consist of diverse microorganisms and viruses that exist in every environment on Earth ranging from the deep ocean to human skin. Microbiomes are highly complex since they contain hundreds to thousands of members and change as a function of time, space and environmental context. By compartmentalizing functions in different organisms and coordinating these activities, microbial communities can perform biotransformations more efficiently than single populations. Environmental perturbations can alter the composition and functions of microbiomes. Microbiome engineering aims to design targeted interventions to predictably alter microbiome properties or wire together interacting microbial strains with desired functions from the bottom-up for biotechnological, agricultural and therapeutic applications. The 4th International Conference on Microbiome Engineering is designed in this framework. This conference brings in experts in industry and academia worldwide to discuss the challenges in microbiome engineering and the future of the field. The conference is the fourth in the series, following the success of the previous ones held in previous years (including the virtual conference in 2020). This award provides partial support for US-based graduate student/postdoctoral associate participants, and by providing a forum for the interactions between normally separated leading medical professionals and engineers the conference stimulates new ideas about materials that could benefit economic, health and pharmaceutical related activities.&lt;br/&gt;&lt;br/&gt;The 4th International Conference on Microbiome Engineering aims to create a platform for the sharing of groundbreaking knowledge in the field. The conference draws attendees from academia as well as industry to allow new knowledge from the laboratory to potentially be utilized to manufacture new products. The conference allows for active participation with question-and-answer sessions as well as a panel discussion. The networking opportunities at the conference allow attendees to exchange their ideas and foster an environment for future collaborations.&lt;br/&gt;&lt;br/&gt;This award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.</AbstractNarration>
+<MinAmdLetterDate>10/25/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>10/25/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.074</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2200689</AwardID>
+<Investigator>
+<FirstName>Michelle</FirstName>
+<LastName>O'Malley</LastName>
+<PI_MID_INIT>A</PI_MID_INIT>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Michelle A O'Malley</PI_FULL_NAME>
+<EmailAddress>momalley@engineering.ucsb.edu</EmailAddress>
+<PI_PHON>8058934188</PI_PHON>
+<NSF_ID>000623037</NSF_ID>
+<StartDate>10/25/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Investigator>
+<FirstName>Izabela</FirstName>
+<LastName>Balicka</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Izabela Balicka</PI_FULL_NAME>
+<EmailAddress>izabb@aiche.org</EmailAddress>
+<PI_PHON>6462936865</PI_PHON>
+<NSF_ID>000832102</NSF_ID>
+<StartDate>10/25/2021</StartDate>
+<EndDate/>
+<RoleCode>Co-Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>American Institute of Chemical Engineers</Name>
+<CityName>New York</CityName>
+<ZipCode>100054020</ZipCode>
+<PhoneNumber>6464951350</PhoneNumber>
+<StreetAddress>120 Wall Street</StreetAddress>
+<StreetAddress2><![CDATA[23rd floor]]></StreetAddress2>
+<CountryName>United States</CountryName>
+<StateName>New York</StateName>
+<StateCode>NY</StateCode>
+<CONGRESSDISTRICT>10</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>NY10</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>073269003</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>AMERICAN INSTITUTE OF CHEMICAL ENGINEERS</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>073269003</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[American Institute of Chemical Engineers]]></Name>
+<CityName>New York</CityName>
+<StateCode>NY</StateCode>
+<ZipCode>100053904</ZipCode>
+<StreetAddress><![CDATA[120 Wall Street Floor 23]]></StreetAddress>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>New York</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>10</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>NY10</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>8011</Code>
+<Text>Systems and Synthetic Biology</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>7465</Code>
+<Text>NANOSCALE BIO CORE</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>7556</Code>
+<Text>CONFERENCE AND WORKSHOPS</Text>
+</ProgramReference>
+<FUND_OBLG>2022~12525</FUND_OBLG>
+</Award>
+</rootTag>

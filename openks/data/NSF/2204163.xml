@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>CAREER: Flat Singular Optics: Generation and Detection of Optical Vortex Beams with Plasmonic Metasurfaces in Linear and Nonlinear Regimes</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>10/01/2021</AwardEffectiveDate>
+<AwardExpirationDate>01/31/2022</AwardExpirationDate>
+<AwardTotalIntnAmount>500011.00</AwardTotalIntnAmount>
+<AwardAmount>335156</AwardAmount>
+<AwardInstrument>
+<Value>Standard Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>07010000</Code>
+<Directorate>
+<Abbreviation>ENG</Abbreviation>
+<LongName>Directorate For Engineering</LongName>
+</Directorate>
+<Division>
+<Abbreviation>ECCS</Abbreviation>
+<LongName>Div Of Electrical, Commun &amp; Cyber Sys</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>Ruyan Guo</SignBlockName>
+<PO_EMAI>rguo@nsf.gov</PO_EMAI>
+<PO_PHON>7032927718</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>Abstract Title: CAREER: Flat Singular Optics: Generation and Detection of Optical Vortex Beams with Plasmonic Metasurfaces in Linear and Nonlinear Regimes&lt;br/&gt;&lt;br/&gt;Nontechnical Description:&lt;br/&gt;The study of the phenomena of phase and polarization singularities is known as singular optics. Vortex beams display singular scalar features with phase singularities in the beam center, while polarization singular beams present singular vectorial features with one undefined polarization parameter. The current open research challenges in singular optics are how to generate pure vortices with broad bandwidth and polarization singular beams on chip, how to realize compact linear and nonlinear vortex beam converters, and what kind of device enables direct identification of vortex topological charges. In order to address these challenges, in this research, uniquely designed plasmonic metasurfaces made of ultrathin metallic nanostructures are utilized as a powerful and compact platform for exploring flat singular optics, generating singular optical beams in both linear and nonlinear regimes, as well as detecting vortex beam orbital angular momentum with optoelectronic integration. This research paves the way for advancing many applications in optical communication, beam shaping and conversion, optoelectronic devices, and optical sensing and imaging. The research of singular optics and metasurfaces is integrated with education and outreach activities in order to enhance various levels of education, including undergraduate and graduate students training, underrepresented and female students recruitment, women in optics student group organization, interdisciplinary metamaterials course development and outreach activities for K-12 students. &lt;br/&gt;&lt;br/&gt;Technical Description:&lt;br/&gt;The goals of the research are to explore the generation and detection of optical vortex beams using ultra-thin plasmonic metasurfaces in both linear and nonlinear regimes in order to solve open research challenges and create new opportunities in singular optics, gain fundamental knowledge of spin-orbit and orbit-orbit interactions and optical angular momentum conservation. The research uses the approaches of linear and nonlinear optical design and simulation, plasmonic metasurface sample nanofabrication, optical and optoelectronic device characterizations to study the underlying physics of metasurface based light manipulation and light-matter interaction in singular optics, nonlinear optics, and spin-orbit photonics. The intellectual significance of the activity includes: (i) generation of pure optical vortex beams and polarization singular beams to advance the research of complex structured light manipulation and topological singularities; (ii) exploration of second- and third-harmonic vortex beam generation and beam shaping in nonlinear plasmonic metasurfaces to reveal the conservation law of orbital angular momentum and create compact nonlinear beam converters and active photonic devices; (iii) realization of optoelectronic vortex beam detection based on spin and orbital Hall effects in plasmonic metasurfaces to solve the challenge of on-chip orbital angular momentum detection and build functional metasurface based optoelectronic devices.</AbstractNarration>
+<MinAmdLetterDate>11/10/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/10/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.041</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2204163</AwardID>
+<Investigator>
+<FirstName>Jie</FirstName>
+<LastName>Gao</LastName>
+<PI_MID_INIT/>
+<PI_SUFX_NAME/>
+<PI_FULL_NAME>Jie Gao</PI_FULL_NAME>
+<EmailAddress>jie.gao.5@stonybrook.edu</EmailAddress>
+<PI_PHON>6316328077</PI_PHON>
+<NSF_ID>000626172</NSF_ID>
+<StartDate>11/10/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>SUNY at Stony Brook</Name>
+<CityName>Stony Brook</CityName>
+<ZipCode>117940001</ZipCode>
+<PhoneNumber>6316329949</PhoneNumber>
+<StreetAddress>WEST 5510 FRK MEL LIB</StreetAddress>
+<StreetAddress2/>
+<CountryName>United States</CountryName>
+<StateName>New York</StateName>
+<StateCode>NY</StateCode>
+<CONGRESSDISTRICT>01</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>NY01</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>804878247</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>RESEARCH FOUNDATION FOR THE STATE UNIVERSITY OF NEW YORK, THE</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>020657151</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[SUNY at Stony Brook]]></Name>
+<CityName>Stony Brook</CityName>
+<StateCode>NY</StateCode>
+<ZipCode>117940001</ZipCode>
+<StreetAddress><![CDATA[West 5510 FRK MEL LIB]]></StreetAddress>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>New York</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>01</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>NY01</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>1517</Code>
+<Text>EPMD-ElectrnPhoton&amp;MagnDevices</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>095E</Code>
+<Text>Photonic integration</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>1045</Code>
+<Text>CAREER-Faculty Erly Career Dev</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>1517</Code>
+<Text>ELECT, PHOTONICS, &amp; DEVICE TEC</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>9102</Code>
+<Text>WOMEN, MINORITY, DISABLED, NEC</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>9150</Code>
+<Text>EXP PROG TO STIM COMP RES</Text>
+</ProgramReference>
+<FUND_OBLG>2017~335156</FUND_OBLG>
+</Award>
+</rootTag>

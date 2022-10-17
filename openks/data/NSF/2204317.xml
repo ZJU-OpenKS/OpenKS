@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rootTag>
+<Award>
+<AwardTitle>Synthesis of Controlled III-Nitride Nanostructures</AwardTitle>
+<AGENCY>NSF</AGENCY>
+<AwardEffectiveDate>11/15/2021</AwardEffectiveDate>
+<AwardExpirationDate>09/30/2022</AwardExpirationDate>
+<AwardTotalIntnAmount>420000.00</AwardTotalIntnAmount>
+<AwardAmount>62597</AwardAmount>
+<AwardInstrument>
+<Value>Continuing Grant</Value>
+</AwardInstrument>
+<Organization>
+<Code>03070000</Code>
+<Directorate>
+<Abbreviation>MPS</Abbreviation>
+<LongName>Direct For Mathematical &amp; Physical Scien</LongName>
+</Directorate>
+<Division>
+<Abbreviation>DMR</Abbreviation>
+<LongName>Division Of Materials Research</LongName>
+</Division>
+</Organization>
+<ProgramOfficer>
+<SignBlockName>James H. Edgar</SignBlockName>
+<PO_EMAI>jedgar@nsf.gov</PO_EMAI>
+<PO_PHON>7032922053</PO_PHON>
+</ProgramOfficer>
+<AbstractNarration>Nontechnical description: This project aims to develop methods for producing advanced nanometer-scale semiconductor materials, called quantum dots. The research effort employs a new synthesis technique to create ensembles of these quantum dots, enabling better control of their size, density and distribution. By controlling the quantum dots characteristics, their properties could be tuned closer to theoretical predictions and desired performance. These new materials  are aimed to be used as active components in more efficient electronic devices for applications that positively impact the nation's economy, including solid-state lighting, photovoltaics, visible lasers, high temperature sensors, and ultra-violet light-emitting diodes. The research is incorporated into K-12 education and outreach activities, and is also integrated into graduate and undergraduate courses to broaden the educational experience beyond the laboratory. This project trains two graduate students in the highly important areas of advanced semiconductor materials synthesis, materials characterization, theory, and device technologies.&lt;br/&gt;&lt;br/&gt;Technical description: The principal goal of this project is to explore synthesis methods to produce monodisperse epitaxial quantum dots in III-Nitride semiconductors. Specifically, this project efforts include: (i) synthesis of quantum dot ensembles using quantum-sized-controlled photoelectrochemical etching, (ii) regrowth of capping layers on top of these quantum dots; (iii) forming p-n junctions with quantum dot active layers, and (iv) characterization of optical properties of the quantum dots and resulting gain, spontaneous emission, and radiative efficiency to established models. These quantum dot ensembles with controlled energy distribution, density, and alloy composition are expected to enable strong quantum effects in III-Nitride semiconductors, addressing various limitations in III-Nitrides by tailoring their bandstructure in order to overcome the Auger recombination, poor radiative efficiencies at longer visible wavelengths, high thresholds in laser diodes, and unfavorable optical polarization in AlGaN ultra-violet emitters.</AbstractNarration>
+<MinAmdLetterDate>11/10/2021</MinAmdLetterDate>
+<MaxAmdLetterDate>11/10/2021</MaxAmdLetterDate>
+<ARRAAmount/>
+<TRAN_TYPE>Grant</TRAN_TYPE>
+<CFDA_NUM>47.049</CFDA_NUM>
+<NSF_PAR_USE_FLAG>1</NSF_PAR_USE_FLAG>
+<FUND_AGCY_CODE>4900</FUND_AGCY_CODE>
+<AWDG_AGCY_CODE>4900</AWDG_AGCY_CODE>
+<AwardID>2204317</AwardID>
+<Investigator>
+<FirstName>Jonathan</FirstName>
+<LastName>Wierer</LastName>
+<PI_MID_INIT>J</PI_MID_INIT>
+<PI_SUFX_NAME>Jr</PI_SUFX_NAME>
+<PI_FULL_NAME>Jonathan J Wierer</PI_FULL_NAME>
+<EmailAddress>jjwierer@ncsu.edu</EmailAddress>
+<PI_PHON>9195122328</PI_PHON>
+<NSF_ID>000706067</NSF_ID>
+<StartDate>11/10/2021</StartDate>
+<EndDate/>
+<RoleCode>Principal Investigator</RoleCode>
+</Investigator>
+<Institution>
+<Name>North Carolina State University</Name>
+<CityName>Raleigh</CityName>
+<ZipCode>276957514</ZipCode>
+<PhoneNumber>9195152444</PhoneNumber>
+<StreetAddress>2601 Wolf Village Way</StreetAddress>
+<StreetAddress2><![CDATA[Admin. III, STE 240]]></StreetAddress2>
+<CountryName>United States</CountryName>
+<StateName>North Carolina</StateName>
+<StateCode>NC</StateCode>
+<CONGRESSDISTRICT>02</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_ORG>NC02</CONGRESS_DISTRICT_ORG>
+<ORG_DUNS_NUM>042092122</ORG_DUNS_NUM>
+<ORG_LGL_BUS_NAME>NORTH CAROLINA STATE UNIVERSITY</ORG_LGL_BUS_NAME>
+<ORG_PRNT_DUNS_NUM>142363428</ORG_PRNT_DUNS_NUM>
+</Institution>
+<Performance_Institution>
+<Name><![CDATA[North Carolina State University]]></Name>
+<CityName>Raleigh</CityName>
+<StateCode>NC</StateCode>
+<ZipCode>276957901</ZipCode>
+<StreetAddress/>
+<CountryCode>US</CountryCode>
+<CountryName>United States</CountryName>
+<StateName>North Carolina</StateName>
+<CountryFlag>1</CountryFlag>
+<CONGRESSDISTRICT>02</CONGRESSDISTRICT>
+<CONGRESS_DISTRICT_PERF>NC02</CONGRESS_DISTRICT_PERF>
+</Performance_Institution>
+<ProgramElement>
+<Code>1775</Code>
+<Text>ELECTRONIC/PHOTONIC MATERIALS</Text>
+</ProgramElement>
+<ProgramReference>
+<Code>053Z</Code>
+<Text>Quantum Leap Materials</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>7237</Code>
+<Text>NANO NON-SOLIC SCI &amp; ENG AWD</Text>
+</ProgramReference>
+<ProgramReference>
+<Code>8614</Code>
+<Text>Nanomaterials</Text>
+</ProgramReference>
+<FUND_OBLG>2019~62597</FUND_OBLG>
+</Award>
+</rootTag>

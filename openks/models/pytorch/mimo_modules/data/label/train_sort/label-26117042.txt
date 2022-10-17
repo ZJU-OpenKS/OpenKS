@@ -1,0 +1,62 @@
+# 26117042	[#0 amplification#1 ex#2 vivo#3 and#4 cytocidal#5 activity#6 of#7 leukemia#8 tumor-associated#9 antigen-specific#10 cytotoxic#11 t#12 lymphocytes]#13 .#14 
+
+c1:[{leukemia_tumor-associated_antigen-specific_cytotoxic_t_lymphocytes]#8:amplification_ex_vivo#1},NIL#-1,NIL]
+c2:[{leukemia_tumor-associated_antigen-specific_cytotoxic_t_lymphocytes]#8:cytocidal_activity#5},NIL#-1,NIL]
+stmt1 = c1 c2
+
+# 26117042	to#0 explore#1 the#2 feasibility#3 of#4 amplifying#5 the#6 leukemia#7 tumor#8 associated#9 antigens-specific#10 cytotoxic#11 t#12 lymphocytes#13 ex#14 vivo#15 and#16 to#17 evaluate#18 the#19 cytotoxicity#20 oftaa-ctl#21 .#22 
+
+f1:[NIL,to_explore#0,feasibility#3]
+f2:[NIL,to_evaluate#17,cytotoxicity_oftaa-ctl#20]
+c3:[feasibility#3,amplifying#5,leukemia_tumor_associated_antigens-specific_cytotoxic_t_lymphocytes_ex_vivo#7]
+stmt2 = f1 f2 c3
+
+# 26117042	the#0 peripheral#1 blood#2 mononuclear#3 cells#4 were#5 enriched#6 by#7 density#8 gradient#9 centrifugtion#10 ,#11 taa-ctl#12 were#13 generated#14 by#15 stimulation#16 of#17 pbmnc#18 with#19 peptide-pulsed#20 dc#21 at#22 an#23 effector-to-target#24 ratio#25 of#26 10#27 ,#28 immunophenotype#29 of#30 taa-ctl#31 was#32 analyzed#33 by#34 flow#35 cytometry#36 ,#37 cytotoxicity#38 assay#39 was#40 used#41 to#42 evaluate#43 the#44 cytotoxic#45 activity#46 of#47 taa-ctl#48 against#49 peptide-pulsed#50 autologous#51 target#52 cells(pha-blasts)#53 .#54 
+
+f3:[peripheral_blood_mononuclear_cells#1,were_enriched_by#5,density_gradient_centrifugtion#8]
+f4:[taa-ctl#12,were_generated_by#13,{pbmnc#18:stimulation#16}]
+f5:[{taa-ctl#31:immunophenotype#29},was_analyzed_by#32,flow_cytometry#35]
+f6:[cytotoxicity_assay#38,was_used_to_evaluate#40,{taa-ctl#48:cytotoxic_activity#45}]
+c4:[{pbmnc#18:stimulation#16},with#19,peptide-pulsed_dc#20]
+c5:[peptide-pulsed_dc#20,at#22,{effector-to-target_ratio#24:10#27}]
+c6:[{taa-ctl#48:cytotoxic_activity#45},against#49,peptide-pulsed_autologous_target_cells(pha-blasts)#50]
+stmt3 = f3 f4 f5 f6 c4 c5 c6
+
+# 26117042	taa-ctl#0 expanded#1 from#2 volunteer#3 showed#4 a#5 mean#6 expansion#7 of#8 3.81#9 !#10 1.61#11 ,#12 the#13 phenotyping#14 of#15 the#16 taa-ctl#17 was#18 predominantly#19 cd3(+)#20 ,#21 the#22 detection#23 of#24 intracellular#25 cytokines#26 after#27 stimulation#28 with#29 peptide#30 showed#31 that#32 the#33 secretion#34 rates#35 of#36 ifn-gamma#37 and#38 tnf-alpha#39 in#40 cd8(+)#41 taa-ctl#42 were#43 
+
+f7:[taa-ctl#0,showed#4,{mean_expansion#6:3.81_!_1.61#9}]
+f8:[{taa-ctl#17:phenotyping#14},was_predominantly#18,cd3(+)#20]
+f9:[{intracellular_cytokines#25:detection#23},showed#31,NIL]
+f10:[{ifn-gamma#37:secretion_rates#34},were#43,NIL]
+f11:[{tnf-alpha#39:secretion_rates#34},were#43,NIL]
+c7:[taa-ctl#0,expanded_from#1,volunteer#3]
+c8:[{intracellular_cytokines#25:detection#23},after#27,stimulation#28]
+c9:[stimulation#28,with#29,peptide#30]
+c10:[{ifn-gamma#37:secretion_rates#34},in#40,cd8(+)_taa-ctl#41]
+c11:[{tnf-alpha#39:secretion_rates#34},in#40,cd8(+)_taa-ctl#41]
+stmt4 = f7 f8 f9 f10 f11 c7 c8 c9 c10 c11
+
+# 26117042	compared#0 with#1 the#2 cd8(+)#3 taa-ctl#4 group#5 ,#6 the#7 secretion#8 rates#9 of#10 ifn-gamma#11 and#12 tnf-alpha#13 were#14 
+
+f12:[{ifn-gamma#11:secretion_rates#8},were#14,NIL]
+f13:[{tnf-alpha#13:secretion_rates#8},were#14,NIL]
+c12:[NIL,compared_with#0,cd8(+)_taa-ctl_group#3]
+stmt5 = f12 f13 c12
+
+# 26117042	the#0 secretions#1 of#2 ifn-gamma#3 and#4 tnf-alpha#5 in#6 ctl#7 were#8 both#9 significantly#10 lower#11 than#12 those#13 in#14 taa-ctl#15 ,#16 the#17 specific#18 killing#19 efficiency#20 of#21 the#22 taa-ctl#23 against#24 taa-pulesd#25 target#26 cells#27 were#28 .#29 
+
+f14:[{ifn-gamma#3:secretions#1},were_both_significantly_lower_than_those_in#8,taa-ctl#15]
+f15:[{tnf-alpha#5:secretions#1},were_both_significantly_lower_than_those_in#8,taa-ctl#15]
+f16:[{taa-ctl#23:specific_killing_efficiency#18},were#28,NIL]
+c13:[{ifn-gamma#3:secretions#1},in#6,ctl#7]
+c14:[{tnf-alpha#5:secretions#1},in#6,ctl#7]
+c15:[{taa-ctl#23:specific_killing_efficiency#18},against#24,taa-pulesd_target_cells#25]
+stmt6 = f14 f15 f16 c13 c14 c15
+
+# 26117042	taa-ctl#0 can#1 be#2 successfully#3 induced#4 and#5 generated#6 ex#7 vivo#8 from#9 the#10 healthy#11 volunteer#12 peripheral#13 blood#14 ,#15 and#16 the#17 taa-ctl#18 possess#19 a#20 specific#21 killing#22 activity#23 .#24
+
+f17:[taa-ctl#0,can_be_successfully_induced#1,ex_vivo#7]
+f18:[taa-ctl#0,generated#6,ex_vivo#7]
+f19:[taa-ctl#18,possess#19,specific_killing_activity#21]
+c16:[ex_vivo#7,from#9,healthy_volunteer_peripheral_blood#11]
+stmt7 = f17 f18 f19 c16

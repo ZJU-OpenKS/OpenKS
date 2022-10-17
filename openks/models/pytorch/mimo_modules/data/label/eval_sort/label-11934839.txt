@@ -1,0 +1,100 @@
+# 11934839	ppar#0 activators#1 as#2 antiinflammatory#3 mediators#4 in#5 human#6 t#7 lymphocytes#8 ,#9 implications#10 for#11 atherosclerosis#12 and#13 transplantation-associated#14 arteriosclerosis#15 .#16 
+
+c1:[ppar_activators#0,as#2,antiinflammatory_mediators#3]
+c2:[ppar_activators#0,in#5,human_t_lymphocytes#6]
+c3:[implications#10,for#11,atherosclerosis#12]
+c4:[implications#10,for#11,transplantation-associated_arteriosclerosis#14]
+stmt1 = c1 c2 c3 c4
+
+# 11934839	activation#0 of#1 t#2 lymphocytes#3 and#4 their#5 ensuing#6 elaboration#7 of#8 proinflammatory#9 cytokines#10 ,#11 such#12 as#13 interferon#14 (ifn)-gamma#15 ,#16 represent#17 a#18 critical#19 step#20 in#21 atherogenesis#22 and#23 arteriosclerosis#24 .#25 
+
+f1:[{t_lymphocytes#2:activation#0},represent#17,{atherogenesis#22:critical_step#19}]
+f2:[{t_lymphocytes#2:activation#0},represent#17,{arteriosclerosis#24:critical_step#19}]
+f3:[{proinflammatory_cytokines#9:ensuing_elaboration#6},represent#17,{atherogenesis#22:critical_step#19}]
+f4:[{proinflammatory_cytokines#9:ensuing_elaboration#6},represent#17,{arteriosclerosis#24:critical_step#19}]
+f5:[interferon_(ifn)-gamma#14,represent#17,{atherogenesis#22:critical_step#19}]
+f6:[interferon_(ifn)-gamma#14,represent#17,{arteriosclerosis#24:critical_step#19}]
+c5:[{proinflammatory_cytokines#9:ensuing_elaboration#6},such_as#12,interferon_(ifn)-gamma#14]
+stmt2 = f1 f2 f3 f4 f5 f6 c5
+
+# 11934839	ifngamma#0 pathways#1 also#2 appear#3 integral#4 to#5 the#6 development#7 of#8 transplantation-associated#9 arteriosclerosis#10 ,#11 limiting#12 long-term#13 cardiac#14 allograft#15 survival#16 .#17 
+
+f7:[ifngamma_pathways#0,also_appear_integral_to#2,{transplantation-associated_arteriosclerosis#9:development#7}]
+c6:[NIL,limiting#12,long-term_cardiac_allograft_survival#13]
+stmt3 = f7 c6
+
+# 11934839	although#0 disruption#1 of#2 these#3 ifngamma#4 signaling#5 pathways#6 limits#7 atherosclerosis#8 and#9 tx-aa#10 in#11 animals#12 ,#13 little#14 is#15 known#16 about#17 inhibitory#18 regulation#19 of#20 proinflammatory#21 cytokine#22 production#23 in#24 humans#25 .#26 
+
+f8:[{ifngamma_signaling_pathways#4:disruption#1},limits#7,atherosclerosis#8]
+f9:[{ifngamma_signaling_pathways#4:disruption#1},limits#7,tx-aa#10]
+f10:[NIL,little_is_known_about#14,{proinflammatory_cytokine_production#21:inhibitory_regulation#18}]
+c7:[atherosclerosis#8,in#11,animals#12]
+c8:[tx-aa#10,in#11,animals#12]
+c9:[{proinflammatory_cytokine_production#21:inhibitory_regulation#18},in#24,humans#25]
+stmt4 = f8 f9 f10 c7 c8 c9
+
+# 11934839	the#0 present#1 study#2 investigated#3 whether#4 activators#5 of#6 peroxisome#7 proliferator-activated#8 receptor#9 (ppar)alpha#10 and#11 ppargamma#12 ,#13 with#14 their#15 known#16 antiinflammatory#17 effects#18 ,#19 might#20 regulate#21 the#22 expression#23 of#24 proinflammatory#25 cytokines#26 in#27 human#28 cd4-positive#29 t#30 cells#31 .#32 
+
+f11:[{NIL#-1:present_study#1},investigated_whether#3,NIL]
+f12:[{peroxisome_proliferator-activated_receptor_(ppar)alpha#7:activators#5},might_regulate#20,{proinflammatory_cytokines#25:expression#23}]
+f13:[{ppargamma#12:activators#5},might_regulate#20,{proinflammatory_cytokines#25:expression#23}]
+c10:[{peroxisome_proliferator-activated_receptor_(ppar)alpha#7:activators#5},with#14,antiinflammatory_effects#17]
+c11:[{ppargamma#12:activators#5},with#14,antiinflammatory_effects#17]
+c12:[{proinflammatory_cytokines#25:expression#23},in#27,human_cd4-positive_t_cells#28]
+stmt5 = f11 f12 f13 c10 c11 c12
+
+# 11934839	isolated#0 human#1 cd4-positive#2 t#3 cells#4 express#5 pparalpha#6 and#7 ppargamma#8 mrna#9 and#10 protein#11 .#12 
+
+f14:[isolated_human_cd4-positive_t_cells#0,express#5,pparalpha#6]
+f15:[isolated_human_cd4-positive_t_cells#0,express#5,ppargamma_mrna#8]
+f16:[isolated_human_cd4-positive_t_cells#0,express#5,protein#11]
+stmt6 = f14 f15 f16
+
+# 11934839	activation#0 of#1 cd4-positive#2 t#3 cells#4 by#5 anti-cd3#6 monoclonal#7 antibodies#8 significantly#9 increased#10 ifngamma#11 protein#12 secretion#13 from#14 0#15 to#16 504+/-168#17 pg/ml#18 ,#19 as#20 determined#21 by#22 elisa#23 .#24 
+
+f17:[{cd4-positive_t_cells#2:activation#0},significantly_increased#9,ifngamma_protein_secretion#11]
+c13:[{cd4-positive_t_cells#2:activation#0},by#5,anti-cd3_monoclonal_antibodies#6]
+c14:[ifngamma_protein_secretion#11,from#14,0_to_504+/-168_pg/ml#15]
+c15:[NIL,as_determined_by#20,elisa#23]
+stmt7 = f17 c13 c14 c15
+
+# 11934839	pretreatment#0 of#1 cells#2 with#3 well-established#4 pparalpha#5 or#6 ppargamma#7 activators#8 reduced#9 anti-cd3-induced#10 ifngamma#11 secretion#12 in#13 a#14 concentration-dependent#15 manner#16 .#17
+
+f18:[{cells#2:pretreatment#0},reduced#9,anti-cd3-induced_ifngamma_secretion#10]
+c16:[{cells#2:pretreatment#0},with#3,well-established_pparalpha#4]
+c17:[{cells#2:pretreatment#0},with#3,ppargamma_activators#7]
+c18:[anti-cd3-induced_ifngamma_secretion#10,in#13,concentration-dependent_manner#15]
+stmt8 = f18 c16 c17 c18
+
+# 11934839	ppar#0 activators#1 also#2 inhibited#3 tnfalpha#4 and#5 interleukin-2#6 protein#7 expression#8 .#9
+
+f19:[ppar_activators#0,inhibited#3,tnfalpha#4]
+f20:[ppar_activators#0,inhibited#3,interleukin-2_protein_expression#6]
+stmt9 = f19 f20
+
+# 11934839	in#0 addition#1 ,#2 ppar#3 activators#4 markedly#5 reduced#6 cytokine#7 mrna#8 expression#9 in#10 these#11 cells#12 .#13 
+
+f21:[ppar_activators#3,markedly_reduced#5,cytokine_mrna_expression#7]
+c19:[cytokine_mrna_expression#7,in#10,cells#12]
+stmt10 = f21 c19
+
+# 11934839	such#0 antiinflammatory#1 actions#2 were#3 also#4 evident#5 in#6 cell-cell#7 interactions#8 with#9 medium#10 conditioned#11 by#12 ppar#13 activator-treated#14 t#15 cells#16 attenuating#17 human#18 monocyte#19 cd64#20 expression#21 and#22 human#23 endothelial#24 cell#25 major#26 histocompatibility#27 complex#28 class#29 ii#30 induction#31 .#32 
+
+f22:[antiinflammatory_actions#1,were_also_evident_in#3,cell-cell_interactions#7]
+c20:[medium#10,conditioned_by#11,ppar_activator-treated_t_cells_attenuating_human_monocyte_cd64_expression#13]
+c21:[medium#10,conditioned_by#11,human_endothelial_cell_major_histocompatibility_complex_class_ii_induction#23]
+stmt11 = f22 c20 c21
+
+# 11934839	thus#0 ,#1 activation#2 of#3 pparalpha#4 and#5 ppargamma#6 in#7 human#8 cd4-positive#9 t#10 cells#11 limits#12 the#13 expression#14 of#15 proinflammatory#16 cytokines#17 ,#18 such#19 as#20 ifngamma#21 ,#22 yielding#23 potential#24 therapeutic#25 benefits#26 in#27 pathological#28 processes#29 ,#30 such#31 as#32 atherosclerosis#33 and#34 tx-aa#35 .#36 
+
+f23:[{pparalpha#4:activation#2},limits#12,{proinflammatory_cytokines#16:expression#14}]
+f24:[{pparalpha#4:activation#2},yielding#23,potential_therapeutic_benefits#24]
+f25:[{ppargamma#6:activation#2},limits#12,{proinflammatory_cytokines#16:expression#14}]
+f26:[{ppargamma#6:activation#2},yielding#23,potential_therapeutic_benefits#24]
+f27:[{proinflammatory_cytokines#16:expression#14},such_as#19,ifngamma#21]
+f28:[potential_therapeutic_benefits#24,such_as#31,atherosclerosis#33]
+f29:[potential_therapeutic_benefits#24,such_as#31,tx-aa#35]
+c22:[{pparalpha#4:activation#2},in#7,human_cd4-positive_t_cells#8]
+c23:[{ppargamma#6:activation#2},in#7,human_cd4-positive_t_cells#8]
+c24:[potential_therapeutic_benefits#24,in#27,pathological_processes#28]
+stmt12 = f23 f24 f25 f26 f27 f28 f29 c22 c23 c24
