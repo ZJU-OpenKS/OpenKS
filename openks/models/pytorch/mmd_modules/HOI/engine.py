@@ -1,25 +1,15 @@
-# ------------------------------------------------------------------------
-# Copyright (c) Hitachi, Ltd. All Rights Reserved.
-# Licensed under the Apache License, Version 2.0 [see LICENSE for details]
-# ------------------------------------------------------------------------
-# Modified from DETR (https://github.com/facebookresearch/detr)
-# Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
-# ------------------------------------------------------------------------
 """
 Train and eval functions used in main.py
 """
 import math
 import os
 import sys
-import time
 from typing import Iterable
 import numpy as np
 import copy
 import itertools
 
 import torch
-import torch.nn.functional as F
-from torch import autograd
 
 from .util import misc as utils
 from .datasets.hico_eval import HICOEvaluator
@@ -41,14 +31,11 @@ def train_one_epoch(model: torch.nn.Module, criterion: torch.nn.Module,
     print_freq = 10
 
     for samples, targets in metric_logger.log_every(data_loader, print_freq, header):
-        # Task & G loss
-        # model.zero_grad()
         samples = samples.to(device)
         targets = [{k: v.to(device) for k, v in t.items()} for t in targets]
-        model.train()
 
         outputs = model(samples)
-        loss_dict, indices = criterion(outputs, targets)
+        loss_dict = criterion(outputs, targets)
         weight_dict = criterion.weight_dict
         losses = sum(loss_dict[k] * weight_dict[k] for k in loss_dict.keys() if k in weight_dict)
 
@@ -94,7 +81,6 @@ def evaluate_hoi(dataset_file, model, postprocessors, data_loader, subject_categ
 
     preds = []
     gts = []
-    indices = []
     for samples, targets in metric_logger.log_every(data_loader, 10, header):
         samples = samples.to(device)
 
