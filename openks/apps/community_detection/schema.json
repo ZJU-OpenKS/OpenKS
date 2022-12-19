@@ -12,43 +12,43 @@
 				"range": "str"
 			},
 			{
-        		"name": "age",
+        		"name": "fea1",
         		"range": "int"
       		},
       		{
-      		  	"name": "sex",
+      		  	"name": "fea2",
       		  	"range": "int"
       		},
       		{
-      		  	"name": "native_place",
+      		  	"name": "fea3",
       		  	"range": "str"
       		},
       		{
-      		  	"name": "birth_place",
+      		  	"name": "fea4",
       		  	"range": "str"
       		},
       		{
-      		  	"name": "marital_status",
+      		  	"name": "fea5",
       		  	"range": "str"
       		},
       		{
-      		  	"name": "education",
+      		  	"name": "fea6",
       		  	"range": "str"
       		},
       		{
-      		  	"name": "occupation",
+      		  	"name": "fea7",
       		  	"range": "str"
       		},
       		{
-      		  	"name": "relationship_with_household",
+      		  	"name": "fea8",
       		  	"range": "str"
       		},
       		{
-      		  	"name": "household_registration_category",
+      		  	"name": "fea9",
       		  	"range": "str"
       		},
       		{
-      		  	"name": "abnormal_record",
+      		  	"name": "fea10",
       		  	"range": "str"
       		}
 		]

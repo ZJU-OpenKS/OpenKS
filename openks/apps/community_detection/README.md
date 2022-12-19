@@ -84,6 +84,6 @@ After the program runs, the relevant results(embedding, cluster_mean, log, assig
 
 ### 6） Example
 1. Build the KG data set according to the input data format of OPENKS(https://github.com/ZJU-OpenKS/OpenKS/blob/master/openks/data/README.md) and put it into `openks/data/` 
-2. Using the relevant processing modules supported by OPENKS, like entity extraction, relationship extraction, behavior recognition, and return the structured relation data through KG construction, KG representation completion and KG reasoning
+2. Using the relevant processing modules supported by OPENKS, like entity extraction, relationship extraction, event recognition, and return the structured relation data through KG construction, KG representation completion and KG reasoning
 3. Modify the required parameters of the framework in the `config.yml` file
 4. Run `abnormal_community_run.py`
