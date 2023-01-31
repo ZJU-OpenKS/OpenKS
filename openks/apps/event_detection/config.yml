@@ -1,0 +1,64 @@
+# -*- coding: utf-8 -*-
+#
+# Copyright 2022 HangZhou Hikvision Digital Technology Co., Ltd. All Right Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+data_path_info:
+  home_path: /testdata/multi_event
+  train_feature_path: /testdata/multi_event/feature/train_feature.csv
+  train_label_path: /testdata/multi_event/label/train_label.csv
+  valid_feature_path: /testdata/multi_event/feature/valid_feature.csv
+  valid_label_path: /testdata/multi_event/label/valid_label.csv
+
+  test_feature_path: /testdata/multi_event/feature/test_feature.csv
+  model_path: /testdata/multi_event/model
+  result_path: /testdata/multi_event/result
+
+schema_path: /testdata/multi_event/schema.json
+cat_num: 9  # the number of category columns
+cat_cols: ["fea1", "fea2", "fea3", "fea4", "fea5", "fea6", "fea7", "fea8", "fea9"]   # the name of category columns
+dense_num: 17  # the number of numerical columns
+
+seq_len: 24  # the length of sequence，2 times of average value. Default is 24
+Epochs: 2  # the number of epochs. Default is 200
+batch_size:  256  # the size of batch. Default is 256
+num_workers: 12  # the number of dataloader workers. Default is 8
+embd_dim: 64  # the dimension of input embedding. Default is 64
+hidden_size: 128  # the size of middle output dimension. Default is 128
+dropout_prob: 0.5  # the probability of dropout in LSTM orTransformer. Default is 0.5
+num_layers: 2  # the number of LSTM layers. Default is 2
+label_dim: 2  # the dimension of label. Default is 2
+loss_weight: [0.1, 0.9]  # the sample weight
+dropTime: True  # whether or not to discard time column
+isStandScaler: True  # whether to process StandardScaler on numerical columns. Default id True
+time_num: 0  # the number of time columns
+latentSpaces: 1  # the number of latent spaces. Default is 1
+seed: 2021  # seed. Default is 2021
+EarlyStop_rounds: 30  # the rounds of early stop. Default is 20
+num_heads: 4  # the number of heads in Attention Mask. Default is 4
+device: 'cuda:2'  # GPU
+
+
+# Three pre-modes.
+# 'CatEmbdConcat': process embedding on category columns, then concat
+# 'CatOneHotConcat': process one-hot on category, then concat
+# 'AllEmbdSum': process embedding on all columns, then Attention
+Pre_Mode: 'AllEmbdSum'
+
+# Sequence modeling: BiLSTM without Attention & Transformer with Attention
+model_Mode: 'Transformer' # BiLSTM或Transformer
+
+is_train: True  # Whether or not to train.
+MaskOrNot: False  # whether or not to mask in AllEmbedSum. Default is False

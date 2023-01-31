@@ -9,8 +9,8 @@ from typing import Dict, Tuple, List, Any
 import torch
 import torch.nn as nn
 from torch.utils import data
-import paddle.fluid as fluid
-from paddle.fluid import Variable
+#import paddle.fluid as fluid
+#from paddle.fluid import Variable
 from ..common.register import Register
 from ..abstract.mtg import MTG
 from ..abstract.mmd import MMD
@@ -294,6 +294,25 @@ class Relation_ExtractionModel(OpenKSModel):
 	def run(self, *args):
 		return NotImplemented
 
+class TripleExtractionModel(OpenKSModel):
+	''' Base class for triple extraction trainer '''
+	def __init__(self, name: str = 'model-name', args: List = None):
+		self.name = name
+
+	def data_reader(self, *args):
+		return NotImplemented
+
+	def evaluate(self, *args):
+		return NotImplemented
+
+	def load_model(self, *args):
+		return NotImplemented
+
+	def save_model(self, *args):
+		return NotImplemented
+
+	def run(self, *args):
+		return NotImplemented
   
 class HypernymDiscoveryModel(OpenKSModel):
     def __init__(self):

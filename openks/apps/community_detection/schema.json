@@ -1,0 +1,97 @@
+[
+	{
+		"type": "entity",
+		"concept": "person",
+		"properties": [
+			{
+				"name": "ID",
+				"range": "str"
+			},
+			{
+				"name": "type",
+				"range": "str"
+			},
+			{
+        		"name": "fea1",
+        		"range": "int"
+      		},
+      		{
+      		  	"name": "fea2",
+      		  	"range": "int"
+      		},
+      		{
+      		  	"name": "fea3",
+      		  	"range": "str"
+      		},
+      		{
+      		  	"name": "fea4",
+      		  	"range": "str"
+      		},
+      		{
+      		  	"name": "fea5",
+      		  	"range": "str"
+      		},
+      		{
+      		  	"name": "fea6",
+      		  	"range": "str"
+      		},
+      		{
+      		  	"name": "fea7",
+      		  	"range": "str"
+      		},
+      		{
+      		  	"name": "fea8",
+      		  	"range": "str"
+      		},
+      		{
+      		  	"name": "fea9",
+      		  	"range": "str"
+      		},
+      		{
+      		  	"name": "fea10",
+      		  	"range": "str"
+      		}
+		]
+	},
+
+	{
+		"type": "relation",
+		"concept": "relation1",
+		"members": [
+			"person",
+			"person"
+		]
+	},
+	{
+		"type": "relation",
+		"concept": "relation2",
+		"members": [
+			"person",
+			"person"
+		]
+	},
+	{
+		"type": "relation",
+		"concept": "relation3",
+		"members": [
+			"person",
+			"person"
+		]
+	},
+	{
+		"type": "relation",
+		"concept": "relation4",
+		"members": [
+			"person",
+			"person"
+		]
+	},
+	{
+		"type": "relation",
+		"concept": "relation5",
+		"members": [
+			"person",
+			"person"
+		]
+	}
+]
