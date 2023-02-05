@@ -1,0 +1,339 @@
+uberon : pleural cavity	uberon : intraembryonic coelom
+cteno : photocyte	cteno : 2M macromere
+uberon : meninx	uberon : future meninx
+cteno : M-lineage cell	cteno : M macromere, 8 cell stage
+cteno : tentacle-apical organ muscle cell	cteno : 2M-slash macromere
+uberon : rhombomere 2	uberon : presumptive rhombomere 2
+uberon : forebrain neural keel	uberon : forebrain neural plate
+uberon : gastro-splenic ligament	uberon : dorsal mesogastrium
+uberon : tibiotarsus cartilage element	uberon : tibiotarsus pre-cartilage condensation
+uberon : sebaceous gland placode	uberon : embryonic skin basal layer
+uberon : mammary bud	uberon : mammary placode
+uberon : occipital bone	uberon : sclerotome
+uberon : chorioallantoic membrane	uberon : chorion membrane
+uberon : myelencephalon	uberon : future myelencephalon
+uberon : distal tarsal bone 1	uberon : distal tarsal bone 1 cartilage
+uberon : cortical layer II	uberon : cortical plate
+uberon : outer epithelium	uberon : enveloping layer of ectoderm
+uberon : ruminant esophageal groove	uberon : ruminant reticulum
+uberon : cranial nerve II	uberon : retinal neural layer
+uberon : upper leg epithelium	uberon : pelvic appendage bud ectoderm
+uberon : primitive heart tube	uberon : heart rudiment
+uberon : pronephric duct	uberon : intermediate mesoderm
+uberon : parotid gland	uberon : parotid gland primordium
+uberon : pedal digit metatarsal cartilage element	uberon : pedal digit metatarsal pre-cartilage condensation
+uberon : dermal pulp of feather shaft	uberon : feather bud, dermal component
+uberon : epiotic	uberon : cartilaginous otic capsule
+uberon : molar dental papilla	uberon : odontogenic mesenchyme of molar
+uberon : mesonephric renal vesicle	uberon : primitive mesonephric nephron
+uberon : distal tarsal bone 4 cartilage	uberon : distal tarsal bone 4 pre-cartilage condensation
+uberon : endoderm	uberon : presumptive endoderm
+uberon : clitoris	uberon : undifferentiated genital tubercle
+uberon : superior mesenteric vein	uberon : vitelline vein
+uberon : neurogenic field	uberon : preplacodal ectoderm
+uberon : feather bud, epidermal component	uberon : feather follicle placode
+uberon : odontogenic papilla	uberon : uncondensed odontogenic mesenchyme
+uberon : manual digit 1 metacarpus cartilage element	uberon : manual digit 1 metacarpus pre-cartilage condensation
+uberon : distal carpal bone 4	uberon : distal carpal bone 4 cartilage
+uberon : basisphenoid cartilage condenstion	uberon : basisphenoid pre-cartilage condensation
+uberon : prostate glandular acinus	uberon : prostate epithelial cord
+uberon : metacarpus skeleton	uberon : manual digit metacarpus cartilage element
+uberon : autopalatine	uberon : palatoquadrate cartilage
+uberon : yolk sac blood island	uberon : mesenchyme of yolk sac
+uberon : nephron	uberon : nephrogenic mesenchyme
+uberon : ethmoid bone primordium	uberon : mesenchyme derived from head neural crest
+uberon : blastodisc derived epiblast	uberon : blastodisc
+uberon : basioccipital cartilage element	uberon : basioccipital pre-cartilage condensation
+uberon : distal tarsal bone 4	uberon : distal tarsal bone 4 cartilage
+uberon : hyaloid canal	uberon : hyaloid artery
+cteno : esophague-tentacle muscle cell	cteno : 2M-backslash macromere
+uberon : supraneural 1 bone	uberon : supraneural 1 cartilage
+uberon : future foramen cecum	uberon : 3rd arch endoderm
+uberon : pterygoquadrate cartilage	uberon : palatoquadrate cartilage
+uberon : trophoblast	uberon : trophectoderm
+uberon : anal membrane ectodermal component	uberon : ectoderm
+uberon : epididymis	uberon : mesonephric duct
+uberon : inferior parathyroid epithelium	uberon : dorsal part of pharyngeal pouch 3
+uberon : dorsal aorta	uberon : intermediate mesoderm
+uberon : embryonic footplate	uberon : hindlimb bud
+uberon : radius bone	uberon : radius cartilage element
+uberon : ceratobranchial 5 bone	uberon : ceratobranchial 5 cartilage
+uberon : hypaxial musculature	uberon : hypaxial myotome region
+uberon : forelimb	uberon : forelimb bud
+uberon : lens of camera-type eye	uberon : lens vesicle
+uberon : metanephric renal vesicle	uberon : metanephric cortex mesenchyme
+uberon : hypodermis	uberon : mesoderm
+uberon : pronephros	uberon : rostral part of nephrogenic cord
+uberon : fibula	uberon : fibula cartilage element
+uberon : endochondral bone	uberon : cartilage element
+uberon : prootic bone	uberon : cartilaginous otic capsule
+uberon : pectoral appendage	uberon : pectoral appendage bud
+uberon : gluteal muscle	uberon : trunk and cervical myotome group
+uberon : squamous part of temporal bone primordium	uberon : mesenchyme derived from head neural crest
+uberon : dermis of feather follicle	uberon : feather bud, epidermal component
+uberon : ala of nose	uberon : lateral nasal prominence
+uberon : pre-dentine	uberon : ectoderm
+uberon : nephrogenic cord	uberon : urogenital fold
+uberon : calcaneum cartilage element	uberon : calcaneum pre-cartilage condensation
+uberon : pedal digit 2 metatarsal cartilage element	uberon : pedal digit 2 metatarsal pre-cartilage condensation
+cteno : meso-epithelium	uberon : mesoderm
+uberon : epibranchial 1 bone	uberon : epibranchial 1 cartilage
+uberon : endodermal part of digestive tract	uberon : endoderm
+uberon : suprachoroid lamina	uberon : neural crest
+uberon : auditory hillocks, pharyngeal arch 2 derived	uberon : pharyngeal arch 2
+uberon : 6th arch mesenchyme from neural crest	uberon : rhombencephalon neural crest
+uberon : profundal part of trigeminal ganglion complex	uberon : profundal placode
+uberon : mammary placode	uberon : mammary ridge
+uberon : transformed vein	uberon : vein
+uberon : lacrimal gland	uberon : lacrimal gland bud
+uberon : basilar artery	uberon : vertebral artery
+uberon : rectal lumen	uberon : embryonic cloacal lumen
+uberon : presumptive neural plate	uberon : neurectoderm
+uberon : early telencephalic vesicle	uberon : early prosencephalic vesicle
+uberon : distal carpal bone 5	uberon : distal carpal bone 5 cartilage
+uberon : primary palate mesenchyme	uberon : medial nasal process mesenchyme
+uberon : lens cortex	uberon : lens anterior epithelium
+uberon : mesoderm	uberon : presumptive mesoderm
+uberon : insect embryonic/larval brain	uberon : insect embryonic brain
+uberon : placenta	uberon : uterus
+uberon : posterior cartilage of palatine	uberon : palatine cartilage
+uberon : inferior nasal concha	uberon : nasal capsule
+uberon : laryngeal associated mesenchyme	uberon : pharyngeal arch
+uberon : skin of body	uberon : embryonic skin basal layer
+uberon : nucleus pulposus	uberon : notochord
+uberon : proximal tarsal cartilage	uberon : proximal tarsal bone pre-cartilage condensation
+uberon : pseudobranchial artery	uberon : pharyngeal arch artery 1
+uberon : anal fin proximal radial bone	uberon : anal fin proximal radial cartilage
+uberon : pharyngeal epithelium	uberon : early pharyngeal endoderm
+uberon : heart rudiment	uberon : heart primordium
+uberon : cerebellar plate	uberon : rhombomere 1 roof plate
+uberon : autopod region	uberon : embryonic autopod plate
+uberon : posttemporal-supracleithrum	uberon : supracleithrum
+uberon : future central nervous system	uberon : ectoderm
+cteno : ectoderm-derived structure	uberon : ectoderm
+uberon : insect clypeus	uberon : insect clypeo-labral disc
+uberon : ultimobranchial body	uberon : pharyngeal pouch
+uberon : forelimb connective tissue	uberon : forelimb mesenchyme
+uberon : mesonephros	uberon : pronephros
+uberon : 3rd arch mesenchyme from neural crest	uberon : rhombencephalon neural crest
+uberon : presomitic mesoderm	uberon : presumptive segmental plate
+uberon : upper part of vagina	uberon : Mullerian duct
+uberon : segmental spinal nerve	uberon : dorsal root ganglion
+uberon : nervous system	uberon : future nervous system
+uberon : trapezius pre-muscle mass	uberon : mesenchyme from rhombencephalic neural crest
+uberon : clavicle bone	uberon : clavicle bone primordium
+uberon : hypobranchial group muscle	uberon : trunk somite
+uberon : philtrum	uberon : medial nasal prominence
+uberon : insect clypeo-labral anlage	uberon : clypeo-labral anlage in statu nascendi
+uberon : notochordal plate	uberon : notochordal process
+uberon : insect proboscis	uberon : insect labial disc
+uberon : eye mesenchyme	uberon : optic neural crest
+uberon : ischial cartilage	uberon : ischial cartilage element
+uberon : geniculate ganglion	uberon : geniculate placode
+uberon : iliac cartilage element	uberon : iliac pre-cartilage condensation
+uberon : pedal digit 3 metatarsal cartilage element	uberon : pedal digit 3 metatarsal pre-cartilage condensation
+uberon : haemal node	uberon : artery
+uberon : presumptive midbrain	uberon : midbrain neural tube
+uberon : axochord	uberon : presumptive axochord
+uberon : embryonic cloacal epithelium	uberon : epithelium of hindgut
+uberon : hyoid muscle	uberon : hyoid pre-muscle mass
+uberon : manual digit mesenchyme	uberon : mesenchyme of handplate
+uberon : subclavian artery	uberon : right dorsal aorta
+cteno : germ layer	uberon : epiblast (generic)
+uberon : cardiogenic splanchnic mesoderm	uberon : splanchnic layer of lateral plate mesoderm
+uberon : phalanx of pes	uberon : pedal digit phalanx cartilage element
+uberon : epithelium of trachea	uberon : endoderm of foregut
+uberon : notochordal process	uberon : ectoderm
+uberon : lower jaw incisor epithelium	uberon : oral epithelium from ectoderm
+uberon : embryonic skin basal layer	uberon : external ectoderm
+uberon : sublingual dorsal ossification	uberon : sublingual dorsal cartilage
+uberon : mesencephalic artery	uberon : presumptive mesencephalic artery
+uberon : parietal-supraoccipital	uberon : supraoccipital bone
+uberon : facial skeleton	uberon : neural crest
+uberon : interrenal gland	uberon : interrenal primordium
+uberon : incus bone	uberon : incus cartilage element
+uberon : inner cell mass	uberon : blastocyst
+uberon : lower digestive tract	uberon : hindgut
+uberon : hindbrain	uberon : presumptive hindbrain
+uberon : mammary gland connective tissue	uberon : mesenchyme of mammary gland
+cteno : hypodermis	uberon : mesoderm
+uberon : glomerular capsule	uberon : S-shaped body
+uberon : symplectic	uberon : hyomandibular cartilage
+uberon : sphincter pupillae	uberon : neurectoderm
+uberon : fossa ovalis of heart	uberon : foramen ovale of heart
+uberon : pedal digit 5 metatarsal cartilage element	uberon : pedal digit 5 metatarsal pre-cartilage condensation
+uberon : greater omentum	uberon : dorsal mesentery
+uberon : basibranchial 3 bone	uberon : basibranchial 3 cartilage
+cteno : trans-tentacular muscle cell	cteno : 2M macromere
+uberon : thyroid primordium	uberon : pharyngeal pouch 2
+cteno : somite	uberon : presomitic mesoderm
+uberon : urethra	uberon : embryonic urethral groove
+uberon : pectoral fin radial bone	uberon : pectoral fin radial cartilage
+uberon : insect mesothoracic tergum	uberon : insect mesothoracic tergum primordium
+uberon : nose	uberon : olfactory placode
+uberon : lateral line nerve	uberon : lateral line placode
+uberon : extraembryonic coelomic cavity	uberon : future coelemic cavity lumen
+uberon : palatine cartilage	uberon : palatoquadrate cartilage
+uberon : distal carpal bone	uberon : distal carpal cartilage element
+uberon : nasal cavity	uberon : olfactory pit
+uberon : cerebral cortex subventricular zone	uberon : cortical intermediate zone
+uberon : insect dorsal ectoderm	uberon : insect dorsal ectoderm anlage
+uberon : helix of outer ear	uberon : auditory hillocks, pharyngeal arch 1 derived
+uberon : mesethmoid element	uberon : neurocranial trabecula
+uberon : transverospinalis pre-muscle mass	uberon : trunk and cervical myotome group
+uberon : skeletal element of eye region	uberon : neural crest
+uberon : dental epithelium	uberon : pharyngeal arch 1
+uberon : spinal cord ependyma	uberon : spinal cord ventricular layer
+uberon : lower jaw incisor odontogenic papilla	uberon : mandibular process mesenchyme from neural crest
+uberon : entire pharyngeal arch endoderm	uberon : endoderm
+uberon : endocardium of right ventricle	uberon : bulbus cordis
+uberon : primitive knot	uberon : presumptive shield
+uberon : trachea cartilage	uberon : trachea pre-cartilage rings
+uberon : dorsal fin distal radial bone 8	uberon : dorsal fin distal radial cartilage 8
+uberon : angioblastic cord	uberon : cardiogenic plate
+uberon : insect dorsal mesothorax	uberon : insect wing disc
+uberon : skeletal muscle organ	uberon : myotome
+uberon : vesicular appendage of epoophoron	uberon : Mullerian duct
+uberon : teres major muscle	uberon : teres major pre-muscle mass
+uberon : geniculate ganglion	uberon : facio-acoustic neural crest
+uberon : metencephalon	uberon : future metencephalon
+uberon : lens nucleus	uberon : lens anterior epithelium
+uberon : basisphenoid pre-cartilage condensation	uberon : head mesenchyme from mesoderm
+uberon : tail bud paraxial mesoderm	uberon : trunk paraxial mesoderm
+uberon : insect eye-antennal disc	uberon : insect eye-antennal disc primordium
+uberon : mature ovarian follicle	uberon : primordial ovarian follicle
+uberon : elbow connective tissue	uberon : mesenchyme of elbow
+uberon : pedal digit mesenchyme	uberon : mesenchyme of footplate
+uberon : kidney rudiment	uberon : kidney field
+uberon : metanephric nephron	uberon : metanephric mesenchyme
+uberon : myotome	uberon : dermomyotome
+uberon : transversospinales muscle	uberon : transverospinalis pre-muscle mass
+uberon : corneal epithelium	uberon : external ectoderm
+uberon : pectoral fin radial element	uberon : pectoral fin endoskeletal disc
+uberon : chorionic mesenchyme	uberon : extraembryonic mesoderm
+uberon : auditory ossicle endochondral element	uberon : cranial neural crest
+uberon : interhyal bone	uberon : interhyal cartilage
+uberon : hindgut	uberon : mesenchyme
+uberon : mesocoracoid bone	uberon : mesocoracoid cartilage
+uberon : sex cord	uberon : gonadal ridge
+uberon : presumptive endocardium	uberon : heart primordium
+uberon : sublingual ventral ossification	uberon : sublingual ventral cartilage
+uberon : pedal digit 4 phalanx cartilage element	uberon : pedal digit 4 phalanx pre-cartilage condensation
+uberon : median fin radial bone	uberon : median fin radial cartilage
+uberon : postcranial axial skeletal system	uberon : sclerotome
+uberon : superior sagittal sinus	uberon : primitive superior sagittal sinus
+uberon : extraembryonic mesoderm	uberon : inner cell mass derived epiblast
+uberon : carapace	uberon : carapace primordium
+uberon : pharyngeal arch mesenchyme from head mesenchyme	uberon : head mesenchyme from mesoderm
+uberon : polar trophectoderm	uberon : trophectoderm
+uberon : anterior limb of ceratobranchial 5 bone	uberon : anterior limb of ceratobranchial 5 cartilage
+uberon : metatarsus skeleton	uberon : pedal digit metatarsal cartilage element
+uberon : lateral nasal process mesenchyme	uberon : mesenchyme derived from head neural crest
+uberon : mesenchyme of lower jaw	uberon : mandibular process mesenchyme
+uberon : upper digestive tract	uberon : foregut
+uberon : autopod bone	uberon : autopod cartilage
+uberon : 1st arch mandibular mesenchyme from head mesenchyme	uberon : head mesenchyme from mesoderm
+uberon : ethmoid cartilage	uberon : neurocranial trabecula
+uberon : anal membrane	uberon : cloacal membrane
+uberon : basibranchial 2 cartilage	uberon : anterior copula
+uberon : dorsal fin distal radial bone 5	uberon : dorsal fin distal radial cartilage 5
+uberon : retroarticular	uberon : Meckel's cartilage
+uberon : gubernaculum (male or female)	uberon : intermediate mesoderm
+uberon : posterior kidney	uberon : pronephros
+uberon : tunica albuginea of testis	uberon : mesenchyme of testis
+uberon : adenohypophyseal placode	uberon : non-neural ectoderm
+uberon : proximal carpal bone	uberon : proximal carpal cartilage
+uberon : pedal digit 3 phalanx	uberon : pedal digit 3 phalanx cartilage element
+uberon : lung connective tissue	uberon : lung mesenchyme
+uberon : vitelline duct	uberon : midgut
+uberon : undifferentiated genital tubercle	uberon : somatopleure
+uberon : typhlosole	uberon : mesenchyme
+uberon : pectoral fin	uberon : pectoral appendage bud
+uberon : mixed ectoderm/mesoderm/endoderm-derived structure	uberon : ectoderm
+uberon : pectoral appendage bud mesenchyme	uberon : pectoral appendage field
+uberon : renal connecting tubule	uberon : metanephric mesenchyme
+uberon : lateral plate mesoderm	uberon : mesoderm
+uberon : epithelium of elbow	uberon : pectoral appendage bud ectoderm
+uberon : chordate pharynx	uberon : pharyngeal region of foregut
+uberon : liver bud	uberon : hepatic diverticulum
+uberon : labium majora	uberon : female labial swelling
+uberon : presumptive axochord	uberon : mesoderm
+uberon : lower lip	uberon : future lower lip
+uberon : lumen of oropharynx	uberon : oronasal cavity
+uberon : 1st arch mandibular ectoderm	uberon : external ectoderm
+uberon : pedal digit 2 phalanx	uberon : pedal digit 2 phalanx cartilage element
+uberon : canal of Nuck	uberon : peritoneal vaginal process
+uberon : insect labial disc	uberon : insect labial disc primordium
+uberon : insect supraesophageal ganglion	uberon : insect embryonic/larval brain
+uberon : tensor tympani pre-muscle condensation	uberon : mesenchyme of middle ear
+uberon : pedal digit 5 phalanx cartilage element	uberon : pedal digit 5 phalanx pre-cartilage condensation
+uberon : presumptive hindbrain	uberon : posterior neural tube
+uberon : oronasal membrane	uberon : nasal fin
+uberon : secondary palate	uberon : secondary palatal shelf
+uberon : intramembranous bone tissue	uberon : mesenchyme
+uberon : ampullary organ	uberon : lateral line placode
+uberon : germ layer / neural crest	uberon : epiblast (generic)
+uberon : dorsal fin distal radial bone	uberon : dorsal fin distal radial cartilage
+uberon : erector spinae muscle group	uberon : erector spinae pre-muscle mass
+uberon : heart left ventricle	uberon : primary heart field
+uberon : auditory meatus epithelium	uberon : 1st arch pharyngeal cleft
+uberon : dorsal fin proximal radial bone 4	uberon : dorsal fin proximal radial cartilage 4
+uberon : distal tarsal bone 3	uberon : distal tarsal bone 3 cartilage
+uberon : pharyngobranchial 4 bone	uberon : pharyngobranchial 4 cartilage
+uberon : nail	uberon : embryonic skin basal layer
+uberon : eyelid connective tissue	uberon : eyelid mesenchyme
+uberon : aortic sac	uberon : pharyngeal arch artery
+uberon : external oblique pre-muscle mass	uberon : body-wall mesenchyme
+uberon : rectal diverticulum	uberon : embryonic cloaca
+uberon : knee joint	uberon : knee joint primordium
+uberon : hepatic vein	uberon : vitelline vein
+uberon : barbel	uberon : barbel primordium
+uberon : posterior lateral line ganglion	uberon : posterior lateral line placode
+uberon : parathyroid gland	uberon : pharyngeal pouch 3
+uberon : primary yolk sac cavity	uberon : blastocele
+uberon : respiratory tract	uberon : presumptive gut
+uberon : biliary bud	uberon : septum transversum
+uberon : dorsal ciliary vein	uberon : dorsal branch nasal ciliary artery
+uberon : pharyngeal arch 4 skeleton	uberon : pharyngeal arch 4
+uberon : swim bladder bud	uberon : digestive tract epithelium
+uberon : midbrain-hindbrain boundary	uberon : midbrain hindbrain boundary neural plate
+uberon : vertebra	uberon : vertebra cartilage element
+uberon : insect clypeo-labral disc	uberon : insect adult clypeo-labral primordium
+uberon : connecting stalk mesoderm	uberon : extraembryonic mesoderm
+uberon : vasculature of eye	uberon : eye mesenchyme
+uberon : insect tergite	uberon : insect posterior dorsal histoblast nest abdominal
+uberon : auditory hillocks, pharyngeal arch 1 derived	uberon : pharyngeal arch 1
+uberon : heart primordium	uberon : lateral plate mesoderm
+uberon : pharyngeal gill precursor	uberon : pharyngeal pouch
+uberon : pharyngeal arch 3 skeleton	uberon : pharyngeal arch 3
+uberon : uncinate process of pancreas	uberon : ventral pancreatic bud
+uberon : levator operculi	uberon : pharyngeal arch 2
+uberon : dorsal fin proximal radial bone 5	uberon : dorsal fin proximal radial cartilage 5
+uberon : trapezius muscle	uberon : trapezius pre-muscle mass
+cteno : polar field cell	cteno : m11 micromere
+cteno : nerve network cell	cteno : m1 micromere
+uberon : germ layer	uberon : epiblast (generic)
+uberon : radial bone	uberon : radial cartilage
+uberon : dorsal fin proximal radial bone 6	uberon : dorsal fin proximal radial cartilage 6
+uberon : cortical layer III	uberon : cortical plate
+uberon : thymus epithelium	uberon : ventral part of pharyngeal pouch 3
+uberon : stapes bone	uberon : stapes cartilage element
+uberon : primary palate epithelium	uberon : maxillary process ectoderm
+uberon : future pituitary gland	uberon : ectoderm
+uberon : distal limb integumentary appendage	uberon : embryonic skin basal layer
+uberon : caudal vertebra cartilage element	uberon : caudal vertebra pre-cartilage condensation
+uberon : stapes pre-cartilage condensation	uberon : 2nd arch mesenchyme
+uberon : anterior cartilage of palatine	uberon : palatine cartilage
+uberon : lacrimal apparatus	uberon : external ectoderm
+uberon : distal carpal bone 4 cartilage	uberon : distal carpal bone 4 pre-cartilage condensation
+uberon : cerebral cortex ventricular layer	uberon : neural tube ventricular layer
+uberon : metanephros	uberon : metanephric mesenchyme
+uberon : subscapularis muscle	uberon : subscapularis pre-muscle mass
+uberon : cloacal epithelium	uberon : endoderm
+uberon : sympathetic ganglion	uberon : trunk neural crest
+uberon : cartilaginous neurocranium	uberon : head paraxial mesoderm
+uberon : ceratobranchial 2 bone	uberon : ceratobranchial 2 cartilage
+uberon : right umbilical artery	uberon : right dorsal aorta
+uberon : amniotic ectoderm	uberon : epiblast (generic)
+uberon : gonadal ridge	uberon : urogenital fold
+uberon : ceratobranchial 5 tooth	uberon : tooth enamel organ
