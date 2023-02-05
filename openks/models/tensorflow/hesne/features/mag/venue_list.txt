@@ -1,0 +1,233 @@
+##  Data Mining&Analysis(13不同， 19无)
+Knowledge Discovery and Data Mining Conference
+IEEE Transactions on Knowledge and Data Engineering Journal
+Web Search and Data Mining  Conference
+International Conference on Artificial Intelligence and Statistics  Conference
+ACM Transactions on Intelligent Systems and Technology  Journal
+Conference on Recommender Systems   Conference
+Knowledge and Information Systems   Journal
+International Conference on Data Mining Conference
+Data Mining and Knowledge Discovery Journal
+International Conference on Big Data    Conference
+SIAM International Conference on Data Mining    Conference
+Wiley Interdisciplinary Reviews-Data Mining and Knowledge Discovery Journal
+European conference on Machine Learning Conference
+Social Network Analysis and Mining  Journal
+ACM Transactions on Knowledge Discovery From Data   Journal
+Pacific-Asia Conference on Knowledge Discovery and Data Mining  Conference
+Journal of Big Data Journal
+Advanced Data Analysis and Classification   Journal
+Statistical Analysis and Data Mining    Journal
+##  Computational Linguistics(4无, 18无，20无）
+Meeting of the Association for Computational Linguistics    Conference
+Empirical Methods in Natural Language Processing    Conference
+North American Chapter of the Association for Computational Linguistics Conference
+Transactions of the Association for Computational Linguistics   Journal
+Language Resources and Evaluation   Conference
+Computer Speech & Language  Journal
+Computational Linguistics   Journal
+International Conference on Computational Linguistics   Conference
+Conference of the European Chapter of the Association for Computational Linguistics Conference
+Conference on Computational Natural Language Learning   Conference
+Workshop on Statistical Machine Translation Conference
+Language Resources and Evaluation   Journal
+Annual Meeting of the Special Interest Group on Discourse and Dialogue  Conference
+Spoken Language Technology Workshop  Conference
+Conference on Intelligent Text Processing and Computational Linguistics Conference
+International Joint Conference on Natural Language Processing   Conference
+Natural Language Engineering    Journal
+##  Artifiaial Intelligence
+International Conference on Learning Representations    Conference
+Neural Information Processing Systems   Conference
+International Conference on Machine Learning    Conference
+Expert Systems With Applications    Journal
+IEEE Transactions on Systems, Man, and Cybernetics  Journal
+IEEE Transactions on Neural Networks    Journal
+Journal of Machine Learning Research    Journal
+Applied Soft Computing  Journal
+IEEE Transactions on Fuzzy Systems  Journal
+Knowledge Based Systems Journal
+Neurocomputing  Journal
+National Conference on Artificial Intelligence  Conference
+International Joint Conference on Artificial Intelligence   Conference
+Neural Networks Journal
+Neural Computing and Applications   Journal
+Engineering Applications of Artificial Intelligence Journal
+Robotics and Autonomous Systems Journal
+Artificial Intelligence  Journal
+Conference on Learning Theory   Conference
+International Conference on Artificial Intelligence and Statistics  Conference
+Journal of Intelligent and Robotic Systems  Journal
+##  Computer Vision&Pattern Recognition(10无)
+Computer Vision and Pattern Recognition Conference
+International Conference on Computer Vision Conference
+IEEE Transactions on Pattern Analysis and Machine Intelligence  Journal
+European Conference on Computer Vision  Conference
+IEEE Transactions on Image Processing   Journal
+Pattern Recognition Journal
+International Journal of Computer Vision    Journal
+Medical Image Analysis  Journal
+Pattern Recognition Letters Journal
+Computer Vision and Image Understanding  Journal
+British Machine Vision Conference   Conference
+Journal of Visual Communication and Image Representation    Journal
+International Conference on Image Processing    Conference
+Workshop on Applications of Computer Vision Conference
+IEEE International Conference on Automatic Face & Gesture Recognition  Conference
+Image and Vision Computing  Journal
+Journal of Machine Vision and Applications  Journal
+International Conference on Document Analysis and Recognition   Conference
+Journal of Mathematical Imaging and Vision  Journal
+##  Databases&Information Systems(18,19,20无)
+IEEE Transactions on Knowledge and Data Engineering Journal
+International World Wide Web Conferences    Conference
+Very Large Data Bases   Conference
+International Conference on Management of Data  Conference
+Web Search and Data Mining  Conference
+International Conference on Weblogs and Social Media    Conference
+International Conference on Data Engineering    Conference
+International ACM SIGIR Conference on Research and Development in Information Retrieval Conference
+Conference on Information and Knowledge Management  Conference
+ACM Transactions on Intelligent Systems and Technology  Journal
+International Semantic Web Conference   Conference
+Information Systems Journal
+Conference on Recommender Systems   Conference
+Information Processing and Management   Journal
+Knowledge and Information Systems   Journal
+Cross-Language Evaluation Forum Conference
+International Conference on Big Data    Conference
+##  Computer Graphics
+ACM Transactions on Graphics    Journal
+IEEE Transactions on Visualization and Computer Graphics    Journal
+Computer Graphics Forum Journal
+Computers & Graphics    Journal
+The Visual Computer Journal
+IEEE Computer Graphics and Applications Journal
+International Conference on Computer Graphics and Interactive Techniques    Conference
+IEEE Pacific Visualization Symposium    Conference
+Computer Aided Geometric Design Journal
+Graphical Models \\/graphical Models and Image Processing \\/computer Vision, Graphics, and Image Processing    Journal
+Virtual Reality Software and Technology Conference
+Visual Analytics Science and Technology Conference
+Graphics Interface  Conference
+Interactive 3D Graphics and Games   Conference
+Computer Animation and Virtual Worlds   Journal
+international conference on 3D web technology   Conference
+IEEE Symposium on Large Data Analysis and Visualization Conference
+Visualization and Data Analysis Conference
+Vision Modeling and Visualization   Conference
+International Conference on Computer Graphics Theory and Applications   Conference
+##  Computer Networks&Wireless Communication
+IEEE Communications Surveys and Tutorials    Journal
+IEEE Communications Magazine    Journal
+IEEE Transactions on Wireless Communications    Journal
+IEEE Journal on Selected Areas in Communications    Journal
+IEEE Transactions on Communications Journal
+IEEE Transactions on Vehicular Technology   Journal
+International Conference on Computer Communications Conference
+IEEE Wireless Communications    Journal
+ACM Special Interest Group on Data Communication    Conference
+IEEE Transactions on Mobile Computing   Journal
+IEEE ACM Transactions on Networking Journal
+Journal of Network and Computer Applications    Journal
+Computer Networks   Journal
+IEEE Communications Letters Journal
+IEEE Network    Journal
+International Conference on Communications  Conference
+Ad Hoc Networks Conference
+Global Communications Conference    Conference
+ACM/IEEE International Conference on Mobile Computing and Networking   Conference
+Computer Communications Journal
+##  Computing Systems
+IEEE Transactions on Parallel and Distributed Systems   Journal
+Future Generation Computer Systems  Journal
+Networked Systems Design and Implementation Conference
+International Symposium on Computer Architecture    Conference
+Architectural Support for Programming Languages and Operating Systems   ASPLOS
+High-Performance Computer Architecture  Conference
+IEEE Internet of Things Journal Journal
+IEEE Transactions on Cloud Computing    Journal
+IEEE International Symposium on Parallel & Distributed Processing, Workshops and Phd Forum  Conference
+IEEE Transactions on Services Computing Journal
+USENIX Annual Technical Conference  Conference
+Measurement and Modeling of Computer Systems    Conference
+IEEE International Conference on High Performance Computing, Data, and Analytics    Conference
+International Journal of Distributed Sensor Networks    Journal
+The Journal of Supercomputing   Journal
+European Conference on Computer Systems Conference
+International Symposium on Microarchitecture    Conference
+File and Storage Technologies   Conference
+Journal of Parallel and Distributed Computing   Journal
+Concurrency and Computation: Practice and Experience    Journal
+##  Computer Security&Cryptography
+Computer and Communications Security    Conference
+IEEE European Symposium on Security and Privacy Conference
+IEEE Transactions on Information Forensics and Security Journal
+USENIX Security Symposium   Conference
+International Cryptology Conference Conference
+Network and Distributed System Security Symposium   Conference
+Theory and Application of Cryptographic Techniques  Conference
+Computers & Security    Journal
+IEEE Transactions on Dependable and Secure Computing    Journal
+Financial Cryptography  Conference
+International Conference on the Theory and Application of Cryptology and Information Security   Conference
+Cryptographic Hardware and Embedded Systems Conference
+ACM Symposium on Information, Computer and Communications Security  Conference
+Theory of Cryptography Conference   Conference
+Symposium On Usable Privacy and Security    Conference
+IEEE Security & Privacy Journal
+Public Key Cryptography Conference
+Journal of Cryptology   Journal
+Fast Software Encryption    Conference
+Security and Communication Networks Journal
+##  Multimedia(18无）
+IEEE Transactions on Multimedia Journal
+IEEE Transactions on Circuits and Systems for Video Technology  Journal
+ACM Multimedia  Conference
+Multimedia Tools and Applications   Journal
+Journal of Visual Communication and Image Representation    Journal
+International Conference on Image Processing    Conference
+Signal Processing-image Communication   Journal
+International Conference on Multimedia Retrieval    Conference
+ACM Transactions on Multimedia Computing, Communications, and Applications  Journal
+International Symposium/Conference on Music Information Retrieval   Conference
+Eurasip Journal on Image and Video Processing   Journal
+ACM SIGMM Conference on Multimedia Systems  Conference
+International Conference on Multimedia and Expo Conference
+IEEE MultiMedia Journal
+Iet Image Processing    Journal
+Multimedia Systems  Journal
+Advanced Video and Signal Based Surveillance    Conference
+Quality of Multimedia Experience    Conference
+Conference on Multimedia Modeling   Conference
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+{
+"dataset": "delicious",
+"node_type_numbers": 3,
+"eval_point": 2e2,
+"decay_step": 3e2,
+"learning_rate": 0.005,
+"keep_prob": 1.0,
+"weight_decay": 0.01,
+"negative_ratio_pertype": 3,
+"negative_ratio": 5,
+"patience": 20,
+"batch_event_numbers": 64,
+"max_his_num": 50,
+"his_type": "random",
+"log_dir": "/home1/wyf/Projects/dynamic_network_embedding/log/delicious",
+"data_dir": "/home1/wyf/Projects/dynamic_network_embedding/data/delicious/processed",
+"save_dir": "/home1/wyf/Projects/dynamic_network_embedding/save/delicious",
+"neg_type": 2,
+"test_num": 20,
+"is_training": 0,
+"negative_sampling": 1
+}

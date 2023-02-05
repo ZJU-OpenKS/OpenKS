@@ -1,0 +1,9 @@
+{
+"log_dir": "/home1/wyf/Projects/dynamic_network_embedding/log/yelp",
+"data_dir": "/home1/wyf/Projects/dynamic_network_embedding/data/yelp/processed_nv",
+"save_dir": "/home1/wyf/Projects/dynamic_network_embedding/save/yelp",
+"embedding_out_st": "/home1/wyf/Projects/dynamic_network_embedding/data/yelp/processed/embedding_small_out_st.pkl",
+"embedding_out_dy": "/home1/wyf/Projects/dynamic_network_embedding/data/yelp/processed/embedding_small_out_dy.pkl",
+"cellstates_out_dy": "/home1/wyf/Projects/dynamic_network_embedding/data/yelp/processed/cellstates_small_out_dy.pkl",
+"embedding_out_concat": "/home1/wyf/Projects/dynamic_network_embedding/data/yelp/processed/embedding_small_out_concat.pkl"
+}
