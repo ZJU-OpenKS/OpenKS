@@ -1,0 +1,20 @@
+{
+"dataset": "lastfm",
+"node_type_numbers": 3,
+"eval_point": 2e2,
+"decay_step": 5e2,
+"learning_rate": 0.008,
+"keep_prob": 1.0,
+"weight_decay": 0.01,
+"negative_ratio_pertype": 3,
+"negative_ratio": 1,
+"patience": 20,
+"batch_event_numbers": 64,
+"max_his_num": 50,
+"his_type": "last",
+"log_dir": "/home1/wyf/Projects/dynamic_network_embedding/log/lastfm",
+"data_dir": "/home1/wyf/Projects/dynamic_network_embedding/data/lastfm/processed",
+"save_dir": "/home1/wyf/Projects/dynamic_network_embedding/save/lastfm",
+"is_training": 1,
+"negative_sampling": 0
+}

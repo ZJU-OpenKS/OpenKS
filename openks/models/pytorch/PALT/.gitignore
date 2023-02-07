@@ -1,0 +1,9 @@
+__pycache__
+.vscode/
+data/
+cache/
+exp_root/
+**/.ipynb_checkpoints/
+large_exp_root/
+case_study/
+*_exp_root/**

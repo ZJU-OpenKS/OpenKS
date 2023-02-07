@@ -1,0 +1,19 @@
+{
+"dataset": "mag",
+"node_type_numbers": 3,
+"eval_point": 2e2,
+"decay_step": 1e2,
+"learning_rate": 0.005,
+"keep_prob": 0.8,
+"weight_decay": 0.01,
+"negative_ratio": 5,
+"patience": 20,
+"batch_event_numbers": 64,
+"max_his_num": 100,
+"his_type": "last",
+"log_dir": "/home1/wyf/Projects/ecai/log/mag",
+"data_dir": "/home1/wyf/Projects/dynamic_network_embedding/data/mag/processed",
+"save_dir": "/home1/wyf/Projects/ecai/save/mag",
+"is_training": 1,
+"negative_sampling": 0
+}

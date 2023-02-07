@@ -1,0 +1,15 @@
+{
+"dataset": "delicious",
+"node_type_numbers": 3,
+"num_epochs": 20,
+"hidden_size": 128,
+"use_type_bias": true,
+"negative_ratio": 5,
+"eval_point": 2e2,
+"decay_step": 1e2,
+"batch_event_numbers": 100,
+"log_dir": "/home1/wyf/Projects/dynamic_network_embedding/log/delicious",
+"data_dir": "/home1/wyf/Projects/dynamic_network_embedding/data/delicious/hetrec2011",
+"save_dir": "/home1/wyf/Projects/dynamic_network_embedding/save/delicious",
+"embedding_out_nt": "/home1/wyf/Projects/dynamic_network_embedding/data/yelp/processed/embedding_small_out_nt.pkl"
+}

@@ -1,0 +1,21 @@
+knowledge discovery and data mining	KDD
+international world wide web conferences	WWW
+international conference on data mining	ICDM
+siam international conference on data mining	SDM
+web search and data mining	WSDM
+conference on information and knowledge management	CIKM
+international acm sigir conference on research and development in information retrieval	SIGIR
+international conference on learning representations	ICLR
+neural information processing systems	NIPS
+international conference on machine learning	ICML
+national conference on artificial intelligence	AAAI
+international joint conference on artificial intelligence	IJCAI
+meeting of the association for computational linguistics	ACL
+empirical methods in natural language processing	EMNLP
+computer vision and pattern recognition	CVPR
+international conference on computer vision	ICCV
+european conference on computer vision	ECCV
+acm multimedia	MM
+international conference on management of data	SIGMOD
+international conference on data engineering	ICDE
+very large data bases	VLDB

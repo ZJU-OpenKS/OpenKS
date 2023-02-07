@@ -1,0 +1,1326 @@
+company : sun	newspaper : telegraph
+newspaper : the economist	publication : washington
+company : aol video	biotechcompany : microsoft
+website : cbs corporation	company : asia
+company : los angeles	publication : the industry standard
+company : bot	website : yahoo
+publication : the los angeles	newspaper : journal
+newspaper : new york times business section	newspaper : journal
+newspaper : journal	blog : abc news
+museum : syracuse university	newspaper : californian
+company : sun microsystems	company : realnetworks
+company : financial	recordlabel : virgin airlines
+publication : the villager	company : new york
+transportation : fedex express	company : express
+company : financial	company : reuters
+blog : consumer reports	newspaper : journal
+biotechcompany : ford motor co	automobilemaker : general motors
+publication : infoworld	company : new york
+bank : royal	transportation : first class recorded delivery
+newspaper : metro newspapers	newspaper : daily
+company : huffington	company : bbc001
+politicsblog : vogue	newspaper : journal
+company : checkout	bank : use paypal
+company : ford	automobilemaker : hyundai
+politicsblog : wash times	geopoliticallocation : wash
+company : ford	bank : general electric
+newspaper : journal	newspaper : legal times
+transportation : airmail	transportation : priority mail
+company : national	newspaper : toronto sun
+newspaper : herald tribune	website : san jose mercury news
+bank : paypal links	biotechcompany : google
+publication : the washington	newspaper : chicago tribune
+company : share	company : delicious digg this post share
+company : los angeles	newspaper : usa today
+company : new york	publication : the believer
+company : bandcamp	blog : myspace
+newspaper : baptist press	publication : washington
+company : yahoo finance	publication : journal online
+company : new york	blog : times last week
+retailstore : u s  mail	transportation : ups ground
+automobilemaker : mercedes models	company : bmw 
+blog : investment news	newspaper : journal
+newspaper : daily	newspaper : the miami herald
+company : usps global	bank : ups standard
+company : new york	newspaper : long island press
+bank : ups second day	transportation : priority mail
+newspaper : daily	organization : cambridge
+newspaper : usa today	newspaper : journal newspaper
+newspaper : indianapolis business journal	newspaper : journal
+company : twitter	televisionstation : ct
+blog : myspace	company : flickr
+publication : la magazine	company : la
+company : cincinnati	blog : cincinnati com
+newspaper : publishers weekly	company : new york
+newspaper : the sunday telegraph	newspaper : daily
+newspaper : the new york daily news	publication : washington
+company : bmw 	automobilemaker : alfa romeo
+company : new york	newspaper : boston phoenix
+company : site	blog : myspace
+company : yahoo	company : beta
+company : nbc astrovision screen	newspaper : journal
+company : los angeles	website : the washington times
+company : united states post office	transportation : priority
+newspaper : daily	publication : sky news
+company : new york	website : ski magazine
+transportation : ups ground	company : united states post office
+company : daily candy	company : new york
+website : bbc news	blog :   google
+biotechcompany : google	company : ford
+politicsblog : american city business journals	newspaper : journal
+company : sun	company : express001
+company : drupal	blog :   google
+company : site	company : twitter
+bank : usps international	transportation : priority mail
+company : new york	newspaper : publishers weekly
+biotechcompany : xerox	company : ford
+newspaper : daily	newspaper : nz herald
+company : link	website : digg
+newspaper : newsday	company : los angeles
+company : purolator	bank : federal express
+company : post office	transportation : ups ground
+website : facebook	company : fans
+newspaper : journal	blog : businessweek
+company : ford	company : boeing
+company : buzz	company : share
+website : google  	website : reddit tweet
+newspaper : journal	publication : nbc
+company : bmw 	automobilemaker : lamborghini
+company : new york	publication : cigar aficionado
+company : new york	newspaper : the new york times book review
+website : the new york post	company : los angeles
+newspaper : journal	blog : recorder
+bank : ups standard ground	retailstore : usps
+company : new york	newspaper : chronicle of higher education
+magazine : marie claire	company : new york
+publication : the washington	website : the washington times
+company : air	company : twitter
+company : express001	newspaper : london evening standard
+company : twitter	company : flickr
+publication : jerusalem report	publication : washington
+company : yahoo	company : hotmail
+website : wired	newspaper : journal
+company : financial	newspaper : national public radio  s morning edition
+newspaper : bloomberg news	company : los angeles
+company : detroit	website : daily news
+publication : the los angeles	website : wall street journal
+website : politico com	company : huffington
+bank : canada post	company : express
+transportation : priority	company : media
+publication : washington	newspaper : montreal gazette
+company : new york	publication : granta
+newspaper : journal	politicsblog : discovery channel
+newspaper : journal	website : foreign policy
+newspaper : journal	publication : runners world
+newspaper : chicago tribune	company : southtown
+biotechcompany : microsoft	company : starbucks
+publication : post	blog : fiji times
+company : samsung electronics	biotechcompany : toyota motor
+website : linkedin	company : buzz
+company : new york	newspaper : newsday
+website : fb	website : linked in
+newspaper : times	publication : friday times
+company : prothom alo	company : star
+newspaper : irish times	newspaper : journal
+company : sun microsystems	company : rambus inc 
+publication : washington	newspaper : sacramento bee
+transportation : usps first class	bank : priority international mail
+company : los angeles	newspaper : los angeles examiner
+company : showtime	company : hbo
+company : yahoo	company : hulu com
+publication : post	website : courier mail
+newspaper : weekly times	company : plans
+company : twitter	room : sale
+website : facebook tags	company : twitter
+magazine : business week	company : new york
+bank : dhl ground	transportation : fed ex
+company : new york	newspaper : european pressphoto agency
+website : new york daily news	trainstation : city hall
+company : cnn  la	newspaper : times
+transportation : ups ground	retailstore : priority mail service
+retailstore : express mail service	transportation : priority mail
+publication : the washington	company : discovery communications
+transportation : express mail international	company : usps global
+publication : ocean drive	company : new york
+newspaper : journal	blog : fox news
+company : flickr map	company : new york
+publication : utne reader	company : los angeles
+newspaper : mail on sunday	newspaper : daily
+website : espn com	company : new york
+website : tv guide magazine	company : new york
+newspaper : die zeit	company : new york
+transportation : ups ground	retailstore : u s  postal service
+newspaper : daily	magazine : good housekeeping
+company : igoogle	company : yahoo
+company : new york	newspaper : herald
+radiostation : philadelphia	newspaper : journal
+newspaper : globe and mail	company : national
+website : the st   petersburg times	newspaper : journal
+company : rss	blog : atom
+company : cnbc	company : new york
+company : uspo	transportation : ups ground
+company : napster	company : aol video
+publication : ohio state journal	company : cincinnati
+website : stumble upon	company : buzz
+newspaper : daily	newspaper : new statesman
+company : samsung	biotechcompany : sony corp
+company : surface	transportation : airmail
+company : private news television channel csb news	company : sangbad
+newspaper : daily	company : evening sun001
+website : the daily	newspaper : sunday telegraph
+website : london times	company : los angeles
+blog : myspace	company : second life
+newspaper : sacramento bee	publication : washington
+publication : drudge report	publication : washington
+company : financial	newspaper : el paso times
+newspaper : telegraph	publication : farmers weekly
+blog :   google	company : skype
+publication : sunday star	newspaper : metro magazine
+newspaper : parade magazine	company : new york
+company : acrobat	company : realplayer
+automobilemaker : daimler benz	automobilemaker : rolls royce phantom
+company : new york	publication : paris match
+newspaper : chicago tribune	newspaper : chicago sun
+company : baidu	company : china
+company : new york	publication : bookforum
+company : uk 	transportation : ups ground
+biotechcompany : novartis	company : phillip morris international
+website : google google	company : firefox
+magazine : art review	company : new york
+politicsblog : independent	company : new york
+website : technorati	company : yahoo
+publication : washington	blog : salon
+company : flickr	blog : blogger
+politicsblog : herald newspapers	company : chicago
+company : new york	company : yahoo
+company : new york	publication : mother jones
+company : mozilla	biotechcompany : microsoft
+company : financial	newspaper : usa today
+company : reuters	newspaper : journal
+publication : washington	newspaper : al rai
+politicsblog : cnn	newspaper : times
+newspaper : daily	company : sunday express001
+company : postal service	transportation : priority mail
+website : kansas city star	newspaper : journal
+blog : conservative party	newspaper : daily
+newspaper : journal	blog :   google
+newspaper : neue z rcher zeitung	company : new york
+company : new york	company : flickr map
+publication : washington	magazine : interview
+company : hotmail	company : yahoo
+blog :   google	company : talk instant messaging
+transportation : priority	transportation : priority flat rate
+company : new york	website : playboy magazine
+retailstore : united parcel	transportation : ups express
+company : new york	website : new york tribune
+company : week inpoverty me  com	company : twitter
+newspaper : london observer	publication : washington
+website : facebook	company : photo
+company : amazon aws	blog :   google
+company : forbes001	newspaper : journal
+company : new york	website : the washington times
+company : espn 	company : new york
+website : leader	company : hurriyet
+newspaper : the miami herald	publication : washington
+company : new york	website : forbes magazine
+company : login	website : facebook
+newspaper : market watch	newspaper : journal
+bank : paypal	website : use google
+website : facebook	company : order
+company : chicago001	website : sun times
+newspaper : journal	magazine : women
+newspaper : journal	magazine : parents
+company : flex	blog :   google
+website : msnbc	newspaper : daily
+company : sun	website : star newspapers
+company : national	website : wall street journal
+website : national catholic reporter	company : new york
+newspaper : naperville sun	newspaper : herald
+bank : ups shipping	transportation : priority
+bank : paypal checkout	company : checkout
+website : money magazine	company : new york
+company : new york	website : wired
+blog : hollywood reporter	newspaper : journal
+company : yahoo	company : monster com
+island : ios apps	website : facebook
+website : manchester guardian	newspaper : daily
+blog :   google	company : dogpile
+website : facebook	company : sitemap
+transportation : air mail	transportation : priority
+newspaper : herald	company : chicago001
+company : express	retailstore : priority mail service
+company : media	transportation : first class international
+website : new york times	newspaper : journal archives
+bank : united states postal service	company : media
+bank : general electric	company : nike
+company : ford	automobilemaker : general motors
+company : financial	company : forbes001
+bank : paypal	company : apple
+automobilemaker : nissan	organization : karsan
+newspaper : new york daily	publication : law journal
+company : financial	newspaper : the christian science monitor
+company : rights reserved	website : facebook
+company : new york	website : newsweek magazine
+company : new york	blog : national geographic channel
+room : view	website : netscape
+website : yahoo	website : del icio us
+newspaper : times	blog : dallas morning
+company : business objects sa	biotechcompany : siebel systems
+transportation : international priority	transportation : priority mail
+publication : washington	website : slate magazine
+newspaper : journal	company : forbes001
+company : hotmail	blog :   google
+company : twitter	company : japan001
+newspaper : reno gazette journal	newspaper : sparks tribune
+newspaper : daily mirror	newspaper : telegraph
+newspaper : los angeles daily journal	newspaper : journal
+newspaper : barron s	company : new york
+retailstore : us express mail	company : us priority
+publication : asia sentinel	company : asia
+website : london times	publication : washington
+geopoliticallocation : santa maria	radiostation : ksby tv
+newspaper : journal	newspaper : los angeles business journal
+newspaper : daily	publication : travel weekly
+company : new york	magazine : cosmo
+website : scientific american	company : new york
+publication : robb report	newspaper : journal
+publication : washington	blog : pitchfork
+company : new york	company : al jazeera international
+company : yahoo instant messaging	company : yahoo
+politicsblog : cnn	company : kos
+company : post office	bank : federal express
+radiostation : kgrg fm	publication : post
+blog : boingboing	publication : washington
+company : lycos	company : yahoo
+website : msnbc	company : new york
+company : new york	publication : the american scholar
+company : legal	newspaper : daily journal
+company : amazon	newspaper : journal
+company : los angeles	newspaper : the advocate
+company : uk 	transportation : fed ex
+company : financial	magazine : time out magazine
+newspaper : daily	company : dawn
+newspaper : chicago tribune	publication : washington
+website : youtube	company : video
+newspaper : oprah magazine	newspaper : journal
+company : new york	website : bust magazine
+automobilemaker : ogle	blog : google earth blog
+company : lycos	company : overture services
+biotechcompany : google	bank : worldpay
+newspaper : journal	blog : forbes com
+website : the washington times	company : los angeles
+company : los angeles	newspaper : salt lake tribune
+blog : techcrunch	company : huffington
+company : wikipedia	company : kos
+company : new york	publication : metropolitan home
+transportation : ups ground	company : standard001
+company : u s	company : new york
+newspaper : the vancouver sun	company : national
+retailstore : marketplace	newspaper : journal
+website : the new york post	company : asia
+politicsblog : hot air	newspaper : daily
+newspaper : the daily caller	company : huffington
+website : wall street journal	publication : journal online
+company : new york	blog : gawker
+company : los angeles	magazine : newsweek
+transportation : express service	transportation : ups ground
+transportation : express mail international	company : express
+website : atlanta journal constitution	company : new york
+blog :   google	biotechcompany : ibm
+company : new york	website : the boston herald
+company : new york	publication : ramparts
+website : foxnews	newspaper : journal
+website : the daily	newspaper : the scotsman
+publication : washington	website : fortune magazine
+automobilemaker : peugeot	company : u s  automaker
+publication : washington	publication : worldnetdaily
+company : new york	website : foxnews
+company : aim 	company : yahoo
+magazine : spin	company : la
+retailstore : usps	bank : dhl ground
+company : twitter	blog :   google
+newspaper : l a  weekly	company : new york
+newspaper : journal	newspaper : new york sun
+company : new york	newspaper : wsj
+publication : washington	website : foxnews
+blog :   google	island : ios apps
+politicsblog : eschaton	company : kos
+bank : pay pal	company : checkout
+company : la	blog : mtv
+politicsblog : discover	company : checkout
+newspaper : the miami herald	newspaper : journal
+company : link	website : facebook
+newspaper : journal	magazine : golf digest
+publication : express	bank : ups air
+company : twitter	building : life
+blog : red herring	company : china
+company : new york	company : proquest
+blog :   google	website : linkedin
+newspaper : indian country today	company : new york
+company : questions	company : twitter
+publication : washington	website : yahoo
+company : huffington	blog : keith olbermann
+bank : royal	transportation : ups ground
+company : amazon	company : aol video
+newspaper : the economist	company : new york
+newspaper : media general news service	publication : washington
+company : buy com	blog :   google
+politicsblog : cnn	publication : the washington
+newspaper : baltimore sun	company : la
+biotechcompany : google	bank : paypal payments
+newspaper : journal	magazine : cosmopolitan
+website : new yorker magazine	company : new york
+company : uk 	bank : dhl ground
+company : new york	blog : kotaku
+company : video	company : metacafe
+newspaper : journal	blog : ap newswire
+company : express shipping	transportation : priority mail
+publication : journal online	company : forbes001
+blog : washington post book reviews	company : new york
+company : twitter	company : poll
+bank : parcel post	bank : federal express
+company : nation	newspaper : uk guardian
+company : bmw 	automobilemaker : jaguar
+publication : post	radiostation : wknh
+blog : dallas morning	newspaper : journal
+retailstore : usps	bank : parcel post
+company : gulf air	website : khaleej times
+company : uk 	bank : ups canada
+company : twitter	winery : connections
+bank : the chase manhattan bank	company : tiaa cref
+company : readers	blog :   google
+publication : the washington	website : the philadelphia inquirer
+website : sun times	newspaper : journal
+location : embassy	publication : washington
+company : forum	website : twitter
+company : bmw 	automobilemaker : volkswagen cars
+company : european	blog : wine spectator
+publication : post	newspaper : wqad
+company : forum	website : facebook
+publication : style magazine	newspaper : journal
+transportation : air mail	company : global
+company : san francisco	blog : idg news service
+company : flickr map	company : instagram
+bank : parcel post	transportation : international priority
+newspaper : journal	blog : red herring
+newspaper : uk newspaper	company : sun
+company : at t	company : ford
+company : standard001	transportation : first class international
+blog :   google	company : akamai technologies
+company : huffington	website : newsvine
+company : amazon	blog : myspace
+newspaper : telegraph	biotechcompany : novartis
+bank : american express	company : merrill lynch   co
+transportation : express mail international	transportation : international priority
+company : bmw	automobilemaker : chrysler
+company : air	transportation : express mail international
+newspaper : bulletin	company : new york
+politicsblog : redstate	company : kos
+company : new york	website : la times
+company : new york	blog : ap newswire
+company : new york	website : the associated press
+website : facebook	company : amazon
+company : google wallet	retailstore : google
+website : bing index	company : yahoo  local
+website : atlanta journal constitution	newspaper : journal
+cave : ie	company : chrome
+company : new republic	newspaper : journal
+newspaper : el paso herald post	newspaper : journal
+publication : the washington	website : sun times
+company : new york	website : people 
+automobilemaker : honda	automobilemaker : chrysler
+newspaper : journal	company : cnn  msnbc
+newspaper : new scientist	company : san francisco
+company : express001	company : financial
+company : royal mail	company : air
+website : the daily	newspaper : the sunday times
+company : financial	blog : techcrunch
+company : share	blog : tumblr
+publication : washington	website : bbc news
+newspaper : journal	politicsblog : informationweek
+company : cnn  nbc	newspaper : journal
+publication : post	website : the daily
+company : financial	website : the new york post
+company : scotsman	politicsblog : record
+bank : usps international	transportation : ups ground
+biotechcompany : microsoft	retailstore : walmart
+company : new york	newspaper : fortune
+company : bloglines	website : windows live
+company : news corp 	newspaper : daily
+automobilemaker : daimler	company : bmw 
+bank : paypal	bank : google checkout
+transportation : express mail international	transportation : air mail
+newspaper : tennessee	company : arkansas
+bank : federal express	transportation : priority
+company : local	company : twitter
+company : new york	newspaper : chicago reader
+publication : the new	politicsblog : edge
+website : la times	publication : journal editorial page
+blog : hill	newspaper : journal
+newspaper : evening standard	company : express001
+company : los angeles	newspaper : publishers weekly
+blog :   google	company : netsuite
+company : mozilla mail	website : netscape
+publication : associated press	politicsblog : white house
+website : daily news	publication : the washington
+company : cincinnati	publication : ohio state journal
+company : uk 	bank : australia post
+blog : the evening standard	company : new york
+newspaper : australian newspapers	newspaper : daily
+automobilemaker : maruti suzuki india	automobilemaker : suzuki
+website : newsvine	company : huffington
+blog : townhall com	publication : washington
+newspaper : journal	politicsblog : cnn
+company : royal mail	transportation : airmail
+newspaper : daily	bank : barclays
+company : new york	magazine : conde nast traveler
+publication : the washington	company : sun
+company : privacy policy	website : facebook
+newspaper : times	company : global
+transportation : priority	transportation : air mail
+company : new york	company : reuters
+company : next day	transportation : ups ground
+company : new york	magazine : marie claire
+company : social	company : twitter
+retailstore : u s  post office	transportation : ups ground
+company : new york	publication : bloomberg businessweek
+newspaper : east african standard	company : nation
+website : wall street journal	company : new york
+newspaper : financial mail	newspaper : daily
+publication : washington	company : the today show
+biotechcompany : pfizer	biotechcompany : roche
+newspaper : scotusblog	company : new york
+newspaper : journal	company : fox business
+company : us post office	transportation : priority
+transportation : fed ex ground	transportation : priority
+publication : washington	website : the globe and mail
+website : country living	company : new york
+newspaper : usa today	company : la
+company : yahoo	company : searches
+newspaper : daily	politicsblog : melanie phillips
+publication : yale review	company : new york
+bank : paypal	company : services
+transportation : first class international	bank : priority international mail
+website : time magazine	company : los angeles
+politicsblog : redstate	newspaper : daily
+company : detroit	magazine : chrysler
+company : ford	biotechcompany : ibm
+website : mercury news	company : la
+newspaper : daily	website : the washington times
+company : new york	newspaper : evening post
+company : new york	newspaper : register
+blog :   google	company : photos
+website : huffpo	newspaper : daily
+newspaper : journal	newspaper : telegraph
+retailstore : marketplace	company : app store
+blog : times yesterday	company : new york
+retailstore : lowes	company : home depot inc
+publication : tmz	publication : entertainment
+politicsblog : new york time	newspaper : journal
+publication : post	radiostation : krnv tv
+newspaper : journal	blog : engadget
+blog : fiji times	publication : post
+newspaper : daily	company : channel
+website : nbc news	company : new york
+company : map	blog :   google
+company : photos	website : facebook
+newspaper : journal	politicsblog : weekly world news
+radiostation : ksby tv	geopoliticallocation : santa maria
+company : reuters	company : money
+politicsblog : record	website : the globe and mail
+magazine : washington monthly	company : los angeles
+company : amazon	biotechcompany : ebay
+transportation : priority	retailstore : express mail service
+transportation : recorded delivery	bank : royal
+publication : washington	website : u s  news and world report
+newspaper : journal	blog : investment news
+company : la	publication : tmz
+blog :   google	company : contacts
+newspaper : herald sun	company : new york
+politicsblog : commerce	publication : commerce the journal
+company : buzz	website : facebook
+company : yahoo	company : hp
+newspaper : register	company : new york
+transportation : first class international	transportation : priority
+company : new york	publication : tls
+publication : law journal	publication : washington
+newspaper : washington herald	publication : washington
+company : new york	newspaper : long island business news
+newspaper : journal	company : nike
+company : new york	blog : about com
+company : checkout	bank : google checkout
+company : id	website : yahoo
+newspaper : examiner	newspaper : new york daily
+bank : united states postal service	transportation : air mail
+company : new york	company : michelin
+website : belfast telegraph	newspaper : daily
+website : foreign policy	newspaper : journal
+retailstore : u s  postal service	transportation : express mail international
+company : new york	newspaper : london express
+transportation : priority	company : standard001
+website : new york magazine	company : los angeles
+company : link	company : twitter
+blog :   google	company : enterprise
+company : yahoo	publication : post
+newspaper : weekly times	newspaper : telegraph
+company : buzz	website : friendfeed share
+publication : time out ny	company : new york
+newspaper : the sun newspaper	newspaper : daily
+blog : cincinnati com	company : cincinnati
+bank : citigroup	bank : morgan stanley
+company : today	automobilemaker : chrysler
+blog : business week	newspaper : journal
+publication : the washington	website : evening star
+publication : rush limbaugh	publication : journal editorial page
+website : san antonio express	company : new york
+website : the new york post	company : cnn  the new york
+website : facebook	company : services
+company : app store	website : twitter
+website : new york times	company : la
+company : motorola mobility holdings inc	blog :   google
+company : media matters	newspaper : daily
+company : esquire001	newspaper : journal
+newspaper : wsj	company : financial
+bank : dhl ground	company : air
+bank : international signed	bank : royal
+publication : washington	newspaper : talon news
+publication : washington	politicsblog : cnn
+website : kansas city star	company : new york
+company : los angeles	newspaper : westways magazine
+publication : washington	newspaper : media general
+bank : paypal payments	biotechcompany : google
+biotechcompany : ebay	blog :   google
+biotechcompany : microsoft	biotechcompany : cisco
+company : los angeles	website : the new york times magazine
+magazine : people	publication : sunday star
+newspaper : daily	website : little green footballs
+transportation : ups ground	bank : registered air mail
+newspaper : daily	website : new yorker magazine
+company : berlin	newspaper : chicago tribune
+company : la	newspaper : the san francisco chronicle
+company : twitter	geopoliticallocation : privacy
+newspaper : daily	magazine : corner
+newspaper : journal	website : wired
+company : new york	company : web site
+company : al jazeera international	company : huffington
+blog : authors	company : twitter
+company : financial	website : the los angeles times
+blog : points memo	company : kos
+website : windows live	company : yahoo
+newspaper : times	street : the wall street
+company : local	retailstore : google
+newspaper : london based arabic	publication : washington
+publication : post	website : abc news
+company : new york	winery : page
+company : san francisco	website : new york times
+website : cleveland plain dealer	company : new york
+company : mint	planet : economic
+newspaper : die zeit	publication : washington
+company : new york	website : free press
+company : post office	bank : royal
+newspaper : the miami herald	company : financial
+company : rackspace	company : amazon
+transportation : ups ground	transportation : ups 2 day
+company : id account	blog :   google
+company : express	company : postal service
+transportation : priority mail	company : usps global
+company : alexa	company : pr
+website : linked in	website : facebook
+publication : express	company : new york
+website : new york times	company : media
+retailstore : usps	company : priority international
+recordlabel : pi	newspaper : journal
+newspaper : daily	publication : daily mail newspapers
+transportation : fed ex ground	transportation : priority mail
+newspaper : journal	blog : black enterprise
+magazine : bon appetite	company : new york
+politicsblog : contents	company : twitter
+company : new york	politicsblog : discovery channel
+company : vmware	company : sun microsystems
+newspaper : daily	newspaper : the daily mirror
+website : iowan	newspaper : iowa city press citizen
+automobilemaker : lamborghini	automobilemaker : bmw  lexus
+publication : washington	company : ft
+winery : joseph	company : twitter
+company : new york	newspaper : the sunday times
+transportation : international priority	transportation : ups ground
+newspaper : los angeles examiner	company : los angeles
+newspaper : journal	newspaper : usa today
+company : camera	website : the new york post
+bank : standard ups	bank : parcel post
+company : financial	website : economist magazine
+newspaper : usa today	publication : the washington
+publication : washington daily	newspaper : times
+bank : canada post	bank : federal express
+company : share	website : google   share
+company : priority international	transportation : priority mail
+company : financial	website : the globe and mail
+company : news search	retailstore : google
+transportation : first class international	company : us priority
+bank : courier service	bank : royal
+company : aim 	company : aol video
+politicsblog : times sites	publication : washington
+company : second life	company : twitter
+retailstore : u s  postal service	company : media
+newspaper : chicago tribune	company : los angeles
+publication : the washington	newspaper : uk guardian
+politicsblog : drudge report	newspaper : daily
+company : air	company : surface
+company : huffington	company : atlantic
+company : cnn 	newspaper : daily
+retailstore : usps	transportation : international priority
+company : lexisnexis	company : new york
+newspaper : journal	company : legal
+website : spin magazine	company : new york
+transportation : ups ground	transportation : first class international
+company : talk instant messaging	blog :   google
+website : windows live	website : linkedin
+company : china	company : yahoo
+company : los angeles	website : the globe and mail
+company : la	newspaper : chicago trib
+company : stumbleupon001	company : twitter
+company : new york	company : nbc nightly news with brian williams
+blog : press citizen	website : iowan
+newspaper : journal	bank : lawyer
+newspaper : crain  s chicago business	newspaper : journal
+company : new york	company : aol video
+blog : keith olbermann	company : new york
+publication : western mail	publication : post
+company : ford	company : gmac
+company : google analytics accounts	blog :   google
+blog :   google	company : hootsuite
+company : cnn 	website : msnbc
+blog :   google	company : sitemap
+company : new york	publication : mcclatchy
+company : new york	publication : jezebel
+company : twitter	company : youtube channel
+company : new york	blog : technology review
+website : facebook	website : fb
+company : new york	magazine : leisure travelers
+website : nbc news	publication : washington
+company : yahoo	company : skype
+company : new york	newspaper : lawrence journal world
+company : new york	website : the news   observer
+company : premium	website : windows live
+blog : salon	company : huffington
+bank : united states postal service	bank : fedex international
+website : facebook	company : twitter welcome
+publication : the new york daily	newspaper : times
+company : huffington	publication : drudge
+newspaper : daily	newspaper : chicago tribune
+company : new york	magazine : national geographic magazine
+transportation : ups ground	company : federal express priority
+retailstore : ups ground shipping	transportation : priority mail
+company : anc 	bank : royal
+website : twitter	website : facebook copyright
+company : la	website : dallas morning news
+company : new york	publication : larry king live
+blog :   google	company : django
+publication : washington	website : the washington times
+company : soundcloud	company : twitter
+website : life magazine	company : los angeles
+newspaper : telegraph	newspaper : evening standard
+transportation : usps international priority	transportation : first class international
+company : aol video	company : new york
+company : new york	publication : c span
+newspaper : interlink	bank : royal
+transportation : fed ex ground	transportation : ups ground
+newspaper : hong kong based asia times online	company : pakistan
+newspaper : journal	company : capitol
+newspaper : the economist	newspaper : journal
+transportation : priority mail	company : media
+newspaper : daily	newspaper : times
+blog :   google	blog : myspace
+website : san jose mercury news	company : new york
+publication : washington	company : al jazeera international
+newspaper : daily	publication : news max
+publication : tmz	company : new york
+newspaper : daily	website : belfast telegraph
+company : kos	politicsblog : atrios
+recordlabel : virgin airlines	company : financial
+newspaper : investors business daily	company : new york
+newspaper : seattle times technology	company : los angeles
+company : los angeles	newspaper : kqed
+bank : royal	bank : parcelforce
+newspaper : herald	politicsblog : record
+website : sun times	company : los angeles
+politicsblog : the village voice	newspaper : journal
+company : la	newspaper : baltimore sun
+magazine : cosmopolitan	newspaper : journal
+transportation : fedex express	retailstore : usps
+company : aol video	newspaper : times
+politicsblog : melanie phillips	newspaper : daily
+company : samsung	biotechcompany : microsoft
+bank : federal express	bank : fedex home delivery
+company : new york	company : details
+website : fast company magazine	newspaper : journal
+company : new york	publication : u s  news   world report
+newspaper : london evening standard	newspaper : daily
+bank : usps mail	transportation : ups ground
+blog : fox news	newspaper : times
+company : twitter	river : water
+company : nikon	company : canon corporation
+company : money001	blog :   google
+publication : washington	newspaper : the san francisco examiner
+company : legal	newspaper : journal
+company : wikileaks	company : new york
+biotechcompany : oracle	company : red hat
+biotechcompany : oracle	company : sun microsystems
+company : chrome	blog :   google
+newspaper : journal	newspaper : the miami herald
+newspaper : daily journal	publication : washington
+publication : bond buyer	publication : washington
+company : wave	company : twitter
+newspaper : cbs marketwatch	newspaper : journal
+company : los angeles	company : texas monthly
+company : financial	website : the herald tribune
+website : the daily	company : evening sun001
+website : birmingham news	company : new york
+website : the new york times	company : financial
+newspaper : adweek magazine	transportation : southwest
+company : the sunday	magazine : remi ochlik
+website : google   share	company : share
+publication : post	company : yahoo
+newspaper : herald tribune	newspaper : journal
+newspaper : journal	company : ap news
+website : msn news	recordlabel : music
+website : washington post book world	company : los angeles
+company : aol video	company : huffington
+publication : washington	company : cnn  good morning america
+website : facebook	company : publications
+retailstore : tjx companies	publication : post
+blog : facebook tweet	company : twitter
+radiostation : wboc	publication : post
+company : air	company : postal service
+company : note	blog :   google
+company : new york	newspaper : the new york law journal
+website : facebook	company : follow
+televisionstation : video clip	website : youtube
+website : today newspapers	website : the daily
+website : google plus	blog :   google
+company : yahoo	company : icahn
+publication : washington	newspaper : newark star ledger
+newspaper : times	newspaper : daily
+website : facebook	website : twitter facebook
+website : london times	newspaper : daily
+newspaper : chronicle	website : the globe and mail
+website : daily news	publication : washington
+website : facebook	company : site
+company : barnes   noble	website : facebook
+company : hershey	company : nestle
+website : pageflakes	blog :   google
+publication : washington	newspaper : washington examiner
+biotechcompany : southern company	website : the new york times
+politicsblog : american city business journals	publication : washington
+radiostation : knhm	publication : post
+transportation : ups ground	transportation : express mail international
+bank : royal	transportation : dpd courier
+newspaper : the economist	publication : the washington
+publication : nytimes	company : huffington
+company : air	bank : registered air mail
+automobilemaker : general motors	company : ford
+newspaper : journal	blog : far eastern economic review
+retailstore : u s  postal service	company : express
+newspaper : daily	politicsblog : wonkette
+blog :   google	company : vmware
+company : new york	publication : le nouvel observateur
+blog :   google	company : chicago crime data
+bank : federal express	bank : parcel post
+website : facebook copyright	website : twitter
+company : checkout	company : paypal account
+radiostation : philadelphia	newspaper : philadelphia tribune
+company : new york	website : atlanta journal constitution
+company : starbucks	company : apple
+blog : paul krugman	company : new york
+newspaper : journal	magazine : gq
+transportation : first class international	transportation : express mail international
+company : new york	magazine : essence
+newspaper : journal	publication : wilson quarterly
+company : la	website : mercury news
+company : checkout	company : ebillme
+website : twitter	website : facebook submit
+website : the los angeles times	newspaper : telegraph
+company : trib	company : sun
+transportation : ups ground	publication : post
+company : twitter	company : china
+automobilemaker : hyundai	automobilemaker : honda
+retailstore : dhl express	bank : royal
+transportation : ups ground	retailstore : united states priority mail
+newspaper : times	company : bbc001
+website : financial times	company : la
+website : commission junction	blog :   google
+publication : mother jones	company : los angeles
+company : new york	website : the american prospect
+company : yahoo	company : internet firms
+company : los angeles	newspaper : bloomberg news
+biotechcompany : hewlett packard co	biotechcompany : ibm
+website : the new york post	company : huffington
+newspaper : daily	website : the new york times
+company : new york	newspaper : post gazette
+blog : salon	company : new york
+newspaper : ny times	company : la
+company : new york	website : msnbc
+website : the washington times	newspaper : daily
+company : wikipedia	website : youtube
+company : ford	biotechcompany : texas instruments
+bank : united states postal service	company : air
+company : new york	magazine : architectural digest
+newspaper : stars   stripes	publication : washington
+website : twitter com	website : facebook
+website : courier mail	company : channel
+company : los angeles	televisionnetwork : london sunday times
+company : nation	newspaper : journal
+blog :   google	company : icerocket
+newspaper : the daily show with jon stewart	company : new york
+company : financial	company : npr
+company : amazon affiliate	blog :   google
+company : mobile	blog :   google
+company : new york	newspaper : seattle times technology
+retailstore : us postal	transportation : ups ground
+blog :   google	company : blogspot
+company : delivery confirmation	transportation : ups ground
+company : kos	politicsblog : instapundit
+newspaper : sunday telegraph	website : the daily
+website : providence journal	newspaper : journal
+website : zillow	blog :   google
+company : new york	company : espn 
+blog : tumblr	company : xml feed tweet new york islanders
+company : new york	newspaper : daily worker
+publication : washington	bank : world bank
+politicsblog : bulletin	website : gazette times
+company : yahoo	company : yelp
+website : money magazine	newspaper : journal
+bank : general electric	company : ford
+company : firefox	website : msn news
+company : smartpost	bank : federal express
+newspaper : journal	website : london times
+publication : washington	newspaper : capitol hill newspaper roll call
+company : word	website : facebook
+company : reuters	newspaper : telegraph
+publication : toronto life	company : national
+publication : washington	newspaper : al jazeera arabic
+publication : associated press	company : los angeles
+company : online	website : facebook
+biotechcompany : cisco	company : sun microsystems
+newspaper : daily	politicsblog : mydd
+company : skype	company : yahoo
+company : goggle	company : overture services
+company : new york	newspaper : new jersey star ledger
+blog : nature	newspaper : times
+company : us priority	retailstore : ups ground shipping
+company : compaq	company : sun microsystems
+publication : american spectator	publication : journal editorial page
+company : new york	company : hbo
+transportation : express mail international	bank : united postal service
+newspaper : journal	newspaper : american lawyer magazine
+publication : jazz times	newspaper : journal
+newspaper : the sunday times	website : the daily
+transportation : first class international	company : global
+website : youtube	website : twitter
+newspaper : herald	company : la
+televisionstation : ct	company : twitter
+newspaper : the progressive	publication : washington
+biotechcompany : honeywell	publication : post
+company : yahoo	company : yahoo instant messaging
+publication : myspace share	website : facebook
+radiostation : krnv tv	publication : post
+newspaper : der spiegel	company : new york
+televisionstation : wtop 	publication : washington
+newspaper : daily	company : morning star
+blog : fox news	newspaper : journal
+magazine : newsweek	newspaper : daily
+automobilemaker : daimler chrysler	company : ford
+publication : law journal	company : legal
+blog : atom	company : rss
+newspaper : newsday	newspaper : new york daily
+company : new york	politicsblog : india today
+retailstore : usps	blog : ubercart
+company : the sunday	televisionnetwork : london sunday times
+bank : federal express	company : post office
+newspaper : times	company : dawn
+politicsblog : instapundit	newspaper : daily
+company : website payments standard	company : express001
+website : the news   observer	publication : washington
+website : feedster com	company : rss
+transportation : priority mail	bank : parcel post
+bank : authorize  net	biotechcompany : google
+transportation : express mail international	retailstore : usps air
+website : twitter	recordlabel : music
+company : burger king hldgs	retailstore : wendy s
+website : the washington times	company : new york
+website : facebook	website : twitter digg reddit email
+company : express001	newspaper : journal
+company : huffington	newspaper : ny times
+company : new york	company : phillip morris international
+newspaper : herald	company : new york
+blog :   google	company : rss
+company : facebook updates	company : twitter
+blog :   google	company : tomtom
+blog : ars technica	company : new york
+radiostation : aspen public radio	skiarea : aspen
+publication : us news   world report	company : la
+website : the news   observer	company : new york
+newspaper : inquirer	radiostation : philadelphia
+website : facebook	blog : wordpress
+politicsblog : dailykos	company : huffington
+newspaper : new statesman	newspaper : daily
+company : new york	biotechcompany : sprint
+publication : washington	website : daily news
+company : media	transportation : priority mail
+company : aol video	company : realplayer
+newspaper : chronicle of higher education	publication : washington
+company : express	bank : royal
+website : news com	newspaper : journal
+company : la	publication : bbc
+website : entrepreneur magazine	newspaper : journal
+website : sun times	publication : washington
+company : yahoo finance	blog :   google
+publication : washington	blog : daily beast
+publication : abc nightly news	company : los angeles
+bank : postal service priority mail	transportation : ups ground
+blog :   google	website : pageflakes
+company : los angeles	newspaper : la opini n
+newspaper : journal	blog : techcrunch
+company : globe	company : national
+website : facebook	company : barnes   noble
+website : facebook	company : stories
+company : air	bank : dhl ground
+company : questions	website : facebook
+company : sun microsystems	company : vmware
+company : southtown	newspaper : daily herald
+publication : ramparts	company : new york
+company : apple	company : starbucks
+company : detroit	newspaper : usa today
+publication : daily sketch	newspaper : daily
+website : new york tribune	publication : washington
+company : cnn  the bbc	newspaper : journal
+newspaper : journal	newspaper : times
+publication : washington	newspaper : sf chronicle
+company : new york	publication : space  com
+company : new york	website : spin magazine
+bank : parcel post	bank : united states postal service
+website : news of the world	newspaper : daily
+magazine : good housekeeping	newspaper : daily
+company : sap ag	company : ford
+automobilemaker : chrysler	company : american car makers
+automobilemaker : nissan motor co	automobilemaker : honda
+company : new york	newspaper : times
+blog :   google	website : yahoo search
+publication : washington	website : kansas city star
+website : new york times	publication : journal weekly
+publication : washington	company : pakistan
+blog :   google	company : wordtracker
+biotechcompany : hewlett packard co	company : dell
+company : texas monthly	company : los angeles
+publication : washington	publication : spectator
+newspaper : the economist	newspaper : daily
+company : new york	newspaper : science magazine
+company : new york	company : amazon
+publication : food   wine	company : new york
+publication : nme	company : new york
+retailstore : walmart	biotechcompany : microsoft
+website : twitter facebook	website : facebook
+company : legal	website : wall street journal
+website : atlanta business chronicle	newspaper : journal
+company : new york	company : fox tv
+newspaper : evening times	politicsblog : record
+website : the american prospect	company : new york
+company : app store	retailstore : marketplace
+company : new york	website : news   observer
+company : national	newspaper : globe and mail
+company : new scientist001	newspaper : daily
+company : yelp	website : facebook
+politicsblog : drudge report	company : kos
+newspaper : uk guardian	publication : washington
+newspaper : telegraph	newspaper : the economist
+newspaper : the bond buyer	publication : washington
+biotechcompany : oracle	company : sap ag
+newspaper : journal	newspaper : sydney morning herald
+politicsblog : americablog	company : kos
+website : twitter	company : newsletter
+company : new york	publication : art newspaper
+publication : worldnetdaily	publication : washington
+transportation : express mail international	company : u p s 
+website : providence journal	company : los angeles
+publication : the spectator	company : new york
+company : twitter	company : twitter logo
+company : air	company : federal express
+company : new york	website : washington post company
+website : country living	newspaper : journal
+company : apple	company : yahoo
+newspaper : journal	bank : economic policy institute
+website : cbs corporation	website : daily news
+company : new york	publication : food   wine
+publication : better homes and gardens	company : new york
+website : sunday magazine	company : new york
+website : abc news	company : sun microsystems
+newspaper : daily	politicsblog : times magazine
+company : channel	newspaper : daily
+newspaper : journal	website : cnn  npr
+politicsblog : asia times	company : pakistan
+company : twitter	company : mobile
+website : san jose mercury news	publication : post
+publication : washington	publication : post express
+blog : fox news	website : the daily
+newspaper : journal	publication : spectator
+transportation : ups ground	transportation : usps regular mail
+company : star	company : los angeles
+company : japan	newspaper : asahi shimbun
+newspaper : wall street journal asia	publication : journal online
+newspaper : asahi shimbun	company : japan
+company : ford	biotechcompany : google
+publication : washington	company : scotsman
+automobilemaker : general motors	automobilemaker : chrysler
+company : checkout	bank : credit card
+publication : u s  news   world report	company : los angeles
+company : bio	website : facebook
+website : times magazine	company : los angeles
+newspaper : new york sun	newspaper : journal
+publication : the los angeles times book review	company : new york
+bank : paypal	website : yahoo
+transportation : ups ground	bank : federal express ground
+company : ford	automobilemaker : china
+company : new york	company : dailey news
+company : new york	website : smithsonian magazine
+newspaper : morning herald	newspaper : daily
+newspaper : sydney morning herald	company : new york
+publication : robb report	company : new york
+company : new york	company : jewish telegraphic agency
+automobilemaker : benz	company : bmw 
+company : financial	newspaper : evening standard
+website : mcclatchy newspapers	publication : washington
+website : the philadelphia inquirer	publication : washington
+company : ford	retailstore : united parcel
+company : mozilla	blog :   google
+publication : the industry standard	company : los angeles
+newspaper : telegraph	company : bbc001
+newspaper : journal	blog : business week
+website : facebook	company : twitter want
+website : the washington times	newspaper : journal
+publication : washington	website : milwaukee journal sentinel
+website : fortune magazine	company : new york
+company : new york	website : news com
+company : twitter	company : skype
+company : new york	newspaper : new york law journal
+company : los angeles	newspaper : the miami herald
+bank : royal	website : city link
+blog :   google	company : photobucket
+website : facebook	company : flickr map
+publication : the real deal	company : new york
+newspaper : daily	website : the globe and mail
+website : the new york times	company : los angeles
+company : twitter	company : hootsuite
+website : facebook	company : apple
+newspaper : investors business daily	publication : washington
+bank : paypal	biotechcompany : google
+company : los angeles	newspaper : los angeles business journal
+newspaper : journal	skiarea : liberty
+company : video	blog :   google
+company : express001	website : daily stock price record
+newspaper : irish times	company : new york
+company : global airmail parcel post	transportation : express mail international
+website : daily telegraph	company : star
+company : rambus inc 	company : sun microsystems
+company : new york	newspaper : indian country today
+biotechcompany : cisco	biotechcompany : ibm
+company : echo	newspaper : journal
+blog : mtv	company : la
+company : new york	newspaper : times picayune
+magazine : harpers	company : new york
+company : uk 	website : bing index
+transportation : priority	bank : u  s  postal service
+company : yahoo	company : new york
+website : akron beacon journal	publication : washington
+transportation : international priority	company : post office
+publication : the believer	company : new york
+company : telegraph note	newspaper : times
+newspaper : journal	newspaper : chicago defender
+bank : royal	company : starbucks
+blog :   google	company : yellow pages
+company : money	newspaper : journal
+retailstore : ups ground shipping	retailstore : usps
+newspaper : times	blog : time warner
+company : ebillme	company : checkout
+retailstore : united parcel	transportation : priority mail
+website : linkedin	blog : twitter share
+automobilemaker : products	website : pricegrabber
+newspaper : daily	blog : moderate voice
+company : kos	website : huffpo
+company : new york	publication : bbc
+publication : lee newspapers	automobilemaker : des moines
+company : la	website : the philadelphia inquirer
+website : the new york post	company : legal
+newspaper : london express	company : new york
+newspaper : toronto star	company : asia
+publication : washington	newspaper : el tiempo latino
+newspaper : journal	politicsblog : commerce
+website : facebook	company : twitter skype
+company : wipro and infosys	company : sun microsystems
+transportation : ups ground	bank : united states postal service
+company : uk 	retailstore : u s  postal service
+newspaper : daily	politicsblog : hot air
+company : twitter	website : plurk
+company : global	bank : federal express
+publication : washington	politicsblog : record
+magazine : american heritage	company : new york
+website : foxnews	publication : washington
+website : windows live	company : meebo
+website : msn news	company : skype
+newspaper : the daily express	newspaper : daily
+newspaper : evening standard	website : the daily
+newspaper : journal	publication : metropolitan corporate counsel
+blog :   google	company : yahoo finance
+newspaper : daily	website : manchester guardian
+publication : associated press	company : chicago001
+transportation : ups ground	transportation : fed ex ground
+company : evening sun001	website : the daily
+automobilemaker : general motors	automobilemaker : chrysler group
+biotechcompany : microsoft	website : yahoo search
+company : financial	blog : ft com
+website : facebook	blog : abc news
+website : reddit share	company : delicious digg this post share
+blog :   google	website : livejournal
+company : asia	website : cbs corporation
+website : facebook follow	company : services
+company : forbes001	company : financial
+newspaper : journal	company : bbc001
+bank : fedex international	bank : united states postal service
+automobilemaker : gm	company : bmw 
+company : west coast	publication : women  s wear daily
+website : daily telegraph	company : financial
+newspaper : oakland tribune	company : los angeles
+company : new york	magazine : bomb
+website : facebook	company : aol video
+company : bmw	automobilemaker : volvo
+company : new york	magazine : time out magazine
+website : google videos	blog :   google
+newspaper : pravda	company : new york
+newspaper : wall street journal asia	company : financial
+transportation : priority	bank : dhl ground
+website : life magazine	company : new york
+newspaper : journal	newspaper : herald tribune
+website : abc news	publication : washington
+publication : washington	publication : post
+company : bmw 	automobilemaker : range rover
+blog :   google	company : mobile
+publication : post	company : bbc001
+retailstore : usps	transportation : ups second day air
+transportation : first class international	retailstore : u s  postal service
+newspaper : journal	website : news of the world
+company : yahoo	company : aim 
+publication : washington	newspaper : examiner
+company : xml feed tweet new york islanders	website : facebook
+company : yahoo	company : wikipedia
+publication : post	radiostation : wboc
+company : new york	publication : travel section
+company : wikipedia	company : twitter
+company : la	newspaper : toronto star
+newspaper : herald	newspaper : herald tribune
+company : express	transportation : priority post
+company : standard001	transportation : ups ground
+company : new york	newspaper : long island newsday
+company : la	website : yahoo
+automobilemaker : lamborghini	company : bmw 
+newspaper : the yemen observer	politicsblog : yemen
+newspaper : daily	politicsblog : firedoglake
+biotechcompany : microsoft	company : flickr map
+website : wall street journal	company : china
+website : atlanta journal constitution	company : los angeles
+company : yahoo	website : technorati
+website : linkedin	company : stumbleupon001
+automobilemaker : audi	automobilemaker : german automakers
+blog : techcrunch	company : kos
+biotechcompany : archer daniels midland	publication : post
+company : arkansas	newspaper : arkansas democrat gazette
+website : dallas morning news	geopoliticallocation : austin
+publication : washington	website : akron beacon journal
+publication : washington	newspaper : sydney morning herald
+website : facebook	company : rights reserved
+publication : washington	newspaper : chicago tribune
+newspaper : the economist	newspaper : telegraph
+publication : pantagraph	website : leader
+newspaper : wall street journal europe	company : financial
+website : manchester guardian	company : new york
+company : new york	publication : cnn headline news
+publication : architectural record	company : new york
+publication : better homes and gardens	newspaper : journal
+blog : far eastern economic review	newspaper : journal
+newspaper : times union	website : gazette times
+newspaper : journal	publication : robb report
+blog : dallas morning	publication : post
+newspaper : herald sun	newspaper : daily
+company : la	publication : nyt 
+website : star magazine	company : new york
+company : twitter	company : los angeles
+company : new york	website : birmingham news
+transportation : ups second day air	transportation : priority mail
+website : the new york post	company : kos
+company : share	company : xml feed tweet new york islanders
+company : journal deutschland	publication : dow jones newswire
+company : share	website : delicious
+company : new york	publication : drudge report
+newspaper : journal	newspaper : el paso herald post
+website : espn com	company : los angeles
+company : air	company : express001
+retailstore : usps air	transportation : usps first class
+bank : paypal standard	biotechcompany : google
+newspaper : ny times	publication : washington
+politicsblog : news international	newspaper : daily
+retailstore : usps	transportation : ups ground
+blog : national geographic	publication : washington
+company : postal service	transportation : u s p s  priority mail
+publication : nbc	company : new york
+company : new york	publication : poynter institute
+transportation : priority	transportation : ups ground
+automobilemaker : toyota	company : bmw 
+website : facebook follow	company : wikipedia
+transportation : priority mail	retailstore : united parcel
+website : conservative washington times	newspaper : journal
+company : money	company : bloomberg
+company : ford	company : nike
+company : new york	blog : fox news
+publication : national sports daily	company : new york
+company : htc	company : nokia siemens
+politicsblog : mydd	newspaper : daily
+company : kos	politicsblog : red state
+bank : parcel post	transportation : fed ex
+publication : washington	newspaper : usa today
+newspaper : new york sun	newspaper : daily
+company : new york	newspaper : london telegraph
+politicsblog : american enterprise institute	newspaper : journal
+transportation : express mail international	transportation : us postal service priority
+blog : good	newspaper : daily
+newspaper : the oklahoman	publication : washington
+transportation : first class international	transportation : ups ground
+publication : washington	newspaper : national public radio  s morning edition
+newspaper : wtop radio	publication : washington
+biotechcompany : ibm	biotechcompany : oracle
+blog :   google	company : facebook chat
+company : media	website : youtube
+publication : washington	politicsblog : wtop
+transportation : ups ground	company : uspo
+radiostation : work	company : twitter
+website : the philadelphia inquirer	newspaper : daily
+company : scotland	newspaper : telegraph
+company : new york	newspaper : guardian newspaper
+company : new york	website : louisville courier journal
+company : new york	newspaper : minneapolis star tribune
+transportation : ups ground	bank : royal
+politicsblog : independent	company : express001
+company : compaq	company : gateway 2000001
+biotechcompany : microsoft	company : will
+website : delicious	company : share
+publication : bbc	company : new york
+publication : washington	newspaper : new york sun
+company : kos	blog : myspace
+website : the new york post	company : sentinel
+company : new york	website : us weekly
+company : huffington	blog : techcrunch
+bank : federal express	transportation : usps service
+company : new york	website : glamour magazine
+company : services	website : facebook
+website : daily news	company : huffington
+company : contacts	website : facebook
+publication : wall street journal report	company : new york
+company : new york	newspaper : westchester journal news
+transportation : priority	transportation : fed ex

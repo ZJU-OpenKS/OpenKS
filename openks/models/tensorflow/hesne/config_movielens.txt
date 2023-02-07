@@ -1,0 +1,20 @@
+{
+"dataset": "movielens",
+"node_type_numbers": 7,
+"eval_point": 2e2,
+"decay_step": 5e2,
+"learning_rate": 0.01,
+"keep_prob": 1.0,
+"weight_decay": 0.01,
+"negative_ratio_pertype": 1,
+"negative_ratio": 5,
+"patience": 30,
+"batch_event_numbers": 32,
+"max_his_num": 50,
+"his_type": "last",
+"log_dir": "/home1/wyf/Projects/dynamic_network_embedding/log/movielens",
+"data_dir": "/home1/wyf/Projects/dynamic_network_embedding/data/movielens/processed",
+"save_dir": "/home1/wyf/Projects/dynamic_network_embedding/save/movielens",
+"is_training": 1,
+"negative_sampling": 1
+}
