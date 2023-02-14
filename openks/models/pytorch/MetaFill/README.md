@@ -4,6 +4,8 @@ This is the implementation of our EMNLP 2022 paper:
 
 Please cite our paper when you use this code in your work.
 
+## Framework
+![metafill](framework.pdf)
 ## Dependency
 
 ```console
