@@ -487,7 +487,7 @@ def do_predict(args):
 class Causality_ExtractionPaddle(Causality_ExtractionModel):
     '''Base class for event extract trainer'''
 
-    def __init__(self, args, name: str = 'Event_ExtractionModel'):
+    def __init__(self, args, name: str = 'Causality_ExtractionModel'):
         self.name = name
         self.args = args
 

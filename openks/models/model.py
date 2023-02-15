@@ -294,6 +294,85 @@ class Relation_ExtractionModel(OpenKSModel):
 	def run(self, *args):
 		return NotImplemented
 
+class Causality_ExtractionModel(OpenKSModel):
+	''' Base class for relation extraction trainer '''
+	def __init__(self, name: str = 'model-name', args: List = None):
+		self.name = name
+
+	def data_reader(self, *args):
+		return NotImplemented
+
+	def evaluate(self, *args):
+		return NotImplemented
+
+	def load_model(self, *args):
+		return NotImplemented
+
+	def save_model(self, *args):
+		return NotImplemented
+
+	def run(self, *args):
+		return NotImplemented
+
+class Event_ExtractionModel(OpenKSModel):
+	''' Base class for relation extraction trainer '''
+	def __init__(self, name: str = 'model-name', args: List = None):
+		self.name = name
+
+	def data_reader(self, *args):
+		return NotImplemented
+
+	def evaluate(self, *args):
+		return NotImplemented
+
+	def load_model(self, *args):
+		return NotImplemented
+
+	def save_model(self, *args):
+		return NotImplemented
+
+	def run(self, *args):
+		return NotImplemented
+
+class Sequence_ExtractionModel(OpenKSModel):
+	''' Base class for Sequence ExtractionModel trainer '''
+	def __init__(self, name: str = 'model-name', args: List = None):
+		self.name = name
+
+	def data_reader(self, *args):
+		return NotImplemented
+
+	def evaluate(self, *args):
+		return NotImplemented
+
+	def load_model(self, *args):
+		return NotImplemented
+
+	def save_model(self, *args):
+		return NotImplemented
+
+	def run(self, *args):
+		return NotImplemented
+
+class Subevent_Recognization(OpenKSModel):
+	''' Base class for relation extraction trainer '''
+	def __init__(self, name: str = 'model-name', args: List = None):
+		self.name = name
+
+	def data_reader(self, *args):
+		return NotImplemented
+
+	def evaluate(self, *args):
+		return NotImplemented
+
+	def load_model(self, *args):
+		return NotImplemented
+
+	def save_model(self, *args):
+		return NotImplemented
+
+	def run(self, *args):
+		return NotImplemented
   
 class HypernymDiscoveryModel(OpenKSModel):
     def __init__(self):
