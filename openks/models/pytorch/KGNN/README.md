@@ -1,6 +1,6 @@
 ### 流程图
 
-![KGNN](utils/KGNN.png)
+![KGNN](KGNN.png)
 
 
 ### 简介
