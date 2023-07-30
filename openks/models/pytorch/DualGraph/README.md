@@ -1,4 +1,11 @@
+### 流程图
+
+![DualGraph](DualGraph.png)
+
+### 简介
+
 这是发表于 ICDE21的[论文](https://ieeexplore.ieee.org/abstract/document/9835533)的代码实现，论文信息：
+
 > Luo, Xiao, et al. "Dualgraph: Improving semi-supervised graph classification via dual contrastive learning." 2022 IEEE 38th International Conference on Data Engineering (ICDE). IEEE, 2022.
 
 这篇论文提出了从 “图特征到标签” 和 “标签到图特征”两个对偶角度来思考图表征学习的方式，能够完成基于子图特征或全图特征的图推理。

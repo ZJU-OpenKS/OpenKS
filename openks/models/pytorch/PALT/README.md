@@ -6,6 +6,9 @@ The source code repo for paper [PALT: Parameter-Lite Transfer of Language Models
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/palt-parameter-lite-transfer-of-language/link-prediction-on-wn18rr)](https://paperswithcode.com/sota/link-prediction-on-wn18rr?p=palt-parameter-lite-transfer-of-language)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/palt-parameter-lite-transfer-of-language/link-prediction-on-fb15k-237)](https://paperswithcode.com/sota/link-prediction-on-fb15k-237?p=palt-parameter-lite-transfer-of-language)
 
+## Model pipeline
+![](imgs/model_pipe.png)
+
 ## Prepare the data
 ```bash
 cd data
