@@ -1,4 +1,4 @@
-# OpenKS（知目）——领域可泛化的知识学习与计算引擎
+# OpenKS（知目）——领域可泛化的知识学习与计算平台
 
 ## 平台支持功能
 ![modules](./docs/pics/openks.jpg)
