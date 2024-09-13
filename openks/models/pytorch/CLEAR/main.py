@@ -39,9 +39,9 @@ def clean(node_num, data_aug):
     return data_aug
 
 
-class CLERA(nn.Module):
+class CLEAR(nn.Module):
     def __init__(self, hidden_dim, num_gc_layers):
-        super(CLERA, self).__init__()
+        super(CLEAR, self).__init__()
         self.embedding_dim = hidden_dim * num_gc_layers
         self.encoder = Encoder(dataset_num_features, hidden_dim, num_gc_layers)
 
@@ -113,7 +113,7 @@ if __name__ == '__main__':
     print('================')
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    model = CLERA(args.hidden_dim, args.num_gc_layers).to(device)
+    model = CLEAR(args.hidden_dim, args.num_gc_layers).to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
 
     loss_file = open("./train_loss.txt", mode="a", encoding="utf-8")

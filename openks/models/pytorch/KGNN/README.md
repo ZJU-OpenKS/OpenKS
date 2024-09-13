@@ -1,3 +1,9 @@
+### 流程图
+
+![KGNN](KGNN.png)
+
+
+### 简介
 这是发表于 WSDM21的 [论文](https://dl.acm.org/doi/pdf/10.1145/3488560.3498429)的代码实现，论文信息：
 > Ju, Wei, et al. "Kgnn: Harnessing kernel-based networks for semi-supervised graph classification." *Proceedings of the Fifteenth ACM International Conference on Web Search and Data Mining*. 2022.
 
